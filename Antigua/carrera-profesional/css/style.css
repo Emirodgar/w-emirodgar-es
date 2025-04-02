@@ -1,0 +1,145 @@
+body {
+  font-family: 'Inconsolata';
+}
+body h1 {
+  font-family: 'Merriweather';
+  font-size: 2rem;
+}
+
+a {
+  color: #292b2c;
+}
+
+header {
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+header .header-left h2 {
+  margin: 0 5px;
+  font-size: 1.45rem;
+}
+
+.content-wrap {
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.color-scheme {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .color-scheme {
+    height: 4px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+}
+.color-scheme span {
+  display: inline-block;
+  flex-grow: 1;
+  height: 100px;
+}
+
+@media screen and (min-width: 768px) {
+  .project-text p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.project-images {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+.project-images .thumb {
+  overflow: hidden;
+  display: inline-block;
+  height: 100px;
+  width: 140px;
+  margin-right: 10px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.project-images .thumb img {
+  cursor: pointer;
+  display: block;
+  width: 130%;
+  min-height: 100%;
+  -ms-interpolation-mode: bicubic;
+}
+.project-images img {
+  display: inline;
+}
+
+.featherlight-content {
+  padding: 0 !important;
+  border-bottom: none !important;
+}
+#wrapper {
+	position: relative;
+	bottom: 0;
+	width: 100%;
+}
+
+#cookie-banner {
+	margin: 20px;
+	background: #34333A;
+	color: white;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 0 15px rgba(0,0,0,20);
+	transition: opacity 0.2s ease;
+	opacity: 1;
+}
+
+#cta {
+	background:#b30000;
+	padding: 15px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.out {
+	opacity: 0 !important;
+}
+
+
+a::after {
+	width: 100%;
+    content: ' ';
+    position: absolute;
+    bottom: -0.055em;
+    left: 0;
+    height: 1px;
+	background: white;
+	    transition: opacity 0.2s ease;
+}
+
+#cta a, #cta a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+li {padding-left:10px;}
+ul {padding-top:10px;}
+
+img {
+    -webkit-filter: grayscale(100%);
+       -moz-filter: grayscale(100%);
+         -o-filter: grayscale(100%);
+        -ms-filter: grayscale(100%);
+            filter: grayscale(100%); 
+}
+
+img:hover {
+	img {
+    -webkit-filter: grayscale(10%);
+       -moz-filter: grayscale(10%);
+         -o-filter: grayscale(10%);
+        -ms-filter: grayscale(10%);
+            filter: grayscale(10%); 
+}
+}

@@ -1,0 +1,129 @@
+{
+  "data": [
+	   [
+      "Más precisión en los datos de Search Console",
+      "A partir del 15 de diciembre, Google Search Console ofrecerá más información en su informe de Cobertura para las páginas rastreadas pero actualmente sin indexar.",
+      "https://twitter.com/googlewmc/status/1207341145749147654"
+    ],
+	  [
+      "La etiqueta canónica puede no ser suficiente",
+      "En algunos casos necesitaremos ayuda de otros factores para que Google seleccione como canónica la URL que nosotros queremos.",
+      "https://twitter.com/methode/status/1204760229906399232"
+    ],
+	  [
+      "Actualización: November 2019 Local Search Update",
+      "Google ha confirmado que se ha desplegado por completo la actualización de Google Local en la que se aplican técnicas de redes neuronales para ofrecer mejores resultados",
+      "https://twitter.com/searchliaison/status/1201549327144898567"
+    ],
+	  [
+      "BERT no es responsable de ninguna caída SEO",
+      "La técnica de procesamiento de lenguaje natural (BERT) ayuda a Google a entender mejor las búsquedas de los usuarios pero no afecta negativamente al SEO de una página",
+      "https://twitter.com/glenngabe/status/1196777041443643392"
+    ],
+	  [
+      "La geolocalización en GSC no limita los accesos",
+      "Aunque geolocalicemos nuestra página web, esto no implicará que su visibilidad orgánica sea exclusiva de dicha zona. Podrá tener visibilidad en otros países.",
+      "https://twitter.com/JohnMu/status/1194245244579176448"
+    ],
+	  [
+      "Rendimiento de productos en GSC",
+      "Google Search Console nos permitirá a partir de hoy monitorizar el rendimiento y evolución de nuestros productos.",
+      "https://webmasters.googleblog.com/2019/11/products-rich-results-search-appearance.html"
+    ],
+	  [
+      "Peticiones no seguras (HTTP) podrían ocasionar problemas a Googlebot",
+      "Si aún tenemos peticiones HTTP bajo una conexión segura (HTTPS) podría generar problemas a Googlebot durante el renderizado.",
+      "https://twitter.com/googlewmc/status/1195341066972602368"
+    ], 
+	  [
+      "Actualización Core del algoritmo de Google",
+      "Google ha confirmado vía Twitter una actualización Core de su algoritmo. Según ellos, ocurren múltiples veces y algunas son más percentibles que otras. Ésta ha tenido un impacto moderado en los rankings.",
+      "https://twitter.com/searchliaison/status/1194365014703923200"
+    ], 
+	  [
+      "El tráfico de Google Discover es volátil",
+      "Aunque puede suponer un gran crecimiento en visitas, puede cambiar de la noche a la mañana. Confirmado por Gary.",
+      "https://twitter.com/methode/status/1192906838804582400"
+    ], 
+	  [
+      "BERT: procesamiento del lenguaje natural",
+      "Google incorpora a sus búsquedas el algoritmo de redes neuronales BERT para ofrecer resultados mucho más precisos.",
+      "https://www.blog.google/products/search/search-language-understanding-bert"
+    ],
+	  [
+      "Un Disavow elimina también el contexto",
+      "Cuando hacemos disavow no sólo se deja de tener en cuenta el enlace para el posicionamiento web (popularidad) sino que también se elimina el contexto por asociación.",
+      "https://twitter.com/JohnMu/status/1184213079418167297"
+    ],
+	  [
+      "Integración de vídeos en GSC",
+      "Google Search Console cuenta ya con un informe donde podremos conocer el rendimiento de los vídeos de Youtube en nuestras páginas.",
+      "https://twitter.com/googlewmc/status/1181209788769882112"
+    ],
+	  [
+      "Nuevo problema de indexación en Google",
+      "A través de la cuenta oficial de Twitter han confirmado que vuelven a tener problemas relacionados con la indexación de nuevo contenido.",
+      "https://twitter.com/googlewmc/status/1184594392264232960"
+    ],
+	  [
+      "Chrome bloqueará peticiones no seguras",
+      "Las nuevas versiones de Google Chrome bloquearán por defecto las peticiones no seguras (http) realizadas en un dominio con certificado de seguridad.",
+      "https://security.googleblog.com/2019/10/no-more-mixed-messages-about-https_3.html"
+    ],
+	[
+      "Las imágenes embebidas no cuentan como enlaces",
+      "John confirma a través de Twitter que las imágenes nuestras que otros sitios utilicen en sus páginas (embebidas) no cuentan como enlaces para Google por lo tanto no afectan al SEO.",
+      "https://twitter.com/JohnMu/status/1177165492454338567"
+    ],
+	[
+      "Nuevas etiquetas datos estructurados",
+      "Google ha presentado nuevas etiquetas para facilitar a Google cómo deberían mostrarse ciertos datos estructurados en nuestras páginas.",
+      "https://webmasters.googleblog.com/2019/09/more-controls-on-search.html"
+    ],
+	[
+      "Nueva actualización 'Core' de Google (Septiembre 2019)",
+      "Google ha anunciado el 24/09/2019 una nueva actualización core de su algoritmo. Esto implica que es una actualización a nivel global y que no persigue nada en concreto, por lo tanto no se necesitará llevar a cabo ninguna acción concreta por parte de SEOs ni webmasters.",
+      "https://twitter.com/searchliaison/status/1176473923833225221"
+    ],
+	[
+      "El número de palabras clave no es relevante",
+      "John Mueller vuelve a confirmar que el número de palabras de una página no es un factor relevante. Escribe para tus usuarios.",
+      "https://twitter.com/JohnMu/status/1176397410714759168"
+    ],
+	[
+      "Datos en Search Console actualizados",
+      "Google Search Console actualizará la información con mayor frecuencia. Ahora podremos ver los resultados con un día de diferencia.",
+      "https://webmasters.googleblog.com/2019/09/search-performance-fresh-data.html"
+    ],
+	[
+      "Actualización de los datos estructurados de valoraciones",
+      "Google ha actualizado el cuándo y cómo se mostrarán las valoraciones basadas en datos estructurados.",
+      "https://webmasters.googleblog.com/2019/09/making-review-rich-results-more-helpful.html"
+    ],
+	[
+      "Google y las etiquetas canonical",
+      "Por defecto podemos marcar y elegir las URLs de nuestro sitio que queremos que sean indexadas (canonical) y desechar versiones duplicadas pero en algunas ocasiones, el robot de Google decide por nosotros. John Mueller lo explica con más detalle en este tweet.",
+      "https://twitter.com/googlewmc/status/1169285523237683200"
+    ],
+	[
+      "Las denuncias afectan al SEO",
+      "Si tu página web ha sufrido múltiples denuncias a través de Google por plagiar contenido sin el consentimiento de su propietario podría verse afectado su posicionamiento web.",
+      "https://twitter.com/dannysullivan/status/1170713562194440195"
+    ],
+	[
+      "Nuevo dato estructurado para películas",
+      "Google ha lanzado un nuevo dato estructurado que se une a los más que ya tiene en funcionamiento. Se trata de un carrusel para películas.",
+      "https://developers.google.com/search/docs/data-types/movie"
+    ],
+	[
+      "Actualización de Pagerank",
+      "Google ha actualizado su patente de Pagerank para incluir la confianza de los enlaces. Seguramente esté relacionado con el Graph Link.",
+      "http://www.seobythesea.com/2018/04/pagerank-updated/"
+    ],
+    [
+      "Nueva versión de GSC",
+      "Google Search Console ha confirmado el cierre definitivo de la vieja versión. Lo que no se ha migrado está disponible desde la nueva a través de una serie de enlaces.",
+      "https://support.google.com/webmasters/answer/9133276#additional_tools"
+    ]
+  ]
+}

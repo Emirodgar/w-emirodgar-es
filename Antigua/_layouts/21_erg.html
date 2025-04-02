@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="es">
+   <head>
+      <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+      <meta name="author" content="Emirodgar" />
+      <link rel="icon" href="cdn/images/hash.png"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+		{% seo %}
+		{% if page.image== null %}
+		  <meta content="https://emirodgar.com/cdn/images/og/emirodgar.png" property="og:image">
+		{% endif %}
+	  <link rel="stylesheet" href="style.css?ver=5" /> 
+   </head>
+   <body class="">
+      
+	<nav class="header">
+	  <div class="logo"><a href="https://emirodgar.com">Emirodgar</a></div>
+	  <div class="nav-links">
+		<a href="#">Casos de éxito</a>
+		<a href="#">Servicios</a>
+		<a href="#">Blog</a>
+		<a href="#">Quién soy</a>
+		<a href="#">Contacto</a>
+	  </div>  
+	  
+	  <input type="checkbox" name="Menu" id="menu-button-check">
+        <label for="menu-button-check">≡</label>
+        <div class="nav-menu">
+            <ul>
+                <li><a href="https://emirodgar.com">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Casos de éxito</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Quién soy</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>			
+	</nav>
+
+
+
+	<section>
+	  <div class="page-title">
+		<div class="title-container">
+			<span>EXPERTO SEO</span>
+			<h2>Posicionamiento web basado en resultados</h2>
+			<a href="#" class="light">Quiero más tráfico</a>
+		</div>
+	  </div>
+	  
+	  <div class="page-content">
+		<div class="content-section">
+		  <div class="section-container">
+				<h1 class="title">{{ page.title }}</h1>
+				<div class="entry-meta">
+					<strong><time class="entry-date published" datetime="{{ site.time |  date: '%Y-%m-%d %H:%M:%S' }}">{{ site.time |  date: ' %d/%m/%Y' }}</time></strong>
+						| 
+						 {% assign words = content | number_of_words %}
+						  {% if words < 360 %}
+							1 minuto
+						  {% else %}
+							{{ words | divided_by:180 }} minutos
+						  {% endif %}
+				</div>
+				 {% if page.toc!= null %}
+				  <h4>Tabla de contenidos</h4>
+						<a id="ergtoclink" on="tap:ergtoc.toggleVisibility">Mostrar / ocultar</a>
+						<div id="ergtoc" hidden>{% include toc.html html=content %}</div>
+				{% endif %}
+				{{ content }}
+		   </div>
+		   {% if page.tags== 1 %}
+				<div class="section-container capability-card">
+					<h2>Planificación estratégica</h2>
+					<p>Todos nuestros proyectos comienzan con un riguroso proceso de planificación estratégica.</p>
+				</div>
+		   {% endif %}
+
+		</div><!-- .content-section -->
+			
+		<div class="content-section cta">
+		  <div class="section-container">
+			<h2>Estrategias SEO basadas en resultados</h2>
+			<a href="" class="btn">Quiero probar</a>
+		  </div>
+		</div><!-- .content-container -->
+	  </div>
+	</section>
+
+	<div class="footer">
+	  <div class="footer-main">
+		<p>Emirodgar - 2021</p>
+		<a href="#">Contacto</a>
+	  </div>
+	</div>
+   </body>
+</html>

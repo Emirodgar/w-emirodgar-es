@@ -1,0 +1,66 @@
+---
+#Add "layout: compress" here to compress the html code
+---
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+{% include head.html %}
+
+<body>
+  <div class="wrapper">
+    {% include sidebar.html %}
+
+    <div class="main-wrapper">
+        
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+{% include scripts.html %}
+</body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{page.title}} | Datos e IA</title>
+	<meta name="description" value="">
+    <link rel="stylesheet" href="styles.css">
+	{% seo %}
+	{% if page.image== null %}
+	  <meta content="https://emirodgar.com/cdn/images/og/emirodgar.png" property="og:image">
+	{% endif %}
+	<link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>{{page.title}}</h1>
+        <p>Impulsando las estratégias políticas con tecnología avanzada.</p>
+        <!--<button onclick="scrollToSection('services')">Descubre más</button>-->
+    </section>
+		
+	<!-- Bloque de Texto Extenso -->
+    <section class="section text-block-wide">
+        <div class="post-meta">
+			<span><time>{{ site.time |  date: ' %d-%m-%Y' }}</time></span>
+    		</div>
+		<div class="text-container">
+            
+		{{ content }}
+		
+
+        </div>
+    </section>
+
+
+</body>
+</html>
+
+

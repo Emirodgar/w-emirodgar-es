@@ -1,0 +1,136 @@
+{
+  "data": [
+	[
+      "Google chrome identificará a las páginas rápidas",
+      "Para ayudar a los usuarios a identificar páginas con un gran tiempo de carga, Chrome mostrará una etiqueta para identificar unos buenos valores en las Core Web Vitals. ",
+      "https://emirodgar.com/etiqueta-pagina-rapida",
+    "Agosto 2020"
+    ],
+	[
+      "Google no interactuará con los botones de 'cargar más'",
+      "Para ahorrar costes, Google no interactuará con los botones de ver más. Si cargamos información a través de Javascript, no será accesible pero si lo hacemos a través de CSS (ocultar/mostrar) no tendremos problemas. ",
+      "https://twitter.com/Marie_Haynes/status/1234559842158891008",
+    "Marzo 2020"
+    ],
+    [
+      "Google incoporará iconos en las imágenes",
+      "En las búsquedas de escritorio podremos ver una serie de iconos en las búsquedas de imágenes que nos indicarán si pertenecen a productos, recetas o a contenido de un vídeo.",
+      "https://twitter.com/searchliaison/status/1232426759770886144",
+    "Marzo 2020"
+    ],
+    [
+      "Los atributos de enlace aún no son usados por Google",
+      "El 1 de marzo de 2020 era la fecha en la que Google comenzaría a usar los enlaces nofollow como hint para rastreo e indexación. De momento, según confirma John Mueller, ningún equipo está haciendo uso de esta funcaionalidad.",
+      "https://twitter.com/KyleW_Sutton/status/1232767353110355971",
+    "Marzo 2020"
+    ],
+    [
+      "Indexación mobile-first para todas las páginas",
+      "Google avisa de que en los próximos 6-12 meses aplicará la indexación mobile-first para todas las páginas. Si tu web aún no está adaptada -o tiene problemas- deberías trabajar en solucionarlos.",
+      "https://webmasters.googleblog.com/2020/03/announcing-mobile-first-indexing-for.html",
+    "Marzo 2020"
+    ],
+    [
+      "Al migrar dominios mantén ambos certificados SSL",
+      "Si hacemos una migración de un dominio a otro, Google nos recomienda mantener un certificado SSL en el viejo para evitar problemas.",
+      "https://twitter.com/JohnMu/status/1235251254797971457",
+    "Marzo 2020"
+    ],
+    [
+      "Si Google no te indexa el problema será tu contenido",
+      "John lo ha dejado bastante claro a través de Twitter: si tienes problemas con la indexación de nuevas páginas, quizá sea que Googlebot no las considera relevantes y deberías optimizarlas.",
+      "https://twitter.com/JohnMu/status/1224373191310704640",
+    "Febrero 2020"
+    ],
+    [
+      "Actualización de algoritmo no oficial",
+      "Aunque Google no lo ha hech oficial, queda confirmado que durante febrero ha habido un cambio en el algoritmo de búsqueda mucho más grande que los de diciembre y enero.",
+      "https://twitter.com/rustybrick/status/1227619872051363841",
+    "Febrero 2020"
+    ],
+    [
+      "Gestiona cambios de dominio desde Search Console",
+      "Google Search Console incorpora nuevas herramientas para validar la correcta migración de un dominio y sus redirecciones asociadas.",
+      "https://twitter.com/googlewmc/status/1229809366330564608?s=21",
+    "Febrero 2020"
+    ],
+    [
+      "Nuevo infome para datos estructurados de valoraciones",
+      "Los resultados enriquecidos de valoraciones se actualizan y contarán con un nuevo informe en Google Search Console.",
+      "https://webmasters.googleblog.com/2020/02/review-snippets.html",
+    "Febrero 2020"
+    ],
+    [
+      "Los nombres de las imágenes no son un factor relevante para posicionar",
+      "Aunque muchas veces se trabaja el nombre de una imagen para que incluya palabras clave relevantes para el SEO (palabra-clave.jpg) parece que no impacta demasiado en el posicionamiento web.",
+      "https://www.youtube.com/watch?v=RE6ATxMcDss&feature=youtu.be&t=717",
+    "Febrero 2020"
+    ],
+    [
+      "El contenido de baja calidad puede no ser indexado",
+      "Google ha confirmado que si nuestro contenido no se indexa de forma automática es posible que sea de baja calidad. Por ello debemos revisar nuestra página y optimizar su contenido.",
+      "https://twitter.com/JohnMu/status/1224373191310704640",
+    "Febrero 2020"
+    ],
+    [
+      "Retirada de URL disponible en Search Console",
+      "Google ha habilitado una opción En Search Console para solicitar la retirada temporal de URLs de nuestro sitio web o bien la eliminación de contenido obsoleto.",
+      "https://webmasters.googleblog.com/2020/01/new-removals-report-in-search-console.html",
+    "Enero 2020"
+    ],
+     [
+      "Actualizada la guía de Mobile First Indexing",
+      "Google ha actualizado su guía de indexación centrada en dispositivos móviles por lo que es recomendable echar un vistazo y asegurarnos de que cumplimos sus directrices.",
+      "https://developers.google.com/search/mobile-sites/mobile-first-indexing",
+    "Enero 2020"
+    ],
+     [
+      "Google probará nuevos lugares para los favicon",
+      "Los usuarios no estaban muy convencidos de cómo Google usaba los favicon en los resultados de búsqueda y se ha comprometido a analizarlo e intentar mostrarlo de otra forma.",
+      "https://twitter.com/searchliaison/status/1220768238490939394",
+    "Enero 2020"
+    ],
+     [
+      "Sin soporte para data-vocabulary.org",
+      "Los datos estructurados serán generados únicamente con schema.org. Si hacemos uso de data-vocabulary.org tendremos hasta abril 2020 para migrarlo. Desde Search Console podremos ver advertencias hasta entonces.",
+      "https://twitter.com/googlewmc/status/1219565763759165441",
+    "Enero 2020"
+    ],
+     [
+      "Además de HTTPS será necesario usar TLS 1.2 o superior",
+      "Google acaba de confirmar que una conexión HTTPS no será suficiente. Tenemos que hacer uso de un protocolo de cifrado 1.2 o superior.",
+      "https://twitter.com/badams/status/1217031392607064064",
+    "Enero 2020"
+    ],
+     [
+      "Actualización Core",
+      "Google acaba de lanzar una nueva actualización Core (13 de enero) que se desplegará durante los próximos días.",
+      "https://twitter.com/searchliaison/status/1216766991882567680",
+    "Enero 2020"
+    ],
+	[
+      "Google estrena un nueva plantilla",
+      "Los resultados de búsqueda contarán ahora con los iconos de las páginas asociado a cada resultado y un 'Ad' para destacar los resultados de pago.",
+      "https://www.blog.google/products/search/new-design-google-search",
+	  "Enero 2020"
+    ],
+	[
+      "Los errores 404 o 410 funcionan igual",
+      "Nada nuevo que no supiéramos ya. Si queremos desindexar una URL debemos ofrecer un error 404 o 410. Google los va a interpretar de la misma forma.",
+      "https://twitter.com/JohnMu/status/1214157450485604352",
+	  "Enero 2020"
+    ],
+	   [
+      "Más precisión en los datos de Search Console",
+      "A partir del 15 de diciembre, Google Search Console ofrecerá más información en su informe de Cobertura para las páginas rastreadas pero actualmente sin indexar.",
+      "https://twitter.com/googlewmc/status/1207341145749147654",
+	  "Diciembre 2019"
+    ],
+	  [
+      "La etiqueta canónica puede no ser suficiente",
+      "En algunos casos necesitaremos ayuda de otros factores para que Google seleccione como canónica la URL que nosotros queremos.",
+      "https://twitter.com/methode/status/1204760229906399232",
+	  "Diciembre 2019"
+    ]
+  ]
+}
