@@ -7,7 +7,6 @@ sitemap: 1
 feed: 1
 folder: seo
 date: 27/01/2022
-layout: default
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: cdn-seo
 
