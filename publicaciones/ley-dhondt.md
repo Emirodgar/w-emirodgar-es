@@ -1,5 +1,5 @@
 ---
-title: Qué ideologías políticas existen en España
+title: ¿Qué es la Ley D’Hondt y cómo afecta a los resultados electorales?
 description: 
 lang: es_ES
 author: emirodgar
@@ -8,56 +8,35 @@ feed: 1
 folder: seo
 date: 09/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-permalink: ideologias-politicas
+permalink: ley-dhondt
 
 ---
 
-# Qué ideologías políticas existen en España 
+# ¿Qué es la Ley D’Hondt y cómo afecta a los resultados electorales?
 
-Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral.
+La Ley D’Hondt es un sistema de reparto proporcional utilizado en España (y en muchos otros países) para asignar escaños en el Congreso de los Diputados. Su objetivo es convertir los votos en representación parlamentaria, pero no lo hace de forma completamente proporcional.
 
-## Evolución de las ideologías en España (1977–2025)
+## ¿Cómo funciona?
 
-A continuación, os comparto un gráfico que muestra de forma visual cómo se ha ido transformando el peso de las distintas ideologías en las elecciones generales, desde la transición hasta hoy:
+Imagina que cinco partidos compiten por 10 escaños. Los votos obtenidos por cada uno se dividen entre 1, 2, 3, etc., y se reparten los escaños a los cocientes más altos. Este sistema tiende a beneficiar a los partidos más votados y penalizar a los más pequeños, especialmente en circunscripciones con pocos escaños.
 
+## Comparación visual
 
-![image](https://github.com/user-attachments/assets/b600c728-1a6a-463a-8a62-d52a5bd9a841){:class="img-responsive"}
+A continuación, se muestra un gráfico comparativo (basado en datos simulados) entre una distribución **proporcional pura** y otra usando la **Ley D’Hondt** con un resultado típico en España:
 
+![Diferencias entre proporcionalidad pura y Ley D’Hondt](ley_dhondt_grafico.png)
 
----
+### Leyenda del gráfico:
 
-## 🟥 Izquierda
+- **Proporcional pura**: asignación de escaños idéntica al porcentaje de votos.
+- **Ley D’Hondt**: se observa cómo los partidos más votados (PSOE y PP) obtienen una ligera prima de escaños, mientras que los más pequeños (ERC y Otros) salen perjudicados.
 
-La izquierda en España aboga tradicionalmente por políticas redistributivas, justicia social y una mayor intervención del Estado en la economía. Incluye:
+## ¿Por qué importa?
 
-- **Socialdemocracia**: Defiende un estado del bienestar fuerte y economía mixta. Ejemplo: PSOE.
-- **Izquierda alternativa / radical**: Más crítica con el sistema capitalista, promueve democracia participativa, feminismo, ecologismo y derechos sociales. Ejemplo: Podemos, Sumar, IU.
+Este sistema puede influir en:
+- La formación de mayorías absolutas.
+- El incentivo a la concentración del voto.
+- La penalización de partidos minoritarios en circunscripciones pequeñas.
 
----
-
-## 🟨 Centro
-
-El centro político combina elementos de izquierda y derecha, buscando consensos y moderación. En España:
-
-- **Centristas liberales**: Apuestan por derechos individuales, economía de mercado con ciertas correcciones. Ejemplo: Ciudadanos (en su etapa más fuerte).
-- **Humanismo cristiano / democracia cristiana**: Inspirado en valores cristianos moderados. Ejemplo: algunos sectores del PP en sus orígenes.
-
----
-
-## 🟦 Derecha
-
-La derecha española suele centrarse en el orden, la propiedad privada, el libre mercado y la unidad nacional.
-
-- **Conservadurismo liberal**: Defiende el mercado libre, valores tradicionales y menor intervención estatal. Ejemplo: Partido Popular.
-- **Nacionalismo español / derecha populista**: Enfatiza la unidad de España, soberanía nacional y control migratorio. Ejemplo: Vox.
-
----
-
-## 🟩 Nacionalismos periféricos
-
-Además del eje izquierda-derecha, España cuenta con fuerzas nacionalistas o independentistas en varias comunidades:
-
-- **Nacionalismo vasco**: Desde posiciones conservadoras (PNV) a izquierdistas (EH Bildu).
-- **Independentismo catalán**: También diverso ideológicamente, desde Junts (centroderecha) a ERC (izquierda republicana).
-- **Galleguismo, andalucismo, canarismo...**: En menor medida, también existen partidos regionalistas o nacionalistas en otras CCAA.
+Es clave para entender por qué algunos partidos tienen más escaños que los votos que proporcionalmente les corresponderían.
 
