@@ -14,7 +14,7 @@ permalink: cdn-seo
 
 CDN corresponde a las siglas en inglés de *Content Delivery Network* que podríamos traducir a castellano como **Red de Distribución de Contenidos**.  Se trata por tanto de una refgdgdfgdfg
 
-dfg
+dfg dgdfgdfg
 dfgd de ordenadores que facilitan la distribución de los contenidos de una página o aplicación web utilizando servidores geolocalizados en diversos puntos del planeta. 
 
 ![Emirodgar](https://i.imgur.com/lzH6nBd.png){:class="img-responsive"}

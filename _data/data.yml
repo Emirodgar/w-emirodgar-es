@@ -10,7 +10,7 @@ sidebar:
     # Profile information
     name: Emilio Rodríguez
     tagline: Transformación digital con Datos e IA
-    avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
+    avatar: profile.jpg  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
     email: hola@emirodgar.com
@@ -31,7 +31,7 @@ sidebar:
     pdf: http://www.africau.edu/images/default/sample.pdf
 
     languages:
-      title: Languages
+      title: Idiomas
       info:
         - idiom: Español
           level: Native
@@ -259,4 +259,4 @@ skills:
         level: 60%
 
 footer: >
-    Designed with <i class="fas fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank" rel="nofollow">Xiaoying Riley</a>
+    Transformación Digital con Datos e Inteligencia Artificial / Proyecto con <i class="fas fa-heart"></i> de <a href="http://emirodgar.es">Emilio Rodríguez</a>
