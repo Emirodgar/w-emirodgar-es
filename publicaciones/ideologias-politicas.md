@@ -12,7 +12,7 @@ permalink: ideologias-politicas
 
 ---
 
-# Qué ideologías políticas existen en España
+# Qué ideologías políticas existen en España 
 
 Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral.
 
