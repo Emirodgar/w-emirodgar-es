@@ -16,7 +16,7 @@ permalink: ideologias-politicas
 
 Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral.
 
-## 🗺️ Evolución de las ideologías en España (1977–2025)
+## Evolución de las ideologías en España (1977–2025)
 
 A continuación, os comparto un gráfico que muestra de forma visual cómo se ha ido transformando el peso de las distintas ideologías en las elecciones generales, desde la transición hasta hoy:
 

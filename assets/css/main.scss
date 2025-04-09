@@ -17,12 +17,4 @@ $sidebar-order: 2;
 @import "skins/{{ site.theme_skin | default: 'blue' }}"; // skin
 @import "default"; // main partials
 
-.img-responsive {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-h2{font-size:20px; !important;}
