@@ -8,13 +8,16 @@ feed: 1
 folder: seo
 date: 09/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-permalink: ideologias-politicas-espana
+permalink: ideologias-politicas
 
 ---
 
 # Qué ideologías políticas existen en España (explicadas de forma neutral)
 
 Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral.
+
+![image](https://github.com/user-attachments/assets/b600c728-1a6a-463a-8a62-d52a5bd9a841)
+
 
 ---
 
