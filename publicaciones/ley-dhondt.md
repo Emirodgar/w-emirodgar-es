@@ -6,7 +6,7 @@ author: emirodgar
 sitemap: 1
 feed: 1
 folder: seo
-date: 09/04/2025
+date: 10/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: ley-dhondt
 
@@ -18,7 +18,12 @@ La Ley D’Hondt es un sistema de reparto proporcional utilizado en España (y e
 
 ## ¿Cómo funciona?
 
-Imagina que cinco partidos compiten por 10 escaños. Los votos obtenidos por cada uno se dividen entre 1, 2, 3, etc., y se reparten los escaños a los cocientes más altos. Este sistema tiende a beneficiar a los partidos más votados y penalizar a los más pequeños, especialmente en circunscripciones con pocos escaños.
+Imagina que cinco partidos compiten por 10 escaños. Se ordenan de mayor a menor según el número de votos, excluyendo aquellas que no han superado la barrera del 3%. Después, ese número total de votos de cada candidatura se divide por 2, por 3, por 4 y así sucesivamente , tantas veces como escaños haya. Los cocientes más altos serán aquellos a los que se les asigne un escaño.. Este sistema tiende a **beneficiar a los partidos más votados y penalizar a los más pequeños**, especialmente en circunscripciones con pocos escaños.
+
+## ¿Dónde está el principal problema de este sistema?
+
+En circunscripciones grandes, los resultados serán mucho más proporcionales que en las demarcaciones pequeñas, dado que a menor número de escaños, será mucho más difícil conseguir un diputado.
+
 
 ## Comparación visual
 
@@ -34,6 +39,7 @@ A continuación, se muestra un gráfico comparativo (basado en datos simulados) 
 ## ¿Por qué importa?
 
 Este sistema puede influir en:
+
 - La formación de mayorías absolutas.
 - El incentivo a la concentración del voto.
 - La penalización de partidos minoritarios en circunscripciones pequeñas.
