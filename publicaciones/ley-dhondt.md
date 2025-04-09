@@ -34,8 +34,9 @@ A continuación, se muestra un gráfico comparativo (basado en datos simulados) 
 
 ### Leyenda del gráfico:
 
-- **Proporcional pura**: asignación de escaños idéntica al porcentaje de votos.
-- **Ley D’Hondt**: se observa cómo los partidos más votados (PSOE y PP) obtienen una ligera prima de escaños, mientras que los más pequeños (ERC y Otros) salen perjudicados.
+- **Barra azul**: número de votos conseguidos.
+- **barra naranja**: número de escaños.
+- **línea verde**: coste en votos por cada escaño.
 
 ## ¿Por qué importa?
 
