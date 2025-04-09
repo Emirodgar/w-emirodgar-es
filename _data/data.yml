@@ -8,23 +8,23 @@ sidebar:
     education: True # set to False if you want education in main section instead of in sidebar
 
     # Profile information
-    name: Alan Doe
-    tagline: Full Stack Developer
+    name: Emilio Rodríguez
+    tagline: Transformación digital con Datos e IA
     avatar: profile.png  #place a 100x100 picture inside /assets/images/ folder and provide the name of the file below
 
     # Sidebar links
-    email: hello@webjeda.com
-    phone: 012 345 6789
-    timezone: America/Cancun Timezone
+    email: hola@emirodgar.com
+    phone: 923 015 199
+    timezone: España/Europa
     citizenship:
-    website: blog.webjeda.com #do not add http://
-    linkedin: alandoe
-    xing: alandoe
-    github: sharu725
+    website: emirodgar.es #do not add http://
+    linkedin: emirodgar
+    xing: 
+    github: emirodgar
     telegram: # add your nickname without '@' sign
     gitlab:
     bitbucket:
-    twitter: '@webjeda'
+    twitter: '@emirodgar'
     stack-overflow: # Number/Username, e.g. 123456/alandoe
     codewars:
     goodreads: # Number-Username, e.g. 123456-alandoe
@@ -33,13 +33,10 @@ sidebar:
     languages:
       title: Languages
       info:
-        - idiom: English
+        - idiom: Español
           level: Native
 
-        - idiom: French
-          level: Professional
-
-        - idiom: Spanish
+        - idiom: English
           level: Professional
 
     interests:
@@ -64,11 +61,11 @@ career-profile:
       Donec quam felis, ultricies nec, pellentesque eu.
       Second paragraph if required.
 education:
-    title: Education
+    title: Formación
     info:
-      - degree: MSc in Computer Science
-        university: University of London
-        time: 2011 - 2012
+      - degree: Ingeniero Informático
+        university: Universidad Pontificia de Salamanca
+        time: 2002 - 2007
         details: |
           Describe your study here lorem ipsum dolor sit amet, consectetuer
           adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
@@ -77,8 +74,8 @@ education:
           pretium quis, sem.
             - Bullet point
             - Bullet point
-      - degree: BSc in Applied Mathematics
-        university: Bristol University
+      - degree: Máster Experto en Comercio Electrónico
+        university: Universidad de Salamanca
         time: 2007 - 2011
         details: |
           Describe your study here lorem ipsum dolor sit amet, consectetuer
@@ -90,9 +87,9 @@ education:
             - Bullet point
 
 experiences:
-    title: Experiences
+    title: Carrera
     info:
-      - role: Lead Developer
+      - role: Director de Producción
         time: 2015 - Present
         company: Startup Hubs, San Francisco
         details: |
@@ -107,7 +104,7 @@ experiences:
           architecto beatae vitae dicta sunt explicabo.
             - Bullet point
             - Bullet point
-      - role: Senior Software Engineer
+      - role: Director SEO y Analítica web
         time: 2014 - 2015
         company: Google, London
         details: |
