@@ -29,7 +29,7 @@ En circunscripciones grandes, los resultados serán mucho más proporcionales qu
 
 A continuación, se muestra un gráfico comparativo (basado en datos simulados) entre una distribución **proporcional pura** y otra usando la **Ley D’Hondt** con un resultado típico en España:
 
-![image](https://github.com/user-attachments/assets/cd53707d-d952-42f8-a1ac-17833b4114de){:class:"img-responsive"}
+![image](https://github.com/user-attachments/assets/cd53707d-d952-42f8-a1ac-17833b4114de){:class="img-responsive"}
 
 
 ### Leyenda del gráfico:
