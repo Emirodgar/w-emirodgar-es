@@ -14,7 +14,7 @@ permalink: elecciones-generales
 
 # Resultados elecciones generales 2023
 
-
+{% raw %}
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,6 +78,7 @@ permalink: elecciones-generales
       }
     });
   </script>
+  {% raw %}
 
   
 
