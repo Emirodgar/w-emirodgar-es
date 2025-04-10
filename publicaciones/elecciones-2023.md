@@ -14,72 +14,7 @@ permalink: elecciones-generales
 
 # Resultados elecciones generales 2023
 
-{% raw %}
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      padding: 20px;
-    }
-    canvas {
-      max-width: 100%;
-    }
-  </style>
-
-  <h2>Distribución de Escaños - Elecciones Generales 2023</h2>
-  <canvas id="escanosChart"></canvas>
-
-  <script>
-    const ctx = document.getElementById('escanosChart').getContext('2d');
-    const escanosChart = new Chart(ctx, {
-      type: 'bar',
-      data: {
-        labels: [
-          'PP', 'PSOE', 'VOX', 'SUMAR', 'ERC', 'Junts',
-          'EH Bildu', 'PNV', 'BNG', 'CCa', 'UPN'
-        ],
-        datasets: [{
-          label: 'Nº de Escaños',
-          data: [137, 121, 33, 31, 7, 7, 6, 5, 1, 1, 1],
-          backgroundColor: [
-            '#1d4ed8', '#ef4444', '#65a30d', '#eab308',
-            '#7c3aed', '#5b21b6', '#16a34a', '#0ea5e9',
-            '#f59e0b', '#a855f7', '#22d3ee'
-          ],
-          borderWidth: 1
-        }]
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: { display: false },
-          tooltip: {
-            callbacks: {
-              label: function(context) {
-                return ` ${context.raw} escaños`;
-              }
-            }
-          }
-        },
-        scales: {
-          y: {
-            beginAtZero: true,
-            title: {
-              display: true,
-              text: 'Escaños'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Partidos'
-            }
-          }
-        }
-      }
-    });
-  </script>
-  {% raw %}
-
+![image](https://github.com/user-attachments/assets/d85f31bf-cb41-4fea-adaf-950f8ed5e22a){:class="img-responsive"}
   
 
 
