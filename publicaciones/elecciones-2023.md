@@ -15,7 +15,17 @@ permalink: elecciones-generales
 # Resultados elecciones generales 2023
 
 
-<h2>Distribución de Escaños - Elecciones Generales 2023</h2>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    canvas {
+      max-width: 100%;
+    }
+  </style>
+
+  <h2>Distribución de Escaños - Elecciones Generales 2023</h2>
   <canvas id="escanosChart"></canvas>
 
   <script>
