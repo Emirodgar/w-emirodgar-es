@@ -18,16 +18,18 @@ La Ley D’Hondt es un sistema de reparto proporcional utilizado en España (y e
 
 ## ¿Cómo funciona?
 
-Imagina que cinco partidos compiten por 10 escaños. Se ordenan de mayor a menor según el número de votos, excluyendo aquellas que no han superado la barrera del 3%. Después, ese número total de votos de cada candidatura se divide por 2, por 3, por 4 y así sucesivamente , tantas veces como escaños haya. Los cocientes más altos serán aquellos a los que se les asigne un escaño.. Este sistema tiende a **beneficiar a los partidos más votados y penalizar a los más pequeños**, especialmente en circunscripciones con pocos escaños.
+Imagina que cinco partidos compiten por 10 escaños. Se ordenan de mayor a menor según el número de votos, excluyendo aquellas que no han superado la barrera del 3%. 
+Después, ese número total de votos de cada candidatura se divide por 2, por 3, por 4 y así sucesivamente, tantas veces como escaños haya. Con la tabla de resultados, los cocientes más altos serán aquellos a los que se les asigne un escaño.
 
 ## ¿Dónde está el principal problema de este sistema?
 
+Este sistema tiende a **beneficiar a los partidos más votados y penalizar a los más pequeños**, especialmente en circunscripciones con pocos escaños.
 En circunscripciones grandes, los resultados serán mucho más proporcionales que en las demarcaciones pequeñas, dado que a menor número de escaños, será mucho más difícil conseguir un diputado.
 
 
 ## Comparación visual
 
-A continuación, se muestra un gráfico comparativo (basado en datos simulados) entre una distribución **proporcional pura** y otra usando la **Ley D’Hondt** con un resultado típico en España:
+A continuación, se muestra un gráfico de las elecciones de 2023 en España, donde podemos ver el número de votos que obtuvo cada partido, el número de escaños que consiguió y, en la línea verde, aquellos que necesitaron más votos para conseguir un escaño.
 
 ![image](https://github.com/user-attachments/assets/cd53707d-d952-42f8-a1ac-17833b4114de){:class="img-responsive"}
 
@@ -40,7 +42,7 @@ A continuación, se muestra un gráfico comparativo (basado en datos simulados) 
 
 ## ¿Por qué importa?
 
-Este sistema puede influir en:
+Este sistema puede influir positiva o negativamente en los siguientes factores:
 
 - La formación de mayorías absolutas.
 - El incentivo a la concentración del voto.
