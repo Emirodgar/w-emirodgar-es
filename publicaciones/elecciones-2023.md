@@ -96,3 +96,47 @@ Si visualizamos únicamente los escaños obtenidos, así es como quedarían los 
 | **UNIDOS SI**          | -         | 241         | +241             |
 | **FUERZA CÍVICA**      | -         | 113         | +113             |
 | **CCD**                | -         | 100         | +100             |
+
+
+## Evolución elecciones generales en España
+
+### Votantes y porcentaje de participación
+
+En la siguiente imagen tenemos una forma clara de ver cómo ha evolucionado el compromiso electoral de la ciudadanía en España desde 1977 hasta 2023.
+
+![image](https://github.com/user-attachments/assets/709683dd-c9af-48a1-9fbc-3e9bcccf972b){:class="img-responsive"}
+
+- En barras azules: el porcentaje de participación en cada elección general.
+
+- En línea naranja: el número de votantes (en millones).
+
+
+
+En la siguiente tabla podemos ver la evolución de resultados de las elecciones generales que han tenido lugar en España desde La Transicción.
+
+
+
+
+
+| Año              | Votantes     | Participación | Censo        | Partido más votado | Gobierno formado  |
+|------------------|--------------|----------------|---------------|---------------------|--------------------|
+| 1977             | 18.590.000   | 78,83%         | 23.600.000    | UCD                 | UCD                |
+| 1979             | 18.020.000   | 67,43%         | 26.700.000    | UCD                 | UCD                |
+| 1982             | 22.700.000   | 79,97%         | 28.400.000    | PSOE                | PSOE               |
+| 1986             | 20.900.000   | 70,49%         | 29.700.000    | PSOE                | PSOE               |
+| 1989             | 21.400.000   | 69,74%         | 30.700.000    | PSOE                | PSOE               |
+| 1993             | 24.300.000   | 76,44%         | 31.800.000    | PSOE                | PSOE               |
+| 1996             | 25.200.000   | 77,38%         | 32.600.000    | PP                  | PP                 |
+| 2000             | 23.300.000   | 68,71%         | 33.900.000    | PP                  | PP                 |
+| 2004             | 25.400.000   | 75,66%         | 33.600.000    | PSOE                | PSOE               |
+| 2008             | 25.900.000   | 73,85%         | 35.000.000    | PSOE                | PSOE               |
+| 2011             | 24.600.000   | 68,94%         | 35.700.000    | PP                  | PP                 |
+| 2015             | 25.350.000   | 69,67%         | 36.400.000    | PP                  | PP*                |
+| 2016             | 24.200.000   | 66,48%         | 36.400.000    | PP                  | PP                 |
+| 2019 (abril)     | 26.480.000   | 71,76%         | 36.900.000    | PSOE                | PSOE               |
+| 2019 (noviembre) | 24.360.000   | 66,20%         | 36.800.000    | PSOE                | PSOE + UP          |
+| 2023             | 24.950.000   | 70,40%         | 37.400.000    | PP                  | PSOE + Sumar**     |
+
+\* En 2015, el PP fue el partido más votado, pero no logró formar gobierno, lo que llevó a la repetición electoral en 2016.  
+\** En 2023, aunque el PP fue el partido más votado, el PSOE logró formar gobierno en coalición con Sumar.
+
