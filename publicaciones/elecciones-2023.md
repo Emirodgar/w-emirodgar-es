@@ -14,6 +14,24 @@ permalink: elecciones-generales
 
 # Resultados elecciones generales 2023
 
+Las elecciones generales en España tuvieron lugar el domingo 23 de julio de 2023.​ Fueron las decimosextas elecciones generales democráticas, las quintas con Felipe VI como rey y las primeras celebradas en un mes de julio.
+
+## 📊 Datos de participación – Elecciones Generales España 2023
+
+- **🗳 Total de votos emitidos**: 24.952.447  
+- **👥 Total de electores censados**: 37.469.458  
+- **📈 Porcentaje de participación**: 66,59%  
+- **📉 Porcentaje de abstención**: 33,41%  
+- 📚 *Fuente: [Wikipedia – Elecciones Generales España 2023](https://en.wikipedia.org/wiki/2023_Spanish_general_election)*
+
+Estos datos reflejan una participación significativa en los comicios, con más de dos tercios del electorado ejerciendo su derecho al voto.
+
+
+![image](https://github.com/user-attachments/assets/389bf195-9a66-4a9f-969f-3bde0667cb48){:class="img-responsive"}
+
+Si visualizamos únicamente los escaños obtenidos, así es como quedarían los resultados tras la votación y escrutinio.
+
+
 ![image](https://github.com/user-attachments/assets/d85f31bf-cb41-4fea-adaf-950f8ed5e22a){:class="img-responsive"}
   
 
