@@ -111,6 +111,15 @@ En la siguiente imagen tenemos una forma clara de ver cómo ha evolucionado el c
 - En línea naranja: el número de votantes (en millones).
 
 
+### Partidos políticos que más elecciones generales han ganado
+
+En la etapa democrática de España, sólo tres partidos han conseguido una victoria en las eleccions generales. 
+La Unión de Centro Democrático (UCD) fue una coalición política y, posteriormente, un partido político español liderado por Adolfo Suárez, que ejerció un papel protagonista durante la transición a la democracia, liderando el Gobierno de España entre 1977 y 1982.
+Tras la dimisión de Adolfo Suárez, el partido entró en una época convulsa y terminó desapareciendo. A partir de ese año, 1982, Partido Socialista Obrero Español (PSOE) y Partido Popular (PP), se han disputado las victorias, aunque en una tendencia clara a favor del PSOE.
+
+![image](https://github.com/user-attachments/assets/293bec40-6043-4f27-a30c-f27e38da85de){:class="img-responsive"}
+
+
 
 En la siguiente tabla podemos ver la evolución de resultados de las elecciones generales que han tenido lugar en España desde La Transicción.
 
