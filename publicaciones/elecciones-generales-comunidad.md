@@ -50,7 +50,11 @@ Estos datos reflejan una participación significativa en los comicios, con más 
 | Melilla                  | PP                         | Derecha liberal / conservadurismo            |
 
 
-![image](https://github.com/user-attachments/assets/389bf195-9a66-4a9f-969f-3bde0667cb48){:class="img-responsive"}
+
+## Notas adicionales:
+
+- PSC (Cataluña) es la federación del PSOE, por eso se considera socialdemócrata.
+- UPN (Navarra) es un partido regionalista de centroderecha, históricamente vinculado al PP.
 
 
 
