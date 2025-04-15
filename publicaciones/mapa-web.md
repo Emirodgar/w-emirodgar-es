@@ -21,7 +21,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endif %}
 {% endfor %}
 </ul>
-
+-
 <ul>
 {% for post in site.posts %}
 {% if post.title != null  %}
