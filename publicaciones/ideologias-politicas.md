@@ -35,6 +35,7 @@ Si tuviéramos que hacer un repaso de los hitos políticos más destacados, podr
 ## Evolución de las ideologías en España (1977–2025)
 
 Las principales idiologías en España son cuatro: izquierda, centro, derecha y nacionalismos. Históricamente la que más peso ha tenido ha sido la izquierda.
+
 A continuación, os comparto un gráfico que muestra de forma visual cómo se ha ido transformando el peso de las distintas ideologías en las elecciones generales, desde la transición hasta hoy:
 
 
