@@ -16,17 +16,12 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 <ul>
 {% for page in site.pages %}
 {% if page.title != null  %}
+	{% if page.folder== "politica" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
 {% endif %}
 {% endfor %}
 </ul>
--
-<ul>
-{% for post in site.posts %}
-{% if post.title != null  %}
-	  <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-{% endif %}
-{% endfor %}
-</ul>
+
 
 
