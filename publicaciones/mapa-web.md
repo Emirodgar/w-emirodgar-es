@@ -1,10 +1,10 @@
 ---
 title: Mapa web
-description: Página web personal de Emilio. Informático con más de 10 años en Marketing Digital.
+description: 
 lang: es_ES
 layout: emirodgar_post
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
-permalink: mapa-web
+permalink: publicaciones
 
 ---
 
