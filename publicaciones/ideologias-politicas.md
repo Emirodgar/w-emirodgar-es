@@ -1,6 +1,6 @@
 ---
 title: Qué ideologías políticas existen en España
-description: 
+description: Descubre las principales ideologías políticas de España, cómo han evolucionado desde 1978 y qué partidos las representan hoy.
 lang: es_ES
 author: emirodgar
 sitemap: 1
@@ -15,6 +15,22 @@ permalink: ideologias-politicas
 # Qué ideologías políticas existen en España 
 
 Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral.
+
+## Breve repaso histórico
+
+Si tuviéramos que hacer un repaso de los hitos políticos más destacados, podríamos resumirlo en los siguientes puntos: 
+
+- **1977**: Primeras elecciones democráticas.
+
+- **1982**: Llega el PSOE al poder.
+
+- **1996**: Gana el PP de Aznar.
+
+- **2015**: Fin del bipartidismo con Podemos y Cs.
+
+- **2019–2023**: Fragmentación del Congreso.
+
+
 
 ## Evolución de las ideologías en España (1977–2025)
 
@@ -60,4 +76,16 @@ Además del eje izquierda-derecha, España cuenta con fuerzas nacionalistas o in
 - **Nacionalismo vasco**: Desde posiciones conservadoras (PNV) a izquierdistas (EH Bildu).
 - **Independentismo catalán**: También diverso ideológicamente, desde Junts (centroderecha) a ERC (izquierda republicana).
 - **Galleguismo, andalucismo, canarismo...**: En menor medida, también existen partidos regionalistas o nacionalistas en otras CCAA.
+
+### Preguntas frecuentes
+
+**¿Cuál es la diferencia entre PSOE y Sumar?**  
+PSOE es un partido socialdemócrata tradicional, mientras que Sumar representa una izquierda más alternativa, heredera de Podemos e IU.
+
+**¿Vox es extrema derecha?**  
+Vox se sitúa en la derecha populista, con posturas nacionalistas, conservadoras y euroescépticas. Algunos analistas lo consideran de extrema derecha aunque ellos nunca se han definido así.
+
+**¿Existen partidos de centro hoy en día?**  
+Actualmente hay pocos partidos de centro con peso nacional. Ciudadanos perdió protagonismo tras las elecciones de 2019 y 2023.
+
 
