@@ -4,7 +4,7 @@ description:
 lang: es_ES
 layout: emirodgar_post
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
-permalink: publicaciones
+permalink: mapa
 
 ---
 
