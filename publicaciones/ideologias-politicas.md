@@ -34,6 +34,7 @@ Si tuviéramos que hacer un repaso de los hitos políticos más destacados, podr
 
 ## Evolución de las ideologías en España (1977–2025)
 
+Las principales idiologías en España son cuatro: izquierda, centro, derecha y nacionalismos. Históricamente la que más peso ha tenido ha sido la izquierda.
 A continuación, os comparto un gráfico que muestra de forma visual cómo se ha ido transformando el peso de las distintas ideologías en las elecciones generales, desde la transición hasta hoy:
 
 
@@ -77,7 +78,9 @@ Además del eje izquierda-derecha, España cuenta con fuerzas nacionalistas o in
 - **Independentismo catalán**: También diverso ideológicamente, desde Junts (centroderecha) a ERC (izquierda republicana).
 - **Galleguismo, andalucismo, canarismo...**: En menor medida, también existen partidos regionalistas o nacionalistas en otras CCAA.
 
-### Preguntas frecuentes
+---
+
+## Preguntas frecuentes
 
 **¿Cuál es la diferencia entre PSOE y Sumar?**  
 PSOE es un partido socialdemócrata tradicional, mientras que Sumar representa una izquierda más alternativa, heredera de Podemos e IU.
