@@ -138,24 +138,43 @@ h3 { font-size: 18px;}
   pre{font-size: 14px; max-width: 90vw; overflow: auto;}
   .social-icon{height: 24px;}
   
-  @media (min-width: 1200px){
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 800px;
-    }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    table-layout: auto;
   }
   
-  @media (min-width: 1440px){
-    .container, .container-lg, .container-md, .container-sm, .container-xl {
-      max-width: 960px;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .container{width: 100%;}
-    .mode:after {
-      line-height: 22px;
-      left: 1px;
-    }
-    h1{font-size: 1.5rem;}
-    .profile-image{width: 96px; height: 96px;}
+  /* Cabecera de la tabla */
+  thead th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    padding: 12px;
+    text-align: left;
+    border-bottom: 2px solid #ddd;
   }
   
+  /* Celdas del cuerpo de la tabla */
+  tbody td {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  
+  /* Alternancia de colores para filas */
+  tbody tr:nth-child(even) {
+    background-color: #fafafa;
+  }
+  
+  /* Hover en filas */
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsividad básica */
+  @media screen and (max-width: 768px) {
+    table {
+      font-size: 14px;
+    }
+  }
