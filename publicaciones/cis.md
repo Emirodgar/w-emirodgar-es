@@ -40,7 +40,7 @@ Las estimaciones del CIS para estas elecciones mostraron patrones de desviación
 - Sumar (la coalición de partidos a la izquierda del PSOE) fue significativamente sobreestimada, continuando la tendencia observada con Unidos Podemos en 2016.
 - VOX fue infraestimado en casi dos puntos porcentuales.
 
-## Tabla Comparativa: Estimaciones del CIS vs. Resultados Electorales
+## Tabla comparativa: estimaciones del CIS vs. resultados electorales
 
 A continuación, se presenta una tabla que compara las estimaciones del CIS con los resultados reales en las elecciones generales de España desde 2016:
 
@@ -73,6 +73,8 @@ A continuación, se presenta una tabla que compara las estimaciones del CIS con 
 
 El análisis de las estimaciones del CIS en comparación con los resultados reales muestra que, en general, ha habido desviaciones que varían según el partido y la elección. Por ejemplo, en las elecciones de noviembre de 2019, el CIS subestimó significativamente el apoyo a Vox y sobreestimó el de Ciudadanos. Sin embargo, en las elecciones de 2023, las estimaciones fueron más precisas para la mayoría de los partidos.
 
+![image](https://github.com/user-attachments/assets/3da8a8ca-beaa-4185-bfd1-a2fbacb7d811){:class="img-responsive"}
+
 ## Patrones de Desviación Sistemática
 
 Tras analizar los datos disponibles, se identifican los siguientes patrones de desviación sistemática en las estimaciones del CIS:
@@ -100,6 +102,7 @@ Las desviaciones sistemáticas podrían estar relacionadas con aspectos metodol�
 - **Volatilidad del voto**: Las encuestas capturan un momento específico, pero el voto puede modificarse sustancialmente en las últimas semanas de campaña.
 
 ### Factores políticos
+
 Las desviaciones también podrían estar influenciadas por factores políticos como:
 
 - **Polarización**: En un contexto de creciente polarización, las encuestas pueden verse afectadas por la reticencia de los votantes a declarar sus preferencias reales.
@@ -108,6 +111,8 @@ Las desviaciones también podrían estar influenciadas por factores políticos c
 ### Conclusiones
 
 El análisis revela patrones consistentes en las desviaciones de las estimaciones del CIS respecto a los resultados electorales:
+
+![image](https://github.com/user-attachments/assets/44dffb63-a81b-453f-a662-e61dd73ffd7a){:class="img-responsive"}
 
 - **Tendencia a infraestimar a los partidos de derecha** (PP y VOX), con mayor intensidad en el caso del PP.
 - **Predicciones más ajustadas para el PSOE**, con desviaciones menores que para otros partidos.
@@ -118,3 +123,31 @@ Estas desviaciones sistemáticas plantean interrogantes sobre los métodos de es
 ## Limitaciones del Estudio
 
 Es importante señalar que este análisis presenta limitaciones significativas debido a la información incompleta disponible sobre todos los procesos electorales generales celebrados entre 2016 y 2023. Un análisis más exhaustivo requeriría datos completos sobre todas las estimaciones del CIS y los resultados oficiales de cada elección celebrada en ese período. Aún así, este análisis puede ser útil para entender la fiabilidad de las encuestas preelectorales y cómo interpretarlas en el contexto político español.
+
+## Presidentes del CIS durante elecciones generales
+
+- *1977*: **Juan Díez Nicolás**
+- *1979*: **Juan Díez Nicolás**
+- *1982*: **Rafael López Pintor**
+- *1986*: **Julián Santamaría Ossorio**
+- *1989*: **Luis Rodríguez Zúñiga**
+- *1993*: **Joaquín Arango Vila-Belda**
+- *1996*: **Pilar del Castillo Vera**
+- *2000*: **Ricardo Montoro Romero**
+- *2004*: **Fernando Vallespín Oña**
+- *2008*: **Belén Barreiro Pérez-Pardo**
+- *2011*: **Félix Requena Santos**
+- *2015*: **Félix Requena Santos**
+- *2016*: **Félix Requena Santos**
+- *2019 (abril y noviembre)*: **José Félix Tezanos Tortajada**
+- *2023*: **José Félix Tezanos Tortajada**
+
+José Félix Tezanos ha sido una figura destacada al frente del CIS desde 2018, coincidiendo con las elecciones generales de abril y noviembre de 2019, así como las de 2023. Su gestión ha generado debate debido a las críticas sobre la precisión de las encuestas del CIS y su afiliación al PSOE. ​
+De los datos que tenemos, podemos concluir que la desviación media absoluta por presidente de los que tenemos datos, tienden a estar alineados.
+
+| Presidente del CIS               | Desviación Media Absoluta |
+|----------------------------------|----------------------------|
+| **Félix Requena Santos**         | 2.38%                      |
+| **José Félix Tezanos Tortajada** | 2.16%                      |
+
+
