@@ -17,6 +17,11 @@ permalink: cis
 El **Centro de Investigaciones Sociológicas** (CIS) es un organismo público español, adscrito al Ministerio de la Presidencia, Justicia y Relaciones con las Cortes, cuyo fin es el estudio científico de la sociedad española.
 Sus orígenes se remontan al 3 de enero de 1963 y en la actualidad cuenta con algo más de 80 empleados y un presupuesto de más de 10 millones.
 
+## Barómetro abril 2024
+
+Los últimos datos publicados por el CIS que dirige José Félix Tezanos, otorgan al PP una intención de voto del 26,1%, un resultado que está 7,7 puntos porcentuales por debajo del promedio del resto de encuestas hasta la fecha.
+Con respecto al PSOE, con Pedro Sánchez al frente, sube en 4,2 puntos porcentuales"
+
 ## Elecciones Generales de 2023 (23J)
 
 ### Estimaciones y Resultados
@@ -73,7 +78,9 @@ A continuación, se presenta una tabla que compara las estimaciones del CIS con 
 
 El análisis de las estimaciones del CIS en comparación con los resultados reales muestra que, en general, ha habido desviaciones que varían según el partido y la elección. Por ejemplo, en las elecciones de noviembre de 2019, el CIS subestimó significativamente el apoyo a Vox y sobreestimó el de Ciudadanos. Sin embargo, en las elecciones de 2023, las estimaciones fueron más precisas para la mayoría de los partidos.
 
+
 ![image](https://github.com/user-attachments/assets/3da8a8ca-beaa-4185-bfd1-a2fbacb7d811){:class="img-responsive"}
+
 
 ## Patrones de Desviación Sistemática
 
@@ -112,7 +119,9 @@ Las desviaciones también podrían estar influenciadas por factores políticos c
 
 El análisis revela patrones consistentes en las desviaciones de las estimaciones del CIS respecto a los resultados electorales:
 
+
 ![image](https://github.com/user-attachments/assets/44dffb63-a81b-453f-a662-e61dd73ffd7a){:class="img-responsive"}
+
 
 - **Tendencia a infraestimar a los partidos de derecha** (PP y VOX), con mayor intensidad en el caso del PP.
 - **Predicciones más ajustadas para el PSOE**, con desviaciones menores que para otros partidos.
@@ -149,5 +158,33 @@ De los datos que tenemos, podemos concluir que la desviación media absoluta por
 |----------------------------------|----------------------------|
 | **Félix Requena Santos**         | 2.38%                      |
 | **José Félix Tezanos Tortajada** | 2.16%                      |
+
+
+## Preguntas frecuentes sobre el CIS y sus estimaciones electorales
+
+
+**¿Cuáles han sido los patrones de sobreestimación o subestimación más comunes en las estimaciones del CIS desde 2016?**  
+Desde 2016, el CIS ha tendido a **sobreestimar al PSOE y a Ciudadanos** en varios comicios, especialmente en las elecciones de noviembre de 2019. Por el contrario, **Vox ha sido sistemáticamente infravalorado** en estimaciones previas a elecciones, particularmente en 2019, donde la diferencia entre estimación y resultado llegó a ser de hasta 7 puntos porcentuales.
+
+---
+
+**¿Cómo ha variado la precisión de las estimaciones del CIS en diferentes elecciones generales?**  
+La precisión del CIS ha sido **variable según el ciclo electoral**. En 2016, las desviaciones fueron relativamente moderadas, pero en 2019 (ambas convocatorias), se registraron **desviaciones más significativas**, especialmente en los partidos emergentes. En 2023, la precisión fue mejorada notablemente, con desviaciones más contenidas, lo que sugiere **una adaptación metodológica reciente**.
+
+---
+
+**¿Qué métodos utiliza el CIS para ajustar sus estimaciones de intención de voto?**  
+El CIS utiliza principalmente encuestas telefónicas asistidas por ordenador (CATI), y aplica **ponderaciones por recuerdo de voto anterior, edad, sexo, y tamaño del municipio**. Desde 2018, se introdujo el llamado **modelo de estimación sin “cocina”**, que consiste en publicar los resultados brutos de intención declarada de voto sin ajustes, aunque en algunos barómetros preelectorales se han vuelto a incorporar proyecciones ponderadas.
+
+---
+
+**¿Existen diferencias significativas en la precisión de las estimaciones del CIS entre diferentes partidos políticos?**  
+Sí. El CIS ha demostrado **mayor precisión con partidos tradicionales** como el PSOE o el PP, mientras que ha sido **menos certero con fuerzas emergentes** o en transformación como Ciudadanos, Unidas Podemos o Vox. Estos últimos han tenido mayor volatilidad electoral y menor fidelidad de voto, lo que complica su estimación.
+
+---
+
+**¿Cómo se compara la precisión del CIS con otras encuestadoras en España?**  
+La precisión del CIS ha sido objeto de debate. Aunque a veces ha mostrado **desviaciones mayores que la media de otras encuestadoras privadas**, en elecciones como la de 2023 su estimación fue **comparativamente precisa**. Algunas encuestas privadas han ofrecido mejores resultados puntuales, pero el CIS tiene la ventaja de **una muestra más amplia** y continuidad histórica.
+
 
 
