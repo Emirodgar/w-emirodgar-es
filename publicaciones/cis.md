@@ -1,5 +1,5 @@
 ---
-title: Centro de Investigaciones Sociológicas - CIS
+title: CIS - Centro de Investigaciones Sociológicas
 description: 
 lang: es_ES
 author: emirodgar
@@ -20,7 +20,7 @@ Sus orígenes se remontan al 3 de enero de 1963 y en la actualidad cuenta con al
 ## Barómetro abril 2024
 
 Los últimos datos publicados por el CIS que dirige José Félix Tezanos, otorgan al PP una intención de voto del 26,1%, un resultado que está 7,7 puntos porcentuales por debajo del promedio del resto de encuestas hasta la fecha.
-Con respecto al PSOE, con Pedro Sánchez al frente, sube en 4,2 puntos porcentuales"
+Con respecto al PSOE, con Pedro Sánchez al frente, sube en 4,2 puntos porcentuales.
 
 ## Elecciones Generales de 2023 (23J)
 
