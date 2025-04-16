@@ -12,25 +12,26 @@ permalink: cis
 
 ---
 
-# ¿Cómo se comparan las ideologías políticas en España con el resto de Europa?
+# Centro de Investigaciones Sociológicas - CIS
 
 El **Centro de Investigaciones Sociológicas** (CIS) es un organismo público español, adscrito al Ministerio de la Presidencia, Justicia y Relaciones con las Cortes, cuyo fin es el estudio científico de la sociedad española.
 Sus orígenes se remontan al 3 de enero de 1963 y en la actualidad cuenta con algo más de 80 empleados y un presupuesto de más de 10 millones.
 
 ## Elecciones Generales de 2023 (23J)
 
-Estimaciones y Resultados
-Para las elecciones del 23 de julio de 2023, el CIS realizó una macroencuesta con más de 29.000 entrevistas en toda España durante el mes de junio. Las estimaciones y los resultados fueron:
+### Estimaciones y Resultados
 
-- PP: Estimación del 31,4%, resultado real 33,1% (desviación de -1,7 puntos)
+Para las [elecciones generales](https://emirodgar.es/elecciones-generales) del 23 de julio de 2023, el CIS realizó una macroencuesta con más de 29.000 entrevistas en toda España durante el mes de junio. Las estimaciones y los resultados fueron:
 
-- PSOE: Estimación del 31,2%, resultado real 31,7% (desviación de -0,5 puntos)
+- **PP**: Estimación del 31,4%, resultado real 33,1% (desviación de -1,7 puntos)
 
-- Sumar: Estimación del 16,4%, resultado real aproximadamente 12,4% (desviación de +4 puntos)
+- **PSOE**: Estimación del 31,2%, resultado real 31,7% (desviación de -0,5 puntos)
 
-- VOX: Estimación del 10,6%, resultado real 12,4% (desviación de -1,8 puntos)
+- **Sumar**: Estimación del 16,4%, resultado real aproximadamente 12,4% (desviación de +4 puntos)
 
-### Análisis de Desviaciones 2023
+- **VOX**: Estimación del 10,6%, resultado real 12,4% (desviación de -1,8 puntos)
+
+### Análisis de desviaciones en las elecciones de 2023
 
 Las estimaciones del CIS para estas elecciones mostraron patrones de desviación similares a los observados anteriormente:
 
@@ -48,7 +49,7 @@ A continuación, se presenta una tabla que compara las estimaciones del CIS con 
 |----------|-------------------|--------------------|--------------------|-----------------|
 | 2016     | PP                | 29,2               | 33,0               | -3,8            |
 |          | PSOE              | 21,2               | 22,6               | -1,4            |
-|          | Unidos Podemos    | 23,9               | 21,2               | +2,7            |
+|          | Unidas Podemos    | 23,9               | 21,2               | +2,7            |
 |          | Ciudadanos        | 14,6               | 13,0               | +1,6            |
 |          | Vox               | N/A                | N/A                | N/A             |
 | 2019 (Abril) | PSOE          | 30,2               | 28,7               | +1,5            |
@@ -76,16 +77,16 @@ El análisis de las estimaciones del CIS en comparación con los resultados real
 
 Tras analizar los datos disponibles, se identifican los siguientes patrones de desviación sistemática en las estimaciones del CIS:
 
-1. Infraestimación consistente del PP
+1. **Infraestimación consistente del PP**
 En las distintas elecciones analizadas, el CIS ha mostrado una tendencia a infraestimar los resultados del Partido Popular. Esta tendencia fue extremadamente pronunciada en 2016 (más del 3% de desviación) y continuó en 2023, aunque con menor intensidad (-1,7 puntos).
 
-2. Estimaciones ajustadas para el PSOE
+2. **Estimaciones ajustadas para el PSOE**
 Las predicciones para el PSOE han sido generalmente más precisas, con desviaciones menores. En 2016, el error estuvo dentro del margen de ajuste (±2%), y en 2023 fue de apenas -0,5 puntos porcentuales.
 
-3. Sobreestimación de formaciones a la izquierda del PSOE
+3. **Sobreestimación de formaciones a la izquierda del PSOE**
 Existe un patrón claro de sobreestimación de las formaciones situadas a la izquierda del PSOE. En 2016, Unidos Podemos fue sobrevalorado significativamente, y en 2023, Sumar recibió una estimación 4 puntos superior a su resultado real.
 
-4. Infraestimación de VOX
+4. **Infraestimación de VOX**
 En las elecciones de 2023, el CIS infraestimó los resultados de VOX en 1,8 puntos porcentuales, sugiriendo una posible tendencia a subestimar a este partido de derecha radical.
 
 ## Factores explicativos de las desviaciones
@@ -101,21 +102,19 @@ Las desviaciones sistemáticas podrían estar relacionadas con aspectos metodol�
 ### Factores políticos
 Las desviaciones también podrían estar influenciadas por factores políticos como:
 
-- Polarización: En un contexto de creciente polarización, las encuestas pueden verse afectadas por la reticencia de los votantes a declarar sus preferencias reales.
-- Evolución del sistema de partidos: La fragmentación del sistema de partidos español desde 2015 ha complicado las estimaciones electorales.
+- **Polarización**: En un contexto de creciente polarización, las encuestas pueden verse afectadas por la reticencia de los votantes a declarar sus preferencias reales.
+- **Evolución del sistema de partidos**: La fragmentación del sistema de partidos español desde 2015 ha complicado las estimaciones electorales.
 
 ### Conclusiones
+
 El análisis revela patrones consistentes en las desviaciones de las estimaciones del CIS respecto a los resultados electorales:
 
-- Tendencia a infraestimar a los partidos de derecha (PP y VOX), con mayor intensidad en el caso del PP.
-- Predicciones más ajustadas para el PSOE, con desviaciones menores que para otros partidos.
-- Sobreestimación sistemática de los partidos a la izquierda del PSOE (Unidos Podemos en 2016, Sumar en 2023).
+- **Tendencia a infraestimar a los partidos de derecha** (PP y VOX), con mayor intensidad en el caso del PP.
+- **Predicciones más ajustadas para el PSOE**, con desviaciones menores que para otros partidos.
+- **Sobreestimación sistemática de los partidos a la izquierda del PSOE** (Unidos Podemos en 2016, Sumar en 2023).
 
 Estas desviaciones sistemáticas plantean interrogantes sobre los métodos de estimación empleados por el CIS y podrían afectar a la percepción pública sobre la fiabilidad de sus predicciones electorales. Se recomienda una revisión metodológica para ajustar los modelos de estimación y reducir estos sesgos persistentes en futuras encuestas.
 
 ## Limitaciones del Estudio
 
-Es importante señalar que este análisis presenta limitaciones significativas debido a la información incompleta disponible sobre todos los procesos electorales generales celebrados entre 2016 y 2023. Un análisis más exhaustivo requeriría datos completos sobre todas las estimaciones del CIS y los resultados oficiales de cada elección celebrada en ese período.
-
-
-Este análisis puede ser útil para entender la fiabilidad de las encuestas preelectorales y cómo interpretarlas en el contexto político español.
+Es importante señalar que este análisis presenta limitaciones significativas debido a la información incompleta disponible sobre todos los procesos electorales generales celebrados entre 2016 y 2023. Un análisis más exhaustivo requeriría datos completos sobre todas las estimaciones del CIS y los resultados oficiales de cada elección celebrada en ese período. Aún así, este análisis puede ser útil para entender la fiabilidad de las encuestas preelectorales y cómo interpretarlas en el contexto político español.
