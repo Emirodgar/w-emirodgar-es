@@ -1,12 +1,12 @@
 ---
 title: ¿Cómo se comparan las ideologías políticas en España con el resto de Europa?
-description: Descubre las principales ideologías políticas de España, cómo han evolucionado desde 1978 y qué partidos las representan hoy.
+description: Descubre las principales ideologías políticas de Europa y su relación con las de España
 lang: es_ES
 author: emirodgar
 sitemap: 1
 feed: 1
 folder: politica
-date: 09/04/2025
+date: 16/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: ideologias-politicas-europa
 
