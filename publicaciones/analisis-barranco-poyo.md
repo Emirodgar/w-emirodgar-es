@@ -41,7 +41,7 @@ El siguiente gráfico ilustra la frecuencia con la que, en medios y declaracione
 - **PSOE acusa a PP**: 45%  
 - **Ambos se culpan**: 5%  
 
-Esto evidencia una polarización extrema, donde prácticamente todo el debate político y mediático se ha centrado en el cruce de acusaciones directas, con escaso espacio para la autocrítica o el consenso.
+Esto evidencia una polarización extrema, donde prácticamente todo el debate político y mediático se ha centrado en el cruce de acusaciones directas.
 
 ## 3. Estado de los Proyectos de Obras
 
@@ -90,16 +90,12 @@ Estos son los principales medios y fuentes utilizadas para el análisis sobre el
 > Estos medios han aportado tanto datos objetivos sobre la catástrofe como enfoques editoriales y políticos que permiten analizar el posicionamiento de los partidos y la percepción pública.
 
 
----
 
-## Resumen de los hitos más relevantes analizados 
+## Cobertura Mediática: Tratamiento diferenciado según Fuentes
 
-### Cronología y hechos establecidos del desastre
-### Detección temprana y respuesta tardía
-## Confrontación Política: Administraciones en Conflicto
-### Posición de la Generalitat Valenciana (PP)
-### Posición del Gobierno Central (PSOE)
-## Cobertura Mediática: Tratamiento Diferenciado según Fuentes
+Debemos recordar que la muestra podría condicionar los resultados ni es una representativa de la realidad. Por ello también se han tenido en cuenta el enfoque de cada uno de ellos.
+Dejo algunos ejemplos.
+
 ### Medios Críticos con la Generalitat Valenciana
 
 **ElDiario.es** presenta un enfoque crítico hacia la gestión de la Generalitat Valenciana. El titular:
@@ -108,7 +104,7 @@ Estos son los principales medios y fuentes utilizadas para el análisis sobre el
 
 ...sugiere un desvío de responsabilidades. El medio destaca las contradicciones entre la versión de la Generalitat y lo establecido por la investigación judicial.
 
-### Medios con Enfoque Equilibrado
+### Medios con enfoque equilibrado
 
 **Onda Cero** adopta un enfoque más equilibrado, exponiendo tanto las conclusiones judiciales como la defensa de la Generalitat. Se cita la afirmación de la jueza de que:
 
@@ -116,7 +112,7 @@ Estos son los principales medios y fuentes utilizadas para el análisis sobre el
 
 ...junto con los argumentos autonómicos sobre la falta de alertas específicas por parte de las agencias estatales.
 
-### Medios con Cobertura Factual
+### Medios con cobertura factual
 
 **El Mundo** se enfoca más en los hechos:
 
@@ -128,10 +124,20 @@ Estos son los principales medios y fuentes utilizadas para el análisis sobre el
 
 ---
 
-## Aspectos Judiciales de la Investigación
-## La Dimensión Humana: Víctimas y Duelo
-### El Impacto en las Comunidades Afectadas
-## Confrontación entre Hechos Establecidos y Narrativas Políticas
-### Discrepancias Significativas
-## Precedentes Históricos: Gestión de Crisis en España
-## Conclusión: Lecciones de una Tragedia Politizada
+
+## Resumen de los hitos más relevantes analizados 
+
+Tras el análisis de todas las fuentes, el esquema que he seguido ha sido el siguiente:
+
+- Cronología y hechos establecidos del desastre
+- Detección temprana y respuesta tardía
+- Confrontación Política: Administraciones en Conflicto
+- Posición de la Generalitat Valenciana (PP)
+- Posición del Gobierno Central (PSOE)
+- Aspectos Judiciales de la Investigación
+- La Dimensión Humana: Víctimas y Duelo
+- El Impacto en las Comunidades Afectadas
+- Confrontación entre Hechos Establecidos y Narrativas Políticas
+- Discrepancias Significativas
+- Precedentes Históricos: Gestión de Crisis en España
+- Conclusión: Lecciones de una Tragedia Politizada
