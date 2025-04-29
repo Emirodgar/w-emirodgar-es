@@ -2,7 +2,6 @@
 title: Cómo está cambiando la educación online con la llegada de la inteligencia artificial
 description: La irrupción de ChatGPT en la educación online no solo está cambiando cómo se escriben los ensayos, sino también el valor mismo de los cursos. Un análisis con más de 55.000 trabajos lo deja claro.
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-layout: emirodgar_post
 author: Emirodgar
 lang: es_ES
 sitemap: 1
