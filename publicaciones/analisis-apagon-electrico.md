@@ -43,12 +43,18 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 - Pide transparencia total en la gestión y medidas de protección de la red.
 
 
-| Partido      | Responsabilidad Gobierno | Falta de Información | Red Pública | Oligopolio Energético | Renovables | Nucleares | Investigación/Explicaciones | Crítica a Red Eléctrica |
-|--------------|-------------------------|----------------------|-------------|----------------------|------------|-----------|-----------------------------|-------------------------|
-| PSOE         | ███████████             | ███                  |             |                      | ███████    |           | ████████                    | █                      |
-| PP           | █████████               | ████████             |             |                      | ███        | ███████   | ███████                     | ███                    |
-| Vox          | █████████               | ████████             |             |                      |            |           | ███                         |                        |
-| Sumar        | ███                    |                      | ████████    | ███████              | ███        |           | ████████                    |                        |
+
+| Término/Postura                | PSOE         | PP           | Vox          | Sumar        |
+|------------------------------- |-------------|--------------|--------------|--------------|
+| Responsabilidad Gobierno       | ███████████  | █████████    | █████████    | ███          |
+| Falta de Información           | ███          | ████████     | ████████     |              |
+| Red Pública                    |              |              |              | ████████     |
+| Oligopolio Energético          |              |              |              | ███████      |
+| Renovables                     | ███████      | ███          |              | ███          |
+| Nucleares                      |              | ███████      |              |              |
+| Investigación/Explicaciones    | ████████     | ███████      | ███          | ████████     |
+| Crítica a Red Eléctrica        | █            | ███          |              |              |
+
 
 
 ---
