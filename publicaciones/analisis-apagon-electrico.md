@@ -14,6 +14,69 @@ permalink: analisis-apagon-electrico
 
 El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 2025 ha generado múltiples hipótesis y enfoques sobre sus causas y responsabilidades. A continuación, se analizan las teorías más relevantes y el tratamiento mediático:
 
+---
+
+## Posturas de los partidos políticos sobre el apagón
+
+### PSOE (Gobierno)
+- Defiende la “respuesta rápida y eficiente” del Ejecutivo ante la crisis.
+- Destaca la coordinación entre Pedro Sánchez y María Jesús Montero.
+- Recalca que, aunque la gestión energética es responsabilidad del Gobierno, las compañías privadas deben cumplir con las decisiones gubernamentales.
+- Anuncia una investigación independiente para esclarecer las causas.
+- No descarta ninguna hipótesis, incluido un posible ciberataque.
+- Critica al PP por su gestión autonómica y por generar “alarmas sociales” con hipótesis prematuras.
+
+### PP (Partido Popular)
+- Acusa al Gobierno de no asumir el mando ni ofrecer explicaciones claras.
+- Reclama comparecencias de Pedro Sánchez y ministros en el Congreso y el Senado.
+- Juanma Moreno (PP Andalucía) sugirió inicialmente la hipótesis del ciberataque, lo que generó polémica.
+- Cuca Gamarra exige responsabilidades: “un apagón de estas características tiene que tener consecuencias”.
+- Defiende la prolongación de la vida útil de las centrales nucleares como parte de la solución.
+
+### Vox
+- Acusa al Gobierno de ocultar la verdad sobre las causas del apagón.
+- Afirma que tanto el Gobierno como Red Eléctrica “saben perfectamente lo que ha pasado y no lo quieren decir”.
+
+### Sumar
+- Culpa al “oligopolio energético” y exige una red eléctrica 100% pública.
+- Reclama una comisión de investigación.
+- Pide transparencia total en la gestión y medidas de protección de la red.
+
+---
+
+## Análisis de los términos más utilizados en los titulares
+
+### Términos frecuentes
+- **Apagón / apagón masivo**: Descripción directa del suceso.
+- **Colapso energético / gran colapso energético**: Subraya la magnitud del incidente.
+- **Red Eléctrica / sistema eléctrico**: Referencias tanto a la empresa como a la infraestructura.
+- **Responsabilidad / responsabilidades**: Términos usados especialmente por la oposición y Sumar.
+- **Oligopolio energético**: Recurrente en el discurso crítico hacia la concentración del sector.
+- **Transparencia / explicaciones / investigación**: Palabras clave en la narrativa mediática y política.
+- **Ciberataque / sabotaje informático**: Hipótesis inicial con gran repercusión mediática.
+- **Cero energético / isla eléctrica / gigavatio**: Términos técnicos incorporados en los glosarios y artículos explicativos.
+
+---
+
+## Resumen del posicionamiento político y mediático
+
+- **Izquierda (PSOE, Sumar)**:
+  - Enfatiza la rapidez de respuesta y la necesidad de más control público.
+  - Reclama investigación y transparencia institucional.
+
+- **Derecha (PP, Vox)**:
+  - Subraya la falta de explicaciones del Gobierno.
+  - Exige responsabilidades políticas y apuesta por un modelo energético más robusto, incluyendo la energía nuclear.
+
+- **Narrativa mediática**:
+  - Titulares destacan la gravedad del evento (“apagón masivo”, “colapso energético”).
+  - Reivindicaciones de claridad, responsabilidades y revisión del modelo energético (“oligopolio energético”, “red pública”).
+  - Polarización discursiva reflejada tanto en portadas como en declaraciones públicas.
+
+
+
+---
+
 ## Hipótesis técnicas y operativas
 
 ### Desconexión repentina de centrales eléctricas
@@ -135,4 +198,6 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 ### Zonas no afectadas
 - **Islas Canarias, Baleares, Ceuta y Melilla**:
   - El suministro eléctrico se mantuvo estable durante todo el evento.
+ 
+
 
