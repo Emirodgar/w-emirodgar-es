@@ -92,3 +92,47 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 - **Día 3 (miércoles):** Disminución de la frecuencia, con predominio de análisis, reportajes de fondo y seguimiento de la investigación oficial.
 
 ![image](https://github.com/user-attachments/assets/3366c66a-c38c-471a-9148-26ca8726bef9){:class="img-responsive"}
+
+---
+
+## Impacto territorial del apagón eléctrico en España
+
+### Madrid
+- La capital sufrió un corte total de electricidad, impactando infraestructuras críticas como:
+  - Transporte público (Metro, Cercanías)
+  - Hospitales
+  - Servicios de emergencia
+- El Ayuntamiento activó un operativo especial.
+- Emergencias 112 funcionó únicamente con generadores.
+
+### Barcelona
+- También experimentó un apagón total.
+- Se vieron afectados:
+  - Semáforos
+  - Transporte público
+  - Comunicaciones
+- La recuperación fue paulatina, con zonas sin luz durante varias horas.
+
+### Sur y Sureste peninsular
+- **Sevilla, Málaga, Cádiz y Murcia**:
+  - Fueron de las más afectadas.
+  - Cortes prolongados.
+  - Problemas en servicios básicos y en el transporte.
+
+### Galicia (incluyendo Santiago de Compostela)
+- Hubo cortes generalizados.
+- Se activaron generadores de emergencia.
+- En Santiago, estos generadores provocaron incluso alarmas por humo.
+
+### Resto de regiones afectadas
+- **Valencia, Castilla-La Mancha, Castilla y León, Aragón, Navarra, Euskadi (País Vasco), Extremadura y Burgos**:
+  - Reportaron cortes extensos.
+  - Afectaron tanto a núcleos urbanos como a zonas rurales.
+
+- **Otras provincias**:
+  - Granada, Almería, Ávila, Alicante y Zaragoza también sufrieron problemas de suministro.
+
+### Zonas no afectadas
+- **Islas Canarias, Baleares, Ceuta y Melilla**:
+  - El suministro eléctrico se mantuvo estable durante todo el evento.
+
