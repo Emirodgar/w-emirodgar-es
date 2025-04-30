@@ -47,6 +47,10 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 ## Análisis de los términos más utilizados en los titulares
 
 ### Términos frecuentes
+
+![image](https://github.com/user-attachments/assets/c13f4612-27ba-43e2-b38e-7f8576153ae2){:class="img-responsive"}
+
+
 - **Apagón / apagón masivo**: Descripción directa del suceso.
 - **Colapso energético / gran colapso energético**: Subraya la magnitud del incidente.
 - **Red Eléctrica / sistema eléctrico**: Referencias tanto a la empresa como a la infraestructura.
