@@ -29,7 +29,7 @@ El contexto político y cultural de Emiratos Árabes es diferente al nuestro. Oc
 
 Y sobre todo, de no tener miedo a experimentar. Porque si no lo hacemos aquí, alguien lo hará fuera… y nos tocará ponernos al día demasiado tarde.
 
-En mi día a día como [consultor SEO](https://emirodgar.com/consultor-seo), veo constantemente cómo la automatización y el análisis de datos pueden cambiar la forma de trabajar en cualquier sector. Aplicado a la administración, esto puede significar pasar de documentos eternos en PDF que nadie lee, a sistemas que entienden, resumen, alertan y recomiendan. No es ciencia ficción. Ya existe.
+En mi día a día como [consultor SEO](https://emirodgar.com/), veo constantemente cómo la automatización y el análisis de datos pueden cambiar la forma de trabajar en cualquier sector. Aplicado a la administración, esto puede significar pasar de documentos eternos en PDF que nadie lee, a sistemas que entienden, resumen, alertan y recomiendan. No es ciencia ficción. Ya existe.
 
 Y si te suena a utopía, piensa que hace solo unos años usar IA para resumir textos, detectar fraudes o predecir patrones de comportamiento también parecía cosa de Silicon Valley. Hoy, con herramientas como ChatGPT, esto ya está al alcance de cualquier persona u organización.
 
