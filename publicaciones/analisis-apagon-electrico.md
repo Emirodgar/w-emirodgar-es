@@ -46,7 +46,7 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 
 | Término/Postura                | PSOE         | PP           | Vox          | Sumar        |
 |------------------------------- |-------------|--------------|--------------|--------------|
-| Responsabilidad Gobierno       | ███████████  | █████████    | █████████    | ███          |
+| Responsabilidad Gobierno       | ██          | █████████    | █████████    | ███          |
 | Falta de Información           | ███          | ████████     | ████████     |              |
 | Red Pública                    |              |              |              | ████████     |
 | Oligopolio Energético          |              |              |              | ███████      |
