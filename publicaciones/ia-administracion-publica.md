@@ -1,5 +1,5 @@
 ---
-title: La IA en la administración pública
+title: La IA en la administración pública en España
 description: ¿Puede la inteligencia artificial ayudar a redactar leyes? El caso de Emiratos Árabes Unidos nos da pistas de hacia dónde puede ir la innovación en la administración pública.
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
@@ -11,7 +11,7 @@ folder: politica
 permalink: ia-en-la-administracion-publica
 ---
 
-## La IA en la administración pública: 
+# La IA en la administración pública española
 
 En muchas conversaciones sobre **transformación digital en el sector público español**, solemos poner el foco casi siempre en Estados Unidos, que es el máximo referente. Ni siquiera en Europa se ha avanzado a ese nivel para allanar el paso de la inteligencia artificial en la administración pública. Pero Emiratos Árabes Unidos ha sido quizá, hasta la fecha, el país más disruptivo a este respecto al integrar la inteligencia artificial en su administración. O al menos, en definir los primeros pasos para ello.
 
