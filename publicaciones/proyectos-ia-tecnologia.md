@@ -21,7 +21,8 @@ Desde ciudades sostenibles en zonas despobladas hasta hubs aeroespaciales o turi
 ### Colonización de Marte (SpaceX, Elon Musk)
 SpaceX quiere establecer una colonia autosuficiente en Marte para convertirnos en una especie multiplanetaria y garantizar la supervivencia humana ante catástrofes globales.
 
-![image](https://github.com/user-attachments/assets/ccc6e0f9-f0a7-4f86-ab57-1d62bcd1c88e){:class="img-responsive"}
+![image](https://github.com/user-attachments/assets/92fa3457-9243-4b8e-8455-7215093dd6ae){:class="img-responsive"}
+
 
 
 ### Starbase: ciudad espacial en Texas (SpaceX)
