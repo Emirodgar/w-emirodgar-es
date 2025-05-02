@@ -1,5 +1,5 @@
 ---
-title: Oportunidades para España - Poryectos IA y tecnología
+title: Oportunidades para España - Proyectos IA y tecnología
 description: Desde ciudades sostenibles en zonas despobladas hasta hubs aeroespaciales o turismo científico.
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
@@ -11,41 +11,44 @@ folder: politica
 permalink: proyectos-ia-tecnologia
 ---
 
+# Oportunidades para España - Proyectos IA y tecnología
+
 Desde ciudades sostenibles en zonas despobladas hasta hubs aeroespaciales o turismo científico, exploramos cómo España puede aprovechar ideas futuristas en desarrollo para posicionarse como referente en innovación, sostenibilidad y tecnología.
 
 
-# Ideas futuristas actualmente en desarrollo
+## Ideas futuristas actualmente en desarrollo
 
-## Colonización de Marte (SpaceX, Elon Musk)
+### Colonización de Marte (SpaceX, Elon Musk)
 SpaceX quiere establecer una colonia autosuficiente en Marte para convertirnos en una especie multiplanetaria y garantizar la supervivencia humana ante catástrofes globales.
 
-## Starbase: ciudad espacial en Texas (SpaceX)
+![image](https://github.com/user-attachments/assets/ccc6e0f9-f0a7-4f86-ab57-1d62bcd1c88e){:class="img-responsive"}
+
+
+### Starbase: ciudad espacial en Texas (SpaceX)
 Musk está construyendo una ciudad en Boca Chica (Texas) centrada en la actividad espacial, con lanzamientos regulares y visión de integrar la vida cotidiana con el despegue hacia otros planetas.
 
-## Orbital Reef: estaciones espaciales habitables (Blue Origin, Jeff Bezos)
+### Orbital Reef: estaciones espaciales habitables (Blue Origin, Jeff Bezos)
 Propuesta de construir hábitats permanentes en órbita terrestre, con gravedad artificial, cultivos en el espacio y zonas residenciales para millones de personas.
 
-## Telosa: ciudad ecológica del futuro (Marc Lore)
+### Telosa: ciudad ecológica del futuro (Marc Lore)
 Proyecto para crear una ciudad desde cero en el desierto, diseñada para ser 100% sostenible, con transporte autónomo, espacios verdes abundantes y una estructura social más equitativa.
 
-## Agricultura espacial
+### Agricultura espacial
 Desarrollo de sistemas para cultivar alimentos en el espacio, ya sea en estaciones orbitales o en Marte, utilizando recursos mínimos y técnicas como la hidroponía.
 
-## Gravedad artificial
+### Gravedad artificial
 Investigación sobre cómo recrear la gravedad mediante rotación u otros métodos en estaciones espaciales, esencial para la salud humana en hábitats fuera de la Tierra.
 
-## Ciudades inteligentes basadas en IA
+### Ciudades inteligentes basadas en IA
 Desarrollo de urbes gestionadas casi en su totalidad por inteligencia artificial: desde el tráfico hasta la recogida de residuos o la seguridad, con sensores y algoritmos en tiempo real.
 
-## Internet vía satélite global (Starlink)
+### Internet vía satélite global (Starlink)
 Proyecto para conectar todo el planeta a través de miles de satélites, permitiendo acceso a Internet en zonas remotas y preparando la infraestructura para comunicación interplanetaria.
 
 
-# ¿Qué podemos aprender para desarrollar en España?
+## ¿Qué podemos aprender para desarrollar en España?
 
-# 🌱 Oportunidades para España inspiradas en proyectos futuristas
-
-## 1. Construcción de una ciudad ecológica en zonas despobladas o semiáridas (modelo Telosa)
+### 1. Construcción de una ciudad ecológica en zonas despobladas o semiáridas (modelo Telosa)
 
 **Dónde:** Desiertos de Almería, zonas de Teruel, Soria, Cuenca o Badajoz  
 **Por qué:**
@@ -62,7 +65,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 
 ---
 
-## 2. Centro europeo para el lanzamiento de satélites y pruebas aeroespaciales (modelo Starbase / Orbital Reef)
+### 2. Centro europeo para el lanzamiento de satélites y pruebas aeroespaciales (modelo Starbase / Orbital Reef)
 
 **Dónde:** Islas Canarias o zonas despobladas de Andalucía o Castilla-La Mancha  
 **Por qué:**
@@ -79,7 +82,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 
 ---
 
-## 3. Agricultura espacial adaptada al desierto español
+### 3. Agricultura espacial adaptada al desierto español
 
 **Dónde:** Invernaderos de Almería y Murcia  
 **Por qué:**
@@ -95,7 +98,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 
 ---
 
-## 4. Clúster de movilidad autónoma y logística inteligente en zonas industriales
+### 4. Clúster de movilidad autónoma y logística inteligente en zonas industriales
 
 **Dónde:** Zaragoza, Barcelona, Valencia, Madrid  
 **Por qué:**
@@ -110,7 +113,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 
 ---
 
-## 5. Ciudades interconectadas por IA y digital twins
+### 5. Ciudades interconectadas por IA y digital twins
 
 **Dónde:** Proyectos piloto en municipios como Vitoria-Gasteiz, Málaga o Santander  
 **Por qué:**
@@ -125,7 +128,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 
 ---
 
-## 6. Turismo de ciencia ficción y experiencial
+### 6. Turismo de ciencia ficción y experiencial
 
 **Dónde:** Almería (decorados de cine), Lanzarote, desiertos del interior  
 **Por qué:**
