@@ -177,6 +177,39 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 
 ---
 
+## Principales bulos identificados en Redes Sociales
+
+## Principales bulos sobre el apagón en el sur de Europa
+
+En las últimas horas han circulado varias informaciones falsas sobre el apagón eléctrico que afectó a España y Portugal. Aquí te resumimos los principales bulos detectados y desmentidos:
+
+
+### Ciberataques como causa del apagón (en investigación)
+Se difundió que la CNN y Ursula von der Leyen atribuyeron inicialmente el apagón a un gran ciberataque. Sin embargo, la CNN no ha publicado ninguna noticia al respecto, y von der Leyen solo expresó su apoyo al gobierno español sin señalar ninguna causa concreta.
+
+---
+
+### Declaraciones de Pedro Sánchez sacadas de contexto
+Un vídeo muestra a Pedro Sánchez asegurando que no habría cortes eléctricos, pero es de 2022 y trataba sobre el posible impacto de la guerra de Ucrania en el suministro de gas. No está relacionado con el apagón actual, cuyas causas aún se investigan.
+
+---
+
+### Incendio en Francia como origen del corte (falso)
+Algunas publicaciones culpan a un incendio entre Narbona y Perpiñán del apagón. Esta información corresponde a un suceso de 2021. Actualmente, ninguna fuente oficial ha vinculado el apagón con un incendio.
+
+---
+
+### Vibración atmosférica inducida según el REN (falso)
+Se ha dicho que la Red Energética Portuguesa (REN) culpó a una supuesta vibración atmosférica. REN ha negado emitir esa información y no ha hablado con Reuters, que inicialmente difundió la noticia pero ya la ha retirado.
+
+---
+
+### Mapa falso con toda la península a oscuras
+Circula una imagen donde se muestra a toda España y Portugal sin electricidad. Este mapa está manipulado, según las operadoras eléctricas, y no refleja la realidad del apagón, que no afectó a toda la península.
+
+
+---
+
 ## Impacto territorial del apagón eléctrico en España
 
 ### Madrid
@@ -189,10 +222,6 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 
 ### Barcelona
 - También experimentó un apagón total.
-- Se vieron afectados:
-  - Semáforos
-  - Transporte público
-  - Comunicaciones
 - La recuperación fue paulatina, con zonas sin luz durante varias horas.
 
 ### Sur y Sureste peninsular
@@ -201,7 +230,7 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
   - Cortes prolongados.
   - Problemas en servicios básicos y en el transporte.
 
-### Galicia (incluyendo Santiago de Compostela)
+### Galicia 
 - Hubo cortes generalizados.
 - Se activaron generadores de emergencia.
 - En Santiago, estos generadores provocaron incluso alarmas por humo.
@@ -210,9 +239,6 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 - **Valencia, Castilla-La Mancha, Castilla y León, Aragón, Navarra, Euskadi (País Vasco), Extremadura y Burgos**:
   - Reportaron cortes extensos.
   - Afectaron tanto a núcleos urbanos como a zonas rurales.
-
-- **Otras provincias**:
-  - Granada, Almería, Ávila, Alicante y Zaragoza también sufrieron problemas de suministro.
 
 ### Zonas no afectadas
 - **Islas Canarias, Baleares, Ceuta y Melilla**:
