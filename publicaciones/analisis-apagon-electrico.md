@@ -179,9 +179,7 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 
 ## Principales bulos identificados en Redes Sociales
 
-## Principales bulos sobre el apagón en el sur de Europa
-
-En las últimas horas han circulado varias informaciones falsas sobre el apagón eléctrico que afectó a España y Portugal. Aquí te resumimos los principales bulos detectados y desmentidos:
+En las últimas horas han circulado varias informaciones falsas sobre el apagón eléctrico que afectó a España y Portugal. Aquí te resumimos los principales bulos detectados y desmentidos identificados en [Verificat](https://mailchi.mp/verificat/20250429-newsletter-verificat-esp-especial-apagon):
 
 
 ### Ciberataques como causa del apagón (en investigación)
