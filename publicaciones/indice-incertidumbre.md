@@ -1,5 +1,5 @@
 ---
-title: Índice de Incertidumbre Mundial: Cómo afecta a España
+title: Índice de Incertidumbre Mundial
 description: 
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
