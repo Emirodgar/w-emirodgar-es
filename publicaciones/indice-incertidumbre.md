@@ -8,7 +8,7 @@ sitemap: 1
 feed: 1
 date: 30-04-2025
 folder: politica
-permalink: analisis-apagon-electrico
+permalink: indice-incertidumbre
 ---
 
 # Índice de Incertidumbre Mundial: Cómo España navega la tormenta global
