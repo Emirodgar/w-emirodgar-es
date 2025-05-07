@@ -39,12 +39,23 @@ La medición de la incertidumbre a través de índices como el WUI no es un mero
 
 Para las empresas españolas, especialmente las orientadas a la exportación, monitorizar estos índices puede ser una herramienta valiosa para la planificación estratégica. Los sectores con mayores restricciones financieras suelen ser los más afectados por la incertidumbre, por lo que **las pymes deberían prestar especial atención**.
 
-### Desde una perspectiva de posicionamiento web (SEO), estos datos ofrecen oportunidades interesantes:
+### La incertidumbre actúa como freno económico invisible
 
-- **Creación de contenido de valor**: Desarrollar artículos, infografías o dashboards interactivos que muestren la evolución del índice de incertidumbre en España puede atraer tráfico de calidad interesado en economía y negocios.
-- **Palabras clave de alto valor**: Términos como "incertidumbre económica España", "índice incertidumbre política española" o "efectos económicos incertidumbre" tienen buen potencial de búsqueda con competencia moderada.
-- **Contenido evergreen**: La incertidumbre es cíclica. Crear contenido que explique cómo las empresas pueden adaptarse a entornos inciertos será relevante tanto en momentos de crisis como de estabilidad.
-- **Interconexión con tendencias actuales**: Vincular la incertidumbre con temas como la transición ecológica, la digitalización o las tensiones comerciales internacionales permite captar diversas intenciones de búsqueda.
+- **Inversión**: Las empresas españolas postergan proyectos ante la volatilidad. El Banco de España calcula que la inversión cae **9 veces más que el PIB** en shocks de incertidumbre.
+- **Exportaciones**: El **33% de las exportaciones españolas** dependen de Alemania y otros socios afectados por tensiones comerciales. Un recorte del 1% en el crecimiento de la eurozona reduce las exportaciones españolas en **2,5 puntos porcentuales**.
+- **Costes energéticos**: El gas un **33% más caro en 2025** podría recortar el PIB español **0,3 puntos** y aumentar la inflación **0,4 puntos**.
+
+---
+
+
+Para navegar esta incertidumbre:
+
+✅ **Monitorizar el WUI trimestral** (publicado por el FMI y Stanford) ayuda a anticipar ciclos económicos.
+
+✅ **Diversificar mercados**: Solo el **15% de las pymes españolas** exportan fuera de la UE, un riesgo clave ante aranceles.
+
+✅ **Apostar por energías renovables**: BBVA Research estima que sin inversiones en renovables, la luz sería **20% más cara**, erosionando competitividad.
+
 
 ---
 
