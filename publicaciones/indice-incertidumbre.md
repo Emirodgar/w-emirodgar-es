@@ -11,7 +11,7 @@ folder: politica
 permalink: indice-incertidumbre
 ---
 
-# Índice de Incertidumbre Mundial: Cómo España navega la tormenta global
+# Índice de Incertidumbre Mundial: Cómo afecta a España 
 
 El Índice de Incertidumbre Mundial (*World Uncertainty Index* o WUI) ha alcanzado en el primer trimestre de 2025 niveles casi tan altos como durante la pandemia de COVID-19. Este índice, desarrollado por economistas del FMI y la Universidad de Stanford, mide la incertidumbre global mediante el análisis de texto de los informes trimestrales de la *Economist Intelligence Unit* (EIU). Básicamente, cuenta cuántas veces aparece la palabra "incertidumbre" (y sus variantes) en estos informes y escala este número por la cantidad total de palabras, creando así una medida comparable entre países. El índice se ha disparado antes incluso de que Trump anunciara sus recientes "aranceles del Día de la Liberación", lo que sugiere que podríamos estar entrando en un período de incertidumbre aún mayor.
 
@@ -48,9 +48,8 @@ Para las empresas españolas, especialmente las orientadas a la exportación, mo
 
 ---
 
-Las empresas que mejor navegan la incertidumbre suelen ser aquellas que la convierten en una ventaja competitiva, adaptando rápidamente sus estrategias y manteniendo flexibilidad operativa. En un país como España, donde el tejido empresarial está dominado por pymes con menor capacidad de resistencia, esta capacidad de adaptación puede marcar la diferencia entre sobrevivir o desaparecer.
+Las empresas que mejor navegan la incertidumbre suelen ser aquellas que la convierten en una ventaja competitiva, adaptando rápidamente sus estrategias y manteniendo flexibilidad operativa. En un país como España, donde el tejido empresarial está dominado por pymes con menor capacidad de resistencia, esta capacidad de adaptación puede marcar la diferencia entre sobrevivir o desaparecer. Monitorizar, entender y adaptarse a la incertidumbre es ahora más crucial que nunca para empresas, gobiernos y ciudadanos.
 
 > Como dijo Keynes, *"no es la incertidumbre lo que paraliza, sino nuestra reacción ante ella"*.  
-> Monitorizar, entender y adaptarse a la incertidumbre es ahora más crucial que nunca para empresas, gobiernos y ciudadanos.
 
 
