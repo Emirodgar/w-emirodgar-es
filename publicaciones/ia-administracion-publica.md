@@ -116,7 +116,9 @@ Las recomendaciones clave para la administración pública española incluyen:
 
 El futuro de la administración pública española dependerá en gran medida de su capacidad para aprovechar el potencial de la IA mientras gestiona eficazmente sus riesgos. Las decisiones que se tomen ahora definirán el marco de relación entre ciudadanía, tecnología y administraciones públicas durante las próximas décadas.
 
+---
 
+> Actualización 04/2025
 
 ## La IA en Emiratos Árabes: retos y aprendizajes
 
