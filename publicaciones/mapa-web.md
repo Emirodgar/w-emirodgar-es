@@ -25,6 +25,20 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
+## Análisis
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "analisis" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
 ## Formación
 
 <ul>
