@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 09-05-2025
-folder: politica
+folder: ia
 permalink: hipnocracia
 ---
 
