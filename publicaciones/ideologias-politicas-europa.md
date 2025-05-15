@@ -14,28 +14,27 @@ permalink: ideologias-politicas-europa
 
 # Comparación de las ideologías políticas en España y Europa
 
-La política española es rica, diversa y compleja (cada vez más). Pero, ¿en qué medida difiere del resto de Europa? ¿Dónde se posicionan nuestros partidos en el panorama ideológico continental? 
+¿En qué medida difiere la política española del resto de Europa? ¿Dónde se posicionan nuestros partidos en el panorama ideológico europeo? 
 Este artículo ofrece un análisis comparativo para comprender mejor el contexto político europeo en el que se sitúa España.
 
 ### Una perspectiva europea de las ideologías políticas 
 
-Los términos izquierda, derecha y centro son comunes en todo el continente, pero su interpretación varía según el país. Por ejemplo, en Francia, el liberalismo de Macron se considera centrista, mientras que en Alemania el SPD sigue una línea socialdemócrata con fuerte influencia sindical. En España, el PSOE ocupa un espacio similar, aunque con particularidades derivadas de la historia reciente, la descentralización territorial y los pactos parlamentarios. Recomiendo leer el [glosario político](https://emirodgar.es/glosario-politico) para entender mejor los partidos políticos en España.
+Los términos izquierda, derecha y centro son comunes en todo el continente, pero su interpretación varía según el país. Por ejemplo, en Francia, el liberalismo de Macron se considera centrista, mientras que en Alemania el SPD sigue una línea socialdemócrata con fuerte influencia sindical. En España, el PSOE ocupa un espacio similar, aunque con particularidades derivadas de la historia reciente, la descentralización territorial y los pactos parlamentarios. Recomiendo leer el [glosario político](https://emirodgar.es/glosario-politico) para entender mejor la situación actual de los partidos políticos en España.
 
 ### Factores clave para interpretar las diferencias ideológicas 
 
 - **Los nombres pueden ser engañosos:** Un partido liberal puede ser progresista en un país y conservador en otro.  
 - **Importancia del contexto nacional:** La historia, las tensiones territoriales y la tradición parlamentaria condicionan la definición de las ideologías.  
-- **La singularidad española:** El peso de los nacionalismos periféricos —catalán, vasco, gallego— convierte al sistema político español en un caso particular dentro de Europa.
+- **La singularidad española:** El peso de los nacionalismos periféricos —catalán y vasco principalmente— convierte al sistema político español en un caso particular dentro de Europa.
 
 ### ¿Por qué es importante esta comparación?  
-Comparar ideologías no es solo un ejercicio académico, sino que permite: 
+Comparar ideologías no es solo un ejercicio académico, sino que nos permite: 
 
-- Comprender mejor las propuestas políticas en un contexto internacional.  
+- Comprender mejor las propuestas políticas en un contexto internacional. En este caso, el europeo. 
 - Situar el debate público más allá de las fronteras nacionales.  
 - Analizar cómo España se adapta o no a las tendencias globales.
 
-A continuación tenemos una tabla con los diferentes partidos políticos en los principales países europes.
-
+En la siguiente tabla podemos ver los diferentes partidos políticos según el país europeo al que pertenecen.
 
 
 | Ideología                   | España                    | Francia                     | Alemania                   | Italia                    | Países Bajos            |
@@ -47,9 +46,7 @@ A continuación tenemos una tabla con los diferentes partidos políticos en los 
 | **Derecha populista**      | Vox                       | Reagrupación Nacional (RN)  | AfD                        | Lega / Fratelli d’Italia  | PVV                      |
 | **Nacionalismos periféricos** | ERC, Junts, PNV, Bildu | N/A                         | Bavarian CSU (autonomista) | Liga Norte (en origen)    | N/A                      |
 
-Para terminar, contamos con una imagen de una tabla comparativa, para que sea más sencillo de interpretar.
 
-![image](https://github.com/user-attachments/assets/7f9b50e9-8e5b-49ed-bae2-b8a56bb85383){:class="img-responsive"}
 
 
 
