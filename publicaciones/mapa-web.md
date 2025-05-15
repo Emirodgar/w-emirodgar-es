@@ -97,6 +97,20 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
+## Otras publicaciones
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "politica" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
 
 
 
