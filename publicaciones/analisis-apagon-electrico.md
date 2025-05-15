@@ -82,6 +82,9 @@ Si agrupamos la información asociada a cada partido, identificaremos los bloque
 
 ### Términos frecuentes
 
+Hemos procesado cerca de un centenar de titulares de medios digitales durante las primeras horas del suceso para identificar los términos con mayor aparición y entender así el mensaje que se ha enviado a los ciudadanos.
+En la siguiente imagen los clasificamos por apariciones y, justo después, ofrecemos un contexto sobre cada uno de ellos.
+
 ![image](https://github.com/user-attachments/assets/c13f4612-27ba-43e2-b38e-7f8576153ae2){:class="img-responsive"}
 
 
