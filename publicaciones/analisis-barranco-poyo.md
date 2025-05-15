@@ -5,7 +5,7 @@ lang: es_ES
 author: emirodgar
 sitemap: 1
 feed: 1
-folder: politica
+folder: analisis
 date: 25/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: analisis-barranco-poyo
@@ -15,6 +15,26 @@ permalink: analisis-barranco-poyo
 # Análisis del desastre del Barranco del Poyo: Confrontación Política y Cobertura Mediática
 
 La catástrofe provocada por el desbordamiento del barranco del Poyo durante la DANA del 29 de octubre ha desencadenado no solo una emergencia humanitaria con 228 víctimas mortales en la provincia de Valencia, sino también una intensa batalla política entre el gobierno central (PSOE) y la Generalitat Valenciana (PP). En este análisis me voy a centrar en las publicaciones de medios para entender qué tipo de información se gestionó durante y después del desastre natural.
+
+---
+
+## Resumen de los hitos más relevantes  
+
+Tras el análisis de todas las fuentes, el esquema que se ha seguido ha sido el siguiente:
+
+- Cronología y hechos establecidos del desastre
+- Detección temprana y respuesta tardía
+- Confrontación Política: Administraciones en Conflicto
+- Posición de la Generalitat Valenciana (PP)
+- Posición del Gobierno Central (PSOE)
+- Aspectos Judiciales de la Investigación
+- La Dimensión Humana: Víctimas y Duelo
+- El Impacto en las Comunidades Afectadas
+- Confrontación entre Hechos Establecidos y Narrativas Políticas
+- Discrepancias Significativas
+- Precedentes Históricos: Gestión de Crisis en España
+- Conclusión: Lecciones de una Tragedia Politizada
+
 
 ---
 
@@ -45,6 +65,7 @@ Esto evidencia una polarización extrema, donde prácticamente todo el debate po
 
 ## 3. Estado de los Proyectos de Obras
 
+En gran parte de las comunicaciones hemos identificado que parte del discurso político para dirimir responsabilidades hacía mención al estado de obras pendientes de ejecutar que hubieran podido evitar la catástrofe.
 Este gráfico muestra el estado de los proyectos de encauzamiento y drenaje del barranco del Poyo según lo reflejado en los medios:
 
 ![image](https://github.com/user-attachments/assets/f2f175f0-d149-4c97-80ff-0260376c4070){:class="img-responsive"} 
@@ -124,20 +145,3 @@ Dejo algunos ejemplos.
 
 ---
 
-
-## Resumen de los hitos más relevantes analizados 
-
-Tras el análisis de todas las fuentes, el esquema que he seguido ha sido el siguiente:
-
-- Cronología y hechos establecidos del desastre
-- Detección temprana y respuesta tardía
-- Confrontación Política: Administraciones en Conflicto
-- Posición de la Generalitat Valenciana (PP)
-- Posición del Gobierno Central (PSOE)
-- Aspectos Judiciales de la Investigación
-- La Dimensión Humana: Víctimas y Duelo
-- El Impacto en las Comunidades Afectadas
-- Confrontación entre Hechos Establecidos y Narrativas Políticas
-- Discrepancias Significativas
-- Precedentes Históricos: Gestión de Crisis en España
-- Conclusión: Lecciones de una Tragedia Politizada
