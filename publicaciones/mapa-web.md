@@ -11,19 +11,6 @@ permalink: mapa
 
 Toda página web que se precie debe tener un **mapa web** para poder organizar los contenidos y facilitar la navegación de sus usuarios.
 
-## Publicaciones 
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "politica" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
----
 
 ## Análisis
 
