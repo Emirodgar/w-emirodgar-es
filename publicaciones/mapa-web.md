@@ -67,19 +67,49 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
-{% assign politica_pages = site.pages | where: "folder", "politica" %}
-{% assign politica_pages_sorted = politica_pages | sort: "date" | reverse %}
+## España
 
 <ul>
-  {% for page in politica_pages_sorted %}
-    {% if page.date %}
-      <li>
-        <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.date | date: "%Y-%m-%d" }}
-      </li>
-    {% endif %}
-  {% endfor %}
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "espana" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
 </ul>
 
+
+---
+
+## Europa
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "europa" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
+
+## Inteligencia Artificial
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "ia" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
 
 
 
