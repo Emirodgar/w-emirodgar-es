@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 30-04-2025
-folder: politica
+folder: espana
 permalink: indice-incertidumbre
 ---
 
