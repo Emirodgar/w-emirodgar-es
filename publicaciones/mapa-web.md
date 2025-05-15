@@ -96,7 +96,6 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
-
 ## Inteligencia Artificial
 
 <ul>
