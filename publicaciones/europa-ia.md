@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 29-04-2025
-folder: politica
+folder: europa
 permalink: europa-ia
 ---
 
