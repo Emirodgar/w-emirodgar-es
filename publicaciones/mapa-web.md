@@ -11,7 +11,7 @@ permalink: mapa
 
 Toda página web que se precie debe tener un **mapa web** para poder organizar los contenidos y facilitar la navegación de sus usuarios.
 
-## <a name="seo"></a> Publicaciones 
+## Publicaciones 
 
 <ul>
 {% for page in site.pages %}
@@ -22,6 +22,18 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endif %}
 {% endfor %}
 </ul>
+
+---
+
+<ul>
+  {% assign politica_pages = site.pages | where: "folder", "politica" | sort: "date" | reverse %}
+  {% for page in politica_pages %}
+    <li>
+      <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.date | date: "%Y-%m-%d" }}
+    </li>
+  {% endfor %}
+</ul>
+
 
 
 
