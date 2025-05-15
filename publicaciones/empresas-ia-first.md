@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 30-04-2025
-folder: politica
+folder: formacion
 permalink: empresas-ia-first
 ---
 
@@ -85,13 +85,3 @@ Como muestra la experiencia de Lowe's con OpenAI, ajustar los modelos de IA a la
 ### 4. Crear plataformas internas
 
 Mercado Libre desarrolló una plataforma interna llamada Verdi que ayuda a sus 17.000 desarrolladores a construir aplicaciones de IA de manera consistente y rápida. Este enfoque permite escalar la adopción a toda la organización.
-
-## Conclusión
-
-La adopción del enfoque "IA First" representa una oportunidad transformadora para empresas y administraciones públicas. Aunque los retos son considerables, las organizaciones que abrazan este cambio paradigmático están obteniendo ventajas competitivas significativas.
-
-En el sector privado, empresas como Duolingo demuestran que es posible implementar este enfoque con rapidez y obtener resultados extraordinarios en tiempos reducidos. Para las administraciones públicas, aunque el ritmo puede ser más pausado, los beneficios potenciales en eficiencia, productividad y servicio al ciudadano justifican plenamente el esfuerzo.
-
-La clave del éxito reside en una combinación de visión estratégica clara, disposición para repensar fundamentalmente los procesos, inversión adecuada en tecnología y talento, y un enfoque práctico basado en resultados progresivos. Como sugiere la metáfora visual del plano técnico en la publicación original, implementar un enfoque "IA First" implica reconfigurar completamente los mecanismos internos de la organización, no simplemente añadir nuevas piezas a la maquinaria existente.
-
-En el panorama actual, no se trata ya de si las organizaciones adoptarán un enfoque "IA First", sino de cuándo y cómo lo harán para maximizar sus beneficios y minimizar los riesgos asociados. La experiencia demuestra que, con el enfoque adecuado, tanto empresas como administraciones públicas pueden incorporar la IA de manera eficiente y transformadora, generando valor sustancial para sus usuarios, empleados y la sociedad en general.
