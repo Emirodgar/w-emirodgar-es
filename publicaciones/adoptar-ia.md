@@ -1,5 +1,5 @@
 ---
-title: Cómo adaptar la IA
+title: Cómo adaptar la IA en un entorno profesional
 description: 
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
@@ -7,11 +7,11 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 29-04-2025
-folder: politica
+folder: formacion
 permalink: adoptar-ia
 ---
 
-# Adaptación Profesional a la Inteligencia Artificial
+# Adaptación profesional a la Inteligencia Artificial
 
 La inteligencia artificial está redefiniendo el panorama laboral a una velocidad sin precedentes, transformando **no solo lo que hacemos, sino cómo lo hacemos**. Para mantener nuestra relevancia profesional en esta era de cambio acelerado, necesitamos atravesar un proceso de adaptación que implica tres dimensiones fundamentales: 
 
