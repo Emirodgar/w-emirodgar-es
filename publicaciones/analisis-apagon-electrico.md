@@ -7,12 +7,13 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 30-04-2025
-folder: politica
+folder: analisis
 permalink: analisis-apagon-electrico
 ---
-# Apagón eléctrico del 28 de abril de 2025: hipótesis, reacciones y debate público
+# Apagón del gran apagón eléctrico en España 
 
-El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 2025 ha generado múltiples hipótesis y enfoques sobre sus causas y responsabilidades. A continuación, se analizan las teorías más relevantes y el tratamiento mediático:
+El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 2025 ha generado múltiples hipótesis y enfoques sobre sus causas y responsabilidades. 
+A continuación, analizamos la gestión política así como el tratamiento mediático que se hizo de dicho evento.
 
 ---
 
@@ -57,27 +58,9 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 
 
 
----
-
-## Análisis de los términos más utilizados en los titulares
-
-### Términos frecuentes
-
-![image](https://github.com/user-attachments/assets/c13f4612-27ba-43e2-b38e-7f8576153ae2){:class="img-responsive"}
-
-
-- **Apagón / apagón masivo**: Descripción directa del suceso.
-- **Colapso energético / gran colapso energético**: Subraya la magnitud del incidente.
-- **Red Eléctrica / sistema eléctrico**: Referencias tanto a la empresa como a la infraestructura.
-- **Responsabilidad / responsabilidades**: Términos usados especialmente por la oposición y Sumar.
-- **Oligopolio energético**: Recurrente en el discurso crítico hacia la concentración del sector.
-- **Transparencia / explicaciones / investigación**: Palabras clave en la narrativa mediática y política.
-- **Ciberataque / sabotaje informático**: Hipótesis inicial con gran repercusión mediática.
-- **Cero energético / isla eléctrica / gigavatio**: Términos técnicos incorporados en los glosarios y artículos explicativos.
-
----
-
 ## Resumen del posicionamiento político y mediático
+
+Si agrupamos la información asociada a cada partido, identificaremos los bloques comunes. Como era de esperar, están alineadas con las [ideologías definidas en España](https://emirodgar.es/ideologias-politicas).
 
 - **Izquierda (PSOE, Sumar)**:
   - Enfatiza la rapidez de respuesta y la necesidad de más control público.
@@ -93,10 +76,41 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
   - Polarización discursiva reflejada tanto en portadas como en declaraciones públicas.
 
 
+---
+
+## Análisis de los términos más utilizados en los titulares de medios digitales
+
+### Términos frecuentes
+
+![image](https://github.com/user-attachments/assets/c13f4612-27ba-43e2-b38e-7f8576153ae2){:class="img-responsive"}
+
+
+- **Apagón / apagón masivo**: Descripción directa del suceso.
+- **Colapso energético / gran colapso energético**: Subraya la magnitud del incidente.
+- **Red Eléctrica / sistema eléctrico**: Referencias tanto a la empresa como a la infraestructura.
+- **Responsabilidad / responsabilidades**: Términos usados especialmente por la oposición y Sumar.
+- **Oligopolio energético**: Recurrente en el discurso crítico hacia la concentración del sector.
+- **Transparencia / explicaciones / investigación**: Palabras clave en la narrativa mediática y política.
+- **Ciberataque / sabotaje informático**: Hipótesis inicial con gran repercusión mediática.
+- **Cero energético / isla eléctrica / gigavatio**: Términos técnicos incorporados en los glosarios y artículos explicativos.
+
 
 ---
 
 ## Hipótesis técnicas y operativas
+
+Durante los tres días siguientes, los medios digitales ofrecieron -a través de expertos y tertulianos- una serie de hipótesis acerca del apagón.
+Hemos recopilado la presencia de cada hipótesis durante las primeras 72 hroas para entender cómo se ha ido cambiando el enfoque. Inicialmente el ciberataque, junto con fallos en la red de alta tensión, fueron los eventos más comentados.
+
+| Causa                               | Día 1           | Día 2           | Día 3           |
+|---------------------------------------|------------------|------------------|------------------|
+| Desconexión repentina de centrales eléctricas | ██               | █████            | ███████          |
+| Fallas en la red de alta tensión      | ██████████       | ████████         | ███              |
+| Inercia del sistema y renovables      | ███           | ███              | ██████               |
+| Ciberataque                           | ███████████████  | ██████████       | ██████████       |
+| Fenómeno atmosférico                  | ██████████       | ████████         | ███              |
+
+Damos conexto sobre las hipótesis tratadas en los medios digitales durante esos tres primeros días.
 
 ### Desconexión repentina de centrales eléctricas
 
@@ -112,8 +126,6 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 - La alta penetración de energías renovables (sin inercia rotacional) habría dificultado estabilizar la frecuencia tras la pérdida de generación.
 - Sin embargo, el 30% de la energía en ese momento provenía de fuentes no renovables.
 
-## Hipótesis externas y descartadas
-
 ### Ciberataque
 
 - Aunque inicialmente se consideró, REE y autoridades europeas lo descartaron tras análisis preliminares.
@@ -121,6 +133,8 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 ### Fenómeno atmosférico
 
 - Una teoría difundida por medios portugueses sobre una "vibración térmica inducida" fue desmentida por la Agencia Estatal de Meteorología (AEMET).
+
+---  
 
 ## Enfoques mediáticos y responsabilidades
 
@@ -148,24 +162,7 @@ El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 
 
 ## Variación de la frecuencia de noticias sobre el apagón en los últimos tres días
 
-### Lunes 28 de abril
-
-- El apagón se produjo alrededor de las 12:30 horas y, desde ese momento, la cobertura mediática fue inmediata y masiva.
-- Todos los grandes medios nacionales e internacionales abrieron sus portadas digitales y emitieron coberturas en directo minuto a minuto, informando sobre la magnitud del apagón, sus efectos y las primeras reacciones oficiales.
-- Se publicaron reportajes sobre el impacto social, el caos en el transporte, la suspensión de servicios y las primeras hipótesis sobre las causas.
-
-### Martes 29 de abril
-
-- La frecuencia de noticias siguió siendo alta, aunque el enfoque cambió progresivamente de la cobertura en tiempo real a la explicación y análisis de causas y consecuencias.
-- Los principales diarios impresos y digitales mantuvieron el apagón como tema de portada, con actualizaciones sobre el restablecimiento progresivo del suministro y declaraciones de autoridades.
-- Se publicaron entrevistas con expertos, análisis de la respuesta institucional y reportajes sobre la recuperación de servicios esenciales.
-- El presidente del Gobierno realizó varias comparecencias, lo que mantuvo el tema en la agenda informativa.
-
-### Miércoles 30 de abril
-
-- La frecuencia de publicaciones comenzó a descender, aunque el apagón siguió ocupando espacios destacados en los medios.
-- El foco se desplazó hacia la investigación de las causas, la creación de una comisión oficial y los primeros resultados preliminares aportados por Red Eléctrica y el Gobierno.
-- Los medios empezaron a ofrecer más análisis retrospectivos, balances del impacto y artículos de opinión, mientras la cobertura en directo perdió peso.
+El enfoque y tratamiento mediático del suceso ha ido evolucionando día a día. 
 
 ### Resumen de la evolución
 
@@ -204,43 +201,4 @@ Se ha dicho que la Red Energética Portuguesa (REN) culpó a una supuesta vibrac
 
 ### Mapa falso con toda la península a oscuras
 Circula una imagen donde se muestra a toda España y Portugal sin electricidad. Este mapa está manipulado, según las operadoras eléctricas, y no refleja la realidad del apagón, que no afectó a toda la península.
-
-
----
-
-## Impacto territorial del apagón eléctrico en España
-
-### Madrid
-- La capital sufrió un corte total de electricidad, impactando infraestructuras críticas como:
-  - Transporte público (Metro, Cercanías)
-  - Hospitales
-  - Servicios de emergencia
-- El Ayuntamiento activó un operativo especial.
-- Emergencias 112 funcionó únicamente con generadores.
-
-### Barcelona
-- También experimentó un apagón total.
-- La recuperación fue paulatina, con zonas sin luz durante varias horas.
-
-### Sur y Sureste peninsular
-- **Sevilla, Málaga, Cádiz y Murcia**:
-  - Fueron de las más afectadas.
-  - Cortes prolongados.
-  - Problemas en servicios básicos y en el transporte.
-
-### Galicia 
-- Hubo cortes generalizados.
-- Se activaron generadores de emergencia.
-- En Santiago, estos generadores provocaron incluso alarmas por humo.
-
-### Resto de regiones afectadas
-- **Valencia, Castilla-La Mancha, Castilla y León, Aragón, Navarra, Euskadi (País Vasco), Extremadura y Burgos**:
-  - Reportaron cortes extensos.
-  - Afectaron tanto a núcleos urbanos como a zonas rurales.
-
-### Zonas no afectadas
-- **Islas Canarias, Baleares, Ceuta y Melilla**:
-  - El suministro eléctrico se mantuvo estable durante todo el evento.
- 
-
 
