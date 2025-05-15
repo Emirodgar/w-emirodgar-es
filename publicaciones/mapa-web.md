@@ -25,14 +25,19 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
+{% assign politica_pages = site.pages | where: "folder", "politica" %}
+{% assign politica_pages_sorted = politica_pages | sort: "date" | reverse %}
+
 <ul>
-  {% assign politica_pages = site.pages | where: "folder", "politica" | sort: "date" | reverse %}
-  {% for page in politica_pages %}
-    <li>
-      <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.date | date: "%Y-%m-%d" }}
-    </li>
+  {% for page in politica_pages_sorted %}
+    {% if page.date %}
+      <li>
+        <a href="{{ page.url }}">{{ page.title }}</a> - {{ page.date | date: "%Y-%m-%d" }}
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
+
 
 
 
