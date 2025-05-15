@@ -5,7 +5,7 @@ lang: es_ES
 author: emirodgar
 sitemap: 1
 feed: 1
-folder: politica
+folder: espana
 date: 15/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: glosario-politico
@@ -40,7 +40,7 @@ Ejemplo: Parte del ideario del PP, Ciudadanos o Vox.
 
 ---
 
-🧩 Otros términos
+## 🧩 Otros términos
 
 - **Conservadurismo**: Defensa de valores tradicionales, orden social y cambios graduales.
 - **Progresismo**: Postura política favorable a reformas sociales, ampliación de derechos y diversidad.
