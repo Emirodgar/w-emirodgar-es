@@ -98,3 +98,52 @@ button:hover {
     font-size: 1.1rem;
     color: #444;
 }
+
+/* Publicaciones Destacadas */
+.publicaciones {
+    background-color: #f9fafb;
+}
+
+.tabla-publicaciones {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.fila {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.columna {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    flex: 1 1 300px;
+    max-width: 500px;
+    transition: transform 0.3s ease;
+}
+
+.columna h3 {
+    margin-top: 0;
+    color: #1E3A8A;
+}
+
+.columna p {
+    color: #555;
+    margin: 10px 0;
+}
+
+.columna a {
+    text-decoration: none;
+    color: #1E3A8A;
+    font-weight: bold;
+}
+
+.columna:hover {
+    transform: translateY(-5px);
+}
