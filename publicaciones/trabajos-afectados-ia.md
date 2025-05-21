@@ -13,12 +13,18 @@ permalink: trabajos-afectados-ia
 
 # Puestos de trabajo que podrían verse afectados por la IA (en 5-10 años)
 
-
 La inteligencia artificial está avanzando a un ritmo acelerado, y con ella, el mercado laboral se enfrenta a una transformación profunda. Cada vez son más los sectores que adoptan tecnologías basadas en IA para automatizar procesos, reducir costes y aumentar la eficiencia. Esto no solo está cambiando la forma en que trabajamos, sino que también pone en riesgo la supervivencia de numerosos puestos de trabajo, especialmente aquellos que se basan en tareas repetitivas, predecibles o fácilmente digitalizables.
 
-En este análisis presentamos una clasificación clara de los empleos que podrían desaparecer, transformarse o reducirse drásticamente en la próxima década debido al impacto de la inteligencia artificial y la automatización. Desde diseñadores gráficos hasta agentes de seguros o técnicos de soporte, muchos roles tradicionales están viendo cómo su valor en el mercado cambia radicalmente.
+## Cada gran cambio tecnológico crea más oportunidades de las que destruye
 
-Este documento no busca generar alarma, sino fomentar la anticipación y la adaptación. Entender qué perfiles están en riesgo es el primer paso para reinventarse profesionalmente y prepararse para el futuro del trabajo.
+Pero no debemos ver esta situación como alarmante, sino como una oportunidad de evolucionar, adaptarnos y ser más eficientes en un nuevo entorno.
+Según el Informe sobre el Futuro del Empleo del Foro Económico Mundial ([*The Future of Jobs Report 2025*](https://www.weforum.org/publications/the-future-of-jobs-report-2025/)), la inteligencia artificial creará 170 millones de nuevos puestos de trabajo durante los próximos 10 años, mientras impacta en 92 millones.
+
+En este análisis presentamos una clasificación de los empleos que podrían desaparecer, transformarse o reducirse drásticamente en la próxima década debido al impacto de la inteligencia artificial y la automatización.
+Este documento no busca generar alarma, sino **fomentar la anticipación y la adaptación**. Entender qué perfiles están en riesgo es el primer paso para reinventarse profesionalmente y prepararse para el futuro del trabajo.
+
+
+---
 
 ## 💀 Alta probabilidad de sustitución o transformación (>90%)
 
