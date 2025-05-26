@@ -27,7 +27,7 @@ Esta dinámica ayuda a entender por qué Bluesky, tras alcanzar su pico a finale
 
 Lo dudo mucho. Creo que tuvo una gran oportunidad pero se enfrentó a dos potenciales problemas que no supo resolver:
 
-1- Su impulso principal provino de un movimiento político y no de las ventajas tecnológicos que podía ofrecer respecto a sus competidores.
-2- La masa crítica de usuarios siempre ha estado en X/Twitter. Mover a cientos de miles de usuarios no es fácil y si no consigues un atractivo para ello, la gente seguiré con lo que conoce. Ni Blusky ni Mastodon a día de hoy han conseguido mover perfiles relevantes que consoliden comunidades en estas nuevas redes. EL grueso de los usuarios, y de las conversaciones, siguen en X/Twitter.
+1. Su impulso principal provino de un movimiento político y no de las ventajas tecnológicos que podía ofrecer respecto a sus competidores.
+2. La masa crítica de usuarios siempre ha estado en X/Twitter. Mover a cientos de miles de usuarios no es fácil y si no consigues un atractivo para ello, la gente seguirá con lo que conoce. Ni Blusky ni Mastodon a día de hoy han conseguido mover perfiles relevantes que consoliden comunidades en estas nuevas redes. EL grueso de los usuarios, y de las conversaciones, siguen en X/Twitter.
 
 
