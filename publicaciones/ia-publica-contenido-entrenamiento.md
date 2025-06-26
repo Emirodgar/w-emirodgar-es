@@ -7,10 +7,11 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 25-06-2025
-folder: politica
+folder: espana
 permalink: ia-publica-contenido-entrenamiento
 ---
 
+# El saqueo digital y la cara oscura de la Inteligencia Artificial Española
 
 La inteligencia artificial (IA) se presenta como la gran promesa del futuro, pero **¿qué pasa cuando su desarrollo se alimenta del trabajo ajeno sin permiso?** Una reciente polémica en España ha puesto de manifiesto cómo los proyectos de IA impulsados por el propio Estado podrían estar entrando en conflicto con los derechos de autor de miles de creadores. La noticia se ha hecho pública a través del [artículo de JotDown](https://www.jotdown.es/2025/06/el-gran-robo-del-siglo-dialnet-y-el-barcelona-supercomputer-center-bsc/ ).
 
