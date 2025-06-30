@@ -16,9 +16,6 @@ permalink: huellas-digitales-robots
 
 Ojo con los "bots buenos" y la visibilidad online. Hoy en día, el mundo digital está lleno de bots; no solo de los que nos dan problemas, sino también de otros que son esenciales para que nuestra información llegue a más gente. Con el auge de plataformas de SEO, marketing y, sobre todo, la Inteligencia Artificial, la cantidad de estos "rastreadores" que recorren la web para recopilar y verificar datos no para de crecer.
 
-![image](https://github.com/user-attachments/assets/ebfeb6fb-2f68-4035-a2d4-0c5115e52651){:class="img-responsive"}
-
-
 ## ¿Por qué son importantes estos bots?
 
 Imagina que estos bots son como pequeños exploradores que buscan y organizan la información de tu web para que los buscadores como Google, o incluso los modelos de lenguaje de la IA (como ChatGPT), puedan encontrarla y mostrarla cuando alguien la busca. Si bloqueamos a estos exploradores por error, es como cerrar la puerta a nuestra propia visibilidad.
@@ -26,6 +23,8 @@ Imagina que estos bots son como pequeños exploradores que buscan y organizan la
 ## El riesgo de un bloqueo incorrecto
 
 El problema surge cuando, sin querer, nuestras herramientas de seguridad, como las CDNs (redes de entrega de contenido) o los sistemas de protección automatizados, confunden a estos bots "buenos" con los "malos" y les impiden el acceso. ¿El resultado? Una disminución notable de nuestra visibilidad en los motores de búsqueda y en las respuestas de los modelos de IA. Esto significa que a la gente le costará más encontrarnos, lo que se traduce en menos visitas y, para las empresas, en menos clientes potenciales.
+
+![image](https://github.com/user-attachments/assets/53c0f015-6673-4573-8eaa-ee8e2f9d5902){:class="img-responsive"}
 
 Además, si tienes campañas de marketing de pago en marcha, un bloqueo erróneo puede causar problemas serios en su funcionamiento, haciendo que inviertas dinero sin obtener los resultados esperados.
 
