@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 25-07-2025
-folder: españa
+folder: espana
 permalink: cv-politicos
 ---
 
@@ -31,7 +31,7 @@ Durante las dos últimas décadas la **trayectoria formativa de los dirigentes e
 - **Pedro Sánchez**: Licenciado en Economía, máster europeo y doctorado en Economía (UCJC).
 - **José Luis Rodríguez Zapatero** (2004-2011): Licenciado en Derecho, profesor asociado de Constitucional; sin posgrado.
 
-> *Conclusión:* el salto cualitativo se produce con Sánchez, primer presidente democrático español con doctorado.
+*Conclusión: el salto cualitativo se produce con Sánchez, primer presidente democrático español con doctorado.*
 
 ### 1.2 PP
 
