@@ -19,7 +19,7 @@ La comunicación política española ha experimentado una evolución acelerada e
 Dado que el periodo de análisis ha sufrido claramente un crecimiento exponencial en el uso de las redes sociales, no podemos comparar rigurosamente el número de seguidores y la influencia en cada uno de los tres presidentes, dado que Pedro Sánchez siempre saldría victorioso. 
 En lugar de ello, vamos a desglosar y entender la manera de interactuar y la situación digital de cada Presidencia.
 
-<img width="938" height="563" alt="image" src="https://github.com/user-attachments/assets/89d4a870-e149-42c8-959e-c2d77e3155cc" />
+<img width="938" class="img-responsive" height="563" alt="image" src="https://github.com/user-attachments/assets/89d4a870-e149-42c8-959e-c2d77e3155cc" />
 
 
 ## José Luis Rodríguez Zapatero (2004-2011): La Era Pre-Digital
@@ -50,25 +50,25 @@ El caso Bárcenas condicionó su presencia mediática. Entre julio y agosto de 2
 
 En su discurso de investidura de 2016 destacaron palabras como “gobierno”, “España” y “españoles”, mientras que “corrupción” o “regeneración” apenas aparecieron. Los medios vincularon su imagen a ideas de “estabilidad” y “crecimiento”, pero también a “corrupción” y al propio “caso Bárcenas”.
 
-## Pedro Sánchez (2018-presente): La Era de la Comunicación Digital Estratégica
+## Pedro Sánchez (2018-presente): La era de la comunicación digital estratégica
 
-### Presencia en Entornos Digitales
+### Presencia en entornos digitales
 
 Sánchez ha diseñado la estrategia digital más sofisticada de los tres presidentes. Su equipo gestiona Twitter, Instagram, Facebook y YouTube, combinando contenido político, emotivo y de entretenimiento. En 2022 incorporó especialistas en marketing digital para potenciar la comunicación desde La Moncloa.
 
-### Cobertura Mediática y Gestión del Sentimiento
+### Cobertura mediática y gestión del sentimiento
 
 Practica un “agenda setting inverso”: convierte los temas incómodos en parte de su narrativa. Durante las denuncias contra su esposa realizó una pausa pública de cinco días que transformó en un relato de victimización controlada. Sus comparecencias muestran signos de incomodidad, pero mantiene la iniciativa narrativa.
 
-### Lucha Contra la Desinformación
+### Lucha contra la desinformación
 
 Ha situado la lucha contra bulos y “pseudomedios” en el centro de su discurso. Propuso reformar la ley de publicidad institucional para limitar la financiación de medios que difundan desinformación y ha denunciado datos falsos sobre ocupación ilegal o inmigración.
 
-### Términos y Conceptos Asociados
+### Términos y conceptos asociados
 
 Sus intervenciones incluyen vocabulario polarizante: “fango”, “insidia”, “sinrazón”, junto con alusiones constantes a la “extrema derecha” y al “lawfare”. Analistas describen su enfoque como un “giro populista” que moviliza a su base mediante confrontaciones temáticas.
 
-## Evolución de las Estrategias Digitales
+## Evolución de las estrategias digitales
 
 | Presidente | Fase de las redes sociales | Estrategia dominante | Principal crisis mediática | Rasgos distintivos |
 | :-- | :-- | :-- | :-- | :-- |
@@ -76,7 +76,7 @@ Sus intervenciones incluyen vocabulario polarizante: “fango”, “insidia”,
 | Rajoy | Adopción controlada | Mensajes filtrados y firma “MR” | Caso Bárcenas | Evitación del tema en redes |
 | Sánchez | Digital nativa | Narrativa emocional y multicanal | Desinformación / ataques personales | Agenda setting inverso |
 
-## Impacto Electoral y Polarización
+## Impacto electoral y polarización
 
 El paso de la era analógica a la digital ha transformado el voto. Alrededor de una cuarta parte de los españoles reconoce que las redes sociales influyen en su decisión electoral, y la exposición a contenidos polarizantes ha aumentado la crispación política. Rajoy ha señalado que la polarización actual es la mayor desde la Transición, sugiriendo que la comunicación digital intensifica la división social.
 
