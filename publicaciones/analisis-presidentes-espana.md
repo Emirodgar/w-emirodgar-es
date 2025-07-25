@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 25-07-2025
-folder: espana
+folder: analisis
 permalink: analisis-presidentes-espana
 ---
 
