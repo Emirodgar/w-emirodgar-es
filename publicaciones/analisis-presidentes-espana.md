@@ -19,7 +19,7 @@ La comunicación política española ha experimentado una evolución acelerada e
 Dado que el periodo de análisis ha sufrido claramente un crecimiento exponencial en el uso de las redes sociales, no podemos comparar rigurosamente el número de seguidores y la influencia en cada uno de los tres presidentes, dado que Pedro Sánchez siempre saldría victorioso. 
 En lugar de ello, vamos a desglosar y entender la manera de interactuar y la situación digital de cada Presidencia.
 
-<img width="938" class="img-responsive" height="563" alt="image" src="https://github.com/user-attachments/assets/89d4a870-e149-42c8-959e-c2d77e3155cc" />
+<img class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/89d4a870-e149-42c8-959e-c2d77e3155cc" />
 
 
 ## José Luis Rodríguez Zapatero (2004-2011): La Era Pre-Digital
