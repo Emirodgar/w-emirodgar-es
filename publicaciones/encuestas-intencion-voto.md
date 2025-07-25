@@ -32,7 +32,7 @@ Los siguientes datos han sido obtenidos de las diferentes publicaciones del [CIS
 | Junio | 34,3% | 27,3% | 13,2% | 7,0% | 4,2% | 1,5% |
 | Julio | 27,0% | 26,5% | 18,9% | 7,8% | 4,4% | 1,7% |
 
-![Evolución de la estimación de voto (CIS, 2025)](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/c9ca75664bdb068bbc3e8aead445af15/b8f75655-b4a6-4ddb-8676-b6c156281504/82fd5a10.png)
+![Evolución de la estimación de voto (CIS, 2025)](https://github.com/user-attachments/assets/1f5e5b12-b8fc-40a9-9cc3-d5d2e9d48959){:class="img-responsive"}
 
 ### Evolución de la estimación de voto (CIS, 2025)
 
@@ -53,6 +53,9 @@ El fenómeno más destacado es el **ascenso meteórico de Vox**, que pasó del 1
 | CelesteTel | 17/07 | 35,5% | 25,6% | 14,3% | 5,5% | +9,9% |
 
 Las diferencias entre el CIS y otras casas demoscópicas son **especialmente pronunciadas en julio de 2025**. Mientras el CIS mantiene al PSOE ligeramente por encima del PP (diferencia de -0,5%), el resto de encuestadoras otorgan al PP ventajas que oscilan entre 6,3 y 10 puntos. Esta disparidad ha generado debate sobre la metodología del instituto público, dirigido por José Félix Tezanos.
+
+![Evolución de la estimación de voto (casas demoscópicas, 2025)](https://github.com/user-attachments/assets/d1620b3f-a097-43ef-8239-be08b6dd2827){:class="img-responsive"}
+
 
 El consenso entre las casas privadas es claro: **el PP se situaría como primera fuerza política** con porcentajes entre el 33,3% y el 36,2%, mientras el PSOE oscilaría entre el 25,6% y el 29,2%. Vox mantiene posiciones similares en todas las encuestas, entre el 14,2% y el 15,2%, consolidándose como tercera fuerza.
 
