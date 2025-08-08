@@ -11,6 +11,8 @@ folder: proyectos
 permalink: proyectos
 ---
 
+# Listado de proyectos para un mundo mejor
+
 Me gusta aprender, seguir desarrollándome y, sobre todo, buscar soluciones a los problemas que me voy encontrando en el día a día. Por eso he creado esta sección de proyectos, pensada como un espacio donde poder experimentar, probar ideas y dar forma a pequeños desarrollos con un enfoque muy práctico.
 
 No son productos finales ni soluciones cerradas, sino pruebas de concepto que me sirven para explorar temas que me interesan, aprender haciendo y, si es posible, ayudar a otros compartiendo lo que voy descubriendo. Todo dentro de un marco claramente educativo y experimental.
