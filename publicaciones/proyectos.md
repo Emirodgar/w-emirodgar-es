@@ -20,6 +20,6 @@ No son productos finales ni soluciones cerradas, sino pruebas de concepto que me
 | Nombre Proyecto | Descripción                          | Documentación | Prueba de Concepto |
 |-----------------|--------------------------------------|----------------|---------------------|
 | Faro            | Monitorizar problemas de salud mental | [Enlace](https://emirodgar.es/faro-monitorizacion-salud-mental)    | [Enlace](https://emirodgar.es/proyectos/faro/)         |
-|                 |                                      |                |                     |
+| Audiencias                 | Medición de audiencias digitales para medios                                      |  [Enlace](https://emirodgar.es/medicion-audiencias-digitales)                |   [Enlace](https://emirodgar.es/proyectos/medicion-audiencias-digitales/)                  |
 |                 |                                      |                |                     |
 
