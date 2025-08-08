@@ -7,12 +7,25 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 01-08-2025
+date_modified: 08/08/2025
 folder: proyectos
 permalink: faro-monitorizacion-salud-mental
 ---
 
 
 # Sistema de monitorización de salud mental en redes sociales
+
+Además de los problemas de salud, una de las causas principales de fallecimiento en España son los problemas de salud mental. El auge de las redes sociales y la sensación de que estamos en una sociedad conectada -cuando la realidad demuestra que esa conexión de no es de calidad- ha generado múltiples problemas. 
+En la siguiente imagen se puede ver claramente la tendencia al alza de estos problemas de salud mental.
+
+<img width="2400" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/02f34088-e495-4e15-8b70-cb9eafd972ca" />
+
+Afortunadamente, una detección temprana de estos síntomas puede ayudar a prevenir las muertes. Con ello en mente he diseñado esta prueba de concepto de un sistema de que nos permita monitorizar y prevenir estas muertes.
+Es como la línea de la esperanza (teléfono gratuito al que las personas pueden llamar para recibir ayuda) pero sin que la persona afectada tenga que dar el paso. Analizando mensajes y conversaciones en la red, se podrían identificar casos concretos y ser los especialistas quienes contacten con la persona.
+
+> He desarrollado una versión navegable del dashboard que se puede [ver aquí](https://emirodgar.es/proyectos/faro/).
+
+## ¿Qué es el proyecto FARO?
 
 FARO es un dashboard web diseñado para **identificar comentarios que puedan indicar riesgo suicida en redes sociales**, permitiendo a profesionales de salud mental brindar ayuda temprana y oportuna. Se trata de un proyecto educativo y puramente informacional que ha sido desarrollado como demostración de un posible sistema de monitorización.
 
@@ -26,6 +39,7 @@ Detectar y clasificar mensajes en redes sociales que puedan indicar problemas de
 ## 🚀 Características Principales
 
 ### Monitorización en tiempo real
+
 - Detección automática de contenido de riesgo
 - Clasificación por niveles de urgencia (Crítico, Alto, Medio, Bajo)
 - Alertas instantáneas para casos críticos
