@@ -15,8 +15,8 @@ permalink: faro-monitorizacion-salud-mental
 
 # Sistema de monitorización de salud mental en redes sociales
 
-Además de los problemas de salud, una de las causas principales de fallecimiento en España son los problemas de salud mental. El auge de las redes sociales y la sensación de que estamos en una sociedad conectada -cuando la realidad demuestra que esa conexión de no es de calidad- ha generado múltiples problemas. 
-En la siguiente imagen se puede ver claramente la tendencia al alza de estos problemas de salud mental.
+Una de las causas principales de fallecimiento en España son los problemas de salud mental. El auge de las redes sociales y la sensación de que estamos en una sociedad conectada -cuando la realidad demuestra que esa conexión de no es de calidad- ha generado múltiples problemas. 
+En nuestro análisis de [Muertes por problemas de salud mental en España: Análisis estadístico y evolución temporal](https://emirodgar.es/muertes-salud-mental) se aprecia claramente la tendencia y evolución al alza, tal como podemos también constatar con la siguiente gráfica.
 
 <img width="2400" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/02f34088-e495-4e15-8b70-cb9eafd972ca" />
 
