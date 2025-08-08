@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Medición de Audiencias Digitales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-title">
+                    <h1>Dashboard de Medición de Audiencias Digitales</h1>
+                    <p class="subtitle">Sistema Público de Análisis de Medios Digitales</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="exportBtn">
+                        <i class="fas fa-download"></i>
+                        Exportar Datos
+                    </button>
+                    <button class="btn btn-primary" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                        Actualizar
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Metrics -->
+        <section class="main-metrics">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="uniqueUsers">2.8M</h3>
+                    <p class="metric-label">Usuarios Únicos</p>
+                    <span class="metric-description">Total acumulado</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="pageViews">12.8M</h3>
+                    <p class="metric-label">Páginas Vistas</p>
+                    <span class="metric-description">Total acumulado</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="avgDuration">4:05</h3>
+                    <p class="metric-label">Duración Promedio</p>
+                    <span class="metric-description">Por sesión</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="trafficQuality">87%</h3>
+                    <p class="metric-label">Calidad del Tráfico</p>
+                    <span class="metric-description">Tráfico verificado</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav class="dashboard-tabs">
+            <button class="tab-button active" data-tab="resumen">
+                <i class="fas fa-chart-pie"></i>
+                Resumen
+            </button>
+            <button class="tab-button" data-tab="medios">
+                <i class="fas fa-newspaper"></i>
+                Medios
+            </button>
+            <button class="tab-button" data-tab="calidad">
+                <i class="fas fa-shield-alt"></i>
+                Calidad
+            </button>
+            <button class="tab-button" data-tab="campanas">
+                <i class="fas fa-bullhorn"></i>
+                Campañas
+            </button>
+        </nav>
+
+        <!-- Content Sections -->
+        <main class="dashboard-content">
+            <!-- Resumen Tab -->
+            <section id="resumen" class="tab-content active">
+                <div class="content-grid">
+                    <div class="chart-container">
+                        <h3>Tendencia de Audiencia (Últimos 30 días)</h3>
+                        <p class="chart-description">Evolución de usuarios únicos y sesiones</p>
+                        <div class="chart-wrapper">
+                            <canvas id="audienceChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-section">
+                            <h4>Distribución por Dispositivos</h4>
+                            <div class="device-stats">
+                                <div class="device-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span class="device-name">Móvil</span>
+                                    <span class="device-percentage">58%</span>
+                                </div>
+                                <div class="device-item">
+                                    <i class="fas fa-desktop"></i>
+                                    <span class="device-name">Desktop</span>
+                                    <span class="device-percentage">32%</span>
+                                </div>
+                                <div class="device-item">
+                                    <i class="fas fa-tablet-alt"></i>
+                                    <span class="device-name">Tablet</span>
+                                    <span class="device-percentage">10%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-section">
+                            <h4>Distribución Geográfica</h4>
+                            <div class="geo-stats">
+                                <div class="geo-item">
+                                    <span class="geo-name">Madrid</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 29.8%"></div>
+                                    </div>
+                                    <span class="geo-percentage">29.8%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">Cataluña</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 21.9%"></div>
+                                    </div>
+                                    <span class="geo-percentage">21.9%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">Andalucía</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 16%"></div>
+                                    </div>
+                                    <span class="geo-percentage">16%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">Valencia</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="geo-percentage">10%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">País Vasco</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 7%"></div>
+                                    </div>
+                                    <span class="geo-percentage">7%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medios Tab -->
+            <section id="medios" class="tab-content">
+                <div class="content-header">
+                    <h3>Top Medios Digitales</h3>
+                    <p>Ranking por audiencia y calidad</p>
+                </div>
+                <div class="media-ranking">
+                    <div class="ranking-item">
+                        <div class="ranking-position">1</div>
+                        <div class="media-info">
+                            <h4>El País Digital</h4>
+                            <span class="media-users">1.2M usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">92%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">2.2M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">2</div>
+                        <div class="media-info">
+                            <h4>El Mundo Online</h4>
+                            <span class="media-users">987.2K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">89%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.8M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">3</div>
+                        <div class="media-info">
+                            <h4>ABC Digital</h4>
+                            <span class="media-users">734.8K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">91%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.4M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">4</div>
+                        <div class="media-info">
+                            <h4>La Vanguardia</h4>
+                            <span class="media-users">623.8K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">88%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.2M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">5</div>
+                        <div class="media-info">
+                            <h4>El Confidencial</h4>
+                            <span class="media-users">584.7K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">94%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.0M sesiones</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calidad Tab -->
+            <section id="calidad" class="tab-content">
+                <div class="quality-grid">
+                    <div class="quality-section">
+                        <h3>Calidad del Tráfico</h3>
+                        <p>Análisis de tráfico humano vs automatizado</p>
+                        
+                        <div class="traffic-analysis">
+                            <div class="traffic-item">
+                                <div class="traffic-label">
+                                    <span class="traffic-indicator human"></span>
+                                    Tráfico Humano
+                                </div>
+                                <div class="traffic-bar">
+                                    <div class="traffic-fill human" style="width: 87%"></div>
+                                </div>
+                                <span class="traffic-percentage">87%</span>
+                            </div>
+                            
+                            <div class="traffic-item">
+                                <div class="traffic-label">
+                                    <span class="traffic-indicator bot"></span>
+                                    Tráfico de Bots
+                                </div>
+                                <div class="traffic-bar">
+                                    <div class="traffic-fill bot" style="width: 13%"></div>
+                                </div>
+                                <span class="traffic-percentage">13%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fraud-section">
+                        <h3>Detección de Fraude</h3>
+                        <p>Actividades bloqueadas y sospechosas</p>
+                        
+                        <div class="fraud-stats">
+                            <div class="fraud-item">
+                                <div class="fraud-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="fraud-content">
+                                    <span class="fraud-value">1.8M</span>
+                                    <span class="fraud-label">Bots Bloqueados</span>
+                                </div>
+                            </div>
+                            
+                            <div class="fraud-item">
+                                <div class="fraud-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="fraud-content">
+                                    <span class="fraud-value">23.8K</span>
+                                    <span class="fraud-label">IPs Sospechosas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="fraud-item">
+                                <div class="fraud-icon">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                </div>
+                                <div class="fraud-content">
+                                    <span class="fraud-value">8.5K</span>
+                                    <span class="fraud-label">Clics Inválidos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Campañas Tab -->
+            <section id="campanas" class="tab-content">
+                <div class="campaigns-container">
+                    <div class="chart-container">
+                        <h3>ROI de Campañas Públicas</h3>
+                        <p>Retorno de inversión por campaña</p>
+                        <div class="chart-wrapper">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="campaigns-details">
+                        <h4>Detalle de Campañas</h4>
+                        <div class="campaign-list">
+                            <div class="campaign-item">
+                                <div class="campaign-header">
+                                    <h5>Campaña Turismo España</h5>
+                                    <span class="roi-badge positive">ROI: 3.2x</span>
+                                </div>
+                                <div class="campaign-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Inversión:</span>
+                                        <span class="stat-value">€450,000</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Alcance:</span>
+                                        <span class="stat-value">2.1M usuarios</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Conversiones:</span>
+                                        <span class="stat-value">15,600</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="campaign-item">
+                                <div class="campaign-header">
+                                    <h5>Promoción Cultura</h5>
+                                    <span class="roi-badge positive">ROI: 2.8x</span>
+                                </div>
+                                <div class="campaign-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Inversión:</span>
+                                        <span class="stat-value">€320,000</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Alcance:</span>
+                                        <span class="stat-value">1.8M usuarios</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Conversiones:</span>
+                                        <span class="stat-value">12,400</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="campaign-item">
+                                <div class="campaign-header">
+                                    <h5>Educación Digital</h5>
+                                    <span class="roi-badge positive">ROI: 4.1x</span>
+                                </div>
+                                <div class="campaign-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Inversión:</span>
+                                        <span class="stat-value">€280,000</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Alcance:</span>
+                                        <span class="stat-value">1.5M usuarios</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Conversiones:</span>
+                                        <span class="stat-value">18,200</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
