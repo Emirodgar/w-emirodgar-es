@@ -47,8 +47,6 @@ En una burbuja tenemos varias fases:
 
 > Es como inflar un globo con demasiado aire; tarde o temprano se pincha.
 
-![Comparación de indicadores clave del mercado inmobiliario español entre las burbujas históricas y la situación actual](https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/d87fc531840809a32a7584c1ad7904c4/8c6ad071-273f-4319-b0fd-ea0ba955edd9/1c0fc22f.png)
-
 Es difícil predecir una burbuja inmobiliaria dado que no hay un patrón normalizado que monitorizar. En cada época, había diferentes condiciones económicas, deuda o tipos de interés, por lo que se requiere de una suma de condiciones para hacer que una burbuja exista y predecir cuándo podría estallar. Aún así, hemos recopilado tres métricas relevantes para poder valorarlas en su conjunto.
 
 <img width="983" class="img-responsive" alt="Comparación de indicadores clave del mercado inmobiliario español entre las burbujas históricas y la situación actual" src="https://github.com/user-attachments/assets/236f1778-bc1e-4276-bba9-44771dd1988e" />
