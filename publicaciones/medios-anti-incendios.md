@@ -87,7 +87,7 @@ Para sintetizar:
 
 ***
 
-## ¿Hay una relación entre medios y superficie quemada?
+## ¿Hay relación entre medios de prevención y superficie quemada?
 
 El siguiente gráfico permite observar que, aunque en general años con más medios disponibles tienden a tener menor superficie quemada, existen excepciones evidentes como los años 2022 y 2025, donde el área afectada fue muy elevada pese a disponer de un dispositivo similar o solo ligeramente inferior al de años previos. Esto revela la importancia de factores adicionales como condiciones meteorológicas y la virulencia de los grandes incendios. No obstante, con más y mejores medios, en condiciones normales, se quema menos superficio. Recomedamos leer también el [análisis sobre grandes incendios forestales en España](https://emirodgar.es/analisis-incendios-forestales).
 
