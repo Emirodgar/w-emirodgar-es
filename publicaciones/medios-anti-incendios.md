@@ -1,5 +1,5 @@
 ---
-title: Medios estatales para combatir incendios forestales en España: evolución y financiación (2015-2025)
+title: Medios estatales para combatir incendios forestales en España. Evolución y financiación (2015-2025)
 description: 
 image: 
 author: Emirodgar
