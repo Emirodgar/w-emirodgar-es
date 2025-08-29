@@ -8,7 +8,7 @@ permalink: publicaciones-europa
 
 ---
 
-Listado de publicaciones relacionadas con Europa, la transformación digital y la inteligencia artificial
+# Publicaciones sobre Europa, la transformación digital y la inteligencia artificial
 
 <ul>
 {% for page in site.pages %}
