@@ -101,6 +101,9 @@ Si visualizamos únicamente los escaños obtenidos, así es como quedarían los 
 | **CCD**                | -         | 100         | +100             |
 
 
+También está disponible el [análisis por Comunidad Autónoma](https://emirodgar.es/elecciones-generales-comunidades). 
+
+
 ## Evolución elecciones generales en España
 
 ### Votantes y porcentaje de participación
