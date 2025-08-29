@@ -7,11 +7,12 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 30-04-2025
+date_modified: 29/08/2025
 folder: analisis
 permalink: analisis-apagon-electrico
 ---
 
-# Apagón del gran apagón eléctrico en España 
+# Análisis del gran apagón eléctrico en España 
 
 El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 2025 ha generado múltiples hipótesis y enfoques sobre sus causas y responsabilidades. 
 A continuación, analizamos la gestión política así como el tratamiento mediático que se hizo de dicho evento.
