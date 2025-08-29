@@ -8,7 +8,7 @@ permalink: publicaciones-formaciones
 
 ---
 
-Listado de publicaciones relacionadas con la formación sobre la inteligencia artificial
+Publicaciones de formación sobre la inteligencia artificial
 
 <ul>
 {% for page in site.pages %}

@@ -4,11 +4,11 @@ description:
 lang: es_ES
 author: Emirodgar
 image: 
-permalink: publicaciones-analisis
+permalink: publicaciones-inteligencia-artificial
 
 ---
 
-Listado de publicaciones relacionadas con Inteligencia Artificial
+# Publicaciones sobre Inteligencia Artificial
 
 <ul>
 {% for page in site.pages %}
