@@ -8,7 +8,7 @@ permalink: publicaciones-analisis
 
 ---
 
-# Listado de análisis de datos de grandes eventos
+# Análisis de datos de grandes eventos
 
 <ul>
 {% for page in site.pages %}
