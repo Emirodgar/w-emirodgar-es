@@ -4,7 +4,7 @@ description:
 lang: es_ES
 author: Emirodgar
 image: 
-permalink: publicaciones-formaciones
+permalink: publicaciones-formacion
 
 ---
 
