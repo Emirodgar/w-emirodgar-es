@@ -8,7 +8,7 @@ permalink: publicaciones-espana
 
 ---
 
-# Listado de publicaciones relacionadas con España, la transformación digital y la inteligencia artificial
+# Publicaciones relacionadas con España, la transformación digital y la inteligencia artificial
 
 <ul>
 {% for page in site.pages %}
