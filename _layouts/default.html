@@ -11,9 +11,63 @@
   {% include analytics.html %}
   <div class="wrapper">
     
-
     <div class="main-wrapper">
-        {{ content }}
+	
+	{% if page.folder %}
+					<div class="meta mb-3">
+						
+						<span class="date">
+							{% if page.date_modified == null %}
+							 Publicado el {{ page.date |  date: ' %d/%m/%Y' }}
+							 {% else %}
+							 Actualizado el {{ page.date_modified |  date: ' %d/%m/%Y' }}
+							{% endif %}
+						</span>
+							
+						
+						<span class="time">{% assign words = content | number_of_words %}
+						{% if words < 360 %}
+						  1 minuto de lectura
+						{% else %}
+						  {{ words | divided_by:180 }} minutos de lectura
+						{% endif %}</span>
+
+						{% if page.folder == "analisis" %}
+						<span><a href="{{ site.url }}/publicaciones-analisis">SEO</a></span>
+					  	{% endif %}
+
+						{% if page.folder == "elecciones" %}
+						<span><a href="{{ site.url }}/publicaciones-elecciones">Analítica</a></span>
+						{% endif %}
+
+						{% if page.folder == "formacion" %}
+						<span><a href="{{ site.url }}/publicaciones-formacion">Marketing</a></span>
+						{% endif %}
+
+						{% if page.folder == "espana" %}
+						<span><a href="{{ site.url }}/publicaciones-espana">España</a></span>
+						{% endif %}
+
+						{% if page.folder == "ia" %}
+						<span><a href="{{ site.url }}/publicaciones-ia">Inteligencia Artificial</a></span>
+						{% endif %}
+
+						{% if page.folder == "europa" %}
+						<span><a href="{{ site.url }}/publicaciones-europa">Europa</a></span>
+						{% endif %}
+
+						{% if page.folder == "proyectos" %}
+						<span><a href="{{ site.url }}/publicaciones-proyectos">Proyectos</a></span>
+						{% endif %}
+
+						{% if page.folder == "politica" %}
+						<span><a href="{{ site.url }}/publicaciones-politica">Offtopic</a></span>
+						{% endif %}
+
+					</div>
+					{% endif %}
+    
+    {{ content }}
     </div>
     {% include sidebar.html %}
   </div>
