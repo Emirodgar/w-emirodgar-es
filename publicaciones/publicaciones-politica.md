@@ -8,7 +8,7 @@ permalink: publicaciones-politica
 
 ---
 
-Listado de publicaciones sobre política
+# Publicaciones sobre política
 
 <ul>
 {% for page in site.pages %}
