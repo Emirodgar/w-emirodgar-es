@@ -8,7 +8,7 @@ permalink: publicaciones-elecciones
 
 ---
 
-# Listado de publicaciones relacionadas con las elecciones en España
+# Publicaciones sobre las elecciones en España
 
 <ul>
 {% for page in site.pages %}
