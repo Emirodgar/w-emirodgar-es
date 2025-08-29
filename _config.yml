@@ -8,13 +8,13 @@ url: 'http://emirodgar.es'
 # disabling since we are using a custom domain
 #baseurl: '/online-cv' 
 
-description: A beautiful Jekyll theme for creating resume
+description: IA
 # Style will be applied only after restarting the build or serve. Just choose one of the options.
 theme_skin: blue # blue turquoise green berry orange ceramic
 chrome_mobile_color: #use hex colors (ex:#1976d2) or leave empty if you don't want a color for chrome mobile searchbar
 
 # Tracker
-analytics: UA-83979019-1
+analytics: 
 
 # Sass/SCSS
 sass:
@@ -30,7 +30,4 @@ compress_html: # - http://jch.penibelst.de/
   ignore:
     envs: development
 
-# Development Settings
-port: 4000
-host: 0.0.0.0
-safe: false
+
