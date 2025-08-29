@@ -11,8 +11,11 @@
   {% include analytics.html %}
   <div class="wrapper">
     
-    <div class="main-wrapper">
-	
+    <div class="main-wrapper">   
+    {{ content }}
+	---
+		<hr>
+
 	{% if page.folder %}
 					<div class="meta mb-3">
 						
@@ -66,8 +69,7 @@
 
 					</div>
 					{% endif %}
-    
-    {{ content }}
+		
     </div>
     {% include sidebar.html %}
   </div>
