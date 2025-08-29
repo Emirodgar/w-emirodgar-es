@@ -29,7 +29,7 @@
 						{% if words < 360 %}
 						  / 1 minuto de lectura / 
 						{% else %}
-						  {{ words | divided_by:180 }} / minutos de lectura / 
+						  / {{ words | divided_by:180 }} minutos de lectura / 
 						{% endif %}</span>
 
 						{% if page.folder == "analisis" %}
