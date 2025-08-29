@@ -8,7 +8,7 @@ permalink: publicaciones-proyectos
 
 ---
 
-Proyectos e ideas para mejorar nuestra sociedad a través de la política
+# Proyectos e ideas para mejorar nuestra sociedad a través de la política
 
 <ul>
 {% for page in site.pages %}
