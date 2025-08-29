@@ -8,7 +8,7 @@ permalink: publicaciones-analisis
 
 ---
 
-Listado de publicaciones relacionadas con Inteligencia Artificial
+# Listado de análisis de datos de grandes eventos
 
 <ul>
 {% for page in site.pages %}
