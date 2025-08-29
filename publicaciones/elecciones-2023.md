@@ -7,12 +7,15 @@ sitemap: 1
 feed: 1
 folder: elecciones
 date: 09-04-2025
+date_modified: 29/08/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: elecciones-generales
 
 ---
 
 # Resultados elecciones generales 2023
+
+> Hemos realizado también un [análisis de intención de voto](https://emirodgar.es/encuestas-intencion-voto) de cara a las próximas elecciones.
 
 Las elecciones generales en España tuvieron lugar el domingo 23 de julio de 2023.​ Fueron las decimosextas elecciones generales democráticas, las quintas con Felipe VI como rey y las primeras celebradas en un mes de julio.
 
