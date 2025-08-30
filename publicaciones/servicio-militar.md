@@ -27,8 +27,13 @@ En comparación con otros países europeos, 10 de los 27 estados miembros de la 
 - Alemania abolió el servicio obligatorio en 2011, pero está considerando reintroducirlo o un sistema híbrido en caso de emergencia.
 - Otros países que mantienen o reinstalan el servicio obligatorio por tensiones geopolíticas incluyen Ucrania, Bielorrusia, Moldavia, Turquía, y algunos países de Europa del Este y los Balcanes.
 
-<img width="993" class="img-responsive" alt="paises con servicio militar obligatorio en europa" src="https://github.com/user-attachments/assets/794ca540-7136-465f-8f3f-feea6a5b7be9" />
+En el siguiente gráfico podemos ver de manera visual cuándo se han eliminado los servicios militares obligatorios (verde) y cuándo se han reestablecido (rojo).
+Las dos líneas discontínuas que aparecen en el gráfico corresponden, respectivamente a:
 
+ 1- La ocupación de Crimea
+ 2- La guerra de Rusia y Ucrania
+
+<img width="815" class="img-responsive" alt="paises con servicio militar obligatorio en europa"  src="https://github.com/user-attachments/assets/84c0bc7e-9819-4458-966c-22fe91443a74" />
 
 España mantiene un modelo profesional y no contempla la vuelta de la mili, mientras que en Europa hay una mezcla de posturas que dependen del contexto geopolítico, con varios países que mantienen el servicio obligatorio para grupos definidos, especialmente hombres jóvenes, con duraciones entre 6 y 18 meses y algunas variantes según el país.
 
