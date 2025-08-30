@@ -13,7 +13,9 @@ permalink: servicio-militar-obligatorio
 
 # Servicio militar obligatorio en España
 
-En España, actualmente no existe servicio militar obligatorio. Fue abolido en 2001 bajo el gobierno de José María Aznar, y el modelo de las Fuerzas Armadas es completamente profesional. La ministra de Defensa española ha descartado tajantemente la vuelta del servicio militar obligatorio, argumentando que no hay en la actualidad una justificación geopolítica que lo requiera, a diferencia de algunos países europeos que sí mantienen o están reconsiderando esta medida debido a la amenaza rusa y otros factores. Sin embargo, algunas encuestas muestran que entre el 30% y el 42% de los españoles podrían estar a favor de reinstaurar la mili, aunque la mayoría se opone ligeramente. Legalmente, la Constitución española y la Ley de Objeción de Conciencia permiten la exención del servicio militar y la realización de una prestación social sustitutoria en caso de objeción.
+En España, actualmente no existe servicio militar obligatorio. Fue abolido en 2001 bajo el gobierno de José María Aznar, y **el modelo de las Fuerzas Armadas es completamente profesional**. La ministra de Defensa española ha descartado tajantemente (agosto de 2025) la vuelta del servicio militar obligatorio, argumentando que no hay en la actualidad una justificación geopolítica que lo requiera, a diferencia de algunos países europeos que sí mantienen o están reconsiderando esta medida debido a la amenaza rusa y otros factores. 
+
+Sin embargo, algunas encuestas muestran que **entre el 30% y el 42% de los españoles podrían estar a favor de reinstaurar la mili**, aunque la mayoría se opone ligeramente. Legalmente, la Constitución española y la Ley de Objeción de Conciencia permiten la exención del servicio militar y la realización de una prestación social sustitutoria en caso de objeción.
 
 En comparación con otros países europeos, 10 de los 27 estados miembros de la UE mantienen el servicio militar obligatorio, y en total 16 países europeos continúan con algún tipo de reclutamiento obligatorio. Las principales características comparativas son:
 
@@ -25,7 +27,12 @@ En comparación con otros países europeos, 10 de los 27 estados miembros de la 
 - Alemania abolió el servicio obligatorio en 2011, pero está considerando reintroducirlo o un sistema híbrido en caso de emergencia.
 - Otros países que mantienen o reinstalan el servicio obligatorio por tensiones geopolíticas incluyen Ucrania, Bielorrusia, Moldavia, Turquía, y algunos países de Europa del Este y los Balcanes.
 
+<img width="993" class="img-responsive" alt="paises con servicio militar obligatorio en europa" src="https://github.com/user-attachments/assets/794ca540-7136-465f-8f3f-feea6a5b7be9" />
+
+
 España mantiene un modelo profesional y no contempla la vuelta de la mili, mientras que en Europa hay una mezcla de posturas que dependen del contexto geopolítico, con varios países que mantienen el servicio obligatorio para grupos definidos, especialmente hombres jóvenes, con duraciones entre 6 y 18 meses y algunas variantes según el país.
+
+---
 
 ## Posturas por partido político
 
@@ -56,7 +63,7 @@ Los partidos de izquierda se oponen rotundamente:
 
 La ministra de Defensa, Margarita Robles, ha sido categórica: "No creo que se le haya pasado por la cabeza a nadie" reinstaurar el servicio militar.
 
-## Argumentos Principales de los Defensores
+## Argumentos principales de los defensores
 
 ### 1. **Formación de Valores y Disciplina**
 
@@ -133,6 +140,15 @@ En la **Unión Europea** específicamente:
 
 - **10 de 27 países** (37%) mantienen servicio militar obligatorio
 - Los países con mayor proximidad a Rusia son los que más lo conservan
+
+De manera visual, podemos ver en el siguiente gráfico qué países tienen el servicio obligatorio y cuáles no. 
+La leyenda es la siguiente:
+
+- Rojo: Obligatorio
+- Amarillo: voluntario
+- Verde: Ejército sólo profesional
+
+<img width="725" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/31f21eb2-4554-44f4-9227-1e7e7fbb8820" />
 
 
 ## Países por categorías
