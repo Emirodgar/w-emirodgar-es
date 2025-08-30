@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 29-0o-2025
+date: 29-08-2025
 folder: espana
 permalink: servicio-militar-obligatorio
 ---
