@@ -30,8 +30,8 @@ En comparación con otros países europeos, 10 de los 27 estados miembros de la 
 En el siguiente gráfico podemos ver de manera visual cuándo se han eliminado los servicios militares obligatorios (verde) y cuándo se han reestablecido (rojo).
 Las dos líneas discontínuas que aparecen en el gráfico corresponden, respectivamente a:
 
- 1- La ocupación de Crimea
- 2- La guerra de Rusia y Ucrania
+ - 1- La ocupación de Crimea
+ - 2- La guerra de Rusia y Ucrania
 
 <img width="815" class="img-responsive" alt="paises con servicio militar obligatorio en europa"  src="https://github.com/user-attachments/assets/84c0bc7e-9819-4458-966c-22fe91443a74" />
 
