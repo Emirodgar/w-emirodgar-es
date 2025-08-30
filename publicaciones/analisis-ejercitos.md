@@ -78,7 +78,7 @@ Ratio de militares por 1000 habitantes: España vs Europa
 
 **Próximas adquisiciones**: España planea unirse al programa LEOBEN para adquirir aproximadamente 50 nuevos carros Leopard 2A8, que se destinarían principalmente a reforzar las guarniciones de Ceuta y Melilla.
 
-### Capacidades Aéreas
+### Capacidades aéreas
 
 **España opera una de las flotas de cazas más modernas de Europa**:
 
