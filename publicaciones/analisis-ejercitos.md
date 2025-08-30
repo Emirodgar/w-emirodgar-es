@@ -17,6 +17,8 @@ permalink: analisis-ejercitos
 
 El **presupuesto militar español alcanzará los 33,123 millones de euros en 2025**, cumpliendo por primera vez con el objetivo del 2% del PIB establecido por la OTAN. Esto supone un incremento del 43% respecto a 2014 y posiciona a España en quinta posición en gasto absoluto europeo.
 
+> En la actualidad, España cuenta con un ejército profesional y, aunque algunos socios europeos han vuelto a poner el [servicio militar obligatorio](https://emirodgar.es/servicio-militar-obligatorio) para parte de su población, nuestro país no lo ve necesario en este momento geopolítico.
+
 ## Estructura y efectivos de las Fuerzas Armadas Españolas
 
 <img width="978" class="img-responsive" alt="Distribución de efectivos por rama de las Fuerzas Armadas españolas" src="https://github.com/user-attachments/assets/2a71dfaa-a0bc-4338-ab75-608e94750ec0" />
@@ -24,7 +26,7 @@ El **presupuesto militar español alcanzará los 33,123 millones de euros en 202
 
 Distribución de efectivos por rama de las Fuerzas Armadas españolas
 
-### Distribución por Ramas Militares
+### Distribución por ramas militares
 
 Las Fuerzas Armadas españolas se estructuran de la siguiente manera:
 
@@ -43,9 +45,9 @@ Las Fuerzas Armadas españolas se estructuran de la siguiente manera:
 
 Comparación de efectivos militares activos entre España y otros países de la UE
 
-**España se encuentra significativamente por debajo de las principales potencias militares europeas** en términos de efectivos activos. Polonia lidera con 216,000 soldados, seguida por Francia (203,000) y el Reino Unido (201,000).[^1_10][^1_11][^1_12]
+**España se encuentra significativamente por debajo de las principales potencias militares europeas** en términos de efectivos activos. Polonia lidera con 216,000 soldados, seguida por Francia (203,000) y el Reino Unido (201,000).
 
-**Proyecciones de Crecimiento**: El Gobierno español se ha comprometido con la OTAN a incrementar los efectivos en 14,000 militares antes de 2035, distribuyidos en dos fases: 7,000 entre 2025-2029 y otros 7,000 entre 2030-2034.[^1_1][^1_13][^1_14]
+**Proyecciones de Crecimiento**: El Gobierno español se ha comprometido con la OTAN a incrementar los efectivos en 14,000 militares antes de 2035, distribuyidos en dos fases: 7,000 entre 2025-2029 y otros 7,000 entre 2030-2034.
 
 ### Densidad militar por población
 
