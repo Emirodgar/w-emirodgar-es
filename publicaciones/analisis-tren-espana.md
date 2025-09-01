@@ -17,19 +17,7 @@ La red ferroviaria española ha atravesado una década crítica (2015-2025) marc
 
 ## Problemas identificados por período gubernamental
 
-### Gobierno de Mariano Rajoy (PP, 2011-2018)
-
-**Problemas Principales:**
-
-- **Inversión baja** en trenes de cercanías y media distancia durante siete años
-- **Recorte del 59%** en inversión ferroviaria, especialmente grave en Extremadura
-- **Reducción del 80%** en inversión de red convencional en 2017
-- Paralización completa de proyectos AVE en Almería y Extremadura
-- En Cercanías Madrid: solo **10 kilómetros construidos** de los 115 proyectados
-
-> Es conveniente recalcar que gran parte de la información sobre el periodo de Mariano Rajoy proviene de las comunicaciones realizadas por el Ministro de Transporte, Óscar Puente, quién ha caracterizado este período como **"ocho años complicados de desinversión"** posterior a la crisis económica, estableciendo las bases de los problemas actuales. No hemos encontrado demasiada información para contrastar todas las afirmaciones.
-
-Si entrentamos datos cualitativos (incidentes y compensaciones económicas), podemos ver una evolución alarmante en la siguiente gráfica. Desde el año 2021, los valores de ambas métricas se han disparado, alcanzando máximos históricos de los últimos 10 años.
+Si analizamos datos cuantitativos y cualitativos (incidentes y compensaciones económicas), podemos ver una evolución alarmante en la siguiente gráfica. Desde el año 2021, los valores de ambas métricas se han disparado, alcanzando máximos históricos de los últimos 10 años.
 
 <img width="867" class="img-responsive" alt="Problemas e incidencias en trenes en España y compensaciones económicas" src="https://github.com/user-attachments/assets/8ec35e15-6867-4d55-a48c-14e5f31cf7cd" />
 
@@ -47,6 +35,19 @@ Si entrentamos datos cualitativos (incidentes y compensaciones económicas), pod
 | 2022 | 112 | 12.0 | +31.8% | +41.2% |
 | 2023 | 95 | 42.0 | -15.2% | +250.0% |
 | 2024 | 107 | 20.0 | +12.6% | -52.4% |
+
+### Gobierno de Mariano Rajoy (PP, 2011-2018)
+
+**Problemas Principales:**
+
+- **Inversión baja** en trenes de cercanías y media distancia durante siete años
+- **Recorte del 59%** en inversión ferroviaria, especialmente grave en Extremadura
+- **Reducción del 80%** en inversión de red convencional en 2017
+- Paralización completa de proyectos AVE en Almería y Extremadura
+- En Cercanías Madrid: solo **10 kilómetros construidos** de los 115 proyectados
+
+> Es conveniente recalcar que gran parte de la información sobre el periodo de Mariano Rajoy proviene de las comunicaciones realizadas por el Ministro de Transporte, Óscar Puente, quién ha caracterizado este período como **"ocho años complicados de desinversión"** posterior a la crisis económica, estableciendo las bases de los problemas actuales. No hemos encontrado demasiada información para contrastar todas las afirmaciones.
+
 
 ### Gobierno de Pedro Sánchez (PSOE, 2018-actualidad)
 
