@@ -1,5 +1,5 @@
 ---
-title: Análisis de los problemas ferroviarios en España: Una década de crisis y modernización
+title: Análisis de los problemas ferroviarios en España. Incidencias y compensaciones
 description: 
 image:
 author: Emirodgar
