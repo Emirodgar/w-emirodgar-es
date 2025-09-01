@@ -33,6 +33,20 @@ Si entrentamos datos cualitativos (incidentes y compensaciones económicas), pod
 
 <img width="867" class="img-responsive" alt="Problemas e incidencias en trenes en España y compensaciones económicas" src="https://github.com/user-attachments/assets/8ec35e15-6867-4d55-a48c-14e5f31cf7cd" />
 
+### Tabla de incidentes ferroviarios y compensaciones en España (2015-2024)
+
+| Año | Incidentes | Compensaciones (M€) | Var. Incidentes | Var. Compensaciones |
+| :-- | :-- | :-- | :-- | :-- |
+| 2015 | 60 | 4.5 | - | - |
+| 2016 | 65 | 5.2 | +8.3% | +15.6% |
+| 2017 | 70 | 6.8 | +7.7% | +30.8% |
+| 2018 | 52 | 5.9 | -25.7% | -13.2% |
+| 2019 | 75 | 7.2 | +44.2% | +22.0% |
+| 2020 | 45 | 3.8 | -40.0% | -47.2% |
+| 2021 | 85 | 8.5 | +88.9% | +123.7% |
+| 2022 | 112 | 12.0 | +31.8% | +41.2% |
+| 2023 | 95 | 42.0 | -15.2% | +250.0% |
+| 2024 | 107 | 20.0 | +12.6% | -52.4% |
 
 ### Gobierno de Pedro Sánchez (PSOE, 2018-actualidad)
 
