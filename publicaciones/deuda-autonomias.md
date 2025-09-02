@@ -1,5 +1,5 @@
 ---
-title: Cómo adaptar la IA en un entorno profesional
+title: Evolución de la deuda de las Comunidades Autónomas en España
 description: 
 image: 
 author: Emirodgar
