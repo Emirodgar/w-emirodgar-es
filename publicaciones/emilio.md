@@ -35,7 +35,7 @@ Mi interés por la política nace de la convicción de que la **transformación 
 
 ## Mi enfoque práctico
 
-Creo firmemente que los **datos** y la **inteligencia artificial** no son solo herramientas técnicas: **son palancas de transformación que marcan el rumbo de la economía, la sociedad y la política**.  
+Creo firmemente que los **datos** y la **inteligencia artificial** no son solo herramientas técnicas: **son palancas de transformación que marcan el rumbo de la economía, la sociedad y la política**. 
 Mi trabajo busca tender puentes entre la tecnología y las decisiones estratégicas, siempre con un enfoque práctico y orientado a resultados. 
 
-Si quieres un listado más detallado de mi experiencia laboral, ponencias e incluso entrevistas, puedes verlo en mi [página principal](https://emirodgar.com/emilio-rodriguez)
+Si quieres un listado más detallado de mi experiencia laboral, ponencias e incluso entrevistas, puedes visitar mi [perfil de LinkedIn](https://linkedin.com/in/emirodgar) o ver mi [curríclum completo](https://emirodgar.com/emilio-rodriguez).
