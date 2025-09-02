@@ -18,7 +18,7 @@ Mi carrera comenzó en el ámbito de la investigación aplicada, desarrollando p
 
 La docencia y la divulgación forman parte de mi vida profesional: imparto clases en programas de **Big Data**, **Business Intelligence** y **Marketing Digital** en universidades como **Deusto**, **USAL** y **UNIR**, además de participar como ponente en conferencias y medios de comunicación sobre **inteligencia artificial**, **datos** y **política digital**. También formo parte del grupo de **asesores homologados por ICEX España**, dentro del programa **ICEX Next**, desde el que he podido apoyar a empresas en su salto internacional mediante la transformación tecnológica.  
 
-Mi interés por la política nace de la convicción de que la **transformación digital** puede fortalecer las instituciones, mejorar la eficiencia de la administración pública y acercar la gestión a la ciudadanía. La aplicación de **datos e inteligencia artificial** en este ámbito no solo impulsa la transparencia y la innovación, sino que también abre la puerta a una toma de decisiones más informada y orientada al bien común.  
+Mi interés por la política nace de la convicción de que la **transformación digital** puede fortalecer las instituciones, mejorar la eficiencia de la administración pública y acercar la gestión a la ciudadanía. La aplicación de **datos e inteligencia artificial** en este ámbito no solo impulsa la transparencia y la innovación, sino que también abre la puerta a una toma de decisiones más informada y orientada al bien común. Puedes echar un vistazo a las [ideas (pruebas de concepto)](https://emirodgar.es/proyectos) que he ido publicando a lo largo del tiempo. 
  
 
 ## Formación destacada  
@@ -38,4 +38,4 @@ Mi interés por la política nace de la convicción de que la **transformación 
 Creo firmemente que los **datos** y la **inteligencia artificial** no son solo herramientas técnicas: **son palancas de transformación que marcan el rumbo de la economía, la sociedad y la política**. 
 Mi trabajo busca tender puentes entre la tecnología y las decisiones estratégicas, siempre con un enfoque práctico y orientado a resultados. 
 
-Si quieres un listado más detallado de mi experiencia laboral, ponencias e incluso entrevistas, puedes visitar mi [perfil de LinkedIn](https://linkedin.com/in/emirodgar) o ver mi [curríclum completo](https://emirodgar.com/emilio-rodriguez).
+Si quieres un listado más detallado de mi experiencia laboral, ponencias e incluso entrevistas, puedes visitar mi [perfil de LinkedIn](https://linkedin.com/in/emirodgar){:target="_blank" rel="noopener noreferrer"} o ver mi [curríclum completo](https://emirodgar.com/emilio-rodriguez){:target="_blank" rel="noopener noreferrer"}.
