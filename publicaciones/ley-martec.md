@@ -1,7 +1,7 @@
 ---
 title: Ley de Martec
 description: 
-image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
+image: 
 author: Emirodgar
 lang: es_ES
 sitemap: 1
@@ -11,7 +11,7 @@ folder: formacion
 permalink: ley-martec
 ---
 
-## La Ley de Martec
+# La ley de Martec
 
 La Ley de Martec, formulada por Scott Brinker en 2013, sostiene que la tecnología avanza de manera exponencial, mientras que las organizaciones y las personas lo hacen de forma logarítmica, es decir, mucho más lentamente. Esta brecha creciente entre la velocidad de innovación tecnológica y la capacidad de adaptación humana y organizacional no es solo una cuestión de falta de recursos o conocimientos, sino de límites estructurales y culturales en la asimilación del cambio.
 
