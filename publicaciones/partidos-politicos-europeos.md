@@ -1,7 +1,7 @@
 ---
 title: Partidos políticos europeos
 description: 
-image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
+image: 
 author: Emirodgar
 lang: es_ES
 sitemap: 1
@@ -12,7 +12,7 @@ permalink: partidos-politicos-europeos
 ---
 
 
-## Partidos a nivel europeo y su relación con los partidos políticos españoles
+# Partidos a nivel europeo y su relación con los partidos políticos españoles
 
 En el Parlamento Europeo, los eurodiputados se agrupan por [afinidad ideológica](https://emirodgar.es/ideologias-politicas) en grandes grupos políticos europeos. Los partidos españoles con representación en Europa se integran en estas familias políticas transnacionales.
 
