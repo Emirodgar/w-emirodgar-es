@@ -8,7 +8,7 @@ sitemap: 1
 feed: 1
 date: 10-09-2025
 folder: analisis
-permalink: analisis-cambio-climatico.md
+permalink: analisis-cambio-climatico
 ---
 
 # Análisis cambio climático de España (2005-2025): Temperatura, precipitaciones, eventos Extremos y evolución mediática
