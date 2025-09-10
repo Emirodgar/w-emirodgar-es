@@ -11,7 +11,7 @@ folder: analisis
 permalink: analisis-cambio-climatico
 ---
 
-# Análisis cambio climático de España (2005-2025): Temperatura, precipitaciones, eventos Extremos y evolución mediática
+# Análisis cambio climático de España (2005-2025): Temperatura, precipitaciones, eventos extremos y evolución mediática
 
 España ha experimentado **cambios climáticos significativos** en las últimas dos décadas, con un **aumento de 1.5°C en la temperatura media** desde 1961, **mayor variabilidad en precipitaciones** y un **incremento exponencial** en la frecuencia e intensidad de eventos meteorológicos extremos. Paralelamente, la cobertura mediática del cambio climático ha evolucionado desde la **"irrelevancia mediática"** hasta convertirse en un **tema transversal** de máxima actualidad, con inversiones climáticas que superan los **82.000 millones de euros**.
 
