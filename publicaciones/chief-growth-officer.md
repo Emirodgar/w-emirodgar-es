@@ -49,9 +49,9 @@ El CGO también tiene responsabilidades operativas específicas:
 
 El concepto del Chief Growth Officer emergió gradualmente a partir de los años 1990s y 2000s, cuando las empresas comenzaron a reconocer la importancia de roles enfocados en crecimiento. Inicialmente, existían roles como Chief Marketing Officer (CMO), pero estos tenían un alcance limitado, centrado principalmente en campañas de marketing y branding.
 
-### **Sean Ellis: El Pionero del Growth Hacking**
+### **Sean Ellis: El pionero del Growth Hacking**
 
-**Sean Ellis** es reconocido como el **"padre del growth hacking"** y una figura clave en el desarrollo del concepto CGO. Ellis creó el término "Growth Hacking" para describir el proceso utilizado por organizaciones de hipercrecimiento como Facebook, Airbnb, Uber y Amazon.[^1_8][^1_9][^1_10]
+**Sean Ellis** es reconocido como el **"padre del growth hacking"** y una figura clave en el desarrollo del concepto CGO. Ellis creó el término "Growth Hacking" para describir el proceso utilizado por organizaciones de hipercrecimiento como Facebook, Airbnb, Uber y Amazon.
 
 Sean Ellis lideró directamente el crecimiento en empresas emblemáticas:
 
@@ -70,7 +70,7 @@ La evolución del CGO se aceleró significativamente en la **década de 2010s**,
 - **Mayor competencia** y saturación del mercado
 - **Presión de inversores** por crecimiento sostenido de ingresos y beneficios
 
-Para **2020**, grandes corporaciones como McDonald's, Coca-Cola, Mars Inc., Adobe y Hershey's ya habían designado Chief Growth Officers. El rol se consideró crítico para impulsar el crecimiento transformacional a través de capacidades expandidas e innovación de productos y servicios.[^1_11]
+Para **2020**, grandes corporaciones como McDonald's, Coca-Cola, Mars Inc., Adobe y Hershey's ya habían designado Chief Growth Officers. El rol se consideró crítico para impulsar el crecimiento transformacional a través de capacidades expandidas e innovación de productos y servicios.
 
 ## **Competencias y habilidades del CGO**
 
