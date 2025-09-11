@@ -89,7 +89,7 @@ El CAIO debe poseer un conocimiento profundo de tecnologías de IA:
 
 **Gestión de riesgos**: Capacidad para **identificar y mitigar riesgos** asociados con sesgos algorítmicos, privacidad de datos y transparencia.
 
-## **Rangos aalariales del Chief AI Officer**
+## **Rangos salariales del Chief AI Officer**
 
 ### **España**
 
