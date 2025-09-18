@@ -93,3 +93,15 @@ La investigación actual se enfoca en desarrollar **mejores métodos de evaluaci
 - **Marcos de detección de sesgo** más sofisticados que pueden identificar sesgos sutiles
 
 La evidencia sugiere que aunque la neutralidad política completa puede ser inalcanzable, es posible desarrollar enfoques más equilibrados y transparentes. El futuro de los LLMs requerirá un enfoque multifacético que combine innovaciones técnicas, supervisión ética y marcos regulatorios apropiados para abordar estos desafíos fundamentales.
+
+Compartimos varias de las fuentes analizadas para este estudio de cara a que se pueda profundizar más:
+
+- https://www.brookings.edu/articles/the-politics-of-ai-chatgpt-and-political-bias/
+
+- https://rais.education/wp-content/uploads/2024/10/0451.pdf
+
+- https://arxiv.org/pdf/2504.06436.pdf
+
+- https://arxiv.org/abs/2504.06436
+
+- https://arxiv.org/abs/2405.13041
