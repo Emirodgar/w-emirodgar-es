@@ -2,7 +2,6 @@
 title: Se avecina una crisis económica impulsada por la inteligencia artificial
 description: La combinación de una burbuja en la inteligencia artificial, mercados sobrevalorados y la destrucción de empleo apunta a una fuerte crisis económica y bursátil en los próximos años.
 image: 
-layout: emirodgar_post
 author: Emirodgar
 lang: es_ES
 sitemap: 1
