@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 11-09-2025
-folder: ia
+folder: conceptos
 permalink: chief-ai-officer
 ---
 
