@@ -5,7 +5,7 @@ lang: es_ES
 author: emirodgar
 sitemap: 1
 feed: 1
-folder: guias
+folder: politica
 date: 15/04/2025
 image: 
 permalink: glosario-politico
