@@ -5,7 +5,7 @@ lang: es_ES
 author: emirodgar
 sitemap: 1
 feed: 1
-folder: espana
+folder: politica
 date: 09/04/2025
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: ideologias-politicas
