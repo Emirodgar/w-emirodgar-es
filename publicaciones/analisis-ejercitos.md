@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 30-08-2025
-folder: analisis
+folder: europa
 permalink: analisis-ejercitos
 ---
 
