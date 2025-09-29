@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 26-05-2025
-folder: politica
+folder: geopolitica
 permalink: bluesky
 ---
 
