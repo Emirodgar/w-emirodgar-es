@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 30-06-2025
-folder: ia
+folder: guias
 permalink: scraping-ia
 ---
 
