@@ -1,5 +1,5 @@
 ---
-title: Inversión, burbujas y consumo eléctrico: lecciones del auge de los centros de datos  
+title: Inversión, burbujas y consumo eléctrico. Lecciones del auge de los centros de datos  
 description: Análisis de por qué la inversión en centros de datos está superando a la construcción de oficinas, sus riesgos y cómo encaja esto en España.  
 image:  
 author: Emirodgar  
