@@ -12,7 +12,7 @@ permalink: mapa
 Toda página web que se precie debe tener un **mapa web** para poder organizar los contenidos y facilitar la navegación de sus usuarios.
 
 
-## Política y Sociedad
+## Política y sociedad
 
 ---
 
@@ -72,7 +72,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
-## Elecciones y Datos electorales
+## Elecciones y datos electorales
 
 <ul>
 {% for page in site.pages %}
@@ -88,6 +88,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ## Inteligencia Artificial y Tecnología
 
+### Actualidad
 
 <ul>
 {% for page in site.pages %}
@@ -99,9 +100,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
----
-
-## Formación
+### Formación
 
 <ul>
 {% for page in site.pages %}
@@ -113,6 +112,19 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
+### Guías y conceptos clave
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "guias" or page.folder == "conceptos" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+
 ---
 
 ## Proyectos
@@ -121,20 +133,6 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% for page in site.pages %}
 {% if page.title != null  %}
 	{% if page.folder== "proyectos" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
----
-
-## Guías y conceptos clave
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "guias" or page.folder == "conceptos" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endif %}
 {% endif %}
