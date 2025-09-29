@@ -1,7 +1,7 @@
 ---
 title: Cómo adaptar la IA en un entorno profesional
 description: 
-image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
+image: 
 author: Emirodgar
 lang: es_ES
 sitemap: 1
