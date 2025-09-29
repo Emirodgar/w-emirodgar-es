@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 21-05-2025
-folder: ia
+folder: conceptos
 permalink: agi
 ---
 
