@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 29-08-2025
-folder: analisis
+folder: politica
 permalink: asesores-politicos
 ---
 
