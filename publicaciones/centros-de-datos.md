@@ -1,5 +1,5 @@
 ---
-title: Inversión, burbujas y consumo eléctrico. Lecciones del auge de los centros de datos  
+title: Inversión, burbujas y consumo eléctrico
 description: Análisis de por qué la inversión en centros de datos está superando a la construcción de oficinas, sus riesgos y cómo encaja esto en España.  
 image:  
 author: Emirodgar  
@@ -11,7 +11,7 @@ folder: ia
 permalink: centros-de-datos  
 ---
 
-## Introducción
+# Inversión, burbujas y consumo eléctrico. Lecciones del auge de los centros de datos  
 
 Ahora mismo tendemos a fijarnos mucho en **el volumen bruto de inversión**: cuánto se está gastando, en qué sectores, con qué ritmo. Pero ese dato no es suficiente. Lo verdaderamente relevante es **el retorno sobre la inversión**: qué utilidad real, qué ganancia o qué riesgo trae ese gasto.
 
@@ -96,5 +96,3 @@ En definitiva: si España quiere acoger ese crecimiento, no basta con construir 
 3. En España tenemos una oportunidad, pero también un riesgo: si no sincronizamos suministro energético, eficiencia, normativa y mercado, ese auge puede volverse un lastre.
 
 En los próximos años iremos viendo cuántos de estos proyectos se convierten en casos de éxito, o cuántos terminan siendo ejemplos de sobreinversión. Pero desde ahora podemos mantenernos alertas: medir no solo lo que se gasta, sino lo que se gana.
-
-Si quieres, puedo ayudarte a montar un análisis cuantitativo más fino (retornos esperados, costes energéticos, escenarios) para España o para tu proyecto. ¿Lo hago?
