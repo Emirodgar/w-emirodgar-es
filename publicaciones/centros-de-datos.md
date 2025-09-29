@@ -15,13 +15,16 @@ permalink: centros-de-datos
 
 Ahora mismo tendemos a fijarnos mucho en **el volumen bruto de inversión**: cuánto se está gastando, en qué sectores, con qué ritmo. Pero ese dato no es suficiente. Lo verdaderamente relevante es **el retorno sobre la inversión**: qué utilidad real, qué ganancia o qué riesgo trae ese gasto.
 
-Voy a apoyarme en datos interesantes (incluyendo el gráfico que acompañas) para mostrar una dinámica que parece estar transformando no solo la tecnología, sino también la economía energética: el auge de los centros de datos frente a la construcción tradicional de oficinas. Además, veremos cómo esta tendencia se traslada al caso de España (y qué desafíos energéticos eso plantea).
+Voy a apoyarme en datos actuales para mostrar una dinámica que parece estar transformando no solo la tecnología, sino también la economía energética: el auge de los centros de datos frente a la construcción tradicional de oficinas. Además, veremos cómo esta tendencia se traslada al caso de España (y qué desafíos energéticos eso plantea).
 
 ## ¿Qué muestran los datos de EE. UU.?
 
 ### ¿Dónde va el dinero?
 
-El gráfico que me envías (derivado del Censo de EE. UU. analizado por J.P. Morgan) compara tres líneas de inversión ajustadas:
+El gráfico que vemos a continuación (derivado del Censo de EE. UU. analizado por J.P. Morgan) compara tres líneas de inversión ajustadas:
+
+<img width="657" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/e3081e10-6717-48d4-b74c-0ab19f2fa983" />
+
 
 - **Electricidad / infraestructura eléctrica** (instalaciones, transmisión, generación)  
 - **Oficinas** (construcción de edificios de oficinas)  
