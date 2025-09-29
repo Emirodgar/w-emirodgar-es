@@ -134,7 +134,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 <ul>
 {% for page in site.pages %}
 {% if page.title != null  %}
-	{% if page.folder== "guias" %}
+	{% if page.folder== "guias" or page.folder == "conceptos" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endif %}
 {% endif %}
