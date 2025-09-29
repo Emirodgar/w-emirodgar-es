@@ -28,7 +28,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
----
+
 
 ### España
 
@@ -42,7 +42,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
----
+
 
 ### Europa
 
@@ -56,7 +56,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
----
+
 
 ### Geopolítica
 
@@ -100,7 +100,6 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
----
 
 ### Conceptos y Herramientas
 
@@ -114,7 +113,6 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endfor %}
 </ul>
 
----
 
 ### Plataformas y Redes Sociales
 
@@ -127,6 +125,8 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% endif %}
 {% endfor %}
 </ul>
+
+---
 
 ## Formación
 
