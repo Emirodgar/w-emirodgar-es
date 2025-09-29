@@ -14,7 +14,9 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ## Política y Sociedad
 
-### Política española
+---
+
+### Política
 
 <ul>
 {% for page in site.pages %}
@@ -160,20 +162,6 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 {% for page in site.pages %}
 {% if page.title != null  %}
 	{% if page.folder== "guias" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
----
-
-## Otras publicaciones
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "politica" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endif %}
 {% endif %}
