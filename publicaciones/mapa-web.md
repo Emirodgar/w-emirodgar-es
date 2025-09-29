@@ -12,12 +12,14 @@ permalink: mapa
 Toda página web que se precie debe tener un **mapa web** para poder organizar los contenidos y facilitar la navegación de sus usuarios.
 
 
-## Análisis
+## Política y Sociedad
+
+### España
 
 <ul>
 {% for page in site.pages %}
 {% if page.title != null  %}
-	{% if page.folder== "analisis" %}
+	{% if page.folder == "espana" or page.folder == "analisis" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endif %}
 {% endif %}
@@ -26,7 +28,21 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
-## Elecciones
+### Europa
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "europa" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
+## Elecciones y Datos electorales
 
 <ul>
 {% for page in site.pages %}
@@ -39,6 +55,48 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 </ul>
 
 ---
+
+## Inteligencia Artificial y Tecnología
+
+### Impacto y Sociedad
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "ia" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
+### Conceptos y Herramientas
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "ia" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
+### Plataformas y Redes Sociales
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "plataformas" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
 
 ## Formación
 
@@ -54,55 +112,26 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ---
 
-## España
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "espana" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
-
----
-
-## Europa
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "europa" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
----
-
-## Inteligencia Artificial
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "ia" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
----
-
 ## Proyectos
 
 <ul>
 {% for page in site.pages %}
 {% if page.title != null  %}
 	{% if page.folder== "proyectos" %}
+	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+	{% endif %}
+{% endif %}
+{% endfor %}
+</ul>
+
+---
+
+## Guías y conceptos clave
+
+<ul>
+{% for page in site.pages %}
+{% if page.title != null  %}
+	{% if page.folder== "guias" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endif %}
 {% endif %}
