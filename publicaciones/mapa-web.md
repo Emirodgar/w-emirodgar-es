@@ -88,38 +88,11 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ## Inteligencia Artificial y Tecnología
 
-### Impacto y Sociedad
 
 <ul>
 {% for page in site.pages %}
 {% if page.title != null  %}
 	{% if page.folder== "ia" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
-
-### Conceptos y Herramientas
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "ia" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
-
-
-### Plataformas y Redes Sociales
-
-<ul>
-{% for page in site.pages %}
-{% if page.title != null  %}
-	{% if page.folder== "plataformas" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
 	{% endif %}
 {% endif %}
