@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 18-09-2025
-folder: analisis
+folder: geopolitica
 permalink: evolucion-poblacion
 ---
 
