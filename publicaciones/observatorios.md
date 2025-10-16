@@ -1,6 +1,6 @@
 ---
 title: Análisis de los observatorios en España
-description: La creación del nuevo Observatorio de la Vivienda Turística refleja un problema común en la administración pública: confundir la acción con la observación.
+description: La creación del nuevo Observatorio de la Vivienda Turística refleja un problema común en la administración pública al confundir la acción con la observación.
 image: 
 author: Emirodgar
 lang: es_ES
