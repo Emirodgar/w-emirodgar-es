@@ -56,6 +56,15 @@ Cuando una parte relevante del sistema mediático comparte un mismo marco —por
 
 ## ¿Cómo construye el PSOE su relato emocional?
 
+<img width="996" class="img-responsive" alt="Relatos clave del PSOE y su peso estratégico estimado en la comunicación política reciente" src="https://github.com/user-attachments/assets/e0712245-e584-476b-9485-b4b3ab00e20f" />
+
+- El liderazgo resistente de Sánchez y el control de los medios públicos aparecen como los ejes más centrales (valor 5) porque articulan tanto la narrativa personal del líder como la infraestructura mediática que la sostiene.​
+
+- Feminismo y derechos sociales, España referente progresista y la construcción del enemigo ultra se sitúan en un nivel alto (4), como grandes marcos ideológicos que se repiten de forma constante en discursos, campañas y documentos del partido.​
+
+- El relato de diálogo y convivencia tiene un peso algo menor (3), pero sigue siendo relevante, sobre todo en la justificación de la política territorial y la amnistía en Cataluña.
+
+
 ### ¿Quién es “el resistente” y por qué funciona esta narrativa?
 
 La figura de Pedro Sánchez se ha construido sobre una idea muy simple y muy potente: **el resistente**. No es sólo un presidente del Gobierno; es alguien que "aguanta" frente a traiciones, campañas de acoso, poderes en la sombra y una oposición supuestamente despiadada.
