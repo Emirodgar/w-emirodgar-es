@@ -14,7 +14,7 @@ permalink: /la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez
 
 ## ¿Por qué hablar de la maquinaria mediática del PSOE ahora?
 
-En los últimos años, el **Partido Socialista Obrero Español** ha pasado de ser un partido más dentro del tablero político a construir una auténtica **maquinaria de comunicación**. 
+En los últimos años, el **Partido Socialista Obrero Español** ha pasado de ser un partido más dentro del [tablero político](https://emirodgar.es/glosario-politico) a construir una auténtica **maquinaria de comunicación**. 
 No hablamos sólo de buenos discursos o de campañas bien diseñadas, sino de un sistema integrado que combina **control institucional**, **relato emocional** y **presencia digital estratégica**.
 
 Bajo el liderazgo de Pedro Sánchez, el PSOE ha entendido algo clave: en política actual no gana quien tiene más datos, sino quien controla mejor el **relato**. Y ese relato se construye todos los días, desde los telediarios hasta TikTok.
