@@ -11,6 +11,8 @@ folder: ia
 permalink: guerras-con-drones-nuevo-conflicto-moderno
 ---
 
+# Las guerras con drones en los nuevos conflictos bélicos
+
 Cuando hablamos de tecnología solemos pensar en avances útiles, comodidad o progreso. Pero **no toda innovación llega envuelta en buenas noticias**. Cerrando el año -y tras lo que ya hemos visto en la guerra de Ucrania- hay una realidad que merece una reflexión importante: la aparición y consolidación de las guerras con drones.
 
 No hablamos de ciencia ficción ni de grandes ejércitos futuristas. Hablamos de **drones comerciales, baratos, fáciles de conseguir**, combinados con software, inteligencia artificial y una lógica de uso masivo que cambia por completo las reglas del juego. Hace meses ya hablamos de [cómo la IA está revolucionando las guerras modernas](https://emirodgar.es/guerra-moderna-ia), pero hoy queremos hacer especial hincapié en los drones.
