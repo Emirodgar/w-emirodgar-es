@@ -11,6 +11,8 @@ folder: analisis
 permalink: analisis-sector-ferroviario
 ---
 
+# Inversión, mantenimiento y estado de los trenes en España 
+
 Los últimos años han sido bastante convulso en el sector ferroviario, acumulando muchos avisos, retrasos e inclusos accidentes. Algunos muy graves, como el de alta velocidad de Córdoba a principios de 2026.
 Vamos a analizar y entender cómo ha sido la evolución de la inversión y mantenimiento de la red de trenes en España durante los últimos 20 años.
 
