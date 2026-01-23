@@ -182,3 +182,71 @@ a.link:hover {
 .columna:hover {
     transform: translateY(-5px);
 }
+/* Contenedor principal para dar aire y centrar */
+.quote-container {
+    padding: 60px 20px;
+    background-color: #f9f9fb; /* Un gris casi blanco, muy limpio */
+    display: flex;
+    justify-content: center;
+}
+
+.quote-wrapper {
+    max-width: 800px;
+    position: relative;
+}
+
+.strategic-quote {
+    margin: 0;
+    padding: 40px;
+    border-left: 4px solid #1a2a40; /* Azul medianoche institucional */
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* Sombra muy suave */
+    position: relative;
+}
+
+/* Comilla decorativa */
+.quote-icon {
+    font-family: 'Georgia', serif;
+    font-size: 80px;
+    color: #c5a059; /* Dorado sutil para el toque de distinción */
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    opacity: 0.2;
+}
+
+.strategic-quote p {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Resaltado dentro de la frase */
+.strategic-quote p strong {
+    color: #1a2a40;
+    font-weight: 600;
+}
+
+/* Estilo para la firma */
+.strategic-quote cite {
+    display: block;
+    font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    color: #c5a059;
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+    .strategic-quote p {
+        font-size: 1.2rem;
+    }
+    .quote-container {
+        padding: 40px 15px;
+    }
+}
