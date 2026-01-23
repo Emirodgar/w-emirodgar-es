@@ -249,3 +249,58 @@ a.link:hover {
         padding: 40px 15px;
     }
 }
+
+/* Estilos para la sección de perfil */
+.about-me {
+    background-color: #ffffff; /* O el color de fondo que prefieras */
+    padding: 60px 20px;
+}
+
+.about-container {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Para que en móvil se ponga uno debajo de otro */
+}
+
+.about-image {
+    flex: 0 0 150px; /* Tamaño fijo para que no ocupe demasiado */
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Asegura que tu cara no se deforme */
+    border: 3px solid #f0f0f0; /* Un pequeño borde elegante */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-text h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+}
+
+.about-text p {
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+/* Ajuste para móviles */
+@media (max-width: 600px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-image {
+        margin-bottom: 20px;
+    }
+}
