@@ -251,56 +251,46 @@ a.link:hover {
 }
 
 /* Estilos para la sección de perfil */
+/* Estilos para la sección de perfil vertical */
 .about-me {
-    background-color: #ffffff; /* O el color de fondo que prefieras */
+    background-color: #ffffff;
     padding: 60px 20px;
+    text-align: center; /* Centra el texto de forma global */
 }
 
 .about-container {
-    max-width: 900px;
+    max-width: 700px; /* Un poco más estrecho queda mejor para lectura vertical */
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap; /* Para que en móvil se ponga uno debajo de otro */
-}
-
-.about-image {
-    flex: 0 0 150px; /* Tamaño fijo para que no ocupe demasiado */
+    flex-direction: column; /* Alineación vertical */
+    align-items: center;    /* Centrado horizontal de los hijos */
+    gap: 20px;              /* Espacio entre imagen y texto */
 }
 
 .about-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%; /* Hace la imagen circular */
-    object-fit: cover; /* Asegura que tu cara no se deforme */
-    border: 3px solid #f0f0f0; /* Un pequeño borde elegante */
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 130px;  /* Un poco más pequeña para que no robe excesivo protagonismo */
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f8f9fa;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease; /* Efecto suave opcional */
 }
 
-.about-text {
-    flex: 1;
-    min-width: 300px;
+.about-image img:hover {
+    transform: scale(1.05); /* Pequeño efecto al pasar el ratón */
 }
 
 .about-text h2 {
-    margin-bottom: 15px;
+    margin: 10px 0;
     font-size: 1.8rem;
+    color: #333;
 }
 
 .about-text p {
     line-height: 1.6;
     font-size: 1.1rem;
-    color: #444;
-}
-
-/* Ajuste para móviles */
-@media (max-width: 600px) {
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-image {
-        margin-bottom: 20px;
-    }
+    color: #555;
+    max-width: 600px; /* Evita que las líneas sean demasiado largas */
+    margin: 0 auto;
 }
