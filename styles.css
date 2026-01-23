@@ -198,7 +198,7 @@ a.link:hover {
 .strategic-quote {
     margin: 0;
     padding: 40px;
-    border-left: 4px solid #1a2a40; /* Azul medianoche institucional */
+    /*border-left: 4px solid #1a2a40; */
     position: relative;
 }
 
