@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 01-09-2025
+date_modified: 28-01-2026
 folder: analisis
 permalink: analisis-ferroviario
 ---
@@ -158,3 +159,18 @@ España está implementando el **sistema ERTMS (European Rail Traffic Management
 - **Retrasos estructurales** en proyectos clave como el AVE a Extremadura
 
 La red ferroviaria española se encuentra en un **momento de inflexión**: tras una década de desinversión durante la crisis post-2008, el actual gobierno ha iniciado la **mayor modernización de la historia**, aunque los **problemas heredados y los nuevos desafíos operativos** requieren una gestión más eficaz para alcanzar los estándares de eficiencia de los países líderes europeos.
+
+
+---
+
+**Comentario de Miguel García Álvarez - (Mapas Milhaud)**
+
+Cuando se analizan datos para detectar tendencias, es también importante determinar la calidad del dato. En este caso, por ejemplo, habría que evaluar si la definición de incidente o el proceso para registrar incidentes ha cambiado a lo largo del periodo. También sería relevante entender si los incidentes están normalizados (por número de servicios, por número de usuarios) o simplemente es un incremento total que se nutre directamente del incremento del servicio en sí.
+
+Totalmente de acuerdo en que es importante analizar datos, pero también que los datos analizados sean lo que creemos que son.
+
+** Respuesta:**
+
+Muy bien explicado, Miguel. Los datos, sin contexto y sin un marco comparativo, pueden generar falsas expectativas. Yo he hecho un análisis simple y, como bien apuntabas, sesgado. 
+El tránsito de trenes en los últimos años ha aumentado significativamente, por lo que tendría más sentido una métrica de incidentes/compensaciones por ratio de viajes en lugar del número en bruto sin más.
+
