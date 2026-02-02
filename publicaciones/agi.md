@@ -11,6 +11,8 @@ folder: conceptos
 permalink: agi
 ---
 
+# Inteligencia Artificial General
+
 De momento lo que tenemos es más incertidumbre que hechos constatados acerca de cuándo llegará la **inteligencia artificial general** (AGI), una forma de IA tan capaz como los humanos en tareas cognitivas.
 Uno de los textos más relevantes a día de hoy es el generado por [Google DeepMind](https://archive.ph/AjgJy), donde exploran y comparten sus avances y medidas para acotar potenciales problemas.
 
