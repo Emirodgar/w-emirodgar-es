@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 09-02-2026
-folder: ia
+folder: espana
 permalink: prohibir-redes-sociales-menores-16-anos
 ---
 
