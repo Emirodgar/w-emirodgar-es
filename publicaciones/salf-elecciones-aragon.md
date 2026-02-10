@@ -62,6 +62,7 @@ Los resultados de SALF ene stas votaciones se puede explicar por varios factores
 3. Esta tercera causa es más subjetiva, pero muchos analistas inciden en que la candidatura pudo verse perjudicada al contar con perfiles alejados de la política institucional y mensajes populistas que no conectaron suficientemente con el electorado aragonés.
 
 Alvise tiene puesto el foco ahora en Castilla y León, por lo que este análisis sobre Aragón será clave para entender posibles movimientos y resultados en las siguientes elecciones autonómicas.
+De momento, cuenta con Javier Teira, que ya se presentó con Vox en Salamanca y ahora se ha integrado en Se Acabó La Fiesta.
 
 ## Fuentes utilizadas
 
