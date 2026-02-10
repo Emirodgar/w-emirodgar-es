@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 10-02-2026
-folder: ia
+folder: elecciones
 permalink: analisis-salf-elecciones
 ---
 
