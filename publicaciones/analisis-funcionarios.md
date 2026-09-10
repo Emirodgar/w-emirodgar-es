@@ -15,7 +15,7 @@ permalink: analisis-funcionarios
 
 ## Evolución numérica de los funcionarios
 
-El número de funcionarios en España ha experimentado una **transformación significativa** durante los últimos diez años, caracterizada por una primera fase de reducción y una posterior recuperación.
+El número de funcionarios en España ha experimentado una **transformación significativa** durante los últimos diez años, caracterizada por una primera fase de reducción y una posterior recuperación, en paralelo a la [evolución de los autónomos en España](https://emirodgar.es/analisis-autonomos) durante ese mismo periodo.
 
 <img width="1095" class="img-responsive" alt="Evolución del número de funcionarios y empleados públicos en España (2015-2024)" src="https://github.com/user-attachments/assets/01444584-ecc6-40c0-9737-fbfdc4b23508" />
 
@@ -52,7 +52,7 @@ El gasto en 2024 equivale al **11% del PIB** y representa **uno de cada cuatro e
 
 ### Distribución por administraciones
 
-Las **comunidades autónomas** concentran el mayor gasto, con más de **105.000 millones de euros** en 2024, seguidas por el Estado con **30.000 millones** y las administraciones locales con **32.000 millones**.
+Las **comunidades autónomas** concentran el mayor gasto, con más de **105.000 millones de euros** en 2024, seguidas por el Estado con **30.000 millones** y las administraciones locales con **32.000 millones**, un gasto que conviene poner en contexto junto a la [evolución de la deuda de las comunidades autónomas](https://emirodgar.es/deuda-autonomias).
 
 ## Análisis demográfico por género
 
@@ -189,6 +189,6 @@ Las **ofertas de empleo público récord** de 2023 y 2024 (39.000+ plazas cada a
 
 ## Conclusiones
 
-La evolución de los funcionarios en España durante la última década refleja las **consecuencias de las políticas de austeridad** implementadas tras la crisis de 2008, seguidas de una **recuperación reciente** que aún no ha logrado revertir completamente los efectos del envejecimiento de las plantillas. El **incremento del 35% en los costes salariales** contrasta con la **estabilidad relativa** en el número de efectivos, evidenciando tanto las mejoras retributivas como el impacto de la inflación.
+La evolución de los funcionarios en España durante la última década refleja las **consecuencias de las políticas de austeridad** implementadas tras la crisis de 2008, seguidas de una **recuperación reciente** que aún no ha logrado revertir completamente los efectos del envejecimiento de las plantillas. El **incremento del 35% en los costes salariales** contrasta con la **estabilidad relativa** en el número de efectivos, evidenciando tanto las mejoras retributivas como el impacto de la inflación sobre el [poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo).
 
 El **desafío demográfico** constituye la **principal preocupación** a medio plazo, con casi **un millón de jubilaciones** previstas en los próximos años. La **feminización** progresiva de la función pública, especialmente en Educación y Sanidad, y el **predominio masculino** en Fuerzas Armadas y Seguridad reflejan la evolución social y las competencias transferidas a las comunidades autónomas.

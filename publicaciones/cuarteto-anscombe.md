@@ -50,3 +50,5 @@ Como menciona Sahil Bloom en su boletín "The Statistical Oddity That May Save Y
 - **No te fíes solo de los resúmenes estadísticos:** Las medias y varianzas son útiles, pero pueden ocultar detalles importantes.
 - **Combina análisis cuantitativo y cualitativo:** Los números cuentan una parte de la historia, pero el contexto y la observación directa completan el panorama.
 - **Adapta tus decisiones:** La flexibilidad es clave. Si la realidad no coincide con lo que esperabas según los datos, ajusta tu enfoque.
+
+Este principio se aplica constantemente al analizar datos públicos: por ejemplo, al estudiar la [evolución de la deuda de las comunidades autónomas](https://emirodgar.es/deuda-autonomias) o el [impacto económico del salario mínimo](https://emirodgar.es/salario-minimo-espana), una tabla de cifras agregadas puede ocultar tendencias que solo se aprecian al representar la serie completa.

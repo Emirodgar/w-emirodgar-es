@@ -15,7 +15,7 @@ permalink: pensiones-smi
 
 ## Situación actual: un sistema en tensión creciente
 
-España se encuentra en un momento crítico de su sistema de pensiones. En 2025, la **pensión media contributiva alcanza los 1.508 euros mensuales**, mientras que el **Salario Mínimo Interprofesional se sitúa en 1.184 euros** (en 14 pagas). Esta diferencia, que se traduce en una ratio de 1,27 entre pensión media y SMI, refleja un equilibrio que ha evolucionado significativamente en las últimas dos décadas.
+España se encuentra en un momento crítico de su sistema de pensiones. En 2025, la **pensión media contributiva alcanza los 1.508 euros mensuales**, mientras que el **Salario Mínimo Interprofesional se sitúa en 1.184 euros** (en 14 pagas). Esta diferencia, que se traduce en una ratio de 1,27 entre pensión media y SMI, refleja un equilibrio que ha evolucionado significativamente en las últimas dos décadas, algo que conviene leer junto a la [evolución del poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo) en ese mismo periodo.
 
 El **gasto en pensiones representa actualmente el 12% del PIB**, con una nómina mensual que supera los **13.500 millones de euros**. Con más de **10 millones de pensionistas** en el sistema, España destina una proporción creciente de su riqueza nacional a sostener este pilar fundamental del Estado del bienestar.
 
@@ -46,12 +46,12 @@ Evolución de la ratio de trabajadores por pensionista en España hasta 2050
 
 ## Proyección del gasto: un crecimiento insostenible
 
-El impacto fiscal será demoledor. **El gasto en pensiones escalará desde el actual 12% del PIB hasta el 17,3% en 2050**, requiriendo transferencias del Estado cada vez mayores para cubrir el déficit estructural del sistema. Según la Autoridad Independiente de Responsabilidad Fiscal (AIReF), **España necesitaría un flujo migratorio superior a un millón de personas anuales** para mantener la actual tasa de dependencia.
+El impacto fiscal será demoledor. **El gasto en pensiones escalará desde el actual 12% del PIB hasta el 17,3% en 2050**, requiriendo transferencias del Estado cada vez mayores para cubrir el déficit estructural del sistema, una presión que se suma a la ya elevada [deuda que arrastran las comunidades autónomas](https://emirodgar.es/deuda-autonomias). Según la Autoridad Independiente de Responsabilidad Fiscal (AIReF), **España necesitaría un flujo migratorio superior a un millón de personas anuales** para mantener la actual tasa de dependencia.
 
 <img width="1004" class="img-responsive" alt="Proyección del gasto en pensiones como porcentaje del PIB español hasta 2050" src="https://github.com/user-attachments/assets/c94dc3b0-572d-49c4-8a1a-2e72ed3c90a7" />
 Proyección del gasto en pensiones como porcentaje del PIB español hasta 2050
 
-Las proyecciones más conservadoras estiman que **en 2050, España dedicará en torno al 41% de sus gastos fiscales al pago de pensiones**. Sin reformas adicionales, el déficit público podría elevarse al 7% del PIB y la deuda hasta el 130%.
+Las proyecciones más conservadoras estiman que **en 2050, España dedicará en torno al 41% de sus gastos fiscales al pago de pensiones**. Sin reformas adicionales, el déficit público podría elevarse al 7% del PIB y la deuda hasta el 130%, un escenario que alimenta los temores sobre [una crisis económica que ya empieza a vislumbrarse](https://emirodgar.es/crisis-economica-ia).
 
 ## Evolución del SMI: entre competitividad y sostenibilidad
 

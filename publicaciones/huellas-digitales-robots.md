@@ -14,7 +14,7 @@ permalink: huellas-digitales-robots
 
 # Huellas digitales de robots de rastreo
 
-Ojo con los "bots buenos" y la visibilidad online. Hoy en día, el mundo digital está lleno de bots; no solo de los que nos dan problemas, sino también de otros que son esenciales para que nuestra información llegue a más gente. Con el auge de plataformas de SEO, marketing y, sobre todo, la Inteligencia Artificial, la cantidad de estos "rastreadores" que recorren la web para recopilar y verificar datos no para de crecer.
+Ojo con los "bots buenos" y la visibilidad online. Hoy en día, el mundo digital está lleno de bots; no solo de los que nos dan problemas, sino también de otros que son esenciales para que nuestra información llegue a más gente. Con el auge de plataformas de SEO, marketing y, sobre todo, la Inteligencia Artificial, la cantidad de estos "rastreadores" que recorren la web para recopilar y verificar datos no para de crecer. Muchas de estas herramientas de [scraping con inteligencia artificial](https://emirodgar.es/scraping-ia), apoyadas en protocolos como el [MCP](https://emirodgar.es/mcp), dependen precisamente de que estos bots puedan acceder sin trabas a la información.
 
 ## ¿Por qué son importantes estos bots?
 

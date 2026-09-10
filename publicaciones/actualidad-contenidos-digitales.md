@@ -27,7 +27,7 @@ En la actualidad, **solo el 48 % de los textos online los escriben humanos**. Si
 <img width="900" class="img-responsive" alt="Artículos generados por IA" src="https://github.com/user-attachments/assets/c7c7998f-539c-4d12-9100-4aadccfa24d3" />
 
 Esto plantea una pregunta incómoda: **¿qué pasa con la autenticidad y la diversidad del conocimiento?**  
-Si las inteligencias artificiales aprenden de textos creados por otras IA, el resultado puede parecerse a **una fotocopia de una fotocopia**: cada vez menos clara, menos rica y más uniforme.
+Si las inteligencias artificiales aprenden de textos creados por otras IA, el resultado puede parecerse a **una fotocopia de una fotocopia**: cada vez menos clara, menos rica y más uniforme. Esta homogeneización conecta con otra tendencia que ya analicé: [por qué cada vez escribimos y leemos frases más cortas](https://emirodgar.es/por-que-cada-vez-escribimos-y-leemos-frases-mas-cortas).
 
 ## ¿Qué es el “colapso de modelos” y por qué debería preocuparnos?
 
@@ -40,14 +40,14 @@ Lo que empezó como una herramienta para agilizar tareas puede acabar convirtié
 ## ¿Estamos ante una revolución o un riesgo para la información?
 
 La **automatización del contenido** tiene ventajas evidentes: más rapidez, más volumen y menos costes. Pero también está transformando la forma en que **entendemos la información y confiamos en ella**.  
-Si cada texto, noticia o análisis se genera sin intervención humana, ¿cómo sabremos qué es verdad, qué está manipulado o simplemente mal interpretado?
+Si cada texto, noticia o análisis se genera sin intervención humana, ¿cómo sabremos qué es verdad, qué está manipulado o simplemente mal interpretado? Aprender a mirar de frente esa incertidumbre es justo lo que planteo en mi reflexión sobre el [truth coping en la era de la inteligencia artificial](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial).
 
 El problema no es que la IA escriba, sino que **escriba sola**, sin supervisión ni contraste.  
 Cuando eso ocurre, corremos el riesgo de **perder la perspectiva humana** que da sentido, contexto y criterio a los datos.
 
 ## Entonces, ¿qué podemos hacer?
 
-El reto no está en frenar la inteligencia artificial, sino en **integrarla de forma responsable**.  
+El reto no está en frenar la inteligencia artificial, sino en **integrarla de forma responsable**, algo que pasa también por saber [crear contenido con IA sin que parezca artificial](https://emirodgar.es/crear-contenido-ia).  
 Eso implica tres cosas básicas:
 
 1. **Transparencia**: que sepamos cuándo un contenido ha sido creado o editado por IA.  

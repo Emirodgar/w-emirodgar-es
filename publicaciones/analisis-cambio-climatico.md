@@ -293,7 +293,7 @@ Los expertos proyectan que **España experimentará una disminución de precipit
 
 ## Eventos meteorológicos extremos y tormentas
 
-La **frecuencia e intensidad** de eventos meteorológicos extremos ha experimentado un **incremento notable** en las últimas décadas:
+La **frecuencia e intensidad** de eventos meteorológicos extremos ha experimentado un **incremento notable** en las últimas décadas, como demuestra también la [evolución de los incendios forestales en España](https://emirodgar.es/analisis-incendios-forestales), cada vez más ligados a olas de calor y sequías prolongadas:
 
 ### Estadísticas de tornados y tormentas
 
@@ -313,7 +313,7 @@ Entre 2000-2019, los eventos meteorológicos extremos causaron en España:
 
 ### Eventos extremos destacados (2020-2024)
 
-- **2020**: Tormenta Gloria, el **temporal más duro** desde 1982, con **13 fallecidos**
+- **2020**: Tormenta Gloria, el **temporal más duro** desde 1982, con **13 fallecidos**, antecedente directo de la [DANA que provocó el desastre del Barranco del Poyo](https://emirodgar.es/analisis-barranco-poyo) en 2024
 - **2021**: Borrasca Filomena, **nevada histórica** en Madrid con **50 cm de acumulación**
 - **2022**: **41 días de calor extremo**, **siete veces más** que la media 1981-2010
 - **2023**: **Siete olas de calor** y **dos olas de frío**
@@ -397,7 +397,7 @@ España ha desarrollado un **marco normativo integral** para abordar el cambio c
 
 ### Organismos e instituciones
 
-- **Observatorio Nacional de la Sequía** (creado en 2005): Centro de conocimiento y seguimiento
+- **Observatorio Nacional de la Sequía** (creado en 2005): Centro de conocimiento y seguimiento, un ejemplo más de la [proliferación de observatorios en la administración pública española](https://emirodgar.es/analisis-observatorios)
 - **Oficina Española de Cambio Climático**: Coordinación de políticas climáticas
 - **Comité de Expertos**: Asesoramiento científico para gestión de sequías
 

@@ -56,7 +56,7 @@ Por eso no es casual que la inversión en infraestructura eléctrica esté tambi
 
 ## ¿Hay riesgo de burbuja?
 
-Cuando vemos movimientos tan rápidos en inversión, siempre cabe la pregunta: ¿esto es sostenible o es una burbuja?
+Cuando vemos movimientos tan rápidos en inversión, siempre cabe la pregunta: ¿esto es sostenible o es una burbuja? Es la misma duda que planteo en mi análisis sobre la posible [crisis económica impulsada por la inteligencia artificial](https://emirodgar.es/crisis-economica-ia).
 
 - Las **burbujas solo se explican con perspectiva histórica**; cuando estallan, todos dirán que “se veía venir”, pero anticiparlas es muy difícil.  
 - Personalmente, mantengo una **actitud prudente**: no rechazo el potencial de la IA ni de los centros de datos, pero creo que hay que vigilar los indicadores de retorno, eficiencia y saturación del mercado.  
@@ -78,7 +78,7 @@ Algunos datos recientes:
 - Iberdrola ya empieza a moverse: se propone integrar generación eléctrica renovable con centros de datos, e incluso ha formado una **joint venture con Echelon** para desarrollar infraestructuras conectadas a su red limpia.  
 - En Aragón, el fondo Azora planea invertir **2.000 millones de euros** en un megacentro de datos.  
 
-Así que España no está al margen de esta tendencia: está siendo un terreno activo en inversiones digitales.
+Así que España no está al margen de esta tendencia: está siendo un terreno activo en inversiones digitales, dentro de la [carrera de Europa por liderar la inteligencia artificial](https://emirodgar.es/europa-ia).
 
 ### ¿Y la demanda eléctrica?
 
@@ -88,7 +88,7 @@ Esta es una de las claves de todo el asunto:
 - Según estimaciones del sector, un crecimiento descontrolado de centros de datos podría comprometer los objetivos climáticos de Europa si esa expansión se apoya mayormente en combustibles fósiles.  
 - En Europa, los centros de datos ya consumen unos **96 TWh**, equivalentes al 3,1 % del total eléctrico.  
 - España, por su parte, gestiona bien la eficiencia de sus centros: es uno de los países pioneros en incorporar tecnologías de refrigeración avanzadas, sistemas de gestión energética inteligente y uso de energías renovables certificadas (más del 50 % de las compañías españolas de data centers encuestadas afirma hacerlo).  
-- No obstante, el desafío de **coordinar la capacidad eléctrica** con la demanda creciente ya es real.  
+- No obstante, el desafío de **coordinar la capacidad eléctrica** con la demanda creciente ya es real, como quedó patente en mi [análisis del gran apagón eléctrico en España](https://emirodgar.es/analisis-apagon-electrico).  
 
 En definitiva: si España quiere acoger ese crecimiento, no basta con construir centros de datos, hay que asegurar que el sistema eléctrico, la regulación y la sostenibilidad estén preparados.
 

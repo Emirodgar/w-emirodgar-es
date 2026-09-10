@@ -54,7 +54,7 @@ Los procesos de **instruction tuning** diseñados para hacer los modelos más ú
 
 Un aspecto particularmente preocupante es que el **sesgo político varía según el idioma** utilizado para consultar al modelo. El estudio multilingüe encontró que estos sesgos políticos difieren dependiendo del idioma de consulta, sugiriendo que los modelos han internalizado diferentes perspectivas políticas asociadas con distintos contextos lingüísticos y culturales.
 
-La investigación indica que el sesgo es **más fuerte en inglés, francés y español**, pero existe en todos los idiomas evaluados. Además, los modelos más grandes acentúan el sesgo y aumentan las similitudes entre predicciones en diferentes idiomas.
+La investigación indica que el sesgo es **más fuerte en inglés, francés y español**, pero existe en todos los idiomas evaluados. Además, los modelos más grandes acentúan el sesgo y aumentan las similitudes entre predicciones en diferentes idiomas. Este matiz lingüístico recuerda a otro fenómeno que ya analizamos: [cómo la simplificación del lenguaje también condiciona la forma en la que pensamos y debatimos](https://emirodgar.es/por-que-cada-vez-escribimos-y-leemos-frases-mas-cortas).
 
 ### Intentos de mitigación y sus limitaciones
 
@@ -82,7 +82,7 @@ Los hallazgos plantean preguntas fundamentales sobre si la **neutralidad políti
 
 ### Consecuencias sociopolíticas
 
-El sesgo político persistente en los LLMs tiene implicaciones significativas dado su creciente uso como fuentes de información. Un estudio de 2024 encontró que la interacción con LLMs sesgados políticamente puede **influir en las preferencias de voto** de los usuarios. Con 935 votantes registrados estadounidenses interactuando con Claude-3, Llama-3 y GPT-4, los investigadores documentaron cambios medibles en las [intenciones de voto](https://emirodgar.es/encuestas-intencion-voto).
+El sesgo político persistente en los LLMs tiene implicaciones significativas dado su creciente uso como fuentes de información. Un estudio de 2024 encontró que la interacción con LLMs sesgados políticamente puede **influir en las preferencias de voto** de los usuarios. Con 935 votantes registrados estadounidenses interactuando con Claude-3, Llama-3 y GPT-4, los investigadores documentaron cambios medibles en las [intenciones de voto](https://emirodgar.es/encuestas-intencion-voto). Este tipo de influencia resulta aún más relevante en un país con un mapa de [ideologías políticas](https://emirodgar.es/ideologias-politicas) tan fragmentado como España.
 
 ### Direcciones futuras
 

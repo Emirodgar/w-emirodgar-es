@@ -14,7 +14,7 @@ permalink: la-paradoja-de-la-inteligencia-artificial-y-la-productividad
 # La paradoja de la inteligencia artificial y por qué la productividad aún no despega
 
 **La inteligencia artificial está en todas partes. Pero en los datos de productividad… todavía no tanto.**  
-Aunque cada vez más personas utilizan herramientas de IA en su trabajo diario (yo el primero), el impacto económico real sigue siendo moderado. Y no es la primera vez que ocurre algo así.
+Aunque cada vez más personas utilizan herramientas de IA en su trabajo diario (yo el primero), el impacto económico real sigue siendo moderado. Y no es la primera vez que ocurre algo así. Un patrón que confirman también los datos más recientes, como repasamos en [por qué la IA promete mucho pero la productividad sigue sin despegar](https://emirodgar.es/productividad-inteligencia-artificial-no-despega).
 
 La historia de la tecnología está llena de avances que parecían revolucionarios desde el primer día, pero cuyo efecto real tardó años en aparecer. Con la IA probablemente estamos viviendo exactamente ese momento intermedio.
 
@@ -108,13 +108,13 @@ La IA tiene que integrarse con:
 - Sistemas internos  
 - Plataformas de trabajo  
 
-Solo así puede actuar de forma continua y no como una simple herramienta aislada.
+Solo así puede actuar de forma continua y no como una simple herramienta aislada. Precisamente por eso conviene tener una hoja de ruta clara sobre [cómo adaptar la IA en un entorno profesional](https://emirodgar.es/adoptar-ia), en lugar de limitarse a comprar licencias.
 
 ## ¿Estamos todavía al principio?
 
 Todo indica que sí.
 
-La adopción de la IA está creciendo rápido, pero **el uso profundo sigue siendo limitado**. Muchas empresas están experimentando, probando herramientas o formando a sus equipos.
+La adopción de la IA está creciendo rápido, pero **el uso profundo sigue siendo limitado**. Muchas empresas están experimentando, probando herramientas o formando a sus equipos. Las que ya han dado ese salto organizativo son las que empiezan a definirse como [empresas IA first](https://emirodgar.es/empresas-ia-first).
 Eso es normal y nos ofrece la oportunidad de seguir creciendo y aprendiendo de esta gran tecnología.
 
 La historia de la tecnología sugiere que **el verdadero impacto llega cuando dejamos de ver la herramienta como novedad y empezamos a reconstruir el sistema alrededor de ella**.

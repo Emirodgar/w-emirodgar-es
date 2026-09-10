@@ -98,7 +98,7 @@ Para evaluar de forma precisa el rendimiento de una web o campaña, es fundament
 
 <img width="472" class="img-responsive" alt="kpis y métricas" src="https://github.com/user-attachments/assets/92cf4fbf-b52d-44b9-94ef-7fd74f9f0bfc" />
 
-> El principal reto al que nos tenemos que enfrentar es poder **discernir el tráfico humano del tráfico de robots** y más ahora que entramos en la era de la IA agéntica. Lo veremos más desarrollado en el siguiente punto.
+> El principal reto al que nos tenemos que enfrentar es poder **discernir el tráfico humano del [tráfico de robots](https://emirodgar.es/huellas-digitales-robots)** y más ahora que entramos en la era de la IA agéntica. Lo veremos más desarrollado en el siguiente punto.
 
 ### Métricas de audiencia
 
@@ -139,7 +139,7 @@ Garantizar la calidad del tráfico es clave para tomar decisiones basadas en dat
 - **Análisis de comportamiento**:  
   Evaluación de patrones de navegación, velocidad de clics y secuencias de interacción
 
-- **Machine Learning**:  
+- **[Machine Learning](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial)**:  
   Algoritmos supervisados y no supervisados para detectar anomalías no evidentes
 
 - **Verificación de dispositivos**:  
@@ -148,7 +148,7 @@ Garantizar la calidad del tráfico es clave para tomar decisiones basadas en dat
 ### Tipos de fraude detectados
 
 - **Tráfico de Bots**  
-  Visitas automatizadas generadas por scripts o programas que simulan comportamiento humano
+  Visitas automatizadas generadas por scripts o [herramientas de scraping con IA](https://emirodgar.es/scraping-ia) que simulan comportamiento humano
 
 - **Granjas de clics**  
   Operaciones organizadas para generar clics artificiales en anuncios o contenido

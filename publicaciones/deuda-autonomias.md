@@ -100,7 +100,7 @@ La Autoridad Independiente de Responsabilidad Fiscal proyecta una **reducción g
 
 - **2029**: 19,7% del PIB (reducción de 1,4 pp)
 - **2044**: 13% del PIB (convergencia al límite legal)
-- **Escenario pesimista**: Posible repunte por encima del máximo histórico a partir de 2028
+- **Escenario pesimista**: Posible repunte por encima del máximo histórico a partir de 2028, un riesgo que se agravaría si se cumplen los augurios de quienes ven venir [una crisis económica impulsada por la burbuja de la inteligencia artificial](https://emirodgar.es/crisis-economica-ia)
 
 
 ### Propuesta de condonación gubernamental
@@ -116,6 +116,6 @@ El Gobierno ha aprobado una **quita de deuda de 83.252 millones de euros** (apro
 
 ## Estado actual: incertidumbre respecto a la deuda y su futuro
 
-La deuda autonómica española presenta **desafíos estructurales significativos**. Aunque la tendencia actual es descendente, **13 de las 17 comunidades superan el límite legal del 13%**, y la convergencia hacia niveles sostenibles será un proceso prolongado. La elevada dependencia de la financiación estatal (62,8%) y las marcadas asimetrías regionales requieren **reformas estructurales del sistema de financiación autonómica** para garantizar la sostenibilidad fiscal a largo plazo.
+La deuda autonómica española presenta **desafíos estructurales significativos**. Aunque la tendencia actual es descendente, **13 de las 17 comunidades superan el límite legal del 13%**, y la convergencia hacia niveles sostenibles será un proceso prolongado. A esta presión regional se suma la que generará en las próximas décadas el gasto en pensiones, cuyo peso sobre el PIB seguirá creciendo tal y como analizamos en [este repaso a las pensiones frente al SMI](https://emirodgar.es/pensiones-smi). La elevada dependencia de la financiación estatal (62,8%) y las marcadas asimetrías regionales requieren **reformas estructurales del sistema de financiación autonómica** para garantizar la sostenibilidad fiscal a largo plazo.
 
 La propuesta de quita gubernamental, aunque controvertida, podría aliviar parcialmente la situación de las comunidades más endeudadas, pero su aprobación parlamentaria permanece incierta dado el contexto político actual.

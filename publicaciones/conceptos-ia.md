@@ -35,7 +35,7 @@ La IA actual no es magia, pero sí consecuencia de varios cambios clave:
 - **Explosión de datos**, impulsada por internet y la digitalización.
 - **Nuevos modelos matemáticos**, mucho más eficientes para aprender.
 
-Gracias a eso hoy tenemos asistentes como ChatGPT, sistemas que predicen estructuras de proteínas, generadores de imágenes o tecnologías que permiten los **coches autónomos** en entornos reales.
+Gracias a eso hoy tenemos asistentes como ChatGPT, sistemas que predicen estructuras de proteínas, generadores de imágenes o tecnologías que permiten los [**coches autónomos**](https://emirodgar.es/coches-autonomos) en entornos reales.
 
 Todo eso sigue siendo IA, pero no toda la IA funciona igual.
 
@@ -53,7 +53,7 @@ La **IA generativa** es una rama concreta del machine learning enfocada a **crea
 
 Aquí entran modelos como los que escriben textos, generan imágenes realistas o crean música. No copian directamente lo que han visto, sino que **aprenden patrones y los recombinan** para producir algo nuevo.
 
-Por eso ChatGPT, Gemini, Claude Perplexity Stable Diffusion o modelos similares se consideran IA generativa. Son sistemas diseñados para producir resultados que parecen creativos, aunque en realidad están basados en estadísticas muy avanzadas.
+Por eso ChatGPT, Gemini, Claude Perplexity Stable Diffusion o modelos similares se consideran IA generativa. Son sistemas diseñados para producir resultados que parecen creativos, aunque en realidad están basados en estadísticas muy avanzadas. De hecho, ya [más de la mitad de los contenidos digitales los escribe una inteligencia artificial](https://emirodgar.es/la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial).
 
 ## Entonces, ¿en qué se diferencian IA, ML y Gen AI?
 
@@ -92,7 +92,7 @@ A día de hoy, **no existe AGI**. Lo que tenemos son sistemas muy buenos en tare
 
 Aquí conviene distinguir entre dos tipos de datos:
 
-- **Datos de entrenamiento**, usados para que el modelo aprenda desde cero.
+- **Datos de entrenamiento**, usados para que el modelo aprenda desde cero -un tema que conecta directamente con el debate sobre el [copyright y los datos usados para entrenar modelos de IA](https://emirodgar.es/que-es-copyright-y-por-que-importa)-.
 - **Datos de contexto o [grounding](https://newsletter.chuletaseo.com/p/grounding-como-enfocar-una-estrategia)**, que se añaden para que las respuestas estén actualizadas o se ajusten a un entorno concreto.
 
 También es importante diferenciar entre **entrenamiento** y **uso**. El entrenamiento ocurre una vez; después, el modelo solo aplica lo aprendido cuando genera respuestas.

@@ -13,7 +13,7 @@ permalink: adoptar-ia
 
 # Adaptación profesional a la Inteligencia Artificial
 
-La inteligencia artificial está redefiniendo el panorama laboral a una velocidad sin precedentes, transformando **no solo lo que hacemos, sino cómo lo hacemos**. Para mantener nuestra relevancia profesional en esta era de cambio acelerado, necesitamos atravesar un proceso de adaptación que implica tres dimensiones fundamentales: 
+La inteligencia artificial está redefiniendo el panorama laboral a una velocidad sin precedentes, transformando **no solo lo que hacemos, sino cómo lo hacemos** -algo que empresas como Meta o Microsoft ya están dejando claro, hasta el punto de que [usar IA en el trabajo ha dejado de ser opcional](https://emirodgar.es/la-ia-ya-no-es-opcional-en-las-grandes-tecnologicas)-. Para mantener nuestra relevancia profesional en esta era de cambio acelerado, necesitamos atravesar un proceso de adaptación que implica tres dimensiones fundamentales: 
 
 - Mejorar nuestras habilidades actuales con ayuda de la IA (*upskilling*)
 - Soltar aquellas tareas que la IA puede realizar mejor (*unskilling*)
@@ -23,9 +23,9 @@ Este nuevo paradigma no representa simplemente un ajuste técnico, sino una tran
 
 ## El desafío de la adaptación profesional en la era de la IA
 
-La transformación digital está acelerando la evolución del mercado laboral a pasos agigantados. Según el Foro Económico Mundial, aproximadamente el 50% de los trabajadores necesitarán actualizar sus habilidades en los próximos cinco años. **Debemos reinventarnos constantemente para mantenernos relevantes**.
+La transformación digital está acelerando la evolución del mercado laboral a pasos agigantados. Según el Foro Económico Mundial, aproximadamente el 50% de los trabajadores necesitarán actualizar sus habilidades en los próximos cinco años. **Debemos reinventarnos constantemente para mantenernos relevantes**, sobre todo si tenemos en cuenta [el impacto que la inteligencia artificial ya está teniendo en los trabajos](https://emirodgar.es/impacto-ia-trabajos).
 
-La automatización y la inteligencia artificial están redefiniendo roles completos dentro de las organizaciones. Las tareas repetitivas y predecibles están siendo asumidas por sistemas inteligentes, mientras que las competencias puramente humanas como la creatividad, el pensamiento crítico y la inteligencia emocional cobran un valor renovado. Ahora tenemos más tiempo para explorar estas áreas. 
+La automatización y la inteligencia artificial están redefiniendo roles completos dentro de las organizaciones. Las tareas repetitivas y predecibles están siendo asumidas por sistemas inteligentes -ya hay [40 profesiones señaladas como especialmente expuestas](https://emirodgar.es/40-profesiones-en-riesgo-por-la-inteligencia-artificial)-, mientras que las competencias puramente humanas como la creatividad, el pensamiento crítico y la inteligencia emocional cobran un valor renovado. Ahora tenemos más tiempo para explorar estas áreas. 
 
 Es vital entender que la adaptación a la IA no es solo un reto tecnológico, sino también cultural. Implica cambiar paradigmas, soltar certezas y adoptar una mentalidad de aprendizaje continuo. 
 

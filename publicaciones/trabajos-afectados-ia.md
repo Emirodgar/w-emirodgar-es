@@ -90,7 +90,7 @@ Este documento no busca generar alarma, sino **fomentar la anticipación y la ad
 **Justificación:** Resolución de incidencias comunes mediante IA y bases de conocimiento dinámicas.
 
 ### 🚚 Repartidores 
-**Justificación:** Ya hay pruebas piloto con robots y drones autónomos en ciudades controladas.
+**Justificación:** Ya hay pruebas piloto con [robots y vehículos autónomos](https://emirodgar.es/coches-autonomos) y drones en ciudades controladas.
 
 ### 📈 Analistas financieros junior
 **Justificación:** IA analiza datos financieros y genera informes predictivos automáticamente.
@@ -100,6 +100,8 @@ Este documento no busca generar alarma, sino **fomentar la anticipación y la ad
 
 ### 🧑‍💻 Personal de RRHH (selección masiva)
 **Justificación:** Filtros automáticos de CV, entrevistas automatizadas y análisis de personalidad con IA.
+
+Este ajuste ya se percibe con fuerza en el sector tecnológico, como muestra nuestro análisis sobre [la burbuja tecnológica y el futuro del trabajo con IA](https://emirodgar.es/burbuja-tecnologica-y-el-futuro-del-trabajo-con-ia).
 
 ---
 
@@ -135,4 +137,4 @@ La IA afectará especialmente a los trabajos que sean:
 - Escalables digitalmente
 - No dependientes del contexto humano o físico
 
-Adaptarse será clave. La automatización no implica solo destrucción de empleo, sino transformación profunda del mercado laboral.
+Por eso conviene contar con una hoja de ruta concreta sobre [cómo adaptar la IA en un entorno profesional](https://emirodgar.es/adoptar-ia), tanto a nivel individual como organizativo. Adaptarse será clave. La automatización no implica solo destrucción de empleo, sino transformación profunda del mercado laboral.

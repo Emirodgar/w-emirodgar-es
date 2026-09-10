@@ -14,7 +14,7 @@ permalink: analisis-observatorios
 
 # Los observatorios en España
 
-A raíz del anuncio del Gobierno de España de la creación de un Observatorio de la Vivienda Turística en España, me he planteado su utilidad y convivencia con el actual [Observatorio de la Vivienda y Suelo](https://www.mivau.gob.es/urbanismo-y-suelo/suelo/observatorio-de-vivienda-y-suelo?utm_source=substack&utm_medium=email). ¿Realmente es necesario o será otro plan cuyo coste nunca verá una rentabilidad?
+A raíz del anuncio del Gobierno de España de la creación de un Observatorio de la Vivienda Turística en España, me he planteado su utilidad y convivencia con el actual [Observatorio de la Vivienda y Suelo](https://www.mivau.gob.es/urbanismo-y-suelo/suelo/observatorio-de-vivienda-y-suelo?utm_source=substack&utm_medium=email). ¿Realmente es necesario o será otro plan cuyo coste nunca verá una rentabilidad, en un mercado que ya [analizamos en profundidad en este repaso al mercado de la vivienda en España](https://emirodgar.es/analisis-vivienda-espana)?
 
 Vamos a analizar en detalle cómo funcionan los observatorios en España, cuántos existen y qué función realizan. España ha desarrollado en las últimas décadas una proliferación masiva de observatorios públicos y público-privados. Actualmente, según el meticuloso trabajo del [Observatorio de los Observatorios Públicos](https://observatoriospublicos.es/) de España, iniciativa del ingeniero Jaime Gómez-Obregón, existen catalogados aproximadamente más de 400 observatorios en todo el territorio nacional. Esta cifra, que no deja de crecer, nos sitúa ante un ecosistema institucional complejo que merece una reflexión  sobre su razón de ser, su efectividad y su verdadero aporte a la sociedad.
 
@@ -65,7 +65,7 @@ En **trabajo, empleo y economía**, el Observatorio Trimestral del Mercado de Tr
 
 El sector de **medio ambiente y cambio climático** ha proliferado notablemente, con observatorios autonómicos en Canarias, Aragón, y Tenerife, así como observatorios especializados en agua, residuos, biomasa, energía eólica y sostenibilidad del regadío. El Observatorio de Descarbonización Rural merece mención especial por su enfoque en dar visibilidad al papel del medio rural en la transición ecológica.
 
-En **tecnología y digitalización**, el Observatorio Nacional de las Telecomunicaciones y de la Sociedad de la Información convive con el Observatorio de Derechos Digitales, nacido en 2025 para investigar el impacto social y ético de la tecnología y estudiar cómo reducir las brechas digitales, el Observatorio de la Brecha Digital y múltiples observatorios autonómicos y sectoriales sobre competencias digitales.
+En **tecnología y digitalización**, el Observatorio Nacional de las Telecomunicaciones y de la Sociedad de la Información convive con el Observatorio de Derechos Digitales, nacido en 2025 para investigar el impacto social y ético de la tecnología y estudiar cómo reducir las brechas digitales, el Observatorio de la Brecha Digital y múltiples observatorios autonómicos y sectoriales sobre competencias digitales. Una proliferación que contrasta con el debate, mucho más de fondo, sobre [cómo debería entrar realmente la IA en la administración pública española](https://emirodgar.es/ia-en-la-administracion-publica).
 
 Pero quizás lo más llamativo sea la existencia de observatorios temáticos altamente específicos como el **Observatorio del Flamenco**, dedicado a obtener y analizar información sobre la historia, estructura e impacto económico de este arte, el **Observatorio de la Muerte** de Cataluña, creado para conocer las formas de morir en dicha comunidad, o el **Observatorio sobre el Brexit de Castilla-La Mancha**, que plantea dudas sobre su pertinencia y sostenibilidad en el tiempo. Dejo a elección de los queridos lectores la utilidad de los mismos.
 
@@ -176,7 +176,7 @@ El **Observatorio de las Ocupaciones del Servicio Público de Empleo Estatal** p
 
 El **Observatorio Estatal de Violencia sobre la Mujer** ha desempeñado un papel crucial en la evaluación de políticas contra la violencia de género, la recopilación de estadísticas judiciales y la formulación de recomendaciones que han influido en la legislación española.
 
-El **Observatorio de la Calidad del Sistema Español de Universidades** de ANECA proporciona análisis rigurosos sobre el estado de la evaluación externa de la calidad universitaria, ofreciendo orientación clara para la mejora del sistema.
+El **Observatorio de la Calidad del Sistema Español de Universidades** de ANECA proporciona análisis rigurosos sobre el estado de la evaluación externa de la calidad universitaria, ofreciendo orientación clara para la mejora del sistema, algo especialmente relevante en un sector, el de las [universidades privadas](https://emirodgar.es/universidades-privadas-espana), que no deja de crecer.
 
 Estos ejemplos demuestran que cuando los observatorios cuentan con metodologías sólidas, recursos adecuados, independencia técnica y compromiso real con la producción de conocimiento útil, pueden convertirse en herramientas valiosas para la mejora de las políticas públicas.
 

@@ -13,7 +13,7 @@ permalink: agi
 
 # Inteligencia Artificial General
 
-De momento lo que tenemos es más incertidumbre que hechos constatados acerca de cuándo llegará la **inteligencia artificial general** (AGI), una forma de IA tan capaz como los humanos en tareas cognitivas.
+De momento lo que tenemos es más incertidumbre que hechos constatados acerca de cuándo llegará la **inteligencia artificial general** (AGI), una forma de IA tan capaz como los humanos en tareas cognitivas. Si necesitas repasar antes los términos básicos, te recomiendo mi [guía de conceptos básicos de la inteligencia artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial).
 Uno de los textos más relevantes a día de hoy es el generado por [Google DeepMind](https://archive.ph/AjgJy), donde exploran y comparten sus avances y medidas para acotar potenciales problemas.
 
 # Desarrollo responsable de la inteligencia artificial general (AGI)
@@ -22,7 +22,7 @@ El equipo de Google detalla cómo está abordando el desarrollo seguro y respons
 
 ## Principales áreas de riesgo
 
-Se identifican cuatro grandes áreas de riesgo de la AGI:
+Se identifican cuatro grandes áreas de riesgo de la AGI, en línea con lo que ya recojo de forma más general al hablar de los [peligros de la IA](https://emirodgar.es/peligros-ia):
 
 - **Mal uso**: cuando alguien utiliza la IA con fines dañinos, como ciberataques o desinformación. Para evitarlo, se están desarrollando mecanismos de seguridad avanzados que impidan el acceso indebido a las capacidades más peligrosas.
 - **Desalineación con los valores humanos**: cuando la IA no entiende correctamente los objetivos humanos o los interpreta mal. Se trabaja en métodos para entrenar a la IA a seguir instrucciones humanas con precisión, detectar desviaciones y mejorar la supervisión mediante sistemas de monitoreo.
@@ -38,7 +38,7 @@ Se identifican cuatro grandes áreas de riesgo de la AGI:
 
 ## Colaboración y gobernanza
 
-- Creación del **AGI Safety Council** para evaluar riesgos y recomendar buenas prácticas.
+- Creación del **AGI Safety Council** para evaluar riesgos y recomendar buenas prácticas, algo parecido a la función que muchas empresas ya delegan en su propio [Chief AI Officer](https://emirodgar.es/chief-ai-officer).
 - Alianzas con entidades externas como **Redwood Research** y **Apollo**.
 - Participación en iniciativas como **Frontier Model Forum** para establecer estándares de seguridad.
 - Lanzamiento de un curso de formación en seguridad de AGI para investigadores y profesionales.

@@ -15,7 +15,7 @@ permalink: salario-minimo-espana
 
 ## Resumen ejecutivo
 
-La subida del salario mínimo interprofesional (SMI) ha demostrado un **impacto ligeramente positivo en el PIB y el empleo** según los análisis de la AIReF, contradiciendo las preocupaciones iniciales sobre destrucción masiva de empleo. El SMI ha pasado de 735,9 euros en 2018 a 1.184 euros en 2025, representando un incremento acumulado del **60,9%**. Esta subida afecta actualmente a 2,4 millones de trabajadores, convirtiendo al SMI en el **salario más frecuente de la economía española**.
+La subida del salario mínimo interprofesional (SMI) ha demostrado un **impacto ligeramente positivo en el PIB y el empleo** según los análisis de la AIReF, contradiciendo las preocupaciones iniciales sobre destrucción masiva de empleo, y guarda una relación directa con la [evolución del poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo). El SMI ha pasado de 735,9 euros en 2018 a 1.184 euros en 2025, representando un incremento acumulado del **60,9%**. Esta subida afecta actualmente a 2,4 millones de trabajadores, convirtiendo al SMI en el **salario más frecuente de la economía española**.
 
 <img width="963" class="img-responsive" alt="Evolución del salario mínimo interprofesional en España mostrando el incremento del 60,9% entre 2018 y 2025" src="https://github.com/user-attachments/assets/62453e9b-7c06-4b59-8ad0-eb9cd4f52b4b" />
 
@@ -84,7 +84,7 @@ Los sectores más afectados por el incremento de costes son:
 
 Impacto del nuevo SMI en los costes empresariales por sectores, siendo otros sectores y hostelería los más afectados
 
-Las **pequeñas y medianas empresas** son las que experimentan mayor impacto relativo, especialmente aquellas con entre 1 y 5 trabajadores, que han recurrido a ajustes como despidos, reducción de horas o incremento de la temporalidad.
+Las **pequeñas y medianas empresas** son las que experimentan mayor impacto relativo, especialmente aquellas con entre 1 y 5 trabajadores, que han recurrido a ajustes como despidos, reducción de horas o incremento de la temporalidad, una presión de costes que también condiciona la [evolución de los autónomos en España](https://emirodgar.es/analisis-autonomos).
 
 ## Impacto en la recaudación fiscal
 
@@ -151,4 +151,4 @@ El análisis del período 2018-2025 muestra que las subidas del SMI han tenido u
 
 ### Perspectivas futuras
 
-Las previsiones apuntan a que el SMI podría **superar los 1.200 euros mensuales en 2026**, manteniendo la tendencia hacia el objetivo del 60% del salario medio. La sostenibilidad de esta política dependerá de la capacidad de la economía española para mantener su crecimiento diferencial respecto a Europa y de la implementación de medidas complementarias que apoyen la competitividad empresarial.
+Las previsiones apuntan a que el SMI podría **superar los 1.200 euros mensuales en 2026**, manteniendo la tendencia hacia el objetivo del 60% del salario medio, un debate estrechamente ligado al de las [pensiones frente al salario mínimo interprofesional](https://emirodgar.es/pensiones-smi). La sostenibilidad de esta política dependerá de la capacidad de la economía española para mantener su crecimiento diferencial respecto a Europa y de la implementación de medidas complementarias que apoyen la competitividad empresarial.

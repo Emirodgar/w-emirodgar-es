@@ -51,7 +51,7 @@ El dispositivo estatal, gestionado especialmente por el **Ministerio para la Tra
 
 > *En 2025 el presupuesto del Estado para la campaña de incendios fue de 109,3 M€. El plan especial de actuaciones se dotó con 115,8 M€ (incluye prevención y extinción); cifra inferior a la de diez años atrás.
 
-- El gasto real es mayor porque a la cifra MITECO se añade la inversión de comunidades autónomas (Andalucía 257 M€, Galicia 200 M€, Castilla y León 127 M€, C. Valenciana 116 M€, etc.).
+- El gasto real es mayor porque a la cifra MITECO se añade la inversión de comunidades autónomas (Andalucía 257 M€, Galicia 200 M€, Castilla y León 127 M€, C. Valenciana 116 M€, etc.), un gasto autonómico que conviene contrastar con la [evolución de la deuda de las comunidades autónomas](https://emirodgar.es/deuda-autonomias).
 - El presupuesto de la UME para operaciones y sostenimiento propios fue de unos 42 M€ en 2024, mientras que el coste estructural de todo el dispositivo alcanza anualmente los 150 M€.
 
 
@@ -89,7 +89,7 @@ Para sintetizar:
 
 ## ¿Hay relación entre medios de prevención y superficie quemada?
 
-El siguiente gráfico permite observar que, aunque en general años con más medios disponibles tienden a tener menor superficie quemada, existen excepciones evidentes como los años 2022 y 2025, donde el área afectada fue muy elevada pese a disponer de un dispositivo similar o solo ligeramente inferior al de años previos. Esto revela la importancia de factores adicionales como condiciones meteorológicas y la virulencia de los grandes incendios. No obstante, con más y mejores medios, en condiciones normales, se quema menos superficio. Recomedamos leer también el [análisis sobre grandes incendios forestales en España](https://emirodgar.es/analisis-incendios-forestales).
+El siguiente gráfico permite observar que, aunque en general años con más medios disponibles tienden a tener menor superficie quemada, existen excepciones evidentes como los años 2022 y 2025, donde el área afectada fue muy elevada pese a disponer de un dispositivo similar o solo ligeramente inferior al de años previos. Esto revela la importancia de factores adicionales como condiciones meteorológicas y la virulencia de los grandes incendios, cada vez más condicionados por el [cambio climático en España](https://emirodgar.es/analisis-cambio-climatico). No obstante, con más y mejores medios, en condiciones normales, se quema menos superficio. Recomedamos leer también el [análisis sobre grandes incendios forestales en España](https://emirodgar.es/analisis-incendios-forestales).
 
 <img width="1033" class="img-responsive" alt="Relación entre hectáreas quemadas y medios de extinción disponibles en España (2015-2025)" src="https://github.com/user-attachments/assets/3c4990f7-80cb-4b5a-ab11-ce846eb17c66" />
 

@@ -13,7 +13,7 @@ permalink: analisis-universidades
 
 # El imparable avance de la universidad privada en España
 
-Durante los últimos 25 años, el panorama universitario español ha experimentado una metamorfosis silenciosa pero quizá demasiado profunda. Mientras la última universidad pública, la Politécnica de Cartagena, abría sus puertas en 1998, el tejido de la educación superior privada ha florecido sin apenas freno: 27 nuevas universidades privadas han surgido desde entonces, más de una por año de media, aproximándose en número a las públicas. Este fenómeno no es casual ni inocente. Responde a una confluencia de factores económicos, demográficos y políticos que están reconfigurando el derecho a la educación superior en nuestro país.
+Durante los últimos 25 años, el panorama universitario español ha experimentado una metamorfosis silenciosa pero quizá demasiado profunda, que analizamos en detalle en nuestro estudio sobre el [crecimiento de las universidades privadas en España](https://emirodgar.es/universidades-privadas-espana). Mientras la última universidad pública, la Politécnica de Cartagena, abría sus puertas en 1998, el tejido de la educación superior privada ha florecido sin apenas freno: 27 nuevas universidades privadas han surgido desde entonces, más de una por año de media, aproximándose en número a las públicas. Este fenómeno no es casual ni inocente. Responde a una confluencia de factores económicos, demográficos y políticos que están reconfigurando el derecho a la educación superior en nuestro país.
 
 ### La gran redistribución: cómo los estudiantes cambian de bando
 
@@ -77,7 +77,7 @@ Gráfico que muestra la evolución de los presupuestos de universidades pública
 | 2020 | 10.050 | -1,6% |
 | 2022 | 11.358 | 12,0% |
 
-El gasto total por estudiante en las instituciones de educación superior españolas alcanzó en 2021 los 15.654 euros, un 23,6% inferior a la media de la OCDE. Esta brecha no solo afecta a la calidad de la docencia, sino que limita dramáticamente la capacidad investigadora y de innovación del sistema público. Las transferencias de las comunidades autónomas, que representan el 65,7% de los ingresos de las universidades públicas, muestran enormes disparidades: mientras La Rioja destina 9.689€ por alumno, Madrid se queda en 5.362€.
+El gasto total por estudiante en las instituciones de educación superior españolas alcanzó en 2021 los 15.654 euros, un 23,6% inferior a la media de la OCDE. Esta brecha no solo afecta a la calidad de la docencia, sino que limita dramáticamente la capacidad investigadora y de innovación del sistema público. Las transferencias de las comunidades autónomas, que representan el 65,7% de los ingresos de las universidades públicas, muestran enormes disparidades: mientras La Rioja destina 9.689€ por alumno, Madrid se queda en 5.362€, unas diferencias que también se reflejan en la [evolución de la deuda de las comunidades autónomas](https://emirodgar.es/deuda-autonomias).
 
 ### El precio de estudiar: la geografía de la desigualdad
 

@@ -27,6 +27,8 @@ Estos datos reflejan una participación significativa en los comicios, con más 
 
 ## Resultados por Comunidad Autónoma
 
+Para entender mejor cada una de las corrientes recogidas en la columna de ideología, puedes consultar nuestro repaso de las [ideologías políticas en España](https://emirodgar.es/ideologias-politicas).
+
 | Comunidad Autónoma        | Partido más votado (2023) | Ideología principal                          |
 |---------------------------|----------------------------|----------------------------------------------|
 | Andalucía                | PP                         | Derecha liberal / conservadurismo            |
@@ -53,7 +55,7 @@ Estos datos reflejan una participación significativa en los comicios, con más 
 
 ## Notas adicionales:
 
-- PSC (Cataluña) es la federación del PSOE, por eso se considera socialdemócrata.
+- PSC (Cataluña) es la federación del PSOE, por eso se considera [socialdemócrata](https://emirodgar.es/glosario-politico).
 - UPN (Navarra) es un partido regionalista de centroderecha, históricamente vinculado al PP.
 
 

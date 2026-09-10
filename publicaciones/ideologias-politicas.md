@@ -14,7 +14,7 @@ permalink: ideologias-politicas
 
 # Qué ideologías políticas existen en España 
 
-Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral.
+Desde la transición democrática en 1978, España ha experimentado una amplia evolución en su mapa político. A lo largo de los años, han surgido, evolucionado y desaparecido distintas fuerzas políticas que representan diversas ideologías. En este artículo, exploramos las principales corrientes ideológicas que existen en el país, de forma sencilla y neutral. Si necesitas repasar antes algunos términos clave, échale un vistazo a nuestro [glosario político](https://emirodgar.es/glosario-politico); y si quieres conocer también el perfil formativo de sus líderes, puedes consultar nuestro análisis de los [currículums de los políticos españoles](https://emirodgar.es/cv-politicos).
 
 ## Breve repaso histórico
 
@@ -87,9 +87,11 @@ Además del eje izquierda-derecha, España cuenta con fuerzas nacionalistas o in
 PSOE es un partido socialdemócrata tradicional, mientras que Sumar representa una izquierda más alternativa, heredera de Podemos e IU.
 
 **¿Vox es extrema derecha?**  
-Vox se sitúa en la derecha populista, con posturas nacionalistas, conservadoras y euroescépticas. Algunos analistas lo consideran de extrema derecha aunque ellos nunca se han definido así.
+Vox se sitúa en la derecha populista, con posturas nacionalistas, conservadoras y euroescépticas. Algunos analistas lo consideran de extrema derecha aunque ellos nunca se han definido así. A nivel europeo forma parte de Patriotas por Europa, como puedes ver en nuestro repaso de los [partidos políticos europeos](https://emirodgar.es/partidos-politicos-europeos).
 
 **¿Existen partidos de centro hoy en día?**  
 Actualmente hay pocos partidos de centro con peso nacional. Ciudadanos perdió protagonismo tras las elecciones de 2019 y 2023.
+
+Si quieres comparar estas corrientes con el resto del continente, puedes leer nuestro artículo sobre [cómo se comparan las ideologías políticas en España con el resto de Europa](https://emirodgar.es/ideologias-politicas-europa).
 
 

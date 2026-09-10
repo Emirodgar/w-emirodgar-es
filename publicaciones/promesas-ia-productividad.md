@@ -31,7 +31,7 @@ Es decir, más tecnología, pero **menos crecimiento de la productividad**. Esto
 
 ## ¿Estamos ante la paradoja de Solow versión IA?
 
-En los años 80, el economista Robert Solow lanzó una frase que se ha convertido en un clásico: *“Los efectos de la revolución informática se ven en todas partes, excepto en las estadísticas de productividad”*. A esto se le conoce como la **paradoja de Solow**.
+En los años 80, el economista Robert Solow lanzó una frase que se ha convertido en un clásico: *“Los efectos de la revolución informática se ven en todas partes, excepto en las estadísticas de productividad”*. A esto se le conoce como la **paradoja de Solow**, un fenómeno que ya analizamos en detalle en [la paradoja de la inteligencia artificial y por qué la productividad aún no despega](https://emirodgar.es/la-paradoja-de-la-inteligencia-artificial-y-la-productividad).
 
 Hoy, con la inteligencia artificial, el patrón se repite. La usamos para redactar textos, programar, analizar datos o generar imágenes, pero **ese uso masivo no se refleja aún en los números macroeconómicos**.
 
@@ -55,7 +55,7 @@ Y hay un detalle clave: **el trabajo sigue existiendo**. Si la IA no cumple lo p
 
 ## ¿Por qué no despega la productividad con IA?
 
-Hay varias razones claras:
+Hay varias razones claras, en línea con lo que ya vivió el sector con la [burbuja tecnológica y el futuro del trabajo con IA](https://emirodgar.es/burbuja-tecnologica-y-el-futuro-del-trabajo-con-ia):
 
 - Muchos proyectos de IA generativa **no están dando retorno económico**.
 - Estudios recientes indican que hasta el **95 % de los proyectos empresariales con IA no generan un impacto real en resultados**.
@@ -67,7 +67,7 @@ La tecnología funciona bien en demos y casos muy concretos, pero **llevarla al 
 
 Otro punto incómodo del debate es que algunos despidos atribuidos a la IA esconden otra realidad más antigua: **la externalización**. Se despide en un país caro y se contrata en otro donde la mano de obra es más barata.
 
-Esto ya ocurrió con la industria y ahora se repite con trabajos de oficina. La IA sirve, en ocasiones, como relato justificativo, pero **el motor real sigue siendo el coste**.
+Esto ya ocurrió con la industria y ahora se repite con trabajos de oficina. La IA sirve, en ocasiones, como relato justificativo, pero **el motor real sigue siendo el coste**, algo que conviene tener presente ante el discurso de [una crisis económica impulsada por la inteligencia artificial](https://emirodgar.es/crisis-economica-ia).
 
 ## Entonces, ¿qué podemos esperar a corto plazo?
 

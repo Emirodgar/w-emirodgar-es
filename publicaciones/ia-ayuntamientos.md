@@ -13,7 +13,7 @@ permalink: ia-ayuntamientos
 
 # Ventajas de la integración de la inteligencia artificial en ayuntamientos
 
-La Inteligencia Artificial (IA) está transformando radicalmente la forma en que las administraciones públicas operan y se relacionan con la ciudadanía. En particular, los ayuntamientos, como entidades más cercanas a los ciudadanos, tienen una oportunidad única para aprovechar estas tecnologías y mejorar significativamente tanto su funcionamiento interno como los servicios que ofrecen.
+La [Inteligencia Artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial) (IA) está transformando radicalmente la forma en que las administraciones públicas operan y se relacionan con la ciudadanía. En particular, los ayuntamientos, como entidades más cercanas a los ciudadanos, tienen una oportunidad única para aprovechar estas tecnologías y mejorar significativamente tanto su funcionamiento interno como los servicios que ofrecen.
 
 Este informe analiza en profundidad las ventajas que supone la integración de la IA en los ayuntamientos, basándose en investigaciones de diversas fuentes especializadas y casos de éxito reales. El objetivo es proporcionar una visión completa de cómo la IA puede convertirse en una herramienta fundamental para la modernización de la administración local, mejorando la eficiencia, la transparencia y la calidad de los servicios públicos.
 
@@ -121,7 +121,7 @@ La IA revoluciona la planificación y gestión urbana mediante:
 - Gestión inteligente de residuos y recursos
 - Planificación de infraestructuras basada en necesidades reales
 
-Las herramientas de analítica de datos impulsadas por algoritmos de IA mejoran la toma de decisiones y la planificación a largo plazo, lo que se traduce en un uso más eficiente del dinero de los contribuyentes.
+Las herramientas de analítica de datos impulsadas por algoritmos de IA mejoran la toma de decisiones y la planificación a largo plazo, lo que se traduce en un uso más eficiente del dinero de los contribuyentes. Es la misma lógica que subyace a algunas de las [oportunidades de ciudades inteligentes que podría explorar España](https://emirodgar.es/proyectos-ia-tecnologia).
 
 ## 4. Mejora en la seguridad y gestión de emergencias
 
@@ -236,7 +236,7 @@ Esta modernización no solo mejora la eficiencia, sino que también aumenta la s
 
 ### 8.2. Ejemplos en España
 
-Aunque la implementación de IA en ayuntamientos españoles está en fase de desarrollo, ya existen iniciativas destacables:
+Aunque la implementación de IA en ayuntamientos españoles está en fase de desarrollo, ya existen iniciativas destacables, que conviene mirar junto a lo que está ocurriendo a nivel estatal en [la administración pública española](https://emirodgar.es/ia-en-la-administracion-publica):
 
 - Chatbots de atención ciudadana en varias capitales de provincia
 - Sistemas de gestión inteligente del tráfico en grandes ciudades

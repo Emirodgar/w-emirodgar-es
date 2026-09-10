@@ -54,11 +54,11 @@ En su discurso de investidura de 2016 destacaron palabras como “gobierno”, �
 
 ### Presencia en entornos digitales
 
-Sánchez ha diseñado la estrategia digital más sofisticada de los tres presidentes. Su equipo gestiona Twitter, Instagram, Facebook y YouTube, combinando contenido político, emotivo y de entretenimiento. En 2022 incorporó especialistas en marketing digital para potenciar la comunicación desde La Moncloa.
+Sánchez ha diseñado la estrategia digital más sofisticada de los tres presidentes. Su equipo gestiona Twitter, Instagram, Facebook y YouTube, combinando contenido político, emotivo y de entretenimiento. En 2022 incorporó especialistas en marketing digital para potenciar la comunicación desde La Moncloa, una apuesta que analizamos con más detalle en [la maquinaria mediática del PSOE bajo Pedro Sánchez](https://emirodgar.es/la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez).
 
 ### Cobertura mediática y gestión del sentimiento
 
-Practica un “agenda setting inverso”: convierte los temas incómodos en parte de su narrativa. Durante las denuncias contra su esposa realizó una pausa pública de cinco días que transformó en un relato de victimización controlada. Sus comparecencias muestran signos de incomodidad, pero mantiene la iniciativa narrativa.
+Practica un “agenda setting inverso”: convierte los temas incómodos en parte de su narrativa, el mismo patrón de gestión que se observó durante el [análisis del gran apagón eléctrico de España](https://emirodgar.es/analisis-apagon-electrico). Durante las denuncias contra su esposa realizó una pausa pública de cinco días que transformó en un relato de victimización controlada. Sus comparecencias muestran signos de incomodidad, pero mantiene la iniciativa narrativa.
 
 ### Lucha contra la desinformación
 
@@ -86,4 +86,4 @@ El paso de la era analógica a la digital ha transformado el voto. Alrededor de 
 2. **Rajoy** simboliza la transición: adoptó las redes con cautela, utilizándolas más como altavoz institucional que como diálogo directo, especialmente en momentos de crisis.
 3. **Sánchez** encarna la plena integración digital: emplea una estrategia emocional, multicanal y centrada en controlar el marco narrativo, situando la desinformación como eje discursivo.
 
-La presencia digital, de ser opcional, se ha convertido en un requisito estratégico fundamental. Hoy, dominar las redes sociales significa no solo amplificar mensajes, sino modelar la interpretación pública de los hechos y gestionar las crisis en tiempo real.
+La presencia digital, de ser opcional, se ha convertido en un requisito estratégico fundamental. Hoy, dominar las redes sociales significa no solo amplificar mensajes, sino modelar la interpretación pública de los hechos y gestionar las crisis en tiempo real, una tarea en la que los [asesores políticos](https://emirodgar.es/asesores-politicos) juegan un papel cada vez más determinante.

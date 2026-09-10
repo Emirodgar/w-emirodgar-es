@@ -14,7 +14,7 @@ permalink: partidos-politicos-europeos
 
 # Partidos a nivel europeo y su relación con los partidos políticos españoles
 
-En el Parlamento Europeo, los eurodiputados se agrupan por [afinidad ideológica](https://emirodgar.es/ideologias-politicas) en grandes grupos políticos europeos. Los partidos españoles con representación en Europa se integran en estas familias políticas transnacionales.
+En el Parlamento Europeo, los eurodiputados se agrupan por [afinidad ideológica](https://emirodgar.es/ideologias-politicas) en grandes grupos políticos europeos. Los partidos españoles con representación en Europa se integran en estas familias políticas transnacionales. Puedes ver cómo se comparan estas corrientes con las españolas en nuestro análisis de las [ideologías políticas europeas](https://emirodgar.es/ideologias-politicas-europa).
 
 ### Grupos políticos europeos y partidos españoles asociados
 
@@ -48,3 +48,5 @@ En el Parlamento Europeo, los eurodiputados se agrupan por [afinidad ideológica
 - **Se acabó la fiesta**: No inscritos
 
 No hay representación española en los grupos **Identidad y Democracia (ID)** ni **Europa de las Naciones Soberanas (ESN)**.
+
+Para repasar el significado de cada corriente ideológica mencionada en este artículo, puedes consultar nuestro [glosario político](https://emirodgar.es/glosario-politico).

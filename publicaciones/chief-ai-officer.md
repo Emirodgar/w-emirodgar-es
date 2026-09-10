@@ -34,7 +34,7 @@ Las responsabilidades del CAIO abarcan múltiples dimensiones críticas para la 
 
 **Garantía de cumplimiento ético y regulatorio**: Asegurar que las soluciones de IA cumplan con normativas vigentes y se implementen con prácticas éticas, incluyendo supervisión del uso de datos, mitigación de sesgos algorítmicos y transparencia.
 
-**Capacitación y desarrollo organizacional**: Desarrollar programas de capacitación para educar a los empleados sobre el uso y aplicaciones de la IA, fomentando una comprensión general en toda la organización.
+**Capacitación y desarrollo organizacional**: Desarrollar programas de capacitación para educar a los empleados sobre el uso y aplicaciones de la IA, fomentando una comprensión general en toda la organización. Este tipo de iniciativas recuerda a lo que ya hacen gigantes tecnológicos como Meta o Microsoft, donde [usar IA en el trabajo ha dejado de ser opcional](https://emirodgar.es/la-ia-ya-no-es-opcional-en-las-grandes-tecnologicas).
 
 **Mejora de la toma de decisiones**: Implementar sistemas de IA que proporcionen insights en tiempo real para ayudar a los líderes empresariales a tomar decisiones más informadas y estratégicas.
 
@@ -48,7 +48,7 @@ La figura del CAIO ha evolucionado particularmente desde **2019**, cuando empres
 
 ### **Aceleración con la IA Generativa**
 
-El **lanzamiento de ChatGPT** y el posterior crecimiento explosivo de la IA generativa han dejado claro que muchas organizaciones pueden beneficiarse significativamente de estas herramientas. Este momento de inflexión ha acelerado la creación del rol CAIO en empresas de todas las industrias.
+El **lanzamiento de ChatGPT** y el posterior crecimiento explosivo de la IA generativa han dejado claro que muchas organizaciones pueden beneficiarse significativamente de estas herramientas. Este momento de inflexión ha acelerado la creación del rol CAIO en empresas de todas las industrias, muchas de ellas avanzando hacia modelos de [empresas IA first](https://emirodgar.es/empresas-ia-first) donde la IA deja de ser una herramienta puntual para convertirse en el núcleo de la estrategia.
 
 Según **Gartner**, para **2026**, más del **30% de las grandes empresas** habrán creado un rol ejecutivo dedicado exclusivamente a la gobernanza y estrategia de IA, debido al riesgo reputacional, ético y financiero que representa su implementación sin liderazgo transversal.
 
@@ -192,6 +192,10 @@ Las **GAFAM** (Google, Apple, Facebook/Meta, Amazon, Microsoft) han sido pionera
 **CDO**: Se centra en la gestión y governance de datos organizacionales.
 
 **CAIO**: Va más allá de la gestión de datos para liderar el **rediseño organizacional en torno a la IA**, integrando actividades de marketing, ventas, operaciones y tecnología.
+
+### **CAIO vs. CGO (Chief Growth Officer)**
+
+Otro rol ejecutivo con el que conviene no confundir al CAIO es el [Chief Growth Officer (CGO)](https://emirodgar.es/chief-growth-officer). Mientras el CGO centra su misión en acelerar el crecimiento del negocio de forma transversal, el CAIO se especializa en que la inteligencia artificial se implemente de forma estratégica, segura y ética en toda la organización.
 
 ## **Tendencias y futuro del rol CAIO**
 

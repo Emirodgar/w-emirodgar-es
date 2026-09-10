@@ -13,7 +13,7 @@ permalink: europa-ia
 
 # Europa y su carrera por liderar la inteligencia artificial
 
-Quizá a raíz del **manifiesto de Mario Draghi**, la [Unión Europea](https://ec.europa.eu/) ha lanzado un ambicioso plan para reforzar su papel en el desarrollo de la **inteligencia artificial (IA)**. La iniciativa se llama *AI Continent Action Plan* y suena a declaración de intenciones en mayúsculas.
+Quizá a raíz del **manifiesto de Mario Draghi**, la [Unión Europea](https://ec.europa.eu/) ha lanzado un ambicioso plan para reforzar su papel en el desarrollo de la **inteligencia artificial (IA)**. La iniciativa se llama *AI Continent Action Plan* y suena a declaración de intenciones en mayúsculas. En España, este mismo impulso se ha traducido, con resultados discutibles, en proyectos propios como [ALIA](https://emirodgar.es/alia-promesa-fallida-ia-publica-espana).
 
 ## Una estrategia con pilares claros
 
@@ -31,7 +31,7 @@ Además, se han abierto varias **consultas públicas** para que empresas, ciudad
 
 El famoso **AI Act** ya está en marcha desde agosto de 2024. Se espera que aumente la confianza ciudadana y dé seguridad jurídica a quienes desarrollan y usan estas tecnologías. Pero también ha sido criticado por su complejidad. La Comisión Europea parece haber tomado nota y promete **simplificar el marco regulador**, sobre todo en lo que respecta al Reglamento General de Protección de Datos (GDPR).
 
-Personalmente, tengo mis dudas. No es la primera vez que se promete simplificar y luego llegan más trámites. Aun así, me parece una buena noticia que, por una vez, no se hable solo de multas. Porque si sólo regulamos y no construimos, podemos acabar con pocas opciones sobre la mesa. **Imagina una Europa sin WhatsApp.** Parece exagerado, pero ya hemos vivido bloqueos que rozan ese escenario.
+Personalmente, tengo mis dudas, sobre todo si comparamos este enfoque regulatorio con el más ágil y menos garantista que está impulsando Estados Unidos con su [Presidential AI Challenge](https://emirodgar.es/analisis-ia-eeuu-europa). No es la primera vez que se promete simplificar y luego llegan más trámites. Aun así, me parece una buena noticia que, por una vez, no se hable solo de multas. Porque si sólo regulamos y no construimos, podemos acabar con pocas opciones sobre la mesa. **Imagina una Europa sin WhatsApp.** Parece exagerado, pero ya hemos vivido bloqueos que rozan ese escenario.
 
 ## ¿Por qué es importante esto?
 
@@ -41,7 +41,7 @@ Desde mi experiencia como [consultor SEO](https://emirodgar.com/consultor-seo), 
 
 ## Una oportunidad que no se puede dejar pasar
 
-El *AI Continent Action Plan* no es sólo una hoja de ruta para investigadores o grandes corporaciones. Es una declaración de intenciones sobre el tipo de Europa que queremos construir. Una Europa que apuesta por el conocimiento, la industria, el talento y la innovación. Ojalá esta vez sí se convierta en realidad.
+El *AI Continent Action Plan* no es sólo una hoja de ruta para investigadores o grandes corporaciones. Es una declaración de intenciones sobre el tipo de Europa que queremos construir. Una Europa que apuesta por el conocimiento, la industria, el talento y la innovación, en la línea de lo que defiende [José María Lassalle](https://emirodgar.es/jose-maria-lassalle) cuando insiste en que Europa debe definir su propio modelo de IA en lugar de imitar a Estados Unidos o China. Ojalá esta vez sí se convierta en realidad.
 
 ¿Y tú qué opinas? ¿Ves a Europa liderando el desarrollo de la inteligencia artificial o llegamos ya tarde?
 

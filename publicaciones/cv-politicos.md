@@ -82,7 +82,7 @@ Un enfoque interesante para analizar esta información es comparar la evolución
 ## 3. Patrones por partido (2025)
 
 Otro análisis interesante es entender si existe una preferencia de formación académica según la [ideología política](https://emirodgar.es/ideologias-politicas).
-En este caso se ha desglosado por [partido político](https://emirodgar.es/glosario-politico) el porcentaje de sus líderes que tienen doctorado (que es donde hemos visto que hay una mayor diferencia y, por ende, oportunidad de análisis) y el tipo de titulación.
+En este caso se ha desglosado por [partido político](https://emirodgar.es/glosario-politico) el porcentaje de sus líderes que tienen doctorado (que es donde hemos visto que hay una mayor diferencia y, por ende, oportunidad de análisis) y el tipo de titulación. Recordemos que estos partidos se integran, a su vez, en las grandes [familias políticas europeas](https://emirodgar.es/partidos-politicos-europeos), lo que también condiciona su discurso.
 
 <img width="985" height="685" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/c987efc6-0774-4812-b130-eb1bec137674" />
 
@@ -108,7 +108,7 @@ Dejamos también la tabla comparativa por si se quieren reutilizar los datos del
 
 - **Tesis Sánchez (2018):** acusaciones de plagio sin condena; tesis publicada para consulta pública.
 - **“Másteres” rebajados (2024-2025):** Moncloa modificó currículos de Yolanda Díaz y otros altos cargos, sustituyendo másteres por “cursos superiores”.
-- **Dimisión Noelia Núñez (PP, 2025):** infló tres carreras no terminadas; reabrió el debate sobre verificación curricular y terminó dimitiendo.
+- **Dimisión Noelia Núñez (PP, 2025):** infló tres carreras no terminadas; reabrió el debate sobre verificación curricular y terminó dimitiendo, un debate de transparencia que también alcanza al entorno de [asesores y personal de confianza](https://emirodgar.es/asesores-politicos) de los Gobiernos.
 
 
 ## 6. Interpretación y perspectivas

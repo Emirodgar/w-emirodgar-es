@@ -42,7 +42,7 @@ Otra particularidad es que la formación presentó candidatos sin experiencia po
 
 La campaña pasó "con poco ruido y sin llenar convocatorias", según reportes de prensa. Su estrategia se centró en alcanzar 15.000 votos en Zaragoza para tener opciones de escaño, aunque las encuestas les situaban lejos de ese objetivo. Y ya sabemos que el [CIS tiene bastante desviación](https://emirodgar.es/cis). 
 
-Frente a Vox, el partido que duplicó su representación hasta los 14 escaños con un 15,97% de los votos y que podemos considerar como ganador de estas elecciones, SALF quedó relegado a un papel marginal. Sin embargo, superó a formaciones en declive como Podemos (que obtuvo solo 6.000 votos, aproximadamente 1%) y el PAR (8.000 votos). Quizá no consiguió escaño, pero su papel ha sido clave y ha cambiado el enfoque en Aragón, por lo que no deberíamos catalogarlo como fracaso. Aprender de cómo ha utilizado la tecnología para impactar en un porcentaje relevante de la población (principalmente los descontentos) debería ser relevante para el resto de partidos.
+Frente a Vox, el partido que duplicó su representación hasta los 14 escaños con un 15,97% de los votos e integrado en el grupo europeo [Patriotas por Europa](https://emirodgar.es/partidos-politicos-europeos), y que podemos considerar como ganador de estas elecciones, SALF quedó relegado a un papel marginal. Sin embargo, superó a formaciones en declive como Podemos (que obtuvo solo 6.000 votos, aproximadamente 1%) y el PAR (8.000 votos). Quizá no consiguió escaño, pero su papel ha sido clave y ha cambiado el enfoque en Aragón, por lo que no deberíamos catalogarlo como fracaso. Aprender de cómo ha utilizado la tecnología para impactar en un porcentaje relevante de la población (principalmente los descontentos) debería ser relevante para el resto de partidos.
 
 
 | Partido | % Votos | Votos aproximados | Escaños | Observaciones |
@@ -59,7 +59,7 @@ Los resultados de SALF ene stas votaciones se puede explicar por varios factores
 
 1. El contexto autonómico difiere del europeo donde Alvise tuvo éxito, la barrera del 3% por provincia penalizó su voto disperso, y también la competencia directa con Vox por el mismo electorado.
 2. El sistema electoral aragonés dejó "miles de votos sin representación", perjudicando especialmente a partidos pequeños.
-3. Esta tercera causa es más subjetiva, pero muchos analistas inciden en que la candidatura pudo verse perjudicada al contar con perfiles alejados de la política institucional y mensajes populistas que no conectaron suficientemente con el electorado aragonés.
+3. Esta tercera causa es más subjetiva, pero muchos analistas inciden en que la candidatura pudo verse perjudicada al contar con perfiles alejados de la política institucional y [mensajes populistas](https://emirodgar.es/glosario-politico) que no conectaron suficientemente con el electorado aragonés.
 
 Alvise tiene puesto el foco ahora en Castilla y León, por lo que este análisis sobre Aragón será clave para entender posibles movimientos y resultados en las siguientes elecciones autonómicas.
 De momento, cuenta con Javier Teira, que ya se presentó con Vox en Salamanca y ahora se ha integrado en Se Acabó La Fiesta.

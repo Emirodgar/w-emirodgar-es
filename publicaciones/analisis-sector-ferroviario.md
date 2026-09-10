@@ -52,7 +52,7 @@ Evolución de la inversión ferroviaria por gobierno: Zapatero (2004-2011), Rajo
 
 ### Contexto político y económico
 
-El Gobierno de Mariano Rajoy llegó a La Moncloa en noviembre de 2011 heredando una economía en profunda crisis. La prioridad declarada era la reducción del déficit público, lo que resultó en un reordenamiento radical de prioridades presupuestarias. En términos de infraestructuras, esta filosofía se tradujo en una contracción severa de inversión.
+El Gobierno de Mariano Rajoy llegó a La Moncloa en noviembre de 2011 heredando una economía en profunda crisis. La prioridad declarada era la reducción del déficit público, lo que resultó en un reordenamiento radical de prioridades presupuestarias, unas políticas de austeridad que también dejaron huella en la [evolución de los funcionarios en España](https://emirodgar.es/analisis-funcionarios) durante esos mismos años. En términos de infraestructuras, esta filosofía se tradujo en una contracción severa de inversión.
 
 ### Reducción drástica de inversión ferroviaria
 
@@ -90,7 +90,7 @@ Tendencia de accidentes y fallecidos por período gubernamental: resaltando los 
 
 ### Contexto político y económico
 
-El gobierno de Pedro Sánchez, primero en minoría con apoyo de Ciudadanos (2018-2020) y luego en coalición con Unidas Podemos (2020-2024), priorizó las inversiones públicas en infraestructuras como instrumento de reactivación económica post-crisis. La disponibilidad de fondos europeos del Mecanismo de Recuperación y Resiliencia (MRR) tras la pandemia de COVID-19 proporcionó financiamiento adicional sin precedentes.
+El gobierno de Pedro Sánchez, primero en minoría con apoyo de Ciudadanos (2018-2020) y luego en coalición con Unidas Podemos (2020-2024), priorizó las inversiones públicas en infraestructuras como instrumento de reactivación económica post-crisis, en un mandato cuya [comunicación digital hemos analizado también](https://emirodgar.es/analisis-presidentes-espana) desde otra perspectiva. La disponibilidad de fondos europeos del Mecanismo de Recuperación y Resiliencia (MRR) tras la pandemia de COVID-19 proporcionó financiamiento adicional sin precedentes.
 
 ### Recuperación histórica de inversión ferroviaria
 

@@ -14,7 +14,7 @@ permalink: herramientas-ia-empresas
 
 # Cómo generar herramientas de Inteligencia Artificial para empresas
 
-La inteligencia artificial ya no es una tecnología del futuro — es una **realidad presente** que está transformando la forma en que las empresas operan, compiten y crecen. Si has estado pensando en desarrollar herramientas de IA para empresas, este es el momento perfecto para dar el salto.
+La inteligencia artificial ya no es una tecnología del futuro — es una **realidad presente** que está transformando la forma en que las empresas operan, compiten y crecen. Si has estado pensando en desarrollar herramientas de IA para empresas, este es el momento perfecto para dar el salto, sobre todo ante el auge de las [empresas IA first](https://emirodgar.es/empresas-ia-first).
 
 ## ¿Por qué ahora es el momento ideal?
 
@@ -30,7 +30,7 @@ Aquí está una distinción crucial que muchos desarrolladores pasan por alto: e
 ### Paso 1: Domina los Fundamentos Técnicos
 
 Comprende los Modelos de IA Disponibles
-No todos los modelos de IA son iguales. Cada uno tiene su propósito específico:
+No todos los modelos de IA son iguales. Cada uno tiene su propósito específico (si necesitas repasar las diferencias entre ellos, mi [guía de conceptos básicos de la inteligencia artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial) es un buen punto de partida):
 
  - **GPT-4o-mini**: Económico ($0.15 a $0.60 por millón de tokens) y rápido para tareas simples como clasificar emails o etiquetar consultas de clientes
  - **Gemini**: Excelente para procesar documentos extensos, como analizar contratos largos sin perder información
@@ -50,7 +50,7 @@ Puedes comenzar a trabajar de manera gratuita y, a medida que gestiones mayor vo
 
 ### Paso 3: Identifica oportunidades de negocio
 
-Busca tareas que las empresas odian hacer. Las mejores oportunidades están en procesos repetitivos y que consumen tiempo:
+Busca tareas que las empresas odian hacer -identificar estas oportunidades es precisamente parte del trabajo de un [Chief Growth Officer](https://emirodgar.es/chief-growth-officer) dentro de una organización-. Las mejores oportunidades están en procesos repetitivos y que consumen tiempo:
 
  - Entrada de datos manual
  - Responder las mismas preguntas de soporte

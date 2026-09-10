@@ -13,7 +13,7 @@ permalink: crear-contenido-ia
 
 # Cómo generar contenidos con IA sin que parezcan creados por IA (y que realmente tengan valor)
 
-La inteligencia artificial ha revolucionado la creación de contenidos, pero el reto actual es **evitar que el resultado sea genérico, predecible o detectado como “contenido IA”**. Para lograrlo, es fundamental combinar el potencial de la IA con la creatividad y el criterio humano, asegurando que cada pieza sea útil, relevante y atractiva tanto para personas como para algoritmos de búsqueda.
+La inteligencia artificial ha revolucionado la creación de contenidos, pero el reto actual es **evitar que el resultado sea genérico, predecible o detectado como “contenido IA”**, justo cuando [la IA ya genera más de la mitad de los contenidos digitales](https://emirodgar.es/la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial). Para lograrlo, es fundamental combinar el potencial de la IA con la creatividad y el criterio humano, asegurando que cada pieza sea útil, relevante y atractiva tanto para personas como para algoritmos de búsqueda. Si además quieres ir más allá y construir tus propias soluciones, te dejo también cómo [generar herramientas de IA para tu empresa](https://emirodgar.es/herramientas-ia-empresas).
 
 ## 1. Estrategia y enfoque: la visión humana sigue siendo clave
 
@@ -28,7 +28,7 @@ La inteligencia artificial ha revolucionado la creación de contenidos, pero el 
 ## 3. Redacción: mezcla IA y voz humana
 
 - **No delegues todo el texto a la IA**: Alterna entre secciones generadas por IA y fragmentos escritos o editados manualmente. Añade anécdotas, opiniones, metáforas y ejemplos personales: esto humaniza el texto y lo hace menos predecible.
-- **Evita patrones repetitivos y frases genéricas**. Reescribe, recorta y reestructura para lograr un tono natural, variado y conversacional.
+- **Evita patrones repetitivos y frases genéricas**. Reescribe, recorta y reestructura para lograr un tono natural, variado y conversacional. Entender por qué ocurren estos patrones es más fácil si conoces los [conceptos básicos de la inteligencia artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial), como el funcionamiento de los modelos de lenguaje.
 - **Incluye historias o casos reales**: Los contenidos que combinan información con relatos personales o ejemplos concretos generan mayor engagement y autenticidad.
 
 ## 4. Valor real: información útil y profundidad

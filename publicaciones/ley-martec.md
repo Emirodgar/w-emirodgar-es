@@ -13,7 +13,7 @@ permalink: ley-martec
 
 # La ley de Martec
 
-La Ley de Martec, formulada por Scott Brinker en 2013, sostiene que la tecnología avanza de manera exponencial, mientras que las organizaciones y las personas lo hacen de forma logarítmica, es decir, mucho más lentamente. Esta brecha creciente entre la velocidad de innovación tecnológica y la capacidad de adaptación humana y organizacional no es solo una cuestión de falta de recursos o conocimientos, sino de límites estructurales y culturales en la asimilación del cambio.
+La Ley de Martec, formulada por Scott Brinker en 2013, sostiene que la tecnología avanza de manera exponencial, mientras que las organizaciones y las personas lo hacen de forma logarítmica, es decir, mucho más lentamente. Esta brecha creciente entre la velocidad de innovación tecnológica y la capacidad de adaptación humana y organizacional no es solo una cuestión de falta de recursos o conocimientos, sino de límites estructurales y culturales en la asimilación del cambio. Es la misma dinámica que explica por qué, pese a la rápida adopción de la IA, [la productividad todavía no despega](https://emirodgar.es/la-paradoja-de-la-inteligencia-artificial-y-la-productividad): la tecnología avanza más rápido que la capacidad de las organizaciones para rediseñar sus procesos.
 
 En la práctica, esto significa que, aunque las nuevas tecnologías como la inteligencia artificial (IA) evolucionan a gran velocidad, la integración efectiva en empresas, instituciones y la sociedad depende de procesos de adaptación mucho más lentos, relacionados con la formación, la ética, la regulación y la confianza.
 
@@ -23,7 +23,7 @@ En la práctica, esto significa que, aunque las nuevas tecnologías como la inte
 
 Europa se encuentra en un momento clave en el desarrollo y regulación de la inteligencia artificial. La brecha que describe la Ley de Martec se hace especialmente visible en la Unión Europea, donde los avances tecnológicos globales presionan a las instituciones para responder con marcos regulatorios sólidos y estrategias de soberanía tecnológica.
 
-La reciente aprobación de la Ley de IA de la UE representa el primer marco jurídico integral sobre inteligencia artificial en el mundo. Esta legislación busca equilibrar la innovación con la protección de los derechos fundamentales, estableciendo normas basadas en el riesgo y promoviendo una IA confiable y ética. Sin embargo, este proceso regulatorio, aunque necesario, puede ralentizar la adopción y el despliegue de tecnologías emergentes frente a otras regiones más flexibles o menos reguladas, acentuando la brecha de la Ley de Martec.
+La reciente aprobación de la Ley de IA de la UE representa el primer marco jurídico integral sobre inteligencia artificial en el mundo, dentro de una estrategia más amplia por la que [Europa compite por liderar la inteligencia artificial](https://emirodgar.es/europa-ia) a nivel global. Esta legislación busca equilibrar la innovación con la protección de los derechos fundamentales, estableciendo normas basadas en el riesgo y promoviendo una IA confiable y ética. Sin embargo, este proceso regulatorio, aunque necesario, puede ralentizar la adopción y el despliegue de tecnologías emergentes frente a otras regiones más flexibles o menos reguladas, acentuando la brecha de la Ley de Martec.
 
 ![image](https://github.com/user-attachments/assets/325dc546-7edc-4b71-b083-eeb60e5b77c4){:class="img-responsive"}
 *Brecha entre avance tecnológico y adaptación organizacional según la Ley de Martec*
@@ -51,5 +51,5 @@ La respuesta europea y española ha sido priorizar la confianza, la transparenci
 - **La clave está en la gestión estratégica del cambio**: Es fundamental invertir en formación continua, fomentar la agilidad organizacional y mantener un diálogo abierto entre tecnología, ética y sociedad.
 - **El futuro dependerá de la capacidad de cerrar la brecha**: La evolución de la IA en Europa y España estará marcada por el éxito en reducir la distancia entre el potencial tecnológico y la preparación institucional y social para aprovecharlo de forma segura y responsable.
 
-La Ley de Martec no es una condena, sino una advertencia: la verdadera innovación no solo depende de la tecnología, sino de nuestra capacidad colectiva para adaptarnos y gobernarla.
+La Ley de Martec no es una condena, sino una advertencia: la verdadera innovación no solo depende de la tecnología, sino de nuestra capacidad colectiva para adaptarnos y gobernarla. Aceptar esta brecha con honestidad, en lugar de negarla, es en el fondo un ejercicio de [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial) organizativo.
 

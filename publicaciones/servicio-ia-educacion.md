@@ -30,9 +30,9 @@ Pero también hay una parte negativa: **hay menos vocabulario en los ensayos**. 
 
 Aunque el estudio no puede confirmar con total certeza que los estudiantes estén usando ChatGPT u otros modelos de IA, los datos apuntan claramente a que sí. Y eso plantea preguntas interesantes: si parte del valor de un curso online era el esfuerzo personal de elaborar respuestas, ¿qué pasa cuando ese esfuerzo se externaliza?
 
-Los autores del estudio advierten sobre un fenómeno preocupante: los estudiantes están empezando a delegar tareas de aprendizaje en herramientas como ChatGPT, lo que reduce el esfuerzo metacognitivo, es decir, el esfuerzo mental que implica pensar sobre lo que se aprende. Y eso, en el fondo, **va en contra del propósito educativo**.
+Los autores del estudio advierten sobre un fenómeno preocupante: los estudiantes están empezando a delegar tareas de aprendizaje en herramientas como ChatGPT, lo que reduce el esfuerzo metacognitivo, es decir, el esfuerzo mental que implica pensar sobre lo que se aprende. Y eso, en el fondo, **va en contra del propósito educativo**. Una ambigüedad parecida a la que ya vimos en los [peligros de la inteligencia artificial](https://emirodgar.es/peligros-ia) entre la mejora legítima del rendimiento y una forma sutil de fraude académico. Este tipo de atajos también condiciona qué [puestos de trabajo podrían verse afectados por la IA](https://emirodgar.es/trabajos-afectados-ia) en el futuro, si no se desarrollan las competencias necesarias durante la formación.
 
 ## Una oportunidad para educar (mejor)
 
-Pero no todo es negativo. Este cambio también puede ser una oportunidad para replantear cómo diseñamos los cursos, las evaluaciones y las herramientas de apoyo. En lugar de prohibir el uso de inteligencia artificial, quizá deberíamos aprender a integrarla de forma responsable, como una herramienta más.
+Pero no todo es negativo. Este cambio también puede ser una oportunidad para replantear cómo diseñamos los cursos, las evaluaciones y las herramientas de apoyo. La transparencia sobre su uso es clave, como demostró el escándalo de la [hipnocracia](https://emirodgar.es/hipnocracia), cuando un filósofo generado por IA logró colar sus ideas en el mundo académico. En lugar de prohibir el uso de inteligencia artificial, quizá deberíamos aprender a integrarla de forma responsable, como una herramienta más.
 

@@ -15,7 +15,7 @@ permalink: analisis-vivienda-espana
 
 ## ¿Por qué estamos otra vez hablando de un problema de vivienda?
 
-Si miras los titulares de los últimos años, parece que ya lo hemos vivido todo: **burbuja inmobiliaria**, crisis, desplome de precios… y ahora, otra vez, alquileres imposibles, hipotecas más caras y jóvenes que no se pueden ir de casa de sus padres.
+Si miras los titulares de los últimos años, parece que ya lo hemos vivido todo: **[burbuja inmobiliaria](https://emirodgar.es/analisis-burbuja-inmobiliaria)**, crisis, desplome de precios… y ahora, otra vez, alquileres imposibles, hipotecas más caras y jóvenes que no se pueden ir de casa de sus padres.
 
 Pero la situación actual no es una simple repetición de 2008. **El mercado de la vivienda en España ha pasado de un exceso brutal de construcción a una escasez clara de oferta donde más gente quiere vivir**, sobre todo en grandes ciudades y zonas costeras.
 
@@ -77,7 +77,7 @@ En 2025, los datos son claros:
 - Portales inmobiliarios estiman valores alrededor de **2.400 €/m²**, muy similares a los de 2005… **pero con un poder adquisitivo menor**.  
 - El Índice de Precios de Vivienda ha registrado subidas interanuales de doble dígito en algunos tramos, algo que no se veía desde los años de la burbuja.
 
-En términos nominales, podríamos decir que “hemos vuelto” a niveles de hace 20 años. Pero **en términos reales (salarios vs precios), estamos peor**: la vivienda pesa más en el presupuesto de los hogares y el ahorro previo necesario para comprar es más alto.
+En términos nominales, podríamos decir que “hemos vuelto” a niveles de hace 20 años. Pero **en términos reales, con la [evolución del poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo) por delante, estamos peor**: la vivienda pesa más en el presupuesto de los hogares y el ahorro previo necesario para comprar es más alto.
 
 ---
 
@@ -93,7 +93,7 @@ Algunos ejemplos:
 - **Canarias** y **Madrid** también han registrado crecimientos muy por encima de la media.  
 - Zonas del interior como **Castilla-La Mancha** o **Extremadura** siguen con precios por debajo de los **1.000 €/m²** en muchos municipios.
 
-Este contraste genera una realidad difícil de encajar: **el problema de acceso a la vivienda es muy grave en las grandes ciudades y áreas turísticas**, mientras que en parte de España el problema es el contrario: **viviendas vacías, poca demanda y riesgo de despoblación**.
+Este contraste genera una realidad difícil de encajar: **el problema de acceso a la vivienda es muy grave en las grandes ciudades y áreas turísticas**, mientras que en parte de España el problema es el contrario: **viviendas vacías, poca demanda y riesgo de [despoblación](https://emirodgar.es/evolucion-poblacion)**.
 
 ---
 
@@ -290,6 +290,8 @@ El actual gobierno ha optado por una política más **intervencionista**:
   - Calificación indefinida de VPO durante un mínimo de 30 años.  
 - Anuncio de un **PERTE de Viviendas** y una nueva empresa pública para impulsar la construcción de vivienda pública.  
 - Objetivo declarado de **184.000 viviendas públicas hasta 2036**.  
+
+Junto a estas medidas conviven también iniciativas más simbólicas, como la creación de nuevos observatorios de vivienda, un fenómeno [que analizamos en detalle en este artículo](https://emirodgar.es/analisis-observatorios) sobre la proliferación de observatorios en la administración española.
 
 El gran interrogante es si **estas medidas llegarán a tiempo y a escala suficiente** para reducir el déficit actual y ofrecer alternativas reales a quienes hoy no pueden acceder a una vivienda digna.
 

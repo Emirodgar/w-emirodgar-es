@@ -17,7 +17,7 @@ permalink: analisis-ejercitos
 
 El **presupuesto militar español alcanzará los 33,123 millones de euros en 2025**, cumpliendo por primera vez con el objetivo del 2% del PIB establecido por la OTAN. Esto supone un incremento del 43% respecto a 2014 y posiciona a España en quinta posición en gasto absoluto europeo.
 
-> En la actualidad, España cuenta con un ejército profesional y, aunque algunos socios europeos han vuelto a poner el [servicio militar obligatorio](https://emirodgar.es/servicio-militar-obligatorio) para parte de su población, nuestro país no lo ve necesario en este momento geopolítico.
+> En la actualidad, España cuenta con un ejército profesional y, aunque algunos socios europeos han vuelto a poner el [servicio militar obligatorio](https://emirodgar.es/servicio-militar-obligatorio) para parte de su población, nuestro país no lo ve necesario en este momento geopolítico, marcado por unos niveles de [incertidumbre mundial](https://emirodgar.es/indice-incertidumbre) que empujan a muchos socios europeos a reforzar su gasto en defensa.
 
 ## Estructura y efectivos de las Fuerzas Armadas Españolas
 
@@ -164,7 +164,7 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 
 **España enfrenta varios desafíos estructurales** en sus Fuerzas Armadas:
 
-1. **Envejecimiento del personal**: La edad media es elevada, especialmente en la tropa (cabos con 39 años de media)
+1. **Envejecimiento del personal**: La edad media es elevada, especialmente en la tropa (cabos con 39 años de media), un reto demográfico que también sufren otros cuerpos del Estado, como vimos en nuestro [análisis de los funcionarios en España](https://emirodgar.es/analisis-funcionarios)
 2. **Déficit de efectivos**: Necesidad de incorporar 60,000 militares adicionales para alcanzar la media europea
 3. **Brecha tecnológica**: Requerimiento de modernización en ciberdefensa y operaciones espaciales
 
@@ -172,7 +172,7 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 
 **Las inversiones programadas posicionarán a España como una potencia militar media-alta en Europa**:
 
-- **Modernización tecnológica**: Incorporación de sistemas C4I avanzados y capacidades de guerra electrónica
+- **Modernización tecnológica**: Incorporación de sistemas C4I avanzados y capacidades de guerra electrónica, en un contexto en el que [las guerras con drones](https://emirodgar.es/guerras-con-drones-nuevo-conflicto-moderno) están redefiniendo la doctrina militar
 - **Proyección naval**: Fortalecimiento de capacidades anfibias y de proyección estratégica
 - **Cooperación europea**: Participación en programas conjuntos como el futuro caza europeo FCAS
 

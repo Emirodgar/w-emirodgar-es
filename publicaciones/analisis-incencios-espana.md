@@ -14,7 +14,7 @@ permalink: analisis-incendios-forestales
 
 # Análisis de los incendios forestales en España en la última década
 
-En España, la última década ha estado marcada por una fuerte variabilidad en el número de incendios forestales y la superficie quemada, con un repunte claro en los años 2022 y 2025. Las comunidades autónomas con mayor superficie afectada suelen ser Galicia, Castilla y León, Andalucía y Extremadura, y los picos de incendios se concentran en verano, aunque el cambio climático ha extendido la temporada de riesgo. No hay evidencia concluyente de que las leyes de montes hayan provocado descensos sustanciales en las hectáreas quemadas, pero sí han introducido restricciones y endurecimiento de penas.
+En España, la última década ha estado marcada por una fuerte variabilidad en el número de incendios forestales y la superficie quemada, con un repunte claro en los años 2022 y 2025, coincidiendo con la evolución de los [medios estatales para combatir incendios forestales](https://emirodgar.es/medios-anti-incendios) durante ese mismo periodo. Las comunidades autónomas con mayor superficie afectada suelen ser Galicia, Castilla y León, Andalucía y Extremadura, y los picos de incendios se concentran en verano, aunque el cambio climático ha extendido la temporada de riesgo. No hay evidencia concluyente de que las leyes de montes hayan provocado descensos sustanciales en las hectáreas quemadas, pero sí han introducido restricciones y endurecimiento de penas.
 
 ***
 
@@ -45,7 +45,7 @@ La información oficial del Ministerio (MITECO) y la base EGIF permite visualiza
 
 - Galicia y Castilla y León suman hasta un 40% de la superficie quemada nacional.
 - Otros focos relevantes: Andalucía, Extremadura y Canarias (especialmente en años concretos como 2023 con Tenerife).
-- **Verano** sigue siendo la estación con mayor riesgo y mayor número de siniestros, pero la primavera y el otoño muestran repuntes ligados a olas de calor y sequías.
+- **Verano** sigue siendo la estación con mayor riesgo y mayor número de siniestros, pero la primavera y el otoño muestran repuntes ligados a olas de calor y sequías, en línea con las tendencias descritas en nuestro [análisis del cambio climático en España](https://emirodgar.es/analisis-cambio-climatico).
 
 ***
 

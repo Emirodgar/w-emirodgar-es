@@ -16,7 +16,7 @@ permalink: 40-profesiones-en-riesgo-por-la-inteligencia-artificial
 La **inteligencia artificial (IA)** avanza a un ritmo tan rápido que cada vez resulta más difícil seguirle el paso. Lo que hace apenas un par de años parecía ciencia ficción hoy forma parte de nuestra rutina: redactar textos, traducir, programar, analizar datos o incluso generar imágenes a partir de una simple frase.
 Ya hemos hablado de los [trabajos de baja cualificación que se verán afectados](https://emirodgar.es/trabajos-afectados-ia) casi sin ninguna duda, y también del problema que la IA podría representar para [la entrada de los jóvenes en el mercado laboral](https://emirodgar.es/impacto-ia-trabajos).
 
-Según un análisis de Microsoft basado en más de 200.000 conversaciones anónimas con Bing Copilot, algunas profesiones están especialmente expuestas al riesgo de desaparecer o transformarse profundamente, por lo que junto con lo que ya hemos conocido en el pasado, tenemos un nuevo listado bastante acertado de trabajos afectados. Es la cara menos menos amable de la transformación digital: **la sustitución de ciertos empleos por sistemas automatizados**.
+Según un análisis de Microsoft basado en más de 200.000 conversaciones anónimas con Bing Copilot, algunas profesiones están especialmente expuestas al riesgo de desaparecer o transformarse profundamente, por lo que junto con lo que ya hemos conocido en el pasado, tenemos un nuevo listado bastante acertado de trabajos afectados. Es la cara menos menos amable de la transformación digital: **la sustitución de ciertos empleos por sistemas automatizados**. Aunque conviene mirar estas cifras con perspectiva, ya que no toda destrucción de empleo achacada a la IA responde realmente a la tecnología, como explicamos en [por qué la productividad de la IA sigue sin despegar](https://emirodgar.es/productividad-inteligencia-artificial-no-despega).
 
 
 ## ¿Qué tipo de empleos son los más vulnerables?
@@ -52,11 +52,11 @@ La IA puede escribir y analizar mejor que nunca, pero **todavía no tiene manos*
 
 ## ¿Qué podemos hacer ante este cambio?
 
-Más que temer al avance de la tecnología, conviene **entenderla y adaptarse**. La automatización no eliminará todos los empleos, pero sí transformará la mayoría. Por eso, es clave **desarrollar habilidades complementarias** que la IA no pueda replicar fácilmente: pensamiento crítico, creatividad, gestión de personas o toma de decisiones estratégicas.
+Más que temer al avance de la tecnología, conviene **entenderla y adaptarse**. Esa adaptación empieza, en buena medida, en las aulas, como muestra nuestro análisis sobre [cómo la IA está cambiando la educación online](https://emirodgar.es/educacion-con-ia). La automatización no eliminará todos los empleos, pero sí transformará la mayoría. Por eso, es clave **desarrollar habilidades complementarias** que la IA no pueda replicar fácilmente: pensamiento crítico, creatividad, gestión de personas o toma de decisiones estratégicas.
 
 Además, conviene mantenerse informado sobre los cambios que afectan a nuestro sector y no dejar de aprender. Herramientas como la inteligencia artificial generativa o los [coches autónomos](https://emirodgar.es/coches-autonomos) marcarán una diferencia enorme en la próxima década, y quienes sepan utilizarlas a su favor tendrán ventaja.
 
 
 La inteligencia artificial no viene a reemplazarnos por completo, pero sí a **redefinir el valor del trabajo humano**. Los empleos repetitivos o centrados en el manejo de información serán los más golpeados, mientras que aquellos que dependen de la creatividad, el contacto humano o las habilidades prácticas seguirán siendo esenciales.
 
-Adaptarse, aprender y experimentar con las nuevas herramientas será, más que una opción, **una necesidad para seguir siendo relevantes** en un mundo donde la tecnología ya no es el futuro, sino el presente.
+Adaptarse, aprender y experimentar con las nuevas herramientas será, más que una opción, **una necesidad para seguir siendo relevantes** en un mundo donde la tecnología ya no es el futuro, sino el presente. Aceptar esta realidad sin nostalgia es, en esencia, el ejercicio de [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial) que exige el mercado laboral actual.

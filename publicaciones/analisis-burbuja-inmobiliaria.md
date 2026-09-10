@@ -13,7 +13,7 @@ permalink: analisis-burbuja-inmobiliaria
 
 # Análisis de la situación financiera actual de España y comparación con las burbujas inmobiliarias históricas
 
-España se encuentra en una situación inmobiliaria compleja que presenta **similitudes y diferencias significativas** con las burbujas históricas de 1986-1991 y 1997-2007. Los **precios de la vivienda han alcanzado máximos históricos**, superando incluso los picos de 2007, pero el contexto financiero y las características del mercado son sustancialmente diferentes. Muchos aventuran ya una nueva burbuja inmobiliaria, pero empecemos por el principio, explicando la situación y lo que pretendemos con este análisis.
+España se encuentra en una situación inmobiliaria compleja que presenta **similitudes y diferencias significativas** con las burbujas históricas de 1986-1991 y 1997-2007, tal y como repasamos en nuestro recorrido por [cómo hemos llegado a un mercado de vivienda casi imposible en España](https://emirodgar.es/analisis-vivienda-espana). Los **precios de la vivienda han alcanzado máximos históricos**, superando incluso los picos de 2007, pero el contexto financiero y las características del mercado son sustancialmente diferentes. Muchos aventuran ya una nueva burbuja inmobiliaria, pero empecemos por el principio, explicando la situación y lo que pretendemos con este análisis.
 
 ## ¿Qué es una burbuja inmobiliaria?
 
@@ -103,7 +103,7 @@ España enfrenta un **déficit estructural de vivienda**. Entre 2021-2023 se cre
 
 ### Desconexión precios-salarios
 
-Los **salarios han crecido un 7,4%** en los últimos tres años, mientras que **los precios de la vivienda han subido un 25,3%**. Esta desconexión significa que la vivienda **sube tres veces más rápido** que los sueldos, deteriorando significativamente la accesibilidad.
+Los **salarios han crecido un 7,4%** en los últimos tres años, mientras que **los precios de la vivienda han subido un 25,3%**. Esta desconexión significa que la vivienda **sube tres veces más rápido** que los sueldos, deteriorando significativamente la accesibilidad, en línea con lo analizado sobre la [evolución del poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo).
 
 ### Concentración geográfica
 

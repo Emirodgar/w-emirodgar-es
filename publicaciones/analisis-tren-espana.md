@@ -14,7 +14,7 @@ permalink: analisis-ferroviario
 
 # Análisis de los problemas ferroviarios en España: Una década de crisis y modernización
 
-La red ferroviaria española ha atravesado una década crítica (2015-2025) marcada por **problemas estructurales, inversiones insuficientes y una crisis operativa sin precedentes**. Aunque España mantiene la **segunda red de alta velocidad más extensa de Europa** con 3.297 kilómetros, presenta una **densidad de tráfico 5.5 veces inferior** a Francia y una **intensidad de uso de apenas el 35.3%** frente al 53% de media europea.
+La red ferroviaria española ha atravesado una década crítica (2015-2025) marcada por **problemas estructurales, inversiones insuficientes y una crisis operativa sin precedentes**, una crisis que profundizamos desde el punto de vista de la [inversión y el mantenimiento del sector ferroviario](https://emirodgar.es/analisis-sector-ferroviario) en otro de nuestros análisis. Aunque España mantiene la **segunda red de alta velocidad más extensa de Europa** con 3.297 kilómetros, presenta una **densidad de tráfico 5.5 veces inferior** a Francia y una **intensidad de uso de apenas el 35.3%** frente al 53% de media europea.
 
 ## Problemas identificados por período gubernamental
 
@@ -47,7 +47,7 @@ Si analizamos datos cuantitativos y cualitativos (incidentes y compensaciones ec
 - Paralización completa de proyectos AVE en Almería y Extremadura
 - En Cercanías Madrid: solo **10 kilómetros construidos** de los 115 proyectados
 
-> Es conveniente recalcar que gran parte de la información sobre el periodo de Mariano Rajoy proviene de las comunicaciones realizadas por el Ministro de Transporte, Óscar Puente, quién ha caracterizado este período como **"ocho años complicados de desinversión"** posterior a la crisis económica, estableciendo las bases de los problemas actuales. No hemos encontrado demasiada información para contrastar todas las afirmaciones.
+> Es conveniente recalcar que gran parte de la información sobre el periodo de Mariano Rajoy proviene de las comunicaciones realizadas por el Ministro de Transporte, Óscar Puente, quién ha caracterizado este período como **"ocho años complicados de desinversión"** posterior a la crisis económica, estableciendo las bases de los problemas actuales, una etapa de austeridad que también golpeó a la [evolución de los funcionarios en España](https://emirodgar.es/analisis-funcionarios). No hemos encontrado demasiada información para contrastar todas las afirmaciones.
 
 
 ### Gobierno de Pedro Sánchez (PSOE, 2018-actualidad)

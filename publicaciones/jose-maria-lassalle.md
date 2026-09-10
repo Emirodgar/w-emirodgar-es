@@ -12,7 +12,7 @@ permalink: jose-maria-lassalle
 ---
 
 El lunes 5 de mayo de 2025, en el Tecnocampus Mataró se organizó la segunda edición del Foro Valores Mataró-Europa para reflexionar acerca de la evolución de la Inteligencia Artificial en el contexto europeo.
-Uno de los ponentes del evento fue José María Lassalle Ruiz, **Filósofo del derecho y exsecretario de Estado, Lassalle reflexiona sobre los desafíos éticos, políticos y culturales de la inteligencia artificial (IA) y el papel que puede jugar Europa.**
+Uno de los ponentes del evento fue José María Lassalle Ruiz, **Filósofo del derecho y exsecretario de Estado, Lassalle reflexiona sobre los desafíos éticos, políticos y culturales de la inteligencia artificial (IA) y el papel que puede jugar Europa.** Un debate que también abordamos comparando el enfoque educativo de [Estados Unidos y Europa en materia de IA](https://emirodgar.es/analisis-ia-eeuu-europa).
 
 # José María Lassalle: “Europa debe definir su propia IA, no imitar a EE. UU. ni a China”
 
@@ -40,7 +40,7 @@ La carrera tecnológica entre Estados Unidos y China impulsa una IA centrada en 
 
 > “Europa debe definir para qué quiere la IA. No para dominar, sino para contribuir al bienestar humano desde valores como la cultura, la alteridad y el respeto.”
 
-El proyecto europeo (como Mistral o la iniciativa de Von der Leyen) debe sumar esfuerzos de países y no copiar los modelos norteamericano o chino.
+El proyecto europeo (como Mistral o la iniciativa de Von der Leyen, plasmada en el [AI Continent Action Plan](https://emirodgar.es/europa-ia)) debe sumar esfuerzos de países y no copiar los modelos norteamericano o chino.
 
 ---
 
@@ -48,7 +48,9 @@ El proyecto europeo (como Mistral o la iniciativa de Von der Leyen) debe sumar e
 
 Lassalle ve a España bien posicionada gracias a su apuesta por IA sostenible y una infraestructura tecnológica avanzada.
 
-> “España puede liderar con algoritmos verdes y centros de datos neutros. Pero necesitamos una estrategia clara de país.”
+> “España puede liderar con algoritmos verdes y [centros de datos](https://emirodgar.es/centros-de-datos) neutros. Pero necesitamos una estrategia clara de país.”
+
+Una advertencia que cobra más sentido tras el traspiés del proyecto [ALIA](https://emirodgar.es/alia-promesa-fallida-ia-publica-espana), pensado precisamente como esa apuesta pública por la soberanía tecnológica.
 
 También destaca la riqueza conceptual del español y otras lenguas románicas como activo en IA generativa:
 

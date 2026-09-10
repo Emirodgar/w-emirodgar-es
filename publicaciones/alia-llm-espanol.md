@@ -15,7 +15,7 @@ permalink: alia-promesa-fallida-ia-publica-espana
 
 El proyecto **ALIA** se presentó como una de las grandes banderas tecnológicas del Gobierno de España en materia de inteligencia artificial. La idea, sobre el papel, sonaba bien: crear una **infraestructura pública de IA**, entrenada en castellano y en las lenguas cooficiales, que redujera la dependencia de modelos extranjeros y reforzara la soberanía digital. Sinceramente, me sentí muy orgulloso de ese paso y de querer hacer algo propio para no depender, en una matería tan crítica, de potencias extranjeras.
 
-No se trataba de hacer “el ChatGPT español”, sino algo más ambicioso. Una familia de modelos abiertos que pudiera usarse en la administración pública, en universidades y en empresas, con aplicaciones tan concretas como chatbots para la Agencia Tributaria o herramientas de apoyo en sanidad.
+No se trataba de hacer “el ChatGPT español”, sino algo más ambicioso. Una familia de modelos abiertos que pudiera usarse en [la administración pública](https://emirodgar.es/ia-en-la-administracion-publica), en universidades y en empresas, con aplicaciones tan concretas como chatbots para la Agencia Tributaria o herramientas de apoyo en sanidad.
 
 El problema es que como suele ocurrirnos con frecuencia, una cosa es el relato y otra muy distinta la realidad. Por si fuera poco, el proyecto ALIA no comenzó con buen pie; un artículo de Jot Down puso contra las cuerdas la manera en la que [había sido entrenado el modelo](https://emirodgar.es/ia-publica-contenido-entrenamiento), al parecer, usando contenidos privados y protegidos sin haber pedido permiso o pagado por ello.
 
@@ -23,7 +23,7 @@ El problema es que como suele ocurrirnos con frecuencia, una cosa es el relato y
 
 Según lo que ha comunicado el gobierno, **más de 10 millones de euros** se destinaron al desarrollo inicial de ALIA dentro de la Estrategia Nacional de Inteligencia Artificial 2024. A esto hay que sumar un elemento clave que muchas veces se pasa por alto cuando hablamos de IA: la infraestructura.
 
-Buena parte del proyecto se apoya en el superordenador **MareNostrum 5**, cuya actualización superó los 150 millones de euros. Aunque ese coste no sea exclusivo de ALIA, sí forma parte del contexto real en el que se mueve el proyecto.
+Buena parte del proyecto se apoya en el superordenador **MareNostrum 5**, cuya actualización superó los 150 millones de euros. Aunque ese coste no sea exclusivo de ALIA, sí forma parte del contexto real en el que se mueve el proyecto, muy cercano al que estamos viendo en el actual boom de los [centros de datos](https://emirodgar.es/centros-de-datos) a nivel mundial.
 
 <img width="623" class="img-responsive" alt="ALIA y su fracaso. Tabla comparativa" src="https://github.com/user-attachments/assets/a06bec3a-ba03-4728-b50d-c26a5665278e" />
 
@@ -50,7 +50,7 @@ Mientras tanto, alternativas abiertas como Llama 3 (Meta) o Mixtral (Francesa) o
 
 ## ¿Tiene sentido hablar de soberanía tecnológica en este contexto?
 
-Uno de los grandes argumentos de ALIA era la **soberanía del dato** y la autonomía estratégica frente a modelos estadounidenses. La promesa de ejecutar IA de forma local, con control total de los datos y sin depender de “cajas negras” externas me sigue pareciendo lógica y adecuada. Tan sólo hemos fallado en la ejecución de la idea. Y es una lástima. A día de hoy, podemos alcanzar esos objetivos con modelos de código abierto como los de Mistral o Meta que permiten exactamente lo mismo: ejecución local, privacidad y cumplimiento normativo europeo, pero con **costes mucho más bajos** y un soporte comunitario real.
+Uno de los grandes argumentos de ALIA era la **soberanía del dato** y la autonomía estratégica frente a modelos estadounidenses, en línea con la carrera que se ha marcado [Europa por liderar la inteligencia artificial](https://emirodgar.es/europa-ia). La promesa de ejecutar IA de forma local, con control total de los datos y sin depender de “cajas negras” externas me sigue pareciendo lógica y adecuada. Tan sólo hemos fallado en la ejecución de la idea. Y es una lástima. A día de hoy, podemos alcanzar esos objetivos con modelos de código abierto como los de Mistral o Meta que permiten exactamente lo mismo: ejecución local, privacidad y cumplimiento normativo europeo, pero con **costes mucho más bajos** y un soporte comunitario real.
 
 > Cuando una alternativa privada ofrece lo mismo, mejor y más barato, el argumento de la infraestructura pública pierde fuerza rápidamente.
 
@@ -59,6 +59,6 @@ Uno de los grandes argumentos de ALIA era la **soberanía del dato** y la autono
 Algunos dicen que sí, pero yo no lo tengo tan claro. Creo que había buena intención y un enfoque técnico ambicioso. Pero no siempre conseguimos lo que queremos. 
 Si tuviera que centrarme en el punto central de por qué ALIA no ha funcionado, creo que fue debido a quese diseñó como **infraestructura pública**, y no como producto útil desde el primer día. Se priorizó el tamaño, el simbolismo y el discurso político por encima del valor real.
 
-Debemos llevarnos el aprendizaje de que la innovacción no es sólo meter billetes en un proyecto. Necesitamos tecnócratas y cabezas pensantes que entienda la evolución del sector y que sepan cómo conectar los desarrollos con las empresas y personas que los usarán.
+Debemos llevarnos el aprendizaje de que la innovacción no es sólo meter billetes en un proyecto, sobre todo en un momento en el que ya se avisa de [una posible crisis económica impulsada por la propia burbuja de la IA](https://emirodgar.es/crisis-economica-ia). Necesitamos tecnócratas y cabezas pensantes que entienda la evolución del sector y que sepan cómo conectar los desarrollos con las empresas y personas que los usarán.
 
 ALIA no fracasa por falta de dinero ni de ambición. Fracasa por diseñarse desde arriba, sin pisar lo suficiente el suelo de las empresas y los desarrolladores que, al final, son quienes deciden qué tecnologías viven y cuáles se quedan en un repositorio olvidado.

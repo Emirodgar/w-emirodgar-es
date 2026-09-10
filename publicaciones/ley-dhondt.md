@@ -24,12 +24,12 @@ Después, ese número total de votos de cada candidatura se divide por 2, por 3,
 ## ¿Dónde está el principal problema de este sistema?
 
 Este sistema tiende a **beneficiar a los partidos más votados y penalizar a los más pequeños**, especialmente en circunscripciones con pocos escaños.
-En circunscripciones grandes, los resultados serán mucho más proporcionales que en las demarcaciones pequeñas, dado que a menor número de escaños, será mucho más difícil conseguir un diputado.
+En circunscripciones grandes, los resultados serán mucho más proporcionales que en las demarcaciones pequeñas, dado que a menor número de escaños, será mucho más difícil conseguir un diputado, algo que se aprecia bien comparando los resultados por [Comunidad Autónoma](https://emirodgar.es/elecciones-generales-comunidades).
 
 
 ## Comparación visual
 
-A continuación, se muestra un gráfico de las elecciones de 2023 en España, donde podemos ver el número de votos que obtuvo cada partido, el número de escaños que consiguió y, en la línea verde, aquellos que necesitaron más votos para conseguir un escaño.
+A continuación, se muestra un gráfico de las [elecciones de 2023 en España](https://emirodgar.es/elecciones-generales), donde podemos ver el número de votos que obtuvo cada partido, el número de escaños que consiguió y, en la línea verde, aquellos que necesitaron más votos para conseguir un escaño.
 
 ![image](https://github.com/user-attachments/assets/cd53707d-d952-42f8-a1ac-17833b4114de){:class="img-responsive"}
 
@@ -48,5 +48,5 @@ Este sistema puede influir positiva o negativamente en los siguientes factores:
 - El incentivo a la concentración del voto.
 - La penalización de partidos minoritarios en circunscripciones pequeñas.
 
-Es clave para entender por qué algunos partidos tienen más escaños que los votos que proporcionalmente les corresponderían.
+Es clave para entender por qué algunos partidos tienen más escaños que los votos que proporcionalmente les corresponderían, algo que conviene tener presente al interpretar las [proyecciones de escaños de las encuestas](https://emirodgar.es/encuestas-intencion-voto).
 

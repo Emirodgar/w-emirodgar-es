@@ -46,6 +46,8 @@ Desarrollo de urbes gestionadas casi en su totalidad por inteligencia artificial
 ### Internet vía satélite global (Starlink)
 Proyecto para conectar todo el planeta a través de miles de satélites, permitiendo acceso a Internet en zonas remotas y preparando la infraestructura para comunicación interplanetaria.
 
+Un ejemplo real de esta carrera por la infraestructura tecnológica ya lo tenemos encima: el actual boom de los [centros de datos](https://emirodgar.es/centros-de-datos), que está redibujando el mapa de inversión tecnológica también en España.
+
 
 ## ¿Qué podemos aprender para desarrollar en España?
 
@@ -105,7 +107,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 **Por qué:**
 
 - Grandes nodos logísticos y talento en automoción.
-- Ideal para probar vehículos autónomos, drones logísticos y redes inteligentes.
+- Ideal para probar [vehículos autónomos](https://emirodgar.es/coches-autonomos), drones logísticos y redes inteligentes.
 
 **Oportunidad comercial:**
 
@@ -119,7 +121,7 @@ Proyecto para conectar todo el planeta a través de miles de satélites, permiti
 **Dónde:** Proyectos piloto en municipios como Vitoria-Gasteiz, Málaga o Santander  
 **Por qué:**
 
-- Ya tienen base tecnológica y gobernanza avanzada.
+- Ya tienen base tecnológica y gobernanza avanzada, en línea con las [ventajas que ya está mostrando la IA en otros ayuntamientos](https://emirodgar.es/ia-ayuntamientos).
 - Se pueden integrar sensores urbanos, predicción de consumo y gestión de emergencias en tiempo real.
 
 **Oportunidad comercial:**

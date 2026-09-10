@@ -58,6 +58,8 @@ Evolución de la cuota mínima de autónomos en España (2005-2025)
 
 Desde enero de 2023, España implementó un **sistema revolucionario de cotización basado en ingresos reales**. Este permite a los autónomos cambiar su cuota hasta **seis veces al año** según sus ingresos previstos, con cuotas que oscilan entre 200€ y 590€ mensuales.
 
+Este ajuste de costes convive con otras políticas laborales de calado en la última década, como la evolución del [salario mínimo interprofesional](https://emirodgar.es/salario-minimo-espana), que también ha condicionado los costes de contratación para muchos de estos trabajadores por cuenta propia.
+
 ## Beneficios y protección social
 
 ### Prestación por cese de actividad (2011)
@@ -155,7 +157,7 @@ Los datos muestran un **envejecimiento progresivo** del colectivo autónomo que 
 
 **Grupo 46-55 años**: Se ha consolidado como el **segmento más numeroso** (31.8% del total), creciendo desde aproximadamente 800,000 autónomos en 2013 hasta 1.09 millones en 2025.
 
-**Mayores de 65 años**: Han experimentado el **mayor crecimiento relativo** (+39.6% desde 2021), impulsado por la ampliación de la edad de jubilación y la **jubilación activa**, que permite mantener la actividad empresarial cobrando la pensión.
+**Mayores de 65 años**: Han experimentado el **mayor crecimiento relativo** (+39.6% desde 2021), impulsado por la ampliación de la edad de jubilación y la **jubilación activa**, que permite mantener la actividad empresarial cobrando la pensión, en un contexto de [tensión entre pensiones y salario mínimo](https://emirodgar.es/pensiones-smi) cada vez más presente en el debate público.
 
 **Jóvenes 26-35 años**: Han sufrido la **mayor contracción**, perdiendo más de 136,000 autónomos desde 2013, reflejando las dificultades de acceso al emprendimiento para las nuevas generaciones.
 
@@ -222,7 +224,7 @@ Los datos revelan **tendencias completamente opuestas** entre hombres y mujeres:
 
 ### Reto demográfico
 
-El **envejecimiento acelerado** del colectivo plantea interrogantes sobre la **sostenibilidad futura** del emprendimiento español. Con casi la mitad de autónomos superando los 50 años, existe el riesgo de una **"jubilación masiva"** en los próximos 10-15 años.
+El **envejecimiento acelerado** del colectivo plantea interrogantes sobre la **sostenibilidad futura** del emprendimiento español. Con casi la mitad de autónomos superando los 50 años, existe el riesgo de una **"jubilación masiva"** en los próximos 10-15 años, un reto demográfico que también atraviesa a [los funcionarios en España](https://emirodgar.es/analisis-funcionarios), otro colectivo laboral con una plantilla cada vez más envejecida.
 
 ### Brecha generacional
 

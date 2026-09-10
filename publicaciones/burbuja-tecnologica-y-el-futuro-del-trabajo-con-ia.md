@@ -13,11 +13,11 @@ permalink: /burbuja-tecnologica-y-el-futuro-del-trabajo-con-ia
 
 # La burbuja tecnológica y el futuro del trabajo con IA
 
-Hoy quiero hablaros de un tema que está en boca de todos: **la inteligencia artificial y su impacto en el futuro laboral**. En mi día a día, como profesional en el sector, me mantengo al tanto de las tendencias tecnológicas. Recientemente he reflexionado sobre la que parece ser una **burbuja en el sector tecnológico** y la inminente llegada de GPT-5.
+Hoy quiero hablaros de un tema que está en boca de todos: **la inteligencia artificial y su impacto en el futuro laboral**. En mi día a día, como profesional en el sector, me mantengo al tanto de las tendencias tecnológicas. Recientemente he reflexionado sobre la que parece ser una **burbuja en el sector tecnológico** y la inminente llegada de GPT-5, una reflexión que conecta directamente con lo que ya apunté sobre la posible [crisis económica impulsada por la inteligencia artificial](https://emirodgar.es/crisis-economica-ia).
 
 ## La inminente revolución de la inteligencia artificial
 
-La IA no es una moda pasajera, es un cambio de paradigma. Hemos visto cómo modelos como GPT-4 ya han afectado al mercado de los perfiles junior. Y ahora, con la llegada de nuevas versiones, las figuras más relevantes del mundo de la IA, como el propio Mark Zuckerberg, señalan que los ingenieros de nivel medio podrían ser los siguientes en la lista.
+La IA no es una moda pasajera, es un cambio de paradigma. Hemos visto cómo modelos como GPT-4 ya han afectado al mercado de los perfiles junior, algo que desarrollo con más detalle en [el impacto de la inteligencia artificial en los trabajos](https://emirodgar.es/impacto-ia-trabajos). Y ahora, con la llegada de nuevas versiones, las figuras más relevantes del mundo de la IA, como el propio Mark Zuckerberg, señalan que los ingenieros de nivel medio podrían ser los siguientes en la lista.
 
 De hecho, los modelos de lenguaje cada vez son más potentes. ChatGPT mismo reconoce que OpenAI está limitando la potencia de los modelos que publica. Si no lo hicieran, el impacto en el mercado laboral sería enorme. Los motivos de esta cautela serían:
 
@@ -32,6 +32,6 @@ En el pasado, hemos visto situaciones similares. La crisis de 2008 pilló a much
 
 Por supuesto, la IA no va a sustituir por completo a los profesionales. Al menos no en el corto plazo. Quienes usamos estas herramientas a diario sabemos que, aunque son muy potentes, todavía cometen fallos. Un programador no puede confiar ciegamente en el código que genera una IA sin una revisión exhaustiva.
 
-Sin embargo, esto no significa que no habrá cambios. La IA es una herramienta que aumentará nuestra productividad de manera exponencial. En mi caso, me permite automatizar muchas de las tareas de análisis y de redacción que aplico en mi día a día, permitiéndome así centrarme en otras áreas más estratégicas de la [estrategia de posicionamiento](https://emirodgar.com/estrategia-seo) de mis clientes. Quienes se adapten y aprendan a utilizarla para ser más eficientes saldrán fortalecidos. Quienes se resistan, tendrán más dificultades. La clave está en la adaptabilidad y en aprender a trabajar con esta tecnología, no contra ella.
+Sin embargo, esto no significa que no habrá cambios. La IA es una herramienta que aumentará nuestra productividad de manera exponencial. En mi caso, me permite automatizar muchas de las tareas de análisis y de redacción que aplico en mi día a día, permitiéndome así centrarme en otras áreas más estratégicas de la [estrategia de posicionamiento](https://emirodgar.com/estrategia-seo) de mis clientes. Quienes se adapten -por ejemplo, siguiendo un proceso de [upskilling, unskilling y reskilling](https://emirodgar.es/adoptar-ia)- y aprendan a utilizarla para ser más eficientes saldrán fortalecidos. Quienes se resistan, tendrán más dificultades. La clave está en la adaptabilidad y en aprender a trabajar con esta tecnología, no contra ella.
 
 El futuro es incierto, pero lo que sí es seguro es que la preparación y la formación continua serán más importantes que nunca. Mi consejo es que, sea cual sea la estrategia que sigamos en nuestra vida personal, pensemos bien en las consecuencias a largo plazo, ya que las revoluciones tecnológicas no avisan con tiempo.

@@ -35,6 +35,8 @@ Las señales de alarma son obvias:
 * **Paro juvenil galopante:** Con un paro juvenil que ya es de los más altos de Europa, la llegada de la IA podría agravar la situación, dificultando aún más la entrada de los jóvenes en el mercado.
 * **Brecha de experiencia:** La brecha entre los que tienen experiencia y los que no, se hará aún más grande. Los jóvenes que pierdan sus trabajos no solo se enfrentarán al paro, sino que también verán mermadas sus oportunidades de ganar esa experiencia que tanto valoran los empleadores.
 
+Estos datos encajan con el patrón que ya describíamos en nuestro repaso de los [puestos de trabajo que podrían verse afectados por la IA en la próxima década](https://emirodgar.es/trabajos-afectados-ia). Aunque conviene matizar cuánto de este ajuste es realmente atribuible a la IA y cuánto responde a otras dinámicas, como analizamos en [por qué la productividad de la IA sigue sin despegar](https://emirodgar.es/productividad-inteligencia-artificial-no-despega).
+
 ---
 
 ## Acciones urgentes para evitar el "futuro sin ascensor"
@@ -44,6 +46,6 @@ Si queremos evitar un futuro en el que los jóvenes no puedan ni siquiera poner 
 * **Reformar la educación:** Es imprescindible que la formación universitaria se centre menos en el "conocimiento formal" (el que la IA puede replicar fácilmente) y más en habilidades blandas, el pensamiento crítico, la creatividad y la resolución de problemas.
 * **Fomentar la formación continua:** No podemos esperar a que los jóvenes se queden descolgados. Hay que crear y subvencionar programas de formación a lo largo de toda la vida laboral para que los trabajadores adquieran las habilidades que la IA no puede reemplazar.
 * **Incentivos para la contratación de jóvenes:** El Gobierno debe crear incentivos fiscales para que las empresas no vean a los trabajadores jóvenes como un "riesgo", sino como una inversión.
-* **Pacto de Estado por el futuro del trabajo:** Es el momento de que todos los actores políticos, empresariales y sociales se sienten para diseñar una estrategia nacional que prepare a España para esta revolución. No podemos seguir con parches, la IA es un tsunami que necesita de un plan serio y a largo plazo.
+* **Pacto de Estado por el futuro del trabajo:** Es el momento de que todos los actores políticos, empresariales y sociales se sienten para diseñar una estrategia nacional que prepare a España para esta revolución. No podemos seguir con parches, la IA es un tsunami que necesita de un plan serio y a largo plazo, máxime si, como venimos alertando, [se avecina una crisis económica impulsada por la inteligencia artificial](https://emirodgar.es/crisis-economica-ia).
 
 La IA no tiene por qué ser una amenaza, pero tampoco podemos quedarnos de brazos cruzados. Si no tomamos medidas, los jóvenes de hoy serán los "canarios en la mina" de un futuro sin oportunidades. El momento de actuar es ahora.

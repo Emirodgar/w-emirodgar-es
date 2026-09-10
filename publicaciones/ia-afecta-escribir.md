@@ -63,7 +63,7 @@ Leer textos complejos no solo transmite información. También **entrena determi
 - Manejar matices  
 - Pensar de forma secuencial  
 
-Cuando las frases son más largas y las estructuras más elaboradas, el cerebro tiene que **mantener más piezas en juego al mismo tiempo**.
+Cuando las frases son más largas y las estructuras más elaboradas, el cerebro tiene que **mantener más piezas en juego al mismo tiempo**. Curiosamente, un fenómeno parecido se observa en el ámbito académico: nuestro análisis sobre [cómo la IA está cambiando la educación online](https://emirodgar.es/educacion-con-ia) muestra que los ensayos de estudiantes son ahora más largos pero con menos variedad léxica desde la llegada de ChatGPT.
 
 En cambio, los textos muy simplificados tienden a favorecer:
 
@@ -87,7 +87,7 @@ Y eso tiene consecuencias, sobre todo en temas donde los matices importan como e
 
 Cuando el lenguaje se simplifica demasiado, el debate también tiende a simplificarse.
 
-Las ideas complejas tienden a comprimirse en eslóganes. Los argumentos largos se sustituyen por frases cortas y contundentes. Y los matices muchas veces desaparecen.
+Las ideas complejas tienden a comprimirse en eslóganes. Los argumentos largos se sustituyen por frases cortas y contundentes. Y los matices muchas veces desaparecen. Es el mismo terreno fértil que exploraba el experimento de la [hipnocracia](https://emirodgar.es/hipnocracia), donde la simplificación del discurso se convertía en una herramienta de manipulación de la percepción colectiva.
 
 Esto no significa que antes todo fuera mejor. Pero sí plantea una cuestión interesante:
 
@@ -112,7 +112,7 @@ Pero sí conviene **mantener cierto equilibrio**. Os dejo mis recomendaciones:
 
 En otras palabras, **no renunciar del todo a la lectura profunda**.
 
-Porque leer de forma exigente no solo sirve para informarse. También es una forma de **entrenar la mente**.
+Porque leer de forma exigente no solo sirve para informarse. También es una forma de **entrenar la mente**, un ejercicio que conecta con lo que en otros ámbitos organizativos llamamos [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial): la capacidad de sostener la complejidad de la realidad sin refugiarse en atajos cómodos.
 
 ---
 

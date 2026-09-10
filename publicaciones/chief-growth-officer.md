@@ -65,7 +65,7 @@ Sean Ellis lideró directamente el crecimiento en empresas emblemáticas:
 
 La evolución del CGO se aceleró significativamente en la **década de 2010s**, particularmente a finales de esta década. Varios factores impulsaron esta evolución:
 
-- **Transformación digital** y avances tecnológicos
+- **Transformación digital** y avances tecnológicos, incluida la aparición de modelos de negocio [IA first](https://emirodgar.es/empresas-ia-first)
 - **Cambios en comportamientos del consumidor** y expectativas
 - **Mayor competencia** y saturación del mercado
 - **Presión de inversores** por crecimiento sostenido de ingresos y beneficios
@@ -79,7 +79,7 @@ Para **2020**, grandes corporaciones como McDonald's, Coca-Cola, Mars Inc., Adob
 El CGO debe poseer un conjunto diverso de competencias técnicas:
 
 - **Análisis de datos y métricas**: Capacidad para interpretar datos complejos y tendencias del mercado
-- **Conocimiento digital**: Dominio de herramientas digitales, analytics y tecnologías emergentes
+- **Conocimiento digital**: Dominio de herramientas digitales, analytics y tecnologías emergentes, cada vez más basadas en [herramientas de IA diseñadas específicamente para empresas](https://emirodgar.es/herramientas-ia-empresas)
 - **Gestión de presupuestos**: Habilidad para asignar recursos estratégicamente
 - **Desarrollo de productos**: Comprensión del ciclo de vida del producto y procesos de innovación
 - **Marketing estratégico**: Experiencia en estrategias de marketing integradas y multicanal
@@ -174,6 +174,10 @@ Empresas emergentes que han adoptado el rol:
 
 
 ## **Diferencias con Otros Roles Ejecutivos**
+
+### **CGO vs. CAIO (Chief AI Officer)**
+
+Del mismo modo que muchas empresas han creado la figura del [Chief AI Officer (CAIO)](https://emirodgar.es/chief-ai-officer) para liderar su estrategia de inteligencia artificial, el CGO surge para centralizar y acelerar el crecimiento del negocio de forma transversal. Ambos roles suelen trabajar de la mano, ya que buena parte del crecimiento actual pasa precisamente por la adopción de IA.
 
 ### **CGO vs. CMO (Chief Marketing Officer)**
 

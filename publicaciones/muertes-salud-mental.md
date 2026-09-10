@@ -14,7 +14,7 @@ permalink: muertes-salud-mental
 
 # Muertes por problemas de salud mental en España: Análisis estadístico y evolución temporal
 
-Las muertes relacionadas con problemas de salud mental en España han experimentado un **incremento significativo** en las últimas dos décadas, representando un grave problema de salud pública que requiere atención urgente e integral. El desarrollo de estrategias preventivas puede salvar muchas vidas.
+Las muertes relacionadas con problemas de salud mental en España han experimentado un **incremento significativo** en las últimas dos décadas, representando un grave problema de salud pública que requiere atención urgente e integral, al igual que ocurre con las [muertes por cáncer en España](https://emirodgar.es/analisis-muertes-cancer), otra de las grandes causas de mortalidad que hemos analizado. El desarrollo de estrategias preventivas puede salvar muchas vidas.
 
 ## Estadísticas de suicidios: evolución y situación actual
 
@@ -162,7 +162,7 @@ Las muertes por trastornos mentales incluyen diversas causas:
 
 - **Personas de mediana edad (40-64 años)**: Mayor número absoluto de casos
 - **Jóvenes (15-29 años)**: Suicidio como **primera causa de muerte** en este grupo
-- **Adolescentes**: Aumento del **32,35%** entre 2019-2021
+- **Adolescentes**: Aumento del **32,35%** entre 2019-2021, un dato que refuerza el debate sobre la [prohibición del acceso a redes sociales a menores de 16 años en España](https://emirodgar.es/prohibir-redes-sociales-menores-16-anos)
 
 **Por género:**
 

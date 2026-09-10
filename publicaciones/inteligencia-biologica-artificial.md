@@ -13,7 +13,7 @@ permalink: inteligencia-biologica-artificial
 
 # De la inteligencia biológica a la artificial: Lecciones de la evolución para la IA
 
-Los recientes avances en neurociencia y biología evolutiva están revelando secretos sobre el origen de la inteligencia que podrían revolucionar el desarrollo de la inteligencia artificial (IA). Un estudio clave publicado en febrero de 2025 demostró que aves y mamíferos desarrollaron capacidades cognitivas complejas de forma independiente, a través de caminos evolutivos distintos, lo que abre nuevas posibilidades para diseñar sistemas de IA más eficientes y versátiles.
+Los recientes avances en neurociencia y biología evolutiva están revelando secretos sobre el origen de la inteligencia que podrían revolucionar el desarrollo de la inteligencia artificial (IA). Si quieres repasar antes los conceptos básicos, tenemos una [guía sobre los fundamentos de la inteligencia artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial) a mano. Un estudio clave publicado en febrero de 2025 demostró que aves y mamíferos desarrollaron capacidades cognitivas complejas de forma independiente, a través de caminos evolutivos distintos, lo que abre nuevas posibilidades para diseñar sistemas de IA más eficientes y versátiles.
 
 ### La sorprendente convergencia evolutiva de la inteligencia
 
@@ -53,5 +53,7 @@ La próxima generación de IA podría combinar lo mejor de ambos mundos:
 - **Eficiencia aviar** para procesamiento ligero
 - **Adaptabilidad mamífera** para aprendizaje contextual
 - **Redundancia evolutiva** para mayor robustez
+
+Estas lecciones evolutivas son especialmente relevantes en el debate sobre [el camino hacia la AGI](https://emirodgar.es/agi), donde la pregunta ya no es solo cuánta potencia de cálculo hace falta, sino qué principios de la cognición merece la pena replicar.
 
 Como señala el investigador Iker Prieto en su análisis de tendencias tecnológicas: "Estamos pasando de imitar la inteligencia humana a descifrar los principios universales de la cognición que la naturaleza ha perfeccionado durante millones de años".

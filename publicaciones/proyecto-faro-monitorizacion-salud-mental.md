@@ -15,7 +15,7 @@ permalink: faro-monitorizacion-salud-mental
 
 # Sistema de monitorización de salud mental en redes sociales
 
-Una de las causas principales de fallecimiento en España son los problemas de salud mental. El auge de las redes sociales y la sensación de que estamos en una sociedad conectada -cuando la realidad demuestra que esa conexión de no es de calidad- ha generado múltiples problemas. 
+Una de las causas principales de fallecimiento en España son los problemas de salud mental. El auge de las redes sociales y la sensación de que estamos en una sociedad conectada -cuando la realidad demuestra que esa conexión de no es de calidad- ha generado múltiples problemas, hasta el punto de plantear medidas como la [prohibición del acceso a redes sociales a menores de 16 años](https://emirodgar.es/prohibir-redes-sociales-menores-16-anos) que analizamos en otro artículo. 
 En nuestro análisis de [Muertes por problemas de salud mental en España: Análisis estadístico y evolución temporal](https://emirodgar.es/muertes-salud-mental) se aprecia claramente la tendencia y evolución al alza, tal como podemos también constatar con la siguiente gráfica.
 
 <img width="2400" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/02f34088-e495-4e15-8b70-cb9eafd972ca" />
@@ -147,7 +147,7 @@ Detectar y clasificar mensajes en redes sociales que puedan indicar problemas de
 
 ### Recomendaciones de Implementación
 - Integrar con APIs oficiales de redes sociales
-- Implementar ML/AI para análisis más sofisticado
+- Implementar [machine learning e IA](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial) para un análisis más sofisticado
 - Agregar base de datos para persistencia
 - Incluir sistema de autenticación y autorización
 - Implementar cifrado de datos sensibles

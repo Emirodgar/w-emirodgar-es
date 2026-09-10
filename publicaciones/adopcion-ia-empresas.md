@@ -46,7 +46,7 @@ Por un lado, la empresa gana eficiencia. Por otro, obtiene algo aún más valios
 
 Microsoft está siguiendo una estrategia distinta, pero con el mismo fondo. La compañía ha apostado abiertamente por un modelo **[AI-first](https://emirodgar.es/empresas-ia-first)**, donde la automatización sustituye tareas que antes hacían personas.
 
-Entre 2025 y principios de 2026, Microsoft ha llevado a cabo **recortes masivos**, incluyendo una reducción de unos 9.000 empleados en julio de 2025, cerca del 4 % de su plantilla.
+Entre 2025 y principios de 2026, Microsoft ha llevado a cabo **recortes masivos**, incluyendo una reducción de unos 9.000 empleados en julio de 2025, cerca del 4 % de su plantilla, un movimiento que encaja con las señales que ya apuntan a [una crisis económica impulsada por la inteligencia artificial](https://emirodgar.es/crisis-economica-ia).
 Algunas voces dicen que estas medidas se deben a que quieren quitarse de en medio trabajadores antes de que los gobiernos comiencen con las regulaciones de despidos debido a la irrupción de la IA.
 
 
@@ -60,12 +60,12 @@ Ante esta situación, el abanico de [los trabajos más afectados](https://emirod
 
 ## ¿La IA está quitando empleos o cambiando el trabajo?
 
-La pregunta correcta no es si la IA destruye empleo, sino **qué tipo de empleo deja de tener sentido** y cómo afectará a nuestro futuro a corto y medio plazo.
+La pregunta correcta no es si la IA destruye empleo, sino **qué tipo de empleo deja de tener sentido** y cómo afectará a nuestro futuro a corto y medio plazo, algo que conecta directamente con lo que ya planteé sobre [la burbuja tecnológica y el futuro del trabajo con IA](https://emirodgar.es/burbuja-tecnologica-y-el-futuro-del-trabajo-con-ia).
 Las tareas repetitivas, predecibles y fácilmente medibles son las primeras en automatizarse. La IA no sustituye a “los mejores”, pero sí reduce drásticamente la necesidad de grandes equipos para tareas rutinarias.
 
 El resultado es claro: **menos personas haciendo más trabajo**, apoyadas por sistemas automáticos.
 
-Me habéis oído hablar muchas veces que el principal peligro que veo es [la ruptura de los jóvenes en el acceso a los trabajos](https://emirodgar.es/impacto-ia-trabajos) debido a que la IA hará de manera más eficiente el trabajo de los perfiles más juniors. Si lo miramos como un empresario, es una situación lógica, pero, si un trabajar joven e inexperto no tiene la opción de empezar desde abajo para adquirir esa experiencia, ¿cómo podrá llegar a convertirse en un trabajador experto?.
+Me habéis oído hablar muchas veces que el principal peligro que veo es [la ruptura de los jóvenes en el acceso a los trabajos](https://emirodgar.es/impacto-ia-trabajos) debido a que la IA hará de manera más eficiente el trabajo de los perfiles más juniors, lo que obliga a plantearse en serio [cómo adaptar la IA en un entorno profesional](https://emirodgar.es/adoptar-ia) antes de que sea demasiado tarde. Si lo miramos como un empresario, es una situación lógica, pero, si un trabajar joven e inexperto no tiene la opción de empezar desde abajo para adquirir esa experiencia, ¿cómo podrá llegar a convertirse en un trabajador experto?.
 
 ## ¿Qué mensaje están enviando Meta y Microsoft al resto del mercado?
 

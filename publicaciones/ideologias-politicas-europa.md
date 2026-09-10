@@ -17,7 +17,7 @@ permalink: ideologias-politicas-europa
 # Comparación de las ideologías políticas en España y Europa
 
 ¿En qué medida difiere la política española del resto de Europa? ¿Dónde se posicionan nuestros partidos en el panorama ideológico europeo? 
-Este artículo ofrece un análisis comparativo para comprender mejor el contexto político europeo en el que se sitúa España.
+Este artículo ofrece un análisis comparativo para comprender mejor el contexto político europeo en el que se sitúa España. Si antes quieres repasar las corrientes propias del país, puedes leer nuestro artículo sobre [las ideologías políticas en España](https://emirodgar.es/ideologias-politicas).
 
 ### Una perspectiva europea de las ideologías políticas 
 
@@ -36,7 +36,7 @@ Comparar ideologías no es solo un ejercicio académico, sino que nos permite:
 - Situar el debate público más allá de las fronteras nacionales.  
 - Analizar cómo España se adapta o no a las tendencias globales.
 
-En la siguiente tabla podemos ver los diferentes partidos políticos según el país europeo al que pertenecen.
+En la siguiente tabla podemos ver los diferentes partidos políticos según el país europeo al que pertenecen. Para ver a qué grupo parlamentario concreto se integra cada partido español en el Parlamento Europeo, consulta nuestro análisis de los [partidos políticos europeos](https://emirodgar.es/partidos-politicos-europeos).
 
 
 | Ideología                   | España                    | Francia                     | Alemania                   | Italia                    | Países Bajos            |

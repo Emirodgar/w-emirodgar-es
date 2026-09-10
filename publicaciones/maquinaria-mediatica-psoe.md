@@ -88,7 +88,7 @@ En el otro extremo, la oposición ha tendido a confiar en que bastan los datos, 
 
 Otro rasgo central del relato socialista es la **definición clara de un enemigo colectivo**: PP, Vox, "ultraderecha", "fachosfera", "máquina del fango", "pseudomedios". Todo se agrupa en una misma **constelación de adversarios**.
 
-Esta estrategia sirve para varias cosas:
+Esta estrategia sirve para varias cosas, aunque simplifica mucho la disparidad real de las [ideologías políticas que conviven en España](https://emirodgar.es/ideologias-politicas):
 
 - **Simplifica** el mapa político: los buenos frente a los malos.  
 - **Moviliza** a la base propia con un relato de amenaza constante.  
@@ -101,13 +101,13 @@ Cuando medios críticos se etiquetan como "pseudomedios" o "máquina del fango",
 
 ### ¿Cómo se ha adaptado el PSOE al terreno digital?
 
-La presencia en redes sociales ha pasado de ser algo accesorio a convertirse en **parte central de la comunicación política**. El PSOE ha asumido que una parte clave de la conversación, sobre todo entre jóvenes, ya ocurre en plataformas como TikTok o Instagram.
+La presencia en redes sociales ha pasado de ser algo accesorio a convertirse en **parte central de la comunicación política**, algo que se aprecia bien al comparar la [presencia digital de los últimos tres presidentes de España](https://emirodgar.es/analisis-presidentes-espana). El PSOE ha asumido que una parte clave de la conversación, sobre todo entre jóvenes, ya ocurre en plataformas como TikTok o Instagram.
 
 En TikTok, el partido y La Moncloa han lanzado perfiles oficiales con contenido adaptado al lenguaje propio de la plataforma: vídeos cortos, mensajes directos y un punto de "salseo institucional" para resultar cercanos. Aquí el objetivo no es tanto explicar políticas complejas, sino **construir identidad y simpatía**.
 
 Instagram se utiliza para algo similar: directos con dirigentes, mezcla de política y vida personal, cuidada gestión de la imagen. Es la versión actualizada de la entrevista amable en un programa de televisión, pero **controlando el formato y el contexto**.
 
-Mientras tanto, otros actores han apostado por formatos más experimentales, como el uso intensivo de inteligencia artificial en campañas, con resultados irregulares y polémicas añadidas. En ese terreno, el PSOE ha preferido una innovación más **controlada y menos arriesgada**.
+Mientras tanto, otros actores han apostado por formatos más experimentales, como el uso intensivo de inteligencia artificial en campañas, con resultados irregulares y polémicas añadidas, en un terreno donde ya empieza a discutirse [la neutralidad política real de estos modelos](https://emirodgar.es/neutralidad-llm). En ese terreno, el PSOE ha preferido una innovación más **controlada y menos arriesgada**.
 
 
 ## ¿Cómo se coordinan Moncloa y Ferraz en comunicación?
@@ -116,7 +116,7 @@ Mientras tanto, otros actores han apostado por formatos más experimentales, com
 
 Uno de los puntos diferenciales de esta maquinaria es la **coordinación interna**. La línea entre comunicación gubernamental (Moncloa) y comunicación de partido (Ferraz) es cada vez más fina.
 
-El hecho de que responsables de prensa del PSOE hayan pasado a ocupar cargos clave en la Secretaría de Estado de Comunicación ayuda a consolidar un **mensaje unificado**. La misma estructura que gestiona ruedas de prensa, turnos de preguntas y convocatorias es la que, en la práctica, decide quién tiene acceso y quién no.
+El hecho de que responsables de prensa del PSOE hayan pasado a ocupar cargos clave en la Secretaría de Estado de Comunicación, un patrón habitual entre los [asesores políticos en España](https://emirodgar.es/asesores-politicos), ayuda a consolidar un **mensaje unificado**. La misma estructura que gestiona ruedas de prensa, turnos de preguntas y convocatorias es la que, en la práctica, decide quién tiene acceso y quién no.
 
 Si ciertos medios quedan sistemáticamente fuera de las preguntas o se les limita la presencia, el mensaje es claro: **el Gobierno elige con quién habla y en qué condiciones**. Y eso refuerza la idea de un sistema de comunicación **cerrado, jerarquizado y fuertemente controlado**.
 
@@ -129,7 +129,7 @@ Uno de los grandes relatos de éxito del PSOE ha sido presentarse como **"el par
 
 Cada medida —igualdad laboral, reformas legales, subida del salario mínimo— se integra en un mismo marco: **símbolos de progreso y justicia social**, especialmente para las mujeres. Las grandes movilizaciones del 8M se han utilizado como validación de esta identidad, proyectando la imagen de una España "a la vanguardia" bajo gobiernos socialistas.
 
-Este relato ha sido muy eficaz para **conectar con votantes jóvenes urbanos**, aunque las encuestas recientes apuntan a cierto desgaste. Cuando el discurso aspiracional choca con problemas cotidianos (precariedad, alquiler, sueldos), la brecha entre relato y experiencia personal se hace más visible.
+Este relato ha sido muy eficaz para **conectar con votantes jóvenes urbanos**, aunque las [encuestas de intención de voto](https://emirodgar.es/encuestas-intencion-voto) más recientes apuntan a cierto desgaste. Cuando el discurso aspiracional choca con problemas cotidianos (precariedad, alquiler, sueldos), la brecha entre relato y experiencia personal se hace más visible.
 
 ### ¿Cómo se ha construido la imagen de España como referente progresista?
 

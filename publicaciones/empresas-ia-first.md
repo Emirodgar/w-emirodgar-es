@@ -18,7 +18,7 @@ El enfoque "IA First" está revolucionando la manera en que organizaciones de to
 
 ## El concepto IA First: más allá de la simple adopción tecnológica
 
-Adoptar un enfoque "IA First" significa colocar la inteligencia artificial como el elemento central de la estrategia organizativa. No se trata solo de implementar herramientas de IA en procesos existentes, sino de repensar completamente cómo funciona la organización con la IA como punto de partida. Como señala Luis von Ahn, CEO de Duolingo, esta filosofía implica aceptar que "no podemos esperar a que la tecnología sea perfecta al 100%. Preferimos movernos con urgencia y asumir pequeños errores de calidad ocasionales que avanzar despacio y perder la oportunidad".
+Adoptar un enfoque "IA First" significa colocar la inteligencia artificial como el elemento central de la estrategia organizativa, una responsabilidad que en muchas organizaciones recae directamente en la figura del [Chief AI Officer](https://emirodgar.es/chief-ai-officer). No se trata solo de implementar herramientas de IA en procesos existentes, sino de repensar completamente cómo funciona la organización con la IA como punto de partida. Como señala Luis von Ahn, CEO de Duolingo, esta filosofía implica aceptar que "no podemos esperar a que la tecnología sea perfecta al 100%. Preferimos movernos con urgencia y asumir pequeños errores de calidad ocasionales que avanzar despacio y perder la oportunidad".
 
 Este concepto va mucho más allá de ver la IA como un simple asistente o copiloto. Adoptar un modelo "IA First" implica integrar la inteligencia artificial como núcleo estratégico en cada etapa del negocio, desde la toma de decisiones hasta la personalización de ofertas y la automatización de procesos. Las organizaciones que abrazan este enfoque colocan la IA en el centro de sus operaciones y procesos de decisión, no como complemento sino como fundamento.
 
@@ -42,7 +42,7 @@ Como menciona Luis von Ahn, un aspecto fundamental es asumir que la implementaci
 
 ### 3. Competencias y talento humano
 
-La transformación "IA First" exige nuevas habilidades y conocimientos. Las empresas deben invertir en la capacitación de su personal existente y atraer nuevo talento especializado. Como indica la experiencia de BBVA, poner la IA en manos de expertos en diferentes áreas produce soluciones más efectivas y adaptadas.
+La transformación "IA First" exige nuevas habilidades y conocimientos. Las empresas deben invertir en la capacitación de su personal existente y atraer nuevo talento especializado, un proceso que pasa por el [upskilling, unskilling y reskilling](https://emirodgar.es/adoptar-ia) de sus equipos. Como indica la experiencia de BBVA, poner la IA en manos de expertos en diferentes áreas produce soluciones más efectivas y adaptadas.
 
 ### 4. Transparencia y ética
 
@@ -84,4 +84,4 @@ Como muestra la experiencia de Lowe's con OpenAI, ajustar los modelos de IA a la
 
 ### 4. Crear plataformas internas
 
-Mercado Libre desarrolló una plataforma interna llamada Verdi que ayuda a sus 17.000 desarrolladores a construir aplicaciones de IA de manera consistente y rápida. Este enfoque permite escalar la adopción a toda la organización.
+Mercado Libre desarrolló una plataforma interna llamada Verdi que ayuda a sus 17.000 desarrolladores a construir aplicaciones de IA de manera consistente y rápida. Este enfoque permite escalar la adopción a toda la organización, ya sea desarrollando plataformas propias o adoptando [herramientas de IA ya diseñadas para empresas](https://emirodgar.es/herramientas-ia-empresas).

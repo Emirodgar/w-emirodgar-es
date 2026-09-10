@@ -49,7 +49,7 @@ Lo estamos viendo en múltiples sectores:
 - Decisiones que antes eran intuitivas y ahora pueden apoyarse en datos.
 - Perfiles que necesitan reinventarse para seguir aportando valor.
 
-Y esto no es una amenaza. Es una realidad.
+Ese ajuste ya golpea con especial fuerza a los más jóvenes, como muestran los datos sobre [el impacto de la IA en los trabajos](https://emirodgar.es/impacto-ia-trabajos). Y esto no es una amenaza. Es una realidad.
 
 El problema no es que cambien las reglas. El problema es fingir que no están cambiando.
 
@@ -65,11 +65,11 @@ El *truth coping* obliga a hacerse preguntas incómodas:
 - ¿Qué puestos existen por inercia?
 - ¿Qué decisiones podrían automatizarse sin perder calidad?
 
-Aceptar que no todo aporta valor no es deshumanizar. Es **liberar recursos para lo que realmente importa**.
+Aceptar que no todo aporta valor no es deshumanizar. Es **liberar recursos para lo que realmente importa**. Ese ejercicio de honestidad también exige mirar de frente los [peligros más amplios de la inteligencia artificial](https://emirodgar.es/peligros-ia), en lugar de adoptarla sin cuestionarla.
 
 ### ¿Estamos tomando decisiones basadas en datos o en nostalgia?
 
-La nostalgia es cómoda. Da sensación de control. Pero no es una estrategia.
+La nostalgia es cómoda. Da sensación de control. Pero no es una estrategia. Tampoco lo es el exceso de entusiasmo: conviene recordar que, pese al ruido mediático, [la productividad todavía no refleja la revolución prometida por la IA](https://emirodgar.es/productividad-inteligencia-artificial-no-despega).
 
 Tomar decisiones alineadas con la realidad implica apoyarse en datos, contexto y análisis. Y también reconocer cuándo algo que funcionó en el pasado ya no encaja en el presente.
 

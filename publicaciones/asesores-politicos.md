@@ -23,7 +23,7 @@ Evolución del número de asesores del Gobierno de España (1990-2024)
 
 ### Comparativa por presidentes
 
-La evolución por mandatos presidenciales muestra diferencias significativas:
+La evolución por mandatos presidenciales muestra diferencias significativas, en la línea de lo que ya vimos al analizar la [presencia digital de estos mismos presidentes](https://emirodgar.es/analisis-presidentes-espana):
 
 
 | Presidente | Período | Máximo Asesores | Coste Anual (millones €) | Coste Total Acumulado (millones €) |
@@ -32,7 +32,7 @@ La evolución por mandatos presidenciales muestra diferencias significativas:
 | Mariano Rajoy | 2011-2018 | 595 | 30.8-39 | 230.6 |
 | Pedro Sánchez | 2018-presente | 924| 59-75.4 | 382+ |
 
-**Pedro Sánchez ha establecido múltiples récords históricos**: con 471 asesores exclusivos para la Presidencia del Gobierno, supera significativamente las cifras de Zapatero (455 asesores en Presidencia en 2010) y duplica prácticamente el número total de asesores de sus predecesores.
+**Pedro Sánchez ha establecido múltiples récords históricos**: con 471 asesores exclusivos para la Presidencia del Gobierno, supera significativamente las cifras de Zapatero (455 asesores en Presidencia en 2010) y duplica prácticamente el número total de asesores de sus predecesores, un salto que recuerda al que ya identificamos en su propio [currículum académico](https://emirodgar.es/cv-politicos) frente al de anteriores presidentes.
 
 ## Análisis de costes
 
@@ -131,7 +131,7 @@ Los expertos señalan varios riesgos:
 
 - **Concentración excesiva de poder** en el entorno presidencial
 - **Erosión de la confianza ciudadana** debido a la percepción de favoritismo
-- **Marginación de funcionarios de carrera** y estructuras técnicas especializadas
+- **Marginación de [funcionarios de carrera](https://emirodgar.es/analisis-funcionarios)** y estructuras técnicas especializadas
 - **Ineficiencia económica** que desvía recursos de áreas prioritarias
 
 

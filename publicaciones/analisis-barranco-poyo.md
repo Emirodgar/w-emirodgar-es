@@ -14,7 +14,7 @@ permalink: analisis-barranco-poyo
 
 # Análisis del desastre del Barranco del Poyo: Confrontación Política y Cobertura Mediática
 
-La catástrofe provocada por el desbordamiento del barranco del Poyo durante la DANA del 29 de octubre ha desencadenado no solo una emergencia humanitaria con 228 víctimas mortales en la provincia de Valencia, sino también una intensa batalla política entre el gobierno central (PSOE) y la Generalitat Valenciana (PP). En este análisis me voy a centrar en las publicaciones de medios para entender qué tipo de información se gestionó durante y después del desastre natural.
+La catástrofe provocada por el desbordamiento del barranco del Poyo durante la DANA del 29 de octubre ha desencadenado no solo una emergencia humanitaria con 228 víctimas mortales en la provincia de Valencia, sino también una intensa batalla política entre el gobierno central (PSOE) y la Generalitat Valenciana (PP), un patrón de confrontación institucional que se repetiría meses después con el [análisis del gran apagón eléctrico](https://emirodgar.es/analisis-apagon-electrico). En este análisis me voy a centrar en las publicaciones de medios para entender qué tipo de información se gestionó durante y después del desastre natural.
 
 ---
 
@@ -98,7 +98,7 @@ Estos son los principales medios y fuentes utilizadas para el análisis sobre el
 
 - **Valencia Plaza**: Información sobre la gestión de emergencias, declaraciones de la delegada del Gobierno y evolución de los trabajos de recuperación y limpieza tras el desastre.
 
-- **Agencia EFE**: Descripción técnica del barranco del Poyo, su peligrosidad, antecedentes históricos de inundaciones y detalles sobre la magnitud del caudal durante la DANA.
+- **Agencia EFE**: Descripción técnica del barranco del Poyo, su peligrosidad, antecedentes históricos de inundaciones y detalles sobre la magnitud del caudal durante la DANA, un tipo de evento extremo cuya frecuencia está vinculada al [cambio climático en España](https://emirodgar.es/analisis-cambio-climatico).
 
 - **Valencia Bonita**: Análisis histórico de inundaciones previas, datos sobre el caudal y la comparación con otros episodios catastróficos en la zona.
 
@@ -127,7 +127,7 @@ Dejo algunos ejemplos.
 
 ### Medios con enfoque equilibrado
 
-**Onda Cero** adopta un enfoque más equilibrado, exponiendo tanto las conclusiones judiciales como la defensa de la Generalitat. Se cita la afirmación de la jueza de que:
+**Onda Cero** adopta un enfoque más equilibrado, exponiendo tanto las conclusiones judiciales como la defensa de la Generalitat, en un ejercicio de gestión narrativa que también puede rastrearse en [la maquinaria mediática del PSOE bajo Pedro Sánchez](https://emirodgar.es/la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez). Se cita la afirmación de la jueza de que:
 
 > "La Administración Autonómica conocía perfectamente" que el barranco se había desbordado.
 

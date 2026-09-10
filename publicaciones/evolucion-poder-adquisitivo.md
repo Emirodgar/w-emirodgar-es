@@ -18,7 +18,7 @@ El análisis que se presenta sobre la pérdida de poder adquisitivo de los espa�
 ## La secuencia económica: del estímulo artificial a la factura real
 
 Podríamos analizar un periodo amplio de tiempo, pero creemos que tiene más sentido poner el foco en los últimos 5 años, especialmente con el impacto de la pandemia y las ayudas nacionales y aeuropeas que han venido después.
-La cadena de acontecimientos desde 2020 hasta la actualidad describe con precisión un fenómeno económico complejo que los datos oficiales confirman rotundamente. La expansión monetaria masiva del Banco Central Europeo a través del Programa de Compras de Emergencia ante la Pandemia (PEPP) alcanzó una dotación total de 1,85 billones de euros, mientras que en España los ERTE costaron al Estado más de 25.000 millones de euros, beneficiando a 4,15 millones de empleados en el momento más crítico.
+La cadena de acontecimientos desde 2020 hasta la actualidad describe con precisión un fenómeno económico complejo que los datos oficiales confirman rotundamente. La expansión monetaria masiva del Banco Central Europeo a través del Programa de Compras de Emergencia ante la Pandemia (PEPP) alcanzó una dotación total de 1,85 billones de euros, mientras que en España los ERTE costaron al Estado más de 25.000 millones de euros, beneficiando a 4,15 millones de empleados en el momento más crítico. Un gasto público disparado que, sumado al de las comunidades autónomas, ayuda a explicar la [elevada deuda autonómica](https://emirodgar.es/deuda-autonomias) que arrastra hoy España.
 
 <img width="983" class="img-responsive" alt="Evolución de la inflación acumulada en España desde 2020, mostrando el impacto progresivo en el poder adquisitivo" src="https://github.com/user-attachments/assets/9e856c8c-e3c2-47dd-b6ca-5a2f6340bde2" />
 Evolución de la inflación acumulada en España desde 2020, mostrando el impacto progresivo en el poder adquisitivo
@@ -76,7 +76,7 @@ El Tribunal de Cuentas ha identificado irregularidades en la gestión de los ERT
 
 Los datos más recientes sugieren una lenta recuperación del poder adquisitivo. La OCDE señala que España experimentó un crecimiento del poder adquisitivo del 1,9% en 2024, aunque esta mejora no compensa la pérdida acumulada de años anteriores. En comparación con 2019, el poder adquisitivo sigue siendo un 1% inferior.
 
-Sin embargo, esta recuperación es frágil y desigual. Los salarios reales en España han crecido sólo un 2,76% en treinta años, el cuarto peor desempeño de la OCDE. Esta cifra sugiere problemas estructurales que van más allá de la crisis coyuntural de la inflación.
+Sin embargo, esta recuperación es frágil y desigual. Los salarios reales en España han crecido sólo un 2,76% en treinta años, el cuarto peor desempeño de la OCDE. Esta cifra sugiere problemas estructurales que van más allá de la crisis coyuntural de la inflación, en un contexto global marcado además por un [índice de incertidumbre](https://emirodgar.es/indice-incertidumbre) que no deja de crecer.
 
 La evolución del poder adquisitivo de los españoles durante estos años representa la crónica de una crisis silenciosa que ha erosionado el nivel de vida de millones de familias. El análisis presentado inicialmente sobre las consecuencias del estímulo masivo y su posterior factura inflacionaria ha demostrado ser no solo certero, sino profético: **los españoles estamos pagando ahora, en forma de menor capacidad de compra, las políticas extraordinarias implementadas durante la pandemia**.
 

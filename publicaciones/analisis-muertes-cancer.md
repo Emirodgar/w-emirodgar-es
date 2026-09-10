@@ -15,7 +15,7 @@ permalink: analisis-muertes-cancer
 
 ## Tendencia general de la mortalidad por cáncer (2019-2024)
 
-El cáncer se ha consolidado como la **primera causa de muerte en España** desde 2023, representando el **26,6% del total de defunciones** en 2024. Los datos del Instituto Nacional de Estadística (INE) muestran una tendencia al alza sostenida en las muertes por cáncer, con **115.315 defunciones** registradas en 2024.
+El cáncer se ha consolidado como la **primera causa de muerte en España** desde 2023, representando el **26,6% del total de defunciones** en 2024, muy por delante de otras causas que también hemos analizado, como las [muertes por problemas de salud mental](https://emirodgar.es/muertes-salud-mental). Los datos del Instituto Nacional de Estadística (INE) muestran una tendencia al alza sostenida en las muertes por cáncer, con **115.315 defunciones** registradas en 2024.
 
 <img width="965" class="img-responsive" alt="Evolución de las defunciones por cáncer en España (2019-2024)" src="https://github.com/user-attachments/assets/e4093487-434c-4748-981a-606b3f66d5fd" />
 Evolución de las defunciones por cáncer en España (2019-2024)
@@ -73,4 +73,4 @@ Se estima que el **impacto diferido** de la pandemia podría traducirse en un in
 
 Las proyecciones indican que la **incidencia de cáncer** seguirá creciendo, con **296.103 nuevos casos** estimados para 2025 (incremento del 3,3% respecto a 2024). A largo plazo, se espera que España supere los **350.000 casos anuales** en 2050.
 
-La **convergencia lenta** de las tasas de mortalidad entre comunidades autónomas evidencia los avances desiguales en la reducción de la mortalidad por cáncer, reflejando diferencias en la prevalencia de factores de riesgo, acceso a atención adecuada y desigualdades en recursos sanitarios.
+La **convergencia lenta** de las tasas de mortalidad entre comunidades autónomas evidencia los avances desiguales en la reducción de la mortalidad por cáncer, reflejando diferencias en la prevalencia de factores de riesgo, acceso a atención adecuada y desigualdades en recursos sanitarios, unas competencias sanitarias transferidas a las comunidades autónomas cuyo personal analizamos en el [estudio sobre los funcionarios en España](https://emirodgar.es/analisis-funcionarios).

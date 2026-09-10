@@ -14,7 +14,7 @@ permalink: educacion-stem
 
 # El enfoque educativo STEM y su impacto en la educación española
 
-El enfoque **STEM** (Science, Technology, Engineering, Mathematics) representa una transformación fundamental en la educación española, integrando las disciplinas de ciencias, tecnología, ingeniería y matemáticas mediante metodologías interdisciplinarias. En España, este enfoque se ha ampliado frecuentemente a **STEAM**, incorporando las artes para fomentar la creatividad y el pensamiento crítico.
+El enfoque **STEM** (Science, Technology, Engineering, Mathematics) representa una transformación fundamental en la educación española, integrando las disciplinas de ciencias, tecnología, ingeniería y matemáticas mediante metodologías interdisciplinarias. En España, este enfoque se ha ampliado frecuentemente a **STEAM**, incorporando las artes para fomentar la creatividad y el pensamiento crítico. Este giro hacia la tecnología en las aulas conecta directamente con cómo [la irrupción de la IA está transformando la educación online](https://emirodgar.es/educacion-con-ia), redefiniendo tanto los contenidos como el valor de lo que se enseña.
 
 La situación actual presenta desafíos significativos: España se encuentra **por debajo de la media europea** en la elección de estudios STEM, con una preocupante disminución del 28% en las matriculaciones de ingenierías y arquitectura en los últimos 15 años. Esta tendencia contrasta dramáticamente con la creciente demanda del mercado laboral, que necesitará **90.000 profesionales STEM adicionales** en los próximos tres años.
 
@@ -63,7 +63,7 @@ Existe un **desajuste significativo** entre la oferta formativa y las necesidade
 
 ### Demanda creciente
 
-El sector STEM se ha consolidado como un **pilar fundamental** del desarrollo económico español, con una demanda laboral en constante crecimiento. Las profesiones STEM ofrecen:
+El sector STEM se ha consolidado como un **pilar fundamental** del desarrollo económico español, con una demanda laboral en constante crecimiento, mientras que otros perfiles se enfrentan a un futuro mucho más incierto, como recogen nuestros análisis sobre las [profesiones en riesgo por la inteligencia artificial](https://emirodgar.es/40-profesiones-en-riesgo-por-la-inteligencia-artificial) y los [puestos de trabajo que podrían verse afectados](https://emirodgar.es/trabajos-afectados-ia) en la próxima década. Las profesiones STEM ofrecen:
 
 - **Tasa de desempleo cercana al 0%**
 - **Salarios competitivos** y oportunidades de crecimiento

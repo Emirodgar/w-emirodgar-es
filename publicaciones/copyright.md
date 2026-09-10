@@ -16,7 +16,7 @@ permalink: que-es-copyright-y-por-que-importa
 
 Con la irrupción de la IA, el **copyright** o derecho de autor ha vuelto al centro del debate. La razón es sencilla: vivimos rodeados de contenido digital, lo creamos constantemente ([la IA ya genera más de la mitad](https://emirodgar.es/la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial)) y, además, la inteligencia artificial ha forzado a un cambio en las reglas del juego.
 
-Desde un tuit, un email o una presentación de trabajo hasta una novela, una canción o una línea de código. Todo eso es **expresión humana** y, por tanto, puede estar protegido por copyright. Aunque no siempre seamos conscientes.
+Desde un tuit, un email o una presentación de trabajo hasta una novela, una canción o una línea de código. Todo eso es **expresión humana** y, por tanto, puede estar protegido por copyright. Aunque no siempre seamos conscientes, sobre todo ahora que cada vez es más habitual [generar contenido con ayuda de la IA sin que resulte artificial](https://emirodgar.es/crear-contenido-ia).
 
 ## ¿Para qué sirve realmente el copyright?
 
@@ -87,7 +87,7 @@ Por ejemplo, en Estados Unidos existe además el conocido **fair use**, una exce
 
 ## ¿Qué pasa con el copyright y la inteligencia artificial?
 
-Aquí está el gran debate actual. Los sistemas de **IA generativa** se entrenan con enormes cantidades de contenido. Parte de ese contenido está protegido por copyright. Esto ha abierto preguntas clave:
+Aquí está el gran debate actual. Los sistemas de **IA generativa** se entrenan con enormes cantidades de contenido, buena parte de él obtenido mediante técnicas de [scraping con inteligencia artificial](https://emirodgar.es/scraping-ia) que dejan tras de sí las llamadas [huellas digitales de los robots de rastreo](https://emirodgar.es/huellas-digitales-robots). Parte de ese contenido está protegido por copyright. Esto ha abierto preguntas clave:
 
 - ¿Es legal entrenar modelos con obras protegidas sin permiso?
 - ¿Quién es responsable del contenido que genera una IA?

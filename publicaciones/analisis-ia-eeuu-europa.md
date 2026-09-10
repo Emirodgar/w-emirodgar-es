@@ -15,7 +15,7 @@ permalink: analisis-ia-eeuu-europa
 
 El *Presidential AI Challenge* es una iniciativa lanzada por el presidente Donald Trump mediante una orden ejecutiva firmada el 23 de abril de 2025. Su objetivo es fomentar la educación y el desarrollo de habilidades en inteligencia artificial (IA) entre estudiantes y educadores en Estados Unidos. Este desafío busca destacar logros en IA, promover la adopción tecnológica en diversas regiones y fortalecer la colaboración entre el gobierno, el mundo académico, la filantropía y la industria para abordar desafíos nacionales mediante soluciones basadas en IA.
 
-Vamos a explorar sus fortalezas, sus debilidades y cómo se puede comparar con lo que estamos haciendo desde europa.
+Vamos a explorar sus fortalezas, sus debilidades y cómo se puede comparar con lo que estamos haciendo desde europa, donde voces como la de [José María Lassalle](https://emirodgar.es/jose-maria-lassalle) insisten en que el continente debe definir su propio modelo de IA en lugar de imitar a Estados Unidos o China.
 
 ### Fortalezas de la iniciativa estadounidense (“Presidential AI Challenge”)
 
@@ -29,7 +29,7 @@ Vamos a explorar sus fortalezas, sus debilidades y cómo se puede comparar con l
 
 - **Enfoque regulatorio y ético menos robusto:** Mientras EE. UU. prioriza la rapidez en la capacitación y la adopción de IA, Europa lidera en la creación de marcos regulatorios sólidos, como el AI Act, que establece requisitos estrictos de seguridad, transparencia y ética para el uso de IA en educación, clasificando muchas aplicaciones como “alto riesgo” y prohibiendo, por ejemplo, sistemas de inferencia emocional en el aula.
 - **Estrategia de talento menos estructurada internacionalmente:** Europa impulsa el reclutamiento internacional de expertos, becas paneuropeas y la creación de academias de habilidades en IA (AI Skills Academy), con programas formales de certificación reconocidos internacionalmente, como la EITCA/AI Academy.
-- **Infraestructura e inversión a gran escala:** El AI Continent Action Plan de la UE contempla la construcción de “AI factories” y “gigafactories” para dotar de infraestructura de supercomputación al ecosistema educativo y empresarial, además de movilizar inversiones públicas y privadas por miles de millones de euros para el desarrollo de talento y tecnología.
+- **Infraestructura e inversión a gran escala:** El [AI Continent Action Plan](https://emirodgar.es/europa-ia) de la UE contempla la construcción de “AI factories” y “gigafactories” para dotar de infraestructura de supercomputación al ecosistema educativo y empresarial, además de movilizar inversiones públicas y privadas por miles de millones de euros para el desarrollo de talento y tecnología.
 - **Énfasis en la confianza y derechos fundamentales:** El modelo europeo pone especial atención en la protección de los derechos de los estudiantes, la privacidad y la equidad en el uso de IA educativa, elementos menos visibles en la estrategia estadounidense actual.
 
 ## Tabla comparativa: EE. UU. vs. Europa en educación y talento en IA
@@ -48,7 +48,7 @@ Vamos a explorar sus fortalezas, sus debilidades y cómo se puede comparar con l
 
 ## Recomendaciones para mejorar la claridad e impacto del mensaje
 
-- **Resaltar la diferencia clave:** Mientras EE. UU. apuesta por la rapidez y la democratización del acceso a la IA, Europa prioriza la regulación, la ética y la infraestructura a gran escala.
+- **Resaltar la diferencia clave:** Mientras EE. UU. apuesta por la rapidez y la democratización del acceso a la IA, Europa prioriza la regulación, la ética y la infraestructura a gran escala. Esa apuesta por la formación temprana también choca con un problema estructural propio, como la baja vocación por los estudios [STEM en España](https://emirodgar.es/educacion-stem).
 - **Incluir ejemplos concretos:** Mencionar iniciativas europeas como la EITCA/AI Academy, el AI Skills Academy o las AI Factories puede ilustrar la magnitud y el enfoque sistémico de la estrategia europea.
 - **Matizar el impacto social:** Subrayar cómo la protección de derechos y la confianza en la tecnología son pilares del modelo europeo, en contraste con el énfasis estadounidense en la capacitación y la competitividad.
 - **Citar cifras relevantes:** Por ejemplo, el volumen de inversión europea o el alcance de los programas de certificación puede aportar contexto y peso al análisis.

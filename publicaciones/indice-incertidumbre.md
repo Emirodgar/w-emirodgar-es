@@ -30,12 +30,12 @@ Para España, esto es particularmente relevante. Un estudio del Banco de España
 - La inversión se desploma de manera más pronunciada (**unos 0,9 puntos porcentuales**) aunque se recupera relativamente rápido.
 - El consumo privado cae menos (**unos 0,25 puntos porcentuales**) pero durante más tiempo.
 
-En un país con tasas de desempleo estructuralmente altas y una economía muy dependiente del sector servicios y el turismo, estos efectos pueden ser especialmente dañinos. La incertidumbre actual podría frenar la recuperación económica post-pandémica y complicar la gestión de la deuda pública.
+En un país con tasas de desempleo estructuralmente altas y una economía muy dependiente del sector servicios y el turismo, estos efectos pueden ser especialmente dañinos, sobre todo cuando ya hemos visto cómo se ha erosionado el [poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo) en los últimos años. La incertidumbre actual podría frenar la recuperación económica post-pandémica y complicar la gestión de la [deuda pública](https://emirodgar.es/deuda-autonomias).
 
 ---
 
 
-La medición de la incertidumbre a través de índices como el WUI no es un mero ejercicio académico. Gobiernos de todo el mundo, incluido el español, utilizan estos datos para informar sus políticas económicas. Lo interesante es que estos índices capturan tanto la incertidumbre a corto plazo (como el Brexit) como la de largo plazo (cambio climático, transiciones tecnológicas).
+La medición de la incertidumbre a través de índices como el WUI no es un mero ejercicio académico. Gobiernos de todo el mundo, incluido el español, utilizan estos datos para informar sus políticas económicas. Lo interesante es que estos índices capturan tanto la incertidumbre a corto plazo (como el Brexit) como la de largo plazo (cambio climático, transiciones tecnológicas), e incluso factores geopolíticos que explican decisiones como el aumento del gasto en defensa, tal y como recogimos en nuestro [análisis de las Fuerzas Armadas españolas](https://emirodgar.es/analisis-ejercitos).
 
 Para las empresas españolas, especialmente las orientadas a la exportación, monitorizar estos índices puede ser una herramienta valiosa para la planificación estratégica. Los sectores con mayores restricciones financieras suelen ser los más afectados por la incertidumbre, por lo que **las pymes deberían prestar especial atención**.
 

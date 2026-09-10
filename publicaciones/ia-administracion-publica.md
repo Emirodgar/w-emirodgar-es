@@ -19,9 +19,9 @@ La inteligencia artificial está transformando rápidamente todos los sectores d
 
 ## La situación actual de la IA en la administración pública española
 
-España ha dado pasos significativos para posicionarse en la vanguardia de la regulación e implementación de la IA. El Consejo de Ministros aprobó recientemente la Estrategia de Inteligencia Artificial 2024, un plan ambicioso que contará con 1.500 millones de euros adicionales a los 600 millones ya movilizados, procedentes fundamentalmente del Plan de Recuperación, Transformación y Resiliencia. Esta estrategia busca consolidar y expandir el uso de la IA tanto en el conjunto de la economía como en la administración pública.
+España ha dado pasos significativos para posicionarse en la vanguardia de la regulación e implementación de la IA. El Consejo de Ministros aprobó recientemente la Estrategia de Inteligencia Artificial 2024, un plan ambicioso que contará con 1.500 millones de euros adicionales a los 600 millones ya movilizados, procedentes fundamentalmente del Plan de Recuperación, Transformación y Resiliencia. Esta estrategia es precisamente la que financió el proyecto [ALIA](https://emirodgar.es/alia-promesa-fallida-ia-publica-espana), la gran apuesta pública por un modelo de lenguaje en español, y busca consolidar y expandir el uso de la IA tanto en el conjunto de la economía como en la administración pública.
 
-Adicionalmente, en marzo de 2025, el Gobierno dio luz verde al anteproyecto de ley de gobernanza de la Inteligencia Artificial, que adapta la legislación española al reglamento europeo de IA. Entre las iniciativas más destacadas se encuentra la puesta en marcha de un Sandbox en materia de IA, un proyecto novedoso destinado a ayudar a proveedores, responsables, operadores y reguladores a establecer un marco claro de cumplimiento de requisitos y obligaciones.
+Adicionalmente, en marzo de 2025, el Gobierno dio luz verde al anteproyecto de ley de gobernanza de la Inteligencia Artificial, que adapta la legislación española al [reglamento europeo de IA](https://emirodgar.es/europa-ia). Entre las iniciativas más destacadas se encuentra la puesta en marcha de un Sandbox en materia de IA, un proyecto novedoso destinado a ayudar a proveedores, responsables, operadores y reguladores a establecer un marco claro de cumplimiento de requisitos y obligaciones.
 
 Sin embargo, a pesar de estos avances, persisten importantes desafíos que requieren una atención urgente por parte de las administraciones públicas.
 
@@ -49,7 +49,7 @@ La falta de transparencia en el uso de algoritmos e IA por parte de las administ
 
 En España, la Ley 1/2022 de Transparencia y Buen Gobierno de la Comunitat Valenciana fue pionera al obligar a las administraciones públicas a publicar "la relación de sistemas de inteligencia artificial de alto riesgo" y los "sistemas automatizados y sistemas de inteligencia artificial de uso general cuyo empleo impacte de manera significativa en los procedimientos administrativos o la prestación de los servicios públicos".
 
-Sin embargo, la implementación efectiva de estas obligaciones de transparencia sigue siendo limitada. Como ocurre en el ámbito privado, donde un estudio revela que las empresas españolas suspenden en transparencia algorítmica, la administración pública se enfrenta a retos similares.
+Sin embargo, la implementación efectiva de estas obligaciones de transparencia sigue siendo limitada. Como ocurre en el ámbito privado, donde un estudio revela que las empresas españolas suspenden en transparencia algorítmica, la administración pública se enfrenta a retos similares, como demuestra la polémica sobre [cómo se ha entrenado la IA pública española con contenido protegido sin permiso](https://emirodgar.es/ia-publica-contenido-entrenamiento).
 
 ### El dilema ético: ¿ocultar o declarar el uso de IA?
 
@@ -142,6 +142,6 @@ En mi día a día como [consultor SEO](https://emirodgar.com/), veo constantemen
 
 Y si te suena a utopía, piensa que hace solo unos años usar IA para resumir textos, detectar fraudes o predecir patrones de comportamiento también parecía cosa de Silicon Valley. Hoy, con herramientas como ChatGPT, esto ya está al alcance de cualquier persona u organización.
 
-En mi opinión, convertir la innovación digital en un **proyecto estratégico dentro de la administración pública** no debería ser una opción. Debería ser una prioridad. Ya no hablamos solo de modernizar trámites o poner formularios online. Estamos hablando de replantear desde dentro cómo se toman decisiones, cómo se redactan leyes, cómo se priorizan recursos.
+En mi opinión, convertir la innovación digital en un **proyecto estratégico dentro de la administración pública** no debería ser una opción. Debería ser una prioridad, y un buen punto de partida sería aprovechar las [ventajas que ya se están viendo a nivel local en los ayuntamientos](https://emirodgar.es/ia-ayuntamientos). Ya no hablamos solo de modernizar trámites o poner formularios online. Estamos hablando de replantear desde dentro cómo se toman decisiones, cómo se redactan leyes, cómo se priorizan recursos.
 
 La IA no va a resolver todos los problemas de la administración. Pero ignorarla sí puede crearnos unos cuantos nuevos

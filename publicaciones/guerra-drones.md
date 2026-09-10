@@ -44,7 +44,7 @@ La mayoría de países **no han adaptado todavía su estrategia, doctrina ni sis
 
 Las defensas tradicionales están pensadas para amenazas grandes, visibles y costosas. No para enjambres de pequeños dispositivos que vuelan bajo, son difíciles de detectar y pueden atacar de forma coordinada.
 
-Esta brecha genera una **vulnerabilidad crítica** que puede ser explotada tanto por estados como por grupos terroristas o actores no estatales.
+Esta brecha genera una **vulnerabilidad crítica** que puede ser explotada tanto por estados como por grupos terroristas o actores no estatales. Y España no es una excepción, como muestra nuestro [análisis comparativo de las Fuerzas Armadas españolas frente al resto de la Unión Europea](https://emirodgar.es/analisis-ejercitos).
 
 ## ¿Qué riesgos añade el contexto actual?
 
@@ -69,7 +69,7 @@ Los estados necesitan:
 Mirar hacia otro lado no es una opción.
 
 Los drones son una muestra clara de algo que ya sabemos, pero a veces olvidamos:  
-**la tecnología no es neutral**, depende de cómo y para qué se use.
+**la tecnología no es neutral**, depende de cómo y para qué se use. Esta lógica de dejar decisiones críticas en manos de algoritmos conecta con otros [peligros más amplios de la inteligencia artificial](https://emirodgar.es/peligros-ia) que ya hemos analizado, especialmente en lo relativo a la autonomía de las máquinas.
 
 La guerra con drones es triste, silenciosa y peligrosa precisamente porque parece sencilla. Entenderla, anticiparla y prepararse no es alarmismo, es sentido común.
 

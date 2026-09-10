@@ -14,7 +14,7 @@ permalink: analisis-apagon-electrico
 
 # Análisis del gran apagón eléctrico en España 
 
-El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 2025 ha generado múltiples hipótesis y enfoques sobre sus causas y responsabilidades. 
+El apagón eléctrico masivo que afectó a España y Portugal el 28 de abril de 2025 ha generado múltiples hipótesis y enfoques sobre sus causas y responsabilidades, en un patrón de [confrontación política entre administraciones similar al vivido tras la DANA de Valencia](https://emirodgar.es/analisis-barranco-poyo). 
 A continuación, analizamos la gestión política así como el tratamiento mediático que se hizo de dicho evento.
 
 ---
@@ -75,7 +75,7 @@ Si agrupamos la información asociada a cada partido, identificaremos los bloque
 - **Narrativa mediática**:
   - Titulares destacan la gravedad del evento (“apagón masivo”, “colapso energético”).
   - Reivindicaciones de claridad, responsabilidades y revisión del modelo energético (“oligopolio energético”, “red pública”).
-  - Polarización discursiva reflejada tanto en portadas como en declaraciones públicas.
+  - Polarización discursiva reflejada tanto en portadas como en declaraciones públicas, un patrón que conecta con la [evolución de la comunicación digital de los últimos presidentes de España](https://emirodgar.es/analisis-presidentes-espana) en la gestión de crisis.
 
 
 ---
@@ -155,7 +155,7 @@ Damos conexto sobre las hipótesis tratadas en los medios digitales durante esos
 
 ### Responsabilidad institucional
 
-- Pedro Sánchez evitó descartar hipótesis y anunció una investigación liderada por el Ministerio de Transición Ecológica, con énfasis en exigir responsabilidades a operadores privados.
+- Pedro Sánchez evitó descartar hipótesis y anunció una investigación liderada por el Ministerio de Transición Ecológica, un ejercicio de control del relato en línea con [la maquinaria mediática construida por el PSOE bajo su liderazgo](https://emirodgar.es/la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez), con énfasis en exigir responsabilidades a operadores privados.
 
 ### Cobertura internacional
 

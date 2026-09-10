@@ -15,7 +15,7 @@ permalink: elecciones-generales
 
 # Resultados elecciones generales 2023
 
-> Hemos realizado también un [análisis de intención de voto](https://emirodgar.es/encuestas-intencion-voto) de cara a las próximas elecciones.
+> Hemos realizado también un [análisis de intención de voto](https://emirodgar.es/encuestas-intencion-voto) de cara a las próximas elecciones, así como un repaso a cómo se comportó el [CIS](https://emirodgar.es/cis) en la predicción de estos mismos comicios.
 
 Las elecciones generales en España tuvieron lugar el domingo 23 de julio de 2023.​ Fueron las decimosextas elecciones generales democráticas, las quintas con Felipe VI como rey y las primeras celebradas en un mes de julio.
 
@@ -101,7 +101,7 @@ Si visualizamos únicamente los escaños obtenidos, así es como quedarían los 
 | **CCD**                | -         | 100         | +100             |
 
 
-También está disponible el [análisis por Comunidad Autónoma](https://emirodgar.es/elecciones-generales-comunidades). 
+También está disponible el [análisis por Comunidad Autónoma](https://emirodgar.es/elecciones-generales-comunidades). Para entender por qué partidos como PACMA o CUP se quedaron sin representación pese a superar en votos a otras formaciones con escaño, conviene revisar cómo funciona la [Ley D'Hondt](https://emirodgar.es/ley-dhondt).
 
 
 ## Evolución elecciones generales en España

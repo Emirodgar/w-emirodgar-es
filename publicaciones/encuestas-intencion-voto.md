@@ -71,11 +71,11 @@ El trabajo de campo del CIS de julio se realizó del 1 al 7 de julio, justo desp
 
 El **bloque de derecha (PP + Vox)** ha experimentado un fortalecimiento considerable. En las encuestas de julio, la suma de ambas formaciones oscila entre el 48,5% (según 40dB) y el 50,9% (según DYM). Por el contrario, el **bloque de gobierno (PSOE + Sumar + Podemos)** se sitúa entre el 37% y el 39%, dependiendo de la encuesta consultada.
 
-La fragmentación del espacio de izquierdas también se refleja en los datos: Podemos mantiene entre el 3,7% y el 5,4% del voto, consolidando su separación de Sumar. Se Acabó La Fiesta (SALF), el partido de Alvise Pérez, oscila entre el 1% y el 2,5%, mostrando cierta estabilización tras su irrupción inicial.
+La fragmentación del espacio de izquierdas también se refleja en los datos: Podemos mantiene entre el 3,7% y el 5,4% del voto, consolidando su separación de Sumar. Se Acabó La Fiesta (SALF), el partido de Alvise Pérez, oscila entre el 1% y el 2,5%, mostrando cierta estabilización tras su irrupción inicial, aunque su primer test autonómico en [Aragón](https://emirodgar.es/analisis-salf-elecciones) dejó claro lo difícil que resulta convertir ese apoyo en escaños.
 
 ## Perspectivas electorales y proyección de escaños
 
-Las encuestas con proyección de escaños coinciden en otorgar al PP entre 145 y 158 diputados, cifras que le acercarían significativamente a la mayoría absoluta (176 escaños). El PSOE se situaría entre 104 y 110 escaños, perdiendo entre 10 y 17 diputados respecto a su resultado de 2023.
+Las encuestas con proyección de escaños coinciden en otorgar al PP entre 145 y 158 diputados, cifras que le acercarían significativamente a la mayoría absoluta (176 escaños). El PSOE se situaría entre 104 y 110 escaños, perdiendo entre 10 y 17 diputados respecto a su [resultado de 2023](https://emirodgar.es/elecciones-generales).
 
 La suma PP + Vox alcanzaría entre 192 y 202 escaños según las diferentes proyecciones, superando holgadamente la mayoría absoluta. Esta configuración representaría un cambio radical respecto al actual equilibrio parlamentario y podría facilitar un eventual cambio de gobierno.
 

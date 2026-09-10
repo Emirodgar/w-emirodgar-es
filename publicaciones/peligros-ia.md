@@ -35,13 +35,13 @@ El uso de esta tecnología puede facilitar el **doxxing**, un proceso en el que 
 
 ## 4. Desplazamiento laboral y pérdida de empleos
 
-Uno de los temores más extendidos respecto a la inteligencia artificial es su impacto en el empleo. La automatización y la IA están reemplazando trabajos humanos en sectores como la manufactura, la atención al cliente e incluso en profesiones creativas como el diseño gráfico y la redacción. Si bien la tecnología puede mejorar la eficiencia, también existe el riesgo de que millones de trabajadores sean desplazados, sin contar con las habilidades necesarias para adaptarse a este nuevo entorno laboral.
+Uno de los temores más extendidos respecto a la inteligencia artificial es su impacto en el empleo. La automatización y la IA están reemplazando trabajos humanos en sectores como la manufactura, la atención al cliente e incluso en profesiones creativas como el diseño gráfico y la redacción. Si bien la tecnología puede mejorar la eficiencia, también existe el riesgo de que millones de trabajadores sean desplazados, sin contar con las habilidades necesarias para adaptarse a este nuevo entorno laboral. Ya hemos repasado con más detalle qué [puestos de trabajo podrían verse afectados en los próximos años](https://emirodgar.es/trabajos-afectados-ia).
 
 ## 5. Discriminación algorítmica y sesgos de IA
 
-Otro peligro creciente es la discriminación algorítmica. Las IA no son imparciales; dependen de los datos con los que son entrenadas, y si estos datos son sesgados, los algoritmos pueden perpetuar esas desigualdades. En sectores como el empleo, la justicia penal y el crédito, la IA podría tomar decisiones sesgadas que afecten negativamente a minorías o grupos vulnerables, exacerbando la discriminación existente.
+Otro peligro creciente es la discriminación algorítmica. Las IA no son imparciales; dependen de los datos con los que son entrenadas, y si estos datos son sesgados, los algoritmos pueden perpetuar esas desigualdades. En sectores como el empleo, la justicia penal y el crédito, la IA podría tomar decisiones sesgadas que afecten negativamente a minorías o grupos vulnerables, exacerbando la discriminación existente. Un sesgo que también hemos detectado al analizar la [neutralidad política de los principales modelos de lenguaje](https://emirodgar.es/neutralidad-llm).
 
 ## 6. Autonomía y toma de decisiones en manos de máquinas
 
-El desarrollo de vehículos autónomos, drones y otros sistemas de IA que toman decisiones de manera independiente también plantea riesgos. Si bien estos sistemas están diseñados para ser más eficientes y seguros, todavía existen preocupaciones sobre su capacidad para manejar situaciones
+El desarrollo de [vehículos autónomos](https://emirodgar.es/coches-autonomos), drones y otros sistemas de IA que toman decisiones de manera independiente también plantea riesgos. Si bien estos sistemas están diseñados para ser más eficientes y seguros, todavía existen preocupaciones sobre su capacidad para manejar situaciones
 

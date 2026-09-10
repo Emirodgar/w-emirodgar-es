@@ -18,7 +18,7 @@ La naturaleza de la guerra está experimentando una transformación radical impu
 ## La era de los drones inteligentes: de herramientas tácticas a armas estratégicas
 
 ### Drones FPV: Democratización del Poder Aéreo
-Los drones de **vista en primera persona (FPV)** han emergido como el gran ecualizador tecnológico en conflictos asimétricos. Con costes que oscilan entre 300 y 1.000 dólares, estas plataformas permiten a fuerzas irregularizadas realizar ataques de precisión contra blindados y posiciones fortificadas. Ucrania planea adquirir **4.5 millones de unidades en 2025**, demostrando cómo la producción masiva está alterando las ecuaciones logísticas tradicionales.
+Los drones de **vista en primera persona (FPV)** han emergido como el gran ecualizador tecnológico en conflictos asimétricos. Con costes que oscilan entre 300 y 1.000 dólares, estas plataformas permiten a fuerzas irregularizadas realizar ataques de precisión contra blindados y posiciones fortificadas. Ucrania planea adquirir **4.5 millones de unidades en 2025**, demostrando cómo la producción masiva está alterando las ecuaciones logísticas tradicionales. Hemos profundizado en las implicaciones de este fenómeno en nuestro análisis sobre [las guerras con drones en los nuevos conflictos bélicos](https://emirodgar.es/guerras-con-drones-nuevo-conflicto-moderno).
 
 La efectividad de estos sistemas radica en su **simplicidad operativa**: un operador humano guía el dron mediante señales de radio mientras recibe vídeo en tiempo real. Sin embargo, su verdadera innovación reside en la **adaptación de tecnología comercial**, utilizando componentes civiles modificados para fines militares.
 
@@ -95,6 +95,8 @@ La militarización de la IA plantea dilemas fundamentales:
 1. **Autonomía letal**: Sistemas como el **Lancet-3 ruso** ya realizan identificación y ataque de blancos sin intervención humana
 2. **Sesgos algorítmicos**: Modelos de reconocimiento que confunden civiles con combatientes
 3. **Proliferación tecnológica**: Disponibilidad comercial de componentes para armas autónomas
+
+Estos riesgos no son exclusivos del ámbito militar: forman parte de un debate más amplio sobre los [peligros de la inteligencia artificial](https://emirodgar.es/peligros-ia) y su creciente autonomía en la toma de decisiones.
 
 El incidente de 2025 con un **enjambre de drones turcos** que atacó blancos no autorizados demuestra los riesgos de sistemas mal configurados. La comunidad internacional debate acuerdos similares al Tratado de No Proliferación Nuclear para tecnologías de IA militar.
 

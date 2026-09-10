@@ -13,7 +13,7 @@ permalink: servicio-militar-obligatorio
 
 # Servicio militar obligatorio en España
 
-En España, actualmente no existe servicio militar obligatorio. Fue abolido en 2001 bajo el gobierno de José María Aznar, y **el modelo de las Fuerzas Armadas es completamente profesional**. La ministra de Defensa española ha descartado tajantemente (agosto de 2025) la vuelta del servicio militar obligatorio, argumentando que no hay en la actualidad una justificación geopolítica que lo requiera, a diferencia de algunos países europeos que sí mantienen o están reconsiderando esta medida debido a la amenaza rusa y otros factores. 
+En España, actualmente no existe servicio militar obligatorio. Fue abolido en 2001 bajo el gobierno de José María Aznar, y **el modelo de las [Fuerzas Armadas](https://emirodgar.es/analisis-ejercitos) es completamente profesional**. La ministra de Defensa española ha descartado tajantemente (agosto de 2025) la vuelta del servicio militar obligatorio, argumentando que no hay en la actualidad una justificación geopolítica que lo requiera, a diferencia de algunos países europeos que sí mantienen o están reconsiderando esta medida debido a la amenaza rusa y otros factores. 
 
 Sin embargo, algunas encuestas muestran que **entre el 30% y el 42% de los españoles podrían estar a favor de reinstaurar la mili**, aunque la mayoría se opone ligeramente. Legalmente, la Constitución española y la Ley de Objeción de Conciencia permiten la exención del servicio militar y la realización de una prestación social sustitutoria en caso de objeción.
 
@@ -61,7 +61,7 @@ El PP mantiene una postura más cautelosa, con solo un **37%** de apoyo entre su
 
 ### PSOE y Sumar - oposición clara
 
-Los partidos de izquierda se oponen rotundamente:
+Los partidos de izquierda, coherentes con las [ideologías políticas que representan hoy en España](https://emirodgar.es/ideologias-politicas), se oponen rotundamente:
 
 - **PSOE:** Solo el 32,7% de sus votantes apoyan la medida
 - **Sumar:** Apenas el 10,7% de respaldo

@@ -71,7 +71,7 @@ El mapa de la educación privada en España refleja una clara tendencia: **la ma
 
 ## ¿Cuánto cuesta estudiar en una universidad privada?
 
-El **precio medio anual** en una universidad privada española oscila entre **6.000 y 14.000 euros**, aunque algunas titulaciones pueden superar ampliamente esa cifra. En **Medicina**, por ejemplo, el coste total puede alcanzar los **145.000 euros**. En universidades como **CUNEF**, la matrícula anual ronda los **10.000 euros**.
+El **precio medio anual** en una universidad privada española oscila entre **6.000 y 14.000 euros**, aunque algunas titulaciones pueden superar ampliamente esa cifra, una carga que pesa cada vez más si se tiene en cuenta la [pérdida de poder adquisitivo de las familias españolas](https://emirodgar.es/evolucion-poder-adquisitivo) en la última década. En **Medicina**, por ejemplo, el coste total puede alcanzar los **145.000 euros**. En universidades como **CUNEF**, la matrícula anual ronda los **10.000 euros**.
 
 Por comparación, una carrera en una **universidad pública** cuesta unos **4.000 euros** al año. Aun así, las privadas suelen ofrecer **sistemas propios de becas**: la **Universidad Católica de Valencia**, por ejemplo, destinó **5,4 millones de euros** a ayudas en un solo curso.
 
@@ -80,7 +80,7 @@ En términos macroeconómicos, el **coste medio por alumno** en privadas equival
 
 ## ¿Qué papel juega la universidad pública en todo esto?
 
-Las **universidades públicas** españolas siguen siendo el pilar del sistema, pero su **financiación está estancada**. En 2022, las 47 universidades presenciales públicas ingresaron **11.358 millones de euros**, de los cuales el **65,7%** procedía de transferencias autonómicas. El **gasto en personal** representa el **65% del presupuesto**, lo que deja poco margen para innovar o expandirse.
+Las **universidades públicas** españolas siguen siendo el pilar del sistema, pero su **financiación está estancada**. En 2022, las 47 universidades presenciales públicas ingresaron **11.358 millones de euros**, de los cuales el **65,7%** procedía de transferencias autonómicas, un porcentaje relevante si se tiene en cuenta la [elevada deuda que arrastran muchas comunidades autónomas](https://emirodgar.es/deuda-autonomias). El **gasto en personal** representa el **65% del presupuesto**, lo que deja poco margen para innovar o expandirse.
 
 El gasto medio por estudiante universitario en España fue de **14.432 euros**, un **23,6% inferior** a la media de la OCDE. Este déficit estructural limita la capacidad de crecimiento de la educación pública, mientras el sector privado aprovecha ese espacio con agilidad empresarial y financiación externa.
 

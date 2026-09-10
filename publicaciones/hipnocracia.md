@@ -30,6 +30,8 @@ El libro argumenta que el poder contemporáneo opera mediante:
 - **Algoritmos y medios de masas** como herramientas para modular la atención y crear realidades paralelas, donde la distinción entre verdad y ficción se desdibuja.
 - **Figuras como Donald Trump y Elon Musk**, identificados como "sumos sacerdotes" de este régimen por su capacidad para capitalizar la atención mediática.
 
+Este tipo de control narrativo mediante algoritmos y aparatos de comunicación no es exclusivo de ficciones filosóficas: en España hemos analizado dinámicas similares en [la maquinaria mediática del PSOE bajo Pedro Sánchez](https://emirodgar.es/la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez).
+
 ## Impacto y controversias
 
 **Éxito editorial**:  
@@ -49,7 +51,7 @@ La periodista Samina Minardi reveló la inexistencia de Xun al intentar contacta
   El proyecto desafía conceptos tradicionales de autoría, al fusionar la intervención humana con la generación automática de contenidos.
 
 - **Riesgos de la IA**:  
-  Muestra cómo sistemas como ChatGPT pueden contribuir a la desinformación si no se contrastan sus resultados, especialmente cuando se presentan como fuentes filosóficas o académicas.
+  Muestra cómo sistemas como ChatGPT pueden contribuir a la desinformación si no se contrastan sus resultados, especialmente cuando se presentan como fuentes filosóficas o académicas, un riesgo que también aparece en el [sesgo político detectado en los principales modelos de lenguaje](https://emirodgar.es/neutralidad-llm).
 
 - **Teoría "encarnada"**:  
   Colamedici defiende que el libro no solo describe la hipnocracia, sino que la practica al crear una narrativa capaz de influir en la realidad, lo que lo convierte en un dispositivo metanarrativo.
@@ -90,4 +92,4 @@ El caso puso en evidencia vacíos legales:
 
 ---
 
-Este experimento evidencia tanto el potencial creativo de la IA como los dilemas éticos que surgen al emplearla sin transparencia. Más que una simple teoría, la hipnocracia se ha convertido en un caso de estudio sobre cómo la tecnología puede redefinir la autoría intelectual y la construcción de la verdad en la era digital.
+Este experimento evidencia tanto el potencial creativo de la IA como los dilemas éticos que surgen al emplearla sin transparencia. Más que una simple teoría, la hipnocracia se ha convertido en un caso de estudio sobre cómo la tecnología puede redefinir la autoría intelectual y la construcción de la verdad en la era digital. En el fondo, plantea la misma pregunta que aborda el [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial): nuestra capacidad para mirar de frente una realidad cada vez más mediada por algoritmos.

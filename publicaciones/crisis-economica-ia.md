@@ -14,13 +14,13 @@ permalink: crisis-economica-ia
 
 # Se avecina una crisis económica impulsada por la inteligencia artificial
 
-La economía global se enfrenta a un **escenario de alto riesgo**. Diversos factores apuntan a que estamos a las puertas de una crisis económica y bursátil comparable a las grandes sacudidas de las últimas décadas. El detonante principal parece ser la **inteligencia artificial (IA)**, tanto por el efecto de la burbuja que ha generado como por las consecuencias que traerá consigo.  
+La economía global se enfrenta a un **escenario de alto riesgo**. Diversos factores apuntan a que estamos a las puertas de una crisis económica y bursátil comparable a las grandes sacudidas de las últimas décadas, una idea que ya apunté al hablar de la [burbuja tecnológica y el futuro del trabajo con IA](https://emirodgar.es/burbuja-tecnologica-y-el-futuro-del-trabajo-con-ia). El detonante principal parece ser la **inteligencia artificial (IA)**, tanto por el efecto de la burbuja que ha generado como por las consecuencias que traerá consigo.  
 
 A continuación, analizo los tres pilares que sostienen este posible colapso y qué implicaciones pueden tener en los próximos años.
 
 ## ¿Por qué la burbuja de la inteligencia artificial es insostenible?
 
-La IA vive un auge sin precedentes. Startups y grandes corporaciones compiten por ocupar espacio en un mercado que se percibe como el futuro. Sin embargo, **la mayoría de estas empresas no son rentables**.  
+La IA vive un auge sin precedentes. Startups y grandes corporaciones compiten por ocupar espacio en un mercado que se percibe como el futuro, y buena parte de esa inversión se dirige hacia infraestructura como los [centros de datos](https://emirodgar.es/centros-de-datos), cuyo consumo eléctrico y rentabilidad futura ya generan dudas. Sin embargo, **la mayoría de estas empresas no son rentables**.  
 
 Mantener la tecnología es caro y los beneficios reales están todavía muy por debajo de las expectativas. Gran parte del entusiasmo se apoya en promesas a largo plazo, como la llegada de la [AGI](https://emirodgar.es/agi), que hoy sigue siendo una incógnita.  
 
@@ -38,7 +38,7 @@ Cuando los precios se separan demasiado de la realidad económica, lo normal es 
 
 Aunque gran parte de las empresas de IA acaben desapareciendo, la tecnología seguirá avanzando. Y aquí se abre un problema aún mayor: **la destrucción masiva de empleo**.  
 
-La IA ya supera a los humanos en tareas de programación, atención al cliente, marketing o diseño. Esto significa que millones de puestos de trabajo se verán afectados en muy poco tiempo.  
+La IA ya supera a los humanos en tareas de programación, atención al cliente, marketing o diseño. Esto significa que millones de puestos de trabajo se verán afectados en muy poco tiempo, tal y como detallo en [el impacto de la inteligencia artificial en los trabajos](https://emirodgar.es/impacto-ia-trabajos).  
 
 El resultado será un **aumento del paro** que golpeará directamente al consumo, debilitando a las empresas y acelerando la llegada de una recesión.
 

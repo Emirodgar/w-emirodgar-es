@@ -19,7 +19,7 @@ Sus orígenes se remontan al 3 de enero de 1963 y en la actualidad cuenta con al
 
 ## Barómetro abril 2024
 
-Los últimos datos publicados por el CIS que dirige José Félix Tezanos, otorgan al PP una intención de voto del 26,1%, un resultado que está 7,7 puntos porcentuales por debajo del promedio del resto de encuestas hasta la fecha.
+Los últimos datos publicados por el CIS que dirige José Félix Tezanos, otorgan al PP una intención de voto del 26,1%, un resultado que está 7,7 puntos porcentuales por debajo del promedio del resto de [encuestas de intención de voto](https://emirodgar.es/encuestas-intencion-voto) hasta la fecha.
 Con respecto al PSOE, con Pedro Sánchez al frente, sube en 4,2 puntos porcentuales.
 
 ## Elecciones Generales de 2023 (23J)
@@ -184,7 +184,7 @@ Sí. El CIS ha demostrado **mayor precisión con partidos tradicionales** como e
 ---
 
 **¿Cómo se compara la precisión del CIS con otras encuestadoras en España?**  
-La precisión del CIS ha sido objeto de debate. Aunque a veces ha mostrado **desviaciones mayores que la media de otras encuestadoras privadas**, en elecciones como la de 2023 su estimación fue **comparativamente precisa**. Algunas encuestas privadas han ofrecido mejores resultados puntuales, pero el CIS tiene la ventaja de **una muestra más amplia** y continuidad histórica.
+La precisión del CIS ha sido objeto de debate. Aunque a veces ha mostrado **desviaciones mayores que la media de otras encuestadoras privadas**, en elecciones como la de 2023 su estimación fue **comparativamente precisa**. Algunas encuestas privadas han ofrecido mejores resultados puntuales, pero el CIS tiene la ventaja de **una muestra más amplia** y continuidad histórica. Esa desviación, sin embargo, no es exclusiva de los comicios generales: en nuestro [análisis de Se Acabó La Fiesta en Aragón](https://emirodgar.es/analisis-salf-elecciones) vimos cómo también las encuestas fallaron a la hora de anticipar el techo real de un partido emergente en un proceso autonómico.
 
 
 
