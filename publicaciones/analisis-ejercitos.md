@@ -144,7 +144,7 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 
 ### Nuevos objetivos de la OTAN
 
-**El nuevo objetivo del 5% del PIB para 2035** representa un desafío significativo para España. Mientras que el presidente Sánchez ha declarado que España "cumplirá los requerimientos militares sin ceñirse a un porcentaje específico", países como Polonia ya se aproximan a esta meta con el 4.7% actual.
+**El nuevo objetivo del 5% del PIB para 2035** representa un desafío significativo para España. Mientras que el presidente Sánchez ha declarado que España "cumplirá los requerimientos militares sin ceñirse a un porcentaje específico", países como Polonia ya se aproximan a esta meta con el 4.7% actual. Analizamos con más detalle este pulso entre España y la Alianza en [España y el pulso del 5% de la OTAN](https://emirodgar.es/gasto-defensa-otan-espana).
 
 ## Programas de modernización en curso
 

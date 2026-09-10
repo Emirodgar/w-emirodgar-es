@@ -36,7 +36,7 @@ Aunque en 2026 es cuando más se habla del AI Act, buena parte de sus obligacion
 
 ## Lo que llega el 2 de agosto de 2026
 
-Esta es la fecha que marca la aplicación de la mayor parte del reglamento. A partir de ahí entran en vigor las obligaciones de transparencia del artículo 50: los chatbots deben identificarse como IA, y el contenido sintético (texto, imagen, audio o vídeo generado por IA) debe etiquetarse como tal, incluidos los deepfakes. También arrancan las reglas de vigilancia de mercado, que dan a las autoridades nacionales capacidad real de supervisión.
+Esta es la fecha que marca la aplicación de la mayor parte del reglamento. A partir de ahí entran en vigor las obligaciones de transparencia del artículo 50: los chatbots deben identificarse como IA, y el contenido sintético (texto, imagen, audio o vídeo generado por IA) debe etiquetarse como tal, incluidos los [deepfakes](https://emirodgar.es/deepfakes-desinformacion-ia). También arrancan las reglas de vigilancia de mercado, que dan a las autoridades nacionales capacidad real de supervisión.
 
 Para quienes ya tuvieran sistemas de contenido sintético en el mercado antes de esa fecha, hay un margen adicional hasta el **2 de diciembre de 2026** para adaptarse.
 

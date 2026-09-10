@@ -68,7 +68,7 @@ Ejemplo: varios medios y editoriales han demandado a empresas de IA por usar su 
 - **Small Language Model (SLM)**: versión reducida de un LLM, más barata y rápida de ejecutar, pensada para tareas concretas en lugar de propósito general.
 - **Código abierto vs. propietario**: mientras modelos como Llama o DeepSeek publican sus pesos para que cualquiera los use y modifique, otros como GPT o Gemini son propietarios y solo se accede a través de una API. Es, de hecho, una de las bazas que China está usando en su pulso con Estados Unidos, como vimos en [quién va ganando la carrera de la IA](https://emirodgar.es/china-eeuu-carrera-inteligencia-artificial).
 - **Sesgo algorítmico**: cuando un modelo reproduce o amplifica desigualdades presentes en los datos con los que fue entrenado.
-- **Deepfake**: contenido audiovisual sintético (voz, vídeo o imagen) generado con IA para simular que una persona real dijo o hizo algo que nunca ocurrió.
+- **Deepfake**: contenido audiovisual sintético (voz, vídeo o imagen) generado con IA para simular que una persona real dijo o hizo algo que nunca ocurrió. Ya mueve un fraude de cientos de millones de euros al año, como contamos en [deepfakes, la desinformación que ya cuesta 929 millones de euros](https://emirodgar.es/deepfakes-desinformacion-ia).
 - **Chief AI Officer (CAIO)**: el cargo directivo responsable de la estrategia de IA de una empresa, cada vez más habitual en organizaciones grandes. Lo tratamos en detalle en [este artículo](https://emirodgar.es/chief-ai-officer).
 - **Guardrails**: reglas y filtros técnicos que limitan lo que un modelo puede decir o hacer, pensados para evitar respuestas peligrosas, ilegales o fuera de política.
 

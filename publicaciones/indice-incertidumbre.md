@@ -35,7 +35,7 @@ En un país con tasas de desempleo estructuralmente altas y una economía muy de
 ---
 
 
-La medición de la incertidumbre a través de índices como el WUI no es un mero ejercicio académico. Gobiernos de todo el mundo, incluido el español, utilizan estos datos para informar sus políticas económicas. Lo interesante es que estos índices capturan tanto la incertidumbre a corto plazo (como el Brexit) como la de largo plazo (cambio climático, transiciones tecnológicas), e incluso factores geopolíticos que explican decisiones como el aumento del gasto en defensa, tal y como recogimos en nuestro [análisis de las Fuerzas Armadas españolas](https://emirodgar.es/analisis-ejercitos).
+La medición de la incertidumbre a través de índices como el WUI no es un mero ejercicio académico. Gobiernos de todo el mundo, incluido el español, utilizan estos datos para informar sus políticas económicas. Lo interesante es que estos índices capturan tanto la incertidumbre a corto plazo (como el Brexit) como la de largo plazo (cambio climático, transiciones tecnológicas), e incluso factores geopolíticos que explican decisiones como el aumento del gasto en defensa, tal y como recogimos en nuestro [análisis de las Fuerzas Armadas españolas](https://emirodgar.es/analisis-ejercitos) y en [el pulso de España con la OTAN por el 5% del PIB](https://emirodgar.es/gasto-defensa-otan-espana).
 
 Para las empresas españolas, especialmente las orientadas a la exportación, monitorizar estos índices puede ser una herramienta valiosa para la planificación estratégica. Los sectores con mayores restricciones financieras suelen ser los más afectados por la incertidumbre, por lo que **las pymes deberían prestar especial atención**.
 

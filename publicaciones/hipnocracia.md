@@ -42,7 +42,7 @@ La periodista Samina Minardi reveló la inexistencia de Xun al intentar contacta
 
 **Críticas éticas**:
 
-- Se violó el Reglamento Europeo de IA, que exige etiquetar contenido generado automáticamente.
+- Se violó el Reglamento Europeo de IA, que exige etiquetar contenido generado automáticamente, la misma obligación que analizamos al hablar de los [deepfakes y la desinformación con IA](https://emirodgar.es/deepfakes-desinformacion-ia).
 - Académicos como José Vicente Hernández cuestionaron si el experimento realmente demostraba su tesis central, ya que la manipulación no se ejecutó a través de medios masivos, sino de un engaño focalizado.
 
 ## Implicaciones del caso
