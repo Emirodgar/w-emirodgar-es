@@ -148,7 +148,7 @@ Los análisis sugieren la urgencia de establecer:
 - **Criterios transparentes para la contratación** de asesores
 - **Limitación del número máximo** por ministerio
 - **Controles más estrictos** sobre conflictos de interés
-- **Mayor rendición de cuentas** sobre funciones y resultados
+- **Mayor rendición de cuentas** sobre funciones y resultados, en la misma línea que ya exige la ley a la [financiación de los partidos políticos](https://emirodgar.es/financiacion-partidos-politicos-espana)
 
 
 ## Conclusiones

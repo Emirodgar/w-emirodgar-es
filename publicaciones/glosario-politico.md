@@ -50,4 +50,5 @@ Ejemplo: Parte del ideario del PP, Ciudadanos o Vox.
 - **Neoliberalismo**: Versión moderna del liberalismo económico, que impulsa privatizaciones, libre comercio y recorte del gasto público.
 - **Intervencionismo estatal**: Cuando el Estado regula y participa activamente en la economía para corregir fallos del mercado.
 - **Soberanismo**: Variante del nacionalismo que pone énfasis en la capacidad de un territorio para autogobernarse plenamente.
+- **Financiación de partidos**: sistema mixto de subvenciones públicas y aportaciones privadas limitadas con el que se sostienen los partidos españoles. Lo explicamos con detalle en [cómo se financian los partidos políticos en España](https://emirodgar.es/financiacion-partidos-politicos-espana).
 

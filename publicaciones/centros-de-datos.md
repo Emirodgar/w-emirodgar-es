@@ -88,7 +88,7 @@ Esta es una de las claves de todo el asunto:
 - Según estimaciones del sector, un crecimiento descontrolado de centros de datos podría comprometer los objetivos climáticos de Europa si esa expansión se apoya mayormente en combustibles fósiles.  
 - En Europa, los centros de datos ya consumen unos **96 TWh**, equivalentes al 3,1 % del total eléctrico.  
 - España, por su parte, gestiona bien la eficiencia de sus centros: es uno de los países pioneros en incorporar tecnologías de refrigeración avanzadas, sistemas de gestión energética inteligente y uso de energías renovables certificadas (más del 50 % de las compañías españolas de data centers encuestadas afirma hacerlo).  
-- No obstante, el desafío de **coordinar la capacidad eléctrica** con la demanda creciente ya es real, como quedó patente en mi [análisis del gran apagón eléctrico en España](https://emirodgar.es/analisis-apagon-electrico).  
+- No obstante, el desafío de **coordinar la capacidad eléctrica** con la demanda creciente ya es real, como quedó patente en mi [análisis del gran apagón eléctrico en España](https://emirodgar.es/analisis-apagon-electrico), en un país que además ya tiene una relación peculiar con [el precio de su electricidad](https://emirodgar.es/analisis-precio-electricidad-espana).  
 
 En definitiva: si España quiere acoger ese crecimiento, no basta con construir centros de datos, hay que asegurar que el sistema eléctrico, la regulación y la sostenibilidad estén preparados.
 

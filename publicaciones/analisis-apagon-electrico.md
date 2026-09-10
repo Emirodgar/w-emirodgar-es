@@ -34,7 +34,7 @@ A continuación, analizamos la gestión política así como el tratamiento medi�
 - Reclama comparecencias de Pedro Sánchez y ministros en el Congreso y el Senado.
 - Juanma Moreno (PP Andalucía) sugirió inicialmente la hipótesis del ciberataque, lo que generó polémica.
 - Cuca Gamarra exige responsabilidades: “un apagón de estas características tiene que tener consecuencias”.
-- Defiende la prolongación de la vida útil de las centrales nucleares como parte de la solución.
+- Defiende la prolongación de la vida útil de las centrales nucleares como parte de la solución, en un debate que conecta directamente con [por qué España tiene la luz más barata de Europa y la factura más cara](https://emirodgar.es/analisis-precio-electricidad-espana).
 
 ### Vox
 - Acusa al Gobierno de ocultar la verdad sobre las causas del apagón.
