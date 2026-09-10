@@ -1,0 +1,318 @@
+/* --- VARIABLES Y ESTILOS GLOBALES --- */
+:root {
+    --color-background: #121212; /* Negro/Gris oscuro */
+    --color-text: #EAEAEA;
+    --color-primary: #FF0057; /* Rojo/Rosa vivo de tu mapa */
+    --color-secondary: #8A2BE2; /* Azul/Morado del mapa */
+    --color-surface: #1E1E1E; /* Un gris un poco más claro para tarjetas */
+
+    --font-heading: 'Teko', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-background );
+    color: var(--color-text);
+    font-family: var(--font-body);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* --- HEADER Y NAVEGACIÓN --- */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: rgba(18, 18, 18, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+header .logo {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+header nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    margin-left: 2rem;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: var(--color-primary);
+}
+
+/* --- ESTILOS GENERALES DE SECCIÓN --- */
+section {
+    padding: 6rem 5%;
+    border-bottom: 1px solid var(--color-surface);
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    color: var(--color-text);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem auto;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #B0B0B0;
+}
+
+/* --- SECCIÓN 1: HÉROE --- */
+#hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-content .main-title {
+    font-family: var(--font-heading);
+    font-size: 6vw; /* Tamaño de fuente adaptable */
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.main-title .line {
+    display: block;
+}
+
+.main-title .highlight {
+    color: var(--color-primary);
+}
+.main-title .highlight-secondary {
+    color: var(--color-secondary);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 2rem auto 3rem auto;
+    color: #B0B0B0;
+}
+
+.cta-button {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 1rem 2.5rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 5px;
+    transition: transform 0.3s, background-color 0.3s;
+    display: inline-block;
+    border: none; /* Añadido para consistencia en botones */
+    cursor: pointer; /* Añadido para consistencia en botones */
+    font-size: 1rem; /* Añadido para consistencia en botones */
+}
+
+.cta-button:hover {
+    background-color: white;
+    color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+/* --- SECCIÓN 2: PROPUESTA DE VALOR --- */
+.pillars {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.pillar {
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 10px;
+    flex-basis: 30%;
+    border-left: 5px solid var(--color-secondary);
+}
+
+.pillar h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-top: 0;
+}
+
+/* --- SECCIÓN 3: EXPERIENCIA --- */
+.bio-container {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    margin-top: 4rem;
+}
+
+.bio-text {
+    flex: 2;
+}
+
+.bio-text h3 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    color: var(--color-text);
+}
+
+.bio-text ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.bio-text li::before {
+    content: '■';
+    color: var(--color-primary);
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+.bio-text a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.bio-image {
+    flex: 1;
+}
+
+.bio-image img {
+    width: 100%;
+    border-radius: 50%;
+    border: 5px solid var(--color-surface);
+}
+
+/* --- SECCIÓN 4: ACADEMIA --- */
+.university-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    margin: 3rem 0;
+    flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+.uni-logo {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: #B0B0B0;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.uni-logo:hover {
+    color: var(--color-text);
+    transform: scale(1.1);
+}
+
+.ponencias {
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
+    text-align: center;
+    background-color: var(--color-surface);
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.ponencias h4 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* --- SECCIÓN 5: CONTACTO --- */
+#contacto {
+    background-color: var(--color-surface);
+}
+
+#contact-form {
+    max-width: 700px;
+    margin: 2rem auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#contact-form input,
+#contact-form textarea {
+    background-color: var(--color-background);
+    border: 1px solid #444;
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+#contact-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+/* --- FOOTER --- */
+footer {
+    text-align: center;
+    padding: 2rem 5%;
+    color: #888;
+}
+
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+    .hero-content .main-title {
+        font-size: 10vw;
+    }
+    .pillars, .bio-container {
+        flex-direction: column;
+    }
+    header {
+        padding: 1rem 5%;
+        justify-content: center; /* Centramos el logo en móvil */
+    }
+    header nav {
+        display: none; /* Simplificamos para móvil. Se podría añadir un menú hamburguesa con más JS */
+    }
+    section {
+        padding: 4rem 5%;
+    }
+}
+
+/* --- ANIMACIONES DE ENTRADA AL SCROLL --- */
+.pillar, .bio-container > *, .uni-logo, section > h2, section > .section-intro, section > .ponencias, section > form {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
