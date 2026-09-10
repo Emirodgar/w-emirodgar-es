@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 20-01-2026
+date: 2026-01-20
 folder: ia
 permalink: productividad-inteligencia-artificial-no-despega
 ---

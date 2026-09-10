@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 30-04-2025
+date: 2025-04-30
 folder: europa
 permalink: analisis-ia-eeuu-europa
 ---

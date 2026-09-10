@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 15-10-2025
+date: 2025-10-15
 folder: ia
 permalink: 40-profesiones-en-riesgo-por-la-inteligencia-artificial
 ---

@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 09-02-2026
+date: 2026-02-09
 folder: ia
 permalink: la-ia-ya-no-es-opcional-en-las-grandes-tecnologicas
 ---

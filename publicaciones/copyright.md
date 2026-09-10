@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 02-02-2026
+date: 2026-02-02
 folder: ia
 permalink: que-es-copyright-y-por-que-importa
 ---

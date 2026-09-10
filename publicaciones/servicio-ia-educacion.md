@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 29-04-2025
+date: 2025-04-29
 folder: ia
 permalink: educacion-con-ia
 ---

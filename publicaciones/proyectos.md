@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 08-08-2025
+date: 2025-08-08
 folder: proyectos
 permalink: proyectos
 ---
@@ -21,5 +21,6 @@ No son productos finales ni soluciones cerradas, sino pruebas de concepto que me
 |-----------------|--------------------------------------|----------------|---------------------|
 | Faro            | Monitorizar [problemas de salud mental](https://emirodgar.es/muertes-salud-mental) | [Enlace](https://emirodgar.es/faro-monitorizacion-salud-mental)    | [Enlace](https://emirodgar.es/proyectos/faro/)         |
 | Audiencias                 | Medición de audiencias digitales para medios                                      |  [Enlace](https://emirodgar.es/medicion-audiencias-digitales)                |   [Enlace](https://emirodgar.es/proyectos/medicion-audiencias-digitales/)                  |
+| MacroData España           | Panel público de indicadores macroeconómicos (IPC, prima de riesgo, tipos BCE/Euríbor, PIB) | [Enlace](https://emirodgar.es/macrodata-espana) | [Enlace](https://emirodgar.es/proyectos/macrodata-espana/) |
 |                 |                                      |                |                     |
 

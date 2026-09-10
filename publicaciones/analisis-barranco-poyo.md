@@ -6,7 +6,7 @@ author: emirodgar
 sitemap: 1
 feed: 1
 folder: analisis
-date: 25/04/2025
+date: 2025-04-25
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: analisis-barranco-poyo
 

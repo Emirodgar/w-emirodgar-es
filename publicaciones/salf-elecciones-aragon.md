@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 10-02-2026
+date: 2026-02-10
 folder: elecciones
 permalink: analisis-salf-elecciones
 ---

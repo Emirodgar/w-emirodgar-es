@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 21-10-2025
+date: 2025-10-21
 folder: espana
 permalink: /universidades-privadas-espana/
 

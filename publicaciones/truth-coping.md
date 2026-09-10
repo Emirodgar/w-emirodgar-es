@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 19-02-2026
+date: 2026-02-19
 folder: ia
 permalink: /truth-coping-afrontar-la-verdad-era-inteligencia-artificial/
 ---

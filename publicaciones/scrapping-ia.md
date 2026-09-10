@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 30-06-2025
+date: 2025-06-30
 folder: guias
 permalink: scraping-ia
 ---

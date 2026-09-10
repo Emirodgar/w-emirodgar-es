@@ -6,7 +6,7 @@ author: emirodgar
 sitemap: 1
 feed: 1
 folder: elecciones
-date: 15/04/2025
+date: 2025-04-15
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: elecciones-generales-comunidades
 

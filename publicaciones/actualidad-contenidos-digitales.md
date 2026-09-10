@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 20-10-2025
+date: 2025-10-20
 folder: ia
 permalink: la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial
 ---

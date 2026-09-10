@@ -6,7 +6,7 @@ author: emirodgar
 sitemap: 1
 feed: 1
 folder: politica
-date: 15/04/2025
+date: 2025-04-15
 image: 
 permalink: glosario-politico
 

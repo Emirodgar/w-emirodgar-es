@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 02-09-2025
+date: 2025-09-02
 folder: analisis
 permalink: analisis-funcionarios
 ---

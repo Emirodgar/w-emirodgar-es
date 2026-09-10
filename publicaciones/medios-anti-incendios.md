@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 18-08-2025
+date: 2025-08-18
 folder: analisis
 permalink: medios-anti-incendios
 ---

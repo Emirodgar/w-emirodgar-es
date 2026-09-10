@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 09-05-2025
+date: 2025-05-09
 folder: ia
 permalink: hipnocracia
 ---

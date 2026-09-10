@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 05-03-2026
+date: 2026-03-05
 folder: ia
 permalink: la-paradoja-de-la-inteligencia-artificial-y-la-productividad
 ---

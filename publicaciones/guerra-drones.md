@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 13-01-2026
+date: 2026-01-13
 folder: ia
 permalink: guerras-con-drones-nuevo-conflicto-moderno
 ---

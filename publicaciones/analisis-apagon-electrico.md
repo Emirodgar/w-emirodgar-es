@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 30-04-2025
+date: 2025-04-30
 date_modified: 29/08/2025
 folder: analisis
 permalink: analisis-apagon-electrico

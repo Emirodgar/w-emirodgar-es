@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 01-08-2025
+date: 2025-08-01
 date_modified: 08/08/2025
 folder: proyectos
 permalink: faro-monitorizacion-salud-mental

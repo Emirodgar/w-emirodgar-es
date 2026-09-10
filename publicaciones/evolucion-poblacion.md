@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 18-09-2025
+date: 2025-09-18
 folder: geopolitica
 permalink: evolucion-poblacion
 ---

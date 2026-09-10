@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 15-05-2025
+date: 2025-05-15
 folder: europa
 permalink: partidos-politicos-europeos
 ---

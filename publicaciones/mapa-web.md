@@ -9,8 +9,9 @@ permalink: mapa
 
 # Mapa web
 
-Toda página web que se precie debe tener un **mapa web** para poder organizar los contenidos y facilitar la navegación de sus usuarios.
+Toda página web que se precie debe tener un **mapa web** para poder organizar los contenidos y facilitar la navegación de sus usuarios. Dentro de cada categoría, las publicaciones aparecen ordenadas de la más reciente a la más antigua.
 
+{% assign sorted_pages = site.pages | sort: 'date' | reverse %}
 
 ## Política y sociedad
 
@@ -19,7 +20,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### Política
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder == "politica" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -33,7 +34,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### España
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder == "espana" or page.folder == "analisis" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -47,7 +48,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### Europa
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "europa" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -61,7 +62,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### Geopolítica
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "geopolitica" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -75,7 +76,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ## Elecciones y datos electorales
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "elecciones" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -91,7 +92,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### Actualidad
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "ia" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -103,7 +104,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### Formación
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "formacion" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -115,7 +116,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ### Guías y conceptos clave
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "guias" or page.folder == "conceptos" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
@@ -130,7 +131,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 ## Proyectos
 
 <ul>
-{% for page in site.pages %}
+{% for page in sorted_pages %}
 {% if page.title != null  %}
 	{% if page.folder== "proyectos" %}
 	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>

@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 05-03-2026
+date: 2026-03-05
 folder: ia
 permalink: por-que-cada-vez-escribimos-y-leemos-frases-mas-cortas
 ---

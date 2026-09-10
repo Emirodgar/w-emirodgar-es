@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 08/08/2025
+date: 2025-08-08
 folder: proyectos
 permalink: medicion-audiencias-digitales
 ---

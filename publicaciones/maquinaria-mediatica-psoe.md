@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 28-11-2025
+date: 2025-11-28
 folder: espana
 permalink: /la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez
 

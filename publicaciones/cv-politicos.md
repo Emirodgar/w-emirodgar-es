@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 25-07-2025
+date: 2025-07-25
 folder: politica
 permalink: cv-politicos
 ---

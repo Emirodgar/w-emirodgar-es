@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 21-01-2026
+date: 2026-01-21
 folder: analisis
 permalink: analisis-sector-ferroviario
 ---
