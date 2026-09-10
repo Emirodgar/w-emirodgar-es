@@ -38,7 +38,7 @@ Esta divergencia se ha acentuado especialmente desde 2018, cuando el SMI inició
 
 ## El desafío demográfico: hacia 2050
 
-España afronta el mayor reto demográfico de su historia moderna. **El ratio de trabajadores por pensionista, actualmente en 2,44, descenderá dramáticamente hasta 1,35 en 2050**. Este descenso se explica por la confluencia de tres factores: la jubilación masiva de la generación del baby boom, el aumento de la esperanza de vida y la persistente baja natalidad.
+España afronta el mayor reto demográfico de su historia moderna. **El ratio de trabajadores por pensionista, actualmente en 2,44, descenderá dramáticamente hasta 1,35 en 2050**. Este descenso se explica por la confluencia de tres factores: la jubilación masiva de la generación del baby boom, el aumento de la esperanza de vida y la persistente [baja natalidad](https://emirodgar.es/analisis-natalidad-envejecimiento-espana).
 <img width="976" class="img-responsive" alt="Evolución de la ratio de trabajadores por pensionista en España hasta 2050" src="https://github.com/user-attachments/assets/9732b993-95fb-44d3-b4c6-f5ae57f71498" />
 Evolución de la ratio de trabajadores por pensionista en España hasta 2050
 

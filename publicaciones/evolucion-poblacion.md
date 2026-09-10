@@ -58,7 +58,7 @@ El mundo está experimentando una transición demográfica generalizada. La tasa
 
 ### Envejecimiento poblacional
 
-El envejecimiento se ha convertido en la principal tendencia demográfica mundial. La edad mediana global aumentará de 31 años actuales a 42 años en 2100, mientras que las personas de 65 años o más pasarán del 10% actual al 24% de la población mundial. Este cambio tiene implicaciones profundas para los sistemas económicos y de salud globales, y España ya lo experimenta hoy en carne propia, por ejemplo en el envejecimiento acelerado de sus [funcionarios públicos](https://emirodgar.es/analisis-funcionarios).
+El envejecimiento se ha convertido en la principal tendencia demográfica mundial. La edad mediana global aumentará de 31 años actuales a 42 años en 2100, mientras que las personas de 65 años o más pasarán del 10% actual al 24% de la población mundial. Este cambio tiene implicaciones profundas para los sistemas económicos y de salud globales, y España ya lo experimenta hoy en carne propia, por ejemplo en el envejecimiento acelerado de sus [funcionarios públicos](https://emirodgar.es/analisis-funcionarios) o en su propia [crisis de natalidad y envejecimiento](https://emirodgar.es/analisis-natalidad-envejecimiento-espana).
 
 ## Implicaciones geopolíticas y económicas
 

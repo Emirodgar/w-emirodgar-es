@@ -32,7 +32,7 @@ Ejemplo: pedirle a un LLM una cita académica y que invente un artículo, un aut
 
 ## 🧩 Agente de IA
 
-Un agente es un sistema que no se limita a responder, sino que puede planificar varios pasos, usar herramientas externas (buscar en internet, ejecutar código, consultar una base de datos) y actuar de forma más autónoma para cumplir un objetivo. Es el salto natural después de los chatbots conversacionales.
+Un agente es un sistema que no se limita a responder, sino que puede planificar varios pasos, usar herramientas externas (buscar en internet, ejecutar código, consultar una base de datos) y actuar de forma más autónoma para cumplir un objetivo. Es el salto natural después de los chatbots conversacionales, y lo desarrollamos con más detalle en [qué son los agentes de IA y por qué son el siguiente salto tras los chatbots](https://emirodgar.es/agentes-de-ia).
 Ejemplo: un agente que recibe la instrucción "resérvame el vuelo más barato para estas fechas" y por sí solo compara opciones, decide y ejecuta la reserva. El [Model Context Protocol (MCP)](https://emirodgar.es/mcp) es uno de los estándares que está permitiendo que estos agentes se conecten con herramientas externas de forma ordenada.
 
 ## 🔍 RAG (Retrieval-Augmented Generation)
