@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: offtopic
-date: 07/12/2019
+date: 2019-12-07
 image: https://emirodgar.com/cdn/images/og/emirodgar.png
 permalink: libros-recomendados
 

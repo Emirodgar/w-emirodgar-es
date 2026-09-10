@@ -2,7 +2,7 @@
 title: Herramientas SEO gratis
 description: Conseguir buenos resultados en una estrategia SEO no depende únicamente de tener herramientas de pago. Utilizar estos recursos totalmente gratuitos para marcar la diferencia.
 image: https://emirodgar.com/cdn/images/og/herramientas.png
-date: 16/08/2019
+date: 2019-08-16
 author: Emirodgar
 sitemap: 1
 feed: 1

@@ -2,7 +2,7 @@
 title: Razones para hacer SEO
 description: Algunos datos que seguramente no sabías sobre el SEO y el impacto que tienen en las estrategias
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-date: 19/09/2019
+date: 2019-09-19
 author: Emirodgar
 sitemap: 1
 feed: 1

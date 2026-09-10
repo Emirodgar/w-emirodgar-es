@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: seo
-date: 28/06/2019
+date: 2019-06-28
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: habilidades-seo
 

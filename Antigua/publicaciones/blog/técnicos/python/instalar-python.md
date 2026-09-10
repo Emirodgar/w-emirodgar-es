@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: programacion
-date: 16/01/2020
+date: 2020-01-16
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
 permalink: instalar-python
 

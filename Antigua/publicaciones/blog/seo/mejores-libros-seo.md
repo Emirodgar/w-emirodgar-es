@@ -1,7 +1,7 @@
 ---
 description: Análisis de los mejores libros de SEO
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-date: 06/02/2020
+date: 2020-02-06
 author: Emirodgar
 lang: es_ES
 sitemap: 1

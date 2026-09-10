@@ -6,8 +6,8 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: seo, google
-date: 09/05/2019
-date_modified: 09/05/2020
+date: 2019-05-09
+date_modified: 2020-05-09
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: comandos-google
 

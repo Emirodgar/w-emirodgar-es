@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: analitica
-date: 10/10/2019
+date: 2019-10-10
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: userid-analytics-tag-manager
 

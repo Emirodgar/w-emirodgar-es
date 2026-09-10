@@ -9,7 +9,7 @@ folder: programacion
 lang: es_ES
 author: Emirodgar
 tags: offtopic, crossfit
-date: 10/09/2019
+date: 2019-09-10
 image: https://emirodgar.com/cdn/images/og/emirodgar.png
 permalink: pasar-de-int-a-string-y-de-string-a-int-en-java
 

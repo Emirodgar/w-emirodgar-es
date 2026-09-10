@@ -10,7 +10,7 @@ category: Analítica
 tags: 1
 image: https://emirodgar.com/cdn/images/og/analitica.png
 permalink: test3
-date_modified: 12/08/2020
+date_modified: 2020-08-12
 
 ---
 

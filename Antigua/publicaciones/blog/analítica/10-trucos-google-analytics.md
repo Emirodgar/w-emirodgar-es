@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: analitica
-date: 19/12/2019
+date: 2019-12-19
 image: https://emirodgar.com/cdn/images/og/analitica.png
 permalink: trucos-google-analytics
 

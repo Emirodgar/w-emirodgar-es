@@ -1,7 +1,7 @@
 ---
 description: No es un factor SEO directo pero sí puede afectar a nuestra estrategia de posicionamiento web
 image: https://emirodgar.com/cdn/images/og/auditoria.png
-date: 05/06/2019
+date: 2019-06-05
 author: Emirodgar
 folder: seo
 lang: es_ES

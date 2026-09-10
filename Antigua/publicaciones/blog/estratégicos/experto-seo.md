@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: estrategicos
-date: 14/08/2019
+date: 2019-08-14
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: seo-experto
 

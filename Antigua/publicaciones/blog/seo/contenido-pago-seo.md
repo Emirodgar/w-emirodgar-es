@@ -1,7 +1,7 @@
 ---
 description: Podemos mostrar contenidos de pago a Google pero que no sean accesibles a los usuarios
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-date: 03/03/2020
+date: 2020-03-03
 author: Emirodgar
 lang: es_ES
 sitemap: 1

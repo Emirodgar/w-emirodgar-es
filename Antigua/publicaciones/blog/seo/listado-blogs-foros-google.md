@@ -2,7 +2,7 @@
 title: Listado de blogs y foros oficiales de Google
 description: Si vas a trabajar una estrategia digital necesitarás saber dónde encontrar toda la información relacionada con Google
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
-date: 23/08/2019
+date: 2019-08-23
 author: Emirodgar
 sitemap: 1
 feed: 1

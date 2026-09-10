@@ -2,7 +2,7 @@
 title: Títulos y descripciones optimizadas para el SEO
 description: Aprende a desarrollar títulos y meta descriptions adecuados para tus proyectos digitales
 image: https://emirodgar.com/cdn/images/og/auditoria.png
-date: 24/06/2019
+date: 2019-06-24
 sitemap: 1
 feed: 1
 folder: seo

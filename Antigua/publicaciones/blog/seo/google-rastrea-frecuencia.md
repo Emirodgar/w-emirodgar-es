@@ -1,7 +1,7 @@
 ---
 description: Además de nofollow ahora contamos con sponsored y ugc
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-date: 24/02/2019
+date: 2019-02-24
 author: Emirodgar
 lang: es_ES
 sitemap: 1

@@ -1,7 +1,7 @@
 ---
 description: Ambos son elementos importantes para una estrategia SEO y deben mantener una relación
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
-date: 02/10/2019
+date: 2019-10-02
 author: Emirodgar
 lang: es_ES
 sitemap: 1

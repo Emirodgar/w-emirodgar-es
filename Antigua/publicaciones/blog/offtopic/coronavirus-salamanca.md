@@ -1,8 +1,8 @@
 ---
 title: Coronavirus en Salamanca - Teléfonos e información actualizada
 description: Información actualizada de la propagación del coronavirus en Salamanca provincia
-date: 19/03/2020
-date_modified: 19/03/2020
+date: 2020-03-19
+date_modified: 2020-03-19
 author: Emirodgar
 sitemap: 1
 image: https://emirodgar.com/cdn/images/og/emirodgar.png

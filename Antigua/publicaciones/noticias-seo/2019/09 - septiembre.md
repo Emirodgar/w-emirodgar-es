@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: noticias
-date: 04/09/2019
+date: 2019-09-04
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: noticias-seo/2019/septiembre
 

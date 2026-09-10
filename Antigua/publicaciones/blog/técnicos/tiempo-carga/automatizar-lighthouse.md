@@ -7,7 +7,7 @@ sitemap: 1
 feed: 1
 folder: programacion
 tags: seo, google, performance
-date: 16/04/2019
+date: 2019-04-16
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: automatizar-analisis-lighthouse
 

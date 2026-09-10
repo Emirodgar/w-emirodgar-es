@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: noticiastags: newsletter
-date: 28/05/2019
+date: 2019-05-28
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: noticias-seo/2019/mayo
 

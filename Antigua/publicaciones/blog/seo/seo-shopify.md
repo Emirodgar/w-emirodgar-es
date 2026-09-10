@@ -2,7 +2,7 @@
 title: Guía SEO pra Shopify 
 description: Optimizar tu ecommerce con recomendaciones SEO específicas para Shopify 
 image: https://emirodgar.com/cdn/images/og/auditoria.png
-date: 31/10/2019
+date: 2019-10-31
 author: Emirodgar
 sitemap: 1
 feed: 1

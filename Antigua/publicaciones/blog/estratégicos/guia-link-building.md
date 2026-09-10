@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: estrategicos
-date: 20/01/2020
+date: 2020-01-20
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: guia-link-building
 

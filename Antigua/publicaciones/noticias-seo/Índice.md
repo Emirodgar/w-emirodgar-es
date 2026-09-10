@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: noticias
-date: 13/01/2020
+date: 2020-01-13
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 redirect_from: 
   - noticias-seo/2019

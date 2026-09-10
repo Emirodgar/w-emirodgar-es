@@ -1,6 +1,6 @@
 ---
 description: No interesa pagar por un móvil gama alta. Hay que ser prácticos y cubrir nuestras necesidades
-date: 28/01/2020
+date: 2020-01-28
 author: Emirodgar
 sitemap: 1
 feed: 1

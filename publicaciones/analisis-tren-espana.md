@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-09-01
-date_modified: 28-01-2026
+date_modified: 2026-01-28
 folder: analisis
 permalink: analisis-ferroviario
 ---

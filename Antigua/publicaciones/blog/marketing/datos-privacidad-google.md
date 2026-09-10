@@ -2,7 +2,7 @@
 title: ¿Qué datos almacena Google y porqué lo hace?
 description: Bloquear estos archivos podría afectar a la estrategia SEO. Aprende cómo hacerlo de forma correcta
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
-date: 29/08/2019
+date: 2019-08-29
 author: Emirodgar
 sitemap: 1
 feed: 1

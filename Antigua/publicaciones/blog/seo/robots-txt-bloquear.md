@@ -7,8 +7,8 @@ sitemap: 1
 feed: 1
 folder: seo
 tags: seo, htaccess, robots
-date: 11/07/2019
-date_modified: 16/05/2019
+date: 2019-07-11
+date_modified: 2019-05-16
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: listado-robots-bloquear
 

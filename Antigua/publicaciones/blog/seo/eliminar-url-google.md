@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: seo
-date: 26/09/2019
+date: 2019-09-26
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: eliminar-url-google
 

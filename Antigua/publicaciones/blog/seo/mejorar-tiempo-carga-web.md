@@ -2,7 +2,7 @@
 title: SEO - Mejorar el tiempo de carga de una web
 description: El tiempo de carga es un factor clave para las estrategias de posicionamiento web
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
-date: 27/08/2019
+date: 2019-08-27
 author: Emirodgar
 lang: es_ES
 sitemap: 1

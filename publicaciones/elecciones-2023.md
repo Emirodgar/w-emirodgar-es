@@ -7,7 +7,7 @@ sitemap: 1
 feed: 1
 folder: elecciones
 date: 2025-04-09
-date_modified: 29/08/2025
+date_modified: 2025-08-29
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: elecciones-generales
 

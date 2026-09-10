@@ -2,7 +2,7 @@
 title: El SEO y los cambios de algoritmo de Google
 description: No es un factor SEO directo pero sí puede afectar a nuestra estrategia de posicionamiento web
 image: https://emirodgar.com/cdn/images/og/auditoria.png
-date: 02/08/2019
+date: 2019-08-02
 author: Emirodgar
 sitemap: 1
 feed: 1

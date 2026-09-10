@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: programacion
-date: 17/05/2019
+date: 2019-05-17
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
 permalink: funcion-javascript-cadena-minusculas
 

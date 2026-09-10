@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: estrategicos
-date: 20/12/2019
+date: 2019-12-20
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: extension-seo
 

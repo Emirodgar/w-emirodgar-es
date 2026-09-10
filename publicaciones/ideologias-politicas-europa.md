@@ -8,7 +8,7 @@ feed: 1
 folder: europa
 tags: datos, europa
 date: 2025-04-09
-date_modified: 15-05-2025
+date_modified: 2025-05-15
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: ideologias-politicas-europa
 

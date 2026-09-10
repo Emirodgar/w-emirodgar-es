@@ -3,8 +3,8 @@ title: Optimización de imágenes para el SEO
 description: Genera más tráfico orgánico a través de búsquedas de imágenes y consigue mayor visibilidad en buscadores
 lang: es_ES
 author: Emirodgar
-date: 16/05/2019
-date_modified: 16/05/2019
+date: 2019-05-16
+date_modified: 2019-05-16
 sitemap: 1
 feed: 1
 folder: seo

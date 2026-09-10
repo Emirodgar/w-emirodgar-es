@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: programacion
-date: 07/01/2020
+date: 2020-01-07
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: cookies-samesite
 

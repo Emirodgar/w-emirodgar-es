@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: seo
-date: 30/01/2020
+date: 2020-01-30
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: emojis-titulo
 

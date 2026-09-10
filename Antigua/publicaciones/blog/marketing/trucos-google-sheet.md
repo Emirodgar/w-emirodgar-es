@@ -7,7 +7,7 @@ sitemap: 1
 feed: 1
 folder: marketing
 tags: SEO, Google, excel
-date: 26/03/2020
+date: 2020-03-26
 image: https://emirodgar.com/cdn/images/og/herramientas.png
 permalink: trucos-hojas-calculo-google
 

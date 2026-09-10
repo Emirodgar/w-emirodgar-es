@@ -6,8 +6,8 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: jekyll
-date: 28/06/2019
-date_modified: 28/06/2019
+date: 2019-06-28
+date_modified: 2019-06-28
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: redirecciones-seo-jekyll
 

@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: jekyll
-date: 07/04/2019
+date: 2019-04-07
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: optimizacion-seo-jekyll
 
@@ -59,7 +59,7 @@ description: Guía completa para optimizar el SEO en Jekyll
 lang: es_ES
 author: Emirodgar
 tags: SEO, Jekyll
-date: 08/04/2019
+date: 2019-04-08
 image: https://emirodgar.com/cdn/images/og/og-seo-tools.jpg
 permalink: optimizacion-seo-jekyll
 

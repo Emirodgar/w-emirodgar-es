@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: programacion
-date: 04/02/2020
+date: 2020-02-04
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: webp-compatibilidad
 

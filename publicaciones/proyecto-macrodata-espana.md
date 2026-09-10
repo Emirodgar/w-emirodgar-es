@@ -6,7 +6,7 @@ author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 10-09-2026
+date: 2026-09-10
 folder: proyectos
 permalink: macrodata-espana
 ---

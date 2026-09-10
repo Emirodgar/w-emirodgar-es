@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: jekyll
-date: 02/03/2020
+date: 2020-03-02
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: colorear-codigo-jekyll
 

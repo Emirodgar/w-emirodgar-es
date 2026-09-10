@@ -74,9 +74,7 @@ p {
 .sidebar-wrapper {
   grid-column: span 3;
   order: $sidebar-order;
-  // Darkened enough (across every skin) to keep white text at a WCAG AA
-  // contrast ratio of at least 4.5:1 against the background.
-  background: darken($theme-color, 33%);
+  background: $theme-color;
   color: #fff;
   a {
     color: #fff;

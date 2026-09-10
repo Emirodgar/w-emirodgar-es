@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: programacion
-date: 10/09/2019
+date: 2019-09-10
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: lazy-load-carga-bajo-demanda-imagenes
 

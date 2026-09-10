@@ -5,7 +5,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: programacion
-date: 12/11/2019
+date: 2019-11-12
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: consola-devtools-chrome
 

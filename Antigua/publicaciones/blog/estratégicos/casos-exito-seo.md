@@ -4,7 +4,7 @@ description: Os cuento las estrategias SEO de las que estoy más orgulloso. Los 
 lang: es_ES
 sitemap: 1
 feed: 1
-date: 15/01/2020
+date: 2020-01-15
 folder: estrategicos
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: casos-exito-seo

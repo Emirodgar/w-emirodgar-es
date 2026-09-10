@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: offtopic
-date: 10/09/2019
+date: 2019-09-10
 image: https://emirodgar.com/cdn/images/og/emirodgar.png
 permalink: crossfit-salamanca
 

@@ -6,7 +6,7 @@ author: Emirodgar
 sitemap: 1
 feed: 1
 folder: diccionario
-date: 15/10/2019
+date: 2019-10-15
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
 permalink: growth-hacking
 
