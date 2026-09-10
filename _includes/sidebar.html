@@ -1,14 +1,14 @@
 {% assign sidebar = site.data.data.sidebar %}
-<div class="sidebar-wrapper">
+<aside class="sidebar-wrapper" aria-label="Perfil y contacto">
 
   <div class="profile-container">
 
     {% if sidebar.avatar %}
-    <img class="avatar" src="{{ site.baseurl }}/assets/images/emirodgar.jpg" alt="Emilio Rodríguez" />
+    <img class="avatar" src="{{ site.baseurl }}/assets/images/emirodgar.jpg" alt="Emilio Rodríguez" width="100" height="100" />
     {% endif %}
 
     {% if sidebar.name %}
-    <a href="https://emirodgar.es/emilio"><h2 class="name">{{ sidebar.name }}</h2></a>
+    <h2 class="name"><a href="https://emirodgar.es/emilio">{{ sidebar.name }}</a></h2>
     {% endif %}
 
     {% if sidebar.tagline %}
@@ -21,49 +21,7 @@
 
   <hr>
 
-<div class="education-container container-block">
+  {% include experiences.html %}
+  {% include education.html %}
 
-    <h2 class="container-block-title">
-      EXPERIENCIA
-    </h2>
-
-    
-    <div class="item">
-      <h4 class="degree">Director de Producción</h4>
-      <h5 class="meta">Smartup Digital</h5>
-      <div class="time">2015 / +80 empleados</div>
-    </div>
-    
-    <div class="item">
-      <h4 class="degree">Asesor ICEX</h4>
-      <h5 class="meta">Programa ICEX Next</h5>
-      <div class="time">2012</div>
-    </div>  
-
-  </div>
-
-  <div class="education-container container-block">
-
-    <h2 class="container-block-title">
-      Formación
-    </h2>
-
-    <div class="item">
-      <h4 class="degree">Máster Experto en Comercio Electrónico</h4>
-      <h5 class="meta">Universidad de Salamanca</h5>
-      <div class="time">2009</div>
-    </div>
-    
-    <div class="item">
-      <h4 class="degree">Ingeniero Informático</h4>
-      <h5 class="meta">Universidad Pontificia de Salamanca</h5>
-      <div class="time">2007</div>
-    </div>
-    
-    
-    
-
-  </div>
-
-
-</div>
+</aside>

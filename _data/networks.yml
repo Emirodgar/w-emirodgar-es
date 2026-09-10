@@ -1,0 +1,95 @@
+# Configuración de los canales de contacto que puede mostrar la sidebar.
+# El valor real de cada canal (email, github, twitter...) vive en data.yml,
+# bajo sidebar.<key>. Aquí solo se define CÓMO se construye el enlace y el
+# icono, no el dato personal en sí.
+#
+# type:
+#   mailto   -> href="mailto:<valor>"
+#   tel      -> href="tel:<valor>"
+#   text     -> no es un enlace, solo se muestra el valor (ej. zona horaria)
+#   external -> href="<prefix><valor><suffix>", se abre en pestaña nueva
+#
+# label_prefix -> texto que se antepone SOLO a lo que se muestra (no al href)
+# label        -> texto fijo a mostrar en vez del valor (ej. "Resume PDF")
+# followers    -> texto secundario opcional (ej. "+15k seguidores")
+
+- key: email
+  icon: fas fa-envelope
+  type: mailto
+
+- key: phone
+  icon: fas fa-phone
+  type: tel
+
+- key: citizenship
+  icon: fas fa-passport
+  type: text
+
+- key: timezone
+  icon: fas fa-clock
+  type: text
+
+- key: telegram
+  icon: fab fa-telegram
+  type: external
+  prefix: "https://t.me/"
+
+- key: website
+  icon: fas fa-globe-americas
+  type: external
+  prefix: "http://"
+
+- key: linkedin
+  icon: fab fa-linkedin
+  type: external
+  prefix: "https://linkedin.com/in/"
+  followers: "+15k seguidores"
+
+- key: xing
+  icon: fab fa-xing
+  type: external
+  prefix: "https://www.xing.com/profile/"
+
+- key: github
+  icon: fab fa-github
+  type: external
+  prefix: "http://github.com/"
+
+- key: gitlab
+  icon: fab fa-gitlab
+  type: external
+  prefix: "http://gitlab.com/"
+
+- key: bitbucket
+  icon: fab fa-bitbucket
+  type: external
+  prefix: "http://bitbucket.com/"
+
+- key: twitter
+  icon: fab fa-twitter
+  type: external
+  prefix: "https://twitter.com/"
+  label_prefix: "@"
+  followers: "+4.3k seguidores"
+
+- key: stack-overflow
+  icon: fab fa-stack-overflow
+  type: external
+  prefix: "https://stackoverflow.com/users/"
+
+- key: codewars
+  icon: fas fa-code
+  type: external
+  prefix: "https://www.codewars.com/users/"
+  suffix: "/completed_solutions"
+
+- key: goodreads
+  icon: fab fa-goodreads-g
+  type: external
+  prefix: "https://www.goodreads.com/user/show/"
+
+- key: pdf
+  icon: fas fa-file-pdf
+  type: external
+  prefix: ""
+  label: "Resume PDF"

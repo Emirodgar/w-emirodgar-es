@@ -1,0 +1,41 @@
+# Categorías de publicaciones (page.folder en el front matter de cada .md)
+# usadas en el pie de cada artículo para enlazar al listado de su categoría.
+
+- folder: analisis
+  label: Análisis
+  url: /publicaciones-analisis
+
+- folder: elecciones
+  label: Elecciones
+  url: /publicaciones-elecciones
+
+- folder: formacion
+  label: Formación
+  url: /publicaciones-formacion
+
+- folder: espana
+  label: España
+  url: /publicaciones-espana
+
+- folder: ia
+  label: Inteligencia Artificial
+  url: /publicaciones-inteligencia-artificial
+
+- folder: europa
+  label: Europa
+  url: /publicaciones-europa
+
+- folder: proyectos
+  label: Proyectos
+  url: /publicaciones-proyectos
+
+- folder: politica
+  label: Política
+  url: /publicaciones-politica
+
+# NOTA: hay publicaciones con folder: guias / geopolitica / conceptos pero
+# todavía no existe una página de listado para esas categorías (no hay
+# publicaciones-guias.md, publicaciones-geopolitica.md ni
+# publicaciones-conceptos.md), así que de momento no se añaden aquí para no
+# generar enlaces rotos. Si se crean esas páginas, basta con añadir su
+# entrada aquí.
