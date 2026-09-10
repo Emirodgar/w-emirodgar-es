@@ -47,7 +47,7 @@ El panel está diseñado para nutrirse de fuentes oficiales:
 - **Euríbor a 12 meses**: media mensual publicada por el Banco de España, calculada según la metodología de EMMI.
 - **PIB**: [INE, Contabilidad Nacional Trimestral de España](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736164439).
 
-Los datos que ves publicados hoy son una muestra ilustrativa de la estructura del panel; se sustituyen por cifras reales cada vez que se ejecuta la skill de mantenimiento del proyecto (ver más abajo), que deja constancia de la fecha de la última actualización en el propio panel.
+Los datos se sustituyen por cifras reales cada vez que se ejecuta la skill de mantenimiento del proyecto (ver más abajo), que deja constancia de la fecha de la última actualización en el propio panel. La única excepción es la prima de riesgo: al no disponer de un feed de mercado diario integrado en el panel, su serie histórica mensual combina lecturas puntuales publicadas en prensa económica con una interpolación entre ellas, por lo que debe tomarse como una aproximación y no como una cifra oficial cerrada.
 
 ## Cómo se mantiene actualizado
 

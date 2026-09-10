@@ -1,23 +1,23 @@
 {
-  "lastUpdated": "05 de Septiembre, 2026",
-  "resumenEjecutivo": "Datos de muestra a la espera de la primera actualización automática. Cuando se ejecute la skill de actualización, este texto reflejará una lectura real de la coyuntura: evolución de la inflación general y subyacente, la prima de riesgo, los tipos del BCE frente al Euríbor y el crecimiento del PIB.",
+  "lastUpdated": "10 de Septiembre, 2026",
+  "resumenEjecutivo": "La inflación general repuntó con fuerza en agosto hasta el 4,3% interanual, su nivel más alto en varios años, empujada por los carburantes, mientras la inflación subyacente se mantiene contenida en el 2,9%. El BCE respondió el 10 de septiembre con su segunda subida de tipos del año, hasta el 2,65% en la facilidad principal de financiación (efectiva desde el 16 de septiembre), lo que ha llevado al Euríbor a 12 meses a superar el 3,1%. Pese al repunte generalizado de las rentabilidades de la deuda en la eurozona, la prima de riesgo española se sitúa hoy en torno a los 46 puntos básicos, muy por debajo de los máximos de mediados de año. El PIB, por su parte, mantiene un crecimiento estable del 2,7% interanual por quinto trimestre consecutivo.",
   "sources": {
-    "ipc": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente",
-    "ipcSubyacente": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente",
-    "primaRiesgo": "Diferencial de rentabilidad entre el bono español y el bono alemán a 10 años (Banco de España / Tesoro Público)",
-    "tiposBCE": "Banco Central Europeo — tipo de interés de la facilidad principal de financiación",
-    "euribor": "Euríbor a 12 meses, media mensual (Banco de España / EMMI)",
-    "pib": "INE, Contabilidad Nacional Trimestral de España (CNTR) — variación interanual del PIB"
+    "ipc": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente. Dato de agosto 2026 procedente del indicador adelantado (avance), pendiente de confirmación definitiva",
+    "ipcSubyacente": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente. Dato de agosto 2026 procedente del indicador adelantado (avance), pendiente de confirmación definitiva",
+    "primaRiesgo": "Diferencial de rentabilidad entre el bono español y el bono alemán a 10 años. El valor actual se ha calculado a partir de las rentabilidades de mercado del día (Trading Economics); la serie histórica mensual combina lecturas puntuales publicadas en prensa económica con una interpolación lineal entre ellas a falta de un feed de datos de mercado diario integrado en el panel — tómese como aproximación, no como cifra oficial cerrada",
+    "tiposBCE": "Banco Central Europeo — tipo de interés de la facilidad principal de financiación, según las decisiones del Consejo de Gobierno",
+    "euribor": "Euríbor a 12 meses, media mensual (agregadores especializados: idealista/Bankinter, a partir de la publicación diaria de EMMI)",
+    "pib": "INE, Contabilidad Nacional Trimestral de España (CNTR) — variación interanual del PIB; el dato se repite en los meses de un mismo trimestre porque el INE solo publica cifra nueva cada tres meses"
   },
   "indicators": [
     {
       "id": "ipc",
       "title": "Inflación (IPC)",
-      "currentValue": 2.3,
+      "currentValue": 4.3,
       "unit": "%",
-      "change": -0.2,
+      "change": 0.7,
       "changeLabel": "vs mes anterior",
-      "description": "IPC Interanual estimado",
+      "description": "IPC interanual (avance INE, agosto 2026)",
       "target": 2.0,
       "icon": "fa-fire-flame-curved",
       "color": "rose"
@@ -25,10 +25,10 @@
     {
       "id": "prima",
       "title": "Prima de Riesgo",
-      "currentValue": 82,
+      "currentValue": 46,
       "unit": "pb",
-      "change": -3,
-      "changeLabel": "vs mes anterior",
+      "change": -25,
+      "changeLabel": "vs mes anterior (estimado)",
       "description": "Diferencial España - Alemania",
       "target": 100,
       "icon": "fa-shield-halved",
@@ -37,10 +37,10 @@
     {
       "id": "bce",
       "title": "Tipo de Interés BCE",
-      "currentValue": 3.25,
+      "currentValue": 2.65,
       "unit": "%",
-      "change": -0.25,
-      "changeLabel": "Última decisión",
+      "change": 0.25,
+      "changeLabel": "Última decisión (efectiva 16/09/2026)",
       "description": "Facilidad principal de financiación",
       "target": null,
       "icon": "fa-building-columns",
@@ -49,28 +49,28 @@
     {
       "id": "pib",
       "title": "Crecimiento PIB",
-      "currentValue": 2.5,
+      "currentValue": 2.7,
       "unit": "%",
-      "change": 0.4,
+      "change": 0.0,
       "changeLabel": "Tasa interanual",
-      "description": "Crecimiento anual acumulado",
+      "description": "Crecimiento interanual (2º trimestre 2026)",
       "target": 2.0,
       "icon": "fa-chart-pie",
       "color": "emerald"
     }
   ],
   "historicalData": [
-    { "month": "Sep 2025", "ipc": 3.5, "ipcSubyacente": 3.8, "primaRiesgo": 105, "tiposBCE": 4.25, "euribor": 4.12, "pib": 1.8 },
-    { "month": "Oct 2025", "ipc": 3.4, "ipcSubyacente": 3.7, "primaRiesgo": 102, "tiposBCE": 4.25, "euribor": 4.05, "pib": 1.9 },
-    { "month": "Nov 2025", "ipc": 3.2, "ipcSubyacente": 3.6, "primaRiesgo": 98,  "tiposBCE": 4.25, "euribor": 3.98, "pib": 2.0 },
-    { "month": "Dic 2025", "ipc": 3.1, "ipcSubyacente": 3.4, "primaRiesgo": 96,  "tiposBCE": 4.00, "euribor": 3.85, "pib": 2.0 },
-    { "month": "Ene 2026", "ipc": 3.0, "ipcSubyacente": 3.3, "primaRiesgo": 95,  "tiposBCE": 4.00, "euribor": 3.72, "pib": 2.1 },
-    { "month": "Feb 2026", "ipc": 2.8, "ipcSubyacente": 3.1, "primaRiesgo": 92,  "tiposBCE": 3.75, "euribor": 3.65, "pib": 2.2 },
-    { "month": "Mar 2026", "ipc": 2.9, "ipcSubyacente": 3.0, "primaRiesgo": 90,  "tiposBCE": 3.75, "euribor": 3.58, "pib": 2.2 },
-    { "month": "Abr 2026", "ipc": 2.7, "ipcSubyacente": 2.9, "primaRiesgo": 88,  "tiposBCE": 3.75, "euribor": 3.45, "pib": 2.3 },
-    { "month": "May 2026", "ipc": 2.6, "ipcSubyacente": 2.7, "primaRiesgo": 87,  "tiposBCE": 3.50, "euribor": 3.38, "pib": 2.4 },
-    { "month": "Jun 2026", "ipc": 2.5, "ipcSubyacente": 2.6, "primaRiesgo": 85,  "tiposBCE": 3.50, "euribor": 3.25, "pib": 2.4 },
-    { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "pib": 2.5 },
-    { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "pib": 2.5 }
+    { "month": "Sep 2025", "ipc": 3.0, "ipcSubyacente": 2.4, "primaRiesgo": 51,  "tiposBCE": 2.15, "euribor": 2.172, "pib": 2.7 },
+    { "month": "Oct 2025", "ipc": 3.1, "ipcSubyacente": 2.5, "primaRiesgo": 51,  "tiposBCE": 2.15, "euribor": 2.185, "pib": 2.7 },
+    { "month": "Nov 2025", "ipc": 3.0, "ipcSubyacente": 2.6, "primaRiesgo": 60,  "tiposBCE": 2.15, "euribor": 2.217, "pib": 2.7 },
+    { "month": "Dic 2025", "ipc": 2.9, "ipcSubyacente": 2.6, "primaRiesgo": 68,  "tiposBCE": 2.15, "euribor": 2.267, "pib": 2.7 },
+    { "month": "Ene 2026", "ipc": 2.3, "ipcSubyacente": 2.6, "primaRiesgo": 77,  "tiposBCE": 2.15, "euribor": 2.245, "pib": 2.7 },
+    { "month": "Feb 2026", "ipc": 2.3, "ipcSubyacente": 2.7, "primaRiesgo": 86,  "tiposBCE": 2.15, "euribor": 2.221, "pib": 2.7 },
+    { "month": "Mar 2026", "ipc": 3.4, "ipcSubyacente": 2.9, "primaRiesgo": 94,  "tiposBCE": 2.15, "euribor": 2.567, "pib": 2.7 },
+    { "month": "Abr 2026", "ipc": 3.2, "ipcSubyacente": 2.8, "primaRiesgo": 103, "tiposBCE": 2.15, "euribor": 2.747, "pib": 2.7 },
+    { "month": "May 2026", "ipc": 3.2, "ipcSubyacente": 3.0, "primaRiesgo": 111, "tiposBCE": 2.15, "euribor": 2.804, "pib": 2.7 },
+    { "month": "Jun 2026", "ipc": 3.2, "ipcSubyacente": 2.9, "primaRiesgo": 120, "tiposBCE": 2.40, "euribor": 2.795, "pib": 2.7 },
+    { "month": "Jul 2026", "ipc": 3.6, "ipcSubyacente": 3.0, "primaRiesgo": 95,  "tiposBCE": 2.40, "euribor": 2.839, "pib": 2.7 },
+    { "month": "Ago 2026", "ipc": 4.3, "ipcSubyacente": 2.9, "primaRiesgo": 71,  "tiposBCE": 2.40, "euribor": 2.951, "pib": 2.7 }
   ]
 }
