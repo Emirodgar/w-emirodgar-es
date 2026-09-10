@@ -66,7 +66,7 @@ Ejemplo: varios medios y editoriales han demandado a empresas de IA por usar su 
 - **Token**: la unidad mínima en la que un modelo de lenguaje divide el texto para procesarlo; puede ser una palabra, parte de una palabra o un signo de puntuación.
 - **Modelo multimodal**: un sistema capaz de entender y/o generar más de un tipo de contenido (texto, imagen, audio, vídeo) en el mismo modelo.
 - **Small Language Model (SLM)**: versión reducida de un LLM, más barata y rápida de ejecutar, pensada para tareas concretas en lugar de propósito general.
-- **Código abierto vs. propietario**: mientras modelos como Llama o DeepSeek publican sus pesos para que cualquiera los use y modifique, otros como GPT o Gemini son propietarios y solo se accede a través de una API.
+- **Código abierto vs. propietario**: mientras modelos como Llama o DeepSeek publican sus pesos para que cualquiera los use y modifique, otros como GPT o Gemini son propietarios y solo se accede a través de una API. Es, de hecho, una de las bazas que China está usando en su pulso con Estados Unidos, como vimos en [quién va ganando la carrera de la IA](https://emirodgar.es/china-eeuu-carrera-inteligencia-artificial).
 - **Sesgo algorítmico**: cuando un modelo reproduce o amplifica desigualdades presentes en los datos con los que fue entrenado.
 - **Deepfake**: contenido audiovisual sintético (voz, vídeo o imagen) generado con IA para simular que una persona real dijo o hizo algo que nunca ocurrió.
 - **Chief AI Officer (CAIO)**: el cargo directivo responsable de la estrategia de IA de una empresa, cada vez más habitual en organizaciones grandes. Lo tratamos en detalle en [este artículo](https://emirodgar.es/chief-ai-officer).

@@ -36,7 +36,7 @@ Desde 2017, Lassalle explora cómo tecnologías como la IA influyen en nuestras 
 
 ## 🌍 Geopolítica de la IA: EE. UU., China y la oportunidad europea
 
-La carrera tecnológica entre Estados Unidos y China impulsa una IA centrada en el poder. Frente a ello, Europa tiene una oportunidad única para plantear una alternativa humanista.
+[La carrera tecnológica entre Estados Unidos y China](https://emirodgar.es/china-eeuu-carrera-inteligencia-artificial) impulsa una IA centrada en el poder. Frente a ello, Europa tiene una oportunidad única para plantear una alternativa humanista.
 
 > “Europa debe definir para qué quiere la IA. No para dominar, sino para contribuir al bienestar humano desde valores como la cultura, la alteridad y el respeto.”
 

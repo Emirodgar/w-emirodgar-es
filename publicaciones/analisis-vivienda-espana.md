@@ -311,7 +311,7 @@ Cuando lo recomendable es no superar el **30% de los ingresos** para vivienda, l
 ### ¿Cómo ha cambiado la emancipación y la riqueza de los hogares jóvenes?
 
 - La **tasa de emancipación juvenil (16-29 años)** cayó a poco más del **15% en 2024**, la cifra más baja desde 2006.  
-- Desde 2002, la **riqueza de los hogares menores de 35 años** ha caído alrededor de un **75%**.  
+- Desde 2002, la **riqueza de los hogares menores de 35 años** ha caído alrededor de un **75%**, en paralelo a una caída generalizada del [endeudamiento de los hogares españoles](https://emirodgar.es/analisis-endeudamiento-hogares-espana) que refleja, más que salud financiera, la dificultad de acceder al crédito.  
 - Solo **un tercio de los hogares liderados por menores de 35 años tiene vivienda en propiedad**, frente a cerca del 65% de hace dos décadas.  
 
 En resumen: **las nuevas generaciones han llegado al mercado de vivienda en el peor momento posible**, con precios altos, salarios ajustados y un entorno de alquiler cada vez más tensionado en las grandes ciudades.

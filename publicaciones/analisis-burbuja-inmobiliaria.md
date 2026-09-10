@@ -83,7 +83,7 @@ Esta fue la **burbuja más devastadora** de la historia inmobiliaria española. 
 
 **Nivel de endeudamiento familiar**
 
-La diferencia más significativa radica en el **endeudamiento de los hogares**. Actualmente, la ratio de deuda familiar respecto a la renta bruta disponible se sitúa en el **72%**, el **nivel más bajo desde 2001**. En términos de PIB, la deuda de las familias representa el **45%**, muy inferior al **85%** de hace una década.
+La diferencia más significativa radica en el **endeudamiento de los hogares**. Actualmente, la ratio de deuda familiar respecto a la renta bruta disponible se sitúa en el **72%**, el **nivel más bajo desde 2001**. En términos de PIB, la deuda de las familias representa el **45%**, muy inferior al **85%** de hace una década, una tendencia que analizamos con más detalle en [el endeudamiento de los hogares en España](https://emirodgar.es/analisis-endeudamiento-hogares-espana).
 
 El **endeudamiento hipotecario** actual es del **46,6% de la renta disponible**, comparado con niveles que superaron el **80%** durante la burbuja de 2007.
 
