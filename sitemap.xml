@@ -8,8 +8,7 @@
     aparezca aquí en el siguiente build, sin tocar este fichero.
   - Las páginas estáticas sin front matter (home, dashboards de proyectos, etc.) están listadas a mano
     justo debajo; si se añade una página estática nueva fuera de publicaciones/, hay que añadir su URL aquí.
-  - Se excluyen los contenidos heredados de Antigua/, Antigua2/ y Desarrollo/ (versiones antiguas del
-    sitio) y la página 404.
+  - Se excluyen los contenidos heredados de Antigua/ (versión antigua del sitio) y la página 404.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -23,7 +22,7 @@
 
   <!-- Publicaciones y proyectos (automático, vía site.pages) -->
   {% for page in site.pages %}
-  {%- unless page.title == nil or page.path contains "Antigua" or page.path contains "Desarrollo" or page.url == "/404.html" -%}
+  {%- unless page.title == nil or page.path contains "Antigua" or page.url == "/404.html" -%}
   <url>
     <loc>https://emirodgar.es{{ page.url }}</loc>
     {%- if page.date %}

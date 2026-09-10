@@ -1,7 +1,5 @@
 User-agent: *
 Disallow: /Antigua/
-Disallow: /Antigua2/
-Disallow: /Desarrollo/
 Allow: /
 
 Sitemap: https://emirodgar.es/sitemap.xml
