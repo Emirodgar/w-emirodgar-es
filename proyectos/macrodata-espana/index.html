@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacroData España | Panel de Indicadores Económicos</title>
+    <meta name="description" content="Panel público con la evolución de los principales indicadores macroeconómicos de España: IPC, prima de riesgo, tipos del BCE, Euríbor y PIB.">
+    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for modal JSON editor */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Breadcrumb back to the main site -->
+    <div class="bg-slate-950 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2">
+            <a href="https://emirodgar.es/" class="hover:text-white transition"><i class="fa-solid fa-house"></i> Emirodgar.es</a>
+            <span>/</span>
+            <a href="https://emirodgar.es/proyectos" class="hover:text-white transition">Proyectos</a>
+            <span>/</span>
+            <a href="https://emirodgar.es/macrodata-espana" class="hover:text-white transition">Documentación de MacroData España</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-slate-900 text-white shadow-md border-b border-slate-800 sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-brand-600 rounded-xl shadow-lg">
+                    <i class="fa-solid me-1 fa-chart-line text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white">MacroData España</h1>
+                    <p class="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Última actualización: <span id="lastUpdatedLabel" class="font-medium text-slate-300">--</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Action Controls -->
+            <div class="flex items-center gap-2 self-end sm:self-auto w-full sm:w-auto">
+                <button id="openJsonBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg border border-slate-700 transition">
+                    <i class="fa-solid fa-code text-brand-500"></i>
+                    <span>Editar / Importar JSON</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Filter and Info Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <div>
+                <h2 class="text-lg font-semibold text-slate-900">Cuadro de Mando Macroeconómico</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Evolución de los principales indicadores de la economía española y la Eurozona.</p>
+            </div>
+
+            <!-- Timeframe selector buttons -->
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg self-stretch md:self-auto justify-center">
+                <button class="time-filter px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:text-slate-900 transition" data-range="6">6 Meses</button>
+                <button class="time-filter px-3 py-1.5 text-xs font-semibold rounded-md bg-white text-slate-900 shadow-sm transition" data-range="12">12 Meses</button>
+                <button class="time-filter px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:text-slate-900 transition" data-range="all">Todo</button>
+            </div>
+        </div>
+
+        <!-- Executive summary -->
+        <section id="resumenEjecutivoSection" class="bg-brand-900 text-white p-5 rounded-xl shadow-sm hidden">
+            <div class="flex items-start gap-3">
+                <div class="p-2 bg-white/10 rounded-lg mt-0.5">
+                    <i class="fa-solid fa-lightbulb text-brand-100"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-white mb-1">Resumen ejecutivo</h3>
+                    <p id="resumenEjecutivoText" class="text-sm text-slate-200 leading-relaxed"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Metrics Cards Container -->
+        <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Historical Charts Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- Chart 1: Inflación (IPC) -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                            <h3 class="font-bold text-slate-800">Inflación: IPC General vs Subyacente</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Variación interanual expresada en porcentaje (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Mensual</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="ipcChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 2: Prima de Riesgo -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                            <h3 class="font-bold text-slate-800">Prima de Riesgo España</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Diferencial con respecto al bono alemán a 10 años (puntos básicos)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Puntos Básicos</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="primaChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 3: Tipos de Interés BCE vs Euríbor -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                            <h3 class="font-bold text-slate-800">Tipos BCE vs Euríbor 12M</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tipos oficiales de intervención frente a tipo de mercado (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Porcentaje</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="ratesChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 4: Crecimiento PIB -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                            <h3 class="font-bold text-slate-800">Crecimiento del PIB</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tasa de variación trimestral/interanual del PIB (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Trimestral</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="pibChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Summary Data Table -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-table text-slate-400"></i>
+                    <span>Histórico Reciente de Datos</span>
+                </h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Mes/Años</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">IPC General (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">IPC Subyacente (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Prima Riesgo (pb)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Tipo BCE (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Euríbor 12M (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">PIB Trim. (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody" class="divide-y divide-slate-100">
+                        <!-- Dynamic table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section id="sourcesSection" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hidden">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-book text-slate-400"></i>
+                <span>Fuentes de los datos</span>
+            </h3>
+            <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
+        </section>
+
+        <p class="text-center text-xs text-slate-400 pb-4">
+            Proyecto educativo y experimental. Consulta la
+            <a href="https://emirodgar.es/macrodata-espana" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
+            en Emirodgar.es.
+        </p>
+
+    </main>
+
+    <!-- Modal for JSON Configuration / Weekly Update -->
+    <div id="jsonModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-3xl w-full border border-slate-700 flex flex-col max-h-[90vh] overflow-hidden">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-brand-500/10 text-brand-400 rounded-lg">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Gestor de Datos JSON</h3>
+                        <p class="text-xs text-slate-400">Modifica la estructura o carga un nuevo JSON semanal</p>
+                    </div>
+                </div>
+                <button id="closeJsonBtn" class="text-slate-400 hover:text-white transition p-2">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (JSON Editor) -->
+            <div class="p-6 flex-grow overflow-y-auto space-y-4">
+                <div class="flex justify-between items-center">
+                    <label for="jsonTextarea" class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Estructura del Dataset:</label>
+                    <div class="flex gap-2">
+                        <button id="resetJsonBtn" class="text-xs text-slate-400 hover:text-amber-400 flex items-center gap-1 transition">
+                            <i class="fa-solid fa-rotate-left"></i> Restablecer Ejemplo
+                        </button>
+                    </div>
+                </div>
+
+                <textarea id="jsonTextarea" class="w-full h-80 font-mono text-xs bg-slate-950 text-emerald-400 p-4 rounded-xl border border-slate-800 focus:outline-none focus:border-brand-500 shadow-inner resize-none" spellcheck="false"></textarea>
+
+                <div id="jsonError" class="hidden p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span id="jsonErrorMessage">JSON no válido</span>
+                </div>
+
+                <p class="text-[11px] text-slate-500">
+                    Nota: los cambios aplicados aquí sólo afectan a tu navegador durante esta visita.
+                    Los datos persistentes del panel viven en <code class="text-slate-400">data.json</code>,
+                    que se actualiza mediante la skill de mantenimiento del proyecto.
+                </p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 border-t border-slate-800 bg-slate-900/50 flex flex-wrap justify-between items-center gap-3">
+                <div class="flex gap-2">
+                    <button id="exportJsonBtn" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-download text-slate-400"></i> Exportar
+                    </button>
+                    <label class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-upload text-slate-400"></i> Importar
+                        <input type="file" id="importJsonInput" accept=".json" class="hidden">
+                    </label>
+                </div>
+
+                <div class="flex gap-2">
+                    <button id="cancelJsonBtn" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-lg transition">Cancelar</button>
+                    <button id="saveJsonBtn" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold rounded-lg shadow-md transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i> Aplicar Cambios
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        /**
+         * FALLBACK DATASET
+         * Used only if data.json cannot be loaded (e.g. opening the file directly
+         * from disk, where the browser blocks fetch() for local files).
+         * The canonical, up-to-date dataset lives in ./data.json and is refreshed
+         * by the project's maintenance skill — do not treat this as current data.
+         */
+        const defaultEconomicData = {
+            "lastUpdated": "05 de Septiembre, 2026",
+            "resumenEjecutivo": "",
+            "indicators": [
+                {
+                    "id": "ipc",
+                    "title": "Inflación (IPC)",
+                    "currentValue": 2.3,
+                    "unit": "%",
+                    "change": -0.2,
+                    "changeLabel": "vs mes anterior",
+                    "description": "IPC Interanual estimado",
+                    "target": 2.0,
+                    "icon": "fa-fire-flame-curved",
+                    "color": "rose"
+                },
+                {
+                    "id": "prima",
+                    "title": "Prima de Riesgo",
+                    "currentValue": 82,
+                    "unit": "pb",
+                    "change": -3,
+                    "changeLabel": "vs mes anterior",
+                    "description": "Diferencial España - Alemania",
+                    "target": 100,
+                    "icon": "fa-shield-halved",
+                    "color": "amber"
+                },
+                {
+                    "id": "bce",
+                    "title": "Tipo de Interés BCE",
+                    "currentValue": 3.25,
+                    "unit": "%",
+                    "change": -0.25,
+                    "changeLabel": "Última decisión",
+                    "description": "Facilidad principal de financiación",
+                    "target": null,
+                    "icon": "fa-building-columns",
+                    "color": "blue"
+                },
+                {
+                    "id": "pib",
+                    "title": "Crecimiento PIB",
+                    "currentValue": 2.5,
+                    "unit": "%",
+                    "change": 0.4,
+                    "changeLabel": "Tasa interanual",
+                    "description": "Crecimiento anual acumulado",
+                    "target": 2.0,
+                    "icon": "fa-chart-pie",
+                    "color": "emerald"
+                }
+            ],
+            "historicalData": [
+                { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "pib": 2.5 },
+                { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "pib": 2.5 }
+            ]
+        };
+
+        // Current Dataset in Memory
+        let currentDataset = JSON.parse(JSON.stringify(defaultEconomicData));
+
+        // Active Chart Instances
+        let chartInstances = {};
+        let activeRange = '12'; // Default to 12 months
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadDataset();
+            setupEventListeners();
+        });
+
+        async function loadDataset() {
+            try {
+                const response = await fetch('data.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('No se pudo cargar data.json');
+                currentDataset = await response.json();
+            } catch (e) {
+                console.warn('Usando dataset de respaldo embebido:', e.message);
+                currentDataset = JSON.parse(JSON.stringify(defaultEconomicData));
+            }
+            initApp();
+        }
+
+        function initApp() {
+            renderHeader();
+            renderResumenEjecutivo();
+            renderMetricCards();
+            renderCharts();
+            renderTable();
+            renderSources();
+        }
+
+        function setupEventListeners() {
+            // Modal Open / Close
+            document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
+            document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('cancelJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('saveJsonBtn').addEventListener('click', saveJsonFromEditor);
+            document.getElementById('resetJsonBtn').addEventListener('click', resetDefaultData);
+
+            // Import / Export
+            document.getElementById('exportJsonBtn').addEventListener('click', exportJsonFile);
+            document.getElementById('importJsonInput').addEventListener('change', importJsonFile);
+
+            // Timeframe filters
+            document.querySelectorAll('.time-filter').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.time-filter').forEach(b => {
+                        b.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
+                        b.classList.add('text-slate-600');
+                    });
+                    e.target.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
+                    e.target.classList.remove('text-slate-600');
+
+                    activeRange = e.target.getAttribute('data-range');
+                    renderCharts();
+                });
+            });
+        }
+
+        function renderHeader() {
+            document.getElementById('lastUpdatedLabel').innerText = currentDataset.lastUpdated || 'No especificado';
+        }
+
+        function renderResumenEjecutivo() {
+            const section = document.getElementById('resumenEjecutivoSection');
+            const text = document.getElementById('resumenEjecutivoText');
+            if (currentDataset.resumenEjecutivo) {
+                text.innerText = currentDataset.resumenEjecutivo;
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+        }
+
+        function renderSources() {
+            const section = document.getElementById('sourcesSection');
+            const list = document.getElementById('sourcesList');
+            list.innerHTML = '';
+            if (!currentDataset.sources) {
+                section.classList.add('hidden');
+                return;
+            }
+            Object.values(currentDataset.sources)
+                .filter((value, index, all) => all.indexOf(value) === index)
+                .forEach(source => {
+                    list.insertAdjacentHTML('beforeend', `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-[6px] mt-1.5 text-slate-300"></i><span>${source}</span></li>`);
+                });
+            section.classList.remove('hidden');
+        }
+
+        function renderMetricCards() {
+            const container = document.getElementById('metricsContainer');
+            container.innerHTML = '';
+
+            currentDataset.indicators.forEach(item => {
+                const isPositiveChange = item.change > 0;
+                // For Inflation/Prima, lower is usually preferred. Let's handle color logic dynamically.
+                let changeBadgeClass = "bg-slate-100 text-slate-700";
+                let changeIcon = "fa-minus";
+
+                if (item.change > 0) {
+                    changeBadgeClass = "bg-rose-50 text-rose-700 border border-rose-200";
+                    changeIcon = "fa-arrow-up";
+                } else if (item.change < 0) {
+                    changeBadgeClass = "bg-emerald-50 text-emerald-700 border border-emerald-200";
+                    changeIcon = "fa-arrow-down";
+                }
+
+                // Invert colors for PIB (growth is good)
+                if (item.id === 'pib') {
+                    if (item.change > 0) {
+                        changeBadgeClass = "bg-emerald-50 text-emerald-700 border border-emerald-200";
+                        changeIcon = "fa-arrow-up";
+                    } else if (item.change < 0) {
+                        changeBadgeClass = "bg-rose-50 text-rose-700 border border-rose-200";
+                        changeIcon = "fa-arrow-down";
+                    }
+                }
+
+                const cardHTML = `
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${item.title}</span>
+                            <div class="p-2 rounded-lg bg-slate-100 text-slate-600">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-3xl font-extrabold text-slate-900 tracking-tight">${item.currentValue}</span>
+                            <span class="text-slate-500 font-semibold text-sm">${item.unit}</span>
+                        </div>
+
+                        <div class="mt-3 flex items-center justify-between">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold ${changeBadgeClass}">
+                                <i class="fa-solid ${changeIcon} text-[10px]"></i>
+                                ${Math.abs(item.change)}${item.unit}
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">${item.changeLabel}</span>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // Filter helper for historical array
+        function getFilteredHistory() {
+            const data = currentDataset.historicalData || [];
+            if (activeRange === '6') {
+                return data.slice(-6);
+            } else if (activeRange === '12') {
+                return data.slice(-12);
+            }
+            return data;
+        }
+
+        function renderCharts() {
+            const filteredData = getFilteredHistory();
+            const labels = filteredData.map(d => d.month);
+
+            // Chart Configuration Common Options
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            boxWidth: 8,
+                            font: { family: 'Inter', size: 11 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#0f172a',
+                        padding: 10,
+                        cornerRadius: 8,
+                        titleFont: { family: 'Inter', size: 12, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' }
+                    },
+                    y: {
+                        grid: { color: '#f1f5f9' },
+                        ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' }
+                    }
+                }
+            };
+
+            // Destroy previous charts before recreating
+            Object.values(chartInstances).forEach(chart => chart.destroy());
+            chartInstances = {};
+
+            // Chart 1: IPC
+            const ctxIpc = document.getElementById('ipcChart').getContext('2d');
+            chartInstances.ipc = new Chart(ctxIpc, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'IPC General (%)',
+                            data: filteredData.map(d => d.ipc),
+                            borderColor: '#f43f5e',
+                            backgroundColor: 'rgba(244, 63, 94, 0.05)',
+                            tension: 0.3,
+                            borderWidth: 2.5,
+                            fill: true,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'IPC Subyacente (%)',
+                            data: filteredData.map(d => d.ipcSubyacente),
+                            borderColor: '#fb7185',
+                            borderDash: [4, 4],
+                            tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 2
+                        }
+                    ]
+                },
+                options: commonOptions
+            });
+
+            // Chart 2: Prima de Riesgo
+            const ctxPrima = document.getElementById('primaChart').getContext('2d');
+            chartInstances.prima = new Chart(ctxPrima, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Prima de Riesgo (pb)',
+                        data: filteredData.map(d => d.primaRiesgo),
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 3
+                    }]
+                },
+                options: commonOptions
+            });
+
+            // Chart 3: Tipos BCE vs Euribor
+            const ctxRates = document.getElementById('ratesChart').getContext('2d');
+            chartInstances.rates = new Chart(ctxRates, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Tipo Interés BCE (%)',
+                            data: filteredData.map(d => d.tiposBCE),
+                            borderColor: '#2563eb',
+                            tension: 0,
+                            borderWidth: 2.5,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Euríbor 12 Meses (%)',
+                            data: filteredData.map(d => d.euribor),
+                            borderColor: '#38bdf8',
+                            tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 3
+                        }
+                    ]
+                },
+                options: commonOptions
+            });
+
+            // Chart 4: PIB
+            const ctxPib = document.getElementById('pibChart').getContext('2d');
+            chartInstances.pib = new Chart(ctxPib, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Crecimiento PIB (%)',
+                        data: filteredData.map(d => d.pib),
+                        backgroundColor: '#10b981',
+                        borderRadius: 6
+                    }]
+                },
+                options: commonOptions
+            });
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('dataTableBody');
+            tbody.innerHTML = '';
+
+            // Render history in reverse chronological order for table
+            const history = [...currentDataset.historicalData].reverse();
+
+            history.forEach(row => {
+                const tr = `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="px-6 py-3.5 font-semibold text-slate-800">${row.month}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs">${row.ipc}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-slate-500">${row.ipcSubyacente}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-amber-600">${row.primaRiesgo} pb</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-blue-600">${row.tiposBCE}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-sky-600">${row.euribor}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-semibold text-emerald-600">${row.pib}%</td>
+                    </tr>
+                `;
+                tbody.insertAdjacentHTML('beforeend', tr);
+            });
+        }
+
+        function openJsonModal() {
+            const modal = document.getElementById('jsonModal');
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+
+            textarea.value = JSON.stringify(currentDataset, null, 2);
+            errorContainer.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeJsonModal() {
+            document.getElementById('jsonModal').classList.add('hidden');
+        }
+
+        function saveJsonFromEditor() {
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+            const errorMessage = document.getElementById('jsonErrorMessage');
+
+            try {
+                const parsed = JSON.parse(textarea.value);
+
+                // Simple Structure Validation
+                if (!parsed.indicators || !parsed.historicalData) {
+                    throw new Error("El JSON debe contener las propiedades 'indicators' y 'historicalData'.");
+                }
+
+                currentDataset = parsed;
+                initApp();
+                closeJsonModal();
+            } catch (e) {
+                errorMessage.innerText = e.message;
+                errorContainer.classList.remove('hidden');
+            }
+        }
+
+        function resetDefaultData() {
+            currentDataset = JSON.parse(JSON.stringify(defaultEconomicData));
+            document.getElementById('jsonTextarea').value = JSON.stringify(currentDataset, null, 2);
+            document.getElementById('jsonError').classList.add('hidden');
+        }
+
+        function exportJsonFile() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(currentDataset, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `indicadores_economicos_${new Date().toISOString().slice(0,10)}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        function importJsonFile(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const parsed = JSON.parse(evt.target.result);
+                    document.getElementById('jsonTextarea').value = JSON.stringify(parsed, null, 2);
+                    document.getElementById('jsonError').classList.add('hidden');
+                } catch (err) {
+                    alert("Error al leer el archivo JSON: formato no válido.");
+                }
+            };
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>

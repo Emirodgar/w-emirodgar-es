@@ -6,6 +6,7 @@
     <title>Transformación Digital con Datos e IA | Emirodgar</title>
     <link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 </head>
 <body>
     <section class="hero">
@@ -86,6 +87,37 @@
         </div>
       </section>
 
+    <section id="proyectos" class="section bg-light proyectos-section">
+        <h2>Proyectos</h2>
+        <p>Prototipos y pruebas de concepto que aplican datos e IA a problemas reales.</p>
+        <div class="proyectos-grid">
+
+            <div class="proyecto-card proyecto-card--featured">
+                <span class="proyecto-badge">Panel en vivo</span>
+                <h3>MacroData España</h3>
+                <p>Indicadores macroeconómicos de España: inflación, prima de riesgo, tipos del BCE frente al Euríbor y crecimiento del PIB.</p>
+                <div class="proyecto-chart-wrapper">
+                    <canvas id="macrodataMiniChart" role="img" aria-label="Evolución reciente del IPC general y subyacente en España"></canvas>
+                </div>
+                <p id="macrodataResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
+                <a href="https://emirodgar.es/macrodata-espana" class="link proyecto-cta">Explorar el panel completo →</a>
+            </div>
+
+            <div class="proyecto-card">
+                <h3>FARO</h3>
+                <p>Prueba de concepto para detectar señales de riesgo suicida en redes sociales y facilitar la ayuda temprana.</p>
+                <a href="https://emirodgar.es/faro-monitorizacion-salud-mental" class="link proyecto-cta">Ver proyecto →</a>
+            </div>
+
+            <div class="proyecto-card">
+                <h3>Medición de audiencias digitales</h3>
+                <p>Un sistema público y transparente para medir audiencias e inversión publicitaria en medios digitales.</p>
+                <a href="https://emirodgar.es/medicion-audiencias-digitales" class="link proyecto-cta">Ver proyecto →</a>
+            </div>
+
+        </div>
+    </section>
+
 	<section class="quote-container">
 	  <div class="quote-wrapper">
 	    <blockquote class="strategic-quote">
@@ -106,6 +138,69 @@
     </section>
 
     <!--<script src="script.js"></script>-->
+    <script>
+        (function () {
+            const chartCanvas = document.getElementById('macrodataMiniChart');
+            const resumenEl = document.getElementById('macrodataResumen');
+            if (!chartCanvas) return;
+
+            fetch('proyectos/macrodata-espana/data.json', { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar data.json');
+                    return res.json();
+                })
+                .then(dataset => {
+                    if (resumenEl) {
+                        resumenEl.textContent = dataset.resumenEjecutivo || '';
+                    }
+
+                    const history = (dataset.historicalData || []).slice(-6);
+                    new Chart(chartCanvas.getContext('2d'), {
+                        type: 'line',
+                        data: {
+                            labels: history.map(d => d.month),
+                            datasets: [
+                                {
+                                    label: 'IPC General (%)',
+                                    data: history.map(d => d.ipc),
+                                    borderColor: '#e11d48',
+                                    backgroundColor: 'rgba(225, 29, 72, 0.08)',
+                                    tension: 0.3,
+                                    borderWidth: 2.5,
+                                    fill: true,
+                                    pointRadius: 3
+                                },
+                                {
+                                    label: 'IPC Subyacente (%)',
+                                    data: history.map(d => d.ipcSubyacente),
+                                    borderColor: '#fb7185',
+                                    borderDash: [4, 4],
+                                    tension: 0.3,
+                                    borderWidth: 2,
+                                    pointRadius: 2
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            plugins: {
+                                legend: { position: 'bottom', labels: { boxWidth: 8, font: { size: 11 } } }
+                            },
+                            scales: {
+                                x: { grid: { display: false }, ticks: { font: { size: 10 } } },
+                                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 } } }
+                            }
+                        }
+                    });
+                })
+                .catch(() => {
+                    if (resumenEl) {
+                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
+                    }
+                });
+        })();
+    </script>
 </body>
 </html>
 

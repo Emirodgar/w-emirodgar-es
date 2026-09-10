@@ -1,0 +1,76 @@
+{
+  "lastUpdated": "05 de Septiembre, 2026",
+  "resumenEjecutivo": "Datos de muestra a la espera de la primera actualización automática. Cuando se ejecute la skill de actualización, este texto reflejará una lectura real de la coyuntura: evolución de la inflación general y subyacente, la prima de riesgo, los tipos del BCE frente al Euríbor y el crecimiento del PIB.",
+  "sources": {
+    "ipc": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente",
+    "ipcSubyacente": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente",
+    "primaRiesgo": "Diferencial de rentabilidad entre el bono español y el bono alemán a 10 años (Banco de España / Tesoro Público)",
+    "tiposBCE": "Banco Central Europeo — tipo de interés de la facilidad principal de financiación",
+    "euribor": "Euríbor a 12 meses, media mensual (Banco de España / EMMI)",
+    "pib": "INE, Contabilidad Nacional Trimestral de España (CNTR) — variación interanual del PIB"
+  },
+  "indicators": [
+    {
+      "id": "ipc",
+      "title": "Inflación (IPC)",
+      "currentValue": 2.3,
+      "unit": "%",
+      "change": -0.2,
+      "changeLabel": "vs mes anterior",
+      "description": "IPC Interanual estimado",
+      "target": 2.0,
+      "icon": "fa-fire-flame-curved",
+      "color": "rose"
+    },
+    {
+      "id": "prima",
+      "title": "Prima de Riesgo",
+      "currentValue": 82,
+      "unit": "pb",
+      "change": -3,
+      "changeLabel": "vs mes anterior",
+      "description": "Diferencial España - Alemania",
+      "target": 100,
+      "icon": "fa-shield-halved",
+      "color": "amber"
+    },
+    {
+      "id": "bce",
+      "title": "Tipo de Interés BCE",
+      "currentValue": 3.25,
+      "unit": "%",
+      "change": -0.25,
+      "changeLabel": "Última decisión",
+      "description": "Facilidad principal de financiación",
+      "target": null,
+      "icon": "fa-building-columns",
+      "color": "blue"
+    },
+    {
+      "id": "pib",
+      "title": "Crecimiento PIB",
+      "currentValue": 2.5,
+      "unit": "%",
+      "change": 0.4,
+      "changeLabel": "Tasa interanual",
+      "description": "Crecimiento anual acumulado",
+      "target": 2.0,
+      "icon": "fa-chart-pie",
+      "color": "emerald"
+    }
+  ],
+  "historicalData": [
+    { "month": "Sep 2025", "ipc": 3.5, "ipcSubyacente": 3.8, "primaRiesgo": 105, "tiposBCE": 4.25, "euribor": 4.12, "pib": 1.8 },
+    { "month": "Oct 2025", "ipc": 3.4, "ipcSubyacente": 3.7, "primaRiesgo": 102, "tiposBCE": 4.25, "euribor": 4.05, "pib": 1.9 },
+    { "month": "Nov 2025", "ipc": 3.2, "ipcSubyacente": 3.6, "primaRiesgo": 98,  "tiposBCE": 4.25, "euribor": 3.98, "pib": 2.0 },
+    { "month": "Dic 2025", "ipc": 3.1, "ipcSubyacente": 3.4, "primaRiesgo": 96,  "tiposBCE": 4.00, "euribor": 3.85, "pib": 2.0 },
+    { "month": "Ene 2026", "ipc": 3.0, "ipcSubyacente": 3.3, "primaRiesgo": 95,  "tiposBCE": 4.00, "euribor": 3.72, "pib": 2.1 },
+    { "month": "Feb 2026", "ipc": 2.8, "ipcSubyacente": 3.1, "primaRiesgo": 92,  "tiposBCE": 3.75, "euribor": 3.65, "pib": 2.2 },
+    { "month": "Mar 2026", "ipc": 2.9, "ipcSubyacente": 3.0, "primaRiesgo": 90,  "tiposBCE": 3.75, "euribor": 3.58, "pib": 2.2 },
+    { "month": "Abr 2026", "ipc": 2.7, "ipcSubyacente": 2.9, "primaRiesgo": 88,  "tiposBCE": 3.75, "euribor": 3.45, "pib": 2.3 },
+    { "month": "May 2026", "ipc": 2.6, "ipcSubyacente": 2.7, "primaRiesgo": 87,  "tiposBCE": 3.50, "euribor": 3.38, "pib": 2.4 },
+    { "month": "Jun 2026", "ipc": 2.5, "ipcSubyacente": 2.6, "primaRiesgo": 85,  "tiposBCE": 3.50, "euribor": 3.25, "pib": 2.4 },
+    { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "pib": 2.5 },
+    { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "pib": 2.5 }
+  ]
+}
