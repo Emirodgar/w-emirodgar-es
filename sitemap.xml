@@ -1,0 +1,35 @@
+---
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Generado automáticamente por Jekyll en cada build (cada push a master publica una versión nueva).
+  - Las publicaciones y proyectos con front matter (carpeta publicaciones/) se listan solas mediante
+    un bucle sobre site.pages: basta con crear un archivo nuevo en publicaciones/ con "title" para que
+    aparezca aquí en el siguiente build, sin tocar este fichero.
+  - Las páginas estáticas sin front matter (home, dashboards de proyectos, etc.) están listadas a mano
+    justo debajo; si se añade una página estática nueva fuera de publicaciones/, hay que añadir su URL aquí.
+  - Se excluyen los contenidos heredados de Antigua/, Antigua2/ y Desarrollo/ (versiones antiguas del
+    sitio) y la página 404.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Páginas estáticas -->
+  <url><loc>https://emirodgar.es/</loc></url>
+  <url><loc>https://emirodgar.es/sobre-mi.html</loc></url>
+  <url><loc>https://emirodgar.es/recursos.html</loc></url>
+  <url><loc>https://emirodgar.es/proyectos/macrodata-espana/</loc></url>
+  <url><loc>https://emirodgar.es/proyectos/faro/</loc></url>
+  <url><loc>https://emirodgar.es/proyectos/medicion-audiencias-digitales/</loc></url>
+
+  <!-- Publicaciones y proyectos (automático, vía site.pages) -->
+  {% for page in site.pages %}
+  {%- unless page.title == nil or page.path contains "Antigua" or page.path contains "Desarrollo" or page.url == "/404.html" -%}
+  <url>
+    <loc>https://emirodgar.es{{ page.url }}</loc>
+    {%- if page.date %}
+    <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+    {%- endif %}
+  </url>
+  {%- endunless %}
+  {% endfor %}
+</urlset>

@@ -303,6 +303,7 @@ a.link:hover {
 .proyectos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
     gap: 24px;
     max-width: 1100px;
     margin: 30px auto 0;
@@ -322,6 +323,8 @@ a.link:hover {
 .proyecto-card--featured {
     grid-column: span 1;
     border: 1px solid #e0effe;
+    width: 100%;
+    max-width: 640px;
 }
 
 .proyecto-card h3 {
