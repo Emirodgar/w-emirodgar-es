@@ -29,7 +29,7 @@ Además, se han abierto varias **consultas públicas** para que empresas, ciudad
 
 ## Más regulación, pero también más apoyo
 
-El famoso **AI Act** ya está en marcha desde agosto de 2024. Se espera que aumente la confianza ciudadana y dé seguridad jurídica a quienes desarrollan y usan estas tecnologías. Pero también ha sido criticado por su complejidad. La Comisión Europea parece haber tomado nota y promete **simplificar el marco regulador**, sobre todo en lo que respecta al Reglamento General de Protección de Datos (GDPR).
+El famoso **AI Act** ya está en marcha desde agosto de 2024, aunque como repasamos en detalle en [qué es el AI Act y qué cambia realmente en 2026](https://emirodgar.es/reglamento-europeo-ia-act), su calendario de aplicación ha sufrido más de un vaivén. Se espera que aumente la confianza ciudadana y dé seguridad jurídica a quienes desarrollan y usan estas tecnologías. Pero también ha sido criticado por su complejidad. La Comisión Europea parece haber tomado nota y promete **simplificar el marco regulador**, sobre todo en lo que respecta al Reglamento General de Protección de Datos (GDPR).
 
 Personalmente, tengo mis dudas, sobre todo si comparamos este enfoque regulatorio con el más ágil y menos garantista que está impulsando Estados Unidos con su [Presidential AI Challenge](https://emirodgar.es/analisis-ia-eeuu-europa). No es la primera vez que se promete simplificar y luego llegan más trámites. Aun así, me parece una buena noticia que, por una vez, no se hable solo de multas. Porque si sólo regulamos y no construimos, podemos acabar con pocas opciones sobre la mesa. **Imagina una Europa sin WhatsApp.** Parece exagerado, pero ya hemos vivido bloqueos que rozan ese escenario.
 

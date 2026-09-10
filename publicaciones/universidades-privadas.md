@@ -92,7 +92,7 @@ Todo apunta a que la **universidad privada seguirá creciendo**. En apenas una d
 Los **fondos de inversión** han transformado el modelo educativo en un **negocio global y escalable**, mientras la **Iglesia Católica** mantiene su influencia histórica en las universidades más consolidadas.  
 A la vez, la **formación online** se dispara, con **más de 100.000 estudiantes** en másteres virtuales, lo que demuestra el atractivo del formato flexible y profesionalizador.
 
-Pero también crece el **debate sobre la financiación pública**: sindicatos y expertos alertan de que la falta de recursos en la universidad pública está dejando espacio libre al capital privado. En definitiva, España avanza hacia un modelo universitario dual, donde la elección entre **accesibilidad y exclusividad** marcará el futuro de la educación superior.
+Pero también crece el **debate sobre la financiación pública**: sindicatos y expertos alertan de que la falta de recursos en la universidad pública está dejando espacio libre al capital privado. En definitiva, España avanza hacia un modelo universitario dual, donde la elección entre **accesibilidad y exclusividad** marcará el futuro de la educación superior. Es el mismo patrón de fondo que ya vemos en [sanidad pública vs. privada en España](https://emirodgar.es/analisis-sanidad-publica-privada): un servicio público que no da abasto y un sector privado que crece para ocupar ese hueco.
 
 
 **Conclusión:**  

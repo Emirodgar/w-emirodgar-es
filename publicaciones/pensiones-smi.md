@@ -42,7 +42,7 @@ España afronta el mayor reto demográfico de su historia moderna. **El ratio de
 <img width="976" class="img-responsive" alt="Evolución de la ratio de trabajadores por pensionista en España hasta 2050" src="https://github.com/user-attachments/assets/9732b993-95fb-44d3-b4c6-f5ae57f71498" />
 Evolución de la ratio de trabajadores por pensionista en España hasta 2050
 
-**En 2030, más del 30% de la población española superará los 65 años**, convirtiendo al país en el [segundo más envejecido del mundo](https://emirodgar.es/evolucion-poblacion). Las proyecciones indican que **el número de pensionistas crecerá un 56,3% entre 2025 y 2050**, pasando de 9,6 millones actuales a 15,6 millones.
+**En 2030, más del 30% de la población española superará los 65 años**, convirtiendo al país en el [segundo más envejecido del mundo](https://emirodgar.es/evolucion-poblacion). Las proyecciones indican que **el número de pensionistas crecerá un 56,3% entre 2025 y 2050**, pasando de 9,6 millones actuales a 15,6 millones. Ese mismo envejecimiento es el que está presionando al sistema sanitario y acelerando el trasvase hacia la [sanidad privada en España](https://emirodgar.es/analisis-sanidad-publica-privada).
 
 ## Proyección del gasto: un crecimiento insostenible
 

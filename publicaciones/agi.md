@@ -13,7 +13,7 @@ permalink: agi
 
 # Inteligencia Artificial General
 
-De momento lo que tenemos es más incertidumbre que hechos constatados acerca de cuándo llegará la **inteligencia artificial general** (AGI), una forma de IA tan capaz como los humanos en tareas cognitivas. Si necesitas repasar antes los términos básicos, te recomiendo mi [guía de conceptos básicos de la inteligencia artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial).
+De momento lo que tenemos es más incertidumbre que hechos constatados acerca de cuándo llegará la **inteligencia artificial general** (AGI), una forma de IA tan capaz como los humanos en tareas cognitivas. Si necesitas repasar antes los términos básicos, te recomiendo mi [guía de conceptos básicos de la inteligencia artificial](https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial) o, si buscas algo más de referencia rápida, nuestro [glosario de inteligencia artificial](https://emirodgar.es/glosario-ia).
 Uno de los textos más relevantes a día de hoy es el generado por [Google DeepMind](https://archive.ph/AjgJy), donde exploran y comparten sus avances y medidas para acotar potenciales problemas.
 
 # Desarrollo responsable de la inteligencia artificial general (AGI)
