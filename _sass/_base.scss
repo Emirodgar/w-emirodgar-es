@@ -200,6 +200,25 @@ p {
   order: $resume-order;
   background: #fff;
   padding: 60px;
+  .page-header {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid $divider;
+  }
+  .page-header-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    font-weight: 900;
+    color: darken($theme-color, 15%);
+    &:hover {
+      color: darken($theme-color, 30%);
+    }
+    i {
+      font-size: 18px;
+    }
+  }
   .section-title {
     text-transform: uppercase;
     font-size: 20px;

@@ -11,20 +11,32 @@
   <div class="wrapper">
 
     <main class="main-wrapper" id="main-content">
+      <header class="page-header">
+        <a class="page-header-logo" href="https://emirodgar.es">
+          <i class="fas fa-home" aria-hidden="true"></i> Emirodgar
+        </a>
+      </header>
+
+      {% assign category = nil %}
+      {% if page.folder %}
+        {% for cat in site.data.publication_categories %}
+          {% if cat.folder == page.folder %}{% assign category = cat %}{% endif %}
+        {% endfor %}
+      {% endif %}
+
       <nav class="meta mb-3" aria-label="Ruta de navegación">
         <a href="https://emirodgar.es">Inicio</a>
         <span class="separator" aria-hidden="true"> / </span>
+        {% if category %}
+        <a href="{{ site.url }}{{ category.url }}">{{ category.label }}</a>
+        <span class="separator" aria-hidden="true"> / </span>
+        {% endif %}
         <a href="https://emirodgar.es/mapa">todas las publicaciones</a>
       </nav>
 
       {{ content }}
 
       {% if page.folder %}
-        {% assign category = nil %}
-        {% for cat in site.data.publication_categories %}
-          {% if cat.folder == page.folder %}{% assign category = cat %}{% endif %}
-        {% endfor %}
-
         <hr>
         <div class="meta mb-3">
           <span class="date">
