@@ -7,7 +7,6 @@
     <meta name="description" content="Impulsando la gestión pública y la estrategia política con datos e inteligencia artificial responsable.">
     <link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
 </head>
 <body>
     <section class="hero">
@@ -72,8 +71,10 @@
                 <span class="proyecto-badge">Panel en vivo</span>
                 <h3>MacroData España</h3>
                 <p>Indicadores macroeconómicos de España: inflación, prima de riesgo, tipos del BCE frente al Euríbor y crecimiento del PIB.</p>
-                <div class="proyecto-chart-wrapper">
-                    <canvas id="macrodataMiniChart" role="img" aria-label="Evolución reciente del IPC general y subyacente en España"></canvas>
+                <div class="proyecto-chart-wrapper" id="macrodataSparkline" aria-hidden="true"></div>
+                <div class="proyecto-chart-legend">
+                    <span><i class="legend-swatch"></i> IPC General</span>
+                    <span><i class="legend-swatch legend-swatch--dashed"></i> IPC Subyacente</span>
                 </div>
                 <p id="macrodataResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
                 <a href="https://emirodgar.es/macrodata-espana" class="link proyecto-cta">Explorar el panel completo →</a>
@@ -128,9 +129,9 @@
         });
 
         document.addEventListener('DOMContentLoaded', function () {
-            const chartCanvas = document.getElementById('macrodataMiniChart');
+            const sparklineEl = document.getElementById('macrodataSparkline');
             const resumenEl = document.getElementById('macrodataResumen');
-            if (!chartCanvas) return;
+            if (!sparklineEl) return;
 
             fetch('proyectos/macrodata-espana/data.json', { cache: 'no-store' })
                 .then(res => {
@@ -141,46 +142,9 @@
                     if (resumenEl) {
                         resumenEl.textContent = dataset.resumenEjecutivo || '';
                     }
-
-                    const history = (dataset.historicalData || []).slice(-6);
-                    new Chart(chartCanvas.getContext('2d'), {
-                        type: 'line',
-                        data: {
-                            labels: history.map(d => d.month),
-                            datasets: [
-                                {
-                                    label: 'IPC General (%)',
-                                    data: history.map(d => d.ipc),
-                                    borderColor: '#e11d48',
-                                    backgroundColor: 'rgba(225, 29, 72, 0.08)',
-                                    tension: 0.3,
-                                    borderWidth: 2.5,
-                                    fill: true,
-                                    pointRadius: 3
-                                },
-                                {
-                                    label: 'IPC Subyacente (%)',
-                                    data: history.map(d => d.ipcSubyacente),
-                                    borderColor: '#fb7185',
-                                    borderDash: [4, 4],
-                                    tension: 0.3,
-                                    borderWidth: 2,
-                                    pointRadius: 2
-                                }
-                            ]
-                        },
-                        options: {
-                            responsive: true,
-                            maintainAspectRatio: false,
-                            plugins: {
-                                legend: { position: 'bottom', labels: { boxWidth: 8, font: { size: 11 } } }
-                            },
-                            scales: {
-                                x: { grid: { display: false }, ticks: { font: { size: 10 } } },
-                                y: { grid: { color: '#f1f5f9' }, ticks: { font: { size: 10 } } }
-                            }
-                        }
-                    });
+                    if (dataset.sparklineSvg) {
+                        sparklineEl.innerHTML = dataset.sparklineSvg;
+                    }
                 })
                 .catch(() => {
                     if (resumenEl) {

@@ -359,6 +359,31 @@ a.link:hover {
     width: 100%;
 }
 
+.proyecto-chart-legend {
+    display: flex;
+    gap: 16px;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-top: -4px;
+}
+
+.proyecto-chart-legend span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.legend-swatch {
+    display: inline-block;
+    width: 16px;
+    height: 0;
+    border-top: 2.5px solid #e11d48;
+}
+
+.legend-swatch--dashed {
+    border-top: 2px dashed #fb7185;
+}
+
 .proyecto-resumen {
     font-size: 0.9rem;
     color: #475569;

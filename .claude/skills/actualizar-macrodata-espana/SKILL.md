@@ -10,7 +10,7 @@ vive en un único fichero de datos que consumen tanto el panel completo como el 
 
 - Dataset: [proyectos/macrodata-espana/data.json](../../../proyectos/macrodata-espana/data.json)
 - Panel completo: [proyectos/macrodata-espana/index.html](../../../proyectos/macrodata-espana/index.html) (lee `data.json` vía `fetch`)
-- Widget de la home: [index.html](../../../index.html) (busca `macrodataMiniChart`, también lee el mismo `data.json`)
+- Widget de la home: [index.html](../../../index.html) (busca `macrodataSparkline`, también lee el mismo `data.json`)
 - Artículo/documentación del proyecto: [publicaciones/proyecto-macrodata-espana.md](../../../publicaciones/proyecto-macrodata-espana.md)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
@@ -22,6 +22,7 @@ siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente 
 {
   "lastUpdated": "05 de Septiembre, 2026",   // fecha en texto, formato "DD de Mes, AAAA"
   "resumenEjecutivo": "...",                  // 2-4 frases, ver sección "Resumen ejecutivo"
+  "sparklineSvg": "<svg ...>...</svg>",       // SVG estático del widget de la home, ver sección "Sparkline SVG"
   "sources": { ... },                          // no cambiar salvo que cambie la fuente de un indicador
   "indicators": [
     {
@@ -83,8 +84,11 @@ no inventes cifras.
      real, sin redondear de forma distinta a los datos de origen).
 5. Actualiza `lastUpdated` con la fecha en la que ejecutas la actualización (formato "DD de Mes, AAAA").
 6. Reescribe `resumenEjecutivo` (ver siguiente sección).
-7. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
-8. Enseña al usuario un resumen de qué cifras han cambiado antes de dar la tarea por terminada. No hagas
+7. Regenera `sparklineSvg` a partir de los últimos 6 meses de `historicalData` (ver sección "Sparkline SVG")
+   — es obligatorio hacerlo cada vez que cambien esos 6 meses, o el gráfico de la home quedará desincronizado
+   con las cifras que se muestran al lado.
+8. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
+9. Enseña al usuario un resumen de qué cifras han cambiado antes de dar la tarea por terminada. No hagas
    commit ni push salvo que el usuario lo pida explícitamente.
 
 ## Resumen ejecutivo
@@ -96,6 +100,97 @@ Debe ser:
 - Centrado en la lectura conjunta de los cuatro indicadores: p. ej. si la inflación converge con la
   subyacente, si el BCE ha movido tipos, cómo está la prima de riesgo y si el PIB sigue creciendo.
 - Sin cifras inventadas: solo las que constan en `indicators`/`historicalData` tras la actualización.
+
+## Sparkline SVG
+
+El widget de la home ya no usa Chart.js (se quitó deliberadamente para no cargar una librería de ~200 KB
+por un gráfico decorativo pequeño): `sparklineSvg` es un SVG estático, autocontenido, con la evolución del
+IPC general y subyacente de los últimos 6 meses de `historicalData`. La home simplemente hace
+`elemento.innerHTML = dataset.sparklineSvg`, así que el SVG debe ser válido por sí solo (sin dependencias
+externas) y usar comillas dobles en sus atributos (se guarda como string JSON).
+
+No lo edites a mano: ejecuta este script (ajustando solo la ruta si hace falta) cada vez que cambien los
+últimos 6 meses de `historicalData`, y copia el resultado tal cual al campo `sparklineSvg`:
+
+```python
+import json
+from collections import OrderedDict
+
+path = 'proyectos/macrodata-espana/data.json'
+with open(path, encoding='utf-8') as f:
+    data = json.load(f, object_pairs_hook=OrderedDict)
+
+hist = data['historicalData'][-6:]
+ipc = [h['ipc'] for h in hist]
+sub = [h['ipcSubyacente'] for h in hist]
+
+all_vals = ipc + sub
+vmin, vmax = min(all_vals), max(all_vals)
+rng = vmax - vmin
+pad = rng * 0.15 if rng > 0 else 0.5
+pmin, pmax = vmin - pad, vmax + pad
+prange = pmax - pmin
+
+x0, x1 = 12, 308
+y_top, y_bottom = 10, 100
+n = len(hist)
+step = (x1 - x0) / (n - 1)
+
+def xy(i, v):
+    x = x0 + i * step
+    y = y_bottom - ((v - pmin) / prange) * (y_bottom - y_top)
+    return round(x, 1), round(y, 1)
+
+ipc_pts = [xy(i, v) for i, v in enumerate(ipc)]
+sub_pts = [xy(i, v) for i, v in enumerate(sub)]
+
+def fmt(pts):
+    return " ".join(f"{x},{y}" for x, y in pts)
+
+ipc_line = fmt(ipc_pts)
+sub_line = fmt(sub_pts)
+area = f"{ipc_line} {x1},{y_bottom} {x0},{y_bottom}"
+
+circles = "".join(
+    f'<circle cx="{x}" cy="{y}" r="{2.5 if i < n-1 else 3}" fill="#e11d48"/>'
+    for i, (x, y) in enumerate(ipc_pts)
+)
+
+svg = (
+    '<svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" '
+    'preserveAspectRatio="none" role="img" '
+    'aria-label="Evolucion del IPC general y subyacente, ultimos 6 meses" '
+    'style="width:100%;height:100%">'
+    f'<polygon points="{area}" fill="rgba(225,29,72,0.08)"/>'
+    f'<polyline points="{sub_line}" fill="none" stroke="#fb7185" stroke-width="2" '
+    'stroke-dasharray="5,4" stroke-linecap="round" stroke-linejoin="round"/>'
+    f'<polyline points="{ipc_line}" fill="none" stroke="#e11d48" stroke-width="2.5" '
+    'stroke-linecap="round" stroke-linejoin="round"/>'
+    f'{circles}'
+    '</svg>'
+)
+
+new_data = OrderedDict()
+for k, v in data.items():
+    new_data[k] = v
+    if k == 'resumenEjecutivo':
+        new_data['sparklineSvg'] = svg
+
+with open(path, 'w', encoding='utf-8', newline='\n') as f:
+    json.dump(new_data, f, ensure_ascii=False, indent=2)
+    f.write('\n')
+```
+
+Qué hace: normaliza los 6 valores de IPC general y subyacente entre el mínimo y el máximo (con un 15% de
+margen visual), los reparte en 6 puntos a lo largo de un `viewBox` de 320×110, y dibuja el área bajo la
+línea general (relleno rosa claro), la línea general (sólida) y la subyacente (discontinua), con puntos en
+cada mes de la línea general. Los colores (`#e11d48` general, `#fb7185` subyacente) están fijados a mano
+para que combinen con la leyenda estática de `index.html` (`.legend-swatch`) — si algún día cambian esos
+colores en el CSS, cámbialos también aquí.
+
+El panel completo ([proyectos/macrodata-espana/index.html](../../../proyectos/macrodata-espana/index.html))
+sigue usando Chart.js con sus 4 gráficos interactivos y el selector de rango — eso no cambia, solo se quitó
+Chart.js de la home.
 
 ## Notas
 
