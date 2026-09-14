@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transformación Digital con Datos e IA | Emirodgar</title>
+    <meta name="description" content="Impulsando la gestión pública y la estrategia política con datos e inteligencia artificial responsable.">
     <link rel="stylesheet" href="styles.css">
 	<link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
-	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js" defer></script>
 </head>
 <body>
     <section class="hero">
@@ -18,7 +19,7 @@
 	<section class="about-me section">
 	    <div class="about-container">
 	        <div class="about-image">
-	            <img src="https://emirodgar.es/assets/images/emirodgar.jpg" alt="Emirodgar - Estrategia y IA">
+	            <img src="https://emirodgar.es/assets/images/emirodgar.jpg" alt="Emirodgar - Estrategia y IA" width="130" height="130" loading="lazy">
 	        </div>
 	        <div class="about-text">
 	            <h2>Emilio Rodríguez García</h2>
@@ -56,33 +57,8 @@
     <section class="section publicaciones">
         <!--<h2>Publicaciones destacadas</h2>-->
         <div class="tabla-publicaciones">
-          <div class="fila">
-            <div class="columna">
-              <h3>El impacto de la IA en los servicios públicos</h3>
-              <p>Una reflexión sobre cómo la inteligencia artificial puede transformar la administración.</p>
-              <br>
-              <p><a href="https://emirodgar.es/ia-en-la-administracion-publica">Leer más →</a></p>
-            </div>
-            <div class="columna">
-              <h3>CIS: Centro de Investigaciones Sociológicas</h3>
-              <p>Analizamos los patrones de desviación entre las estimaciones y los resultados electorales.</p>
-              <br>
-              <p><a href="https://emirodgar.es/cis">Leer más →</a></p>
-            </div>
-          </div>
-          <div class="fila">
-            <div class="columna">
-              <h3>Empresas IA First</h3>
-              <p>Consideraciones fundamentales para el uso responsable de la IA y tecnologías automatizadas.</p>
-              <br>
-              <p><a href="https://emirodgar.es/empresas-ia-first">Leer más →</a></p>
-            </div>
-            <div class="columna">
-              <h3>Análisis apagón eléctrico en España</h3>
-              <p>¿Cómo gestionaron los partidos políticos y los medios digitales el evento más disruptivo de los últimos años en España?.</p>
-              <br>
-              <p><a href="https://emirodgar.es/analisis-apagon-electrico">Leer más →</a></p>
-            </div>
+          <div class="fila" id="ultimosArticulosContainer">
+            <p>Cargando últimas publicaciones…</p>
           </div>
         </div>
       </section>
@@ -127,7 +103,31 @@
 
     <!--<script src="script.js"></script>-->
     <script>
-        (function () {
+        document.addEventListener('DOMContentLoaded', function () {
+            const articlesContainer = document.getElementById('ultimosArticulosContainer');
+            if (articlesContainer) {
+                fetch('ultimos-articulos.json', { cache: 'no-store' })
+                    .then(res => {
+                        if (!res.ok) throw new Error('No se pudo cargar ultimos-articulos.json');
+                        return res.json();
+                    })
+                    .then(articles => {
+                        if (!articles.length) throw new Error('Sin artículos');
+                        articlesContainer.innerHTML = articles.map(a => `
+                            <div class="columna">
+                              <h3>${a.title}</h3>
+                              ${a.description ? `<p>${a.description}</p><br>` : ''}
+                              <p><a href="${a.url}">Leer más →</a></p>
+                            </div>
+                        `).join('');
+                    })
+                    .catch(() => {
+                        articlesContainer.innerHTML = '<p><a href="https://emirodgar.es/mapa">Ver publicaciones</a></p>';
+                    });
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
             const chartCanvas = document.getElementById('macrodataMiniChart');
             const resumenEl = document.getElementById('macrodataResumen');
             if (!chartCanvas) return;
@@ -187,7 +187,7 @@
                         resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
                     }
                 });
-        })();
+        });
     </script>
 </body>
 </html>

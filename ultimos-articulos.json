@@ -1,0 +1,15 @@
+---
+---
+[
+{%- assign all_pages = site.pages | sort: 'date' | reverse -%}
+{%- assign count = 0 -%}
+{%- for p in all_pages -%}
+  {%- if count >= 4 -%}{%- break -%}{%- endif -%}
+  {%- assign prefix = p.path | slice: 0, 14 -%}
+  {%- if p.title and p.date and prefix == "publicaciones/" and p.permalink != "proyectos" -%}
+    {%- if count > 0 -%},{%- endif -%}
+    {"title": {{ p.title | jsonify }}, "description": {{ p.description | default: "" | jsonify }}, "url": {{ p.url | prepend: "https://emirodgar.es" | jsonify }}, "date": {{ p.date | date_to_xmlschema | jsonify }}}
+    {%- assign count = count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+]
