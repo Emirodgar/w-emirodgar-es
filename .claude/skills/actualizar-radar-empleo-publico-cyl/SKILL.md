@@ -1,6 +1,6 @@
 ---
 name: actualizar-radar-empleo-publico-cyl
-description: Actualiza el Radar de Empleo Público CyL con las convocatorias, plazas ofertadas, bolsas de empleo, sedes de examen y la plantilla de la Junta por provincia. Usar cuando el usuario pida "actualiza el Radar de Empleo Público CyL", "actualiza el panel de oposiciones de Castilla y León", "refresca las convocatorias/plantilla de CyL" o similar.
+description: Actualiza el Radar de Empleo Público CyL con las convocatorias, plazas ofertadas, bolsas de empleo, sedes de examen, la plantilla de la Junta por provincia, los perfiles profesionales más demandados y el listado de las últimas convocatorias publicadas. Usar cuando el usuario pida "actualiza el Radar de Empleo Público CyL", "actualiza el panel de oposiciones de Castilla y León", "refresca las convocatorias/plantilla de CyL" o similar.
 ---
 
 # Actualizar Radar de Empleo Público CyL
@@ -46,6 +46,19 @@ siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente 
     { "provincia": "Valladolid", "efectivos": 21173, "efectivosAnterior": 20977, "variacion": 196 }
     // plantilla real de la Junta por provincia (destino, no sede de examen); una entrada por cada
     // una de las 9 provincias
+  ],
+  "perfiles": [
+    { "perfil": "Administración General", "convocatorias": 21, "plazas": 2179 }
+    // reparto de plazas por perfil profesional, ver sección 7 más abajo; no añadir/quitar perfiles
+    // salvo que se reclasifique todo el histórico (ver esa sección)
+  ],
+  "convocatoriasRecientes": [
+    {
+      "titulo": "...", "municipio": "Valladolid", "plazas": 8,
+      "fechaPublicacion": "2026-07-27", "fechaLimite": "2026-08-24",
+      "estado": "abierta" | "cerrada", "enlace": "https://empleopublico.jcyl.es/..."
+    }
+    // las 15 convocatorias más recientes por fechaPublicacion, orden descendente
   ],
   "notas": { ... }
 }
@@ -138,40 +151,96 @@ diferencia). Suma las 9 provincias (o, si quieres evitar redondeos, repite la co
 el total autonómico) para actualizar el indicador `efectivos` (`currentValue`, `change`, `changeLabel` con
 el mes/año de comparación, `title` con el mes/año del dato nuevo).
 
+### 7. Perfiles profesionales más demandados
+
+Vuelve al dataset `convocatorias-de-empleo-publico`. Descarga el `titulo` y `numeroplazas` de todas las
+convocatorias (`tipo='Convocatoria'`) publicadas desde el 1 de enero de 2023 (usa
+`where=tipo%3D%27Convocatoria%27%20AND%20fechabocyl%20%3E%3D%20date%272023-01-01%27`), paginando con
+`limit`/`offset` si hace falta (esta API pagina en bloques de 100). No amplíes el rango a años anteriores:
+las convocatorias de 2019-2022 son en su mayoría concursos de "estabilización de empleo temporal Ley
+20/2021" que agrupan varios cuerpos distintos bajo un único título (p. ej. "Concurso Titulado Superior y
+Titulado de Grado Medio") y no se pueden clasificar de forma fiable por perfil.
+
+Clasifica cada `titulo` en uno de estos 8 perfiles, por coincidencia de palabras clave (case-insensitive),
+en este orden de prioridad (para cuando un título encaje en más de uno, gana el primero que coincida):
+
+1. **Sanidad**: médic, sanitari, sanidad, salud, farmac, veterinari, ats, due, enfermer, matrona, odont,
+   dentist, psiquiatr, fisioterap, epidemiolog, laboratorio, químic, biólog
+2. **Ingeniería y Técnicos**: ingenier, arquitect, geólog, delineante, informátic, "técnico de sistemas",
+   "técnico de información"
+3. **Administración General**: "cuerpo superior", "cuerpo de gestión", "cuerpo auxiliar", administrativ,
+   "auxiliar administrativ", "técnico de administración", letrad, auditoría
+4. **Servicios Sociales y Educación**: "trabajador social", "trabajadores sociales", educador, "integrador
+   social", "servicios sociales", discapacidad, psicólog, pedagog, "atención directa", terapeuta,
+   logopeda, "asistente social", "asistentes sociales", "educación infantil", "apoyo al menor", "gestión
+   cultural", museo, psicomotricista
+5. **Medio Ambiente y Montes**: "medio ambiente", "agente medioambiental", "agentes medioambientales",
+   montes, pecuari, incendio, forestal
+6. **Oficios y Mantenimiento**: conductor, cocina, mantenimiento, oficial, celador, "personal de
+   servicios", almacener, gobernant, biblioteca, archiv, subalterno, "auxiliar de carreteras", capataz,
+   tractorista, encargad, "operador de centro de mando"
+7. **Inspección y Consumo**: inspector
+8. **Otros perfiles**: cualquier título que no encaje en ninguno de los anteriores (debería ser una
+   fracción pequeña, por debajo del 10% de las plazas del periodo — si sale mucho mayor, revisa si algún
+   patrón de título nuevo y frecuente merece su propia categoría o encaja en una existente)
+
+Reescribe `perfiles` por completo con la suma de `convocatorias` (nº de filas) y `plazas`
+(`numeroplazas`) de cada perfil, para todo el rango 2023-en curso (no solo el año más reciente). No crees
+una categoría nueva sin decírselo antes al usuario: los 8 perfiles anteriores son fijos salvo que se pida
+explícitamente ampliarlos.
+
+### 8. Últimas convocatorias publicadas
+
+```
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=titulo,numeroplazas,municipio,fechabocyl,fechafinalizacion,enlace_al_contenido&order_by=fechabocyl%20desc&limit=15
+```
+
+Reescribe `convocatoriasRecientes` por completo con estas 15 filas: `fechaPublicacion` = `fechabocyl`,
+`fechaLimite` = `fechafinalizacion`, `municipio` = el valor del campo (o `"Sin especificar"` si es `null`),
+`enlace` = `enlace_al_contenido`. Calcula `estado` comparando `fechaLimite` con la fecha de esta
+actualización: `"abierta"` si `fechaLimite >= hoy`, `"cerrada"` en caso contrario — no dejes un `estado`
+de una ejecución anterior sin recalcular, ya que una convocatoria puede cerrarse entre una actualización y
+la siguiente sin que cambie ningún otro dato suyo.
+
 ## Pasos
 
-1. Lee el `data.json` actual para conocer el último año/mes registrado en `historicalData`/`provincias` y
-   el estado de `notas` (qué años están marcados como incompletos, qué fecha semestral se usó para
-   `efectivos`).
-2. Ejecuta las 6 consultas anteriores contra la API (la de plantilla, sección 6, solo si hay una fecha
-   semestral más reciente disponible).
-3. Actualiza `historicalData`, `sedes`, `provincias` (si aplica) y los 5 indicadores con los valores
-   obtenidos, calculando `change` frente al periodo anterior comparable cuando aplique (déjalo en `null`
-   para `historico`, que no tiene un "periodo anterior" natural).
-4. Actualiza `lastUpdated` con la fecha de ejecución (formato "DD de Mes, AAAA").
-5. Reescribe `resumenEjecutivo` (ver siguiente sección).
-6. Regenera `sparklineSvg` a partir de la serie de `plazas` en `historicalData` (ver sección "Sparkline
+1. Lee el `data.json` actual para conocer el último año/mes registrado en `historicalData`/`provincias`/
+   `convocatoriasRecientes` y el estado de `notas` (qué años están marcados como incompletos, qué fecha
+   semestral se usó para `efectivos`).
+2. Ejecuta las 8 consultas anteriores contra la API (la de plantilla, sección 6, solo si hay una fecha
+   semestral más reciente disponible; la de perfiles, sección 7, siempre que haya convocatorias nuevas
+   desde la última actualización, para no reclasificar sin necesidad).
+3. Actualiza `historicalData`, `sedes`, `provincias` (si aplica), `perfiles` (si aplica) y los 5
+   indicadores con los valores obtenidos, calculando `change` frente al periodo anterior comparable cuando
+   aplique (déjalo en `null` para `historico`, que no tiene un "periodo anterior" natural).
+4. Reescribe `convocatoriasRecientes` por completo (sección 8) — esto debe hacerse siempre, incluso si no
+   hay convocatorias nuevas, porque el campo `estado` de las ya existentes puede haber cambiado de
+   "abierta" a "cerrada".
+5. Actualiza `lastUpdated` con la fecha de ejecución (formato "DD de Mes, AAAA").
+6. Reescribe `resumenEjecutivo` (ver siguiente sección).
+7. Regenera `sparklineSvg` a partir de la serie de `plazas` en `historicalData` (ver sección "Sparkline
    SVG") — obligatorio cada vez que cambie esa serie. El sparkline sigue basado en plazas de oposiciones,
-   no en la plantilla; no lo cambies salvo que el usuario lo pida.
-7. Actualiza `notas` si un año pasa de "incompleto" a "completo", si se publica una fecha semestral nueva
+   no en la plantilla ni en los perfiles; no lo cambies salvo que el usuario lo pida.
+8. Actualiza `notas` si un año pasa de "incompleto" a "completo", si se publica una fecha semestral nueva
    de plantilla, o si detectas cualquier otro cambio en la disponibilidad de los campos del dataset.
-8. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
-9. Enseña al usuario un resumen de qué cifras han cambiado, y en particular si hay alguna convocatoria
-   con plazo abierto ahora mismo (es el dato con más interés práctico del panel). No hagas commit ni push
-   salvo que el usuario lo pida explícitamente.
+9. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
+10. Enseña al usuario un resumen de qué cifras han cambiado, y en particular si hay alguna convocatoria
+    con plazo abierto ahora mismo (es el dato con más interés práctico del panel). No hagas commit ni push
+    salvo que el usuario lo pida explícitamente.
 
 ## Resumen ejecutivo
 
 `resumenEjecutivo` es el texto que se muestra tanto en el panel completo como en el widget de la home.
 Debe ser:
 
-- 4-6 frases en español, tono neutro y periodístico.
+- 5-7 frases en español, tono neutro y periodístico.
 - Cubrir primero convocatorias/plazas (cómo ha evolucionado el número, si hay algo con el plazo abierto
   ahora mismo — es lo más útil para quien consulta el panel — y cualquier concentración relevante por
-  sede de examen), y después la plantilla por provincia (variación interanual del total autonómico, y qué
-  provincias suben o bajan si el contraste es relevante).
-- Sin cifras inventadas: solo las que consten en `indicators`/`historicalData`/`sedes`/`provincias` tras
-  la actualización.
+  sede de examen), después el perfil profesional que más plazas concentra si hay un cambio relevante, y
+  por último la plantilla por provincia (variación interanual del total autonómico, y qué provincias suben
+  o bajan si el contraste es relevante).
+- Sin cifras inventadas: solo las que consten en `indicators`/`historicalData`/`sedes`/`provincias`/
+  `perfiles`/`convocatoriasRecientes` tras la actualización.
 
 ## Sparkline SVG
 
@@ -253,7 +322,7 @@ para que combine con la leyenda estática de `index.html` (`.legend-swatch--blue
 `styles.css`, cámbialo también aquí.
 
 El panel completo ([proyectos/radar-empleo-publico-cyl/index.html](../../../proyectos/radar-empleo-publico-cyl/index.html))
-sigue usando Chart.js con sus 5 gráficos interactivos — eso no cambia, solo se quitó Chart.js de la home.
+sigue usando Chart.js con sus 6 gráficos interactivos — eso no cambia, solo se quitó Chart.js de la home.
 
 ## Notas
 
@@ -268,5 +337,8 @@ sigue usando Chart.js con sus 5 gráficos interactivos — eso no cambia, solo s
   `provincias` (dataset `estadisticas-de-personal`) sí es la provincia real de destino del personal.
 - `estadisticas-de-personal` se actualiza solo dos veces al año (enero/julio): no esperes un dato nuevo
   cada vez que ejecutes esta skill, y no lo fuerces a cambiar solo por "hace tiempo que no se actualiza".
+- La clasificación por perfil (`perfiles`) es una interpretación propia por palabras clave, no un campo
+  oficial del dataset — puede haber casos límite discutibles, sobre todo en "Otros perfiles"; no la
+  presentes como una taxonomía oficial de la Junta en `resumenEjecutivo` ni en la documentación.
 - Si el usuario pide explícitamente publicar los cambios, sigue el flujo normal de git (revisar diff,
   commit con mensaje descriptivo); no lo hagas por iniciativa propia.

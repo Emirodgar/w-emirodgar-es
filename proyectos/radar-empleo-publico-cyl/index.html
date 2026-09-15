@@ -109,6 +109,34 @@
             <!-- Dynamic KPI Cards will be injected here via JavaScript -->
         </section>
 
+        <!-- Recent Convocatorias Table -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-list-check text-slate-400"></i>
+                    <span>Últimas Convocatorias Publicadas</span>
+                </h3>
+                <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">15 más recientes</span>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Convocatoria</th>
+                            <th scope="col" class="px-6 py-3 font-semibold">Sede</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Plazas</th>
+                            <th scope="col" class="px-6 py-3 font-semibold">Publicación</th>
+                            <th scope="col" class="px-6 py-3 font-semibold">Fecha Límite</th>
+                            <th scope="col" class="px-6 py-3 font-semibold">Estado</th>
+                        </tr>
+                    </thead>
+                    <tbody id="recientesTableBody" class="divide-y divide-slate-100">
+                        <!-- Dynamic table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
         <!-- Historical Charts Grid -->
         <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
 
@@ -194,6 +222,23 @@
                 </div>
                 <div class="relative h-64 w-full">
                     <canvas id="efectivosProvinciaChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 6: Perfiles profesionales -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between lg:col-span-2">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                            <h3 class="font-bold text-slate-800">Perfiles Profesionales Más Demandados</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Plazas convocadas desde 2023 por perfil profesional (clasificación propia por título)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Plazas 2023-2026</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="perfilesChart"></canvas>
                 </div>
             </div>
 
@@ -356,7 +401,9 @@
                 { "year": "2025", "convocatorias": 77, "plazas": 1418, "bolsasEmpleo": 0 }
             ],
             "sedes": [],
-            "provincias": []
+            "provincias": [],
+            "perfiles": [],
+            "convocatoriasRecientes": []
         };
 
         // Current Dataset in Memory
@@ -389,6 +436,7 @@
             renderCharts();
             renderTable();
             renderProvinciasTable();
+            renderRecientesTable();
             renderSources();
         }
 
@@ -620,6 +668,26 @@
                     plugins: { ...commonOptions.plugins, legend: { display: false } }
                 }
             });
+
+            // Chart 6: Perfiles profesionales
+            const perfiles = [...(currentDataset.perfiles || [])].sort((a, b) => a.plazas - b.plazas);
+            chartInstances.perfiles = new Chart(document.getElementById('perfilesChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: perfiles.map(p => p.perfil),
+                    datasets: [{
+                        label: 'Plazas',
+                        data: perfiles.map(p => p.plazas),
+                        backgroundColor: '#e11d48',
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    indexAxis: 'y',
+                    plugins: { ...commonOptions.plugins, legend: { display: false } }
+                }
+            });
         }
 
         function renderTable() {
@@ -661,6 +729,46 @@
                         <td class="px-6 py-3.5 text-right font-mono text-xs text-slate-400">${formatNumber(row.efectivosAnterior)}</td>
                         <td class="px-6 py-3.5 text-right font-mono text-xs font-medium ${variacionClass}">
                             <i class="fa-solid ${variacionIcon} text-[10px] me-1"></i>${formatNumber(Math.abs(row.variacion))}
+                        </td>
+                    </tr>
+                `;
+                tbody.insertAdjacentHTML('beforeend', tr);
+            });
+        }
+
+        function renderRecientesTable() {
+            const tbody = document.getElementById('recientesTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            const fmtFecha = (iso) => {
+                if (!iso) return '<span class="text-slate-300">—</span>';
+                const [y, m, d] = iso.split('-');
+                const meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+                return `${d}/${meses[parseInt(m, 10) - 1]}/${y}`;
+            };
+
+            const recientes = currentDataset.convocatoriasRecientes || [];
+
+            recientes.forEach(row => {
+                const abierta = row.estado === 'abierta';
+                const badgeClass = abierta ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-slate-100 text-slate-500 border border-slate-200';
+                const badgeIcon = abierta ? 'fa-circle-check' : 'fa-circle-xmark';
+                const badgeText = abierta ? 'Abierta' : 'Cerrada';
+                const titulo = row.enlace
+                    ? `<a href="${row.enlace}" target="_blank" rel="noopener" class="text-brand-700 hover:underline font-medium">${row.titulo}</a>`
+                    : `<span class="font-medium text-slate-800">${row.titulo}</span>`;
+                const tr = `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="px-6 py-3.5 max-w-sm">${titulo}</td>
+                        <td class="px-6 py-3.5 text-slate-500 text-xs">${row.municipio}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-blue-600">${formatNumber(row.plazas)}</td>
+                        <td class="px-6 py-3.5 text-xs text-slate-500">${fmtFecha(row.fechaPublicacion)}</td>
+                        <td class="px-6 py-3.5 text-xs text-slate-500">${fmtFecha(row.fechaLimite)}</td>
+                        <td class="px-6 py-3.5">
+                            <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[11px] font-semibold ${badgeClass}">
+                                <i class="fa-solid ${badgeIcon} text-[9px]"></i> ${badgeText}
+                            </span>
                         </td>
                     </tr>
                 `;

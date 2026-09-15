@@ -26,6 +26,8 @@ Es un dashboard web, pensado como proyecto educativo y experimental, que central
 - **Convocatorias con plazo abierto ahora mismo**: para saber de un vistazo si hay algo activo.
 - **Plazas por sede de examen** y **convocatorias frente a bolsas de empleo temporal**.
 - **Personal de la Junta por provincia**: cuántos efectivos trabajan en cada una de las 9 provincias y cómo ha variado en el último año.
+- **Perfiles profesionales más demandados**: en qué áreas (sanidad, ingeniería, administración general, oficios...) se concentran las plazas convocadas desde 2023.
+- **Listado de las últimas convocatorias publicadas**, con sede, plazas, fecha de publicación, fecha límite y si siguen con el plazo abierto — con enlace directo a la ficha oficial de cada una.
 
 ## Un par de matices que solo se ven mirando los datos con detalle
 
@@ -33,13 +35,15 @@ El catálogo muestra una evolución muy irregular: de apenas 1-2 convocatorias a
 
 El otro matiz es geográfico: el campo de sede del examen del dataset oficial indica mayoritariamente Valladolid, con independencia de dónde esté el puesto de destino, porque es donde suelen celebrarse los ejercicios de los procesos selectivos centralizados. Por eso el panel incorpora una fuente distinta y complementaria —la plantilla real de la Junta por provincia— para poder comparar de verdad cómo se reparte el empleo público entre las 9 provincias: con 92.299 efectivos en enero de 2026, solo Segovia y Palencia tienen hoy menos personal que hace un año.
 
+Al clasificar las convocatorias por perfil profesional aparece otro patrón: Administración General concentra el mayor número de plazas desde 2023 (2.179), seguida de Oficios y Mantenimiento (836) y Servicios Sociales y Educación (686). Sanidad, en cambio, es el área con más convocatorias distintas (50) pero de tamaño más pequeño cada una — muchas veces una sola plaza por convocatoria, como los puestos de Jefe de Sección de Epidemiología que se repiten provincia a provincia.
+
 ## Fuentes de los datos
 
-El panel se nutre del [portal de datos abiertos de la Junta de Castilla y León](https://analisis.datosabiertos.jcyl.es/) — el mismo portal que alimenta [Panel Económico CyL](https://emirodgar.es/panel-economico-cyl) — combinando dos datasets: "Convocatorias de Empleo Público" (procesos selectivos, plazas, bolsas de empleo) y "Estadísticas de personal" (plantilla real por provincia), ambos vía su API pública.
+El panel se nutre del [portal de datos abiertos de la Junta de Castilla y León](https://analisis.datosabiertos.jcyl.es/) — el mismo portal que alimenta [Panel Económico CyL](https://emirodgar.es/panel-economico-cyl) — combinando dos datasets: "Convocatorias de Empleo Público" (procesos selectivos, plazas, bolsas de empleo, listado reciente) y "Estadísticas de personal" (plantilla real por provincia), ambos vía su API pública. La clasificación por perfil profesional es una interpretación propia por palabras clave del título de cada convocatoria, no un campo oficial del dataset.
 
 ## Cómo se mantiene actualizado
 
-El panel se actualiza mediante una skill de Claude Code creada para este proyecto, que consulta la API de datos abiertos de la Junta para refrescar convocatorias, plazas, bolsas de empleo, sedes y la plantilla por provincia, y recalcula qué convocatorias siguen con el plazo de solicitud abierto en la fecha de la actualización.
+El panel se actualiza mediante una skill de Claude Code creada para este proyecto, que consulta la API de datos abiertos de la Junta para refrescar convocatorias, plazas, bolsas de empleo, sedes, la plantilla por provincia y el listado de convocatorias recientes, y recalcula qué convocatorias siguen con el plazo de solicitud abierto en la fecha de la actualización.
 
 ## Proyecto experimental
 
