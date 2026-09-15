@@ -22,5 +22,7 @@ No son productos finales ni soluciones cerradas, sino pruebas de concepto que me
 | Faro            | Monitorizar [problemas de salud mental](https://emirodgar.es/muertes-salud-mental) | [Enlace](https://emirodgar.es/faro-monitorizacion-salud-mental)    | [Enlace](https://emirodgar.es/proyectos/faro/)         |
 | Audiencias                 | Medición de audiencias digitales para medios                                      |  [Enlace](https://emirodgar.es/medicion-audiencias-digitales)                |   [Enlace](https://emirodgar.es/proyectos/medicion-audiencias-digitales/)                  |
 | MacroData España           | Panel público de indicadores macroeconómicos (IPC, prima de riesgo, tipos BCE/Euríbor, PIB) | [Enlace](https://emirodgar.es/macrodata-espana) | [Enlace](https://emirodgar.es/proyectos/macrodata-espana/) |
+| Panel Económico CyL         | Presupuesto, subvenciones, catálogo de ayudas y mercado laboral de Castilla y León, con detalle por provincia | [Enlace](https://emirodgar.es/panel-economico-cyl) | [Enlace](https://emirodgar.es/proyectos/panel-economico-cyl/) |
+| Radar de Empleo Público CyL | Convocatorias, plazas ofertadas y plantilla de la Junta de Castilla y León, con detalle por provincia | [Enlace](https://emirodgar.es/radar-empleo-publico-cyl) | [Enlace](https://emirodgar.es/proyectos/radar-empleo-publico-cyl/) |
 |                 |                                      |                |                     |
 
