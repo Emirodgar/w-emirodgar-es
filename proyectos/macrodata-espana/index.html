@@ -119,6 +119,17 @@
             </div>
         </section>
 
+        <!-- Sección: España vs. Zona Euro -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-scale-balanced text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">¿Cómo Avanza España Frente a la Eurozona?</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Comparativa de los últimos datos publicados por Eurostat para España y el conjunto de la eurozona.</p>
+
+        <section id="comparativaContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <!-- Dynamic comparison cards will be injected here via JavaScript -->
+        </section>
+
         <!-- Key Metrics Cards Container -->
         <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <!-- Dynamic KPI Cards will be injected here via JavaScript -->
@@ -374,7 +385,8 @@
             "historicalData": [
                 { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "pib": 2.5 },
                 { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "pib": 2.5 }
-            ]
+            ],
+            "comparativaZonaEuro": []
         };
 
         // Current Dataset in Memory
@@ -404,10 +416,69 @@
         function initApp() {
             renderHeader();
             renderResumenEjecutivo();
+            renderComparativa();
             renderMetricCards();
             renderCharts();
             renderTable();
             renderSources();
+        }
+
+        function formatNumber(n) {
+            if (typeof n !== 'number') return n;
+            const isNeg = n < 0;
+            const abs = Math.abs(n);
+            const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+            const [intPart, decPart] = str.split('.');
+            const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
+            return isNeg ? `-${result}` : result;
+        }
+
+        function renderComparativa() {
+            const container = document.getElementById('comparativaContainer');
+            if (!container) return;
+            container.innerHTML = '';
+
+            (currentDataset.comparativaZonaEuro || []).forEach(item => {
+                const esMejor = item.mejorSiMayor ? (item.valorEspana > item.valorZonaEuro) : (item.valorEspana < item.valorZonaEuro);
+                const esIgual = item.valorEspana === item.valorZonaEuro;
+                const diff = item.valorEspana - item.valorZonaEuro;
+
+                let badgeClass = 'bg-slate-100 text-slate-700 border border-slate-200';
+                let badgeIcon = 'fa-minus';
+                let badgeText = 'Igual que la eurozona';
+                if (!esIgual) {
+                    badgeClass = esMejor ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200';
+                    badgeIcon = esMejor ? 'fa-check' : 'fa-triangle-exclamation';
+                    badgeText = esMejor ? 'Mejor que la eurozona' : 'Peor que la eurozona';
+                }
+
+                const cardHTML = `
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col gap-3">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${item.title}</span>
+                            <p class="text-[11px] text-slate-400">${item.periodo}</p>
+                        </div>
+
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <p class="text-[11px] text-slate-400 font-medium">España</p>
+                                <p class="text-2xl font-extrabold text-slate-900 tracking-tight">${formatNumber(item.valorEspana)}${item.unidad}</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[11px] text-slate-400 font-medium">Eurozona</p>
+                                <p class="text-lg font-semibold text-slate-500">${formatNumber(item.valorZonaEuro)}${item.unidad}</p>
+                            </div>
+                        </div>
+
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold w-fit ${badgeClass}">
+                            <i class="fa-solid ${badgeIcon} text-[10px]"></i>
+                            ${badgeText}${esIgual ? '' : ` (${diff > 0 ? '+' : ''}${formatNumber(diff)} p.p.)`}
+                        </span>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
         }
 
         function setupEventListeners() {

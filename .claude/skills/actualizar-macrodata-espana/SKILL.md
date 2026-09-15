@@ -1,6 +1,6 @@
 ---
 name: actualizar-macrodata-espana
-description: Actualiza el panel MacroData España con las últimas cifras oficiales de IPC, prima de riesgo, tipos del BCE, Euríbor y PIB. Usar cuando el usuario pida "actualiza MacroData", "actualiza el panel económico", "refresca los indicadores económicos" o similar.
+description: Actualiza el panel MacroData España con las últimas cifras oficiales de IPC, prima de riesgo, tipos del BCE, Euríbor, PIB y la comparativa España vs. eurozona (IPCA, PIB, paro armonizado). Usar cuando el usuario pida "actualiza MacroData", "actualiza el panel económico", "refresca los indicadores económicos" o similar.
 ---
 
 # Actualizar MacroData España
@@ -41,6 +41,14 @@ siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente 
   "historicalData": [
     { "month": "Sep 2025", "ipc": 3.5, "ipcSubyacente": 3.8, "primaRiesgo": 105, "tiposBCE": 4.25, "euribor": 4.12, "pib": 1.8 }
     // una entrada por mes, en orden cronológico ascendente
+  ],
+  "comparativaZonaEuro": [
+    {
+      "id": "ipc" | "pib" | "paro",  // no cambiar los ids ni añadir/quitar entradas
+      "title": "...", "periodo": "Agosto 2026, dato preliminar",
+      "valorEspana": 4.5, "valorZonaEuro": 3.3, "unidad": "%",
+      "mejorSiMayor": false   // true si un valor más alto es mejor (PIB); false si es peor (inflación, paro)
+    }
   ]
 }
 ```
@@ -68,11 +76,30 @@ Usa WebSearch/WebFetch para localizar la cifra en la fuente oficial. Si una fuen
 periodo más reciente (p. ej. el INE aún no ha publicado el mes en curso), usa el último dato disponible y
 no inventes cifras.
 
+## Comparativa España vs. Zona Euro (`comparativaZonaEuro`)
+
+Estos tres indicadores usan magnitudes de **Eurostat**, metodológicamente distintas de las nacionales del
+INE que usa el resto del panel (por eso el valor de España en `comparativaZonaEuro.ipc` puede no coincidir
+con `indicators.ipc`): no los confundas ni intentes "cuadrarlos".
+
+1. **`ipc`**: IPC Armonizado (IPCA) — busca "Eurostat IPCA [mes] [año] España eurozona" o "flash estimate
+   HICP inflation euro area [mes] [año]". Es un dato preliminar mensual.
+2. **`pib`**: variación interanual del PIB — busca "Eurostat PIB [trimestre] [año] España eurozona
+   interanual". Trimestral, con retraso de 1-2 meses respecto al cierre del trimestre.
+3. **`paro`**: tasa de desempleo armonizada — busca "Eurostat tasa de desempleo [mes] [año] España
+   eurozona". Mensual, con un desfase de publicación de 1-2 meses (distinta de la tasa de paro EPA
+   trimestral del INE, que no está en este panel).
+
+Actualiza `valorEspana`, `valorZonaEuro` y `periodo` para cada uno solo cuando haya un dato nuevo
+publicado; no fuerces un cambio si Eurostat no ha actualizado esa serie desde la última ejecución. No
+cambies `mejorSiMayor` (es una propiedad del tipo de métrica: PIB `true`, IPC y paro `false`).
+
 ## Pasos
 
-1. Lee el `data.json` actual para conocer el último mes registrado en `historicalData`.
-2. Para cada indicador, busca el dato oficial más reciente (puede ser el mismo mes si aún no hay uno nuevo,
-   o uno o varios meses posteriores si ha pasado tiempo desde la última actualización).
+1. Lee el `data.json` actual para conocer el último mes registrado en `historicalData` y los periodos ya
+   usados en `comparativaZonaEuro`.
+2. Para cada indicador nacional, busca el dato oficial más reciente (puede ser el mismo mes si aún no hay
+   uno nuevo, o uno o varios meses posteriores si ha pasado tiempo desde la última actualización).
 3. Si hay un mes nuevo que aún no está en `historicalData`, añade una entrada nueva al final del array
    (orden cronológico ascendente) con los seis valores (`ipc`, `ipcSubyacente`, `primaRiesgo`, `tiposBCE`,
    `euribor`, `pib`). Si un indicador trimestral (PIB) no tiene dato nuevo para ese mes, repite el último
@@ -82,24 +109,30 @@ no inventes cifras.
      `prima` usa `primaRiesgo`, para `bce` usa `tiposBCE`).
    - `change`: diferencia entre el valor actual y el del periodo anterior (mismo signo que la variación
      real, sin redondear de forma distinta a los datos de origen).
-5. Actualiza `lastUpdated` con la fecha en la que ejecutas la actualización (formato "DD de Mes, AAAA").
-6. Reescribe `resumenEjecutivo` (ver siguiente sección).
-7. Regenera `sparklineSvg` a partir de los últimos 6 meses de `historicalData` (ver sección "Sparkline SVG")
+5. Actualiza `comparativaZonaEuro` (ver sección anterior) para los indicadores que tengan dato nuevo de
+   Eurostat.
+6. Actualiza `lastUpdated` con la fecha en la que ejecutas la actualización (formato "DD de Mes, AAAA").
+7. Reescribe `resumenEjecutivo` (ver siguiente sección).
+8. Regenera `sparklineSvg` a partir de los últimos 6 meses de `historicalData` (ver sección "Sparkline SVG")
    — es obligatorio hacerlo cada vez que cambien esos 6 meses, o el gráfico de la home quedará desincronizado
-   con las cifras que se muestran al lado.
-8. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
-9. Enseña al usuario un resumen de qué cifras han cambiado antes de dar la tarea por terminada. No hagas
-   commit ni push salvo que el usuario lo pida explícitamente.
+   con las cifras que se muestran al lado. El sparkline sigue basado en el IPC nacional, no en la
+   comparativa con la eurozona; no lo cambies salvo que el usuario lo pida.
+9. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
+10. Enseña al usuario un resumen de qué cifras han cambiado antes de dar la tarea por terminada. No hagas
+    commit ni push salvo que el usuario lo pida explícitamente.
 
 ## Resumen ejecutivo
 
 `resumenEjecutivo` es el texto que se muestra tanto en el panel completo como en el widget de la home.
 Debe ser:
 
-- 2-4 frases en español, tono neutro y periodístico (nada de recomendaciones de inversión).
-- Centrado en la lectura conjunta de los cuatro indicadores: p. ej. si la inflación converge con la
-  subyacente, si el BCE ha movido tipos, cómo está la prima de riesgo y si el PIB sigue creciendo.
-- Sin cifras inventadas: solo las que constan en `indicators`/`historicalData` tras la actualización.
+- 4-6 frases en español, tono neutro y periodístico (nada de recomendaciones de inversión).
+- Abrir con el veredicto de la comparativa con la eurozona (en qué va mejor y en qué peor España), y
+  después entrar en la lectura conjunta de los cuatro indicadores nacionales: p. ej. si la inflación
+  converge con la subyacente, si el BCE ha movido tipos, cómo está la prima de riesgo y si el PIB sigue
+  creciendo.
+- Sin cifras inventadas: solo las que constan en `comparativaZonaEuro`/`indicators`/`historicalData` tras
+  la actualización.
 
 ## Sparkline SVG
 
@@ -198,5 +231,8 @@ Chart.js de la home.
   reales. Indícaselo al usuario si detectas que `resumenEjecutivo` todavía contiene el aviso de "datos de
   muestra".
 - No es necesario tocar `sources` salvo que cambie la metodología o la fuente de un indicador.
+- Los tres indicadores de `comparativaZonaEuro` tienen calendarios de publicación distintos entre sí
+  (IPCA mensual con dato preliminar rápido, PIB trimestral con más retraso, paro mensual con retraso
+  intermedio): es normal que en una ejecución solo cambien uno o dos.
 - Si el usuario pide explícitamente publicar los cambios, sigue el flujo normal de git (revisar diff,
   commit con mensaje descriptivo); no lo hagas por iniciativa propia.

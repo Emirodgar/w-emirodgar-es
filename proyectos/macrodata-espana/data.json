@@ -1,6 +1,6 @@
 {
   "lastUpdated": "15 de Septiembre, 2026",
-  "resumenEjecutivo": "La inflación general se mantiene en el 4,3% interanual de agosto (avance del INE, pendiente aún del dato definitivo), con la subyacente contenida en el 2,9%. El BCE no ha vuelto a reunirse desde la subida del 10 de septiembre —tipo de la facilidad principal de financiación en el 2,65%— y su próxima decisión será el 29 de octubre. Mientras tanto, la rentabilidad de la deuda sigue subiendo en toda la eurozona: el bono español a 10 años ha superado el 4% por primera vez desde 2013, aunque la prima de riesgo frente a Alemania se mantiene contenida, en torno a los 46 puntos básicos. El Euríbor a 12 meses ronda ya el 3,11% en lo que va de septiembre, y el PIB sigue creciendo a un ritmo estable del 2,7% interanual.",
+  "resumenEjecutivo": "Frente a la eurozona, España presenta un perfil de claroscuros: crece muy por encima de la media (2,7% interanual frente al 1,2% de la eurozona en el 2º trimestre), pero paga esa fortaleza con más inflación (4,5% frente al 3,3% de agosto, en términos armonizados) y con un paro que sigue casi triplicando la media europea (10% frente al 6,4% en julio). La inflación general española se mantiene en el 4,3% interanual de agosto (avance del INE, pendiente aún del dato definitivo), con la subyacente contenida en el 2,9%. El BCE no ha vuelto a reunirse desde la subida del 10 de septiembre —tipo de la facilidad principal de financiación en el 2,65%— y su próxima decisión será el 29 de octubre. Mientras tanto, la rentabilidad de la deuda sigue subiendo en toda la eurozona: el bono español a 10 años ha superado el 4% por primera vez desde 2013, aunque la prima de riesgo frente a Alemania se mantiene contenida, en torno a los 46 puntos básicos. El Euríbor a 12 meses ronda ya el 3,11% en lo que va de septiembre, y el PIB sigue creciendo a un ritmo estable del 2,7% interanual.",
   "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion del IPC general y subyacente, ultimos 6 meses\" style=\"width:100%;height:100%\"><polygon points=\"12.0,61.9 71.2,71.2 130.4,71.2 189.6,71.2 248.8,52.7 308.0,20.4 308,100 12,100\" fill=\"rgba(225,29,72,0.08)\"/><polyline points=\"12.0,85.0 71.2,89.6 130.4,80.4 189.6,85.0 248.8,80.4 308.0,85.0\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"2\" stroke-dasharray=\"5,4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polyline points=\"12.0,61.9 71.2,71.2 130.4,71.2 189.6,71.2 248.8,52.7 308.0,20.4\" fill=\"none\" stroke=\"#e11d48\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"61.9\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"71.2\" cy=\"71.2\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"130.4\" cy=\"71.2\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"189.6\" cy=\"71.2\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"248.8\" cy=\"52.7\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"308.0\" cy=\"20.4\" r=\"3\" fill=\"#e11d48\"/></svg>",
   "sources": {
     "ipc": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente. Dato de agosto 2026 procedente del indicador adelantado (avance), pendiente de confirmación definitiva",
@@ -8,8 +8,40 @@
     "primaRiesgo": "Diferencial de rentabilidad entre el bono español y el bono alemán a 10 años, contrastado con lecturas de mercado en tiempo real (Trading Economics) y con prensa económica (p. ej. Pressdigital); la serie histórica mensual combina lecturas puntuales con una interpolación lineal entre ellas a falta de un feed de datos de mercado diario integrado en el panel — tómese como aproximación, no como cifra oficial cerrada",
     "tiposBCE": "Banco Central Europeo — tipo de interés de la facilidad principal de financiación, según las decisiones del Consejo de Gobierno",
     "euribor": "Euríbor a 12 meses, media mensual (agregadores especializados: idealista/Bankinter, a partir de la publicación diaria de EMMI)",
-    "pib": "INE, Contabilidad Nacional Trimestral de España (CNTR) — variación interanual del PIB; el dato se repite en los meses de un mismo trimestre porque el INE solo publica cifra nueva cada tres meses"
+    "pib": "INE, Contabilidad Nacional Trimestral de España (CNTR) — variación interanual del PIB; el dato se repite en los meses de un mismo trimestre porque el INE solo publica cifra nueva cada tres meses",
+    "comparativaIpc": "Eurostat, Índice de Precios de Consumo Armonizado (IPCA) — dato preliminar de agosto de 2026 para España y la eurozona; distinto metodológicamente del IPC nacional del INE, por eso el valor de España difiere del indicador 'ipc' de este mismo panel",
+    "comparativaPib": "Eurostat, Contabilidad Nacional — variación interanual del PIB, 2º trimestre de 2026, España y eurozona",
+    "comparativaParo": "Eurostat, tasa de desempleo armonizada — dato de julio de 2026 para España y la eurozona; distinta metodológicamente de la tasa de paro EPA trimestral del INE"
   },
+  "comparativaZonaEuro": [
+    {
+      "id": "ipc",
+      "title": "Inflación (IPCA armonizado)",
+      "periodo": "Agosto 2026, dato preliminar",
+      "valorEspana": 4.5,
+      "valorZonaEuro": 3.3,
+      "unidad": "%",
+      "mejorSiMayor": false
+    },
+    {
+      "id": "pib",
+      "title": "Crecimiento del PIB",
+      "periodo": "2º trimestre 2026, interanual",
+      "valorEspana": 2.7,
+      "valorZonaEuro": 1.2,
+      "unidad": "%",
+      "mejorSiMayor": true
+    },
+    {
+      "id": "paro",
+      "title": "Tasa de Paro Armonizada",
+      "periodo": "Julio 2026",
+      "valorEspana": 10.0,
+      "valorZonaEuro": 6.4,
+      "unidad": "%",
+      "mejorSiMayor": false
+    }
+  ],
   "indicators": [
     {
       "id": "ipc",

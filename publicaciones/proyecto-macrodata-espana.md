@@ -21,12 +21,17 @@ Seguir el pulso de la economía española debería ser tan sencillo como mirar u
 
 Es un dashboard web, pensado como proyecto educativo y experimental, que centraliza en una sola vista:
 
+- **¿Cómo avanza España frente a la eurozona?**: un termómetro que compara inflación, crecimiento del PIB y tasa de paro con la media de la eurozona, para saber de un vistazo si España va mejor o peor.
 - **Inflación (IPC)**: variación interanual del índice general y del subyacente.
 - **Prima de riesgo**: diferencial entre el bono español y el bono alemán a 10 años.
 - **Tipos de interés**: el tipo oficial del BCE frente al Euríbor a 12 meses.
 - **Crecimiento del PIB**: tasa de variación interanual de la economía española.
 
 Cada indicador se muestra con su valor actual, su variación respecto al periodo anterior y su evolución histórica en gráficas interactivas, además de una tabla con el detalle mes a mes.
+
+## España, más fuerte y más inflacionaria que la eurozona
+
+El termómetro con el que abre el panel deja un patrón claro: España crece muy por encima de la media europea (2,7% interanual frente al 1,2% de la eurozona en el 2º trimestre), pero paga esa fortaleza con más inflación (4,5% frente al 3,3% de agosto, en términos armonizados) y, sobre todo, con una tasa de paro que casi triplica la media de la eurozona (10% frente al 6,4% en julio). Es la fotografía habitual de la economía española de los últimos años: crecimiento fuerte, pero con un mercado laboral que sigue sin converger con el resto de la eurozona.
 
 ## ¿Por qué estos cuatro indicadores?
 
@@ -46,6 +51,7 @@ El panel está diseñado para nutrirse de fuentes oficiales:
 - **Tipos del BCE**: decisiones de política monetaria publicadas por el [Banco Central Europeo](https://www.ecb.europa.eu/).
 - **Euríbor a 12 meses**: media mensual publicada por el Banco de España, calculada según la metodología de EMMI.
 - **PIB**: [INE, Contabilidad Nacional Trimestral de España](https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&cid=1254736164439).
+- **Comparativa con la eurozona**: [Eurostat](https://ec.europa.eu/eurostat), para el IPC armonizado (IPCA), el PIB y la tasa de paro armonizada de España y del conjunto de la eurozona — magnitudes metodológicamente distintas a las del IPC del INE o la tasa de paro EPA, por lo que pueden no coincidir exactamente con los otros indicadores del panel.
 
 Los datos se sustituyen por cifras reales cada vez que se ejecuta la skill de mantenimiento del proyecto (ver más abajo), que deja constancia de la fecha de la última actualización en el propio panel. La única excepción es la prima de riesgo: al no disponer de un feed de mercado diario integrado en el panel, su serie histórica mensual combina lecturas puntuales publicadas en prensa económica con una interpolación entre ellas, por lo que debe tomarse como una aproximación y no como una cifra oficial cerrada.
 
