@@ -1,0 +1,89 @@
+{
+  "lastUpdated": "15 de Septiembre, 2026",
+  "resumenEjecutivo": "Castilla y León arrastra su segunda prórroga presupuestaria consecutiva: las Cortes rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 M€, un 7,92% más que en 2024), por lo que desde el 1 de enero de 2026 sigue vigente el presupuesto de 2024 (14.562 M€). El detalle de subvenciones concedidas del portal de datos abiertos de la Junta no se actualiza desde marzo de 2022: el último año completo, 2021, cerró con 1.028 M€ concedidos. El catálogo de líneas de ayuda vigentes sí sigue actualizándose y ha crecido con fuerza, con 208 líneas publicadas en 2025 frente a 108 en 2024; Agricultura y Ganadería (121) y Empleo, formación y riesgos laborales (118) concentran casi un tercio de todo el catálogo.",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de lineas de ayuda publicadas por la Junta de Castilla y Leon, 2018-2025\" style=\"width:100%;height:100%\"><polygon points=\"12.0,87.8 54.3,89.6 96.6,77.0 138.9,72.1 181.1,71.4 223.4,67.3 265.7,57.6 308.0,20.4 308,100 12,100\" fill=\"rgba(124,58,237,0.08)\"/><polyline points=\"12.0,87.8 54.3,89.6 96.6,77.0 138.9,72.1 181.1,71.4 223.4,67.3 265.7,57.6 308.0,20.4\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"87.8\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"54.3\" cy=\"89.6\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"96.6\" cy=\"77.0\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"138.9\" cy=\"72.1\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"181.1\" cy=\"71.4\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"223.4\" cy=\"67.3\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"265.7\" cy=\"57.6\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"308.0\" cy=\"20.4\" r=\"3\" fill=\"#7c3aed\"/></svg>",
+  "sources": {
+    "presupuesto": "Leyes de Presupuestos Generales de la Comunidad de Castilla y León (BOE/BOCYL) y cobertura de prensa económica regional (El Debate, El Español, Diario de León, Castilla y León Económica) para los proyectos de presupuesto y su tramitación en las Cortes",
+    "brecha": "Diferencia entre el importe del proyecto de Presupuestos remitido a las Cortes y el presupuesto realmente vigente (prorrogado) para ese ejercicio",
+    "concedido": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Subvenciones concedidas' (analisis.datosabiertos.jcyl.es) — deja de actualizarse en marzo de 2022, por lo que 2021 es el último ejercicio completo disponible",
+    "catalogo": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Ayudas y Subvenciones' (analisis.datosabiertos.jcyl.es) — catálogo de líneas de ayuda vigentes, actualizado",
+    "materias": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Ayudas y Subvenciones' (analisis.datosabiertos.jcyl.es), agrupación por campo 'materia'"
+  },
+  "indicators": [
+    {
+      "id": "presupuesto",
+      "title": "Presupuesto Vigente",
+      "currentValue": 14562,
+      "unit": "M€",
+      "change": 0,
+      "changeLabel": "Prorrogado de 2024 (2ª vez consecutiva)",
+      "description": "Presupuesto en vigor en 2026 por prórroga del ejercicio 2024",
+      "target": null,
+      "icon": "fa-building-columns",
+      "color": "blue"
+    },
+    {
+      "id": "brecha",
+      "title": "Brecha vs. Proyecto Rechazado",
+      "currentValue": 1153,
+      "unit": "M€",
+      "change": null,
+      "changeLabel": "Proyecto 2026 rechazado en las Cortes",
+      "description": "Diferencia entre el proyecto de Presupuestos 2026 (15.715 M€) y el presupuesto vigente",
+      "target": null,
+      "icon": "fa-triangle-exclamation",
+      "color": "amber"
+    },
+    {
+      "id": "concedido",
+      "title": "Último Importe Concedido",
+      "currentValue": 1028.15,
+      "unit": "M€",
+      "change": 259.21,
+      "changeLabel": "vs 2020, último año completo (2021)",
+      "description": "La Junta no publica el detalle de concesiones en datos abiertos desde 2022",
+      "target": null,
+      "icon": "fa-hand-holding-dollar",
+      "color": "emerald"
+    },
+    {
+      "id": "catalogo",
+      "title": "Líneas de Ayuda Publicadas en 2025",
+      "currentValue": 208,
+      "unit": "líneas",
+      "change": 100,
+      "changeLabel": "vs 2024 (108 líneas)",
+      "description": "Convocatorias y líneas de ayuda registradas en el catálogo de la Junta",
+      "target": null,
+      "icon": "fa-list-check",
+      "color": "violet"
+    }
+  ],
+  "historicalData": [
+    { "year": "2018", "presupuestoTotal": null, "importeConcedido": 605.15, "lineasAyudaPublicadas": 27 },
+    { "year": "2019", "presupuestoTotal": null, "importeConcedido": 684.33, "lineasAyudaPublicadas": 22 },
+    { "year": "2020", "presupuestoTotal": null, "importeConcedido": 768.94, "lineasAyudaPublicadas": 56 },
+    { "year": "2021", "presupuestoTotal": null, "importeConcedido": 1028.15, "lineasAyudaPublicadas": 69 },
+    { "year": "2022", "presupuestoTotal": null, "importeConcedido": null, "lineasAyudaPublicadas": 71 },
+    { "year": "2023", "presupuestoTotal": 13809, "importeConcedido": null, "lineasAyudaPublicadas": 82 },
+    { "year": "2024", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 108 },
+    { "year": "2025", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 208 },
+    { "year": "2026", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 10 }
+  ],
+  "materias": [
+    { "materia": "Agricultura y Ganadería", "n": 121 },
+    { "materia": "Empleo, formación y riesgos laborales", "n": 118 },
+    { "materia": "Energía y Minas", "n": 38 },
+    { "materia": "Empresas e Industria", "n": 30 },
+    { "materia": "Medio Ambiente y Ordenación del Territorio", "n": 22 },
+    { "materia": "Cultura y Patrimonio", "n": 21 },
+    { "materia": "Educación", "n": 21 },
+    { "materia": "Economía y Comercio", "n": 20 },
+    { "materia": "Servicios Sociales y mayores", "n": 18 }
+  ],
+  "notas": {
+    "presupuesto2022": "El presupuesto de 2022 no se incluye en la serie por estar aprobado solo como techo de gasto no financiero (12.470 M€), una magnitud distinta y no directamente comparable con el presupuesto total consolidado de los demás años",
+    "concedido2022": "El dato de 2022 en 'Subvenciones concedidas' está incompleto (solo hasta el 31 de marzo, 34,77 M€) y se excluye de la serie histórica para no distorsionar la comparación anual",
+    "lineas2026": "El dato de 2026 en el catálogo de líneas de ayuda está incompleto (extraído a 15 de septiembre de 2026, con la última entrada registrada el 30 de enero) y se mostrará completo en próximas actualizaciones"
+  }
+}

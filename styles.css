@@ -384,6 +384,10 @@ a.link:hover {
     border-top: 2px dashed #fb7185;
 }
 
+.legend-swatch--violet {
+    border-top: 2.5px solid #7c3aed;
+}
+
 .proyecto-resumen {
     font-size: 0.9rem;
     color: #475569;
