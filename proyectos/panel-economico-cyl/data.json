@@ -1,13 +1,16 @@
 {
   "lastUpdated": "15 de Septiembre, 2026",
-  "resumenEjecutivo": "Castilla y León arrastra su segunda prórroga presupuestaria consecutiva: las Cortes rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 M€, un 7,92% más que en 2024), por lo que desde el 1 de enero de 2026 sigue vigente el presupuesto de 2024 (14.562 M€). El detalle de subvenciones concedidas del portal de datos abiertos de la Junta no se actualiza desde marzo de 2022: el último año completo, 2021, cerró con 1.028 M€ concedidos. El catálogo de líneas de ayuda vigentes sí sigue actualizándose y ha crecido con fuerza, con 208 líneas publicadas en 2025 frente a 108 en 2024; Agricultura y Ganadería (121) y Empleo, formación y riesgos laborales (118) concentran casi un tercio de todo el catálogo.",
+  "resumenEjecutivo": "Castilla y León arrastra su segunda prórroga presupuestaria consecutiva: las Cortes rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 M€), por lo que sigue vigente el presupuesto de 2024 (14.562 M€). El detalle de subvenciones concedidas en datos abiertos no se actualiza desde 2022, pero el catálogo de líneas de ayuda vigentes sí crece con fuerza (208 líneas en 2025 frente a 108 en 2024). En el plano laboral, Castilla y León suma 1.019.088 afiliados a la Seguridad Social en agosto de 2026, un 1,9% más que hace un año, mientras el paro registrado (98.323 personas) se mantiene prácticamente plano en términos interanuales. La contratación sigue dominada por la temporalidad: solo el 31,1% de los contratos de agosto fueron indefinidos, con Palencia a la cola (13,9%) y León a la cabeza (39,2%). Valladolid concentra el mayor volumen de afiliados, paro y contratos, coherente con su peso demográfico dentro de la Comunidad.",
   "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de lineas de ayuda publicadas por la Junta de Castilla y Leon, 2018-2025\" style=\"width:100%;height:100%\"><polygon points=\"12.0,87.8 54.3,89.6 96.6,77.0 138.9,72.1 181.1,71.4 223.4,67.3 265.7,57.6 308.0,20.4 308,100 12,100\" fill=\"rgba(124,58,237,0.08)\"/><polyline points=\"12.0,87.8 54.3,89.6 96.6,77.0 138.9,72.1 181.1,71.4 223.4,67.3 265.7,57.6 308.0,20.4\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"87.8\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"54.3\" cy=\"89.6\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"96.6\" cy=\"77.0\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"138.9\" cy=\"72.1\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"181.1\" cy=\"71.4\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"223.4\" cy=\"67.3\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"265.7\" cy=\"57.6\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"308.0\" cy=\"20.4\" r=\"3\" fill=\"#7c3aed\"/></svg>",
   "sources": {
     "presupuesto": "Leyes de Presupuestos Generales de la Comunidad de Castilla y León (BOE/BOCYL) y cobertura de prensa económica regional (El Debate, El Español, Diario de León, Castilla y León Económica) para los proyectos de presupuesto y su tramitación en las Cortes",
     "brecha": "Diferencia entre el importe del proyecto de Presupuestos remitido a las Cortes y el presupuesto realmente vigente (prorrogado) para ese ejercicio",
     "concedido": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Subvenciones concedidas' (analisis.datosabiertos.jcyl.es) — deja de actualizarse en marzo de 2022, por lo que 2021 es el último ejercicio completo disponible",
     "catalogo": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Ayudas y Subvenciones' (analisis.datosabiertos.jcyl.es) — catálogo de líneas de ayuda vigentes, actualizado",
-    "materias": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Ayudas y Subvenciones' (analisis.datosabiertos.jcyl.es), agrupación por campo 'materia'"
+    "paro": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Paro registrado en las provincias de Castilla y León' (analisis.datosabiertos.jcyl.es), serie mensual, fila 'CYL' para el total autonómico",
+    "afiliacion": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Afiliación media a la Seguridad Social en las provincias de Castilla y León', serie mensual, fila 'CYL' para el total autonómico",
+    "contratos": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Contratos realizados en las provincias de Castilla y León', serie mensual, con desglose por tipo (indefinido/temporal)",
+    "provincias": "Combinación de los tres datasets anteriores, filtrados por cada provincia, con el dato del mes más reciente disponible"
   },
   "indicators": [
     {
@@ -70,20 +73,87 @@
     { "year": "2025", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 208 },
     { "year": "2026", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 10 }
   ],
-  "materias": [
-    { "materia": "Agricultura y Ganadería", "n": 121 },
-    { "materia": "Empleo, formación y riesgos laborales", "n": 118 },
-    { "materia": "Energía y Minas", "n": 38 },
-    { "materia": "Empresas e Industria", "n": 30 },
-    { "materia": "Medio Ambiente y Ordenación del Territorio", "n": 22 },
-    { "materia": "Cultura y Patrimonio", "n": 21 },
-    { "materia": "Educación", "n": 21 },
-    { "materia": "Economía y Comercio", "n": 20 },
-    { "materia": "Servicios Sociales y mayores", "n": 18 }
+  "indicatorsEmpleo": [
+    {
+      "id": "paro",
+      "title": "Paro Registrado (Agosto 2026)",
+      "currentValue": 98323,
+      "unit": "personas",
+      "change": 144,
+      "changeLabel": "vs agosto 2025 (98.179)",
+      "description": "Demandantes de empleo registrados en el conjunto de Castilla y León",
+      "target": null,
+      "icon": "fa-user-slash",
+      "color": "rose"
+    },
+    {
+      "id": "afiliacion",
+      "title": "Afiliados a la Seguridad Social",
+      "currentValue": 1019088,
+      "unit": "personas",
+      "change": 18945,
+      "changeLabel": "vs agosto 2025 (+1,9%)",
+      "description": "Afiliación media a la Seguridad Social en Castilla y León",
+      "target": null,
+      "icon": "fa-id-card-clip",
+      "color": "emerald"
+    },
+    {
+      "id": "contratos",
+      "title": "Contratos Registrados en Agosto",
+      "currentValue": 54098,
+      "unit": "contratos",
+      "change": 2018,
+      "changeLabel": "vs agosto 2025 (52.080)",
+      "description": "Contratos laborales registrados en Castilla y León durante el mes",
+      "target": null,
+      "icon": "fa-file-contract",
+      "color": "blue"
+    },
+    {
+      "id": "indefinidos",
+      "title": "Contratos Indefinidos",
+      "currentValue": 31.1,
+      "unit": "%",
+      "change": 2.0,
+      "changeLabel": "vs agosto 2025 (29,1%)",
+      "description": "Porcentaje de contratos indefinidos sobre el total registrado en agosto",
+      "target": null,
+      "icon": "fa-handshake",
+      "color": "violet"
+    }
+  ],
+  "empleoMensual": [
+    { "mes": "Ago 2025", "paro": 98179, "afiliacion": 1000143, "contratosIndefinidos": 15136, "contratosTemporales": 36944 },
+    { "mes": "Sep 2025", "paro": 98023, "afiliacion": 999129, "contratosIndefinidos": 25925, "contratosTemporales": 44714 },
+    { "mes": "Oct 2025", "paro": 100568, "afiliacion": 1003143, "contratosIndefinidos": 26771, "contratosTemporales": 40191 },
+    { "mes": "Nov 2025", "paro": 101603, "afiliacion": 996796, "contratosIndefinidos": 18815, "contratosTemporales": 31780 },
+    { "mes": "Dic 2025", "paro": 102005, "afiliacion": 994922, "contratosIndefinidos": 15046, "contratosTemporales": 33280 },
+    { "mes": "Ene 2026", "paro": 103976, "afiliacion": 982302, "contratosIndefinidos": 16854, "contratosTemporales": 29957 },
+    { "mes": "Feb 2026", "paro": 104718, "afiliacion": 984660, "contratosIndefinidos": 17175, "contratosTemporales": 26992 },
+    { "mes": "Mar 2026", "paro": 103045, "afiliacion": 990981, "contratosIndefinidos": 20230, "contratosTemporales": 33352 },
+    { "mes": "Abr 2026", "paro": 99764, "afiliacion": 996564, "contratosIndefinidos": 17522, "contratosTemporales": 32648 },
+    { "mes": "May 2026", "paro": 97155, "afiliacion": 1006379, "contratosIndefinidos": 19554, "contratosTemporales": 33905 },
+    { "mes": "Jun 2026", "paro": 94260, "afiliacion": 1016018, "contratosIndefinidos": 24094, "contratosTemporales": 47810 },
+    { "mes": "Jul 2026", "paro": 96313, "afiliacion": 1022190, "contratosIndefinidos": 22855, "contratosTemporales": 48832 },
+    { "mes": "Ago 2026", "paro": 98323, "afiliacion": 1019088, "contratosIndefinidos": 16799, "contratosTemporales": 37299 }
+  ],
+  "provincias": [
+    { "provincia": "Valladolid", "paro": 21844, "afiliacion": 235569, "contratos": 11476, "pctIndefinido": 34.4 },
+    { "provincia": "León", "paro": 19468, "afiliacion": 175493, "contratos": 8874, "pctIndefinido": 39.2 },
+    { "provincia": "Burgos", "paro": 13000, "afiliacion": 162670, "contratos": 8493, "pctIndefinido": 32.0 },
+    { "provincia": "Salamanca", "paro": 15397, "afiliacion": 134401, "contratos": 6500, "pctIndefinido": 26.7 },
+    { "provincia": "Segovia", "paro": 4459, "afiliacion": 73855, "contratos": 4327, "pctIndefinido": 31.4 },
+    { "provincia": "Palencia", "paro": 6012, "afiliacion": 68634, "contratos": 5169, "pctIndefinido": 13.9 },
+    { "provincia": "Zamora", "paro": 7795, "afiliacion": 64231, "contratos": 4151, "pctIndefinido": 29.5 },
+    { "provincia": "Ávila", "paro": 7718, "afiliacion": 60820, "contratos": 2894, "pctIndefinido": 31.1 },
+    { "provincia": "Soria", "paro": 2630, "afiliacion": 43415, "contratos": 2214, "pctIndefinido": 32.7 }
   ],
   "notas": {
     "presupuesto2022": "El presupuesto de 2022 no se incluye en la serie por estar aprobado solo como techo de gasto no financiero (12.470 M€), una magnitud distinta y no directamente comparable con el presupuesto total consolidado de los demás años",
     "concedido2022": "El dato de 2022 en 'Subvenciones concedidas' está incompleto (solo hasta el 31 de marzo, 34,77 M€) y se excluye de la serie histórica para no distorsionar la comparación anual",
-    "lineas2026": "El dato de 2026 en el catálogo de líneas de ayuda está incompleto (extraído a 15 de septiembre de 2026, con la última entrada registrada el 30 de enero) y se mostrará completo en próximas actualizaciones"
+    "lineas2026": "El dato de 2026 en el catálogo de líneas de ayuda está incompleto (extraído a 15 de septiembre de 2026, con la última entrada registrada el 30 de enero) y se mostrará completo en próximas actualizaciones",
+    "empleoDesfase": "Los datos de empleo (paro, afiliación, contratos) se publican con un desfase de aproximadamente un mes respecto al mes en curso; 'agosto de 2026' es el último dato disponible a fecha de esta actualización",
+    "provinciasMes": "El detalle por provincia usa el dato del mes más reciente disponible (agosto de 2026) de cada uno de los tres datasets; no es una serie histórica, sino una fotografía puntual"
   }
 }

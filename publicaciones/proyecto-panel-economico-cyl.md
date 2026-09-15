@@ -1,5 +1,5 @@
 ---
-title: Panel Económico CyL, panel público de presupuestos y subvenciones de Castilla y León
+title: Panel Económico CyL, panel público de presupuestos, subvenciones y mercado laboral de Castilla y León
 description:
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
@@ -11,33 +11,39 @@ folder: proyectos
 permalink: panel-economico-cyl
 ---
 
-# Panel Económico CyL: presupuestos y subvenciones de Castilla y León
+# Panel Económico CyL: presupuestos, subvenciones y mercado laboral de Castilla y León
 
-Saber cuánto presupuesto tiene realmente en vigor la Junta de Castilla y León, o qué está aprobando en materia de ayudas y subvenciones, obliga a cruzar leyes de presupuestos, notas de prensa y el portal de datos abiertos de la propia Junta. **Panel Económico CyL** es una prueba de concepto que reúne esa información en un único cuadro de mando, en la misma línea que [MacroData España](https://emirodgar.es/macrodata-espana).
+Saber cuánto presupuesto tiene realmente en vigor la Junta de Castilla y León, qué está aprobando en materia de ayudas y subvenciones, o si la economía regional avanza bien y cómo se compara cada provincia, obliga a cruzar leyes de presupuestos, notas de prensa y varios datasets del portal de datos abiertos de la propia Junta. **Panel Económico CyL** es una prueba de concepto que reúne esa información en un único cuadro de mando, en la misma línea que [MacroData España](https://emirodgar.es/macrodata-espana).
 
 > He desarrollado una versión navegable del panel que se puede [ver aquí](https://emirodgar.es/proyectos/panel-economico-cyl/).
 
 ## ¿Qué es Panel Económico CyL?
 
-Es un dashboard web, pensado como proyecto educativo y experimental, que centraliza en una sola vista:
+Es un dashboard web, pensado como proyecto educativo y experimental, organizado en dos bloques:
 
+**Presupuesto y subvenciones**
 - **Presupuesto autonómico vigente**: el presupuesto realmente en vigor cada año, distinguiendo entre lo aprobado y lo prorrogado.
 - **Importe concedido en subvenciones**: la serie histórica de concesiones publicada por la Junta.
 - **Catálogo de líneas de ayuda**: cuántas líneas de ayuda y subvención se publican cada año.
-- **Reparto por materia**: en qué áreas se concentran las líneas de ayuda vigentes.
 
-## Un hallazgo poco conocido: dos prórrogas presupuestarias seguidas
+**Mercado laboral y actividad económica**
+- **Paro registrado** y **afiliación a la Seguridad Social**: su evolución mensual en el conjunto de la Comunidad.
+- **Contratos registrados**, con el desglose entre indefinidos y temporales.
+- **Detalle por provincia**: cómo se reparten el paro, la afiliación y la contratación entre las 9 provincias, para comparar de un vistazo cómo se desarrolla cada una.
 
-La primera versión del panel ya deja un dato llamativo: las Cortes de Castilla y León rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 millones de euros), por lo que la Comunidad arrastra su segunda prórroga presupuestaria consecutiva y sigue funcionando con el presupuesto de 2024 (14.562 millones). Es la sexta prórroga en siete años.
+## Dos hallazgos que solo se ven mirando los datos con detalle
 
-A esto se suma otra circunstancia menos visible: el portal de datos abiertos de la Junta dejó de publicar el detalle de subvenciones concedidas en marzo de 2022, así que el último ejercicio completo con cifras de concesión disponible es 2021. En cambio, el catálogo de líneas de ayuda vigentes sí se sigue actualizando con normalidad.
+Las Cortes de Castilla y León rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 millones de euros), por lo que la Comunidad arrastra su segunda prórroga presupuestaria consecutiva y sigue funcionando con el presupuesto de 2024 (14.562 millones) — es la sexta prórroga en siete años. A esto se suma que el portal de datos abiertos de la Junta dejó de publicar el detalle de subvenciones concedidas en marzo de 2022, así que el último ejercicio completo con cifras de concesión disponible es 2021.
+
+En el plano laboral, el panel deja ver una Castilla y León con luces y sombras: la afiliación a la Seguridad Social crece (+1,9% interanual en agosto de 2026) mientras el paro registrado apenas se mueve, pero la contratación sigue dominada por la temporalidad (solo el 31,1% de los contratos de agosto fueron indefinidos) y esa proporción varía muchísimo por provincia: de un 13,9% en Palencia a un 39,2% en León.
 
 ## Fuentes de los datos
 
-El panel combina dos tipos de fuentes:
+El panel combina varios tipos de fuentes:
 
 - **Presupuesto autonómico**: leyes de Presupuestos Generales de la Comunidad (BOE/BOCYL) y cobertura de prensa económica regional sobre su tramitación en las Cortes.
-- **Subvenciones concedidas** y **catálogo de líneas de ayuda**: [portal de datos abiertos de la Junta de Castilla y León](https://analisis.datosabiertos.jcyl.es/), datasets "Subvenciones concedidas" y "Ayudas y Subvenciones", vía su API pública.
+- **Subvenciones concedidas** y **catálogo de líneas de ayuda**: [portal de datos abiertos de la Junta de Castilla y León](https://analisis.datosabiertos.jcyl.es/), datasets "Subvenciones concedidas" y "Ayudas y Subvenciones".
+- **Paro, afiliación y contratos**: el mismo portal de datos abiertos, datasets "Paro registrado en las provincias de Castilla y León", "Afiliación media a la Seguridad Social en las provincias de Castilla y León" y "Contratos realizados en las provincias de Castilla y León" — todos ellos vía su API pública, con series mensuales y desglose por provincia.
 
 ## Cómo se mantiene actualizado
 

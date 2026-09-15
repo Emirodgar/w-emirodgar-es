@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panel Económico CyL | Presupuestos y Subvenciones de Castilla y León</title>
-    <meta name="description" content="Panel público con la evolución del presupuesto autonómico, las subvenciones concedidas y el catálogo de ayudas públicas de la Junta de Castilla y León.">
+    <title>Panel Económico CyL | Presupuestos, Subvenciones y Mercado Laboral de Castilla y León</title>
+    <meta name="description" content="Panel público con la evolución del presupuesto autonómico, las subvenciones concedidas, el catálogo de ayudas y el mercado laboral (paro, afiliación, contratos) de Castilla y León, con detalle por provincia.">
     <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -86,8 +86,8 @@
         <!-- Filter and Info Bar -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
             <div>
-                <h2 class="text-lg font-semibold text-slate-900">Cuadro de Mando: Presupuestos y Subvenciones</h2>
-                <p class="text-xs text-slate-500 mt-0.5">Evolución del presupuesto autonómico, las subvenciones concedidas y el catálogo de ayudas de la Junta de Castilla y León.</p>
+                <h2 class="text-lg font-semibold text-slate-900">Cuadro de Mando Económico de Castilla y León</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Presupuesto autonómico, subvenciones y catálogo de ayudas de la Junta, más la evolución del mercado laboral y el detalle por provincia.</p>
             </div>
         </div>
 
@@ -104,13 +104,19 @@
             </div>
         </section>
 
+        <!-- Sección: Presupuesto y Subvenciones -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-building-columns text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Presupuesto y Subvenciones</h2>
+        </div>
+
         <!-- Key Metrics Cards Container -->
         <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
             <!-- Dynamic KPI Cards will be injected here via JavaScript -->
         </section>
 
         <!-- Historical Charts Grid -->
-        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
 
             <!-- Chart 1: Presupuesto autonómico -->
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
@@ -163,23 +169,6 @@
                 </div>
             </div>
 
-            <!-- Chart 4: Convocatorias por materia -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
-                            <h3 class="font-bold text-slate-800">Catálogo Vigente por Materia</h3>
-                        </div>
-                        <p class="text-xs text-slate-500 mt-1">Reparto de las líneas de ayuda registradas según su materia principal</p>
-                    </div>
-                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Nº de líneas</span>
-                </div>
-                <div class="relative h-64 w-full">
-                    <canvas id="materiasChart"></canvas>
-                </div>
-            </div>
-
         </section>
 
         <!-- Summary Data Table -->
@@ -201,6 +190,116 @@
                         </tr>
                     </thead>
                     <tbody id="dataTableBody" class="divide-y divide-slate-100">
+                        <!-- Dynamic table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección: Mercado Laboral -->
+        <div class="flex items-center gap-2 pt-4">
+            <i class="fa-solid fa-briefcase text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Mercado Laboral y Actividad Económica</h2>
+        </div>
+
+        <!-- Key Metrics Cards Container: Empleo -->
+        <section id="metricsContainerEmpleo" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Employment Charts Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- Chart: Paro registrado -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                            <h3 class="font-bold text-slate-800">Paro Registrado en Castilla y León</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Total de demandantes de empleo registrados, últimos 13 meses</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Personas/mes</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="paroChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart: Afiliación a la Seguridad Social -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                            <h3 class="font-bold text-slate-800">Afiliación a la Seguridad Social</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Afiliación media en Castilla y León, últimos 13 meses</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Personas/mes</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="afiliacionChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart: Paro por provincia -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                            <h3 class="font-bold text-slate-800">Paro Registrado por Provincia</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Cómo se reparte el paro entre las 9 provincias (último mes disponible)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Personas</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="paroProvinciaChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart: Contratos indefinidos vs temporales -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+                            <h3 class="font-bold text-slate-800">Contratos: Indefinidos vs. Temporales</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Composición de la contratación registrada, últimos 13 meses</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Contratos/mes</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="contratosChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Provinces Detail Table -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-map-location-dot text-slate-400"></i>
+                    <span>Detalle por Provincia (último mes disponible)</span>
+                </h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Provincia</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Paro Registrado</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Afiliados SS</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Contratos/mes</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">% Indefinidos</th>
+                        </tr>
+                    </thead>
+                    <tbody id="provinciasTableBody" class="divide-y divide-slate-100">
                         <!-- Dynamic table rows will be populated here -->
                     </tbody>
                 </table>
@@ -313,7 +412,9 @@
                 { "year": "2024", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 108 },
                 { "year": "2025", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 208 }
             ],
-            "materias": []
+            "indicatorsEmpleo": [],
+            "empleoMensual": [],
+            "provincias": []
         };
 
         // Current Dataset in Memory
@@ -342,10 +443,24 @@
         function initApp() {
             renderHeader();
             renderResumenEjecutivo();
-            renderMetricCards();
+            renderMetricCards('metricsContainer', currentDataset.indicators || [], []);
+            renderMetricCards('metricsContainerEmpleo', currentDataset.indicatorsEmpleo || [], ['afiliacion', 'contratos', 'indefinidos']);
             renderCharts();
+            renderChartsEmpleo();
             renderTable();
+            renderProvinciasTable();
             renderSources();
+        }
+
+        function formatNumber(n) {
+            if (typeof n !== 'number') return n;
+            const isNeg = n < 0;
+            const abs = Math.abs(n);
+            const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+            const [intPart, decPart] = str.split('.');
+            const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
+            return isNeg ? `-${result}` : result;
         }
 
         function setupEventListeners() {
@@ -390,28 +505,30 @@
             section.classList.remove('hidden');
         }
 
-        function renderMetricCards() {
-            const container = document.getElementById('metricsContainer');
+        function renderMetricCards(containerId, items, invertGoodBad) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
             container.innerHTML = '';
 
-            currentDataset.indicators.forEach(item => {
+            items.forEach(item => {
                 let changeBadgeHTML = `<span class="text-xs text-slate-400 font-medium">${item.changeLabel}</span>`;
 
                 if (typeof item.change === 'number') {
+                    const inverted = invertGoodBad.includes(item.id);
+                    let isGood = item.change < 0;
+                    if (inverted) isGood = item.change > 0;
+
                     let changeBadgeClass = "bg-slate-100 text-slate-700";
                     let changeIcon = "fa-minus";
-                    if (item.change > 0) {
-                        changeBadgeClass = "bg-rose-50 text-rose-700 border border-rose-200";
-                        changeIcon = "fa-arrow-up";
-                    } else if (item.change < 0) {
-                        changeBadgeClass = "bg-emerald-50 text-emerald-700 border border-emerald-200";
-                        changeIcon = "fa-arrow-down";
+                    if (item.change !== 0) {
+                        changeBadgeClass = isGood ? "bg-emerald-50 text-emerald-700 border border-emerald-200" : "bg-rose-50 text-rose-700 border border-rose-200";
+                        changeIcon = item.change > 0 ? "fa-arrow-up" : "fa-arrow-down";
                     }
 
                     changeBadgeHTML = `
                         <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold ${changeBadgeClass}">
                             <i class="fa-solid ${changeIcon} text-[10px]"></i>
-                            ${Math.abs(item.change)}${item.unit}
+                            ${formatNumber(Math.abs(item.change))}${item.unit}
                         </span>
                         <span class="text-xs text-slate-400 font-medium">${item.changeLabel}</span>
                     `;
@@ -427,7 +544,7 @@
                         </div>
 
                         <div class="mt-3 flex items-baseline gap-2">
-                            <span class="text-3xl font-extrabold text-slate-900 tracking-tight">${item.currentValue}</span>
+                            <span class="text-3xl font-extrabold text-slate-900 tracking-tight">${formatNumber(item.currentValue)}</span>
                             <span class="text-slate-500 font-semibold text-sm">${item.unit}</span>
                         </div>
 
@@ -519,17 +636,87 @@
                 },
                 options: commonOptions
             });
+        }
 
-            // Chart 4: Convocatorias por materia (categórico, no temporal)
-            const materias = currentDataset.materias || [];
-            chartInstances.materias = new Chart(document.getElementById('materiasChart').getContext('2d'), {
+        function renderChartsEmpleo() {
+            const hist = currentDataset.empleoMensual || [];
+            const labels = hist.map(d => d.mes);
+
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                spanGaps: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { usePointStyle: true, boxWidth: 8, font: { family: 'Inter', size: 11 } }
+                    },
+                    tooltip: {
+                        backgroundColor: '#0f172a',
+                        padding: 10,
+                        cornerRadius: 8,
+                        titleFont: { family: 'Inter', size: 12, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 }
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } },
+                    y: { grid: { color: '#f1f5f9' }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } }
+                }
+            };
+
+            ['paro', 'afiliacion', 'paroProvincia', 'contratos'].forEach(key => {
+                if (chartInstances[key]) chartInstances[key].destroy();
+            });
+
+            // Paro registrado (línea)
+            chartInstances.paro = new Chart(document.getElementById('paroChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Paro registrado',
+                        data: hist.map(d => d.paro),
+                        borderColor: '#e11d48',
+                        backgroundColor: 'rgba(225,29,72,0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 3
+                    }]
+                },
+                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
+
+            // Afiliación SS (línea)
+            chartInstances.afiliacion = new Chart(document.getElementById('afiliacionChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Afiliados SS',
+                        data: hist.map(d => d.afiliacion),
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16,185,129,0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 3
+                    }]
+                },
+                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
+
+            // Paro por provincia (barra horizontal)
+            const provincias = currentDataset.provincias || [];
+            chartInstances.paroProvincia = new Chart(document.getElementById('paroProvinciaChart').getContext('2d'), {
                 type: 'bar',
                 data: {
-                    labels: materias.map(m => m.materia),
+                    labels: provincias.map(p => p.provincia),
                     datasets: [{
-                        label: 'Líneas de ayuda',
-                        data: materias.map(m => m.n),
-                        backgroundColor: '#f59e0b',
+                        label: 'Paro registrado',
+                        data: provincias.map(p => p.paro),
+                        backgroundColor: '#2563eb',
                         borderRadius: 6
                     }]
                 },
@@ -538,6 +725,40 @@
                     indexAxis: 'y',
                     plugins: { ...commonOptions.plugins, legend: { display: false } }
                 }
+            });
+
+            // Contratos indefinidos vs temporales (barras apiladas)
+            chartInstances.contratos = new Chart(document.getElementById('contratosChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        { label: 'Indefinidos', data: hist.map(d => d.contratosIndefinidos), backgroundColor: '#7c3aed', borderRadius: 3 },
+                        { label: 'Temporales', data: hist.map(d => d.contratosTemporales), backgroundColor: '#ddd6fe', borderRadius: 3 }
+                    ]
+                },
+                options: { ...commonOptions, scales: { x: { ...commonOptions.scales.x, stacked: true }, y: { ...commonOptions.scales.y, stacked: true } } }
+            });
+        }
+
+        function renderProvinciasTable() {
+            const tbody = document.getElementById('provinciasTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+
+            const provincias = [...(currentDataset.provincias || [])].sort((a, b) => b.afiliacion - a.afiliacion);
+
+            provincias.forEach(row => {
+                const tr = `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="px-6 py-3.5 font-semibold text-slate-800">${row.provincia}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-rose-600">${formatNumber(row.paro)}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-emerald-600">${formatNumber(row.afiliacion)}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-blue-600">${formatNumber(row.contratos)}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-violet-600">${formatNumber(row.pctIndefinido)}%</td>
+                    </tr>
+                `;
+                tbody.insertAdjacentHTML('beforeend', tr);
             });
         }
 
@@ -548,7 +769,7 @@
             const history = [...(currentDataset.historicalData || [])].reverse();
 
             history.forEach(row => {
-                const fmt = (v) => (v === null || v === undefined) ? '<span class="text-slate-300">—</span>' : v;
+                const fmt = (v) => (v === null || v === undefined) ? '<span class="text-slate-300">—</span>' : formatNumber(v);
                 const tr = `
                     <tr class="hover:bg-slate-50/80 transition">
                         <td class="px-6 py-3.5 font-semibold text-slate-800">${row.year}</td>

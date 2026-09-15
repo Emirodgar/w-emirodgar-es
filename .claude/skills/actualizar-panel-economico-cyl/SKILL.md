@@ -1,13 +1,13 @@
 ---
 name: actualizar-panel-economico-cyl
-description: Actualiza el Panel Económico CyL con el presupuesto autonómico vigente, las subvenciones concedidas y el catálogo de líneas de ayuda de la Junta de Castilla y León. Usar cuando el usuario pida "actualiza el Panel Económico CyL", "actualiza el panel de presupuestos de Castilla y León", "refresca los datos de subvenciones de CyL" o similar.
+description: Actualiza el Panel Económico CyL con el presupuesto autonómico vigente, las subvenciones concedidas, el catálogo de líneas de ayuda y el mercado laboral (paro, afiliación, contratos, detalle por provincia) de la Junta de Castilla y León. Usar cuando el usuario pida "actualiza el Panel Económico CyL", "actualiza el panel de presupuestos de Castilla y León", "refresca los datos de subvenciones/empleo de CyL" o similar.
 ---
 
 # Actualizar Panel Económico CyL
 
-Este proyecto es un panel público sobre el presupuesto autonómico y las subvenciones/ayudas de la
-Junta de Castilla y León. Toda su información vive en un único fichero de datos que consumen tanto
-el panel completo como el widget de la home:
+Este proyecto es un panel público sobre la economía de Castilla y León: presupuesto autonómico,
+subvenciones/ayudas y mercado laboral (con detalle por provincia). Toda su información vive en un único
+fichero de datos que consumen tanto el panel completo como el widget de la home:
 
 - Dataset: [proyectos/panel-economico-cyl/data.json](../../../proyectos/panel-economico-cyl/data.json)
 - Panel completo: [proyectos/panel-economico-cyl/index.html](../../../proyectos/panel-economico-cyl/index.html) (lee `data.json` vía `fetch`)
@@ -15,14 +15,16 @@ el panel completo como el widget de la home:
 - Artículo/documentación del proyecto: [publicaciones/proyecto-panel-economico-cyl.md](../../../publicaciones/proyecto-panel-economico-cyl.md)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
-siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero.
+siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero. El
+panel tiene dos bloques independientes: **Presupuesto y Subvenciones** (`indicators`, `historicalData`) y
+**Mercado Laboral y Actividad Económica** (`indicatorsEmpleo`, `empleoMensual`, `provincias`).
 
 ## Esquema de `data.json`
 
 ```jsonc
 {
   "lastUpdated": "15 de Septiembre, 2026",   // fecha en texto, formato "DD de Mes, AAAA"
-  "resumenEjecutivo": "...",                  // 2-4 frases, ver sección "Resumen ejecutivo"
+  "resumenEjecutivo": "...",                  // 5-7 frases, ver sección "Resumen ejecutivo"
   "sparklineSvg": "<svg ...>...</svg>",       // SVG estático del widget de la home, ver sección "Sparkline SVG"
   "sources": { ... },                          // no cambiar salvo que cambie la fuente de un indicador
   "indicators": [
@@ -39,19 +41,33 @@ siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente 
     { "year": "2024", "presupuestoTotal": 14562, "importeConcedido": null, "lineasAyudaPublicadas": 108 }
     // una entrada por año, en orden cronológico ascendente; usar null cuando no hay dato para ese año
   ],
-  "materias": [
-    { "materia": "Agricultura y Ganadería", "n": 121 }
-    // reparto del catálogo vigente de líneas de ayuda por materia, de mayor a menor
+  "indicatorsEmpleo": [
+    {
+      "id": "paro" | "afiliacion" | "contratos" | "indefinidos",  // no cambiar los ids
+      "title": "...", "currentValue": 98323, "unit": "personas" | "contratos" | "%",
+      "change": 144, "changeLabel": "...", "description": "...", "target": null,
+      "icon": "...", "color": "..."
+    }
+  ],
+  "empleoMensual": [
+    { "mes": "Ago 2026", "paro": 98323, "afiliacion": 1019088, "contratosIndefinidos": 16799, "contratosTemporales": 37299 }
+    // una entrada por mes, orden cronológico ascendente, últimos 13 meses
+  ],
+  "provincias": [
+    { "provincia": "Valladolid", "paro": 21844, "afiliacion": 235569, "contratos": 11476, "pctIndefinido": 34.4 }
+    // una entrada por cada una de las 9 provincias, con el dato del mes más reciente disponible
   ],
   "notas": { ... }  // aclaraciones sobre huecos o discontinuidades de las fuentes; mantener y actualizar si aplica
 }
 ```
 
+No existe ya un campo `materias` ni un gráfico de reparto por materia: se retiró porque no aportaba
+suficiente valor visual (era un desglose secundario del catálogo de ayudas). No lo reintroduzcas salvo que
+el usuario lo pida explícitamente.
+
 ## Fuentes y cómo consultarlas
 
-### 1. Catálogo de líneas de ayuda y reparto por materia (dataset `ayudas-y-subvenciones`)
-
-Es un dataset del portal de datos abiertos de la Junta, consultable sin autenticación vía API OpenDataSoft:
+### 1. Catálogo de líneas de ayuda (dataset `ayudas-y-subvenciones`)
 
 ```
 https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/ayudas-y-subvenciones/records?select=year(fecha_publicacion)%20as%20y,count(*)%20as%20n&group_by=year(fecha_publicacion)&order_by=y&limit=30
@@ -60,18 +76,9 @@ https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/ayudas-
 Devuelve el número de líneas publicadas por año (campo `year(fecha_publicacion)`, ignora el campo `y`
 que sale siempre `null` — es una peculiaridad de esta API con alias de expresiones agrupadas). Usa estos
 valores para actualizar `lineasAyudaPublicadas` en `historicalData` (añade el año más reciente si no está,
-o actualiza el del año en curso si sigue siendo parcial).
-
-Para el reparto por materia:
-
-```
-https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/ayudas-y-subvenciones/records?select=materia,count(*)%20as%20n&group_by=materia&order_by=n%20desc&limit=10
-```
-
-Actualiza el array `materias` con el resultado (de mayor a menor `n`).
-
-Para el indicador `catalogo` (tarjeta KPI), usa el valor del año más reciente con dato consolidado (no el
-año en curso si está muy incompleto) como `currentValue`, y el del año anterior para calcular `change`.
+o actualiza el del año en curso si sigue siendo parcial). Para el indicador `catalogo` (tarjeta KPI), usa
+el valor del año más reciente con dato consolidado (no el año en curso si está muy incompleto) como
+`currentValue`, y el del año anterior para calcular `change`.
 
 ### 2. Subvenciones concedidas (dataset `subvenciones-concedidas`)
 
@@ -112,22 +119,76 @@ entre el importe de ese proyecto y el presupuesto realmente vigente) — si no h
 momento (por ejemplo, ya se aprobó uno), pon `brecha` a `0` con `changeLabel: "Sin proyecto pendiente"` en
 lugar de eliminar la tarjeta.
 
+### 4. Paro registrado (dataset `paro-provincias`)
+
+Serie mensual (una fila por provincia y por mes, más una fila `provincia='CYL'` con el total
+autonómico — **no sumes las 9 provincias tú mismo, usa siempre la fila `CYL`, o duplicarás el total**).
+
+```
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/paro-provincias/records?where=provincia=%27CYL%27&select=fecha,total&order_by=fecha%20desc&limit=13
+```
+
+Actualiza los últimos 13 meses de `empleoMensual.paro` y el indicador `paro` (compara el último mes con el
+mismo mes del año anterior, no con el mes inmediatamente anterior, porque el paro registrado tiene un
+patrón estacional fuerte).
+
+### 5. Afiliación media a la Seguridad Social (dataset `afiliacion-media-a-la-seguridad-social-en-las-provincias-de-castilla-y-leon`)
+
+```
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/afiliacion-media-a-la-seguridad-social-en-las-provincias-de-castilla-y-leon/records?where=provincia=%27CYL%27&select=fecha,total&order_by=fecha%20desc&limit=13
+```
+
+Igual que el paro: usa la fila `CYL`, actualiza `empleoMensual.afiliacion` y el indicador `afiliacion`
+comparando interanualmente (mismo mes, año anterior).
+
+### 6. Contratos registrados (dataset `contratos-realizados-en-las-provincias-de-castilla-y-leon`)
+
+```
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/contratos-realizados-en-las-provincias-de-castilla-y-leon/records?where=provincia=%27CYL%27&select=fecha,total,indefinido,temporal&order_by=fecha%20desc&limit=13
+```
+
+Actualiza `empleoMensual.contratosIndefinidos`/`contratosTemporales` con `indefinido`/`temporal`. Para los
+indicadores `contratos` (total del mes, interanual) e `indefinidos` (porcentaje `indefinido/total*100` del
+mes, comparado con el mismo porcentaje del mismo mes del año anterior — no arrastres el `%` en bruto sin
+recalcularlo si cambia el total).
+
+### 7. Detalle por provincia
+
+Repite las consultas 4, 5 y 6 sin el filtro `provincia='CYL'`, para el mes más reciente disponible (usa la
+fecha máxima común a los tres datasets — normalmente coincide, pero comprueba `max(fecha)` en cada uno
+antes de asumirlo):
+
+```
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/paro-provincias/records?where=fecha=date%27AAAA-MM-DD%27&select=provincia,total&order_by=total%20desc&limit=15
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/afiliacion-media-a-la-seguridad-social-en-las-provincias-de-castilla-y-leon/records?where=fecha=date%27AAAA-MM-DD%27&select=provincia,total&order_by=total%20desc&limit=15
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/contratos-realizados-en-las-provincias-de-castilla-y-leon/records?where=fecha=date%27AAAA-MM-DD%27&select=provincia,total,indefinido,temporal&order_by=total%20desc&limit=15
+```
+
+Sustituye `AAAA-MM-DD` por el último día del mes más reciente. Excluye la fila `provincia='CYL'` de estas
+tres consultas (es el total, no una provincia) y usa los códigos `VA/LE/BU/SA/SE/PA/ZA/AV/SO` para mapear
+al nombre completo de la provincia (Valladolid/León/Burgos/Salamanca/Segovia/Palencia/Zamora/Ávila/Soria).
+Reescribe el array `provincias` completo con los 9 registros (calcula `pctIndefinido` = `indefinido/total*100`,
+redondeado a 1 decimal), ordenado como prefieras — la tabla y el gráfico ya lo reordenan en pantalla.
+
 ## Pasos
 
-1. Lee el `data.json` actual para conocer el último año registrado en `historicalData` y el estado de cada
-   fuente (`sources`, `notas`).
-2. Consulta las tres fuentes anteriores en este orden: catálogo de ayudas (API), subvenciones concedidas
-   (API, solo para comprobar si se ha reanudado), presupuesto autonómico (WebSearch/WebFetch).
-3. Añade o actualiza las filas de `historicalData` que correspondan, siempre en orden cronológico
-   ascendente y sin inventar cifras: si una fuente no tiene dato nuevo, deja el campo como estaba (o `null`
-   si nunca lo tuvo).
-4. Actualiza el array `indicators` con los valores más recientes y su `change` frente al periodo anterior
-   comparable.
-5. Actualiza `materias` con el reparto más reciente del catálogo.
+1. Lee el `data.json` actual para conocer el último año/mes registrado en `historicalData`/`empleoMensual`
+   y el estado de cada fuente (`sources`, `notas`).
+2. Consulta las fuentes en este orden: catálogo de ayudas (API), subvenciones concedidas (API, solo para
+   comprobar si se ha reanudado), presupuesto autonómico (WebSearch/WebFetch), paro/afiliación/contratos
+   CyL (API), detalle por provincia (API).
+3. Añade o actualiza las filas de `historicalData` y `empleoMensual` que correspondan, siempre en orden
+   cronológico ascendente y sin inventar cifras: si una fuente no tiene dato nuevo, deja el campo como
+   estaba (o `null` si nunca lo tuvo). En `empleoMensual`, mantén siempre los últimos 13 meses (añade el
+   mes nuevo al final y elimina el más antiguo si ya hay 13).
+4. Reescribe `provincias` por completo con el mes más reciente.
+5. Actualiza los arrays `indicators` e `indicatorsEmpleo` con los valores más recientes y su `change`
+   frente al periodo anterior comparable (interanual para los indicadores de empleo, no intermensual).
 6. Actualiza `lastUpdated` con la fecha de ejecución (formato "DD de Mes, AAAA").
 7. Reescribe `resumenEjecutivo` (ver siguiente sección).
 8. Regenera `sparklineSvg` a partir de los últimos años de `lineasAyudaPublicadas` en `historicalData`
-   (ver sección "Sparkline SVG") — obligatorio cada vez que cambie esa serie.
+   (ver sección "Sparkline SVG") — obligatorio cada vez que cambie esa serie. El sparkline de la home sigue
+   basado en el catálogo de ayudas, no en los datos de empleo; no lo cambies salvo que el usuario lo pida.
 9. Si corriges o completas un hueco de datos (por ejemplo, el dataset de concesiones se reanuda), actualiza
    también `sources` y `notas` para que sigan describiendo la situación real.
 10. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
@@ -139,12 +200,12 @@ lugar de eliminar la tarjeta.
 `resumenEjecutivo` es el texto que se muestra tanto en el panel completo como en el widget de la home.
 Debe ser:
 
-- 2-4 frases en español, tono neutro y periodístico (nada de recomendaciones).
-- Centrado en la lectura conjunta de los indicadores: situación presupuestaria (aprobado/prorrogado),
-  huecos o novedades en las subvenciones concedidas, evolución del catálogo de ayudas y qué materias
-  concentran más líneas.
-- Sin cifras inventadas: solo las que consten en `indicators`/`historicalData`/`materias` tras la
-  actualización.
+- 5-7 frases en español, tono neutro y periodístico (nada de recomendaciones).
+- Cubrir ambos bloques: primero la situación presupuestaria (aprobado/prorrogado) y las subvenciones/
+  catálogo de ayudas, después el mercado laboral (paro, afiliación, temporalidad) y algún contraste entre
+  provincias si es relevante (p. ej. la que más/menos temporalidad tiene, o la que concentra más volumen).
+- Sin cifras inventadas: solo las que consten en `indicators`/`indicatorsEmpleo`/`historicalData`/
+  `empleoMensual`/`provincias` tras la actualización.
 
 ## Sparkline SVG
 
@@ -227,15 +288,19 @@ el máximo (con un 15% de margen visual), los reparte a lo largo de un `viewBox`
 (`.legend-swatch--violet`) — si cambia ese color en `styles.css`, cámbialo también aquí.
 
 El panel completo ([proyectos/panel-economico-cyl/index.html](../../../proyectos/panel-economico-cyl/index.html))
-sigue usando Chart.js con sus 4 gráficos interactivos — eso no cambia, solo se quitó Chart.js de la home.
+sigue usando Chart.js con sus 7 gráficos interactivos (3 de presupuesto/subvenciones + 4 de mercado
+laboral) — eso no cambia, solo se quitó Chart.js de la home.
 
 ## Notas
 
-- Los datos publicados en la primera versión de este panel (septiembre de 2026) ya son cifras reales
+- Los datos publicados en la versión ampliada de este panel (septiembre de 2026) ya son cifras reales
   obtenidas de la API de datos abiertos de la Junta y de fuentes de prensa/BOE, no una muestra ilustrativa.
 - No es necesario tocar `sources` salvo que cambie la metodología, la fuente de un indicador, o se resuelva
   el hueco de datos de `subvenciones-concedidas`.
-- Este panel no cubre presupuestos municipales, contratación pública ni el BOCYL en general — solo
-  presupuesto autonómico, subvenciones y el catálogo de ayudas de la Junta.
+- Los datos de empleo (paro, afiliación, contratos) se publican con un desfase de aproximadamente un mes:
+  no esperes que "el mes en curso" tenga ya dato disponible.
+- Este panel no cubre presupuestos municipales, contratación pública (PLACSP), PIB provincial ni el BOCYL
+  en general — solo presupuesto autonómico, subvenciones, catálogo de ayudas y el mercado laboral (paro,
+  afiliación, contratos) por provincia.
 - Si el usuario pide explícitamente publicar los cambios, sigue el flujo normal de git (revisar diff,
   commit con mensaje descriptivo); no lo hagas por iniciativa propia.
