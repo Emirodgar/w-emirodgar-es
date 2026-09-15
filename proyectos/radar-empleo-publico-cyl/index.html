@@ -550,28 +550,33 @@
             const history = currentDataset.historicalData || [];
             const labels = history.map(d => d.year);
 
-            const commonOptions = {
-                responsive: true,
-                maintainAspectRatio: false,
-                spanGaps: true,
-                plugins: {
-                    legend: {
-                        position: 'bottom',
-                        labels: { usePointStyle: true, boxWidth: 8, font: { family: 'Inter', size: 11 } }
+            // Returns a fresh options object each call: Chart.js mutates scales
+            // in place to resolve axis types, so a single shared object reused
+            // across charts with different indexAxis values leaks stale types.
+            function getCommonOptions() {
+                return {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    spanGaps: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: { usePointStyle: true, boxWidth: 8, font: { family: 'Inter', size: 11 } }
+                        },
+                        tooltip: {
+                            backgroundColor: '#0f172a',
+                            padding: 10,
+                            cornerRadius: 8,
+                            titleFont: { family: 'Inter', size: 12, weight: 'bold' },
+                            bodyFont: { family: 'Inter', size: 12 }
+                        }
                     },
-                    tooltip: {
-                        backgroundColor: '#0f172a',
-                        padding: 10,
-                        cornerRadius: 8,
-                        titleFont: { family: 'Inter', size: 12, weight: 'bold' },
-                        bodyFont: { family: 'Inter', size: 12 }
+                    scales: {
+                        x: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } },
+                        y: { grid: { color: '#f1f5f9' }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } }
                     }
-                },
-                scales: {
-                    x: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } },
-                    y: { grid: { color: '#f1f5f9' }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } }
-                }
-            };
+                };
+            }
 
             Object.values(chartInstances).forEach(chart => chart.destroy());
             chartInstances = {};
@@ -588,7 +593,7 @@
                         borderRadius: 6
                     }]
                 },
-                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+                options: { ...getCommonOptions(), plugins: { ...getCommonOptions().plugins, legend: { display: false } } }
             });
 
             // Chart 2: Plazas ofertadas
@@ -603,7 +608,7 @@
                         borderRadius: 6
                     }]
                 },
-                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+                options: { ...getCommonOptions(), plugins: { ...getCommonOptions().plugins, legend: { display: false } } }
             });
 
             // Chart 3: Plazas por sede
@@ -620,9 +625,9 @@
                     }]
                 },
                 options: {
-                    ...commonOptions,
+                    ...getCommonOptions(),
                     indexAxis: 'y',
-                    plugins: { ...commonOptions.plugins, legend: { display: false } }
+                    plugins: { ...getCommonOptions().plugins, legend: { display: false } }
                 }
             });
 
@@ -646,7 +651,7 @@
                         }
                     ]
                 },
-                options: commonOptions
+                options: getCommonOptions()
             });
 
             // Chart 5: Personal de la Junta por provincia
@@ -663,9 +668,9 @@
                     }]
                 },
                 options: {
-                    ...commonOptions,
+                    ...getCommonOptions(),
                     indexAxis: 'y',
-                    plugins: { ...commonOptions.plugins, legend: { display: false } }
+                    plugins: { ...getCommonOptions().plugins, legend: { display: false } }
                 }
             });
 
@@ -683,9 +688,9 @@
                     }]
                 },
                 options: {
-                    ...commonOptions,
+                    ...getCommonOptions(),
                     indexAxis: 'y',
-                    plugins: { ...commonOptions.plugins, legend: { display: false } }
+                    plugins: { ...getCommonOptions().plugins, legend: { display: false } }
                 }
             });
         }

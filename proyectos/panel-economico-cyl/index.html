@@ -115,100 +115,8 @@
             <!-- Dynamic comparison cards will be injected here via JavaScript -->
         </section>
 
-        <!-- Sección: Presupuesto y Subvenciones -->
-        <div class="flex items-center gap-2 pt-2">
-            <i class="fa-solid fa-building-columns text-brand-600"></i>
-            <h2 class="text-base font-bold text-slate-800">Presupuesto y Subvenciones</h2>
-        </div>
-
-        <!-- Key Metrics Cards Container -->
-        <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
-        </section>
-
-        <!-- Historical Charts Grid -->
-        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-
-            <!-- Chart 1: Presupuesto autonómico -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-blue-600"></span>
-                            <h3 class="font-bold text-slate-800">Presupuesto Autonómico Vigente</h3>
-                        </div>
-                        <p class="text-xs text-slate-500 mt-1">Presupuesto total consolidado realmente en vigor cada año (incluye prórrogas)</p>
-                    </div>
-                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">M€/año</span>
-                </div>
-                <div class="relative h-64 w-full">
-                    <canvas id="presupuestoChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Chart 2: Importe concedido -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
-                            <h3 class="font-bold text-slate-800">Importe Concedido en Subvenciones</h3>
-                        </div>
-                        <p class="text-xs text-slate-500 mt-1">Sin datos oficiales desde 2022 (el portal de datos abiertos dejó de publicar el detalle)</p>
-                    </div>
-                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">M€/año</span>
-                </div>
-                <div class="relative h-64 w-full">
-                    <canvas id="concedidoChart"></canvas>
-                </div>
-            </div>
-
-            <!-- Chart 3: Catálogo de líneas de ayuda -->
-            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <div class="flex items-center gap-2">
-                            <span class="w-3 h-3 rounded-full bg-violet-500"></span>
-                            <h3 class="font-bold text-slate-800">Catálogo de Líneas de Ayuda</h3>
-                        </div>
-                        <p class="text-xs text-slate-500 mt-1">Nº de líneas de ayuda/subvención publicadas cada año (2026 parcial)</p>
-                    </div>
-                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Líneas/año</span>
-                </div>
-                <div class="relative h-64 w-full">
-                    <canvas id="catalogoChart"></canvas>
-                </div>
-            </div>
-
-        </section>
-
-        <!-- Summary Data Table -->
-        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
-            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
-                <h3 class="font-bold text-slate-800 flex items-center gap-2">
-                    <i class="fa-solid fa-table text-slate-400"></i>
-                    <span>Histórico Anual</span>
-                </h3>
-            </div>
-            <div class="overflow-x-auto">
-                <table class="w-full text-sm text-left text-slate-600">
-                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
-                        <tr>
-                            <th scope="col" class="px-6 py-3 font-semibold">Año</th>
-                            <th scope="col" class="px-6 py-3 font-semibold text-right">Presupuesto (M€)</th>
-                            <th scope="col" class="px-6 py-3 font-semibold text-right">Importe Concedido (M€)</th>
-                            <th scope="col" class="px-6 py-3 font-semibold text-right">Líneas de Ayuda</th>
-                        </tr>
-                    </thead>
-                    <tbody id="dataTableBody" class="divide-y divide-slate-100">
-                        <!-- Dynamic table rows will be populated here -->
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
         <!-- Sección: Mercado Laboral -->
-        <div class="flex items-center gap-2 pt-4">
+        <div class="flex items-center gap-2 pt-2">
             <i class="fa-solid fa-briefcase text-brand-600"></i>
             <h2 class="text-base font-bold text-slate-800">Mercado Laboral y Actividad Económica</h2>
         </div>
@@ -311,6 +219,98 @@
                         </tr>
                     </thead>
                     <tbody id="provinciasTableBody" class="divide-y divide-slate-100">
+                        <!-- Dynamic table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sección: Presupuesto y Subvenciones -->
+        <div class="flex items-center gap-2 pt-4">
+            <i class="fa-solid fa-building-columns text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Presupuesto y Subvenciones</h2>
+        </div>
+
+        <!-- Key Metrics Cards Container -->
+        <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Historical Charts Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Chart 1: Presupuesto autonómico -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                            <h3 class="font-bold text-slate-800">Presupuesto Autonómico Vigente</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Presupuesto total consolidado realmente en vigor cada año (incluye prórrogas)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">M€/año</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="presupuestoChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 2: Importe concedido -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                            <h3 class="font-bold text-slate-800">Importe Concedido en Subvenciones</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Sin datos oficiales desde 2022 (el portal de datos abiertos dejó de publicar el detalle)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">M€/año</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="concedidoChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 3: Catálogo de líneas de ayuda -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+                            <h3 class="font-bold text-slate-800">Catálogo de Líneas de Ayuda</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Nº de líneas de ayuda/subvención publicadas cada año (2026 parcial)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Líneas/año</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="catalogoChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Summary Data Table -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-table text-slate-400"></i>
+                    <span>Histórico Anual</span>
+                </h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Año</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Presupuesto (M€)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Importe Concedido (M€)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Líneas de Ayuda</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody" class="divide-y divide-slate-100">
                         <!-- Dynamic table rows will be populated here -->
                     </tbody>
                 </table>
