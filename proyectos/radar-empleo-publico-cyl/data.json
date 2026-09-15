@@ -1,13 +1,14 @@
 {
   "lastUpdated": "15 de Septiembre, 2026",
-  "resumenEjecutivo": "El catálogo de convocatorias de empleo público de la Junta de Castilla y León registró 77 procesos selectivos en 2025 (19 más que en 2024) por 1.418 plazas, frente a las 2.588 de 2024 —un año con convocatorias muy numerosas como Veterinarios (99 plazas) o Cuerpo de Gestión (86)—. En lo que va de 2026 se han publicado ya 30 convocatorias con 1.039 plazas, aunque a día de hoy ninguna tiene el plazo de solicitud abierto: la última se publicó el 28 de julio (Médico de Salud Pública, Segovia, 1 plaza). Desde 2020 el catálogo acumula 7.113 plazas convocadas. La inmensa mayoría de los ejercicios se celebran en Valladolid, sede habitual de los tribunales, con independencia de la provincia de destino del puesto.",
+  "resumenEjecutivo": "El catálogo de convocatorias de empleo público de la Junta de Castilla y León registró 77 procesos selectivos en 2025 (19 más que en 2024) por 1.418 plazas, frente a las 2.588 de 2024 —un año con convocatorias muy numerosas como Veterinarios (99 plazas) o Cuerpo de Gestión (86)—. En lo que va de 2026 se han publicado ya 30 convocatorias con 1.039 plazas, aunque a día de hoy ninguna tiene el plazo de solicitud abierto: la última se publicó el 28 de julio (Médico de Salud Pública, Segovia, 1 plaza). Desde 2020 el catálogo acumula 7.113 plazas convocadas, y la inmensa mayoría de los ejercicios se celebran en Valladolid, sede habitual de los tribunales, con independencia de la provincia de destino del puesto. Más allá de las convocatorias, la plantilla de la Junta asciende a 92.299 efectivos en enero de 2026, un 1,16% más que un año antes; casi todas las provincias crecen, salvo Segovia (-0,4%) y Palencia (-0,6%), las únicas con menos personal que hace un año. Valladolid y León concentran casi el 40% de toda la plantilla autonómica.",
   "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de plazas ofertadas en convocatorias de empleo publico de Castilla y Leon, 2020-2026\" style=\"width:100%;height:100%\"><polygon points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,62.0 308,100 12,100\" fill=\"rgba(37,99,235,0.08)\"/><polyline points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,62.0\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"89.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"61.3\" cy=\"85.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"110.7\" cy=\"44.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"160.0\" cy=\"84.2\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"209.3\" cy=\"20.4\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"258.7\" cy=\"51.8\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"308.0\" cy=\"62.0\" r=\"3\" fill=\"#2563eb\"/></svg>",
   "sources": {
     "convocatorias": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público' (analisis.datosabiertos.jcyl.es), vía su API pública, filtrado por tipo 'Convocatoria'",
     "plazas": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', suma del campo 'numeroplazas' por convocatoria",
     "bolsas": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', filtrado por tipo 'Bolsa de Empleo'",
     "abiertas": "Calculado comparando el campo 'fechafinalizacion' de cada convocatoria con la fecha de la última actualización de este panel",
-    "sedes": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', campo 'municipio' — indica la sede donde se celebran las pruebas, no siempre la provincia de destino de la plaza"
+    "sedes": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', campo 'municipio' — indica la sede donde se celebran las pruebas, no siempre la provincia de destino de la plaza",
+    "efectivos": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Estadísticas de personal' (analisis.datosabiertos.jcyl.es), suma del campo 'efectivos' por provincia; a diferencia de 'sedes', esta sí es la provincia real donde trabaja el personal, no la sede del examen"
   },
   "indicators": [
     {
@@ -57,6 +58,18 @@
       "target": null,
       "icon": "fa-hourglass-half",
       "color": "amber"
+    },
+    {
+      "id": "efectivos",
+      "title": "Personal de la Junta (Enero 2026)",
+      "currentValue": 92299,
+      "unit": "efectivos",
+      "change": 1056,
+      "changeLabel": "vs enero 2025 (91.243)",
+      "description": "Personal funcionario y laboral de la Administración General de la Junta, las 9 provincias",
+      "target": null,
+      "icon": "fa-users-gear",
+      "color": "teal"
     }
   ],
   "historicalData": [
@@ -81,9 +94,21 @@
     { "sede": "Salamanca", "plazas": 6 },
     { "sede": "Soria", "plazas": 1 }
   ],
+  "provincias": [
+    { "provincia": "Valladolid", "efectivos": 21173, "efectivosAnterior": 20977, "variacion": 196 },
+    { "provincia": "León", "efectivos": 15722, "efectivosAnterior": 15338, "variacion": 384 },
+    { "provincia": "Burgos", "efectivos": 12438, "efectivosAnterior": 12299, "variacion": 139 },
+    { "provincia": "Salamanca", "efectivos": 11882, "efectivosAnterior": 11732, "variacion": 150 },
+    { "provincia": "Zamora", "efectivos": 6979, "efectivosAnterior": 6835, "variacion": 144 },
+    { "provincia": "Ávila", "efectivos": 6440, "efectivosAnterior": 6393, "variacion": 47 },
+    { "provincia": "Segovia", "efectivos": 6365, "efectivosAnterior": 6389, "variacion": -24 },
+    { "provincia": "Palencia", "efectivos": 6238, "efectivosAnterior": 6275, "variacion": -37 },
+    { "provincia": "Soria", "efectivos": 5062, "efectivosAnterior": 5005, "variacion": 57 }
+  ],
   "notas": {
     "2026parcial": "El dato de 2026 está incompleto (extraído a 15 de septiembre de 2026) y se completará en próximas actualizaciones",
     "sede": "El campo 'municipio' del dataset refleja la sede donde se celebran las pruebas selectivas (mayoritariamente Valladolid), no necesariamente la provincia de destino final de la plaza",
-    "subgrupo": "El dataset no incluye un campo limpio de subgrupo (A1/A2/C1/C2) ni de cuerpo/especialidad agregable; esa información solo aparece dentro de tablas de texto libre en cada convocatoria y no se procesa automáticamente en este panel"
+    "subgrupo": "El dataset no incluye un campo limpio de subgrupo (A1/A2/C1/C2) ni de cuerpo/especialidad agregable; esa información solo aparece dentro de tablas de texto libre en cada convocatoria y no se procesa automáticamente en este panel",
+    "efectivosFrecuencia": "'Estadísticas de personal' se publica dos veces al año (enero y julio), por lo que este dato cambia con menor frecuencia que el resto del panel"
   }
 }
