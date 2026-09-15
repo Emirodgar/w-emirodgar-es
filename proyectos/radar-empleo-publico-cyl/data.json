@@ -1,0 +1,89 @@
+{
+  "lastUpdated": "15 de Septiembre, 2026",
+  "resumenEjecutivo": "El catálogo de convocatorias de empleo público de la Junta de Castilla y León registró 77 procesos selectivos en 2025 (19 más que en 2024) por 1.418 plazas, frente a las 2.588 de 2024 —un año con convocatorias muy numerosas como Veterinarios (99 plazas) o Cuerpo de Gestión (86)—. En lo que va de 2026 se han publicado ya 30 convocatorias con 1.039 plazas, aunque a día de hoy ninguna tiene el plazo de solicitud abierto: la última se publicó el 28 de julio (Médico de Salud Pública, Segovia, 1 plaza). Desde 2020 el catálogo acumula 7.113 plazas convocadas. La inmensa mayoría de los ejercicios se celebran en Valladolid, sede habitual de los tribunales, con independencia de la provincia de destino del puesto.",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de plazas ofertadas en convocatorias de empleo publico de Castilla y Leon, 2020-2026\" style=\"width:100%;height:100%\"><polygon points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,62.0 308,100 12,100\" fill=\"rgba(37,99,235,0.08)\"/><polyline points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,62.0\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"89.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"61.3\" cy=\"85.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"110.7\" cy=\"44.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"160.0\" cy=\"84.2\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"209.3\" cy=\"20.4\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"258.7\" cy=\"51.8\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"308.0\" cy=\"62.0\" r=\"3\" fill=\"#2563eb\"/></svg>",
+  "sources": {
+    "convocatorias": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público' (analisis.datosabiertos.jcyl.es), vía su API pública, filtrado por tipo 'Convocatoria'",
+    "plazas": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', suma del campo 'numeroplazas' por convocatoria",
+    "bolsas": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', filtrado por tipo 'Bolsa de Empleo'",
+    "abiertas": "Calculado comparando el campo 'fechafinalizacion' de cada convocatoria con la fecha de la última actualización de este panel",
+    "sedes": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', campo 'municipio' — indica la sede donde se celebran las pruebas, no siempre la provincia de destino de la plaza"
+  },
+  "indicators": [
+    {
+      "id": "convocatorias",
+      "title": "Convocatorias en 2025",
+      "currentValue": 77,
+      "unit": "convocatorias",
+      "change": 19,
+      "changeLabel": "vs 2024 (58 convocatorias)",
+      "description": "Procesos selectivos publicados en el BOCYL durante 2025",
+      "target": null,
+      "icon": "fa-file-signature",
+      "color": "blue"
+    },
+    {
+      "id": "plazas",
+      "title": "Plazas Ofertadas en 2025",
+      "currentValue": 1418,
+      "unit": "plazas",
+      "change": -1170,
+      "changeLabel": "vs 2024 (2.588 plazas)",
+      "description": "Suma de plazas convocadas en los procesos selectivos de 2025",
+      "target": null,
+      "icon": "fa-user-check",
+      "color": "emerald"
+    },
+    {
+      "id": "historico",
+      "title": "Plazas Acumuladas 2020-2026",
+      "currentValue": 7113,
+      "unit": "plazas",
+      "change": null,
+      "changeLabel": "Total del catálogo histórico disponible",
+      "description": "Suma de todas las plazas convocadas desde 2020",
+      "target": null,
+      "icon": "fa-layer-group",
+      "color": "violet"
+    },
+    {
+      "id": "abiertas",
+      "title": "Convocatorias Abiertas Ahora",
+      "currentValue": 0,
+      "unit": "convocatorias",
+      "change": null,
+      "changeLabel": "Ninguna con plazo de solicitud abierto hoy",
+      "description": "Última publicada: 28/07/2026 (Médico de Salud Pública, Segovia, 1 plaza)",
+      "target": null,
+      "icon": "fa-hourglass-half",
+      "color": "amber"
+    }
+  ],
+  "historicalData": [
+    { "year": "2020", "convocatorias": 1, "plazas": 10, "bolsasEmpleo": 22 },
+    { "year": "2021", "convocatorias": 1, "plazas": 158, "bolsasEmpleo": 4 },
+    { "year": "2022", "convocatorias": 25, "plazas": 1688, "bolsasEmpleo": 7 },
+    { "year": "2023", "convocatorias": 18, "plazas": 212, "bolsasEmpleo": 16 },
+    { "year": "2024", "convocatorias": 58, "plazas": 2588, "bolsasEmpleo": 8 },
+    { "year": "2025", "convocatorias": 77, "plazas": 1418, "bolsasEmpleo": 0 },
+    { "year": "2026", "convocatorias": 30, "plazas": 1039, "bolsasEmpleo": 12 }
+  ],
+  "sedes": [
+    { "sede": "Valladolid", "plazas": 4132 },
+    { "sede": "Sin especificar", "plazas": 2207 },
+    { "sede": "Varias sedes (Burgos, León, Salamanca, Valladolid)", "plazas": 437 },
+    { "sede": "Segovia", "plazas": 114 },
+    { "sede": "León", "plazas": 73 },
+    { "sede": "Ávila", "plazas": 41 },
+    { "sede": "Zamora", "plazas": 40 },
+    { "sede": "Palencia", "plazas": 32 },
+    { "sede": "Burgos", "plazas": 30 },
+    { "sede": "Salamanca", "plazas": 6 },
+    { "sede": "Soria", "plazas": 1 }
+  ],
+  "notas": {
+    "2026parcial": "El dato de 2026 está incompleto (extraído a 15 de septiembre de 2026) y se completará en próximas actualizaciones",
+    "sede": "El campo 'municipio' del dataset refleja la sede donde se celebran las pruebas selectivas (mayoritariamente Valladolid), no necesariamente la provincia de destino final de la plaza",
+    "subgrupo": "El dataset no incluye un campo limpio de subgrupo (A1/A2/C1/C2) ni de cuerpo/especialidad agregable; esa información solo aparece dentro de tablas de texto libre en cada convocatoria y no se procesa automáticamente en este panel"
+  }
+}

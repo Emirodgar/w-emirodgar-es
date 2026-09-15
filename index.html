@@ -92,6 +92,18 @@
                 <a href="https://emirodgar.es/panel-economico-cyl" class="link proyecto-cta">Explorar el panel completo →</a>
             </div>
 
+            <div class="proyecto-card proyecto-card--featured">
+                <span class="proyecto-badge">Panel en vivo</span>
+                <h3>Radar de Empleo Público CyL</h3>
+                <p>Convocatorias, plazas ofertadas y bolsas de empleo público de la Junta de Castilla y León.</p>
+                <div class="proyecto-chart-wrapper" id="radarEmpleoSparkline" aria-hidden="true"></div>
+                <div class="proyecto-chart-legend">
+                    <span><i class="legend-swatch legend-swatch--blue"></i> Plazas ofertadas/año</span>
+                </div>
+                <p id="radarEmpleoResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
+                <a href="https://emirodgar.es/radar-empleo-publico-cyl" class="link proyecto-cta">Explorar el panel completo →</a>
+            </div>
+
         </div>
     </section>
 
@@ -171,6 +183,31 @@
             if (!sparklineEl) return;
 
             fetch('proyectos/panel-economico-cyl/data.json', { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar data.json');
+                    return res.json();
+                })
+                .then(dataset => {
+                    if (resumenEl) {
+                        resumenEl.textContent = dataset.resumenEjecutivo || '';
+                    }
+                    if (dataset.sparklineSvg) {
+                        sparklineEl.innerHTML = dataset.sparklineSvg;
+                    }
+                })
+                .catch(() => {
+                    if (resumenEl) {
+                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
+                    }
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sparklineEl = document.getElementById('radarEmpleoSparkline');
+            const resumenEl = document.getElementById('radarEmpleoResumen');
+            if (!sparklineEl) return;
+
+            fetch('proyectos/radar-empleo-publico-cyl/data.json', { cache: 'no-store' })
                 .then(res => {
                     if (!res.ok) throw new Error('No se pudo cargar data.json');
                     return res.json();

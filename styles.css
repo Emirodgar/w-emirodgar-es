@@ -388,6 +388,10 @@ a.link:hover {
     border-top: 2.5px solid #7c3aed;
 }
 
+.legend-swatch--blue {
+    border-top: 2.5px solid #2563eb;
+}
+
 .proyecto-resumen {
     font-size: 0.9rem;
     color: #475569;
