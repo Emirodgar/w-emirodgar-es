@@ -1,0 +1,272 @@
+{
+  "lastUpdated": "15 de Septiembre, 2026",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Reparto de las 12 carteras del Consejo de Gobierno: 9 del PP y 3 de Vox\" style=\"width:100%;height:100%\"><text x=\"12\" y=\"18\" font-family=\"Inter, sans-serif\" font-size=\"11\" fill=\"#64748b\">Reparto de carteras del Gobierno</text><rect x=\"12\" y=\"34\" width=\"222\" height=\"34\" rx=\"8\" fill=\"#2563eb\"/><rect x=\"238\" y=\"34\" width=\"70\" height=\"34\" rx=\"8\" fill=\"#059669\"/><text x=\"22\" y=\"57\" font-family=\"Inter, sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#ffffff\">9 PP</text><text x=\"248\" y=\"57\" font-family=\"Inter, sans-serif\" font-size=\"15\" font-weight=\"700\" fill=\"#ffffff\">3 Vox</text><text x=\"12\" y=\"90\" font-family=\"Inter, sans-serif\" font-size=\"11\" fill=\"#94a3b8\">+ la presidencia (PP)</text></svg>",
+  "resumenEjecutivo": "El Tercer Gobierno de Alfonso Fernández Mañueco (PP) se formó el 15 de junio de 2026, tras las elecciones autonómicas del 15 de marzo en las que el PP obtuvo 33 escaños y Vox 14, y un nuevo pacto de coalición entre ambos partidos —el segundo de este tipo en Castilla y León, tras el de 2022-2026—. El Consejo de Gobierno lo integran 12 personas: el presidente, dos vicepresidencias (cada una con consejería propia) y 9 consejerías más, con 9 carteras para el PP y 3 para Vox. Cinco de sus integrantes son caras nuevas en el Ejecutivo autonómico: Carlos Pollán (Vox, hasta ahora presidente de las Cortes) pasa a la Vicepresidencia Primera, y se incorporan Cristina Sanchidrián, Joaquín Antonio Pino, María Pardo y José Alberto Díaz Pico. En el otro extremo, Juan Carlos Suárez-Quiñones encara su nueva cartera de Industria tras 11 años consecutivos al frente de Medio Ambiente, y Carlos Fernández Carriedo e Isabel Blanco Llamas llevan en el Gobierno de forma ininterrumpida desde 2019.",
+  "legislatura": {
+    "numero": "XII",
+    "coalicion": "PP-Vox",
+    "fechaEleccion": "2026-03-15",
+    "fechaInvestidura": "2026-06-09",
+    "fechaFormacionGobierno": "2026-06-15",
+    "escanosPP": 33,
+    "escanosVox": 14,
+    "totalEscanos": 81
+  },
+  "kpis": [
+    { "id": "presidente", "title": "Presidente Desde", "value": "2019", "unit": "", "detail": "Alfonso Fernández Mañueco (PP), 7 años en el cargo, reinvestido en 2022 y 2026", "icon": "fa-crown", "color": "amber" },
+    { "id": "miembros", "title": "Miembros del Gobierno", "value": 12, "unit": "personas", "detail": "Presidente, 2 vicepresidencias y 9 consejerías", "icon": "fa-people-group", "color": "blue" },
+    { "id": "reparto", "title": "Reparto por Partido", "value": "9 / 3", "unit": "PP / Vox", "detail": "9 carteras para el PP y 3 para Vox, además de la presidencia (PP)", "icon": "fa-scale-balanced", "color": "indigo" },
+    { "id": "nuevas", "title": "Caras Nuevas en el Gobierno", "value": 5, "unit": "de 12", "detail": "Pollán, Sanchidrián, Pino, Pardo y Díaz Pico no habían estado antes en el Consejo de Gobierno", "icon": "fa-user-plus", "color": "emerald" },
+    { "id": "veterano", "title": "Más Veterano del Gobierno", "value": "11 años", "unit": "", "detail": "Juan Carlos Suárez-Quiñones, consejero ininterrumpidamente desde julio de 2015", "icon": "fa-hourglass-half", "color": "violet" }
+  ],
+  "presidente": {
+    "nombre": "Alfonso Fernández Mañueco",
+    "cargo": "Presidente de la Junta de Castilla y León",
+    "partido": "PP",
+    "nacimiento": "29 de abril de 1965, Salamanca",
+    "enCargoDesde": "2019-07-12",
+    "aniosEnCargo": 7,
+    "estado": "Presidente desde 2019, reinvestido en 2022 y 2026",
+    "trayectoria": "Abogado. Fue alcalde de Salamanca (2015-2019) antes de suceder a Juan Vicente Herrera como presidente de la Junta en julio de 2019. Revalidó el cargo tras las elecciones de 2022 (primer gobierno de coalición PP-Vox de una comunidad autónoma) y de nuevo en 2026.",
+    "predecesor": {
+      "nombre": "Juan Vicente Herrera",
+      "partido": "PP",
+      "periodo": "2001-2019",
+      "wikipedia": "https://es.wikipedia.org/wiki/Juan_Vicente_Herrera"
+    },
+    "wikipedia": "https://es.wikipedia.org/wiki/Alfonso_Fern%C3%A1ndez_Ma%C3%B1ueco"
+  },
+  "vicepresidentes": [
+    {
+      "nombre": "Carlos Pollán Fernández",
+      "cargo": "Vicepresidente Primero y Consejero de Desregulación, Familia y Ayudas Sociales",
+      "vicepresidencia": "Primera",
+      "partido": "Vox",
+      "nacimiento": "1966/1967, León",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 0,
+      "estado": "Cara nueva en el Gobierno",
+      "cargoAnterior": "Presidente de las Cortes de Castilla y León (2022-2026)",
+      "competencias": ["Simplificación y desregulación normativa", "Política de familia y natalidad", "Ayudas e inclusión social", "Infancia"],
+      "trayectoria": "Exjugador, entrenador y presidente del Ademar León. Entró en política en 2022 como procurador de Vox y llegó a presidir las Cortes de Castilla y León esa misma legislatura. En junio de 2026 da el salto al Ejecutivo como vicepresidente primero.",
+      "predecesor": {
+        "nombre": "La Vicepresidencia única la ocuparon antes Juan García-Gallardo (Vox, 2022-2024) e Isabel Blanco Llamas (PP, 2024-2026); las competencias de familia las llevaba Isabel Blanco",
+        "partido": "Vox / PP",
+        "periodo": "2022-2026",
+        "wikipedia": null
+      },
+      "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Poll%C3%A1n"
+    },
+    {
+      "nombre": "María Isabel Blanco Llamas",
+      "cargo": "Vicepresidenta Segunda y Consejera de Vivienda, Ordenación del Territorio, Igualdad, Despoblación y Protección Civil",
+      "vicepresidencia": "Segunda",
+      "partido": "PP",
+      "nacimiento": "19 de agosto de 1972, Madrid",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 7,
+      "estado": "Cambia de cartera · en el Gobierno desde 2019",
+      "cargoAnterior": "Consejera de Familia e Igualdad de Oportunidades (2019-2026) y vicepresidenta única (2024-2026)",
+      "competencias": ["Vivienda pública", "Ordenación del territorio y urbanismo", "Igualdad de oportunidades", "Lucha contra la despoblación", "Protección civil y emergencias"],
+      "trayectoria": "Ingeniera de caminos y funcionaria de la Diputación de Zamora. Procuradora del PP entre 2011 y 2015, y consejera de Familia e Igualdad desde 2019. Asumió la vicepresidencia única en 2024 al sustituir a Juan García-Gallardo (Vox) y ahora repite como vicepresidenta segunda con una consejería reconfigurada.",
+      "predecesor": {
+        "nombre": "Juan Carlos Suárez-Quiñones (Vivienda y Ordenación del Territorio, dentro de su antigua consejería de Medio Ambiente); ella misma llevaba Igualdad desde 2019",
+        "partido": "PP",
+        "periodo": "2015-2026",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Carlos_Su%C3%A1rez-Qui%C3%B1ones"
+      },
+      "wikipedia": "https://es.wikipedia.org/wiki/Isabel_Blanco_Llamas"
+    }
+  ],
+  "consejeros": [
+    {
+      "nombre": "Luis Miguel González Gago",
+      "cargo": "Consejero de la Presidencia",
+      "partido": "PP",
+      "nacimiento": "7 de julio de 1964, Pozuelo de la Orden (Valladolid)",
+      "enCargoDesde": "2023-05-12",
+      "aniosEnCargo": 3,
+      "aniosEnGobierno": 3,
+      "estado": "Repite",
+      "cargoAnterior": "Director de los Servicios Jurídicos de la Junta",
+      "competencias": ["Coordinación del Gobierno", "Servicios jurídicos", "Relaciones institucionales", "Comunicación", "Función pública"],
+      "trayectoria": "Letrado, perteneciente desde 1990 al Cuerpo de Letrados de los Servicios Jurídicos de la Junta de Castilla y León. Fue nombrado consejero de Presidencia en mayo de 2023 y repite en el cargo tras las elecciones de 2026.",
+      "predecesor": {
+        "nombre": "Jesús Julio Carnero García",
+        "partido": "PP",
+        "periodo": "2022-2023",
+        "wikipedia": null
+      },
+      "wikipedia": "https://es.wikipedia.org/wiki/Luis_Miguel_Gonz%C3%A1lez_Gago"
+    },
+    {
+      "nombre": "Carlos Javier Fernández Carriedo",
+      "cargo": "Consejero de Economía y Hacienda y Portavoz de la Junta",
+      "partido": "PP",
+      "nacimiento": "5 de mayo de 1963",
+      "enCargoDesde": "2019-07-17",
+      "aniosEnCargo": 7,
+      "aniosEnGobierno": 7,
+      "estado": "Repite",
+      "cargoAnterior": null,
+      "competencias": ["Presupuestos autonómicos", "Tributos y financiación autonómica", "Fondos europeos", "Estadística", "Portavocía del Gobierno"],
+      "trayectoria": "Consejero de Economía y Hacienda desde julio de 2019, uno de los tres miembros del actual Gobierno con más antigüedad ininterrumpida. Ejerce además como portavoz del Ejecutivo autonómico.",
+      "predecesor": {
+        "nombre": "Pilar del Olmo",
+        "partido": "PP",
+        "periodo": "2015-2019",
+        "wikipedia": "https://es.wikipedia.org/wiki/Pilar_del_Olmo"
+      },
+      "wikipedia": "https://es.wikipedia.org/wiki/Carlos_Fern%C3%A1ndez_Carriedo"
+    },
+    {
+      "nombre": "Juan Carlos Suárez-Quiñones Fernández",
+      "cargo": "Consejero de Industria, Universidades, Empleo y Comercio",
+      "partido": "PP",
+      "nacimiento": "1961, León",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 11,
+      "estado": "Cambia de cartera · el más veterano del Gobierno",
+      "cargoAnterior": "Consejero de Medio Ambiente, Vivienda y Ordenación del Territorio (2015-2026)",
+      "competencias": ["Política industrial", "Universidades e I+D", "Empleo y formación profesional", "Comercio y consumo"],
+      "trayectoria": "Juez de carrera y decano de León (2002-2012) antes de entrar en política. Fue subdelegado y delegado del Gobierno en León y, desde julio de 2015, consejero de Medio Ambiente, Vivienda y Ordenación del Territorio de forma ininterrumpida durante 11 años, tanto con Juan Vicente Herrera como con Alfonso Fernández Mañueco. En junio de 2026 estrena la cartera de Industria.",
+      "predecesor": {
+        "nombre": "Leticia García Sánchez",
+        "partido": "PP",
+        "periodo": "2024-2026",
+        "wikipedia": null
+      },
+      "wikipedia": "https://es.wikipedia.org/wiki/Juan_Carlos_Su%C3%A1rez-Qui%C3%B1ones"
+    },
+    {
+      "nombre": "María González Corral",
+      "cargo": "Consejera de Medio Ambiente y Energía",
+      "partido": "PP",
+      "nacimiento": null,
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 4,
+      "estado": "Cambia de cartera · en el Gobierno desde 2022",
+      "cargoAnterior": "Consejera de Movilidad y Transformación Digital (2022-2024) y de Agricultura, Ganadería y Desarrollo Rural (2024-2026)",
+      "competencias": ["Espacios naturales y biodiversidad", "Política energética y renovables", "Calidad ambiental", "Recursos hídricos"],
+      "trayectoria": "Ingeniera de Caminos, Canales y Puertos especializada en seguridad de presas y embalses. Entró en el Gobierno en abril de 2022 con Movilidad y Transformación Digital, pasó a Agricultura en 2024 y ahora asume Medio Ambiente y Energía, su tercera cartera distinta en tres gobiernos consecutivos.",
+      "predecesor": {
+        "nombre": "Juan Carlos Suárez-Quiñones Fernández (competencias de medio ambiente de su antigua consejería)",
+        "partido": "PP",
+        "periodo": "2015-2026",
+        "wikipedia": "https://es.wikipedia.org/wiki/Juan_Carlos_Su%C3%A1rez-Qui%C3%B1ones"
+      },
+      "wikipedia": null
+    },
+    {
+      "nombre": "Cristina Sanchidrián Blázquez",
+      "cargo": "Consejera de Movilidad, Transformación Digital e Inteligencia Artificial",
+      "partido": "PP",
+      "nacimiento": "1976, Ávila",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 0,
+      "estado": "Cara nueva en el Gobierno",
+      "cargoAnterior": "Jefa del Servicio Territorial de Movilidad y Transformación Digital de la Junta en Ávila (desde enero de 2025)",
+      "competencias": ["Infraestructuras y transporte", "Carreteras", "Administración electrónica", "Inteligencia artificial y digitalización"],
+      "trayectoria": "Arquitecta por la Universidad Politécnica de Madrid y funcionaria desde 2006. Fue arquitecta municipal del Ayuntamiento de Ávila durante casi dos décadas antes de incorporarse a la Junta. Cara nueva en el Consejo de Gobierno de junio de 2026.",
+      "predecesor": {
+        "nombre": "José Luis Sanz Merino",
+        "partido": "PP",
+        "periodo": "2024-2026",
+        "wikipedia": null
+      },
+      "wikipedia": null
+    },
+    {
+      "nombre": "Joaquín Antonio Pino",
+      "cargo": "Consejero de Agricultura, Ganadería, Medio Rural y Política Ambiental",
+      "partido": "Vox",
+      "nacimiento": "1981, Sinlabajos (Ávila)",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 0,
+      "estado": "Cara nueva en el Gobierno",
+      "cargoAnterior": "Presidente de ASAJA Ávila (desde 2008) y vicepresidente de ASAJA Castilla y León (2021-2025)",
+      "competencias": ["Política agraria y PAC", "Ganadería", "Desarrollo rural", "Política forestal y ambiental"],
+      "trayectoria": "Veterinario por la Universidad de León y funcionario del Cuerpo de Ingenieros Agrónomos del Estado desde 2023. Muy vinculado a las organizaciones agrarias abulenses, asume Agricultura como cara nueva del Gobierno en junio de 2026, devolviendo esta cartera a Vox.",
+      "predecesor": {
+        "nombre": "María González Corral",
+        "partido": "PP",
+        "periodo": "2024-2026",
+        "wikipedia": null
+      },
+      "wikipedia": null
+    },
+    {
+      "nombre": "Alejandro Vázquez Ramos",
+      "cargo": "Consejero de Sanidad y Bienestar Social",
+      "partido": "PP",
+      "nacimiento": "1963",
+      "enCargoDesde": "2021-12-20",
+      "aniosEnCargo": 4,
+      "aniosEnGobierno": 4,
+      "estado": "Repite · amplía competencias a Bienestar Social",
+      "cargoAnterior": null,
+      "competencias": ["Sistema sanitario público (Sacyl)", "Salud pública", "Dependencia y atención a mayores", "Bienestar social"],
+      "trayectoria": "Médico especialista en Nefrología por la Universidad de Valladolid y procurador del PP desde 2015. Fue nombrado consejero de Sanidad en diciembre de 2021, en plena pandemia, y repite desde entonces con una consejería que ahora incorpora también Bienestar Social.",
+      "predecesor": {
+        "nombre": "Verónica Casado",
+        "partido": "Independiente",
+        "periodo": "2019-2021",
+        "wikipedia": "https://es.wikipedia.org/wiki/Ver%C3%B3nica_Casado"
+      },
+      "wikipedia": null
+    },
+    {
+      "nombre": "María Pardo Álvarez",
+      "cargo": "Consejera de Educación",
+      "partido": "PP",
+      "nacimiento": "1971, Simancas (Valladolid)",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 0,
+      "estado": "Cara nueva en el Gobierno",
+      "cargoAnterior": "Directora General de Vivienda, Arquitectura, Ordenación del Territorio y Urbanismo (2022-2026)",
+      "competencias": ["Educación no universitaria", "Formación profesional", "Innovación educativa", "Becas y ayudas al estudio"],
+      "trayectoria": "Profesora universitaria y doctora cum laude. Antes de ser consejera dirigía la Dirección General de Vivienda, Arquitectura, Ordenación del Territorio y Urbanismo de la Consejería de Medio Ambiente. Ha situado la salud emocional y la convivencia en el aula entre sus prioridades.",
+      "predecesor": {
+        "nombre": "Rocío Lucas Navas",
+        "partido": "PP",
+        "periodo": "2022-2026",
+        "wikipedia": null
+      },
+      "wikipedia": null
+    },
+    {
+      "nombre": "José Alberto Díaz Pico",
+      "cargo": "Consejero de Cultura, Turismo y Deporte",
+      "partido": "Vox",
+      "nacimiento": "1968, Valladolid",
+      "enCargoDesde": "2026-06-15",
+      "aniosEnCargo": 0,
+      "aniosEnGobierno": 0,
+      "estado": "Cara nueva en el Gobierno",
+      "cargoAnterior": "Secretario general de la Consejería de Industria, Comercio y Empleo (2022-2024) y asesor jurídico militar",
+      "competencias": ["Patrimonio cultural", "Promoción turística", "Deporte", "Bibliotecas y archivos"],
+      "trayectoria": "Jurista militar, miembro del Cuerpo Jurídico Militar desde 1996, con destinos como asesor jurídico de la Guardia Civil en Castilla y León y asesor del contingente español en Afganistán. Encabezó la candidatura de Vox por Valladolid en 2026 y entra en el Gobierno al frente de Cultura, Turismo y Deporte.",
+      "predecesor": {
+        "nombre": "Gonzalo Santonja Gómez-Agüero",
+        "partido": "Independiente (vinculado a Vox)",
+        "periodo": "2022-2026",
+        "wikipedia": "https://es.wikipedia.org/wiki/Gonzalo_Santonja"
+      },
+      "wikipedia": null
+    }
+  ],
+  "sources": {
+    "gobierno": "Web oficial del Gobierno de Castilla y León (gobierno.jcyl.es), sección 'Gobierno de Castilla y León'",
+    "senado": "Dosier 'Composición del Consejo de Gobierno de Castilla y León' del Senado (senado.es)",
+    "wikipediaTercerGobierno": "Wikipedia, 'Tercer gobierno de Alfonso Fernández Mañueco'",
+    "wikipediaSegundoGobierno": "Wikipedia, 'Segundo gobierno de Alfonso Fernández Mañueco'",
+    "prensa": "El Debate, El Español, La Gaceta de Salamanca, León Noticias, Ávila Red, ConSalud y otros medios, para el reparto de carteras por partido, biografías y trayectorias de los nuevos consejeros nombrados en junio de 2026"
+  }
+}
