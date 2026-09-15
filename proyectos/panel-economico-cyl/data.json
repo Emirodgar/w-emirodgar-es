@@ -1,6 +1,6 @@
 {
   "lastUpdated": "15 de Septiembre, 2026",
-  "resumenEjecutivo": "Castilla y León arrastra su segunda prórroga presupuestaria consecutiva: las Cortes rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 M€), por lo que sigue vigente el presupuesto de 2024 (14.562 M€). El detalle de subvenciones concedidas en datos abiertos no se actualiza desde 2022, pero el catálogo de líneas de ayuda vigentes sí crece con fuerza (208 líneas en 2025 frente a 108 en 2024). En el plano laboral, Castilla y León suma 1.019.088 afiliados a la Seguridad Social en agosto de 2026, un 1,9% más que hace un año, mientras el paro registrado (98.323 personas) se mantiene prácticamente plano en términos interanuales. La contratación sigue dominada por la temporalidad: solo el 31,1% de los contratos de agosto fueron indefinidos, con Palencia a la cola (13,9%) y León a la cabeza (39,2%). Valladolid concentra el mayor volumen de afiliados, paro y contratos, coherente con su peso demográfico dentro de la Comunidad.",
+  "resumenEjecutivo": "¿Cómo avanza Castilla y León? De los cuatro indicadores comparables con España, solo uno le es claramente favorable: su tasa de paro EPA (8,37%) es 1,5 puntos más baja que la nacional (9,87%), la novena mejor del país. En los otros tres, la Comunidad crece o mejora, pero por debajo del ritmo español: el PIB sube un 2,6% interanual frente al 2,7% de España, la afiliación a la Seguridad Social crece un 1,9% frente al 3,13% nacional, y mientras el paro registrado español cae un 2,91% interanual, el de Castilla y León apenas se mueve (+0,15%). Castilla y León arrastra además su segunda prórroga presupuestaria consecutiva: las Cortes rechazaron en noviembre de 2025 el proyecto de Presupuestos para 2026 (15.715 M€), por lo que sigue vigente el presupuesto de 2024 (14.562 M€). El detalle de subvenciones concedidas en datos abiertos no se actualiza desde 2022, pero el catálogo de líneas de ayuda vigentes sí crece con fuerza (208 líneas en 2025 frente a 108 en 2024). La contratación sigue dominada por la temporalidad: solo el 31,1% de los contratos de agosto fueron indefinidos, con Palencia a la cola (13,9%) y León a la cabeza (39,2%). Valladolid concentra el mayor volumen de afiliados, paro y contratos, coherente con su peso demográfico dentro de la Comunidad.",
   "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de lineas de ayuda publicadas por la Junta de Castilla y Leon, 2018-2025\" style=\"width:100%;height:100%\"><polygon points=\"12.0,87.8 54.3,89.6 96.6,77.0 138.9,72.1 181.1,71.4 223.4,67.3 265.7,57.6 308.0,20.4 308,100 12,100\" fill=\"rgba(124,58,237,0.08)\"/><polyline points=\"12.0,87.8 54.3,89.6 96.6,77.0 138.9,72.1 181.1,71.4 223.4,67.3 265.7,57.6 308.0,20.4\" fill=\"none\" stroke=\"#7c3aed\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"87.8\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"54.3\" cy=\"89.6\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"96.6\" cy=\"77.0\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"138.9\" cy=\"72.1\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"181.1\" cy=\"71.4\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"223.4\" cy=\"67.3\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"265.7\" cy=\"57.6\" r=\"2.5\" fill=\"#7c3aed\"/><circle cx=\"308.0\" cy=\"20.4\" r=\"3\" fill=\"#7c3aed\"/></svg>",
   "sources": {
     "presupuesto": "Leyes de Presupuestos Generales de la Comunidad de Castilla y León (BOE/BOCYL) y cobertura de prensa económica regional (El Debate, El Español, Diario de León, Castilla y León Económica) para los proyectos de presupuesto y su tramitación en las Cortes",
@@ -10,8 +10,50 @@
     "paro": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Paro registrado en las provincias de Castilla y León' (analisis.datosabiertos.jcyl.es), serie mensual, fila 'CYL' para el total autonómico",
     "afiliacion": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Afiliación media a la Seguridad Social en las provincias de Castilla y León', serie mensual, fila 'CYL' para el total autonómico",
     "contratos": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Contratos realizados en las provincias de Castilla y León', serie mensual, con desglose por tipo (indefinido/temporal)",
-    "provincias": "Combinación de los tres datasets anteriores, filtrados por cada provincia, con el dato del mes más reciente disponible"
+    "provincias": "Combinación de los tres datasets anteriores, filtrados por cada provincia, con el dato del mes más reciente disponible",
+    "comparativaPib": "INE, Contabilidad Regional Trimestral de España — variación interanual del PIB, 2º trimestre de 2026 (dato de Castilla y León y de España)",
+    "comparativaParoEPA": "INE, Encuesta de Población Activa (EPA) — tasa de paro, 2º trimestre de 2026 (dato de Castilla y León y de España)",
+    "comparativaParoRegistrado": "SEPE, paro registrado — variación interanual de agosto de 2026 a nivel nacional, contrastada con el dato autonómico de este mismo panel",
+    "comparativaAfiliacion": "Ministerio de Inclusión, Seguridad Social y Migraciones — variación interanual de la afiliación media a la Seguridad Social en agosto de 2026 a nivel nacional, contrastada con el dato autonómico de este mismo panel"
   },
+  "comparativaEspana": [
+    {
+      "id": "pib",
+      "title": "Crecimiento del PIB",
+      "periodo": "2º trimestre 2026, interanual",
+      "valorCyL": 2.6,
+      "valorEspana": 2.7,
+      "unidad": "%",
+      "mejorSiMayor": true
+    },
+    {
+      "id": "paroEPA",
+      "title": "Tasa de Paro (EPA)",
+      "periodo": "2º trimestre 2026",
+      "valorCyL": 8.37,
+      "valorEspana": 9.87,
+      "unidad": "%",
+      "mejorSiMayor": false
+    },
+    {
+      "id": "paroRegistrado",
+      "title": "Variación del Paro Registrado",
+      "periodo": "Interanual, agosto 2026",
+      "valorCyL": 0.15,
+      "valorEspana": -2.91,
+      "unidad": "%",
+      "mejorSiMayor": false
+    },
+    {
+      "id": "afiliacion",
+      "title": "Variación de la Afiliación a la SS",
+      "periodo": "Interanual, agosto 2026",
+      "valorCyL": 1.9,
+      "valorEspana": 3.13,
+      "unidad": "%",
+      "mejorSiMayor": true
+    }
+  ],
   "indicators": [
     {
       "id": "presupuesto",

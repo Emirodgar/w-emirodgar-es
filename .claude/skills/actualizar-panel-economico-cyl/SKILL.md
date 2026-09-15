@@ -1,6 +1,6 @@
 ---
 name: actualizar-panel-economico-cyl
-description: Actualiza el Panel Económico CyL con el presupuesto autonómico vigente, las subvenciones concedidas, el catálogo de líneas de ayuda y el mercado laboral (paro, afiliación, contratos, detalle por provincia) de la Junta de Castilla y León. Usar cuando el usuario pida "actualiza el Panel Económico CyL", "actualiza el panel de presupuestos de Castilla y León", "refresca los datos de subvenciones/empleo de CyL" o similar.
+description: Actualiza el Panel Económico CyL con el presupuesto autonómico vigente, las subvenciones concedidas, el catálogo de líneas de ayuda, el mercado laboral (paro, afiliación, contratos, detalle por provincia) y el termómetro comparativo con España (PIB, paro EPA, paro registrado, afiliación) de Castilla y León. Usar cuando el usuario pida "actualiza el Panel Económico CyL", "actualiza el panel de presupuestos de Castilla y León", "refresca los datos de subvenciones/empleo de CyL" o similar.
 ---
 
 # Actualizar Panel Económico CyL
@@ -16,7 +16,8 @@ fichero de datos que consumen tanto el panel completo como el widget de la home:
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
 siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero. El
-panel tiene dos bloques independientes: **Presupuesto y Subvenciones** (`indicators`, `historicalData`) y
+panel tiene tres bloques independientes: **¿Cómo Avanza Castilla y León?** (`comparativaEspana`, la
+primera sección del panel), **Presupuesto y Subvenciones** (`indicators`, `historicalData`) y
 **Mercado Laboral y Actividad Económica** (`indicatorsEmpleo`, `empleoMensual`, `provincias`).
 
 ## Esquema de `data.json`
@@ -24,9 +25,17 @@ panel tiene dos bloques independientes: **Presupuesto y Subvenciones** (`indicat
 ```jsonc
 {
   "lastUpdated": "15 de Septiembre, 2026",   // fecha en texto, formato "DD de Mes, AAAA"
-  "resumenEjecutivo": "...",                  // 5-7 frases, ver sección "Resumen ejecutivo"
+  "resumenEjecutivo": "...",                  // 7-9 frases, ver sección "Resumen ejecutivo"
   "sparklineSvg": "<svg ...>...</svg>",       // SVG estático del widget de la home, ver sección "Sparkline SVG"
   "sources": { ... },                          // no cambiar salvo que cambie la fuente de un indicador
+  "comparativaEspana": [
+    {
+      "id": "pib" | "paroEPA" | "paroRegistrado" | "afiliacion",  // no cambiar los ids ni añadir/quitar entradas
+      "title": "...", "periodo": "2º trimestre 2026, interanual",
+      "valorCyL": 2.6, "valorEspana": 2.7, "unidad": "%",
+      "mejorSiMayor": true   // true si un valor más alto es mejor (PIB, afiliación); false si es peor (tasas/paro)
+    }
+  ],
   "indicators": [
     {
       "id": "presupuesto" | "brecha" | "concedido" | "catalogo",  // no cambiar los ids
@@ -66,6 +75,33 @@ suficiente valor visual (era un desglose secundario del catálogo de ayudas). No
 el usuario lo pida explícitamente.
 
 ## Fuentes y cómo consultarlas
+
+### 0. Termómetro comparativo con España (`comparativaEspana`)
+
+No hay una única API para esto: cada indicador tiene su propia fuente nacional, y su cadencia de
+publicación no coincide con la del resto del panel. Actualiza cada uno solo cuando haya un dato nuevo
+disponible; no fuerces un cambio si la fuente correspondiente no ha publicado nada nuevo desde la última
+actualización de este panel.
+
+- **`pib`**: INE, Contabilidad Regional Trimestral de España — busca "INE Contabilidad Regional Trimestral
+  [trimestre] [año]" para la variación interanual del PIB, tanto de Castilla y León como de España. Se
+  publica trimestralmente, con bastante retraso (normalmente el trimestre publicado es 1-2 trimestres
+  anterior al actual).
+- **`paroEPA`**: INE, Encuesta de Población Activa (EPA) — busca "INE EPA [trimestre] [año] Castilla y
+  León" para la tasa de paro de la Comunidad y de España. Se publica trimestralmente (finales de enero,
+  abril, julio y octubre).
+- **`paroRegistrado`**: SEPE, estadística de paro registrado — busca "SEPE paro registrado [mes] [año]
+  variación interanual" para el dato nacional. Contrasta con `indicatorsEmpleo` (id `paro`) de este mismo
+  panel para el dato autonómico: no hace falta volver a calcularlo, solo usar el `change`/`currentValue`
+  ya actualizado en ese bloque para obtener el % interanual de Castilla y León.
+- **`afiliacion`**: Ministerio de Inclusión, Seguridad Social y Migraciones — busca "afiliación Seguridad
+  Social [mes] [año] variación interanual España" para el dato nacional. El dato autonómico sale igual que
+  el anterior, del bloque `indicatorsEmpleo` (id `afiliacion`) de este panel.
+
+Para cada indicador, actualiza `valorCyL`, `valorEspana` y `periodo` (indicando trimestre/mes y año del
+dato). No cambies `mejorSiMayor` salvo que cambie el propio indicador (es una propiedad del tipo de
+métrica, no del dato). El panel calcula solo, a partir de estos dos valores, si Castilla y León queda
+mejor, peor o igual que España — no calcules tú ese veredicto en el JSON.
 
 ### 1. Catálogo de líneas de ayuda (dataset `ayudas-y-subvenciones`)
 
@@ -176,7 +212,8 @@ redondeado a 1 decimal), ordenado como prefieras — la tabla y el gráfico ya l
    y el estado de cada fuente (`sources`, `notas`).
 2. Consulta las fuentes en este orden: catálogo de ayudas (API), subvenciones concedidas (API, solo para
    comprobar si se ha reanudado), presupuesto autonómico (WebSearch/WebFetch), paro/afiliación/contratos
-   CyL (API), detalle por provincia (API).
+   CyL (API), detalle por provincia (API), termómetro comparativo con España (WebSearch, sección 0 — solo
+   los indicadores con dato nuevo publicado).
 3. Añade o actualiza las filas de `historicalData` y `empleoMensual` que correspondan, siempre en orden
    cronológico ascendente y sin inventar cifras: si una fuente no tiene dato nuevo, deja el campo como
    estaba (o `null` si nunca lo tuvo). En `empleoMensual`, mantén siempre los últimos 13 meses (añade el
@@ -184,15 +221,19 @@ redondeado a 1 decimal), ordenado como prefieras — la tabla y el gráfico ya l
 4. Reescribe `provincias` por completo con el mes más reciente.
 5. Actualiza los arrays `indicators` e `indicatorsEmpleo` con los valores más recientes y su `change`
    frente al periodo anterior comparable (interanual para los indicadores de empleo, no intermensual).
-6. Actualiza `lastUpdated` con la fecha de ejecución (formato "DD de Mes, AAAA").
-7. Reescribe `resumenEjecutivo` (ver siguiente sección).
-8. Regenera `sparklineSvg` a partir de los últimos años de `lineasAyudaPublicadas` en `historicalData`
+6. Actualiza `comparativaEspana` (`valorCyL`, `valorEspana`, `periodo`) para cada indicador que tenga dato
+   nuevo disponible; dado que `paroRegistrado` y `afiliacion` ya tienen su dato de Castilla y León en
+   `indicatorsEmpleo`, solo necesitas buscar el dato nacional correspondiente.
+7. Actualiza `lastUpdated` con la fecha de ejecución (formato "DD de Mes, AAAA").
+8. Reescribe `resumenEjecutivo` (ver siguiente sección).
+9. Regenera `sparklineSvg` a partir de los últimos años de `lineasAyudaPublicadas` en `historicalData`
    (ver sección "Sparkline SVG") — obligatorio cada vez que cambie esa serie. El sparkline de la home sigue
-   basado en el catálogo de ayudas, no en los datos de empleo; no lo cambies salvo que el usuario lo pida.
-9. Si corriges o completas un hueco de datos (por ejemplo, el dataset de concesiones se reanuda), actualiza
-   también `sources` y `notas` para que sigan describiendo la situación real.
-10. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
-11. Enseña al usuario un resumen de qué cifras han cambiado antes de dar la tarea por terminada. No hagas
+   basado en el catálogo de ayudas, no en los datos de empleo ni en el termómetro; no lo cambies salvo que
+   el usuario lo pida.
+10. Si corriges o completas un hueco de datos (por ejemplo, el dataset de concesiones se reanuda), actualiza
+    también `sources` y `notas` para que sigan describiendo la situación real.
+11. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves).
+12. Enseña al usuario un resumen de qué cifras han cambiado antes de dar la tarea por terminada. No hagas
     commit ni push salvo que el usuario lo pida explícitamente.
 
 ## Resumen ejecutivo
@@ -200,12 +241,14 @@ redondeado a 1 decimal), ordenado como prefieras — la tabla y el gráfico ya l
 `resumenEjecutivo` es el texto que se muestra tanto en el panel completo como en el widget de la home.
 Debe ser:
 
-- 5-7 frases en español, tono neutro y periodístico (nada de recomendaciones).
-- Cubrir ambos bloques: primero la situación presupuestaria (aprobado/prorrogado) y las subvenciones/
-  catálogo de ayudas, después el mercado laboral (paro, afiliación, temporalidad) y algún contraste entre
+- 7-9 frases en español, tono neutro y periodístico (nada de recomendaciones).
+- Abrir con el veredicto del termómetro (cuántos de los cuatro indicadores le son favorables a Castilla y
+  León frente a España, y cuáles no), antes de entrar en los otros dos bloques.
+- Cubrir después ambos bloques: la situación presupuestaria (aprobado/prorrogado) y las subvenciones/
+  catálogo de ayudas, y el mercado laboral (paro, afiliación, temporalidad) con algún contraste entre
   provincias si es relevante (p. ej. la que más/menos temporalidad tiene, o la que concentra más volumen).
-- Sin cifras inventadas: solo las que consten en `indicators`/`indicatorsEmpleo`/`historicalData`/
-  `empleoMensual`/`provincias` tras la actualización.
+- Sin cifras inventadas: solo las que consten en `comparativaEspana`/`indicators`/`indicatorsEmpleo`/
+  `historicalData`/`empleoMensual`/`provincias` tras la actualización.
 
 ## Sparkline SVG
 
@@ -302,5 +345,8 @@ laboral) — eso no cambia, solo se quitó Chart.js de la home.
 - Este panel no cubre presupuestos municipales, contratación pública (PLACSP), PIB provincial ni el BOCYL
   en general — solo presupuesto autonómico, subvenciones, catálogo de ayudas y el mercado laboral (paro,
   afiliación, contratos) por provincia.
+- Los cuatro indicadores de `comparativaEspana` tienen cadencias de publicación distintas entre sí (PIB y
+  paro EPA trimestrales, paro registrado y afiliación mensuales) y no se actualizan todos a la vez: es
+  normal que en una ejecución solo cambien uno o dos.
 - Si el usuario pide explícitamente publicar los cambios, sigue el flujo normal de git (revisar diff,
   commit con mensaje descriptivo); no lo hagas por iniciativa propia.
