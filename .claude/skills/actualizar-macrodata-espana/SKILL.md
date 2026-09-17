@@ -1,6 +1,6 @@
 ---
 name: actualizar-macrodata-espana
-description: Actualiza el panel MacroData España con las últimas cifras oficiales de IPC, prima de riesgo, tipos del BCE, Euríbor, PIB y la comparativa España vs. eurozona (IPCA, PIB, paro armonizado). Usar cuando el usuario pida "actualiza MacroData", "actualiza el panel económico", "refresca los indicadores económicos" o similar.
+description: Actualiza el panel MacroData España con las últimas cifras oficiales de IPC, prima de riesgo, tipos del BCE, Euríbor, tipo de la Fed, PIB, tasa de paro EPA, la comparativa España vs. eurozona (IPCA, PIB, paro armonizado) y el termómetro de riesgo de recesión. Usar cuando el usuario pida "actualiza MacroData", "actualiza el panel económico", "refresca los indicadores económicos" o similar.
 ---
 
 # Actualizar MacroData España
@@ -26,21 +26,21 @@ siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente 
   "sources": { ... },                          // no cambiar salvo que cambie la fuente de un indicador
   "indicators": [
     {
-      "id": "ipc" | "prima" | "bce" | "pib",  // no cambiar los ids, se usan como referencia visual
+      "id": "ipc" | "prima" | "bce" | "euribor" | "fed" | "pib" | "paro",  // no cambiar los ids, se usan como referencia visual Y los lee el termómetro de riesgo (ver más abajo)
       "title": "...",
       "currentValue": 2.3,                     // último valor disponible
       "unit": "%" | "pb",
-      "change": -0.2,                          // variación respecto al periodo anterior (mismo signo)
-      "changeLabel": "vs mes anterior" | "Última decisión" | "Tasa interanual",
+      "change": -0.2,                          // variación respecto al periodo anterior (mismo signo); para "paro" es SIEMPRE variación interanual (ver sección de la Fed/paro), no intermensual
+      "changeLabel": "vs mes anterior" | "Última decisión" | "Tasa interanual" | "vs hace un año (...)",
       "description": "...",
       "target": 2.0 | null,
       "icon": "...", "color": "..."            // no cambiar, son clases visuales fijas
     }
-    // ... resto de indicadores, no añadir ni quitar entradas
+    // ... resto de indicadores, no añadir ni quitar entradas (son 7: ipc, prima, bce, euribor, fed, pib, paro)
   ],
   "historicalData": [
-    { "month": "Sep 2025", "ipc": 3.5, "ipcSubyacente": 3.8, "primaRiesgo": 105, "tiposBCE": 4.25, "euribor": 4.12, "pib": 1.8 }
-    // una entrada por mes, en orden cronológico ascendente
+    { "month": "Sep 2025", "ipc": 3.5, "ipcSubyacente": 3.8, "primaRiesgo": 105, "tiposBCE": 4.25, "euribor": 4.12, "fed": 4.375, "pib": 1.8, "paro": 10.45 }
+    // una entrada por mes, en orden cronológico ascendente; "fed" y "paro" son obligatorios en cada entrada igual que el resto
   ],
   "comparativaZonaEuro": [
     {
@@ -68,13 +68,31 @@ Busca siempre el dato **más reciente ya publicado** (no proyecciones ni estimac
    reunión del BCE; si no ha habido reunión desde la última actualización, mantener el valor.
 4. **Euríbor a 12 meses** (`euribor`): media mensual publicada por el Banco de España (o euribor-rates.eu /
    EMMI) para el mes cerrado más reciente.
-5. **PIB** (`pib`): INE, Contabilidad Nacional Trimestral de España (CNTR) — tasa de variación interanual
+5. **Tipo de interés de la Fed** (`fed`): rango objetivo del tipo de los fondos federales (federal funds
+   rate) fijado por el FOMC de la Reserva Federal de EE. UU. (federalreserve.gov, sección "Meeting
+   calendars and information", o prensa financiera — busca "Fed interest rate decision [mes] [año]"). Solo
+   cambia tras una reunión del FOMC (~8 al año, no mensuales); si no ha habido reunión desde la última
+   actualización, mantén el valor. Como el rango es un intervalo (p. ej. "3,75%-4,00%"), usa el **punto
+   medio** como `currentValue` (3,875 en ese ejemplo) y detalla el rango completo en `description`. Es un
+   dato puramente informativo/comparativo: no forma parte de la política monetaria de España ni de la
+   eurozona, y no entra en la fórmula del termómetro de riesgo de recesión (ver más abajo).
+6. **PIB** (`pib`): INE, Contabilidad Nacional Trimestral de España (CNTR) — tasa de variación interanual
    del trimestre más reciente publicado. El PIB es trimestral: no cambia cada mes, solo cuando el INE
    publica un nuevo trimestre.
+7. **Tasa de paro EPA** (`paro`): INE, Encuesta de Población Activa (EPA) — tasa de paro del trimestre más
+   reciente publicado (nota de prensa trimestral en ine.es, busca "INE EPA tasa de paro [trimestre] [año]").
+   Trimestral, igual que el PIB: repite el valor en los meses de un mismo trimestre. A diferencia del resto
+   de indicadores, `change` aquí es la **variación interanual** (valor de este trimestre menos el mismo
+   trimestre de hace un año), no la variación intertrimestral — así lo usa directamente el termómetro de
+   riesgo de recesión como proxy del momentum del mercado laboral. Pon en `changeLabel` el trimestre de
+   comparación exacto, p. ej. `"vs hace un año (2T25: 10,29%)"`. Distinta metodológicamente de la tasa de
+   paro armonizada de Eurostat que ya usa `comparativaZonaEuro.paro` — no las confundas ni intentes
+   "cuadrarlas": son dos fuentes y metodologías distintas conviviendo a propósito en el mismo panel.
 
 Usa WebSearch/WebFetch para localizar la cifra en la fuente oficial. Si una fuente no tiene el dato del
-periodo más reciente (p. ej. el INE aún no ha publicado el mes en curso), usa el último dato disponible y
-no inventes cifras.
+periodo más reciente (p. ej. el INE aún no ha publicado el mes en curso, o la EPA del trimestre en curso
+todavía no ha salido), usa el último dato disponible (repitiéndolo en los meses del trimestre que aún no
+tiene cifra nueva, igual que ya se hace con el PIB) y no inventes cifras.
 
 ## Comparativa España vs. Zona Euro (`comparativaZonaEuro`)
 
@@ -101,14 +119,18 @@ cambies `mejorSiMayor` (es una propiedad del tipo de métrica: PIB `true`, IPC y
 2. Para cada indicador nacional, busca el dato oficial más reciente (puede ser el mismo mes si aún no hay
    uno nuevo, o uno o varios meses posteriores si ha pasado tiempo desde la última actualización).
 3. Si hay un mes nuevo que aún no está en `historicalData`, añade una entrada nueva al final del array
-   (orden cronológico ascendente) con los seis valores (`ipc`, `ipcSubyacente`, `primaRiesgo`, `tiposBCE`,
-   `euribor`, `pib`). Si un indicador trimestral (PIB) no tiene dato nuevo para ese mes, repite el último
-   valor conocido en lugar de dejarlo vacío.
+   (orden cronológico ascendente) con los ocho valores (`ipc`, `ipcSubyacente`, `primaRiesgo`, `tiposBCE`,
+   `euribor`, `fed`, `pib`, `paro`). Si un indicador trimestral (PIB, paro) no tiene dato nuevo para ese
+   mes, repite el último valor conocido en lugar de dejarlo vacío; lo mismo para `fed` si no ha habido
+   reunión del FOMC ese mes.
 4. Actualiza el array `indicators`:
    - `currentValue`: el valor de la entrada más reciente de `historicalData` para ese indicador (para
-     `prima` usa `primaRiesgo`, para `bce` usa `tiposBCE`).
+     `prima` usa `primaRiesgo`, para `bce` usa `tiposBCE`; para `fed` usa el punto medio del rango vigente,
+     que puede ser posterior al último mes de `historicalData` si acaba de haber una reunión del FOMC, igual
+     que ya pasa con `bce` y el BCE).
    - `change`: diferencia entre el valor actual y el del periodo anterior (mismo signo que la variación
-     real, sin redondear de forma distinta a los datos de origen).
+     real, sin redondear de forma distinta a los datos de origen) — **excepto `paro`**, donde `change` es
+     la variación interanual (ver punto 7 de la sección anterior), no intermensual/intertrimestral.
 5. Actualiza `comparativaZonaEuro` (ver sección anterior) para los indicadores que tengan dato nuevo de
    Eurostat.
 6. Actualiza `lastUpdated` con la fecha en la que ejecutas la actualización (formato "DD de Mes, AAAA").
@@ -126,13 +148,42 @@ cambies `mejorSiMayor` (es una propiedad del tipo de métrica: PIB `true`, IPC y
 `resumenEjecutivo` es el texto que se muestra tanto en el panel completo como en el widget de la home.
 Debe ser:
 
-- 4-6 frases en español, tono neutro y periodístico (nada de recomendaciones de inversión).
+- 5-8 frases en español, tono neutro y periodístico (nada de recomendaciones de inversión).
 - Abrir con el veredicto de la comparativa con la eurozona (en qué va mejor y en qué peor España), y
-  después entrar en la lectura conjunta de los cuatro indicadores nacionales: p. ej. si la inflación
-  converge con la subyacente, si el BCE ha movido tipos, cómo está la prima de riesgo y si el PIB sigue
-  creciendo.
+  después entrar en la lectura conjunta de los indicadores nacionales: si la inflación converge con la
+  subyacente, si el BCE ha movido tipos, cómo está la prima de riesgo, el Euríbor, si el PIB sigue
+  creciendo y cómo evoluciona la tasa de paro EPA (interanual). Menciona el movimiento de la Fed solo
+  cuando haya novedad (cambio de tipos) o aporte contraste relevante con el BCE.
+- Cerrar con una frase cualitativa sobre la lectura del termómetro de riesgo de recesión (nivel/banda y,
+  si aporta valor, cuál es hoy el principal factor de riesgo de los cuatro) — ver la sección de arriba
+  sobre cómo citarlo sin inventar el número exacto.
 - Sin cifras inventadas: solo las que constan en `comparativaZonaEuro`/`indicators`/`historicalData` tras
   la actualización.
+
+## Termómetro de riesgo de recesión
+
+El panel muestra un termómetro visual (0-100) que **no se guarda en `data.json`**: se recalcula en cada
+carga de la página, en `index.html`, a partir de cinco valores del array `indicators` (`pib.currentValue`,
+`paro.change`, `ipc.currentValue`, `prima.currentValue`, `bce.currentValue`). Es un índice propio de este
+proyecto, no de ninguna institución oficial — no representa la posición de ningún banco central ni
+organismo. Su fórmula (función `computeRecessionRisk()` en `index.html`) es:
+
+- **Crecimiento — 35%**: PIB interanual ≥2,5% → 0 riesgo; ≤-1% → 100 riesgo (interpolación lineal).
+- **Empleo — 25%**: variación interanual del paro ≤0 (estable o baja) → 0 riesgo; ≥+2 puntos → 100 riesgo.
+- **Inflación — 15%**: distancia absoluta del IPC al objetivo del 2% del BCE; ≤0,5 puntos → 0 riesgo;
+  ≥4,5 puntos → 100 riesgo (penaliza tanto inflación alta como deflación).
+- **Condiciones financieras — 25%**: media de dos sub-riesgos, tipo del BCE (0%→0 riesgo, 5%→100 riesgo) y
+  prima de riesgo (0pb→0 riesgo, 300pb→100 riesgo).
+
+**No toques esta fórmula ni sus umbrales sin que el usuario lo pida explícitamente** — están documentados
+también en `sources.riesgoRecesion`, que sí debes mantener sincronizado si algún día cambian los pesos o
+los umbrales. Como se recalcula solo a partir de `indicators`, basta con mantener esos cinco campos
+actualizados (pasos 2-4 de arriba) para que el termómetro quede correcto automáticamente; no hay ningún
+campo adicional que rellenar a mano. Si mencionas su lectura en `resumenEjecutivo`, indícalo de forma
+aproximada y cualitativa (p. ej. "el termómetro marca un nivel bajo, en torno a X puntos sobre 100") en
+vez de citar el número exacto, ya que tú no ejecutas el JavaScript del panel y no puedes calcular el
+resultado exacto sin reproducir la fórmula a mano — si quieres citarlo con precisión, reprodúcela con los
+valores nuevos de `indicators` antes de escribir la cifra.
 
 ## Sparkline SVG
 
@@ -234,5 +285,10 @@ Chart.js de la home.
 - Los tres indicadores de `comparativaZonaEuro` tienen calendarios de publicación distintos entre sí
   (IPCA mensual con dato preliminar rápido, PIB trimestral con más retraso, paro mensual con retraso
   intermedio): es normal que en una ejecución solo cambien uno o dos.
+- El FOMC de la Fed y el Consejo de Gobierno del BCE tienen calendarios de reuniones distintos y no
+  sincronizados: es normal que en una misma actualización cambie uno de los dos tipos oficiales (`bce`,
+  `fed`) y el otro no.
+- `paro` (EPA nacional) y `comparativaZonaEuro.paro` (armonizada de Eurostat) son series distintas a
+  propósito: no fuerces que coincidan ni elimines una de las dos.
 - Si el usuario pide explícitamente publicar los cambios, sigue el flujo normal de git (revisar diff,
   commit con mensaje descriptivo); no lo hagas por iniciativa propia.

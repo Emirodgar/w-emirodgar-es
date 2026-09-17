@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MacroData España | Panel de Indicadores Económicos</title>
-    <meta name="description" content="Panel público con la evolución de los principales indicadores macroeconómicos de España: IPC, prima de riesgo, tipos del BCE, Euríbor y PIB.">
+    <meta name="description" content="Panel público con la evolución de los principales indicadores macroeconómicos de España: IPC, prima de riesgo, tipos del BCE, Euríbor, Fed, PIB y paro, con un termómetro propio de riesgo de recesión.">
     <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -119,6 +119,17 @@
             </div>
         </section>
 
+        <!-- Termómetro de Riesgo de Recesión -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-temperature-three-quarters text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Termómetro de Riesgo de Recesión</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Índice propio y simplificado (0-100) calculado a partir del crecimiento, el empleo, la inflación y las condiciones financieras de este mismo panel. No es una predicción oficial.</p>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div id="riesgoRecesionContainer"></div>
+        </section>
+
         <!-- Sección: España vs. Zona Euro -->
         <div class="flex items-center gap-2 pt-2">
             <i class="fa-solid fa-scale-balanced text-brand-600"></i>
@@ -172,15 +183,15 @@
                 </div>
             </div>
 
-            <!-- Chart 3: Tipos de Interés BCE vs Euríbor -->
+            <!-- Chart 3: Tipos de Interés BCE vs Euríbor vs Fed -->
             <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
                 <div class="flex justify-between items-start mb-4">
                     <div>
                         <div class="flex items-center gap-2">
                             <span class="w-3 h-3 rounded-full bg-blue-600"></span>
-                            <h3 class="font-bold text-slate-800">Tipos BCE vs Euríbor 12M</h3>
+                            <h3 class="font-bold text-slate-800">Tipos BCE vs Euríbor vs Fed</h3>
                         </div>
-                        <p class="text-xs text-slate-500 mt-1">Tipos oficiales de intervención frente a tipo de mercado (%)</p>
+                        <p class="text-xs text-slate-500 mt-1">Tipos oficiales (BCE, Fed) frente a tipo de mercado (Euríbor), en % </p>
                     </div>
                     <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Porcentaje</span>
                 </div>
@@ -206,6 +217,23 @@
                 </div>
             </div>
 
+            <!-- Chart 5: Tasa de Paro EPA -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between lg:col-span-2">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                            <h3 class="font-bold text-slate-800">Tasa de Paro (EPA)</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tasa de paro trimestral de la Encuesta de Población Activa (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Trimestral</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="paroChart"></canvas>
+                </div>
+            </div>
+
         </section>
 
         <!-- Summary Data Table -->
@@ -226,7 +254,9 @@
                             <th scope="col" class="px-6 py-3 font-semibold text-right">Prima Riesgo (pb)</th>
                             <th scope="col" class="px-6 py-3 font-semibold text-right">Tipo BCE (%)</th>
                             <th scope="col" class="px-6 py-3 font-semibold text-right">Euríbor 12M (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Tipo Fed (%)</th>
                             <th scope="col" class="px-6 py-3 font-semibold text-right">PIB Trim. (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Paro EPA (%)</th>
                         </tr>
                     </thead>
                     <tbody id="dataTableBody" class="divide-y divide-slate-100">
@@ -370,6 +400,30 @@
                     "color": "blue"
                 },
                 {
+                    "id": "euribor",
+                    "title": "Euríbor 12 Meses",
+                    "currentValue": 3.10,
+                    "unit": "%",
+                    "change": -0.08,
+                    "changeLabel": "vs mes anterior",
+                    "description": "Media mensual",
+                    "target": null,
+                    "icon": "fa-percent",
+                    "color": "sky"
+                },
+                {
+                    "id": "fed",
+                    "title": "Tipo de Interés Fed (EE. UU.)",
+                    "currentValue": 3.875,
+                    "unit": "%",
+                    "change": 0.25,
+                    "changeLabel": "Última decisión",
+                    "description": "Rango objetivo de la Reserva Federal",
+                    "target": null,
+                    "icon": "fa-flag-usa",
+                    "color": "violet"
+                },
+                {
                     "id": "pib",
                     "title": "Crecimiento PIB",
                     "currentValue": 2.5,
@@ -380,11 +434,23 @@
                     "target": 2.0,
                     "icon": "fa-chart-pie",
                     "color": "emerald"
+                },
+                {
+                    "id": "paro",
+                    "title": "Tasa de Paro (EPA)",
+                    "currentValue": 10.0,
+                    "unit": "%",
+                    "change": -0.3,
+                    "changeLabel": "vs hace un año",
+                    "description": "Encuesta de Población Activa",
+                    "target": null,
+                    "icon": "fa-user-slash",
+                    "color": "orange"
                 }
             ],
             "historicalData": [
-                { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "pib": 2.5 },
-                { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "pib": 2.5 }
+                { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "fed": 3.625, "pib": 2.5, "paro": 10.1 },
+                { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "fed": 3.875, "pib": 2.5, "paro": 10.0 }
             ],
             "comparativaZonaEuro": []
         };
@@ -416,6 +482,7 @@
         function initApp() {
             renderHeader();
             renderResumenEjecutivo();
+            renderRiesgoRecesion();
             renderComparativa();
             renderMetricCards();
             renderCharts();
@@ -479,6 +546,131 @@
                 `;
                 container.insertAdjacentHTML('beforeend', cardHTML);
             });
+        }
+
+        // --- Termómetro de Riesgo de Recesión ---
+        // Índice propio y simplificado (0-100): NO es una predicción oficial ni de ninguna
+        // institución, solo una combinación transparente de los indicadores que ya muestra
+        // este panel. Pesos y umbrales están documentados aquí y en sources.riesgoRecesion.
+        const RISK_BANDS = [
+            { max: 30, label: 'Riesgo Bajo', color: '#10b981' },
+            { max: 55, label: 'Riesgo Moderado', color: '#f59e0b' },
+            { max: 75, label: 'Riesgo Elevado', color: '#f97316' },
+            { max: 100, label: 'Riesgo Alto', color: '#e11d48' }
+        ];
+
+        function getIndicator(id) {
+            return (currentDataset.indicators || []).find(i => i.id === id) || null;
+        }
+
+        function clampRisk(v, min, max) {
+            return Math.max(min, Math.min(max, v));
+        }
+
+        // Interpola linealmente v entre "good" (0 de riesgo) y "bad" (100 de riesgo);
+        // funciona igual si good > bad o good < bad.
+        function riskLerp(v, good, bad) {
+            if (typeof v !== 'number' || isNaN(v)) return null;
+            return clampRisk((v - good) / (bad - good) * 100, 0, 100);
+        }
+
+        function computeRecessionRisk() {
+            const pib = getIndicator('pib');
+            const paro = getIndicator('paro');
+            const ipc = getIndicator('ipc');
+            const prima = getIndicator('prima');
+            const bce = getIndicator('bce');
+            if (!pib || !paro || !ipc || !prima || !bce) return null;
+
+            const riskCrecimiento = riskLerp(pib.currentValue, 2.5, -1);       // PIB >=2.5% -> 0 riesgo; <=-1% -> 100
+            const riskEmpleo = riskLerp(paro.change, 0, 2);                    // paro estable/baja -> 0; sube 2pp o más -> 100
+            const riskInflacion = riskLerp(Math.abs(ipc.currentValue - 2), 0.5, 4.5); // distancia al objetivo 2% BCE
+            const riskTipos = riskLerp(bce.currentValue, 0, 5);
+            const riskPrima = riskLerp(prima.currentValue, 0, 300);
+            if ([riskCrecimiento, riskEmpleo, riskInflacion, riskTipos, riskPrima].some(v => v === null)) return null;
+            const riskFinanciero = (riskTipos + riskPrima) / 2;
+
+            const total = 0.35 * riskCrecimiento + 0.25 * riskEmpleo + 0.15 * riskInflacion + 0.25 * riskFinanciero;
+            const band = RISK_BANDS.find(b => total <= b.max) || RISK_BANDS[RISK_BANDS.length - 1];
+
+            return {
+                score: Math.round(total * 10) / 10,
+                band,
+                components: [
+                    { label: 'Crecimiento (PIB)', value: Math.round(riskCrecimiento), weight: 35 },
+                    { label: 'Empleo (variación del paro)', value: Math.round(riskEmpleo), weight: 25 },
+                    { label: 'Inflación (distancia al objetivo)', value: Math.round(riskInflacion), weight: 15 },
+                    { label: 'Condiciones financieras (tipos + prima)', value: Math.round(riskFinanciero), weight: 25 }
+                ]
+            };
+        }
+
+        function renderRiesgoRecesion() {
+            const container = document.getElementById('riesgoRecesionContainer');
+            if (!container) return;
+
+            const risk = computeRecessionRisk();
+            if (!risk) {
+                container.innerHTML = '<p class="text-sm text-slate-400">No hay datos suficientes en el JSON actual (PIB, paro, IPC, prima de riesgo y tipo BCE) para calcular el termómetro.</p>';
+                return;
+            }
+
+            const { score, band, components } = risk;
+
+            // Geometría del termómetro (SVG, viewBox 0 0 140 320)
+            const tubeTop = 20, tubeBottom = 250, bulbCy = 272, bulbR = 34;
+            const fillY = tubeTop + (1 - clampRisk(score, 0, 100) / 100) * (tubeBottom - tubeTop);
+            const ticks = [30, 55, 75].map(t => tubeTop + (1 - t / 100) * (tubeBottom - tubeTop));
+
+            const thermoSvg = `
+                <svg viewBox="0 0 140 320" role="img" aria-label="Termómetro de riesgo de recesión: ${score} sobre 100, ${band.label}" style="width:100%;height:100%">
+                    <defs>
+                        <clipPath id="thermoClip">
+                            <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20"></rect>
+                            <circle cx="70" cy="${bulbCy}" r="${bulbR}"></circle>
+                        </clipPath>
+                    </defs>
+                    <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="#f1f5f9"></rect>
+                    <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="#f1f5f9"></circle>
+                    <g clip-path="url(#thermoClip)">
+                        <rect x="46" y="${fillY}" width="48" height="${320 - fillY}" fill="${band.color}"></rect>
+                    </g>
+                    <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="none" stroke="#cbd5e1" stroke-width="3"></rect>
+                    <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="none" stroke="#cbd5e1" stroke-width="3"></circle>
+                    ${ticks.map(y => `<line x1="94" y1="${y.toFixed(1)}" x2="106" y2="${y.toFixed(1)}" stroke="#94a3b8" stroke-width="2"></line>`).join('')}
+                </svg>
+            `;
+
+            container.innerHTML = `
+                <div class="flex flex-col sm:flex-row items-center gap-8">
+                    <div class="w-24 sm:w-28 flex-shrink-0" style="height:220px">${thermoSvg}</div>
+                    <div class="flex-grow w-full">
+                        <div class="flex items-baseline gap-3 flex-wrap">
+                            <span class="text-4xl font-extrabold tracking-tight" style="color:${band.color}">${formatNumber(score)}</span>
+                            <span class="text-slate-400 font-semibold text-sm">/ 100</span>
+                            <span class="ml-auto px-3 py-1 rounded-full text-xs font-bold" style="background-color:${band.color}1a; color:${band.color}">${band.label}</span>
+                        </div>
+                        <div class="mt-5 space-y-3">
+                            ${components.map(c => `
+                                <div>
+                                    <div class="flex justify-between text-xs text-slate-500 mb-1">
+                                        <span>${c.label} <span class="text-slate-300">· peso ${c.weight}%</span></span>
+                                        <span class="font-mono font-medium text-slate-600">${c.value}/100</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full rounded-full" style="width:${c.value}%; background-color:${band.color}"></div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <p class="mt-4 text-[11px] text-slate-400 leading-relaxed">
+                            Índice propio y simplificado con fines divulgativos (no es una predicción oficial ni de ninguna institución),
+                            calculado a partir del PIB, la variación del paro, la inflación y las condiciones financieras (tipo del BCE y
+                            prima de riesgo) de este mismo panel. No incorpora el tipo de la Fed. Metodología completa en «Fuentes de los datos».
+                        </p>
+                    </div>
+                </div>
+            `;
         }
 
         function setupEventListeners() {
@@ -699,7 +891,7 @@
                 options: commonOptions
             });
 
-            // Chart 3: Tipos BCE vs Euribor
+            // Chart 3: Tipos BCE vs Euribor vs Fed
             const ctxRates = document.getElementById('ratesChart').getContext('2d');
             chartInstances.rates = new Chart(ctxRates, {
                 type: 'line',
@@ -719,6 +911,15 @@
                             data: filteredData.map(d => d.euribor),
                             borderColor: '#38bdf8',
                             tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Tipo Interés Fed (%)',
+                            data: filteredData.map(d => d.fed),
+                            borderColor: '#7c3aed',
+                            borderDash: [4, 4],
+                            tension: 0,
                             borderWidth: 2,
                             pointRadius: 3
                         }
@@ -742,6 +943,22 @@
                 },
                 options: commonOptions
             });
+
+            // Chart 5: Tasa de Paro EPA
+            const ctxParo = document.getElementById('paroChart').getContext('2d');
+            chartInstances.paro = new Chart(ctxParo, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Tasa de Paro EPA (%)',
+                        data: filteredData.map(d => d.paro),
+                        backgroundColor: '#f97316',
+                        borderRadius: 6
+                    }]
+                },
+                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
         }
 
         function renderTable() {
@@ -760,7 +977,9 @@
                         <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-amber-600">${row.primaRiesgo} pb</td>
                         <td class="px-6 py-3.5 text-right font-mono text-xs text-blue-600">${row.tiposBCE}%</td>
                         <td class="px-6 py-3.5 text-right font-mono text-xs text-sky-600">${row.euribor}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-violet-600">${row.fed}%</td>
                         <td class="px-6 py-3.5 text-right font-mono text-xs font-semibold text-emerald-600">${row.pib}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-orange-600">${row.paro}%</td>
                     </tr>
                 `;
                 tbody.insertAdjacentHTML('beforeend', tr);

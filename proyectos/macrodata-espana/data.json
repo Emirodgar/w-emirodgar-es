@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "15 de Septiembre, 2026",
-  "resumenEjecutivo": "Frente a la eurozona, España presenta un perfil de claroscuros: crece muy por encima de la media (2,7% interanual frente al 1,2% de la eurozona en el 2º trimestre), pero paga esa fortaleza con más inflación (4,5% frente al 3,3% de agosto, en términos armonizados) y con un paro que sigue casi triplicando la media europea (10% frente al 6,4% en julio). La inflación general española se mantiene en el 4,3% interanual de agosto (avance del INE, pendiente aún del dato definitivo), con la subyacente contenida en el 2,9%. El BCE no ha vuelto a reunirse desde la subida del 10 de septiembre —tipo de la facilidad principal de financiación en el 2,65%— y su próxima decisión será el 29 de octubre. Mientras tanto, la rentabilidad de la deuda sigue subiendo en toda la eurozona: el bono español a 10 años ha superado el 4% por primera vez desde 2013, aunque la prima de riesgo frente a Alemania se mantiene contenida, en torno a los 46 puntos básicos. El Euríbor a 12 meses ronda ya el 3,11% en lo que va de septiembre, y el PIB sigue creciendo a un ritmo estable del 2,7% interanual.",
+  "lastUpdated": "17 de Septiembre, 2026",
+  "resumenEjecutivo": "Frente a la eurozona, España presenta un perfil de claroscuros: crece muy por encima de la media (2,7% interanual frente al 1,2% de la eurozona en el 2º trimestre), pero paga esa fortaleza con más inflación (4,5% frente al 3,3% de agosto, en términos armonizados) y con un paro que sigue casi triplicando la media europea (10% frente al 6,4% en julio). La inflación general española se mantiene en el 4,3% interanual de agosto (avance del INE, pendiente aún del dato definitivo), con la subyacente contenida en el 2,9%. La tasa de paro EPA se sitúa en el 9,87% en el 2º trimestre de 2026, 0,42 puntos por debajo de hace un año. El BCE no ha vuelto a reunirse desde la subida del 10 de septiembre —tipo de la facilidad principal de financiación en el 2,65%— y su próxima decisión será el 29 de octubre. La Reserva Federal, en cambio, acaba de dar un giro: tras mantener tipos varios meses, subió el 16 de septiembre su tipo de referencia un cuarto de punto, hasta el 3,75%-4,00%, la primera subida desde 2023. Mientras tanto, la rentabilidad de la deuda sigue subiendo en toda la eurozona: el bono español a 10 años ha superado el 4% por primera vez desde 2013, aunque la prima de riesgo frente a Alemania se mantiene contenida, en torno a los 46 puntos básicos. El Euríbor a 12 meses ronda ya el 3,11% en lo que va de septiembre, y el PIB sigue creciendo a un ritmo estable del 2,7% interanual. Con estos datos, el termómetro de riesgo de recesión del panel —un índice propio que combina crecimiento, empleo, inflación y condiciones financieras— marca un nivel bajo, en torno a 15 puntos sobre 100: el principal factor de riesgo hoy es la inflación, no el crecimiento ni el empleo.",
   "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion del IPC general y subyacente, ultimos 6 meses\" style=\"width:100%;height:100%\"><polygon points=\"12.0,61.9 71.2,71.2 130.4,71.2 189.6,71.2 248.8,52.7 308.0,20.4 308,100 12,100\" fill=\"rgba(225,29,72,0.08)\"/><polyline points=\"12.0,85.0 71.2,89.6 130.4,80.4 189.6,85.0 248.8,80.4 308.0,85.0\" fill=\"none\" stroke=\"#fb7185\" stroke-width=\"2\" stroke-dasharray=\"5,4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><polyline points=\"12.0,61.9 71.2,71.2 130.4,71.2 189.6,71.2 248.8,52.7 308.0,20.4\" fill=\"none\" stroke=\"#e11d48\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"61.9\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"71.2\" cy=\"71.2\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"130.4\" cy=\"71.2\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"189.6\" cy=\"71.2\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"248.8\" cy=\"52.7\" r=\"2.5\" fill=\"#e11d48\"/><circle cx=\"308.0\" cy=\"20.4\" r=\"3\" fill=\"#e11d48\"/></svg>",
   "sources": {
     "ipc": "INE, Índice de Precios de Consumo (IPC) — tasa de variación interanual, índice general y subyacente. Dato de agosto 2026 procedente del indicador adelantado (avance), pendiente de confirmación definitiva",
@@ -8,10 +8,13 @@
     "primaRiesgo": "Diferencial de rentabilidad entre el bono español y el bono alemán a 10 años, contrastado con lecturas de mercado en tiempo real (Trading Economics) y con prensa económica (p. ej. Pressdigital); la serie histórica mensual combina lecturas puntuales con una interpolación lineal entre ellas a falta de un feed de datos de mercado diario integrado en el panel — tómese como aproximación, no como cifra oficial cerrada",
     "tiposBCE": "Banco Central Europeo — tipo de interés de la facilidad principal de financiación, según las decisiones del Consejo de Gobierno",
     "euribor": "Euríbor a 12 meses, media mensual (agregadores especializados: idealista/Bankinter, a partir de la publicación diaria de EMMI)",
+    "fed": "Reserva Federal de Estados Unidos (Federal Reserve) — punto medio del rango objetivo del tipo de los fondos federales (federal funds rate), según las decisiones del FOMC. Se muestra como referencia comparativa internacional, no forma parte de la política monetaria de España ni de la eurozona",
     "pib": "INE, Contabilidad Nacional Trimestral de España (CNTR) — variación interanual del PIB; el dato se repite en los meses de un mismo trimestre porque el INE solo publica cifra nueva cada tres meses",
+    "paro": "INE, Encuesta de Población Activa (EPA) — tasa de paro trimestral; el dato se repite en los meses de un mismo trimestre. Distinta metodológicamente de la tasa de paro armonizada de Eurostat usada en la comparativa con la eurozona",
     "comparativaIpc": "Eurostat, Índice de Precios de Consumo Armonizado (IPCA) — dato preliminar de agosto de 2026 para España y la eurozona; distinto metodológicamente del IPC nacional del INE, por eso el valor de España difiere del indicador 'ipc' de este mismo panel",
     "comparativaPib": "Eurostat, Contabilidad Nacional — variación interanual del PIB, 2º trimestre de 2026, España y eurozona",
-    "comparativaParo": "Eurostat, tasa de desempleo armonizada — dato de julio de 2026 para España y la eurozona; distinta metodológicamente de la tasa de paro EPA trimestral del INE"
+    "comparativaParo": "Eurostat, tasa de desempleo armonizada — dato de julio de 2026 para España y la eurozona; distinta metodológicamente de la tasa de paro EPA trimestral del INE",
+    "riesgoRecesion": "Índice propio de este panel, no procedente de ninguna institución oficial: media ponderada de cuatro subíndices de riesgo (0-100) calculados a partir de los propios indicadores del panel — crecimiento del PIB (35%), variación interanual de la tasa de paro EPA (25%), distancia de la inflación al objetivo del 2% del BCE (15%) y condiciones financieras, tipo del BCE y prima de riesgo (25%). Es una simplificación con fines divulgativos, no una predicción ni un modelo econométrico validado"
   },
   "comparativaZonaEuro": [
     {
@@ -80,6 +83,30 @@
       "color": "blue"
     },
     {
+      "id": "euribor",
+      "title": "Euríbor 12 Meses",
+      "currentValue": 3.11,
+      "unit": "%",
+      "change": 0.16,
+      "changeLabel": "vs mes anterior",
+      "description": "Media mensual provisional de septiembre 2026",
+      "target": null,
+      "icon": "fa-percent",
+      "color": "sky"
+    },
+    {
+      "id": "fed",
+      "title": "Tipo de Interés Fed (EE. UU.)",
+      "currentValue": 3.875,
+      "unit": "%",
+      "change": 0.25,
+      "changeLabel": "Última decisión (efectiva 16/09/2026)",
+      "description": "Rango objetivo 3,75%-4,00% — primera subida desde 2023",
+      "target": null,
+      "icon": "fa-flag-usa",
+      "color": "violet"
+    },
+    {
       "id": "pib",
       "title": "Crecimiento PIB",
       "currentValue": 2.7,
@@ -90,6 +117,18 @@
       "target": 2.0,
       "icon": "fa-chart-pie",
       "color": "emerald"
+    },
+    {
+      "id": "paro",
+      "title": "Tasa de Paro (EPA)",
+      "currentValue": 9.87,
+      "unit": "%",
+      "change": -0.42,
+      "changeLabel": "vs hace un año (2T25: 10,29%)",
+      "description": "Encuesta de Población Activa, 2º trimestre de 2026",
+      "target": null,
+      "icon": "fa-user-slash",
+      "color": "orange"
     }
   ],
   "historicalData": [
@@ -100,7 +139,9 @@
       "primaRiesgo": 51,
       "tiposBCE": 2.15,
       "euribor": 2.172,
-      "pib": 2.7
+      "fed": 4.125,
+      "pib": 2.7,
+      "paro": 10.45
     },
     {
       "month": "Oct 2025",
@@ -109,7 +150,9 @@
       "primaRiesgo": 51,
       "tiposBCE": 2.15,
       "euribor": 2.185,
-      "pib": 2.7
+      "fed": 3.875,
+      "pib": 2.7,
+      "paro": 9.93
     },
     {
       "month": "Nov 2025",
@@ -118,7 +161,9 @@
       "primaRiesgo": 60,
       "tiposBCE": 2.15,
       "euribor": 2.217,
-      "pib": 2.7
+      "fed": 3.875,
+      "pib": 2.7,
+      "paro": 9.93
     },
     {
       "month": "Dic 2025",
@@ -127,7 +172,9 @@
       "primaRiesgo": 68,
       "tiposBCE": 2.15,
       "euribor": 2.267,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 9.93
     },
     {
       "month": "Ene 2026",
@@ -136,7 +183,9 @@
       "primaRiesgo": 77,
       "tiposBCE": 2.15,
       "euribor": 2.245,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 10.83
     },
     {
       "month": "Feb 2026",
@@ -145,7 +194,9 @@
       "primaRiesgo": 86,
       "tiposBCE": 2.15,
       "euribor": 2.221,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 10.83
     },
     {
       "month": "Mar 2026",
@@ -154,7 +205,9 @@
       "primaRiesgo": 94,
       "tiposBCE": 2.15,
       "euribor": 2.567,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 10.83
     },
     {
       "month": "Abr 2026",
@@ -163,7 +216,9 @@
       "primaRiesgo": 103,
       "tiposBCE": 2.15,
       "euribor": 2.747,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 9.87
     },
     {
       "month": "May 2026",
@@ -172,7 +227,9 @@
       "primaRiesgo": 111,
       "tiposBCE": 2.15,
       "euribor": 2.804,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 9.87
     },
     {
       "month": "Jun 2026",
@@ -181,7 +238,9 @@
       "primaRiesgo": 120,
       "tiposBCE": 2.4,
       "euribor": 2.795,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 9.87
     },
     {
       "month": "Jul 2026",
@@ -190,7 +249,9 @@
       "primaRiesgo": 95,
       "tiposBCE": 2.4,
       "euribor": 2.839,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 9.87
     },
     {
       "month": "Ago 2026",
@@ -199,7 +260,9 @@
       "primaRiesgo": 71,
       "tiposBCE": 2.4,
       "euribor": 2.951,
-      "pib": 2.7
+      "fed": 3.625,
+      "pib": 2.7,
+      "paro": 9.87
     }
   ]
 }
