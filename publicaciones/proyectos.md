@@ -25,5 +25,6 @@ No son productos finales ni soluciones cerradas, sino pruebas de concepto que me
 | Panel Económico CyL         | Presupuesto, subvenciones, catálogo de ayudas y mercado laboral de Castilla y León, con detalle por provincia | [Enlace](https://emirodgar.es/panel-economico-cyl) | [Enlace](https://emirodgar.es/proyectos/panel-economico-cyl/) |
 | Radar de Empleo Público CyL | Convocatorias, plazas ofertadas y plantilla de la Junta de Castilla y León, con detalle por provincia | [Enlace](https://emirodgar.es/radar-empleo-publico-cyl) | [Enlace](https://emirodgar.es/proyectos/radar-empleo-publico-cyl/) |
 | ¿Quién Gobierna CyL? | Presidente, vicepresidentes y consejeros de la Junta de Castilla y León: competencias, partido, antigüedad y predecesor de cada uno | [Enlace](https://emirodgar.es/quien-gobierna-cyl) | [Enlace](https://emirodgar.es/proyectos/quien-gobierna-cyl/) |
+| Simulador de Hipotecas en España | Mercado hipotecario, comparativa de bancos y calculadora de cuota con predicción de escenarios de tipos según el riesgo de recesión | [Enlace](https://emirodgar.es/simulador-hipotecas-espana) | [Enlace](https://emirodgar.es/proyectos/simulador-hipotecas-espana/) |
 |                 |                                      |                |                     |
 

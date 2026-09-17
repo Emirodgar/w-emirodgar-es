@@ -135,6 +135,18 @@
                 <a href="https://emirodgar.es/quien-gobierna-cyl" class="link proyecto-cta">Explorar el panel completo →</a>
             </div>
 
+            <div class="proyecto-card proyecto-card--featured">
+                <span class="proyecto-badge">Panel en vivo</span>
+                <h3>Simulador de Hipotecas en España</h3>
+                <p>Mercado hipotecario, comparativa de bancos y una calculadora de cuota con predicción de escenarios de tipos según el riesgo de recesión.</p>
+                <div class="proyecto-chart-wrapper" id="hipotecasSparkline" aria-hidden="true"></div>
+                <div class="proyecto-chart-legend">
+                    <span><i class="legend-swatch legend-swatch--emerald"></i> Tipo medio hipotecario</span>
+                </div>
+                <p id="hipotecasResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
+                <a href="https://emirodgar.es/simulador-hipotecas-espana" class="link proyecto-cta">Explorar el panel completo →</a>
+            </div>
+
         </div>
     </section>
 
@@ -264,6 +276,31 @@
             if (!sparklineEl) return;
 
             fetch('proyectos/quien-gobierna-cyl/data.json', { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar data.json');
+                    return res.json();
+                })
+                .then(dataset => {
+                    if (resumenEl) {
+                        resumenEl.textContent = dataset.resumenEjecutivo || '';
+                    }
+                    if (dataset.sparklineSvg) {
+                        sparklineEl.innerHTML = dataset.sparklineSvg;
+                    }
+                })
+                .catch(() => {
+                    if (resumenEl) {
+                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
+                    }
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sparklineEl = document.getElementById('hipotecasSparkline');
+            const resumenEl = document.getElementById('hipotecasResumen');
+            if (!sparklineEl) return;
+
+            fetch('proyectos/simulador-hipotecas-espana/data.json', { cache: 'no-store' })
                 .then(res => {
                     if (!res.ok) throw new Error('No se pudo cargar data.json');
                     return res.json();

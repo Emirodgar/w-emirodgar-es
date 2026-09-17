@@ -1,0 +1,120 @@
+{
+  "lastUpdated": "17 de Septiembre, 2026",
+  "resumenEjecutivo": "El tipo de interés medio de las hipotecas constituidas sobre viviendas se sitúa en el 2,96% en junio de 2026 (último dato publicado por el INE), con las hipotecas a tipo fijo algo más baratas de media (2,89%) que las variables (3,07%). El 61,7% de las hipotecas se firman ya a tipo fijo, aunque la variable ha ganado peso mes a mes durante 2026 (del 33,3% de enero al 38,3% de junio). El importe medio concedido es de 178.365 €, un 6,0% más que hace un año, y en junio se constituyeron 45.907 hipotecas sobre viviendas, un 10,8% más que en el mismo mes de 2025. Entre los bancos comparados en este panel, Sabadell y BBVA ofrecen hoy el TIN fijo bonificado más bajo (2,75%-2,85%), mientras que en variable las diferencias están más ajustadas, entre Euríbor + 0,50% y Euríbor + 0,84%. El Euríbor 12 meses, que marca el tipo real de toda hipoteca variable, sigue por encima del 3%; y según el termómetro de riesgo de recesión de MacroData España, la inflación —no el crecimiento ni el empleo— es hoy el principal factor que empuja hacia una subida o un mantenimiento de los tipos, más que hacia una bajada.",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion del tipo medio hipotecario, enero-junio 2026\" style=\"width:100%;height:100%\"><polygon points=\"12,74.8 71.2,69.8 130.4,89.6 189.6,59.9 248.8,20.4 308,30.3 308,100 12,100\" fill=\"rgba(5,150,105,0.08)\"/><polyline points=\"12,74.8 71.2,69.8 130.4,89.6 189.6,59.9 248.8,20.4 308,30.3\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"74.8\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"71.2\" cy=\"69.8\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"130.4\" cy=\"89.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"189.6\" cy=\"59.9\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"248.8\" cy=\"20.4\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"308\" cy=\"30.3\" r=\"3\" fill=\"#059669\"/></svg>",
+  "sources": {
+    "tipoMedio": "INE, Estadística de Hipotecas (H) — tipo de interés medio de las hipotecas constituidas sobre viviendas. Nota de prensa mensual (ine.es/dyngs/Prensa/H[MMAA].htm), con ~2 meses de desfase respecto al mes en curso",
+    "importeMedio": "INE, Estadística de Hipotecas (H) — importe medio de las hipotecas constituidas sobre viviendas",
+    "numHipotecas": "INE, Estadística de Hipotecas (H) — número de hipotecas constituidas sobre viviendas y su variación interanual",
+    "pctFijo": "INE, Estadística de Hipotecas (H) — reparto de las hipotecas constituidas entre tipo fijo y variable; el INE no publica un tercer bucket de \"tipo mixto\" en su nota de prensa mensual, por lo que este panel solo distingue fijo/variable",
+    "bancos": "Webs oficiales de cada entidad (CaixaBank, Santander, BBVA, Sabadell, Bankinter), condiciones bonificadas publicitadas a 17 de septiembre de 2026 para un perfil estándar; el tipo variable de CaixaBank procede de comparadores (iAhorro/Kelisto) al no estar confirmado directamente en caixabank.es. Las TAE incluyen el coste de los productos vinculados exigidos para la bonificación, por eso pueden ser sensiblemente más altas que el TIN",
+    "euribor": "Euríbor 12 meses y termómetro de riesgo de recesión, leídos en vivo del panel MacroData España (emirodgar.es/proyectos/macrodata-espana/), no se guardan en este data.json"
+  },
+  "indicators": [
+    {
+      "id": "tipoMedio",
+      "title": "Tipo Medio Hipotecario",
+      "currentValue": 2.96,
+      "unit": "%",
+      "change": -0.02,
+      "changeLabel": "vs mayo 2026 (2,98%)",
+      "description": "Tipo de interés medio de las hipotecas constituidas sobre viviendas (INE, junio 2026)",
+      "icon": "fa-percent",
+      "color": "emerald"
+    },
+    {
+      "id": "importeMedio",
+      "title": "Importe Medio Concedido",
+      "currentValue": 178365,
+      "unit": "€",
+      "change": 3499,
+      "changeLabel": "vs mayo 2026 (174.866 €); +6,0% interanual",
+      "description": "Importe medio de las hipotecas constituidas sobre viviendas (INE, junio 2026)",
+      "icon": "fa-sack-dollar",
+      "color": "blue"
+    },
+    {
+      "id": "numHipotecas",
+      "title": "Hipotecas Constituidas",
+      "currentValue": 45907,
+      "unit": "hipotecas/mes",
+      "change": 10.8,
+      "changeLabel": "+10,8% interanual (junio 2025)",
+      "description": "Número de hipotecas constituidas sobre viviendas en junio de 2026 (INE)",
+      "icon": "fa-file-signature",
+      "color": "violet"
+    },
+    {
+      "id": "pctFijo",
+      "title": "% a Tipo Fijo",
+      "currentValue": 61.7,
+      "unit": "%",
+      "change": 0.8,
+      "changeLabel": "vs mayo 2026 (60,9%)",
+      "description": "Porcentaje de hipotecas constituidas a tipo fijo sobre el total (INE, junio 2026); tipo medio fijo 2,89% vs. variable 3,07%",
+      "icon": "fa-lock",
+      "color": "amber"
+    }
+  ],
+  "historicalData": [
+    { "month": "Ene 2026", "tipoMedio": 2.87, "importeMedio": 165677, "numHipotecas": 40273, "pctFijo": 66.7, "pctVariable": 33.3 },
+    { "month": "Feb 2026", "tipoMedio": 2.88, "importeMedio": 173280, "numHipotecas": 45563, "pctFijo": 64.8, "pctVariable": 35.2 },
+    { "month": "Mar 2026", "tipoMedio": 2.84, "importeMedio": 174132, "numHipotecas": 46661, "pctFijo": 63.8, "pctVariable": 36.2 },
+    { "month": "Abr 2026", "tipoMedio": 2.90, "importeMedio": 173331, "numHipotecas": 40010, "pctFijo": 62.9, "pctVariable": 37.1 },
+    { "month": "May 2026", "tipoMedio": 2.98, "importeMedio": 174866, "numHipotecas": 42213, "pctFijo": 60.9, "pctVariable": 39.1 },
+    { "month": "Jun 2026", "tipoMedio": 2.96, "importeMedio": 178365, "numHipotecas": 45907, "pctFijo": 61.7, "pctVariable": 38.3 }
+  ],
+  "bancos": [
+    {
+      "nombre": "CaixaBank",
+      "tinFijo": 2.85,
+      "taeFijo": 4.26,
+      "tinVariable": 0.50,
+      "taeVariableAprox": 3.47,
+      "condiciones": "Hipoteca CasaFácil a 30 años. Bonificación hasta 1 punto: domiciliar nómina (mín. 6 meses) + 3 recibos + tarjeta CaixaBank, seguro de hogar, seguro de vida o salud, alarma Securitas Direct. El tipo variable (2,70% el primer año, después Euríbor + 0,50%) procede de comparadores, no confirmado directamente en caixabank.es",
+      "fuente": "caixabank.es/particular/hipotecas/casafacil.html",
+      "fechaConsulta": "2026-09-17"
+    },
+    {
+      "nombre": "Santander",
+      "tinFijo": 2.96,
+      "taeFijo": 3.65,
+      "tinVariable": 0.84,
+      "taeVariableAprox": 4.42,
+      "condiciones": "Bonificación hasta 1 punto: nómina domiciliada ≥1.000€/mes (o pensión/paro ≥600€, autónomos ≥175€) + Bizum o 6 usos de tarjeta, seguro de hogar, seguro de protección del préstamo, seguro de vida/accidente/auto/salud, productos de inversión o pensiones ≥10.000€. Variable: 1,84% TIN los primeros 6 meses, después Euríbor + 0,84%",
+      "fuente": "bancosantander.es",
+      "fechaConsulta": "2026-09-17"
+    },
+    {
+      "nombre": "BBVA",
+      "tinFijo": 2.85,
+      "taeFijo": 3.76,
+      "tinVariable": 0.60,
+      "taeVariableAprox": 4.23,
+      "condiciones": "Con nómina domiciliada + seguro de hogar + seguro de protección de pagos, además de 1% de bonificación extra el primer mes. Variable: 1,99% TIN el primer año, después Euríbor + 0,60%. Condiciones publicadas válidas hasta el 30/09/2026",
+      "fuente": "bbva.es",
+      "fechaConsulta": "2026-09-17"
+    },
+    {
+      "nombre": "Sabadell",
+      "tinFijo": 2.75,
+      "taeFijo": 3.58,
+      "tinVariable": 0.50,
+      "taeVariableAprox": 4.12,
+      "condiciones": "Con domiciliación de nómina/pensión + seguros de vida, hogar y protección total de pagos con Sabadell. Variable: 1,50% TIN el primer año, después Euríbor + 0,50%. Ejemplo para 150.000€/30 años; condiciones válidas hasta el 03/10/2026",
+      "fuente": "bancsabadell.com",
+      "fechaConsulta": "2026-09-17"
+    },
+    {
+      "nombre": "Bankinter",
+      "tinFijo": 3.20,
+      "taeFijo": 3.79,
+      "tinVariable": 0.50,
+      "taeVariableAprox": 3.77,
+      "condiciones": "Ejemplo para 150.000€/30 años cumpliendo las condiciones del banco (previsiblemente nómina y seguros, no confirmado punto por punto en la fuente oficial). Variable: 2,30% TIN los primeros 3 años, después Euríbor + 0,50%. Oferta válida hasta el 15/10/2026",
+      "fuente": "bankinter.com",
+      "fechaConsulta": "2026-09-17"
+    }
+  ],
+  "calculadoraDefaults": { "importe": 150000, "plazo": 25, "diferencialVariable": 0.65 }
+}

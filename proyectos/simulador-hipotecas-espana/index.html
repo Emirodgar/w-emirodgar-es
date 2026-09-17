@@ -1,0 +1,1088 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Hipotecas en España con Predicción | Calculadora y Comparativa Bancaria</title>
+    <meta name="description" content="Calculadora de hipotecas con datos del mercado hipotecario español, comparativa de bancos y una predicción de cómo cambiaría tu cuota si suben o bajan los tipos, con probabilidad estimada a partir del termómetro de riesgo de recesión.">
+    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#ecfdf5',
+                            100: '#d1fae5',
+                            500: '#10b981',
+                            600: '#059669',
+                            700: '#047857',
+                            900: '#064e3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        textarea::-webkit-scrollbar { width: 8px; }
+        textarea::-webkit-scrollbar-track { background: #1f2937; }
+        textarea::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+        input[type="range"] { accent-color: #059669; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Breadcrumb back to the main site -->
+    <div class="bg-slate-950 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2">
+            <a href="https://emirodgar.es/" class="hover:text-white transition"><i class="fa-solid fa-house"></i> Emirodgar.es</a>
+            <span>/</span>
+            <a href="https://emirodgar.es/proyectos" class="hover:text-white transition">Proyectos</a>
+            <span>/</span>
+            <a href="https://emirodgar.es/simulador-hipotecas-espana" class="hover:text-white transition">Documentación del Simulador de Hipotecas</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-slate-900 text-white shadow-md border-b border-slate-800 sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-brand-600 rounded-xl shadow-lg">
+                    <i class="fa-solid me-1 fa-house-chimney text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white">Simulador de Hipotecas en España</h1>
+                    <p class="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Última actualización: <span id="lastUpdatedLabel" class="font-medium text-slate-300">--</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Action Controls -->
+            <div class="flex items-center gap-2 self-end sm:self-auto w-full sm:w-auto">
+                <button id="openJsonBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg border border-slate-700 transition">
+                    <i class="fa-solid fa-code text-brand-500"></i>
+                    <span>Editar / Importar JSON</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Filter and Info Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <div>
+                <h2 class="text-lg font-semibold text-slate-900">Mercado Hipotecario y Calculadora</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Datos del mercado hipotecario español, comparativa de bancos y una calculadora con predicción de escenarios de tipos.</p>
+            </div>
+        </div>
+
+        <!-- Executive summary -->
+        <section id="resumenEjecutivoSection" class="bg-brand-900 text-white rounded-xl shadow-sm hidden overflow-hidden">
+            <button type="button" id="resumenEjecutivoToggle" class="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-white/5 transition">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="fa-solid fa-lightbulb text-brand-100"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Resumen ejecutivo</h3>
+                </div>
+                <span class="flex-shrink-0 inline-flex items-center gap-2 text-xs font-semibold bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">
+                    <span id="resumenEjecutivoToggleLabel">Ver resumen</span>
+                    <i id="resumenEjecutivoToggleIcon" class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                </span>
+            </button>
+            <div id="resumenEjecutivoBody" class="hidden px-4 pb-4">
+                <p id="resumenEjecutivoText" class="text-sm text-slate-200 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- Key Metrics Cards Container -->
+        <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Historical Charts Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+
+            <!-- Chart 1: Euríbor (leído en vivo de MacroData España) -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-sky-500"></span>
+                            <h3 class="font-bold text-slate-800">Euríbor 12 Meses</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Referencia de la mayoría de hipotecas variables (dato de MacroData España)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Porcentaje</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="euriborChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 2: Tipo medio hipotecario -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                            <h3 class="font-bold text-slate-800">Tipo Medio Hipotecario</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tipo de interés medio de las hipotecas constituidas (INE)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Mensual</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="tipoMedioChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 3: Reparto fijo/variable -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+                            <h3 class="font-bold text-slate-800">Hipotecas a Tipo Fijo vs. Variable</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Reparto de las hipotecas constituidas por tipo (INE)</p>
+                    </div>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="repartoChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Comparativa de bancos -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-building-columns text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Comparativa de Bancos</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Condiciones orientativas anunciadas por cada entidad; suelen requerir bonificaciones (nómina, seguros) para aplicar el tipo mostrado. Consulta siempre la oferta vigente de cada banco.</p>
+
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Banco</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">TIN Fijo</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">TAE Fijo</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Diferencial Variable</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">TAE Variable Aprox.</th>
+                            <th scope="col" class="px-6 py-3 font-semibold">Condiciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bancosTableBody" class="divide-y divide-slate-100"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- La Calculadora -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-calculator text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Calculadora de Hipoteca</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Simulación orientativa con la fórmula estándar de amortización francesa. No es una oferta ni un estudio de viabilidad: la aprobación y las condiciones reales dependen de cada entidad y de tu perfil.</p>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Formulario -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Banco de referencia (opcional)</label>
+                        <select id="calcBanco" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                            <option value="">Introducir tipos manualmente</option>
+                        </select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Importe (€)</label>
+                            <input type="number" id="calcImporte" value="150000" step="1000" min="1000" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Plazo (años)</label>
+                            <input type="number" id="calcPlazo" value="25" step="1" min="1" max="40" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide">TIN fijo (%)</label>
+                            <input type="number" id="calcTinFijo" value="2.85" step="0.01" min="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                        <div>
+                            <label class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Diferencial variable (+Euríbor)</label>
+                            <input type="number" id="calcDiferencial" value="0.75" step="0.01" min="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        </div>
+                    </div>
+                    <p class="text-[11px] text-slate-400">El tipo variable se calcula sobre el Euríbor 12 meses actual (<span id="calcEuriborRef" class="font-semibold text-slate-500">--</span>%) más el diferencial.</p>
+                </div>
+
+                <!-- Resultados -->
+                <div id="calcResultados" class="bg-slate-50 rounded-xl p-5 border border-slate-200">
+                    <!-- Rellenado por JS -->
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Qué pasaría si -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-arrows-split-up-and-left text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">¿Qué Pasaría si Cambian los Tipos?</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Escenarios ilustrativos para tu hipoteca variable, con una probabilidad estimada a partir del termómetro de riesgo de recesión de MacroData España. No es una predicción de mercado ni asesoramiento financiero.</p>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div id="escenariosContainer" class="grid grid-cols-1 md:grid-cols-3 gap-5"></div>
+            <p class="mt-4 text-[11px] text-slate-400 leading-relaxed">
+                Las probabilidades se derivan de los componentes de crecimiento, empleo e inflación del termómetro de riesgo de recesión de
+                <a href="https://emirodgar.es/proyectos/macrodata-espana/" class="text-brand-600 hover:underline">MacroData España</a>: un crecimiento débil o un paro al alza empujan hacia una bajada de tipos; una inflación alejada del objetivo del BCE empuja hacia una subida o el mantenimiento. Es un modelo propio y simplificado con fines divulgativos, no una probabilidad de mercado ni una recomendación de inversión.
+            </p>
+        </section>
+
+        <!-- Summary Data Table -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-table text-slate-400"></i>
+                    <span>Histórico Mensual</span>
+                </h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Mes/Año</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Tipo Medio (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Importe Medio (€)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Nº Hipotecas</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">% Fijo</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">% Variable</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody" class="divide-y divide-slate-100"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section id="sourcesSection" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hidden">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-book text-slate-400"></i>
+                <span>Fuentes de los datos</span>
+            </h3>
+            <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
+        </section>
+
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este panel y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
+        <p class="text-center text-xs text-slate-400 pb-4">
+            Proyecto educativo y experimental. No es asesoramiento financiero: consulta siempre con tu entidad bancaria o un asesor
+            profesional antes de contratar una hipoteca. Consulta la
+            <a href="https://emirodgar.es/simulador-hipotecas-espana" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
+            en Emirodgar.es.
+        </p>
+
+    </main>
+
+    <!-- Modal for JSON Configuration -->
+    <div id="jsonModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-3xl w-full border border-slate-700 flex flex-col max-h-[90vh] overflow-hidden">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-brand-500/10 text-brand-400 rounded-lg">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Gestor de Datos JSON</h3>
+                        <p class="text-xs text-slate-400">Modifica la estructura o carga un nuevo JSON</p>
+                    </div>
+                </div>
+                <button id="closeJsonBtn" class="text-slate-400 hover:text-white transition p-2">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (JSON Editor) -->
+            <div class="p-6 flex-grow overflow-y-auto space-y-4">
+                <div class="flex justify-between items-center">
+                    <label for="jsonTextarea" class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Estructura del Dataset:</label>
+                    <div class="flex gap-2">
+                        <button id="resetJsonBtn" class="text-xs text-slate-400 hover:text-amber-400 flex items-center gap-1 transition">
+                            <i class="fa-solid fa-rotate-left"></i> Restablecer Ejemplo
+                        </button>
+                    </div>
+                </div>
+
+                <textarea id="jsonTextarea" class="w-full h-80 font-mono text-xs bg-slate-950 text-emerald-400 p-4 rounded-xl border border-slate-800 focus:outline-none focus:border-brand-500 shadow-inner resize-none" spellcheck="false"></textarea>
+
+                <div id="jsonError" class="hidden p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span id="jsonErrorMessage">JSON no válido</span>
+                </div>
+
+                <p class="text-[11px] text-slate-500">
+                    Nota: los cambios aplicados aquí sólo afectan a tu navegador durante esta visita.
+                    Los datos persistentes del panel viven en <code class="text-slate-400">data.json</code>,
+                    que se actualiza mediante la skill de mantenimiento del proyecto.
+                </p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 border-t border-slate-800 bg-slate-900/50 flex flex-wrap justify-between items-center gap-3">
+                <div class="flex gap-2">
+                    <button id="exportJsonBtn" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-download text-slate-400"></i> Exportar
+                    </button>
+                    <label class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-upload text-slate-400"></i> Importar
+                        <input type="file" id="importJsonInput" accept=".json" class="hidden">
+                    </label>
+                </div>
+
+                <div class="flex gap-2">
+                    <button id="cancelJsonBtn" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-lg transition">Cancelar</button>
+                    <button id="saveJsonBtn" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold rounded-lg shadow-md transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i> Aplicar Cambios
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        /**
+         * FALLBACK DATASET
+         * Used only if data.json cannot be loaded (e.g. opening the file directly
+         * from disk, where the browser blocks fetch() for local files).
+         * The canonical, up-to-date dataset lives in ./data.json and is refreshed
+         * by the project's maintenance skill — do not treat this as current data.
+         */
+        const defaultMortgageData = {
+            "lastUpdated": "17 de Septiembre, 2026",
+            "resumenEjecutivo": "",
+            "indicators": [],
+            "historicalData": [],
+            "bancos": [],
+            "calculadoraDefaults": { "importe": 150000, "plazo": 25, "diferencialVariable": 0.75 },
+            "sources": {}
+        };
+
+        // Current Dataset in Memory
+        let currentDataset = JSON.parse(JSON.stringify(defaultMortgageData));
+
+        // Dataset de MacroData España (Euríbor + termómetro de riesgo), leído en vivo
+        let macrodata = null;
+
+        // Active Chart Instances
+        let chartInstances = {};
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadDataset();
+            setupEventListeners();
+        });
+
+        async function loadDataset() {
+            try {
+                const response = await fetch('data.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('No se pudo cargar data.json');
+                currentDataset = await response.json();
+            } catch (e) {
+                console.warn('Usando dataset de respaldo embebido:', e.message);
+                currentDataset = JSON.parse(JSON.stringify(defaultMortgageData));
+            }
+
+            try {
+                const res = await fetch('../macrodata-espana/data.json', { cache: 'no-store' });
+                if (res.ok) macrodata = await res.json();
+            } catch (e) {
+                console.warn('No se pudo cargar MacroData España:', e.message);
+            }
+
+            initApp();
+        }
+
+        function initApp() {
+            renderHeader();
+            renderResumenEjecutivo();
+            renderMetricCards();
+            renderCharts();
+            renderBancosTable();
+            initCalculadora();
+            renderEscenarios();
+            renderTable();
+            renderSources();
+            renderFAQ();
+        }
+
+        function formatNumber(n) {
+            if (typeof n !== 'number') return n;
+            const isNeg = n < 0;
+            const abs = Math.abs(n);
+            const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+            const [intPart, decPart] = str.split('.');
+            const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
+            return isNeg ? `-${result}` : result;
+        }
+
+        function formatCurrency(n) {
+            if (typeof n !== 'number') return n;
+            return formatNumber(Math.round(n)) + ' €';
+        }
+
+        function getEuriborActual() {
+            if (!macrodata) return null;
+            const ind = (macrodata.indicators || []).find(i => i.id === 'euribor');
+            return ind ? ind.currentValue : null;
+        }
+
+        function setupEventListeners() {
+            document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
+            document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('cancelJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('saveJsonBtn').addEventListener('click', saveJsonFromEditor);
+            document.getElementById('resetJsonBtn').addEventListener('click', resetDefaultData);
+
+            document.getElementById('exportJsonBtn').addEventListener('click', exportJsonFile);
+            document.getElementById('importJsonInput').addEventListener('change', importJsonFile);
+
+            const resumenToggle = document.getElementById('resumenEjecutivoToggle');
+            if (resumenToggle) {
+                resumenToggle.addEventListener('click', () => {
+                    const body = document.getElementById('resumenEjecutivoBody');
+                    setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            }
+
+            ['calcBanco', 'calcImporte', 'calcPlazo', 'calcTinFijo', 'calcDiferencial'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('input', () => { renderCalculadoraResultados(); renderEscenarios(); });
+            });
+
+            document.getElementById('calcBanco').addEventListener('change', (e) => {
+                const banco = (currentDataset.bancos || []).find(b => b.nombre === e.target.value);
+                if (banco) {
+                    document.getElementById('calcTinFijo').value = banco.tinFijo;
+                    document.getElementById('calcDiferencial').value = banco.tinVariable;
+                    renderCalculadoraResultados();
+                    renderEscenarios();
+                }
+            });
+        }
+
+        function renderHeader() {
+            document.getElementById('lastUpdatedLabel').innerText = currentDataset.lastUpdated || 'No especificado';
+        }
+
+        function setResumenEjecutivoExpanded(expanded) {
+            const body = document.getElementById('resumenEjecutivoBody');
+            const label = document.getElementById('resumenEjecutivoToggleLabel');
+            const icon = document.getElementById('resumenEjecutivoToggleIcon');
+            if (!body) return;
+            body.classList.toggle('hidden', !expanded);
+            if (label) label.textContent = expanded ? 'Ocultar resumen' : 'Ver resumen';
+            if (icon) icon.classList.toggle('rotate-180', expanded);
+        }
+
+        function renderResumenEjecutivo() {
+            const section = document.getElementById('resumenEjecutivoSection');
+            const text = document.getElementById('resumenEjecutivoText');
+            if (currentDataset.resumenEjecutivo) {
+                text.innerText = currentDataset.resumenEjecutivo;
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+            setResumenEjecutivoExpanded(false);
+        }
+
+        function renderSources() {
+            const section = document.getElementById('sourcesSection');
+            const list = document.getElementById('sourcesList');
+            list.innerHTML = '';
+            if (!currentDataset.sources) {
+                section.classList.add('hidden');
+                return;
+            }
+            Object.values(currentDataset.sources)
+                .filter((value, index, all) => all.indexOf(value) === index)
+                .forEach(source => {
+                    list.insertAdjacentHTML('beforeend', `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-[6px] mt-1.5 text-slate-300"></i><span>${source}</span></li>`);
+                });
+            section.classList.remove('hidden');
+        }
+
+        function getIndicator(id) {
+            return (currentDataset.indicators || []).find(i => i.id === id) || null;
+        }
+
+        function renderMetricCards() {
+            const container = document.getElementById('metricsContainer');
+            container.innerHTML = '';
+
+            const cards = [];
+            const euribor = getEuriborActual();
+            if (euribor !== null) {
+                cards.push({
+                    title: 'Euríbor 12 Meses',
+                    currentValue: euribor,
+                    unit: '%',
+                    detail: 'Dato en vivo de MacroData España',
+                    icon: 'fa-percent',
+                    color: 'sky'
+                });
+            }
+            (currentDataset.indicators || []).forEach(item => cards.push({
+                title: item.title,
+                currentValue: item.currentValue,
+                unit: item.unit,
+                detail: item.description || item.changeLabel || '',
+                icon: item.icon,
+                color: item.color
+            }));
+
+            cards.forEach(item => {
+                const cardHTML = `
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${item.title}</span>
+                            <div class="p-2 rounded-lg bg-slate-100 text-slate-600">
+                                <i class="fa-solid ${item.icon || 'fa-chart-simple'}"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-2xl font-extrabold text-slate-900 tracking-tight">${typeof item.currentValue === 'number' ? formatNumber(item.currentValue) : item.currentValue}</span>
+                            <span class="text-slate-500 font-semibold text-sm">${item.unit || ''}</span>
+                        </div>
+                        <p class="mt-3 text-[11px] text-slate-400 leading-snug">${item.detail || ''}</p>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        function renderCharts() {
+            const hist = currentDataset.historicalData || [];
+            const labels = hist.map(d => d.month);
+
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: { usePointStyle: true, boxWidth: 8, font: { family: 'Inter', size: 11 } }
+                    },
+                    tooltip: {
+                        backgroundColor: '#0f172a',
+                        padding: 10,
+                        cornerRadius: 8,
+                        titleFont: { family: 'Inter', size: 12, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 }
+                    }
+                },
+                scales: {
+                    x: { grid: { display: false }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } },
+                    y: { grid: { color: '#f1f5f9' }, ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' } }
+                }
+            };
+
+            Object.values(chartInstances).forEach(chart => chart.destroy());
+            chartInstances = {};
+
+            // Chart 1: Euríbor (de MacroData España)
+            const macroHist = (macrodata && macrodata.historicalData) || [];
+            chartInstances.euribor = new Chart(document.getElementById('euriborChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: macroHist.map(d => d.month),
+                    datasets: [{
+                        label: 'Euríbor 12M (%)',
+                        data: macroHist.map(d => d.euribor),
+                        borderColor: '#0ea5e9',
+                        backgroundColor: 'rgba(14, 165, 233, 0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 3
+                    }]
+                },
+                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
+
+            // Chart 2: Tipo medio hipotecario
+            chartInstances.tipoMedio = new Chart(document.getElementById('tipoMedioChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Tipo Medio (%)',
+                        data: hist.map(d => d.tipoMedio),
+                        borderColor: '#059669',
+                        backgroundColor: 'rgba(5, 150, 105, 0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 3
+                    }]
+                },
+                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
+
+            // Chart 3: Reparto fijo/variable (el INE no publica un tercer bucket "mixto"
+            // en su nota de prensa mensual; solo fijo+variable, que suman 100%)
+            const ultimo = hist[hist.length - 1] || {};
+            chartInstances.reparto = new Chart(document.getElementById('repartoChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Fijo', 'Variable'],
+                    datasets: [{
+                        data: [ultimo.pctFijo, ultimo.pctVariable],
+                        backgroundColor: ['#059669', '#f59e0b'],
+                        borderWidth: 2,
+                        borderColor: '#ffffff'
+                    }]
+                },
+                options: { ...commonOptions, cutout: '60%', scales: {} }
+            });
+        }
+
+        function renderBancosTable() {
+            const tbody = document.getElementById('bancosTableBody');
+            const select = document.getElementById('calcBanco');
+            tbody.innerHTML = '';
+            select.innerHTML = '<option value="">Introducir tipos manualmente</option>';
+
+            (currentDataset.bancos || []).forEach(b => {
+                tbody.insertAdjacentHTML('beforeend', `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="px-6 py-3.5 font-semibold text-slate-800">${b.nombre}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-emerald-600">${formatNumber(b.tinFijo)}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-slate-500">${formatNumber(b.taeFijo)}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-amber-600">Euríbor + ${formatNumber(b.tinVariable)}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-slate-500">${formatNumber(b.taeVariableAprox)}%</td>
+                        <td class="px-6 py-3.5 text-xs text-slate-500 max-w-xs">${b.condiciones || ''}</td>
+                    </tr>
+                `);
+                select.insertAdjacentHTML('beforeend', `<option value="${b.nombre}">${b.nombre}</option>`);
+            });
+        }
+
+        // --- Calculadora ---
+        function calcularCuota(principal, tinAnualPct, anios) {
+            const n = anios * 12;
+            const r = (tinAnualPct / 100) / 12;
+            if (!principal || !anios || n <= 0) return 0;
+            if (r === 0) return principal / n;
+            return principal * r * Math.pow(1 + r, n) / (Math.pow(1 + r, n) - 1);
+        }
+
+        function initCalculadora() {
+            const defaults = currentDataset.calculadoraDefaults || {};
+            if (defaults.importe) document.getElementById('calcImporte').value = defaults.importe;
+            if (defaults.plazo) document.getElementById('calcPlazo').value = defaults.plazo;
+            if (defaults.diferencialVariable) document.getElementById('calcDiferencial').value = defaults.diferencialVariable;
+
+            // Preselecciona el primer banco de la comparativa como punto de partida razonable
+            const primerBanco = (currentDataset.bancos || [])[0];
+            if (primerBanco) {
+                document.getElementById('calcBanco').value = primerBanco.nombre;
+                document.getElementById('calcTinFijo').value = primerBanco.tinFijo;
+                document.getElementById('calcDiferencial').value = primerBanco.tinVariable;
+            }
+
+            const euribor = getEuriborActual();
+            document.getElementById('calcEuriborRef').textContent = euribor !== null ? formatNumber(euribor) : '--';
+
+            renderCalculadoraResultados();
+        }
+
+        function getCalcInputs() {
+            const importe = parseFloat(document.getElementById('calcImporte').value) || 0;
+            const plazo = parseFloat(document.getElementById('calcPlazo').value) || 0;
+            const tinFijo = parseFloat(document.getElementById('calcTinFijo').value) || 0;
+            const diferencial = parseFloat(document.getElementById('calcDiferencial').value) || 0;
+            const euribor = getEuriborActual() || 0;
+            return { importe, plazo, tinFijo, diferencial, euribor, tinVariable: euribor + diferencial };
+        }
+
+        function renderCalculadoraResultados() {
+            const el = document.getElementById('calcResultados');
+            const { importe, plazo, tinFijo, tinVariable, euribor } = getCalcInputs();
+
+            const cuotaFija = calcularCuota(importe, tinFijo, plazo);
+            const cuotaVariable = calcularCuota(importe, tinVariable, plazo);
+            const totalFijo = cuotaFija * plazo * 12;
+            const totalVariable = cuotaVariable * plazo * 12;
+
+            el.innerHTML = `
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-xs font-semibold text-emerald-700 uppercase tracking-wide">Hipoteca Fija</p>
+                        <p class="text-2xl font-extrabold text-slate-900 mt-1">${formatCurrency(cuotaFija)}<span class="text-sm font-medium text-slate-400">/mes</span></p>
+                        <p class="text-[11px] text-slate-400 mt-1">Coste total: ${formatCurrency(totalFijo)} (${formatCurrency(totalFijo - importe)} de intereses)</p>
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-amber-700 uppercase tracking-wide">Hipoteca Variable</p>
+                        <p class="text-2xl font-extrabold text-slate-900 mt-1">${formatCurrency(cuotaVariable)}<span class="text-sm font-medium text-slate-400">/mes</span></p>
+                        <p class="text-[11px] text-slate-400 mt-1">Coste total: ${formatCurrency(totalVariable)} (${formatCurrency(totalVariable - importe)} de intereses), con Euríbor en ${formatNumber(euribor)}%</p>
+                    </div>
+                </div>
+                <div class="mt-4 pt-4 border-t border-slate-200 text-xs text-slate-500">
+                    ${cuotaFija > cuotaVariable
+                        ? `Con las condiciones actuales, la variable parte ${formatCurrency(cuotaFija - cuotaVariable)}/mes más barata que la fija — pero puede subir si lo hace el Euríbor (ver escenarios abajo).`
+                        : `Con las condiciones actuales, la fija parte ${formatCurrency(cuotaVariable - cuotaFija)}/mes más barata que la variable, además de blindarte frente a subidas de tipos.`}
+                </div>
+            `;
+        }
+
+        // --- Escenarios "qué pasaría si" ---
+        function getRiskComponentsFromMacrodata() {
+            if (!macrodata) return null;
+            const ind = {};
+            (macrodata.indicators || []).forEach(i => { ind[i.id] = i; });
+            const pib = ind.pib, paro = ind.paro, ipc = ind.ipc;
+            if (!pib || !paro || !ipc) return null;
+
+            const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
+            const lerp = (v, good, bad) => {
+                if (typeof v !== 'number' || isNaN(v)) return null;
+                return clamp((v - good) / (bad - good) * 100, 0, 100);
+            };
+
+            const riskCrecimiento = lerp(pib.currentValue, 2.5, -1);
+            const riskEmpleo = lerp(paro.change, 0, 2);
+            const riskInflacion = lerp(Math.abs(ipc.currentValue - 2), 0.5, 4.5);
+            if ([riskCrecimiento, riskEmpleo, riskInflacion].some(v => v === null)) return null;
+
+            return { riskCrecimiento, riskEmpleo, riskInflacion };
+        }
+
+        // Deriva probabilidades de subida/mantenimiento/bajada de tipos a partir de los
+        // componentes de crecimiento/empleo/inflación del termómetro de riesgo de MacroData
+        // España. Es un modelo propio y simplificado, no una probabilidad de mercado.
+        function computeTipoEscenarios() {
+            const risk = getRiskComponentsFromMacrodata();
+            if (!risk) return null;
+
+            const presionBajista = risk.riskCrecimiento * 0.6 + risk.riskEmpleo * 0.4;
+            const presionAlcista = risk.riskInflacion;
+
+            const rawSube = presionAlcista;
+            const rawBaja = presionBajista;
+            const rawMantiene = 100 - Math.max(presionAlcista, presionBajista);
+            const total = rawSube + rawBaja + rawMantiene;
+
+            return {
+                sube: Math.round((rawSube / total) * 100),
+                mantiene: Math.round((rawMantiene / total) * 100),
+                baja: Math.round((rawBaja / total) * 100)
+            };
+        }
+
+        function renderEscenarios() {
+            const container = document.getElementById('escenariosContainer');
+            const probs = computeTipoEscenarios();
+            const { importe, plazo, diferencial, euribor } = getCalcInputs();
+
+            if (!probs || !euribor) {
+                container.innerHTML = '<p class="text-sm text-slate-400 col-span-3">No hay datos suficientes de MacroData España para calcular los escenarios ahora mismo.</p>';
+                return;
+            }
+
+            const cuotaActual = calcularCuota(importe, euribor + diferencial, plazo);
+
+            const escenarios = [
+                { key: 'sube', label: 'Euríbor sube 1 punto', delta: 1, prob: probs.sube, color: '#e11d48', icon: 'fa-arrow-trend-up' },
+                { key: 'mantiene', label: 'Euríbor se mantiene', delta: 0, prob: probs.mantiene, color: '#64748b', icon: 'fa-minus' },
+                { key: 'baja', label: 'Euríbor baja 1 punto', delta: -1, prob: probs.baja, color: '#059669', icon: 'fa-arrow-trend-down' }
+            ];
+
+            container.innerHTML = escenarios.map(e => {
+                const nuevoTipo = euribor + diferencial + e.delta;
+                const nuevaCuota = calcularCuota(importe, nuevoTipo, plazo);
+                const diff = nuevaCuota - cuotaActual;
+                return `
+                    <div class="border border-slate-200 rounded-xl p-4">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid ${e.icon}" style="color:${e.color}"></i>
+                            <span class="font-semibold text-sm text-slate-800">${e.label}</span>
+                        </div>
+                        <p class="text-2xl font-extrabold text-slate-900 mt-2">${formatCurrency(nuevaCuota)}<span class="text-sm font-medium text-slate-400">/mes</span></p>
+                        <p class="text-xs mt-1 ${diff > 0 ? 'text-rose-600' : diff < 0 ? 'text-emerald-600' : 'text-slate-400'}">
+                            ${diff === 0 ? 'Sin cambios respecto a hoy' : `${diff > 0 ? '+' : ''}${formatCurrency(diff)}/mes respecto a hoy`}
+                        </p>
+                        <div class="mt-3">
+                            <div class="flex justify-between text-[11px] text-slate-500 mb-1">
+                                <span>Probabilidad estimada</span>
+                                <span class="font-mono font-semibold">${e.prob}%</span>
+                            </div>
+                            <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                <div class="h-full rounded-full" style="width:${e.prob}%;background-color:${e.color}"></div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('dataTableBody');
+            tbody.innerHTML = '';
+            const history = [...(currentDataset.historicalData || [])].reverse();
+
+            history.forEach(row => {
+                tbody.insertAdjacentHTML('beforeend', `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="px-6 py-3.5 font-semibold text-slate-800">${row.month}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-emerald-600">${formatNumber(row.tipoMedio)}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs">${formatCurrency(row.importeMedio)}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-slate-500">${formatNumber(row.numHipotecas)}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-emerald-600">${formatNumber(row.pctFijo)}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-amber-600">${formatNumber(row.pctVariable)}%</td>
+                    </tr>
+                `);
+            });
+        }
+
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen los
+        // valores vigentes de "indicators"/"bancos" y del termómetro de MacroData España.
+        function getFAQs() {
+            const tipoMedio = getIndicator('tipoMedio');
+            const importeMedio = getIndicator('importeMedio');
+            const pctFijo = getIndicator('pctFijo');
+            const euribor = getEuriborActual();
+            const probs = computeTipoEscenarios();
+            const bancos = currentDataset.bancos || [];
+
+            const faqs = [];
+
+            faqs.push({
+                question: '¿Qué diferencia hay entre el TIN y la TAE?',
+                answer: 'El TIN (Tipo de Interés Nominal) es el porcentaje que aplica el banco para calcular tus intereses, sin más. La TAE (Tasa Anual Equivalente) incluye además comisiones y gastos asociados al préstamo, por lo que refleja mejor el coste real y es la cifra más útil para comparar ofertas entre bancos.'
+            });
+
+            faqs.push({
+                question: '¿Por qué la TAE es mucho más alta que el TIN en algunas ofertas bonificadas?',
+                answer: 'Porque los TIN más bajos casi siempre exigen contratar productos vinculados (seguro de hogar, de vida, plan de pensiones...) para conseguir la bonificación, y la TAE está obligada a incluir el coste de esos productos junto con el interés. Por eso un TIN muy atractivo puede convertirse en una TAE bastante más alta: compara siempre por TAE, no solo por TIN, y valora si de verdad necesitas (o quieres pagar) esos productos vinculados.'
+            });
+
+            faqs.push({
+                question: '¿Qué diferencia hay entre hipoteca fija, variable y mixta?',
+                answer: 'En una hipoteca fija, el tipo de interés (y por tanto la cuota) no cambia durante toda la vida del préstamo. En una variable, el tipo se revisa periódicamente (normalmente cada 6 o 12 meses) sumando un diferencial fijo al Euríbor, así que la cuota sube o baja con él. La mixta combina ambas: unos primeros años a tipo fijo y el resto a variable. La calculadora de este panel, por ahora, solo compara fija y variable; la mixta se incorporará más adelante.'
+            });
+
+            faqs.push({
+                question: '¿Qué es el diferencial de una hipoteca variable?',
+                answer: 'Es el porcentaje fijo que el banco suma al Euríbor para fijar el tipo de interés real de tu hipoteca (tipo = Euríbor + diferencial). Cuanto menor sea el diferencial, más barata es la hipoteca en igualdad de condiciones; suele depender de si contratas productos adicionales del banco (nómina, seguros).'
+            });
+
+            if (euribor !== null) {
+                faqs.push({
+                    question: '¿Qué es el Euríbor y por qué afecta a mi cuota?',
+                    answer: `Es el tipo de interés al que se prestan dinero los bancos europeos entre sí, y sirve de referencia para la inmensa mayoría de las hipotecas variables en España. Ahora mismo el Euríbor a 12 meses está en el ${formatNumber(euribor)}%: cuando sube o baja, tu cuota variable sube o baja con él en la siguiente revisión.`
+                });
+            }
+
+            if (tipoMedio) {
+                faqs.push({
+                    question: '¿Cuál es el tipo de interés medio de las hipotecas en España ahora mismo?',
+                    answer: `Según el INE, el tipo de interés medio de las hipotecas constituidas sobre viviendas es del ${formatNumber(tipoMedio.currentValue)}%. Es una media del conjunto del mercado: tu tipo concreto dependerá del banco, tu perfil y si eliges fija o variable.`
+                });
+            }
+
+            if (importeMedio) {
+                faqs.push({
+                    question: '¿Cuál es el importe medio de una hipoteca en España?',
+                    answer: `El importe medio de las hipotecas constituidas sobre viviendas es de ${formatCurrency(importeMedio.currentValue)}, según los últimos datos del INE.`
+                });
+            }
+
+            if (pctFijo) {
+                faqs.push({
+                    question: '¿Se contratan más hipotecas a tipo fijo o variable en España?',
+                    answer: `Actualmente el ${formatNumber(pctFijo.currentValue)}% de las hipotecas constituidas se firman a tipo fijo, según el INE (que solo distingue fijo y variable en su nota de prensa mensual, sin un tercer bucket de "mixta"). Puedes ver la evolución mes a mes en el gráfico de este panel.`
+                });
+            }
+
+            if (bancos.length) {
+                faqs.push({
+                    question: '¿Son vinculantes las condiciones de la tabla comparativa de bancos?',
+                    answer: 'No. Son las condiciones publicitadas por cada entidad en su web o comparadores, casi siempre sujetas a bonificaciones (domiciliar la nómina, contratar seguros u otros productos) y a la aprobación de tu perfil de riesgo concreto. Antes de decidir, pide siempre una oferta vinculante personalizada al banco.'
+                });
+            }
+
+            faqs.push({
+                question: '¿Cómo se calculan las probabilidades de los escenarios de tipos?',
+                answer: `Este panel no predice el mercado: estima una probabilidad ilustrativa combinando los componentes de crecimiento, empleo e inflación del termómetro de riesgo de recesión de MacroData España. Un crecimiento débil o un paro al alza empujan hacia una bajada de tipos (los bancos centrales suelen recortar para estimular la economía); una inflación alejada del objetivo del 2% del BCE empuja hacia una subida o el mantenimiento.${probs ? ` Con los datos de hoy, el modelo estima un ${probs.sube}% de probabilidad de subida, un ${probs.mantiene}% de que se mantenga y un ${probs.baja}% de bajada.` : ''} Es un modelo propio y simplificado, no una predicción de mercado ni asesoramiento financiero.`
+            });
+
+            faqs.push({
+                question: '¿Esta calculadora sustituye a un estudio de viabilidad del banco?',
+                answer: 'No. Es una simulación educativa con la fórmula estándar de amortización francesa, útil para hacerte una idea de tu cuota y compararla entre escenarios. No tiene en cuenta tu solvencia, tus ingresos, otras deudas ni los gastos de formalización (notaría, registro, gestoría, tasación). La cifra real solo te la puede dar tu banco tras estudiar tu caso.'
+                });
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualizan estos datos?',
+                answer: 'Los datos del INE (tipo medio, importe medio, número de hipotecas, reparto fijo/variable) se revisan cuando hay una nueva publicación mensual; la comparativa de bancos se revisa con más frecuencia porque las ofertas cambian más a menudo; el Euríbor y el termómetro de riesgo se leen en vivo del panel MacroData España, así que están siempre al día.'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden los datos de este panel?',
+                answer: 'Del INE (Estadística de Hipotecas), de las webs y comparadores públicos de cada entidad bancaria para las ofertas, y del panel MacroData España (Banco Central Europeo, Reserva Federal e INE) para el Euríbor y el termómetro de riesgo de recesión. El detalle completo está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
+        }
+
+        function openJsonModal() {
+            const modal = document.getElementById('jsonModal');
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+
+            textarea.value = JSON.stringify(currentDataset, null, 2);
+            errorContainer.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeJsonModal() {
+            document.getElementById('jsonModal').classList.add('hidden');
+        }
+
+        function saveJsonFromEditor() {
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+            const errorMessage = document.getElementById('jsonErrorMessage');
+
+            try {
+                const parsed = JSON.parse(textarea.value);
+
+                if (!parsed.indicators || !parsed.historicalData) {
+                    throw new Error("El JSON debe contener las propiedades 'indicators' y 'historicalData'.");
+                }
+
+                currentDataset = parsed;
+                initApp();
+                closeJsonModal();
+            } catch (e) {
+                errorMessage.innerText = e.message;
+                errorContainer.classList.remove('hidden');
+            }
+        }
+
+        function resetDefaultData() {
+            currentDataset = JSON.parse(JSON.stringify(defaultMortgageData));
+            document.getElementById('jsonTextarea').value = JSON.stringify(currentDataset, null, 2);
+            document.getElementById('jsonError').classList.add('hidden');
+        }
+
+        function exportJsonFile() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(currentDataset, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `simulador_hipotecas_espana_${new Date().toISOString().slice(0,10)}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        function importJsonFile(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const parsed = JSON.parse(evt.target.result);
+                    document.getElementById('jsonTextarea').value = JSON.stringify(parsed, null, 2);
+                    document.getElementById('jsonError').classList.add('hidden');
+                } catch (err) {
+                    alert("Error al leer el archivo JSON: formato no válido.");
+                }
+            };
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>
