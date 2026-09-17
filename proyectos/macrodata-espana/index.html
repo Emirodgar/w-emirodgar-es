@@ -138,6 +138,27 @@
             <div id="riesgoRecesionContainer"></div>
         </section>
 
+        <section class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+                        <h3 class="font-bold text-slate-800">Evolución del Termómetro de Riesgo</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1">Puntuación del índice (0-100) en los últimos 6 meses, recalculada mes a mes con los mismos datos históricos de este panel</p>
+                </div>
+                <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Puntos / mes</span>
+            </div>
+            <div class="relative h-64 w-full">
+                <canvas id="riesgoHistoricoChart"></canvas>
+            </div>
+            <p class="mt-3 text-[11px] text-slate-400 leading-relaxed">
+                El punto más reciente puede diferir levemente del valor mostrado arriba si ha habido una decisión de tipos (BCE/Fed) muy
+                reciente que el histórico mensual aún no refleja. El componente de empleo de esta serie usa la variación frente al último
+                dato trimestral distinto disponible (no siempre interanual, por la limitación de historial almacenado).
+            </p>
+        </section>
+
         <!-- Sección: España vs. Zona Euro -->
         <div class="flex items-center gap-2 pt-2">
             <i class="fa-solid fa-scale-balanced text-brand-600"></i>
@@ -623,6 +644,45 @@
                     { label: 'Condiciones financieras (tipos + prima)', value: Math.round(riskFinanciero), weight: 25 }
                 ]
             };
+        }
+
+        // Recalcula el mismo índice mes a mes a partir de "historicalData", para el gráfico de
+        // evolución. Usa las mismas fórmulas y umbrales que computeRecessionRisk(), con una única
+        // diferencia obligada: como solo se almacenan ~12 meses de histórico, el componente de
+        // empleo no puede comparar siempre contra "hace un año" (no hay dato); en su lugar compara
+        // contra el último valor de "paro" distinto disponible en la propia serie (variación
+        // intertrimestral, ya que el paro EPA es trimestral y se repite dentro de cada trimestre).
+        function computeHistoricalRiskSeries() {
+            const hist = currentDataset.historicalData || [];
+            const results = [];
+
+            hist.forEach((row, idx) => {
+                const pib = row.pib, ipc = row.ipc, prima = row.primaRiesgo, bce = row.tiposBCE, paro = row.paro;
+                if ([pib, ipc, prima, bce, paro].some(v => typeof v !== 'number')) return;
+
+                let paroChange = 0;
+                for (let i = idx - 1; i >= 0; i--) {
+                    if (typeof hist[i].paro === 'number' && hist[i].paro !== paro) {
+                        paroChange = paro - hist[i].paro;
+                        break;
+                    }
+                }
+
+                const riskCrecimiento = riskLerp(pib, 2.5, -1);
+                const riskEmpleo = riskLerp(paroChange, 0, 2);
+                const riskInflacion = riskLerp(Math.abs(ipc - 2), 0.5, 4.5);
+                const riskTipos = riskLerp(bce, 0, 5);
+                const riskPrima = riskLerp(prima, 0, 300);
+                if ([riskCrecimiento, riskEmpleo, riskInflacion, riskTipos, riskPrima].some(v => v === null)) return;
+                const riskFinanciero = (riskTipos + riskPrima) / 2;
+
+                const total = 0.35 * riskCrecimiento + 0.25 * riskEmpleo + 0.15 * riskInflacion + 0.25 * riskFinanciero;
+                const band = RISK_BANDS.find(b => total <= b.max) || RISK_BANDS[RISK_BANDS.length - 1];
+
+                results.push({ month: row.month, score: Math.round(total * 10) / 10, color: band.color });
+            });
+
+            return results;
         }
 
         function renderRiesgoRecesion() {
@@ -1143,6 +1203,38 @@
                     }]
                 },
                 options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
+
+            // Chart 6: Evolución del Termómetro de Riesgo (siempre los últimos 6 meses,
+            // con independencia del selector de rango de arriba)
+            const riesgoSerie = computeHistoricalRiskSeries().slice(-6);
+            const ctxRiesgo = document.getElementById('riesgoHistoricoChart').getContext('2d');
+            chartInstances.riesgo = new Chart(ctxRiesgo, {
+                type: 'line',
+                data: {
+                    labels: riesgoSerie.map(r => r.month),
+                    datasets: [{
+                        label: 'Riesgo de recesión (0-100)',
+                        data: riesgoSerie.map(r => r.score),
+                        borderColor: '#7c3aed',
+                        backgroundColor: 'rgba(124, 58, 237, 0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 5,
+                        pointBackgroundColor: riesgoSerie.map(r => r.color),
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 1.5
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    plugins: { ...commonOptions.plugins, legend: { display: false } },
+                    scales: {
+                        ...commonOptions.scales,
+                        y: { ...commonOptions.scales.y, min: 0, max: 100 }
+                    }
+                }
             });
         }
 

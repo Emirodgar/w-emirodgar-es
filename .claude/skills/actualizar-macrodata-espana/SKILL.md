@@ -204,6 +204,20 @@ en los otros tres paneles del sitio (Panel Económico CyL, Radar de Empleo Públ
 CyL?) — si el usuario pide ampliar/corregir las FAQ "en todos los paneles", repite el cambio en los
 `getFAQs()` de los cuatro `index.html`, no solo en el de MacroData España.
 
+## Gráfico de evolución del termómetro
+
+Debajo del termómetro, el panel muestra un gráfico de línea con la puntuación de riesgo de los últimos 6
+meses (`riesgoHistoricoChart`, función `computeHistoricalRiskSeries()` en `index.html`). Tampoco se guarda
+en `data.json`: se recalcula mes a mes a partir de `historicalData`, con la misma fórmula y los mismos
+pesos que `computeRecessionRisk()` — la única diferencia es el componente de empleo, que aquí compara
+contra el último valor de `paro` distinto disponible en la propia serie (variación intertrimestral),
+porque solo se almacenan ~12 meses de histórico y no siempre hay un dato de "hace un año" disponible. Por
+esto mismo, el último punto del gráfico puede diferir ligeramente del número mostrado en el termómetro de
+arriba (que usa `indicators.bce`/`indicators.fed`, a veces más recientes que la última fila de
+`historicalData`) — es un comportamiento esperado y ya documentado en el propio panel, no lo "corrijas"
+forzando que coincidan. No requiere ningún paso de mantenimiento adicional: basta con mantener
+`historicalData` actualizado (pasos de arriba).
+
 ## Termómetro de riesgo de recesión también en la home
 
 La fórmula de `computeRecessionRisk()` está **duplicada intencionadamente** en dos sitios: en
