@@ -107,15 +107,21 @@
         </div>
 
         <!-- Executive summary -->
-        <section id="resumenEjecutivoSection" class="bg-brand-900 text-white p-5 rounded-xl shadow-sm hidden">
-            <div class="flex items-start gap-3">
-                <div class="p-2 bg-white/10 rounded-lg mt-0.5">
-                    <i class="fa-solid fa-lightbulb text-brand-100"></i>
+        <section id="resumenEjecutivoSection" class="bg-brand-900 text-white rounded-xl shadow-sm hidden overflow-hidden">
+            <button type="button" id="resumenEjecutivoToggle" class="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-white/5 transition">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="fa-solid fa-lightbulb text-brand-100"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Resumen ejecutivo</h3>
                 </div>
-                <div>
-                    <h3 class="font-bold text-white mb-1">Resumen ejecutivo</h3>
-                    <p id="resumenEjecutivoText" class="text-sm text-slate-200 leading-relaxed"></p>
-                </div>
+                <span class="flex-shrink-0 inline-flex items-center gap-2 text-xs font-semibold bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">
+                    <span id="resumenEjecutivoToggleLabel">Ver resumen</span>
+                    <i id="resumenEjecutivoToggleIcon" class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                </span>
+            </button>
+            <div id="resumenEjecutivoBody" class="hidden px-4 pb-4">
+                <p id="resumenEjecutivoText" class="text-sm text-slate-200 leading-relaxed"></p>
             </div>
         </section>
 
@@ -699,6 +705,14 @@
                     renderCharts();
                 });
             });
+
+            const resumenToggle = document.getElementById('resumenEjecutivoToggle');
+            if (resumenToggle) {
+                resumenToggle.addEventListener('click', () => {
+                    const body = document.getElementById('resumenEjecutivoBody');
+                    setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
         }
 
         function renderHeader() {
@@ -714,6 +728,17 @@
             } else {
                 section.classList.add('hidden');
             }
+            setResumenEjecutivoExpanded(false);
+        }
+
+        function setResumenEjecutivoExpanded(expanded) {
+            const body = document.getElementById('resumenEjecutivoBody');
+            const label = document.getElementById('resumenEjecutivoToggleLabel');
+            const icon = document.getElementById('resumenEjecutivoToggleIcon');
+            if (!body) return;
+            body.classList.toggle('hidden', !expanded);
+            if (label) label.textContent = expanded ? 'Ocultar resumen' : 'Ver resumen';
+            if (icon) icon.classList.toggle('rotate-180', expanded);
         }
 
         function renderSources() {
