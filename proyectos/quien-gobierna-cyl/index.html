@@ -6,6 +6,8 @@
     <title>¿Quién Gobierna CyL? | Presidente, Consejeros y Gobierno de Castilla y León</title>
     <meta name="description" content="Panel visual con el presidente, los vicepresidentes y los consejeros de la Junta de Castilla y León: sus competencias, su partido, cuánto tiempo llevan en el cargo y quién fue su predecesor.">
     <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js CDN -->
@@ -209,6 +211,17 @@
             <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
         </section>
 
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este panel y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
         <p class="text-center text-xs text-slate-400 pb-4">
             Proyecto educativo y experimental. Consulta la
             <a href="https://emirodgar.es/quien-gobierna-cyl" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
@@ -347,6 +360,7 @@
             renderConsejeros();
             renderSucesionTable();
             renderSources();
+            renderFAQ();
         }
 
         function formatNumber(n) {
@@ -367,6 +381,119 @@
             return `${parseInt(d, 10)} de ${meses[parseInt(m, 10) - 1]} de ${y}`;
         }
 
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen
+        // la composición vigente de "presidente"/"vicepresidentes"/"consejeros"/"kpis"/"legislatura".
+        function getFAQs() {
+            const presidente = currentDataset.presidente;
+            const vicepresidentes = currentDataset.vicepresidentes || [];
+            const legislatura = currentDataset.legislatura || {};
+            const kpis = {};
+            (currentDataset.kpis || []).forEach(k => { kpis[k.id] = k; });
+
+            const faqs = [];
+
+            if (presidente) {
+                faqs.push({
+                    question: '¿Cuántos años lleva el presidente actual en el cargo?',
+                    answer: `${presidente.nombre} (${presidente.partido}) es presidente de la Junta desde el ${fmtFechaLarga(presidente.enCargoDesde)}, lo que son ${presidente.aniosEnCargo} años en el cargo de forma ininterrumpida.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Qué diferencia hay entre presidente, vicepresidente y consejero?',
+                answer: 'El presidente dirige el Gobierno autonómico y nombra y cesa libremente a los demás miembros. Los vicepresidentes le sustituyen en caso de ausencia y, en Castilla y León, también dirigen su propia consejería: no es un cargo solo protocolario. Los consejeros están al frente de una consejería concreta, con competencias sobre una o varias áreas de gobierno.'
+            });
+
+            if (vicepresidentes.length) {
+                faqs.push({
+                    question: '¿Qué significa que una vicepresidencia tenga "cartera"?',
+                    answer: `Significa que, además de sustituir al presidente en su ausencia, la persona también dirige una consejería propia con competencias concretas. En este Gobierno, las ${vicepresidentes.length} vicepresidencias tienen cartera: ${vicepresidentes.map(v => `${v.nombre} (${v.cargo})`).join(' y ')}.`
+                });
+            }
+
+            if (kpis.reparto) {
+                faqs.push({
+                    question: '¿Cómo se reparten las consejerías en un gobierno de coalición como este?',
+                    answer: `Cada partido de la coalición se queda con un número de consejerías pactado en el acuerdo de gobierno, no necesariamente proporcional a sus escaños. En este Gobierno, el reparto es ${kpis.reparto.value} (${kpis.reparto.unit}): ${kpis.reparto.detail}.`
+                });
+            }
+
+            if (kpis.nuevas) {
+                faqs.push({
+                    question: '¿Qué significa que alguien sea una "cara nueva" en el Gobierno?',
+                    answer: `Que la persona no había formado parte antes del Consejo de Gobierno de la Junta, aunque hubiera ocupado otros cargos públicos (por ejemplo, en las Cortes). En el Gobierno actual hay ${kpis.nuevas.value} caras nuevas: ${kpis.nuevas.detail}.`
+                });
+            }
+
+            if (kpis.veterano) {
+                faqs.push({
+                    question: '¿Quién es el miembro más veterano del Gobierno actual?',
+                    answer: `${kpis.veterano.detail}. Es la persona con más años consecutivos en el Consejo de Gobierno (${kpis.veterano.value}), con independencia de qué consejería haya ocupado en cada momento.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Qué significa el "predecesor en el cargo" de cada consejero?',
+                answer: 'Es la persona que ocupaba esa misma consejería (o unas competencias equivalentes) inmediatamente antes del titular actual, con su partido y el periodo exacto en el que estuvo. Cuando una consejería se crea fusionando o repartiendo competencias de otras anteriores, se indica de forma explícita en vez de forzar un único predecesor artificial.'
+            });
+
+            if (legislatura.numero) {
+                faqs.push({
+                    question: '¿De qué legislatura es este Gobierno y qué coalición lo sustenta?',
+                    answer: `Es la legislatura ${legislatura.numero}, formada tras las elecciones autonómicas del ${fmtFechaLarga(legislatura.fechaEleccion)}, con un gobierno de coalición ${legislatura.coalicion} (${legislatura.escanosPP} escaños del PP y ${legislatura.escanosVox} de Vox, sobre un total de ${legislatura.totalEscanos}).`
+                });
+            }
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualiza este panel?',
+                answer: 'Se revisa cada vez que hay un cambio en el Gobierno: un cese, un nombramiento o una remodelación de consejerías. No sigue un calendario de publicación periódico como los paneles económicos, porque su fuente no es una estadística oficial recurrente.'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden estos datos?',
+                answer: 'De la web oficial del Gobierno de Castilla y León, del dosier de composición del Consejo de Gobierno del Senado, de Wikipedia y de la cobertura de prensa regional sobre los nombramientos. El detalle completo está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
+        }
+
         function setupEventListeners() {
             document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
             document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
@@ -382,6 +509,18 @@
                 resumenToggle.addEventListener('click', () => {
                     const body = document.getElementById('resumenEjecutivoBody');
                     setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
                 });
             }
         }

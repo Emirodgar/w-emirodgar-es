@@ -1,6 +1,6 @@
 ---
 name: actualizar-quien-gobierna-cyl
-description: Actualiza ¿Quién Gobierna CyL? con la composición vigente del Consejo de Gobierno de la Junta de Castilla y León (presidente, vicepresidencias y consejerías), sus competencias, partido, fecha de nombramiento, predecesor y ficha de Wikipedia. Usar cuando el usuario pida "actualiza ¿Quién Gobierna CyL?", "actualiza el panel del Gobierno de Castilla y León", "hay un cambio de consejero/remodelación de gobierno" o similar.
+description: Actualiza ¿Quién Gobierna CyL? con la composición vigente del Consejo de Gobierno de la Junta de Castilla y León (presidente, vicepresidencias y consejerías), sus competencias, partido, fecha de nombramiento, predecesor, ficha de Wikipedia y su sección de Preguntas Frecuentes (FAQ, con marcado FAQPage/JSON-LD, autogenerada a partir de los datos). Usar cuando el usuario pida "actualiza ¿Quién Gobierna CyL?", "actualiza el panel del Gobierno de Castilla y León", "hay un cambio de consejero/remodelación de gobierno" o similar.
 ---
 
 # Actualizar ¿Quién Gobierna CyL?
@@ -146,6 +146,18 @@ la presidencia en el partido que corresponda) y sus etiquetas ("N PP", "N Vox").
 y con `PARTY_STYLES` de `index.html` — si cambias esos colores en un sitio, cámbialos en los tres. Si
 aparece un tercer partido en el Gobierno, añade una tercera barra y decide un color nuevo consistente en
 los tres sitios.
+
+## Preguntas Frecuentes (FAQ)
+
+El panel cierra con una sección de FAQ con marcado `FAQPage` (schema.org/JSON-LD) para SEO. **No se guarda
+en `data.json`**: se genera en `index.html` (función `getFAQs()`), tanto el texto visible como el JSON-LD
+inyectado en `<script id="faqStructuredData">`, a partir de `presidente`, `vicepresidentes`, `kpis` y
+`legislatura` — se mantiene siempre alineada con la composición vigente sin ningún paso manual adicional.
+No tienes que escribir ni actualizar preguntas o respuestas: basta con mantener actualizados esos campos
+(pasos de arriba) para que la FAQ quede correcta.
+
+Solo tócala si el usuario pide explícitamente añadir, quitar o reformular alguna pregunta — en ese caso,
+edita el array que construye `getFAQs()` en `index.html`, no un campo de `data.json`.
 
 ## Notas
 

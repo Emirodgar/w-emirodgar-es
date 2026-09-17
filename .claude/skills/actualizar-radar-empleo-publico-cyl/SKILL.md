@@ -1,6 +1,6 @@
 ---
 name: actualizar-radar-empleo-publico-cyl
-description: Actualiza el Radar de Empleo Público CyL con las convocatorias, plazas ofertadas, bolsas de empleo, sedes de examen, la plantilla de la Junta por provincia, los perfiles profesionales más demandados y el listado de las últimas convocatorias publicadas. Usar cuando el usuario pida "actualiza el Radar de Empleo Público CyL", "actualiza el panel de oposiciones de Castilla y León", "refresca las convocatorias/plantilla de CyL" o similar.
+description: Actualiza el Radar de Empleo Público CyL con las convocatorias, plazas ofertadas, bolsas de empleo, sedes de examen, la plantilla de la Junta por provincia, los perfiles profesionales más demandados, el listado de las últimas convocatorias publicadas y su sección de Preguntas Frecuentes (FAQ, con marcado FAQPage/JSON-LD, autogenerada a partir de los datos). Usar cuando el usuario pida "actualiza el Radar de Empleo Público CyL", "actualiza el panel de oposiciones de Castilla y León", "refresca las convocatorias/plantilla de CyL" o similar.
 ---
 
 # Actualizar Radar de Empleo Público CyL
@@ -323,6 +323,18 @@ para que combine con la leyenda estática de `index.html` (`.legend-swatch--blue
 
 El panel completo ([proyectos/radar-empleo-publico-cyl/index.html](../../../proyectos/radar-empleo-publico-cyl/index.html))
 sigue usando Chart.js con sus 6 gráficos interactivos — eso no cambia, solo se quitó Chart.js de la home.
+
+## Preguntas Frecuentes (FAQ)
+
+El panel cierra con una sección de FAQ con marcado `FAQPage` (schema.org/JSON-LD) para SEO. **No se guarda
+en `data.json`**: se genera en `index.html` (función `getFAQs()`), tanto el texto visible como el JSON-LD
+inyectado en `<script id="faqStructuredData">`, a partir de `indicators`, `perfiles` y `provincias` — se
+mantiene siempre alineada con las cifras vigentes sin ningún paso manual adicional. No tienes que escribir
+ni actualizar preguntas o respuestas: basta con mantener actualizados esos arrays (pasos de arriba) para
+que la FAQ quede correcta.
+
+Solo tócala si el usuario pide explícitamente añadir, quitar o reformular alguna pregunta — en ese caso,
+edita el array que construye `getFAQs()` en `index.html`, no un campo de `data.json`.
 
 ## Notas
 

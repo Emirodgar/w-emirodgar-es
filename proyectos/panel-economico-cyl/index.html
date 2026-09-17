@@ -6,6 +6,8 @@
     <title>Panel Económico CyL | Presupuestos, Subvenciones y Mercado Laboral de Castilla y León</title>
     <meta name="description" content="Panel público con la evolución del presupuesto autonómico, las subvenciones concedidas, el catálogo de ayudas y el mercado laboral (paro, afiliación, contratos) de Castilla y León, con detalle por provincia.">
     <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js CDN -->
@@ -332,6 +334,17 @@
             <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
         </section>
 
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este panel y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
         <p class="text-center text-xs text-slate-400 pb-4">
             Proyecto educativo y experimental. Consulta la
             <a href="https://emirodgar.es/panel-economico-cyl" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
@@ -469,6 +482,7 @@
             renderTable();
             renderProvinciasTable();
             renderSources();
+            renderFAQ();
         }
 
         function formatNumber(n) {
@@ -480,6 +494,141 @@
             const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
             const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
             return isNeg ? `-${result}` : result;
+        }
+
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen
+        // los valores vigentes de "indicators"/"indicatorsEmpleo"/"comparativaEspana"/"provincias".
+        function getIndicatorById(arr, id) {
+            return (arr || []).find(i => i.id === id) || null;
+        }
+
+        function getFAQs() {
+            const presupuesto = getIndicatorById(currentDataset.indicators, 'presupuesto');
+            const brecha = getIndicatorById(currentDataset.indicators, 'brecha');
+            const concedido = getIndicatorById(currentDataset.indicators, 'concedido');
+            const catalogo = getIndicatorById(currentDataset.indicators, 'catalogo');
+            const paroReg = getIndicatorById(currentDataset.indicatorsEmpleo, 'paro');
+            const afiliacion = getIndicatorById(currentDataset.indicatorsEmpleo, 'afiliacion');
+            const indefinidos = getIndicatorById(currentDataset.indicatorsEmpleo, 'indefinidos');
+            const comp = {};
+            (currentDataset.comparativaEspana || []).forEach(c => { comp[c.id] = c; });
+            const provincias = currentDataset.provincias || [];
+
+            const faqs = [];
+
+            if (presupuesto) {
+                faqs.push({
+                    question: '¿Qué significa que el presupuesto esté "prorrogado"?',
+                    answer: `Cuando unas Cortes no aprueban un nuevo proyecto de Presupuestos, la ley obliga a prorrogar automáticamente el del año anterior hasta que se apruebe uno nuevo. El presupuesto vigente de Castilla y León es de ${formatNumber(presupuesto.currentValue)} M€ (${presupuesto.changeLabel.toLowerCase()}).`
+                });
+            }
+
+            if (brecha) {
+                faqs.push({
+                    question: '¿Qué es la "brecha" frente al proyecto de Presupuestos rechazado?',
+                    answer: `Es la diferencia entre lo que la Junta propuso gastar en su proyecto de Presupuestos y lo que finalmente sigue en vigor por prórroga. Ahora mismo esa brecha es de ${formatNumber(brecha.currentValue)} M€: el gasto que el Gobierno autonómico quería presupuestar para este ejercicio pero no puede ejecutar.`
+                });
+            }
+
+            if (concedido && catalogo) {
+                faqs.push({
+                    question: '¿Qué diferencia hay entre el "importe concedido" y el "catálogo de líneas de ayuda"?',
+                    answer: `El importe concedido es el dinero que la Junta ha entregado efectivamente en subvenciones (último dato completo: ${formatNumber(concedido.currentValue)} M€, de 2021 — el portal de datos abiertos dejó de publicar este detalle en 2022). El catálogo de líneas de ayuda, en cambio, cuenta cuántas convocatorias de ayudas distintas se publican cada año, con independencia de cuánto dinero se conceda al final: en 2025 se publicaron ${formatNumber(catalogo.currentValue)} líneas.`
+                });
+            }
+
+            if (paroReg && comp.paroEPA) {
+                faqs.push({
+                    question: '¿Qué diferencia hay entre la tasa de paro EPA y el paro registrado?',
+                    answer: `La tasa de paro EPA (Encuesta de Población Activa) es una encuesta trimestral del INE que estima qué porcentaje de la población activa está desempleada, y es la referencia oficial para comparar territorios: la de Castilla y León está en el ${formatNumber(comp.paroEPA.valorCyL)}%. El paro registrado es un recuento administrativo mensual de las personas inscritas como demandantes de empleo en las oficinas del SEPE: ${formatNumber(paroReg.currentValue)} personas en Castilla y León. Miden cosas distintas y no tiene por qué coincidir su evolución.`
+                });
+            }
+
+            if (afiliacion) {
+                faqs.push({
+                    question: '¿Qué mide la afiliación a la Seguridad Social?',
+                    answer: `Cuenta el número de personas que cotizan a la Seguridad Social en un momento dado, ya sea como asalariados o autónomos: es el indicador más directo del empleo real en activo. En Castilla y León hay ${formatNumber(afiliacion.currentValue)} afiliados (${afiliacion.changeLabel}).`
+                });
+            }
+
+            if (indefinidos) {
+                faqs.push({
+                    question: '¿Por qué importa el porcentaje de contratos indefinidos?',
+                    answer: `Cuantos más contratos indefinidos frente a temporales, más estabilidad laboral tiene una región. En Castilla y León, el ${formatNumber(indefinidos.currentValue)}% de los contratos registrados en el último mes fueron indefinidos (${indefinidos.changeLabel}); el resto son temporales.`
+                });
+            }
+
+            if (Object.keys(comp).length) {
+                const mejor = [];
+                const peor = [];
+                Object.values(comp).forEach(c => {
+                    const esMejor = c.mejorSiMayor ? c.valorCyL > c.valorEspana : c.valorCyL < c.valorEspana;
+                    (esMejor ? mejor : peor).push(c.title.toLowerCase());
+                });
+                faqs.push({
+                    question: '¿Castilla y León va mejor o peor que España en estos indicadores?',
+                    answer: `Depende del indicador: Castilla y León está mejor que España en ${mejor.length ? mejor.join(', ') : 'ninguno de los indicadores comparados'}, y peor en ${peor.length ? peor.join(', ') : 'ninguno'}. Puedes ver el detalle exacto en la sección "¿Cómo Avanza Castilla y León?" de este mismo panel.`
+                });
+            }
+
+            if (provincias.length) {
+                const sorted = [...provincias].sort((a, b) => b.pctIndefinido - a.pctIndefinido);
+                const best = sorted[0];
+                const worst = sorted[sorted.length - 1];
+                faqs.push({
+                    question: '¿Qué provincia tiene mejor o peor calidad en la contratación?',
+                    answer: `Medido por el porcentaje de contratos indefinidos sobre el total, ${best.provincia} lidera con un ${formatNumber(best.pctIndefinido)}%, frente al ${formatNumber(worst.pctIndefinido)}% de ${worst.provincia}, la más baja de las 9 provincias. Puedes ver el detalle completo en la tabla de este panel.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualizan estos datos?',
+                answer: 'El presupuesto y el catálogo de líneas de ayuda se revisan cuando hay novedad legislativa o una nueva convocatoria; el paro registrado, la afiliación y los contratos se publican cada mes; y el importe de subvenciones concedidas no se actualiza desde 2022, al haber dejado de publicarse ese detalle en el portal de datos abiertos de la Junta.'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden los datos de este panel?',
+                answer: 'De fuentes oficiales: las leyes de Presupuestos y su tramitación en las Cortes de Castilla y León, el portal de datos abiertos de la Junta (subvenciones, líneas de ayuda, paro, afiliación y contratos por provincia) y el INE, el SEPE y el Ministerio de Inclusión, Seguridad Social y Migraciones para la comparativa con España. El detalle completo, indicador por indicador, está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
         }
 
         function setupEventListeners() {
@@ -497,6 +646,18 @@
                 resumenToggle.addEventListener('click', () => {
                     const body = document.getElementById('resumenEjecutivoBody');
                     setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
                 });
             }
         }

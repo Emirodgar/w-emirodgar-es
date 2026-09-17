@@ -62,6 +62,24 @@
         </div>
       </section>
 
+    <section id="riesgo-recesion" class="section thermo-section">
+        <h2>Termómetro de Riesgo de Recesión</h2>
+        <p>Un vistazo rápido al riesgo de recesión en España, calculado en vivo a partir de los indicadores de MacroData España.</p>
+        <div class="thermo-card">
+            <div class="thermo-visual" id="homeThermoSvg" aria-hidden="true"></div>
+            <div class="thermo-info">
+                <div class="thermo-score-row">
+                    <span class="thermo-score" id="homeThermoScore">--</span>
+                    <span class="thermo-score-max">/ 100</span>
+                    <span class="thermo-band" id="homeThermoBand">Cargando…</span>
+                </div>
+                <div class="thermo-components" id="homeThermoComponents"></div>
+                <p class="thermo-disclaimer">Índice propio y simplificado con fines divulgativos (no es una predicción oficial ni de ninguna institución). No incorpora el tipo de la Fed.</p>
+                <a href="https://emirodgar.es/proyectos/macrodata-espana/" class="link thermo-cta">Ver análisis de parámetros económicos →</a>
+            </div>
+        </div>
+    </section>
+
     <section id="proyectos" class="section bg-light proyectos-section">
         <h2>Proyectos</h2>
         <p>Prototipos y pruebas de concepto que aplican datos e IA a problemas reales.</p>
@@ -262,6 +280,134 @@
                     if (resumenEl) {
                         resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
                     }
+                });
+        });
+
+        // Termómetro de Riesgo de Recesión: mismo cálculo que en el panel MacroData España,
+        // reproducido aquí a partir de su data.json para que la home muestre siempre el
+        // mismo resultado en vivo, sin duplicar el dato en ningún sitio.
+        document.addEventListener('DOMContentLoaded', function () {
+            const svgEl = document.getElementById('homeThermoSvg');
+            const scoreEl = document.getElementById('homeThermoScore');
+            const bandEl = document.getElementById('homeThermoBand');
+            const componentsEl = document.getElementById('homeThermoComponents');
+            if (!svgEl) return;
+
+            const RISK_BANDS = [
+                { max: 30, label: 'Riesgo Bajo', color: '#10b981' },
+                { max: 55, label: 'Riesgo Moderado', color: '#f59e0b' },
+                { max: 75, label: 'Riesgo Elevado', color: '#f97316' },
+                { max: 100, label: 'Riesgo Alto', color: '#e11d48' }
+            ];
+
+            function clampRisk(v, min, max) { return Math.max(min, Math.min(max, v)); }
+
+            function riskLerp(v, good, bad) {
+                if (typeof v !== 'number' || isNaN(v)) return null;
+                return clampRisk((v - good) / (bad - good) * 100, 0, 100);
+            }
+
+            function getIndicator(indicators, id) {
+                return (indicators || []).find(i => i.id === id) || null;
+            }
+
+            function formatNumber(n) {
+                if (typeof n !== 'number') return n;
+                const isNeg = n < 0;
+                const abs = Math.abs(n);
+                const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+                const [intPart, decPart] = str.split('.');
+                const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+                const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
+                return isNeg ? `-${result}` : result;
+            }
+
+            function computeRecessionRisk(indicators) {
+                const pib = getIndicator(indicators, 'pib');
+                const paro = getIndicator(indicators, 'paro');
+                const ipc = getIndicator(indicators, 'ipc');
+                const prima = getIndicator(indicators, 'prima');
+                const bce = getIndicator(indicators, 'bce');
+                if (!pib || !paro || !ipc || !prima || !bce) return null;
+
+                const riskCrecimiento = riskLerp(pib.currentValue, 2.5, -1);
+                const riskEmpleo = riskLerp(paro.change, 0, 2);
+                const riskInflacion = riskLerp(Math.abs(ipc.currentValue - 2), 0.5, 4.5);
+                const riskTipos = riskLerp(bce.currentValue, 0, 5);
+                const riskPrima = riskLerp(prima.currentValue, 0, 300);
+                if ([riskCrecimiento, riskEmpleo, riskInflacion, riskTipos, riskPrima].some(v => v === null)) return null;
+                const riskFinanciero = (riskTipos + riskPrima) / 2;
+
+                const total = 0.35 * riskCrecimiento + 0.25 * riskEmpleo + 0.15 * riskInflacion + 0.25 * riskFinanciero;
+                const band = RISK_BANDS.find(b => total <= b.max) || RISK_BANDS[RISK_BANDS.length - 1];
+
+                return {
+                    score: Math.round(total * 10) / 10,
+                    band,
+                    components: [
+                        { label: 'Crecimiento (PIB)', value: Math.round(riskCrecimiento) },
+                        { label: 'Empleo (variación del paro)', value: Math.round(riskEmpleo) },
+                        { label: 'Inflación', value: Math.round(riskInflacion) },
+                        { label: 'Condiciones financieras', value: Math.round(riskFinanciero) }
+                    ]
+                };
+            }
+
+            function renderThermoSvg(score, color) {
+                const tubeTop = 20, tubeBottom = 250, bulbCy = 272, bulbR = 34;
+                const fillY = tubeTop + (1 - clampRisk(score, 0, 100) / 100) * (tubeBottom - tubeTop);
+                const ticks = [30, 55, 75].map(t => tubeTop + (1 - t / 100) * (tubeBottom - tubeTop));
+                return `
+                    <svg viewBox="0 0 140 320" role="img" aria-label="Termómetro de riesgo de recesión: ${score} sobre 100" style="width:100%;height:100%">
+                        <defs>
+                            <clipPath id="homeThermoClip">
+                                <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20"></rect>
+                                <circle cx="70" cy="${bulbCy}" r="${bulbR}"></circle>
+                            </clipPath>
+                        </defs>
+                        <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="#f1f5f9"></rect>
+                        <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="#f1f5f9"></circle>
+                        <g clip-path="url(#homeThermoClip)">
+                            <rect x="46" y="${fillY}" width="48" height="${320 - fillY}" fill="${color}"></rect>
+                        </g>
+                        <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="none" stroke="#cbd5e1" stroke-width="3"></rect>
+                        <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="none" stroke="#cbd5e1" stroke-width="3"></circle>
+                        ${ticks.map(y => `<line x1="94" y1="${y.toFixed(1)}" x2="106" y2="${y.toFixed(1)}" stroke="#94a3b8" stroke-width="2"></line>`).join('')}
+                    </svg>
+                `;
+            }
+
+            fetch('proyectos/macrodata-espana/data.json', { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar data.json');
+                    return res.json();
+                })
+                .then(dataset => {
+                    const risk = computeRecessionRisk(dataset.indicators);
+                    if (!risk) throw new Error('Datos insuficientes para el termómetro');
+
+                    svgEl.innerHTML = renderThermoSvg(risk.score, risk.band.color);
+                    scoreEl.textContent = formatNumber(risk.score);
+                    scoreEl.style.color = risk.band.color;
+                    bandEl.textContent = risk.band.label;
+                    bandEl.style.backgroundColor = risk.band.color + '1a';
+                    bandEl.style.color = risk.band.color;
+
+                    componentsEl.innerHTML = risk.components.map(c => `
+                        <div>
+                            <div class="thermo-component-label">
+                                <span>${c.label}</span>
+                                <span class="thermo-component-value">${c.value}/100</span>
+                            </div>
+                            <div class="thermo-bar-track">
+                                <div class="thermo-bar-fill" style="width:${c.value}%;background-color:${risk.band.color}"></div>
+                            </div>
+                        </div>
+                    `).join('');
+                })
+                .catch(() => {
+                    scoreEl.textContent = '—';
+                    bandEl.textContent = 'No disponible ahora mismo';
                 });
         });
     </script>

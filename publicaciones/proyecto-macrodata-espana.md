@@ -28,6 +28,7 @@ Es un dashboard web, pensado como proyecto educativo y experimental, que central
 - **Tipos de interés**: el tipo oficial del BCE y el de la Reserva Federal de EE. UU., frente al Euríbor a 12 meses.
 - **Crecimiento del PIB**: tasa de variación interanual de la economía española.
 - **Tasa de paro (EPA)**: tasa de paro trimestral de la Encuesta de Población Activa, con su variación interanual.
+- **Preguntas frecuentes**: qué significan los términos del panel (IPC, prima de riesgo, Euríbor, PIB, EPA...) y cómo interpretar sus datos, con respuestas que se generan a partir de las cifras vigentes —nunca quedan desactualizadas— y llevan marcado de datos estructurados (FAQPage) para buscadores.
 
 Cada indicador se muestra con su valor actual, su variación respecto al periodo anterior y su evolución histórica en gráficas interactivas, además de una tabla con el detalle mes a mes.
 

@@ -6,6 +6,8 @@
     <title>Radar de Empleo Público CyL | Oposiciones y Convocatorias de Castilla y León</title>
     <meta name="description" content="Panel público con la evolución de las convocatorias de empleo público, las plazas ofertadas, el catálogo de oposiciones y la plantilla de la Junta de Castilla y León, con detalle por provincia.">
     <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js CDN -->
@@ -309,6 +311,17 @@
             <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
         </section>
 
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este panel y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
         <p class="text-center text-xs text-slate-400 pb-4">
             Proyecto educativo y experimental. Consulta la
             <a href="https://emirodgar.es/radar-empleo-publico-cyl" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
@@ -444,6 +457,7 @@
             renderProvinciasTable();
             renderRecientesTable();
             renderSources();
+            renderFAQ();
         }
 
         function formatNumber(n) {
@@ -455,6 +469,135 @@
             const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
             const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
             return isNeg ? `-${result}` : result;
+        }
+
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen
+        // los valores vigentes de "indicators"/"perfiles"/"provincias"/"sedes".
+        function getIndicatorById(arr, id) {
+            return (arr || []).find(i => i.id === id) || null;
+        }
+
+        function getFAQs() {
+            const convocatorias = getIndicatorById(currentDataset.indicators, 'convocatorias');
+            const plazas = getIndicatorById(currentDataset.indicators, 'plazas');
+            const historico = getIndicatorById(currentDataset.indicators, 'historico');
+            const abiertas = getIndicatorById(currentDataset.indicators, 'abiertas');
+            const efectivos = getIndicatorById(currentDataset.indicators, 'efectivos');
+            const perfiles = currentDataset.perfiles || [];
+            const provincias = currentDataset.provincias || [];
+
+            const faqs = [];
+
+            faqs.push({
+                question: '¿Qué es una convocatoria de empleo público?',
+                answer: 'Es el acto por el que la Junta de Castilla y León abre un proceso selectivo (oposición o concurso-oposición) para cubrir una o varias plazas de personal funcionario o laboral, publicado en el BOCYL con sus bases, plazas ofertadas y plazo de solicitud.'
+            });
+
+            faqs.push({
+                question: '¿Qué diferencia hay entre una convocatoria y una bolsa de empleo?',
+                answer: 'Una convocatoria selecciona personal para plazas fijas de plantilla mediante una oposición o concurso-oposición. Una bolsa de empleo, en cambio, crea una lista de aspirantes ya evaluados de la que se tira para cubrir necesidades temporales (bajas, sustituciones, refuerzos), sin que suponga una plaza fija.'
+            });
+
+            if (abiertas) {
+                faqs.push({
+                    question: '¿Qué significa que una convocatoria esté "abierta" o "cerrada"?',
+                    answer: `"Abierta" significa que el plazo de solicitud sigue vigente en la fecha de esta actualización; "cerrada", que ya ha finalizado (haya habido o no examen todavía). Ahora mismo hay ${formatNumber(abiertas.currentValue)} convocatorias con el plazo abierto. ${abiertas.description || ''}`
+                });
+            }
+
+            if (convocatorias && plazas) {
+                faqs.push({
+                    question: '¿Cuántas convocatorias y plazas se han publicado recientemente?',
+                    answer: `${convocatorias.title.replace('Convocatorias en', 'En')} se publicaron ${formatNumber(convocatorias.currentValue)} convocatorias (${convocatorias.changeLabel.toLowerCase()}), por un total de ${formatNumber(plazas.currentValue)} plazas ofertadas (${plazas.changeLabel.toLowerCase()}).`
+                });
+            }
+
+            if (historico) {
+                faqs.push({
+                    question: '¿Qué es el "total histórico acumulado" de plazas?',
+                    answer: `Es la suma de todas las plazas convocadas desde que hay datos disponibles en el portal de datos abiertos de la Junta, sin importar el año: ${formatNumber(historico.currentValue)} plazas en total. ${historico.description || ''}`
+                });
+            }
+
+            faqs.push({
+                question: '¿Por qué la sede del examen no coincide con la provincia de destino de la plaza?',
+                answer: 'Porque muchos procesos selectivos centralizan sus ejercicios en una única sede (habitualmente Valladolid) por eficiencia, aunque las plazas convocadas correspondan a distintas provincias de la Comunidad. Por eso este panel distingue entre "plazas por sede de examen" y "personal de la Junta por provincia" (esta última sí refleja dónde trabaja realmente cada persona).'
+            });
+
+            if (perfiles.length) {
+                const top = [...perfiles].sort((a, b) => b.plazas - a.plazas)[0];
+                faqs.push({
+                    question: '¿Cuál es el perfil profesional con más plazas convocadas?',
+                    answer: `Actualmente es "${top.perfil}", con ${formatNumber(top.plazas)} plazas repartidas en ${formatNumber(top.convocatorias)} convocatorias. Puedes ver el reparto completo entre los distintos perfiles profesionales en el gráfico de este panel.`
+                });
+            }
+
+            if (efectivos) {
+                faqs.push({
+                    question: '¿Cuántos efectivos tiene la Junta de Castilla y León?',
+                    answer: `${formatNumber(efectivos.currentValue)} ${efectivos.unit} (${efectivos.changeLabel.toLowerCase()}). Es la plantilla real de personal funcionario y laboral de la Administración General de la Junta, con datos publicados dos veces al año.`
+                });
+            }
+
+            if (provincias.length) {
+                const sorted = [...provincias].sort((a, b) => b.efectivos - a.efectivos);
+                const top = sorted[0];
+                const sube = provincias.filter(p => p.variacion > 0).length;
+                const baja = provincias.filter(p => p.variacion < 0).length;
+                faqs.push({
+                    question: '¿Qué provincia tiene más personal de la Junta y cómo ha evolucionado?',
+                    answer: `${top.provincia} concentra el mayor número de efectivos, con ${formatNumber(top.efectivos)}. En el último año, ${sube} de las 9 provincias han aumentado su plantilla y ${baja} la han reducido. Puedes ver el detalle de las 9 provincias en la tabla de este panel.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualiza este panel?',
+                answer: 'Las convocatorias, plazas y bolsas de empleo se revisan periódicamente a partir del portal de datos abiertos de la Junta; la plantilla por provincia solo cambia dos veces al año (enero y julio), cuando se publica una nueva "Estadística de personal".'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden estos datos?',
+                answer: 'Del portal de datos abiertos de la Junta de Castilla y León (analisis.datosabiertos.jcyl.es), combinando los datasets "Convocatorias de Empleo Público" y "Estadísticas de personal", con enlace directo a la ficha oficial de cada convocatoria en empleopublico.jcyl.es. El detalle completo está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
         }
 
         function setupEventListeners() {
@@ -472,6 +615,18 @@
                 resumenToggle.addEventListener('click', () => {
                     const body = document.getElementById('resumenEjecutivoBody');
                     setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
                 });
             }
         }

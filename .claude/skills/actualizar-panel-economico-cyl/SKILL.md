@@ -1,6 +1,6 @@
 ---
 name: actualizar-panel-economico-cyl
-description: Actualiza el Panel Económico CyL con el presupuesto autonómico vigente, las subvenciones concedidas, el catálogo de líneas de ayuda, el mercado laboral (paro, afiliación, contratos, detalle por provincia) y el termómetro comparativo con España (PIB, paro EPA, paro registrado, afiliación) de Castilla y León. Usar cuando el usuario pida "actualiza el Panel Económico CyL", "actualiza el panel de presupuestos de Castilla y León", "refresca los datos de subvenciones/empleo de CyL" o similar.
+description: Actualiza el Panel Económico CyL con el presupuesto autonómico vigente, las subvenciones concedidas, el catálogo de líneas de ayuda, el mercado laboral (paro, afiliación, contratos, detalle por provincia), el termómetro comparativo con España (PIB, paro EPA, paro registrado, afiliación) de Castilla y León y su sección de Preguntas Frecuentes (FAQ, con marcado FAQPage/JSON-LD, autogenerada a partir de los datos). Usar cuando el usuario pida "actualiza el Panel Económico CyL", "actualiza el panel de presupuestos de Castilla y León", "refresca los datos de subvenciones/empleo de CyL" o similar.
 ---
 
 # Actualizar Panel Económico CyL
@@ -333,6 +333,19 @@ el máximo (con un 15% de margen visual), los reparte a lo largo de un `viewBox`
 El panel completo ([proyectos/panel-economico-cyl/index.html](../../../proyectos/panel-economico-cyl/index.html))
 sigue usando Chart.js con sus 7 gráficos interactivos (3 de presupuesto/subvenciones + 4 de mercado
 laboral) — eso no cambia, solo se quitó Chart.js de la home.
+
+## Preguntas Frecuentes (FAQ)
+
+El panel cierra con una sección de FAQ con marcado `FAQPage` (schema.org/JSON-LD) para SEO. **No se guarda
+en `data.json`**: se genera en `index.html` (función `getFAQs()`), tanto el texto visible como el JSON-LD
+inyectado en `<script id="faqStructuredData">`, a partir de `indicators`, `indicatorsEmpleo`,
+`comparativaEspana` y `provincias` — se mantiene siempre alineada con las cifras vigentes sin ningún paso
+manual adicional. No tienes que escribir ni actualizar preguntas o respuestas: basta con mantener
+actualizados esos arrays (pasos de arriba) para que la FAQ quede correcta.
+
+Solo tócala si el usuario pide explícitamente añadir, quitar o reformular alguna pregunta — en ese caso,
+edita el array que construye `getFAQs()` en `index.html`, no un campo de `data.json`. Si añades una
+pregunta con datos dinámicos, interpólalos con `formatNumber()` igual que las demás.
 
 ## Notas
 

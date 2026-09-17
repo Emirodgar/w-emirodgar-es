@@ -1,6 +1,6 @@
 ---
 name: actualizar-macrodata-espana
-description: Actualiza el panel MacroData España con las últimas cifras oficiales de IPC, prima de riesgo, tipos del BCE, Euríbor, tipo de la Fed, PIB, tasa de paro EPA, la comparativa España vs. eurozona (IPCA, PIB, paro armonizado) y el termómetro de riesgo de recesión. Usar cuando el usuario pida "actualiza MacroData", "actualiza el panel económico", "refresca los indicadores económicos" o similar.
+description: Actualiza el panel MacroData España con las últimas cifras oficiales de IPC, prima de riesgo, tipos del BCE, Euríbor, tipo de la Fed, PIB, tasa de paro EPA, la comparativa España vs. eurozona (IPCA, PIB, paro armonizado), el termómetro de riesgo de recesión y la sección de Preguntas Frecuentes (FAQ, con marcado FAQPage/JSON-LD, autogenerada a partir de los datos). Usar cuando el usuario pida "actualiza MacroData", "actualiza el panel económico", "refresca los indicadores económicos" o similar.
 ---
 
 # Actualizar MacroData España
@@ -184,6 +184,36 @@ aproximada y cualitativa (p. ej. "el termómetro marca un nivel bajo, en torno a
 vez de citar el número exacto, ya que tú no ejecutas el JavaScript del panel y no puedes calcular el
 resultado exacto sin reproducir la fórmula a mano — si quieres citarlo con precisión, reprodúcela con los
 valores nuevos de `indicators` antes de escribir la cifra.
+
+## Preguntas Frecuentes (FAQ)
+
+El panel cierra con una sección de FAQ con marcado `FAQPage` (schema.org/JSON-LD) para SEO. **Tampoco se
+guarda en `data.json`**: se genera en `index.html` (función `getFAQs()`), tanto el texto visible como el
+JSON-LD inyectado en `<script id="faqStructuredData">`, a partir de `indicators`, `comparativaZonaEuro` y
+`computeRecessionRisk()` — igual que el termómetro, se mantiene siempre alineada con las cifras vigentes
+sin ningún paso manual adicional. No tienes que escribir ni actualizar preguntas o respuestas: basta con
+mantener actualizados `indicators`/`comparativaZonaEuro` (pasos de arriba) para que la FAQ quede correcta.
+
+Solo tócala si el usuario pide explícitamente añadir, quitar o reformular alguna pregunta — en ese caso,
+edita el array que construye `getFAQs()` en `index.html`, no un campo de `data.json`. Si añades una
+pregunta con datos dinámicos, interpólalos con `formatNumber()` igual que las demás, para mantener el
+formato de miles/decimales en español consistente con el resto del panel.
+
+Este mismo patrón (FAQ generada en JS + FAQPage/JSON-LD) se repite, con preguntas propias de cada dominio,
+en los otros tres paneles del sitio (Panel Económico CyL, Radar de Empleo Público CyL, ¿Quién Gobierna
+CyL?) — si el usuario pide ampliar/corregir las FAQ "en todos los paneles", repite el cambio en los
+`getFAQs()` de los cuatro `index.html`, no solo en el de MacroData España.
+
+## Termómetro de riesgo de recesión también en la home
+
+La fórmula de `computeRecessionRisk()` está **duplicada intencionadamente** en dos sitios: en
+`proyectos/macrodata-espana/index.html` (el panel) y en el `index.html` de la raíz del sitio (sección
+`#riesgo-recesion` de la home, que lee el mismo `proyectos/macrodata-espana/data.json` vía `fetch` para
+mostrar el mismo termómetro con un botón "Ver análisis de parámetros económicos" enlazando al panel). No
+hay forma de compartir código JS entre ambos ficheros en este sitio estático, así que **si algún día
+cambian los pesos o los umbrales de la fórmula, hay que actualizarlos en los dos sitios** (busca
+`riskLerp`/`RISK_BANDS`/`computeRecessionRisk` en ambos `index.html`). Como de costumbre, no toques esta
+fórmula sin que el usuario lo pida explícitamente.
 
 ## Sparkline SVG
 

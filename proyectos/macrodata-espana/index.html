@@ -6,6 +6,8 @@
     <title>MacroData España | Panel de Indicadores Económicos</title>
     <meta name="description" content="Panel público con la evolución de los principales indicadores macroeconómicos de España: IPC, prima de riesgo, tipos del BCE, Euríbor, Fed, PIB y paro, con un termómetro propio de riesgo de recesión.">
     <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Chart.js CDN -->
@@ -281,6 +283,17 @@
             <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
         </section>
 
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este panel y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
         <p class="text-center text-xs text-slate-400 pb-4">
             Proyecto educativo y experimental. Consulta la
             <a href="https://emirodgar.es/macrodata-espana" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
@@ -494,6 +507,7 @@
             renderCharts();
             renderTable();
             renderSources();
+            renderFAQ();
         }
 
         function formatNumber(n) {
@@ -679,6 +693,140 @@
             `;
         }
 
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen
+        // los valores vigentes de "indicators"/"comparativaZonaEuro"/el termómetro de riesgo.
+        function getFAQs() {
+            const ipc = getIndicator('ipc');
+            const prima = getIndicator('prima');
+            const bce = getIndicator('bce');
+            const euribor = getIndicator('euribor');
+            const fed = getIndicator('fed');
+            const pib = getIndicator('pib');
+            const paro = getIndicator('paro');
+            const hist = currentDataset.historicalData || [];
+            const last = hist[hist.length - 1] || {};
+            const risk = computeRecessionRisk();
+            const comp = {};
+            (currentDataset.comparativaZonaEuro || []).forEach(c => { comp[c.id] = c; });
+
+            const faqs = [];
+
+            if (ipc) {
+                faqs.push({
+                    question: '¿Qué es el IPC y qué diferencia hay entre el general y el subyacente?',
+                    answer: `El IPC (Índice de Precios de Consumo) mide cuánto suben o bajan los precios de la cesta de la compra de un año a otro. El IPC general incluye todos los productos; el subyacente excluye la energía y los alimentos frescos, sus componentes más volátiles, para mostrar la tendencia de fondo de los precios. Ahora mismo el IPC general está en el ${formatNumber(ipc.currentValue)}%${typeof last.ipcSubyacente === 'number' ? ` y el subyacente en el ${formatNumber(last.ipcSubyacente)}%` : ''}.`
+                });
+            }
+
+            if (prima) {
+                faqs.push({
+                    question: '¿Qué es la prima de riesgo?',
+                    answer: `Es el diferencial, en puntos básicos, entre lo que paga España y lo que paga Alemania por financiarse a 10 años en los mercados de deuda. Cuanto más alta, más desconfianza relativa de los inversores en la solvencia española frente a la alemana, que se toma como referencia por ser la más solvente de la eurozona. Ahora mismo está en ${formatNumber(prima.currentValue)} puntos básicos.`
+                });
+            }
+
+            if (bce && euribor) {
+                faqs.push({
+                    question: '¿Qué es el tipo de interés del BCE y cómo afecta al Euríbor?',
+                    answer: `Es el tipo al que el Banco Central Europeo presta dinero a los bancos (la "facilidad principal de financiación"), la principal herramienta de política monetaria de la eurozona. El Euríbor, el tipo de referencia de la mayoría de las hipotecas variables en España, tiende a moverse en la misma dirección que el tipo del BCE, aunque no es idéntico: ahora mismo el BCE está en el ${formatNumber(bce.currentValue)}% y el Euríbor a 12 meses en el ${formatNumber(euribor.currentValue)}%.`
+                });
+            }
+
+            if (fed) {
+                faqs.push({
+                    question: '¿Por qué aparece el tipo de interés de la Fed si este panel es de España?',
+                    answer: `El tipo de la Reserva Federal de Estados Unidos (Fed) no forma parte de la política monetaria de España ni de la eurozona, pero se incluye como referencia comparativa: permite ver si el ciclo de tipos en EE. UU. va en la misma dirección que el del BCE o se está desacoplando. Ahora mismo el tipo de la Fed está en el ${formatNumber(fed.currentValue)}%.`
+                });
+            }
+
+            if (pib) {
+                faqs.push({
+                    question: '¿Qué significa que el PIB crezca un determinado porcentaje?',
+                    answer: `El PIB (Producto Interior Bruto) mide el valor de todo lo que produce la economía española en un periodo. Que crezca un ${formatNumber(pib.currentValue)}% interanual significa que la economía es un ${formatNumber(pib.currentValue)}% más grande que en el mismo trimestre del año anterior. Es la medida de referencia del crecimiento económico agregado.`
+                });
+            }
+
+            if (paro) {
+                faqs.push({
+                    question: '¿Qué es la tasa de paro EPA y en qué se diferencia de la tasa armonizada de Eurostat?',
+                    answer: `La tasa de paro EPA, publicada cada trimestre por el INE, es la referencia oficial en España: ahora mismo está en el ${formatNumber(paro.currentValue)}%. Eurostat calcula además su propia tasa armonizada, con una metodología distinta que permite comparar países dentro de la UE${comp.paro ? ` — la última lectura sitúa a España en el ${formatNumber(comp.paro.valorEspana)}% frente al ${formatNumber(comp.paro.valorZonaEuro)}% de la eurozona` : ''}. Ambas conviven en este panel porque miden cosas ligeramente distintas: no busques que "cuadren" entre sí.`
+                });
+            }
+
+            if (risk) {
+                faqs.push({
+                    question: '¿Qué es el termómetro de riesgo de recesión y cómo se calcula?',
+                    answer: `Es un índice propio de este panel (0-100, no de ninguna institución oficial) que combina el crecimiento del PIB (35% del peso), la variación interanual del paro (25%), la distancia de la inflación al objetivo del 2% del BCE (15%) y las condiciones financieras —tipo del BCE y prima de riesgo— (25%). Ahora mismo marca ${formatNumber(risk.score)} sobre 100 (${risk.band.label.toLowerCase()}). No es una predicción, sino una forma simplificada y transparente de resumir varias señales en un solo número.`
+                });
+                faqs.push({
+                    question: '¿Qué significan las bandas de riesgo bajo, moderado, elevado y alto?',
+                    answer: 'Son los cuatro tramos en los que se divide el termómetro: de 0 a 30 puntos, riesgo bajo; de 30 a 55, moderado; de 55 a 75, elevado; y de 75 a 100, alto. Son umbrales propios de este panel, fijados de forma orientativa para facilitar la lectura del índice, no un estándar oficial de ningún organismo.'
+                });
+            }
+
+            if (Object.keys(comp).length) {
+                const mejor = [];
+                const peor = [];
+                Object.values(comp).forEach(c => {
+                    const esMejor = c.mejorSiMayor ? c.valorEspana > c.valorZonaEuro : c.valorEspana < c.valorZonaEuro;
+                    (esMejor ? mejor : peor).push(c.title.toLowerCase());
+                });
+                faqs.push({
+                    question: '¿España va mejor o peor que la eurozona ahora mismo?',
+                    answer: `Depende del indicador: España está mejor que la eurozona en ${mejor.length ? mejor.join(', ') : 'ninguno de los indicadores comparados'}, y peor en ${peor.length ? peor.join(', ') : 'ninguno'}. Puedes ver el detalle exacto en la sección "¿Cómo Avanza España Frente a la Eurozona?" de este mismo panel.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualizan estos datos?',
+                answer: 'Cada indicador tiene su propio calendario: el IPC y el Euríbor se publican cada mes, el PIB y la tasa de paro EPA cada trimestre, y los tipos del BCE y de la Fed solo cambian cuando sus respectivos bancos centrales celebran una reunión de política monetaria (no son mensuales). Este panel se revisa periódicamente para incorporar los datos más recientes ya publicados por cada fuente.'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden los datos de este panel?',
+                answer: 'De fuentes oficiales: el INE (IPC, PIB y tasa de paro EPA), el Banco Central Europeo (tipo de interés), la Reserva Federal de EE. UU. (tipo de interés), el Banco de España (Euríbor) y Eurostat (comparativa con la eurozona). El detalle completo, indicador por indicador, está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
+        }
+
         function setupEventListeners() {
             // Modal Open / Close
             document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
@@ -711,6 +859,18 @@
                 resumenToggle.addEventListener('click', () => {
                     const body = document.getElementById('resumenEjecutivoBody');
                     setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
                 });
             }
         }

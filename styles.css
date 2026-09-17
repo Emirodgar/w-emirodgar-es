@@ -295,6 +295,123 @@ a.link:hover {
     margin: 0 auto;
 }
 
+/* Termómetro de Riesgo de Recesión (home) */
+.thermo-section {
+    background-color: #ffffff;
+}
+
+.thermo-card {
+    max-width: 900px;
+    margin: 30px auto 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.thermo-visual {
+    width: 110px;
+    height: 250px;
+    flex-shrink: 0;
+    margin: 0 auto;
+}
+
+.thermo-info {
+    flex: 1 1 300px;
+    min-width: 260px;
+}
+
+.thermo-score-row {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.thermo-score {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #10b981;
+}
+
+.thermo-score-max {
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.thermo-band {
+    margin-left: auto;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    background-color: #f1f5f9;
+    color: #475569;
+}
+
+.thermo-components {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.thermo-component-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+
+.thermo-component-value {
+    font-family: monospace;
+    color: #475569;
+}
+
+.thermo-bar-track {
+    height: 8px;
+    background-color: #f1f5f9;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.thermo-bar-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.thermo-disclaimer {
+    margin-top: 18px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    line-height: 1.5;
+}
+
+.thermo-cta {
+    margin-top: 4px;
+    display: inline-block;
+}
+
+@media (max-width: 640px) {
+    .thermo-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .thermo-band {
+        margin-left: 0;
+    }
+    .thermo-component-label {
+        text-align: left;
+    }
+}
+
 /* Bloque de Proyectos */
 .proyectos-section {
     background-color: #f4f4f4;
