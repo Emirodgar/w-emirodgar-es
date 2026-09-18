@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Ayudas de Castilla y León y Salamanca | Prestaciones, Requisitos y Dónde Solicitarlas</title>
+    <meta name="description" content="Catálogo de las principales ayudas sociales de la Junta de Castilla y León, el Ayuntamiento de Salamanca y la Diputación de Salamanca: Renta Garantizada de Ciudadanía, ayudas a la vivienda, natalidad, dependencia, emergencia social y más, con requisitos y enlace oficial de solicitud.">
+    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fffbeb',
+                            100: '#fef3c7',
+                            500: '#f59e0b',
+                            600: '#d97706',
+                            700: '#b45309',
+                            900: '#78350f',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        textarea::-webkit-scrollbar { width: 8px; }
+        textarea::-webkit-scrollbar-track { background: #1f2937; }
+        textarea::-webkit-scrollbar-thumb { background: #4b5563; border-radius: 4px; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <!-- Breadcrumb back to the main site -->
+    <div class="bg-slate-950 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2">
+            <a href="https://emirodgar.es/" class="hover:text-white transition"><i class="fa-solid fa-house"></i> Emirodgar.es</a>
+            <span>/</span>
+            <a href="https://emirodgar.es/proyectos" class="hover:text-white transition">Proyectos</a>
+            <span>/</span>
+            <a href="https://emirodgar.es/ayudas-castilla-leon-salamanca" class="hover:text-white transition">Documentación del Catálogo de Ayudas CyL y Salamanca</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-slate-900 text-white shadow-md border-b border-slate-800 sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-brand-600 rounded-xl shadow-lg">
+                    <i class="fa-solid me-1 fa-hand-holding-heart text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white">Ayudas de Castilla y León y Salamanca</h1>
+                    <p class="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Última actualización: <span id="lastUpdatedLabel" class="font-medium text-slate-300">--</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Action Controls -->
+            <div class="flex items-center gap-2 self-end sm:self-auto w-full sm:w-auto">
+                <button id="openJsonBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg border border-slate-700 transition">
+                    <i class="fa-solid fa-code text-brand-500"></i>
+                    <span>Editar / Importar JSON</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Calculadora de elegibilidad -->
+        <section id="elegibilidadSection" class="bg-white p-5 sm:p-6 rounded-xl shadow-sm border-2 border-brand-200">
+            <div class="flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-magnifying-glass-dollar text-brand-600"></i>
+                <h2 class="text-base font-bold text-slate-800">¿A qué ayudas puedo optar?</h2>
+            </div>
+            <p class="text-xs text-slate-500 mb-4">Rellena tus datos y el catálogo se filtrará para mostrar solo las ayudas a las que podrías tener derecho. Es un primer cribado orientativo, no una resolución oficial: siempre debes comprobar los requisitos exactos en la fuente correspondiente.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div>
+                    <label for="perfilResidencia" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">¿Dónde resides?</label>
+                    <select id="perfilResidencia" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="">Selecciona…</option>
+                        <option value="capital">Ciudad de Salamanca</option>
+                        <option value="provincia">Un municipio de la provincia de Salamanca (fuera de la capital)</option>
+                        <option value="cyl">Otro municipio de Castilla y León</option>
+                        <option value="fuera">Fuera de Castilla y León</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="perfilEdad" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Edad</label>
+                    <input type="number" id="perfilEdad" min="0" max="120" placeholder="Ej. 35" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilSituacion" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Situación laboral</label>
+                    <select id="perfilSituacion" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="">Selecciona…</option>
+                        <option value="cuenta-ajena">Trabajo por cuenta ajena</option>
+                        <option value="autonomo">Trabajo por cuenta propia (autónomo/a)</option>
+                        <option value="desempleo">En desempleo</option>
+                        <option value="jubilado">Jubilado/a o pensionista</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="otra">Otra situación</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="perfilIngresos" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Ingresos netos mensuales del hogar (€)</label>
+                    <input type="number" id="perfilIngresos" min="0" step="50" placeholder="Ej. 1200" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilMiembros" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Miembros del hogar (incluido tú)</label>
+                    <input type="number" id="perfilMiembros" min="1" step="1" value="1" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilHijos" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Hijos o menores a cargo</label>
+                    <input type="number" id="perfilHijos" min="0" step="1" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilDiscapacidad" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Grado de discapacidad reconocido</label>
+                    <select id="perfilDiscapacidad" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="0">Sin discapacidad reconocida</option>
+                        <option value="33">33% - 64%</option>
+                        <option value="65">65% - 74%</option>
+                        <option value="75">75% o más</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilAlquiler" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Vivo de alquiler en mi vivienda habitual
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilFamiliaEspecial" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Familia numerosa o monoparental
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilNacimiento" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Parto, adopción o acogimiento reciente
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilViolenciaGenero" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Víctima de violencia de género
+                </label>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-3 items-center">
+                <button type="button" id="calcularElegibilidadBtn" class="px-4 py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-2">
+                    <i class="fa-solid fa-filter"></i> Ver mis ayudas
+                </button>
+                <button type="button" id="borrarElegibilidadBtn" class="px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-600 text-sm font-semibold rounded-lg border border-slate-300 transition flex items-center gap-2">
+                    <i class="fa-solid fa-rotate-left"></i> Borrar todo y ver todas las ayudas
+                </button>
+                <span id="elegibilidadResultado" class="text-sm font-medium text-slate-600"></span>
+            </div>
+        </section>
+
+        <!-- Filter and Info Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <div>
+                <h2 class="text-lg font-semibold text-slate-900">Ayudas de Castilla y León y de Salamanca</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Ayudas autonómicas de la Junta de Castilla y León, y ayudas municipales/provinciales del Ayuntamiento y la Diputación de Salamanca. Cada ficha enlaza a la fuente oficial donde se solicita.</p>
+            </div>
+        </div>
+
+        <!-- Executive summary -->
+        <section id="resumenEjecutivoSection" class="bg-brand-900 text-white rounded-xl shadow-sm hidden overflow-hidden">
+            <button type="button" id="resumenEjecutivoToggle" class="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-white/5 transition">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="fa-solid fa-lightbulb text-brand-100"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Resumen ejecutivo</h3>
+                </div>
+                <span class="flex-shrink-0 inline-flex items-center gap-2 text-xs font-semibold bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">
+                    <span id="resumenEjecutivoToggleLabel">Ver resumen</span>
+                    <i id="resumenEjecutivoToggleIcon" class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                </span>
+            </button>
+            <div id="resumenEjecutivoBody" class="hidden px-4 pb-4">
+                <p id="resumenEjecutivoText" class="text-sm text-slate-200 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- Key Metrics Cards Container -->
+        <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Search + Category + Ámbito Filters -->
+        <section class="bg-white p-4 rounded-xl shadow-sm border border-slate-200 space-y-3">
+            <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-sm"></i>
+                <input type="text" id="buscadorAyudas" placeholder="Buscar por nombre (p. ej. «alquiler», «natalidad», «mayores»)…" class="w-full pl-10 pr-4 py-2.5 rounded-lg border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+            </div>
+            <div id="categoriasFiltro" class="flex flex-wrap gap-2"></div>
+            <div id="ambitoFiltro" class="flex flex-wrap gap-2 pt-1 border-t border-slate-100"></div>
+        </section>
+
+        <!-- Grid de ayudas -->
+        <section id="ayudasGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></section>
+        <p id="sinResultados" class="hidden text-center text-sm text-slate-400 py-8">No se ha encontrado ninguna ayuda con ese filtro.</p>
+
+        <!-- Sources -->
+        <section id="sourcesSection" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hidden">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-book text-slate-400"></i>
+                <span>Fuentes de los datos</span>
+            </h3>
+            <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
+        </section>
+
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este catálogo y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
+        <p class="text-center text-xs text-slate-400 pb-4">
+            Proyecto educativo y experimental. No es asesoramiento legal ni una gestoría: comprueba siempre los requisitos y el
+            procedimiento en la fuente oficial antes de solicitar cualquier ayuda. Consulta la
+            <a href="https://emirodgar.es/ayudas-castilla-leon-salamanca" class="text-brand-600 hover:underline">documentación completa del proyecto</a>
+            en Emirodgar.es.
+        </p>
+
+    </main>
+
+    <!-- Modal for JSON Configuration -->
+    <div id="jsonModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-3xl w-full border border-slate-700 flex flex-col max-h-[90vh] overflow-hidden">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-brand-500/10 text-brand-400 rounded-lg">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Gestor de Datos JSON</h3>
+                        <p class="text-xs text-slate-400">Modifica la estructura o carga un nuevo JSON</p>
+                    </div>
+                </div>
+                <button id="closeJsonBtn" class="text-slate-400 hover:text-white transition p-2">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (JSON Editor) -->
+            <div class="p-6 flex-grow overflow-y-auto space-y-4">
+                <div class="flex justify-between items-center">
+                    <label for="jsonTextarea" class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Estructura del Dataset:</label>
+                    <div class="flex gap-2">
+                        <button id="resetJsonBtn" class="text-xs text-slate-400 hover:text-amber-400 flex items-center gap-1 transition">
+                            <i class="fa-solid fa-rotate-left"></i> Restablecer Ejemplo
+                        </button>
+                    </div>
+                </div>
+
+                <textarea id="jsonTextarea" class="w-full h-80 font-mono text-xs bg-slate-950 text-emerald-400 p-4 rounded-xl border border-slate-800 focus:outline-none focus:border-brand-500 shadow-inner resize-none" spellcheck="false"></textarea>
+
+                <div id="jsonError" class="hidden p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span id="jsonErrorMessage">JSON no válido</span>
+                </div>
+
+                <p class="text-[11px] text-slate-500">
+                    Nota: los cambios aplicados aquí sólo afectan a tu navegador durante esta visita.
+                    Los datos persistentes del panel viven en <code class="text-slate-400">data.json</code>,
+                    que se actualiza mediante la skill de mantenimiento del proyecto.
+                </p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 border-t border-slate-800 bg-slate-900/50 flex flex-wrap justify-between items-center gap-3">
+                <div class="flex gap-2">
+                    <button id="exportJsonBtn" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-download text-slate-400"></i> Exportar
+                    </button>
+                    <label class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-upload text-slate-400"></i> Importar
+                        <input type="file" id="importJsonInput" accept=".json" class="hidden">
+                    </label>
+                </div>
+
+                <div class="flex gap-2">
+                    <button id="cancelJsonBtn" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-lg transition">Cancelar</button>
+                    <button id="saveJsonBtn" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold rounded-lg shadow-md transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i> Aplicar Cambios
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        /**
+         * FALLBACK DATASET
+         * Used only if data.json cannot be loaded (e.g. opening the file directly
+         * from disk, where the browser blocks fetch() for local files).
+         * The canonical, up-to-date dataset lives in ./data.json and is refreshed
+         * by the project's maintenance skill — do not treat this as current data.
+         */
+        const defaultAyudasData = {
+            "lastUpdated": "18 de Septiembre, 2026",
+            "resumenEjecutivo": "",
+            "sources": {},
+            "categorias": [],
+            "ayudas": []
+        };
+
+        // Current Dataset in Memory
+        let currentDataset = JSON.parse(JSON.stringify(defaultAyudasData));
+
+        // Filtro activo
+        let filtroCategoria = 'todas';
+        let filtroAmbito = 'todos';
+        let filtroTexto = '';
+
+        // Perfil de elegibilidad activo (null = sin filtro, se muestran todas las ayudas)
+        let perfilElegibilidad = null;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadDataset();
+            setupEventListeners();
+        });
+
+        async function loadDataset() {
+            try {
+                const response = await fetch('data.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('No se pudo cargar data.json');
+                currentDataset = await response.json();
+            } catch (e) {
+                console.warn('Usando dataset de respaldo embebido:', e.message);
+                currentDataset = JSON.parse(JSON.stringify(defaultAyudasData));
+            }
+            initApp();
+        }
+
+        function initApp() {
+            renderHeader();
+            renderResumenEjecutivo();
+            renderMetricCards();
+            renderCategoriasFiltro();
+            renderAmbitoFiltro();
+            renderAyudasGrid();
+            renderSources();
+            renderFAQ();
+        }
+
+        function formatNumber(n) {
+            if (typeof n !== 'number') return n;
+            const isNeg = n < 0;
+            const abs = Math.abs(n);
+            const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+            const [intPart, decPart] = str.split('.');
+            const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
+            return isNeg ? `-${result}` : result;
+        }
+
+        function getCategoria(id) {
+            return (currentDataset.categorias || []).find(c => c.id === id) || { nombre: id, icon: 'fa-tag', color: 'slate' };
+        }
+
+        const CAT_COLOR_CLASSES = {
+            emerald: 'bg-emerald-50 text-emerald-700 border-emerald-200',
+            rose: 'bg-rose-50 text-rose-700 border-rose-200',
+            blue: 'bg-blue-50 text-blue-700 border-blue-200',
+            amber: 'bg-amber-50 text-amber-700 border-amber-200',
+            yellow: 'bg-yellow-50 text-yellow-700 border-yellow-200',
+            violet: 'bg-violet-50 text-violet-700 border-violet-200',
+            sky: 'bg-sky-50 text-sky-700 border-sky-200',
+            slate: 'bg-slate-100 text-slate-600 border-slate-200'
+        };
+
+        function catBadgeClass(color) {
+            return CAT_COLOR_CLASSES[color] || CAT_COLOR_CLASSES.slate;
+        }
+
+        const AMBITO_BADGE = {
+            autonomico: { label: 'Junta de Castilla y León', clase: 'bg-indigo-50 text-indigo-700 border-indigo-200', icon: 'fa-landmark-dome' },
+            municipal: { label: 'Ayuntamiento de Salamanca', clase: 'bg-rose-50 text-rose-700 border-rose-200', icon: 'fa-city' },
+            provincial: { label: 'Diputación de Salamanca', clase: 'bg-teal-50 text-teal-700 border-teal-200', icon: 'fa-map' }
+        };
+
+        function setupEventListeners() {
+            document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
+            document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('cancelJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('saveJsonBtn').addEventListener('click', saveJsonFromEditor);
+            document.getElementById('resetJsonBtn').addEventListener('click', resetDefaultData);
+
+            document.getElementById('exportJsonBtn').addEventListener('click', exportJsonFile);
+            document.getElementById('importJsonInput').addEventListener('change', importJsonFile);
+
+            const resumenToggle = document.getElementById('resumenEjecutivoToggle');
+            if (resumenToggle) {
+                resumenToggle.addEventListener('click', () => {
+                    const body = document.getElementById('resumenEjecutivoBody');
+                    setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            }
+
+            document.getElementById('buscadorAyudas').addEventListener('input', (e) => {
+                filtroTexto = e.target.value.trim().toLowerCase();
+                renderAyudasGrid();
+            });
+
+            document.getElementById('ayudasGrid').addEventListener('click', (e) => {
+                const btn = e.target.closest('.requisitos-toggle');
+                if (!btn) return;
+                const body = btn.nextElementSibling;
+                const icon = btn.querySelector('.req-icon');
+                body.classList.toggle('hidden');
+                if (icon) icon.classList.toggle('rotate-180');
+            });
+
+            document.getElementById('calcularElegibilidadBtn').addEventListener('click', aplicarElegibilidad);
+            document.getElementById('borrarElegibilidadBtn').addEventListener('click', borrarElegibilidad);
+        }
+
+        // --- Calculadora de elegibilidad ---
+        // Cribado orientativo: cada regla usa solo los datos que puede rellenar
+        // alguien en un formulario simple, así que se prioriza no descartar por
+        // error una ayuda a la que la persona sí podría tener derecho.
+        function leerPerfilForm() {
+            const val = id => document.getElementById(id).value;
+            const checked = id => document.getElementById(id).checked;
+            return {
+                residencia: val('perfilResidencia'),
+                edad: parseFloat(val('perfilEdad')) || 0,
+                situacion: val('perfilSituacion'),
+                ingresosMensuales: parseFloat(val('perfilIngresos')) || 0,
+                miembrosHogar: parseFloat(val('perfilMiembros')) || 1,
+                hijos: parseFloat(val('perfilHijos')) || 0,
+                discapacidad: parseFloat(val('perfilDiscapacidad')) || 0,
+                alquiler: checked('perfilAlquiler'),
+                familiaEspecial: checked('perfilFamiliaEspecial'),
+                nacimientoReciente: checked('perfilNacimiento'),
+                violenciaGenero: checked('perfilViolenciaGenero')
+            };
+        }
+
+        // Reside en Castilla y León (cualquier municipio, incluida Salamanca capital y provincia)
+        function resideEnCyL(p) {
+            return p.residencia === 'capital' || p.residencia === 'provincia' || p.residencia === 'cyl';
+        }
+
+        function rgcThreshold(miembros) {
+            const base = 600 * 0.8;
+            const porMiembro = 600 * 0.10;
+            return Math.min(base + porMiembro * Math.max(0, miembros - 2), 600 * 1.3);
+        }
+
+        function urgenciaSocialThreshold(miembros) {
+            const factor = Math.min(1.35 + 0.09 * Math.max(0, miembros - 1), 1.8);
+            return 600 * factor;
+        }
+
+        // Una regla por ayuda; si una ayuda no tiene regla definida, se considera
+        // "posible" por defecto para no ocultarla por error (falso negativo) — se
+        // aplica sobre todo a ayudas de mayores/dependencia donde no hay un dato
+        // de perfil fiable para filtrar (grado de dependencia, por ejemplo).
+        const ELEGIBILIDAD = {
+            rgc: p => p.edad >= 25 && p.ingresosMensuales <= rgcThreshold(p.miembrosHogar),
+            'bono-nacimiento-cyl': p => p.nacimientoReciente,
+            'familias-numerosas-cyl': p => p.familiaEspecial,
+            'urgencia-social-cyl': p => p.ingresosMensuales <= urgenciaSocialThreshold(p.miembrosHogar),
+            'comedor-escolar-cyl': p => p.hijos > 0,
+            'transporte-escolar-cyl': p => p.hijos > 0,
+            'alquiler-joven-cyl': p => p.alquiler && p.edad <= 35,
+            'aes-municipal-salamanca': p => p.ingresosMensuales <= 600 * 1.3,
+            'desahucio-salamanca': p => p.situacion === 'desempleo' && p.ingresosMensuales <= 900,
+            'vivienda-social-salamanca': p => p.ingresosMensuales <= 900,
+            'bono-bus-salamanca': p => p.situacion === 'jubilado' || (p.situacion === 'desempleo' && p.hijos > 0),
+            'material-escolar-salamanca': p => p.hijos > 0 && (p.ingresosMensuales * 12) <= 52000,
+            'descuentos-deportes-salamanca': p => p.situacion === 'desempleo' || p.ingresosMensuales <= 1200
+        };
+
+        function evaluarElegibilidad(ayuda, perfil) {
+            // El ámbito municipal solo aplica a residentes de la capital;
+            // el provincial, solo a residentes de la provincia fuera de la capital.
+            if (ayuda.ambito === 'municipal' && perfil.residencia !== 'capital') return false;
+            if (ayuda.ambito === 'provincial' && perfil.residencia !== 'provincia') return false;
+            if (ayuda.ambito === 'autonomico' && perfil.residencia && !resideEnCyL(perfil)) return false;
+
+            const regla = ELEGIBILIDAD[ayuda.id];
+            if (!regla) return true;
+            try {
+                return !!regla(perfil);
+            } catch (e) {
+                return true;
+            }
+        }
+
+        function aplicarElegibilidad() {
+            perfilElegibilidad = leerPerfilForm();
+            renderAyudasGrid();
+            const ayudas = currentDataset.ayudas || [];
+            const total = ayudas.length;
+            const match = ayudas.filter(a => evaluarElegibilidad(a, perfilElegibilidad)).length;
+            document.getElementById('elegibilidadResultado').textContent = `Según tus datos, podrías optar a ${match} de ${total} ayudas.`;
+        }
+
+        function borrarElegibilidad() {
+            perfilElegibilidad = null;
+            document.getElementById('perfilResidencia').value = '';
+            document.getElementById('perfilEdad').value = '';
+            document.getElementById('perfilSituacion').value = '';
+            document.getElementById('perfilIngresos').value = '';
+            document.getElementById('perfilMiembros').value = '1';
+            document.getElementById('perfilHijos').value = '0';
+            document.getElementById('perfilDiscapacidad').value = '0';
+            document.getElementById('perfilAlquiler').checked = false;
+            document.getElementById('perfilFamiliaEspecial').checked = false;
+            document.getElementById('perfilNacimiento').checked = false;
+            document.getElementById('perfilViolenciaGenero').checked = false;
+            document.getElementById('elegibilidadResultado').textContent = '';
+
+            filtroCategoria = 'todas';
+            filtroAmbito = 'todos';
+            filtroTexto = '';
+            document.getElementById('buscadorAyudas').value = '';
+            renderCategoriasFiltro();
+            renderAmbitoFiltro();
+            renderAyudasGrid();
+        }
+
+        function renderHeader() {
+            document.getElementById('lastUpdatedLabel').innerText = currentDataset.lastUpdated || 'No especificado';
+        }
+
+        function setResumenEjecutivoExpanded(expanded) {
+            const body = document.getElementById('resumenEjecutivoBody');
+            const label = document.getElementById('resumenEjecutivoToggleLabel');
+            const icon = document.getElementById('resumenEjecutivoToggleIcon');
+            if (!body) return;
+            body.classList.toggle('hidden', !expanded);
+            if (label) label.textContent = expanded ? 'Ocultar resumen' : 'Ver resumen';
+            if (icon) icon.classList.toggle('rotate-180', expanded);
+        }
+
+        function renderResumenEjecutivo() {
+            const section = document.getElementById('resumenEjecutivoSection');
+            const text = document.getElementById('resumenEjecutivoText');
+            if (currentDataset.resumenEjecutivo) {
+                text.innerText = currentDataset.resumenEjecutivo;
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+            setResumenEjecutivoExpanded(false);
+        }
+
+        function renderSources() {
+            const section = document.getElementById('sourcesSection');
+            const list = document.getElementById('sourcesList');
+            list.innerHTML = '';
+            if (!currentDataset.sources) {
+                section.classList.add('hidden');
+                return;
+            }
+            Object.values(currentDataset.sources)
+                .filter((value, index, all) => all.indexOf(value) === index)
+                .forEach(source => {
+                    list.insertAdjacentHTML('beforeend', `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-[6px] mt-1.5 text-slate-300"></i><span>${source}</span></li>`);
+                });
+            section.classList.remove('hidden');
+        }
+
+        function renderMetricCards() {
+            const container = document.getElementById('metricsContainer');
+            container.innerHTML = '';
+
+            const ayudas = currentDataset.ayudas || [];
+            const categorias = currentDataset.categorias || [];
+            const rgc = ayudas.find(a => a.id === 'rgc');
+
+            const cards = [
+                {
+                    title: 'Ayudas Incluidas',
+                    value: ayudas.length,
+                    unit: 'ayudas',
+                    detail: 'Ayudas autonómicas (Junta de CyL) y municipales/provinciales (Salamanca) recogidas en este catálogo',
+                    icon: 'fa-list-check',
+                    color: 'rose'
+                },
+                {
+                    title: 'Categorías',
+                    value: categorias.length,
+                    unit: 'categorías',
+                    detail: categorias.map(c => c.nombre).join(', '),
+                    icon: 'fa-layer-group',
+                    color: 'blue'
+                }
+            ];
+
+            if (rgc) {
+                cards.push({
+                    title: 'Renta Garantizada de Ciudadanía',
+                    value: (rgc.cuantia.match(/[\d.,]+\s*€\s*\/\s*\w+/) || [rgc.cuantia])[0].trim(),
+                    unit: '',
+                    detail: 'Cuantía de referencia de la renta mínima autonómica de Castilla y León',
+                    icon: 'fa-hand-holding-dollar',
+                    color: 'emerald'
+                });
+            }
+
+            const abiertasAhora = ayudas.filter(a => a.estado === 'abierto' || a.estado === 'permanente' || a.estado === 'automatico').length;
+            cards.push({
+                title: 'Solicitables Ahora Mismo',
+                value: abiertasAhora,
+                unit: `de ${ayudas.length}`,
+                detail: 'Ayudas sin plazo cerrado a día de hoy (permanentes, con convocatoria abierta o de concesión automática)',
+                icon: 'fa-door-open',
+                color: 'sky'
+            });
+
+            cards.push({
+                title: 'Organismos Implicados',
+                value: [...new Set(ayudas.map(a => a.organismo))].length,
+                unit: 'organismos',
+                detail: 'Junta de Castilla y León, Ayuntamiento de Salamanca y Diputación de Salamanca, entre otros',
+                icon: 'fa-building-columns',
+                color: 'amber'
+            });
+
+            cards.forEach(item => {
+                container.insertAdjacentHTML('beforeend', `
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${item.title}</span>
+                            <div class="p-2 rounded-lg bg-slate-100 text-slate-600">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                        </div>
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-2xl font-extrabold text-slate-900 tracking-tight">${typeof item.value === 'number' ? formatNumber(item.value) : item.value}</span>
+                            <span class="text-slate-500 font-semibold text-sm">${item.unit}</span>
+                        </div>
+                        <p class="mt-3 text-[11px] text-slate-400 leading-snug">${item.detail || ''}</p>
+                    </div>
+                `);
+            });
+        }
+
+        function renderCategoriasFiltro() {
+            const container = document.getElementById('categoriasFiltro');
+            const categorias = currentDataset.categorias || [];
+
+            const pillClass = (active) => active
+                ? 'bg-brand-600 text-white border-brand-600'
+                : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-50';
+
+            container.innerHTML = `
+                <button type="button" class="cat-pill text-xs font-semibold px-3 py-1.5 rounded-full border transition ${pillClass(filtroCategoria === 'todas')}" data-cat="todas">
+                    Todas las categorías
+                </button>
+                ${categorias.map(c => `
+                    <button type="button" class="cat-pill text-xs font-semibold px-3 py-1.5 rounded-full border transition flex items-center gap-1.5 ${pillClass(filtroCategoria === c.id)}" data-cat="${c.id}">
+                        <i class="fa-solid ${c.icon}"></i> ${c.nombre}
+                    </button>
+                `).join('')}
+            `;
+
+            container.querySelectorAll('.cat-pill').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtroCategoria = btn.getAttribute('data-cat');
+                    renderCategoriasFiltro();
+                    renderAyudasGrid();
+                });
+            });
+        }
+
+        function renderAmbitoFiltro() {
+            const container = document.getElementById('ambitoFiltro');
+
+            const pillClass = (active) => active
+                ? 'bg-slate-800 text-white border-slate-800'
+                : 'bg-white text-slate-600 border-slate-300 hover:bg-slate-50';
+
+            const opciones = [
+                { id: 'todos', label: 'Todos los ámbitos', icon: 'fa-globe' },
+                { id: 'autonomico', label: AMBITO_BADGE.autonomico.label, icon: AMBITO_BADGE.autonomico.icon },
+                { id: 'municipal', label: AMBITO_BADGE.municipal.label, icon: AMBITO_BADGE.municipal.icon },
+                { id: 'provincial', label: AMBITO_BADGE.provincial.label, icon: AMBITO_BADGE.provincial.icon }
+            ];
+
+            container.innerHTML = opciones.map(o => `
+                <button type="button" class="ambito-pill text-xs font-semibold px-3 py-1.5 rounded-full border transition flex items-center gap-1.5 ${pillClass(filtroAmbito === o.id)}" data-ambito="${o.id}">
+                    <i class="fa-solid ${o.icon}"></i> ${o.label}
+                </button>
+            `).join('');
+
+            container.querySelectorAll('.ambito-pill').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filtroAmbito = btn.getAttribute('data-ambito');
+                    renderAmbitoFiltro();
+                    renderAyudasGrid();
+                });
+            });
+        }
+
+        const ESTADO_BADGE = {
+            abierto: { label: 'Abierto ahora', clase: 'bg-emerald-50 text-emerald-700 border-emerald-200', icon: 'fa-circle-check' },
+            permanente: { label: 'Sin plazo, todo el año', clase: 'bg-sky-50 text-sky-700 border-sky-200', icon: 'fa-infinity' },
+            cerrado: { label: 'Convocatoria cerrada', clase: 'bg-slate-100 text-slate-500 border-slate-200', icon: 'fa-circle-xmark' },
+            automatico: { label: 'Concesión automática', clase: 'bg-violet-50 text-violet-700 border-violet-200', icon: 'fa-wand-magic-sparkles' }
+        };
+
+        function ayudaCardHTML(ayuda, index) {
+            const cat = getCategoria(ayuda.categoria);
+            const requisitos = ayuda.requisitos || [];
+            const estado = ESTADO_BADGE[ayuda.estado] || null;
+            const ambito = AMBITO_BADGE[ayuda.ambito] || null;
+            return `
+                <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col">
+                    <div class="flex items-start justify-between gap-2 flex-wrap">
+                        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-1 rounded-full border w-fit ${catBadgeClass(cat.color)}">
+                            <i class="fa-solid ${cat.icon}"></i> ${cat.nombre}
+                        </span>
+                        ${estado ? `
+                        <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-1 rounded-full border w-fit ${estado.clase}">
+                            <i class="fa-solid ${estado.icon}"></i> ${estado.label}
+                        </span>` : ''}
+                    </div>
+                    ${ambito ? `
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-bold px-2.5 py-1 rounded-full border w-fit mt-2 ${ambito.clase}">
+                        <i class="fa-solid ${ambito.icon}"></i> ${ambito.label}
+                    </span>` : ''}
+                    <h3 class="font-bold text-slate-800 mt-3 text-base leading-snug">${ayuda.nombre}</h3>
+                    <p class="text-xs text-slate-500 mt-1.5 leading-relaxed flex-grow">${ayuda.descripcion}</p>
+
+                    <div class="mt-3 p-2.5 bg-slate-50 rounded-lg border border-slate-100">
+                        <span class="text-[10px] font-semibold text-slate-400 uppercase tracking-wide">Cuantía</span>
+                        <p class="text-sm font-bold text-slate-800 leading-snug">${ayuda.cuantia}</p>
+                    </div>
+
+                    <p class="text-[11px] text-slate-400 mt-2.5 flex items-center gap-1.5">
+                        <i class="fa-solid fa-building-columns"></i> ${ayuda.organismo}
+                    </p>
+
+                    ${requisitos.length ? `
+                    <button type="button" class="requisitos-toggle mt-3 flex items-center justify-between gap-2 text-xs font-semibold text-slate-600 hover:text-slate-800 transition">
+                        <span>Ver requisitos (${requisitos.length})</span>
+                        <i class="req-icon fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                    </button>
+                    <div class="hidden mt-2">
+                        <ul class="space-y-1.5">
+                            ${requisitos.map(r => `<li class="text-xs text-slate-500 flex items-start gap-2"><i class="fa-solid fa-check text-emerald-500 text-[10px] mt-0.5"></i><span>${r}</span></li>`).join('')}
+                        </ul>
+                    </div>
+                    ` : ''}
+
+                    ${ayuda.notas ? `<p class="text-[11px] text-amber-600 mt-3 flex items-start gap-1.5"><i class="fa-solid fa-triangle-exclamation mt-0.5"></i><span>${ayuda.notas}</span></p>` : ''}
+
+                    <div class="mt-4 pt-3 border-t border-slate-100 flex gap-2">
+                        <a href="${ayuda.enlaceInfo || ayuda.enlaceSolicitud}" target="_blank" rel="noopener" class="flex-1 text-center text-xs font-semibold px-3 py-2 rounded-lg border border-slate-300 text-slate-700 hover:bg-slate-50 transition">
+                            Más información
+                        </a>
+                        <a href="${ayuda.enlaceSolicitud}" target="_blank" rel="noopener" class="flex-1 text-center text-xs font-semibold px-3 py-2 rounded-lg bg-brand-600 hover:bg-brand-500 text-white transition">
+                            Solicitar <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderAyudasGrid() {
+            const grid = document.getElementById('ayudasGrid');
+            const sinResultados = document.getElementById('sinResultados');
+            const ayudas = currentDataset.ayudas || [];
+
+            const filtradas = ayudas.filter(a => {
+                const pasaCategoria = filtroCategoria === 'todas' || a.categoria === filtroCategoria;
+                const pasaAmbito = filtroAmbito === 'todos' || a.ambito === filtroAmbito;
+                const haystack = `${a.nombre} ${a.descripcion}`.toLowerCase();
+                const pasaTexto = !filtroTexto || haystack.includes(filtroTexto);
+                const pasaElegibilidad = !perfilElegibilidad || evaluarElegibilidad(a, perfilElegibilidad);
+                return pasaCategoria && pasaAmbito && pasaTexto && pasaElegibilidad;
+            });
+
+            grid.innerHTML = filtradas.map((a, i) => ayudaCardHTML(a, i)).join('');
+            sinResultados.classList.toggle('hidden', filtradas.length > 0);
+        }
+
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen
+        // el catálogo vigente de "ayudas"/"categorias".
+        function getFAQs() {
+            const ayudas = currentDataset.ayudas || [];
+            const categorias = currentDataset.categorias || [];
+            const rgc = ayudas.find(a => a.id === 'rgc');
+            const autonomicas = ayudas.filter(a => a.ambito === 'autonomico').length;
+            const municipales = ayudas.filter(a => a.ambito === 'municipal').length;
+            const provinciales = ayudas.filter(a => a.ambito === 'provincial').length;
+
+            const faqs = [];
+
+            faqs.push({
+                question: '¿Qué diferencia hay entre las ayudas de este catálogo y las del Catálogo de Ayudas Sociales en España?',
+                answer: 'Este panel recoge solo ayudas de ámbito autonómico (Junta de Castilla y León) y ayudas municipales o provinciales de Salamanca (Ayuntamiento de Salamanca y Diputación de Salamanca). El resto de proyectos de este sitio incluye un catálogo separado con las ayudas de ámbito estatal (Ingreso Mínimo Vital, prestaciones por desempleo, pensiones no contributivas...), que a menudo son compatibles y complementarias con las de este panel.'
+            });
+
+            if (rgc) {
+                faqs.push({
+                    question: '¿Qué es la Renta Garantizada de Ciudadanía (RGC)?',
+                    answer: `${rgc.descripcion} Cuantía de referencia: ${rgc.cuantia}. Se solicita en ${rgc.enlaceSolicitud}.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Qué significan las etiquetas de ámbito de cada ayuda?',
+                answer: `"${AMBITO_BADGE.autonomico.label}" indica que la ayuda la regula y paga la Junta de Castilla y León, y está disponible para cualquier residente de la comunidad. "${AMBITO_BADGE.municipal.label}" señala ayudas que solo puede solicitar quien resida en la ciudad de Salamanca. "${AMBITO_BADGE.provincial.label}" indica ayudas gestionadas por la Diputación, pensadas para los municipios de la provincia distintos de la capital (la Diputación no presta estos servicios dentro de la propia ciudad de Salamanca, que tiene su propio ayuntamiento). Este catálogo incluye ${autonomicas} ayudas autonómicas, ${municipales} municipales y ${provinciales} provinciales.`
+            });
+
+            faqs.push({
+                question: '¿Estas ayudas son compatibles con el Ingreso Mínimo Vital y otras ayudas estatales?',
+                answer: 'En general sí, muchas están pensadas para complementar a las ayudas estatales (por ejemplo, la Renta Garantizada de Ciudadanía puede compatibilizarse o coordinarse con el Ingreso Mínimo Vital en determinados supuestos), pero la compatibilidad exacta depende de cada caso y debe confirmarse con los servicios sociales antes de solicitar varias ayudas a la vez.'
+            });
+
+            faqs.push({
+                question: '¿Por qué algunas ayudas solo aparecen si vivo en la provincia de Salamanca y no en la capital?',
+                answer: 'Porque la Diputación de Salamanca presta servicios sociales y ayudas de emergencia a los municipios pequeños de la provincia que no tienen capacidad para gestionarlos por sí mismos, mientras que la ciudad de Salamanca tiene su propio ayuntamiento con sus propios servicios sociales y sus propias ayudas municipales. Por eso este catálogo distingue el ámbito "municipal" (solo capital) del "provincial" (solo el resto de municipios de la provincia).'
+            });
+
+            faqs.push({
+                question: '¿Necesito un certificado digital o Cl@ve para solicitar estas ayudas?',
+                answer: 'Depende de la ayuda y del organismo: la sede electrónica de la Junta de Castilla y León y la del Ayuntamiento de Salamanca permiten identificarse con Cl@ve, certificado digital o DNI electrónico para la tramitación online. Si no dispones de ninguno, la mayoría de estas ayudas también se pueden solicitar de forma presencial, con cita previa, en los Centros de Acción Social (CEAS) de tu zona o en las oficinas del organismo correspondiente.'
+            });
+
+            if (categorias.length) {
+                faqs.push({
+                    question: '¿Qué categorías de ayudas incluye este catálogo?',
+                    answer: `Este catálogo agrupa ${ayudas.length} ayudas en ${categorias.length} categorías: ${categorias.map(c => c.nombre).join(', ')}. Puedes filtrar por categoría, por ámbito (autonómico, municipal o provincial) o buscar por nombre directamente en el panel.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Qué son los CEAS y por qué aparecen en varias fichas?',
+                answer: 'Los Centros de Acción Social (CEAS) son la puerta de entrada a los servicios sociales de base en Castilla y León: son quienes tramitan o informan sobre buena parte de las ayudas de emergencia social, dependencia y atención a mayores de este catálogo, tanto en la capital como en los municipios de la provincia. Si una ficha no indica un portal de solicitud online claro, normalmente el trámite se inicia en el CEAS de tu zona.'
+            });
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualiza este catálogo?',
+                answer: 'Se revisa cuando cambian las cuantías (muchas ayudas autonómicas y municipales se actualizan con los presupuestos anuales de cada institución) o cuando se aprueba, modifica o deroga alguna ayuda. Aun así, antes de solicitar cualquier prestación comprueba el importe y los requisitos vigentes en la fuente oficial: son la referencia legal, este catálogo es solo una guía orientativa.'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden los datos de este catálogo?',
+                answer: 'De las webs oficiales de cada institución: la Junta de Castilla y León (Consejería de Familia e Igualdad de Oportunidades, Gerencia de Servicios Sociales), el Ayuntamiento de Salamanca y la Diputación de Salamanca. El detalle completo, ayuda por ayuda, está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
+        }
+
+        function openJsonModal() {
+            const modal = document.getElementById('jsonModal');
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+
+            textarea.value = JSON.stringify(currentDataset, null, 2);
+            errorContainer.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeJsonModal() {
+            document.getElementById('jsonModal').classList.add('hidden');
+        }
+
+        function saveJsonFromEditor() {
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+            const errorMessage = document.getElementById('jsonErrorMessage');
+
+            try {
+                const parsed = JSON.parse(textarea.value);
+
+                if (!parsed.ayudas || !parsed.categorias) {
+                    throw new Error("El JSON debe contener las propiedades 'ayudas' y 'categorias'.");
+                }
+
+                currentDataset = parsed;
+                filtroCategoria = 'todas';
+                filtroAmbito = 'todos';
+                filtroTexto = '';
+                perfilElegibilidad = null;
+                document.getElementById('buscadorAyudas').value = '';
+                document.getElementById('elegibilidadResultado').textContent = '';
+                initApp();
+                closeJsonModal();
+            } catch (e) {
+                errorMessage.innerText = e.message;
+                errorContainer.classList.remove('hidden');
+            }
+        }
+
+        function resetDefaultData() {
+            currentDataset = JSON.parse(JSON.stringify(defaultAyudasData));
+            document.getElementById('jsonTextarea').value = JSON.stringify(currentDataset, null, 2);
+            document.getElementById('jsonError').classList.add('hidden');
+        }
+
+        function exportJsonFile() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(currentDataset, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `catalogo_ayudas_cyl_salamanca_${new Date().toISOString().slice(0,10)}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        function importJsonFile(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const parsed = JSON.parse(evt.target.result);
+                    document.getElementById('jsonTextarea').value = JSON.stringify(parsed, null, 2);
+                    document.getElementById('jsonError').classList.add('hidden');
+                } catch (err) {
+                    alert("Error al leer el archivo JSON: formato no válido.");
+                }
+            };
+            reader.readAsText(file);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,370 @@
+{
+  "lastUpdated": "18 de Septiembre, 2026",
+  "resumenEjecutivo": "Este catálogo reúne 19 ayudas de ámbito autonómico (Junta de Castilla y León) y municipal o provincial de Salamanca (Ayuntamiento de Salamanca y Diputación de Salamanca), repartidas en seis categorías. La Renta Garantizada de Ciudadanía es la referencia de las rentas mínimas autonómicas, con una cuantía de entre el 80% y el 130% del IPREM según el hogar. La mayoría están disponibles todo el año a través de los Centros de Acción Social (CEAS) o las sedes electrónicas de cada institución; solo el Bono Nacimiento, las ayudas de comedor y transporte escolar, la subvención al alquiler joven y las ayudas de material escolar de Salamanca tienen ventanas de solicitud puntuales, algunas ya cerradas para este curso. Varias cifras de este catálogo —especialmente las de dependencia, urgencia social y las cuotas de servicios a domicilio— no figuran en euros en la web oficial correspondiente y se han estimado o tomado de fuentes secundarias: revisa siempre la nota de cada ficha antes de dar por buena una cantidad exacta.",
+  "sources": {
+    "rgc": "Junta de Castilla y León — Gerencia de Servicios Sociales — Renta Garantizada de Ciudadanía. serviciossociales.jcyl.es",
+    "bonoNacimientoCyl": "Junta de Castilla y León — Consejería de Familia e Igualdad de Oportunidades — Bono Nacimiento, convocatoria 2026. familia.jcyl.es",
+    "familiasNumerosasCyl": "Junta de Castilla y León — Consejería de Familia e Igualdad de Oportunidades — Apoyos para Familias Numerosas. familia.jcyl.es",
+    "urgenciaSocialCyl": "Junta de Castilla y León — Gerencia de Servicios Sociales — prestación económica para necesidades básicas en situaciones de urgencia social. serviciossociales.jcyl.es",
+    "pecefDependenciaCyl": "Junta de Castilla y León — Gerencia de Servicios Sociales — Prestación Económica para Cuidados en el Entorno Familiar; cuantías en euros según fuente jurídica secundaria (Orden FAM/818/2025 vía resumen de base de datos legal), no confirmadas literalmente en jcyl.es",
+    "comedorEscolarCyl": "Junta de Castilla y León — Consejería de Educación — ayudas de comedor escolar. educa.jcyl.es",
+    "transporteEscolarCyl": "Junta de Castilla y León — Consejería de Educación — ayudas de transporte escolar. tramitacastillayleon.jcyl.es",
+    "alquilerJovenCyl": "Junta de Castilla y León — Dirección General de Vivienda y Urbanismo — subvención al alquiler de vivienda; porcentajes según resúmenes de tramitacastillayleon.jcyl.es y vivienda.jcyl.es, sin confirmar en la ficha oficial de detalle",
+    "rehabitareCyl": "Junta de Castilla y León — Dirección General de Vivienda y Urbanismo — Programa Rehabitare. vivienda.jcyl.es",
+    "aesMunicipalSalamanca": "Ayuntamiento de Salamanca — Área de Bienestar Social — Prestación Económica de Urgencia Social. aytosalamanca.gob.es",
+    "desahucioSalamanca": "Ayuntamiento de Salamanca — nota de prensa municipal sobre ayudas a familias en riesgo de desahucio. aytosalamanca.es",
+    "viviendaSocialSalamanca": "Ayuntamiento de Salamanca — Patronato Municipal de Vivienda y Urbanismo — alquiler social. aytosalamanca.es",
+    "bonoBusSalamanca": "Ayuntamiento de Salamanca — Área de Movilidad — Bono Bus Especial; Ordenanza Fiscal nº 55. aytosalamanca.es",
+    "materialEscolarSalamanca": "Ayuntamiento de Salamanca — Área de Bienestar Social — convocatoria de ayudas de material escolar 2026-2027. aytosalamanca.es",
+    "descuentosDeportesSalamanca": "Ayuntamiento de Salamanca — Área de Deportes — tarifas reducidas en piscinas y polideportivos; Ordenanza Fiscal nº 51. aytosalamanca.gob.es",
+    "urgenciaSocialDiputacion": "Diputación de Salamanca — Bienestar Social — prestaciones en situaciones de urgencia social. lasalina.es",
+    "apoyoInmediatoDiputacion": "Diputación de Salamanca — Bienestar Social, en colaboración con Cáritas y Cruz Roja — ayudas de apoyo inmediato ante situaciones de urgencia social. lasalina.es",
+    "sadDiputacion": "Diputación de Salamanca — Bienestar Social — Servicio de Ayuda a Domicilio. lasalina.es",
+    "teleasistenciaDiputacion": "Diputación de Salamanca — Bienestar Social — Teleasistencia. lasalina.es"
+  },
+  "categorias": [
+    { "id": "rentas-minimas", "nombre": "Rentas Mínimas y Emergencia Social", "icon": "fa-hand-holding-dollar", "color": "emerald" },
+    { "id": "familia-infancia", "nombre": "Familia e Infancia", "icon": "fa-baby", "color": "rose" },
+    { "id": "vivienda", "nombre": "Vivienda", "icon": "fa-house", "color": "amber" },
+    { "id": "dependencia-mayores", "nombre": "Dependencia y Mayores", "icon": "fa-wheelchair", "color": "violet" },
+    { "id": "educacion", "nombre": "Educación", "icon": "fa-graduation-cap", "color": "sky" },
+    { "id": "descuentos-movilidad", "nombre": "Descuentos y Movilidad", "icon": "fa-bus", "color": "blue" }
+  ],
+  "ayudas": [
+    {
+      "id": "rgc",
+      "nombre": "Renta Garantizada de Ciudadanía (RGC)",
+      "categoria": "rentas-minimas",
+      "organismo": "Gerencia de Servicios Sociales de Castilla y León",
+      "descripcion": "Prestación autonómica de renta mínima para personas y hogares de Castilla y León sin recursos suficientes, distinta y compatible en algunos casos con el Ingreso Mínimo Vital estatal.",
+      "cuantia": "Entre el 80% y el 130% del IPREM al mes según la composición del hogar (aprox. 480 a 780 €/mes sobre el IPREM 2026 de 600 €/mes), con un 10% adicional del importe base por cada miembro a partir del tercero; incluye asistencia farmacéutica gratuita mientras se percibe",
+      "requisitos": [
+        "25 años o más (hay excepciones por menores a cargo u otras circunstancias)",
+        "Empadronado y con residencia efectiva en un municipio de Castilla y León durante al menos 1 año",
+        "Ingresos insuficientes para cubrir las necesidades básicas del hogar",
+        "Inscrito como demandante de empleo, si corresponde",
+        "Menores del hogar escolarizados"
+      ],
+      "enlaceSolicitud": "https://serviciossociales.jcyl.es/web/jcyl/ServiciosSociales/es/Plantilla100Detalle/1246991411473/_/1284657728093/Informe",
+      "enlaceInfo": "https://serviciossociales.jcyl.es/web/jcyl/ServiciosSociales/es/Plantilla100Detalle/1246991411473/_/1284657728093/Informe",
+      "estado": "permanente",
+      "ambito": "autonomico",
+      "notas": "La web oficial expresa la cuantía en % del IPREM, no en euros; las cifras en euros de esta ficha son un cálculo aproximado sobre el IPREM 2026 (600 €/mes), no una cita literal de la Junta."
+    },
+    {
+      "id": "bono-nacimiento-cyl",
+      "nombre": "Bono Nacimiento",
+      "categoria": "familia-infancia",
+      "organismo": "Consejería de Familia e Igualdad de Oportunidades (Junta de Castilla y León)",
+      "descripcion": "Tarjeta prepago para familias que tienen un hijo o adoptan, con un importe mayor cuanto más bajos son los ingresos familiares y cuantos más hijos haya.",
+      "cuantia": "Por el 1er hijo: 1.500 € (ingresos ≤40.000 €), 1.000 € (40.001-60.000 €) o 500 € (más de 60.000 €); por el 2º hijo: 2.000 €, 1.500 € o 1.000 €; por el 3er hijo o siguientes: 2.500 €, 2.000 € o 1.500 €, según el mismo tramo de ingresos; se duplica si el hijo tiene una discapacidad ≥33%",
+      "requisitos": [
+        "Padres o adoptantes empadronados en un municipio de Castilla y León",
+        "Estar al corriente de las obligaciones tributarias y con la Seguridad Social",
+        "Nacimiento o adopción dentro del año natural de la convocatoria",
+        "Solicitud en los 3 meses siguientes al nacimiento o adopción"
+      ],
+      "enlaceSolicitud": "https://familia.jcyl.es/web/es/bono-nacimiento.html",
+      "enlaceInfo": "https://familia.jcyl.es/web/es/bono-nacimiento.html",
+      "estado": "permanente",
+      "ambito": "autonomico",
+      "notas": "La convocatoria 2026 está abierta desde el 2 de marzo de 2026 y se resuelve de forma continua durante el año; cada solicitud individual tiene un plazo de 3 meses desde el nacimiento o la adopción."
+    },
+    {
+      "id": "familias-numerosas-cyl",
+      "nombre": "Apoyos para Familias Numerosas",
+      "categoria": "familia-infancia",
+      "organismo": "Consejería de Familia e Igualdad de Oportunidades (Junta de Castilla y León)",
+      "descripcion": "Conjunto de ayudas y descuentos para familias numerosas de Castilla y León: un complemento económico en las ayudas a la conciliación laboral, y descuentos en residencias y campamentos juveniles.",
+      "cuantia": "Complemento de 1.000 € en las ayudas a la excedencia o reducción de jornada por conciliación; descuento del 30% (categoría general) o 50% (categoría especial) en residencias juveniles, y descuentos en campamentos temáticos",
+      "requisitos": [
+        "Título vigente de familia numerosa",
+        "Límites de ingresos en algunas de las líneas de ayuda (no en todas)"
+      ],
+      "enlaceSolicitud": "https://familia.jcyl.es/web/es/apoyos-para-familias-numerosas.html",
+      "enlaceInfo": "https://familia.jcyl.es/web/es/apoyos-para-familias-numerosas.html",
+      "estado": "permanente",
+      "ambito": "autonomico",
+      "notas": "La convocatoria 2026 del complemento por excedencia/reducción de jornada estuvo abierta del 11 de marzo al 30 de abril y ya está cerrada; se espera una nueva convocatoria en 2027. Los descuentos en residencias y campamentos juveniles no tienen plazo de solicitud."
+    },
+    {
+      "id": "urgencia-social-cyl",
+      "nombre": "Prestación para Necesidades Básicas en Situaciones de Urgencia Social",
+      "categoria": "rentas-minimas",
+      "organismo": "CEAS / Gerencia de Servicios Sociales de Castilla y León",
+      "descripcion": "Ayuda económica puntual para cubrir necesidades básicas de personas y familias de Castilla y León que atraviesan una situación de urgencia social, tramitada a través de los Centros de Acción Social (CEAS).",
+      "cuantia": "Hasta el 50% del IPREM al mes (aprox. 300 €/mes sobre el IPREM 2026), pagada en hasta 14 mensualidades según el caso",
+      "requisitos": [
+        "Empadronado en un municipio de Castilla y León durante al menos 6 meses",
+        "Ingresos por debajo de 1,35 veces el IPREM (hasta 1,8 veces en hogares más numerosos)",
+        "No haber recibido ya esta prestación ese mismo año natural, salvo casos excepcionales"
+      ],
+      "enlaceSolicitud": "https://serviciossociales.jcyl.es/web/jcyl/ServiciosSociales/es/Plantilla100Detalle/1246991411473/_/1284657582648/Informe",
+      "enlaceInfo": "https://serviciossociales.jcyl.es/web/jcyl/ServiciosSociales/es/Plantilla100Detalle/1246991411473/_/1284657582648/Informe",
+      "estado": "permanente",
+      "ambito": "autonomico",
+      "notas": "El importe en euros es una estimación sobre el IPREM 2026 (600 €/mes), no una cifra publicada como tal. Se tramita en el CEAS de tu zona; no hay un simulador online."
+    },
+    {
+      "id": "pecef-dependencia-cyl",
+      "nombre": "Prestación Económica para Cuidados en el Entorno Familiar (Dependencia)",
+      "categoria": "dependencia-mayores",
+      "organismo": "Gerencia de Servicios Sociales de Castilla y León",
+      "descripcion": "Ayuda económica mensual para personas en situación de dependencia (Grado II o III) que son atendidas por un familiar en su propio domicilio, en vez de recurrir a un servicio profesional.",
+      "cuantia": "Hasta 455,40 €/mes en Grado III y 315,90 €/mes en Grado II de dependencia (Castilla y León paga un 5% por encima del máximo estatal); mínimos de 200 € y 150 €/mes respectivamente",
+      "requisitos": [
+        "Grado de dependencia reconocido (Grado II o Grado III)",
+        "Cuidado a cargo de un familiar designado como cuidador/a",
+        "Vivienda y condiciones de convivencia adecuadas para recibir los cuidados"
+      ],
+      "enlaceSolicitud": "https://serviciossociales.jcyl.es/web/jcyl/ServiciosSociales/es/Plantilla100Detalle/1246991411473/_/1284657352707/Informe",
+      "enlaceInfo": "https://serviciossociales.jcyl.es/web/jcyl/ServiciosSociales/es/Plantilla100Detalle/1246991411473/_/1284657352707/Informe",
+      "estado": "permanente",
+      "ambito": "autonomico",
+      "notas": "La web oficial de la Junta no publica una tabla de importes en euros (solo indica que depende del grado y la capacidad económica); las cifras de esta ficha proceden de una fuente jurídica secundaria sobre la orden reguladora, no confirmadas literalmente en jcyl.es. Confírmalas en tu CEAS."
+    },
+    {
+      "id": "comedor-escolar-cyl",
+      "nombre": "Ayudas de Comedor Escolar",
+      "categoria": "educacion",
+      "organismo": "Consejería de Educación (Junta de Castilla y León)",
+      "descripcion": "Ayuda para sufragar el coste del comedor escolar en centros públicos, cubriendo entre la mitad y la totalidad del gasto según la renta familiar.",
+      "cuantia": "Hasta 786,60 € por curso (4,37 €/día durante 180 días de clase), cubriendo entre el 50% y el 100% del coste real según la renta familiar",
+      "requisitos": [
+        "Renta familiar por debajo del umbral fijado en la convocatoria (en torno a 2 veces el IPREM)",
+        "Discapacidad ≥33%, familia numerosa de categoría especial, o menores en acogimiento o centro residencial: sin límite de renta"
+      ],
+      "enlaceSolicitud": "https://www.educa.jcyl.es/alumnado/es/servicios/comedores-escolares/ayudas-comedores-escolares-centros-docentes-publicos-educac",
+      "enlaceInfo": "https://www.educa.jcyl.es/alumnado/es/servicios/comedores-escolares/ayudas-comedores-escolares-centros-docentes-publicos-educac",
+      "estado": "cerrado",
+      "ambito": "autonomico",
+      "notas": "La convocatoria ordinaria suele abrirse en primavera y una extraordinaria en septiembre, pero no hemos podido confirmar con precisión las fechas exactas del curso 2026-2027: comprueba el plazo vigente en educa.jcyl.es. El umbral de renta (~2 veces el IPREM) procede de un resumen informativo, no de la ficha oficial."
+    },
+    {
+      "id": "transporte-escolar-cyl",
+      "nombre": "Ayudas de Transporte Escolar",
+      "categoria": "educacion",
+      "organismo": "Consejería de Educación (Junta de Castilla y León)",
+      "descripcion": "Reembolso del gasto de transporte para alumnado que no puede usar una ruta de transporte escolar contratada por la Junta.",
+      "cuantia": "Reembolso del coste real justificado, sin una cuantía fija; el importe depende del gasto efectivamente realizado",
+      "requisitos": [
+        "Residir en Castilla y León",
+        "Estar matriculado desde 2º ciclo de Educación Infantil hasta ESO, Bachillerato, FP Básica o Educación Especial",
+        "No poder utilizar el transporte escolar contratado por la Junta"
+      ],
+      "enlaceSolicitud": "https://www.tramitacastillayleon.jcyl.es/web/jcyl/AdministracionElectronica/es/Plantilla100Detalle/1251181050732/Ayuda012/1285582647424/Propuesta",
+      "enlaceInfo": "https://www.tramitacastillayleon.jcyl.es/web/jcyl/AdministracionElectronica/es/Plantilla100Detalle/1251181050732/Ayuda012/1285582647424/Propuesta",
+      "estado": "cerrado",
+      "ambito": "autonomico",
+      "notas": "La convocatoria ordinaria del curso 2025-2026 se tramitó entre el 25 de noviembre y el 16 de diciembre de 2025, con un plazo extraordinario hasta el 30 de abril de 2026 para casos sobrevenidos. Se espera una nueva convocatoria para el curso 2026-2027."
+    },
+    {
+      "id": "alquiler-joven-cyl",
+      "nombre": "Subvención Autonómica al Alquiler de Vivienda",
+      "categoria": "vivienda",
+      "organismo": "Dirección General de Vivienda y Urbanismo (Junta de Castilla y León)",
+      "descripcion": "Subvención regional al alquiler de la vivienda habitual, con un porcentaje mayor para las personas jóvenes y para quienes viven en municipios pequeños.",
+      "cuantia": "Entre el 50% y el 75% del alquiler mensual: 60% para menores de 35 años, hasta 75% en municipios pequeños o situaciones de vulnerabilidad sobrevenida; combinada con otras ayudas al alquiler, el total no puede superar el 75% de la renta",
+      "requisitos": [
+        "Normalmente menores de 35 años (algunas líneas admiten otras edades)",
+        "Empadronado en un municipio de Castilla y León",
+        "Límites de ingresos según la convocatoria concreta"
+      ],
+      "enlaceSolicitud": "https://www.tramitacastillayleon.jcyl.es/web/jcyl/AdministracionElectronica/es/Plantilla100Detalle/1251181050732/Ayuda012/1285570689448/Propuesta",
+      "enlaceInfo": "https://www.tramitacastillayleon.jcyl.es/web/jcyl/AdministracionElectronica/es/Plantilla100Detalle/1251181050732/Ayuda012/1285570689448/Propuesta",
+      "estado": "cerrado",
+      "ambito": "autonomico",
+      "notas": "Los porcentajes proceden de resúmenes informativos de tramitacastillayleon.jcyl.es y vivienda.jcyl.es; no ha sido posible confirmarlos en la ficha oficial de detalle. La convocatoria 2025 ya se resolvió: comprueba si existe una convocatoria 2026 abierta antes de descartar esta ayuda."
+    },
+    {
+      "id": "rehabitare-cyl",
+      "nombre": "Programa Rehabitare (Vivienda Rural)",
+      "categoria": "vivienda",
+      "organismo": "Dirección General de Vivienda y Urbanismo (Junta de Castilla y León)",
+      "descripcion": "Programa para rehabilitar viviendas de titularidad municipal en pueblos pequeños y alquilarlas después a precio asequible, como medida contra la despoblación rural.",
+      "cuantia": "La Junta cubre hasta unos 80.000 € + IVA del coste de rehabilitación por vivienda; el alquiler resultante para el inquilino se limita a un tercio de sus ingresos o a 3 €/m²",
+      "requisitos": [
+        "Vivienda de titularidad municipal en un pueblo de menos de 5.000 habitantes",
+        "Prioridad para personas jóvenes, víctimas de violencia de género, o en riesgo de desahucio o sin hogar",
+        "El ayuntamiento del municipio debe estar adherido al programa"
+      ],
+      "enlaceSolicitud": "https://vivienda.jcyl.es/web/es/programa-rehabitare.html",
+      "enlaceInfo": "https://vivienda.jcyl.es/web/es/programa-rehabitare.html",
+      "estado": "permanente",
+      "ambito": "autonomico",
+      "notas": "Es un programa dirigido a ayuntamientos de municipios pequeños, que son quienes rehabilitan y alquilan después las viviendas a sus vecinos: no se solicita en una ventanilla individual salvo que tu ayuntamiento ya participe. Consulta con tu ayuntamiento si está adherido."
+    },
+    {
+      "id": "aes-municipal-salamanca",
+      "nombre": "Prestación Económica de Urgencia Social",
+      "categoria": "rentas-minimas",
+      "organismo": "Ayuntamiento de Salamanca (Área de Bienestar Social / CEAS)",
+      "descripcion": "Ayuda económica municipal para cubrir necesidades básicas urgentes —alimentación, higiene, suministros o alquiler— de vecinos de la ciudad de Salamanca en situación de emergencia.",
+      "cuantia": "Cuantía variable según la resolución de cada caso; en el primer semestre de 2026 se concedieron 330 ayudas de este tipo por un total de 508.555,28 €",
+      "requisitos": [
+        "Empadronado en el municipio de Salamanca durante al menos 6 meses (un empadronamiento previo en otro municipio de Castilla y León también se admite)",
+        "Ingresos por debajo de entre 1,2 y 1,35 veces el IPREM anual, según la composición familiar"
+      ],
+      "enlaceSolicitud": "https://www.aytosalamanca.gob.es/sta/CarpetaPublic/?APP_CODE=STA&PAGE_CODE=CATALOGO&DETALLE=6269000902175631007633",
+      "enlaceInfo": "https://www.aytosalamanca.gob.es/sta/CarpetaPublic/?APP_CODE=STA&PAGE_CODE=CATALOGO&DETALLE=6269000902175631007633",
+      "estado": "permanente",
+      "ambito": "municipal",
+      "notas": "El multiplicador exacto de IPREM varía según la fuente consultada (1,2 o 1,35 veces); confírmalo en el reglamento municipal antes de descartar la ayuda solo por este motivo."
+    },
+    {
+      "id": "desahucio-salamanca",
+      "nombre": "Ayuda Extraordinaria a Familias en Riesgo de Desahucio",
+      "categoria": "vivienda",
+      "organismo": "Ayuntamiento de Salamanca (Área de Bienestar Social)",
+      "descripcion": "Ayuda económica extraordinaria, con mediación bancaria y asesoramiento sobre deuda, para familias de Salamanca que no pueden hacer frente a la hipoteca o el alquiler de su vivienda habitual.",
+      "cuantia": "Hasta 3.195 €/año, además de mediación bancaria y asesoramiento sobre la deuda",
+      "requisitos": [
+        "Unidad familiar en situación de desempleo o ingresos muy bajos",
+        "Incapacidad acreditada para afrontar la hipoteca o el alquiler de la vivienda habitual"
+      ],
+      "enlaceSolicitud": "https://www.aytosalamanca.es/w/el-ayuntamiento-concede-ayudas-econ%C3%B3micas-a-otras-cinco-familias-en-riesgo-de-desahucio",
+      "enlaceInfo": "https://www.aytosalamanca.es/w/el-ayuntamiento-concede-ayudas-econ%C3%B3micas-a-otras-cinco-familias-en-riesgo-de-desahucio",
+      "estado": "permanente",
+      "ambito": "municipal",
+      "notas": "La cuantía procede de una nota de prensa municipal, no de una ordenanza publicada; confírmala en Bienestar Social antes de descartar la ayuda por el importe."
+    },
+    {
+      "id": "vivienda-social-salamanca",
+      "nombre": "Vivienda Social de Alquiler Municipal",
+      "categoria": "vivienda",
+      "organismo": "Patronato Municipal de Vivienda y Urbanismo (Salamanca)",
+      "descripcion": "Viviendas municipales en alquiler a precio muy reducido para personas o familias de Salamanca en riesgo de desahucio o sin vivienda.",
+      "cuantia": "Alquileres sociales entre 50 y 100 €/mes, según la vivienda y la disponibilidad",
+      "requisitos": [
+        "Situación acreditada de riesgo de desahucio o emergencia social sin vivienda",
+        "Empadronado en Salamanca"
+      ],
+      "enlaceSolicitud": "https://www.aytosalamanca.es/en/w/alquiler-viviendas",
+      "enlaceInfo": "https://www.aytosalamanca.es/en/w/alquiler-viviendas",
+      "estado": "permanente",
+      "ambito": "municipal",
+      "notas": "La disponibilidad de vivienda es limitada y puede implicar lista de espera; contacta directamente con el Patronato (923 28 18 88)."
+    },
+    {
+      "id": "bono-bus-salamanca",
+      "nombre": "Bono Bus Especial",
+      "categoria": "descuentos-movilidad",
+      "organismo": "Ayuntamiento de Salamanca (Área de Movilidad)",
+      "descripcion": "Tarjeta de transporte urbano a precio simbólico para pensionistas y personas desempleadas con cargas familiares de Salamanca.",
+      "cuantia": "Coste de emisión de 2 €, y solo 0,01 € descontados por viaje (frente a los 0,75-1 € del billete ordinario)",
+      "requisitos": [
+        "Pensionistas (viudedad o jubilación) con ingresos mínimos",
+        "Personas desempleadas con personas a cargo",
+        "Límite de ingresos que crece según los miembros del hogar (p. ej. hasta 2,5 veces el IPREM para 2 personas, hasta 4,5 veces para 6)"
+      ],
+      "enlaceSolicitud": "https://www.aytosalamanca.es/en/w/bonos-y-abonos-para-acceso-a-los-autobuses-urbanos",
+      "enlaceInfo": "https://www.aytosalamanca.es/en/w/bonos-y-abonos-para-acceso-a-los-autobuses-urbanos",
+      "estado": "permanente",
+      "ambito": "municipal",
+      "notas": "Los multiplicadores exactos de IPREM según el número de miembros del hogar deben confirmarse en la Ordenanza Fiscal nº 55 del Ayuntamiento de Salamanca."
+    },
+    {
+      "id": "material-escolar-salamanca",
+      "nombre": "Ayudas de Material Escolar",
+      "categoria": "educacion",
+      "organismo": "Ayuntamiento de Salamanca (Área de Bienestar Social)",
+      "descripcion": "Ayuda municipal de pago único para sufragar el material escolar de niños y niñas matriculados en centros educativos de Salamanca.",
+      "cuantia": "75 € por beneficiario, con un presupuesto total de 150.000 € para el curso 2026-2027",
+      "requisitos": [
+        "Matriculado desde 2º ciclo de Educación Infantil hasta ESO, FP Básica o Educación Especial en un centro de Salamanca",
+        "Ingresos familiares combinados de 2025 no superiores a 52.000 € (30.000 € en familias monoparentales)",
+        "Empadronado en Salamanca antes del 1 de enero de 2026",
+        "Sin deudas municipales pendientes ni casos de absentismo escolar"
+      ],
+      "enlaceSolicitud": "https://www.aytosalamanca.es/en/w/convocatoria-de-ayudas-de-material-escolar-2025-2026",
+      "enlaceInfo": "https://www.aytosalamanca.es/en/w/convocatoria-de-ayudas-de-material-escolar-2025-2026",
+      "estado": "abierto",
+      "ambito": "municipal",
+      "notas": "La convocatoria 2026-2027 tiene el plazo de solicitud del 14 al 25 de septiembre de 2026, para facturas de compras realizadas entre el 24 de junio y el 25 de septiembre de 2026."
+    },
+    {
+      "id": "descuentos-deportes-salamanca",
+      "nombre": "Tarifas Reducidas en Piscinas y Polideportivos Municipales",
+      "categoria": "descuentos-movilidad",
+      "organismo": "Ayuntamiento de Salamanca (Área de Deportes)",
+      "descripcion": "Descuentos en el precio de entrada a las piscinas e instalaciones deportivas municipales de Salamanca para familias con ingresos bajos, pensionistas y mayores de 65 años.",
+      "cuantia": "50% de descuento sobre el precio de entrada para familias con ingresos bajos; pensionistas y mayores de 65 años pagan la tarifa infantil (aprox. 1,08 €/sesión en piscinas al aire libre, 1,14 € en instalaciones cubiertas)",
+      "requisitos": [
+        "Ingresos familiares por debajo de los umbrales de la Ordenanza Fiscal nº 51 (los desempleados computan como 2 miembros de la unidad familiar)",
+        "Ser pensionista o tener 65 años o más, para la tarifa reducida por edad"
+      ],
+      "enlaceSolicitud": "https://www.aytosalamanca.gob.es/es/tramitesgestiones/tramite_0166",
+      "enlaceInfo": "https://www.aytosalamanca.gob.es/es/tramitesgestiones/tramite_0166",
+      "estado": "permanente",
+      "ambito": "municipal",
+      "notas": "Los umbrales de renta exactos no se han podido confirmar con precisión en la ordenanza original; contrástalos con la Ordenanza Fiscal nº 51 antes de descartar la ayuda solo por ingresos."
+    },
+    {
+      "id": "urgencia-social-diputacion",
+      "nombre": "Prestaciones en Situaciones de Urgencia Social",
+      "categoria": "rentas-minimas",
+      "organismo": "Diputación de Salamanca (Bienestar Social)",
+      "descripcion": "Ayuda económica para necesidades básicas de subsistencia de vecinos de los municipios pequeños de la provincia de Salamanca, tramitada a través de los CEAS.",
+      "cuantia": "Cuantía variable según cada caso; no existe una tabla de importes fijos publicada",
+      "requisitos": [
+        "Residir en un municipio de la provincia de Salamanca de menos de 20.000 habitantes (no aplica a la capital, que tiene su propio servicio municipal)"
+      ],
+      "enlaceSolicitud": "https://www.lasalina.es/bienestarsocial/familiainfancia/ayudaseconomicas/prestacionessituacionesurgencia/",
+      "enlaceInfo": "https://www.lasalina.es/bienestarsocial/familiainfancia/ayudaseconomicas/prestacionessituacionesurgencia/",
+      "estado": "permanente",
+      "ambito": "provincial",
+      "notas": null
+    },
+    {
+      "id": "apoyo-inmediato-diputacion",
+      "nombre": "Ayudas de Apoyo Inmediato ante Situaciones de Urgencia Social",
+      "categoria": "rentas-minimas",
+      "organismo": "Diputación de Salamanca, en colaboración con Cáritas y Cruz Roja",
+      "descripcion": "Apoyo material o en especie para necesidades de subsistencia inmediatas en los municipios de la provincia de Salamanca, cuando la vía ordinaria de ayudas no puede resolver el caso a tiempo.",
+      "cuantia": "Apoyo material o en especie para necesidades de subsistencia inmediatas; no tiene una cuantía económica fija",
+      "requisitos": [
+        "Situación de urgencia social no resoluble mediante las prestaciones ordinarias",
+        "Residir en un municipio de la provincia de Salamanca, distinto de la capital"
+      ],
+      "enlaceSolicitud": "http://www.lasalina.es/bienestarsocial/familiainfancia/ayudaseconomicas/Ayudasapoyoinmediato/",
+      "enlaceInfo": "http://www.lasalina.es/bienestarsocial/familiainfancia/ayudaseconomicas/Ayudasapoyoinmediato/",
+      "estado": "permanente",
+      "ambito": "provincial",
+      "notas": null
+    },
+    {
+      "id": "sad-diputacion",
+      "nombre": "Servicio de Ayuda a Domicilio (SAD)",
+      "categoria": "dependencia-mayores",
+      "organismo": "Diputación de Salamanca (Bienestar Social)",
+      "descripcion": "Servicio subvencionado de atención en el propio domicilio (higiene, movilidad, comidas, tareas domésticas) para personas mayores o con dependencia en los municipios de la provincia de Salamanca.",
+      "cuantia": "Servicio subvencionado; el precio público a cargo del usuario se redujo en torno a un 30% tras la reforma de la ordenanza de 2021",
+      "requisitos": [
+        "Dificultad para las actividades básicas de la vida diaria, o dependencia reconocida",
+        "Residir en un municipio de la provincia de Salamanca distinto de la capital (que tiene su propio SAD municipal)"
+      ],
+      "enlaceSolicitud": "https://www.lasalina.es/bienestarsocial/mayoresdiscapacidad/serviciosatenciondomiciliaria/sad/",
+      "enlaceInfo": "https://www.lasalina.es/bienestarsocial/mayoresdiscapacidad/serviciosatenciondomiciliaria/sad/",
+      "estado": "permanente",
+      "ambito": "provincial",
+      "notas": "La reducción del 30% procede de una noticia de 2021 sobre la reforma de la ordenanza, no de una tabla de precios vigente; confirma la cuota actual con tu CEAS."
+    },
+    {
+      "id": "teleasistencia-diputacion",
+      "nombre": "Teleasistencia",
+      "categoria": "dependencia-mayores",
+      "organismo": "Diputación de Salamanca (Bienestar Social)",
+      "descripcion": "Servicio de atención telefónica permanente, las 24 horas, para personas mayores o dependientes en situación de soledad o aislamiento en los municipios de la provincia de Salamanca.",
+      "cuantia": "Servicio subvencionado; la cuota mensual exacta no se ha podido confirmar en una fuente accesible",
+      "requisitos": [
+        "Persona mayor o con discapacidad en situación de soledad o aislamiento",
+        "Residir en un municipio de la provincia de Salamanca distinto de la capital"
+      ],
+      "enlaceSolicitud": "https://www.lasalina.es/bienestarsocial/mayoresdiscapacidad/serviciosatenciondomiciliaria/teleasistencia/",
+      "enlaceInfo": "https://www.lasalina.es/bienestarsocial/mayoresdiscapacidad/serviciosatenciondomiciliaria/teleasistencia/",
+      "estado": "permanente",
+      "ambito": "provincial",
+      "notas": "Existe una ordenanza de precios específica (BOP de mediados de enero de 2025) que no hemos podido consultar en detalle; confirma la cuota vigente con tu CEAS."
+    }
+  ]
+}

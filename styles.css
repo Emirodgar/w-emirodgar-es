@@ -516,6 +516,10 @@ a.link:hover {
     border-top: 2.5px solid #059669;
 }
 
+.legend-swatch--amber {
+    border-top: 2.5px solid #d97706;
+}
+
 .proyecto-resumen {
     font-size: 0.9rem;
     color: #475569;
