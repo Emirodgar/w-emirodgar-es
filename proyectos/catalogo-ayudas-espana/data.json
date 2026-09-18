@@ -1,0 +1,380 @@
+{
+  "lastUpdated": "18 de Septiembre, 2026",
+  "resumenEjecutivo": "Este catálogo reúne 20 ayudas y prestaciones de ámbito estatal en siete categorías. Once no tienen ningún plazo ni convocatoria (se solicitan cualquier día del año) y una más, el Bono Cultural Joven (400 € para quienes cumplen 18 años en 2026), tiene su ventana de solicitud abierta ahora mismo hasta el 31 de octubre: en total, doce son solicitables hoy sin pegas de plazo. Otras cinco las regula y financia el Estado pero las tramita cada comunidad autónoma con su propio portal —el Bono Alquiler Joven, las ayudas al alquiler para vulnerabilidad, la prestación por cese de actividad de autónomos y las pensiones no contributivas de invalidez y de jubilación—, una se concede de oficio sin que haga falta solicitarla (el bono social térmico), y dos están cerradas: las becas generales del Ministerio de Educación, que ya agotaron su convocatoria del curso 2026-2027, y la Renta Activa de Inserción, que dejó de admitir solicitudes nuevas de forma permanente en noviembre de 2024. El Ingreso Mínimo Vital sigue siendo la referencia de las rentas mínimas, con 733,60 €/mes para un adulto solo y su Complemento de Ayuda a la Infancia (hasta 115 €/mes por menor).",
+  "sources": {
+    "imv": "Seguridad Social / INSS — Ingreso Mínimo Vital (Ley 19/2021), revalorizado por el Real Decreto 39/2026 y el Real Decreto-ley 3/2026. Simulador y solicitud en imv.seg-social.es",
+    "capi": "Seguridad Social / INSS — Complemento de Ayuda a la Infancia (art. 11.6 y disposición adicional 10ª de la Ley 19/2021); los límites de renta/patrimonio proceden de fuentes secundarias, no confirmados directamente en inclusion.gob.es",
+    "asignacionHijoCargo": "Seguridad Social / INSS — prestación familiar por hijo o menor a cargo (arts. 351 y ss. del Texto Refundido de la Ley General de la Seguridad Social), cuantías del Real Decreto 39/2026 y el Real Decreto-ley 3/2026",
+    "nacimientoCuidadoMenor": "Seguridad Social / INSS — prestación por nacimiento y cuidado de menor (Ley 35/2007 y normativa de permisos parentales)",
+    "partoMultiple": "Seguridad Social / INSS — prestación por parto o adopción múltiples, calculada sobre el SMI vigente (Real Decreto 126/2026)",
+    "nacimientoFamiliasEspeciales": "Seguridad Social / INSS — prestación por nacimiento en familias numerosas, monoparentales o con progenitor con discapacidad ≥65% (Real Decreto 39/2026, art. 24.1.c y Real Decreto-ley 3/2026, art. 2.7)",
+    "brechaGenero": "Seguridad Social / INSS — complemento de pensiones para la reducción de la brecha de género (Real Decreto 39/2026, art. 12 y Real Decreto-ley 3/2026, art. 2.2)",
+    "bonoAlquilerJoven": "Ministerio de Vivienda y Agenda Urbana — Bono Alquiler Joven, regulado por el Plan Estatal de Vivienda 2026-2030 (Real Decreto 326/2026); gestionado y pagado por cada comunidad autónoma",
+    "ayudaAlquilerVulnerabilidad": "Ministerio de Vivienda y Agenda Urbana — ayudas al alquiler para personas vulnerables del Plan Estatal de Vivienda 2026-2030 (Real Decreto 326/2026); gestionado por cada comunidad autónoma",
+    "bonoSocialElectrico": "Ministerio para la Transición Ecológica (MITECO) / CNMC — bono social eléctrico (Real Decreto 897/2017), descuentos fijados para 2026 por el Real Decreto-ley 16/2025; se solicita a través de la comercializadora de referencia",
+    "bonoSocialTermico": "MITECO — bono social térmico (Real Decreto-ley 15/2018); concesión automática a quienes ya son beneficiarios del bono social eléctrico, pagado por cada comunidad autónoma",
+    "pncInvalidez": "IMSERSO / Seguridad Social — pensión no contributiva de incapacidad (invalidez), cuantías del Real Decreto 241/2026; gestionada por cada comunidad autónoma salvo en Ceuta y Melilla, donde la gestiona IMSERSO directamente",
+    "pncJubilacion": "IMSERSO / Seguridad Social — pensión no contributiva de jubilación, cuantías del Real Decreto 241/2026; gestionada por cada comunidad autónoma salvo en Ceuta y Melilla",
+    "becasMec": "Ministerio de Educación, Formación Profesional y Deportes — becas generales para estudios postobligatorios, Real Decreto 179/2026 (curso 2026-2027)",
+    "bonoCulturaJoven": "Ministerio de Cultura — Bono Cultural Joven (5ª edición, 2026)",
+    "paroContributivo": "SEPE — prestación contributiva por desempleo; topes calculados sobre el IPREM 2026 (600 €/mes, congelado desde 2023 por prórroga presupuestaria)",
+    "subsidioDesempleo": "SEPE — subsidio por desempleo, reformado por el Real Decreto-ley 2/2024, de 21 de mayo, en vigor desde el 1 de noviembre de 2024",
+    "subsidioMayores52": "SEPE — subsidio para mayores de 52 años",
+    "ceseActividadAutonomos": "Seguridad Social / mutuas colaboradoras — prestación por cese de actividad de autónomos (Ley 20/2007 y Ley 6/2017); topes calculados sobre el IPREM 2026",
+    "rai": "SEPE — Renta Activa de Inserción (Real Decreto 1369/2006); sin nuevas solicitudes desde el 1 de noviembre de 2024 por la reforma del Real Decreto-ley 2/2024",
+    "smiIprem2026": "Salario Mínimo Interprofesional 2026 (1.221 €/mes, Real Decreto 126/2026) e IPREM 2026 (600 €/mes, congelado desde 2023), usados como referencia para calcular varios topes de este catálogo"
+  },
+  "categorias": [
+    { "id": "rentas-minimas", "nombre": "Rentas Mínimas", "icon": "fa-hand-holding-dollar", "color": "emerald" },
+    { "id": "familia-infancia", "nombre": "Familia e Infancia", "icon": "fa-baby", "color": "rose" },
+    { "id": "empleo", "nombre": "Empleo y Desempleo", "icon": "fa-briefcase", "color": "blue" },
+    { "id": "vivienda", "nombre": "Vivienda", "icon": "fa-house", "color": "amber" },
+    { "id": "energia", "nombre": "Energía", "icon": "fa-bolt", "color": "yellow" },
+    { "id": "discapacidad-mayores", "nombre": "Discapacidad y Mayores", "icon": "fa-wheelchair", "color": "violet" },
+    { "id": "educacion-juventud", "nombre": "Educación y Juventud", "icon": "fa-graduation-cap", "color": "sky" }
+  ],
+  "ayudas": [
+    {
+      "id": "imv",
+      "nombre": "Ingreso Mínimo Vital (IMV)",
+      "categoria": "rentas-minimas",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Prestación no contributiva pensada para garantizar una renta mínima a personas y hogares sin recursos suficientes, ya vivan solas o en familia.",
+      "cuantia": "733,60 €/mes para un adulto solo (8.803,20 €/año); se incrementa un 30% por cada miembro adicional del hogar, hasta un máximo del 220% del importe base",
+      "requisitos": [
+        "Tener entre 23 y 65 años (o entre 18 y 22 si hay menores a cargo, se es víctima de violencia de género o trata, o se es huérfano de ambos padres)",
+        "Residencia legal y efectiva en España, de forma continuada, durante al menos el año inmediatamente anterior a la solicitud",
+        "Ingresos anuales del hogar por debajo del importe de la prestación garantizada para su tipo de unidad de convivencia",
+        "Patrimonio limitado (excluyendo la vivienda habitual), con umbrales que crecen según el número de miembros del hogar",
+        "Estar inscrito como demandante de empleo, si corresponde, y haber solicitado todas las pensiones y prestaciones a las que se pudiera tener derecho"
+      ],
+      "enlaceSolicitud": "https://imv.seg-social.es/",
+      "enlaceInfo": "https://imv.seg-social.es/",
+      "estado": "permanente",
+      "notas": "La tabla exacta de importes según composición del hogar y los límites de patrimonio conviene comprobarlos en el simulador oficial: varían caso por caso."
+    },
+    {
+      "id": "capi",
+      "nombre": "Complemento de Ayuda a la Infancia (CAPI)",
+      "categoria": "familia-infancia",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Complemento mensual por cada menor de la unidad de convivencia, compatible con el Ingreso Mínimo Vital o solicitable de forma independiente si el hogar no cumple los requisitos del IMV pero sí los del CAPI, que tiene límites de renta y patrimonio más amplios.",
+      "cuantia": "115 €/mes por cada menor de 0 a 3 años; 80,50 €/mes de 3 a 6 años; 57,50 €/mes de 6 a 18 años (acumulable por cada hijo o hija)",
+      "requisitos": [
+        "Tener menores de edad en la unidad de convivencia",
+        "No superar los límites de renta y patrimonio del CAPI, más amplios que los del IMV (varían según el número de adultos y menores del hogar)",
+        "Se solicita en el mismo trámite que el IMV, marcando la opción de CAPI aunque no se tenga derecho al IMV completo"
+      ],
+      "enlaceSolicitud": "https://imv.seg-social.es/",
+      "enlaceInfo": "https://www.inclusion.gob.es/web/inclusion/que-es-el-capi",
+      "estado": "permanente",
+      "notas": "Los límites exactos de renta y patrimonio deben confirmarse en el simulador oficial o en inclusion.gob.es antes de descartar el derecho a esta ayuda."
+    },
+    {
+      "id": "asignacion-hijo-cargo",
+      "nombre": "Asignación económica por hijo o menor a cargo",
+      "categoria": "familia-infancia",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Prestación periódica para familias con hijos o menores a su cargo (biológicos, adoptados o en acogimiento) menores de 18 años, o mayores de 18 con discapacidad, distinta y anterior al IMV/CAPI.",
+      "cuantia": "588 €/año (~49 €/mes) por hijo sin discapacidad o con discapacidad menor del 33% (637,92 €/año en hogares con ingresos más bajos); 1.000 €/año con discapacidad ≥33%; 5.962,80 €/año con discapacidad ≥65% siendo mayor de edad; 8.942,40 €/año con discapacidad ≥75% y necesidad de asistencia de otra persona",
+      "requisitos": [
+        "Ingresos anuales del hogar inferiores a 15.356 €/año (23.109 €/año en familias numerosas, +3.745 €/año por cada hijo a partir del cuarto)",
+        "Residencia legal en España",
+        "Hijos o menores a cargo menores de 18 años, o mayores de 18 con discapacidad reconocida"
+      ],
+      "enlaceSolicitud": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Familia",
+      "enlaceInfo": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Familia",
+      "estado": "permanente",
+      "notas": "Puede ser incompatible con el IMV en algunos supuestos: conviene comprobar la compatibilidad exacta antes de solicitar ambas."
+    },
+    {
+      "id": "nacimiento-cuidado-menor",
+      "nombre": "Prestación por nacimiento y cuidado de menor",
+      "categoria": "familia-infancia",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Subsidio para personas trabajadoras (por cuenta propia o ajena) durante el permiso legal de nacimiento, adopción, guarda con fines de adopción o acogimiento. No está restringido a familias numerosas, monoparentales o con discapacidad.",
+      "cuantia": "100% de la base reguladora (equivalente a la base de cotización por contingencias comunes), durante 16 semanas comunes más 2 semanas adicionales de disfrute flexible",
+      "requisitos": [
+        "Situación de nacimiento, adopción, guarda con fines de adopción o acogimiento",
+        "Periodo mínimo de cotización según la edad de la persona solicitante (existe también una modalidad no contributiva para quien no lo cumple)"
+      ],
+      "enlaceSolicitud": "https://run.gob.es/nycm",
+      "enlaceInfo": "https://sede.seg-social.gob.es",
+      "estado": "permanente",
+      "notas": "La duración exacta puede haber variado por reformas recientes, especialmente en familias monoparentales: confirma el detalle vigente en la Seguridad Social."
+    },
+    {
+      "id": "parto-multiple",
+      "nombre": "Prestación por parto o adopción múltiples",
+      "categoria": "familia-infancia",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Pago único para compensar el mayor gasto de un parto o adopción múltiple (dos o más hijos a la vez), sin restricción a familias numerosas, monoparentales o con discapacidad.",
+      "cuantia": "4 veces el SMI mensual por 2 hijos (4.884 €), 8 veces por 3 hijos (9.768 €), 12 veces por 4 o más hijos (14.652 €), sobre el SMI 2026 de 1.221 €/mes; cuenta doble si algún hijo tiene discapacidad ≥33%",
+      "requisitos": [
+        "Parto o adopción de 2 o más hijos en el mismo acto",
+        "Residencia legal en España"
+      ],
+      "enlaceSolicitud": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Familia",
+      "enlaceInfo": "https://www.seg-social.es/wps/portal/wss/internet/InformacionUtil/44539/44999/44880/44882",
+      "estado": "permanente",
+      "notas": null
+    },
+    {
+      "id": "nacimiento-familias-especiales",
+      "nombre": "Prestación por nacimiento en familias numerosas, monoparentales o con discapacidad",
+      "categoria": "familia-infancia",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Pago único, condicionado a renta, por el nacimiento o adopción de un hijo cuando la familia es numerosa (o adquiere esa condición con el nacimiento), es monoparental, o cuando la madre o el padre tiene una discapacidad igual o superior al 65%.",
+      "cuantia": "1.000 € en pago único",
+      "requisitos": [
+        "Familia numerosa, monoparental, o progenitor con discapacidad ≥65%",
+        "Ingresos anuales del hogar inferiores a 15.356 €/año (23.109 €/año en familias numerosas, +3.745 €/año por cada hijo a partir del cuarto)"
+      ],
+      "enlaceSolicitud": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Familia",
+      "enlaceInfo": "https://sede.seg-social.gob.es/wps/portal/sede/sede/Ciudadanos/Familia",
+      "estado": "permanente",
+      "notas": "Compatible con la prestación por parto múltiple y con la asignación económica por hijo a cargo."
+    },
+    {
+      "id": "paro-contributivo",
+      "nombre": "Prestación Contributiva por Desempleo (\"el paro\")",
+      "categoria": "empleo",
+      "organismo": "SEPE",
+      "descripcion": "Sustituye parcialmente el salario de quien pierde su empleo de forma involuntaria (despido, fin de contrato, ERE...) y ha cotizado previamente por esta contingencia.",
+      "cuantia": "70% de la base reguladora los primeros 180 días, 60% a partir del día 181; entre 1.225 €/mes (tope sin hijos) y 1.575 €/mes (tope con 2 o más hijos) en 2026, con mínimos de 560 a 749 €/mes según cargas familiares",
+      "requisitos": [
+        "Encontrarse en situación legal de desempleo e inscrito como demandante de empleo",
+        "Al menos 360 días cotizados por desempleo en los últimos 6 años",
+        "No haber alcanzado la edad ordinaria de jubilación con derecho a pensión",
+        "Solicitarlo en los 15 días hábiles siguientes al cese en el empleo"
+      ],
+      "enlaceSolicitud": "https://sede.sepe.gob.es",
+      "enlaceInfo": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/he-perdido-mi-empleo/prestacion-nivel-contributivo.html",
+      "estado": "permanente",
+      "notas": "Dura entre 120 días y 2 años según los días cotizados. Los importes mínimo/máximo dependen del IPREM, congelado en 600 €/mes desde 2023 al no aprobarse nuevos Presupuestos Generales del Estado."
+    },
+    {
+      "id": "subsidio-desempleo",
+      "nombre": "Subsidio por Desempleo",
+      "categoria": "empleo",
+      "organismo": "SEPE",
+      "descripcion": "Protección asistencial para quienes no tienen derecho a la prestación contributiva, la han agotado, o cotizaron menos de un año, y carecen de rentas suficientes.",
+      "cuantia": "570 €/mes los primeros 180 días, 540 €/mes del día 181 al 360, y 480 €/mes a partir del día 361 (reforma en vigor desde noviembre de 2024)",
+      "requisitos": [
+        "Estar inscrito como demandante de empleo y suscribir el compromiso de actividad",
+        "Carecer de rentas propias superiores al 75% del SMI (915,75 €/mes en 2026)",
+        "Haber agotado la prestación contributiva, o no tener derecho a ella por cotización insuficiente"
+      ],
+      "enlaceSolicitud": "https://sede.sepe.gob.es",
+      "enlaceInfo": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/he-perdido-mi-empleo/subsidios-por-desempleo.html",
+      "estado": "permanente",
+      "notas": "La duración exacta por tramos (entre 6 y 30 meses según cargas familiares y edad) cambió con la reforma de 2024; confirma tu caso concreto en el SEPE."
+    },
+    {
+      "id": "subsidio-mayores-52",
+      "nombre": "Subsidio para Mayores de 52 Años",
+      "categoria": "empleo",
+      "organismo": "SEPE",
+      "descripcion": "Subsidio de larga duración, hasta la edad de jubilación, para personas de 52 años o más que han agotado la prestación contributiva o un subsidio anterior y reúnen los demás requisitos de la pensión de jubilación salvo la edad.",
+      "cuantia": "480 €/mes fijo (80% del IPREM) durante todo el periodo; además, el SEPE cotiza por jubilación al 125% de la base mínima mientras se percibe",
+      "requisitos": [
+        "Tener 52 años o más",
+        "Haber cotizado por desempleo al menos 6 años a lo largo de la vida laboral",
+        "Acreditar 15 años cotizados en total a la Seguridad Social",
+        "Haber agotado la prestación contributiva o un subsidio anterior, manteniendo la inscripción como demandante de empleo",
+        "No superar en rentas propias el 75% del SMI (915,75 €/mes en 2026)"
+      ],
+      "enlaceSolicitud": "https://sede.sepe.gob.es",
+      "enlaceInfo": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/he-perdido-mi-empleo/subsidios-por-desempleo.html",
+      "estado": "permanente",
+      "notas": null
+    },
+    {
+      "id": "cese-actividad-autonomos",
+      "nombre": "Prestación por Cese de Actividad de Autónomos",
+      "categoria": "empleo",
+      "organismo": "Mutua colaboradora con la Seguridad Social (no el SEPE)",
+      "descripcion": "El \"paro de los autónomos\": prestación para trabajadores por cuenta propia que cesan su negocio por causas legalmente tasadas (pérdidas, deudas judiciales, concurso de acreedores, fuerza mayor, pérdida de licencia, violencia de género...).",
+      "cuantia": "70% de la base reguladora de los últimos 12 meses; entre 1.050 y 1.350 €/mes de tope según hijos a cargo, con mínimos de 480 a 642 €/mes",
+      "requisitos": [
+        "Estar en alta en el RETA con al menos 12 meses continuados de cotización por cese de actividad",
+        "Encontrarse en una de las situaciones legales de cese tasadas por la ley (pérdidas, deudas, fuerza mayor...)",
+        "Suscribir el compromiso de promoción de la actividad emprendedora",
+        "Estar al corriente de pago con la Seguridad Social",
+        "Solicitarlo antes de que acabe el mes siguiente al cese"
+      ],
+      "enlaceSolicitud": "https://www.seg-social.es/wps/portal/wss/internet/FAQ/897e30db-3172-4528-987f-ab1ffde1b8e7/ed13c2a7-72fb-4831-83b5-7c597923e568/64f2316b-c235-4dd9-a2cd-ac44c96b46a9",
+      "enlaceInfo": "https://www.seg-social.es/wps/portal/wss/internet/FAQ/897e30db-3172-4528-987f-ab1ffde1b8e7/ed13c2a7-72fb-4831-83b5-7c597923e568/64f2316b-c235-4dd9-a2cd-ac44c96b46a9",
+      "estado": "regional",
+      "notas": "No hay un portal único: se solicita ante la mutua colaboradora a la que esté adscrito cada autónomo, no ante el SEPE ni un organismo centralizado."
+    },
+    {
+      "id": "rai",
+      "nombre": "Renta Activa de Inserción (RAI)",
+      "categoria": "empleo",
+      "organismo": "SEPE",
+      "descripcion": "Programa histórico para desempleados de larga duración mayores de 45 años, personas con discapacidad, emigrantes retornados y víctimas de violencia de género, con una ayuda adicional de pago único para estas últimas si cambian de residencia.",
+      "cuantia": "480 €/mes (80% del IPREM); víctimas de violencia de género con cambio de residencia: pago único adicional de unos 1.440 € (3 meses de renta)",
+      "requisitos": [
+        "Ya no admite solicitudes nuevas desde el 1 de noviembre de 2024"
+      ],
+      "enlaceSolicitud": "https://sede.sepe.gob.es",
+      "enlaceInfo": "https://www.sepe.es/HomeSepe/Personas/distributiva-prestaciones/he-perdido-mi-empleo/subsidios-por-desempleo.html",
+      "estado": "cerrado",
+      "notas": "No es un cierre de campaña anual: la RAI dejó de admitir nuevas solicitudes de forma permanente con la reforma de noviembre de 2024. Solo sigue cobrándola quien ya tuviera el derecho reconocido antes de esa fecha. Quien antes habría accedido a la RAI hoy debe mirar el Subsidio por Desempleo o el Ingreso Mínimo Vital."
+    },
+    {
+      "id": "bono-alquiler-joven",
+      "nombre": "Bono Alquiler Joven",
+      "categoria": "vivienda",
+      "organismo": "Ministerio de Vivienda y Agenda Urbana (gestión autonómica)",
+      "descripcion": "Ayuda mensual para pagar el alquiler y facilitar la emancipación de personas jóvenes, regulada por el Estado dentro del nuevo Plan Estatal de Vivienda 2026-2030.",
+      "cuantia": "Hasta 300 €/mes para una vivienda completa o 200 €/mes para una habitación, según el nuevo Plan 2026-2030; algunas convocatorias autonómicas todavía en curso bajo el plan anterior (2022-2025) siguen pagando 250 €/mes",
+      "requisitos": [
+        "Entre 18 y 35 años",
+        "Ingresos por debajo del límite fijado por tu comunidad autónoma (hasta 5 veces el IPREM en el nuevo plan, según las convocatorias)",
+        "Contrato de alquiler de vivienda habitual y permanente (con reglas específicas si es una habitación en piso compartido)"
+      ],
+      "enlaceSolicitud": "https://www.mivau.gob.es/vivienda/bono-alquiler-joven",
+      "enlaceInfo": "https://www.mivau.gob.es/vivienda/bono-alquiler-joven",
+      "estado": "regional",
+      "notas": "El Estado la regula y financia, pero cada comunidad autónoma la tramita con su propia convocatoria, plazos y portal — usa el enlace del ministerio para localizar el de tu comunidad. Al cierre de esta actualización, la propia web del ministerio todavía mostraba en parte las cifras del plan anterior (250 €), así que confirma la cuantía vigente en la convocatoria concreta de tu región."
+    },
+    {
+      "id": "ayuda-alquiler-vulnerabilidad",
+      "nombre": "Ayudas al alquiler para personas vulnerables",
+      "categoria": "vivienda",
+      "organismo": "Ministerio de Vivienda y Agenda Urbana (gestión autonómica)",
+      "descripcion": "Ayuda al alquiler para hogares con recursos limitados, con un tramo reforzado para colectivos especialmente vulnerables: víctimas de violencia de género, personas en riesgo de desahucio de su vivienda habitual, personas sin hogar y otros colectivos vulnerables.",
+      "cuantia": "250 €/mes en el tramo general; hasta 1.000 €/mes para víctimas de violencia de género; para otros colectivos especialmente vulnerables, hasta el 100% de la renta más 300 €/mes para suministros, según el Plan Estatal de Vivienda 2026-2030",
+      "requisitos": [
+        "Ingresos del hogar por debajo de 3 veces el IPREM (tramo general); hasta 5 veces el IPREM si hay un miembro con discapacidad ≥65% o en familias numerosas de categoría especial",
+        "Pertenecer a alguno de los colectivos definidos como especialmente vulnerables para el tramo reforzado (víctima de violencia de género, riesgo de desahucio, sin hogar u otros)",
+        "Límite de renta de la vivienda arrendada (hasta 1.000 €/mes vivienda completa, 600 €/mes habitación, en el tramo especial)"
+      ],
+      "enlaceSolicitud": "https://www.mivau.gob.es/vivienda/info-plan-estatal-de-vivienda-2026-2030",
+      "enlaceInfo": "https://www.mivau.gob.es/vivienda/info-plan-estatal-de-vivienda-2026-2030",
+      "estado": "regional",
+      "notas": "No existe un portal nacional único de solicitud: la gestiona y paga cada comunidad autónoma con su propia convocatoria dentro del marco estatal del Plan de Vivienda."
+    },
+    {
+      "id": "bono-social-electrico",
+      "nombre": "Bono Social Eléctrico",
+      "categoria": "energia",
+      "organismo": "Ministerio para la Transición Ecológica / comercializadora de referencia",
+      "descripcion": "Descuento en la factura de la luz (en la parte de energía, sobre la tarifa regulada PVPC) para consumidores vulnerables, vulnerables severos o en riesgo de exclusión social.",
+      "cuantia": "42,5% de descuento para consumidor vulnerable y 57,5% para vulnerable severo durante 2026; el consumidor en riesgo de exclusión social no paga nada y no puede ser desconectado",
+      "requisitos": [
+        "Ser titular del punto de suministro, persona física, en vivienda habitual, con la tarifa regulada (PVPC)",
+        "Ingresos del hogar por debajo de determinados múltiplos del IPREM (aumentan según el número de miembros, si hay menores, discapacidad ≥33%, o víctimas de violencia de género o terrorismo)",
+        "Alternativa automática: ser familia numerosa, o que todos los miembros del hogar sean pensionistas con la pensión mínima y sin otros ingresos",
+        "Para el tramo de riesgo de exclusión social: cumplir los requisitos de vulnerable severo y que los servicios sociales financien al menos el 50% de la factura"
+      ],
+      "enlaceSolicitud": "https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001.html",
+      "enlaceInfo": "https://www.miteco.gob.es/es/energia/pobreza-energetica/pe-001.html",
+      "estado": "permanente",
+      "notas": "No se solicita a un organismo público directamente, sino a tu comercializadora de referencia (por teléfono, web, o presencialmente)."
+    },
+    {
+      "id": "bono-social-termico",
+      "nombre": "Bono Social Térmico",
+      "categoria": "energia",
+      "organismo": "MITECO (pago a cargo de cada comunidad autónoma)",
+      "descripcion": "Ayuda económica anual, en un único pago, para cubrir gastos de calefacción, agua caliente y cocina, dirigida a quienes ya son beneficiarios del Bono Social Eléctrico.",
+      "cuantia": "Cuantía variable según la categoría de vulnerabilidad y la zona climática de la vivienda; no hay una tabla oficial de importes para 2026 confirmada en fuente primaria en el momento de esta actualización",
+      "requisitos": [
+        "Ser beneficiario del Bono Social Eléctrico (vulnerable o vulnerable severo) a 31 de diciembre del año anterior — no hay ningún otro requisito adicional"
+      ],
+      "enlaceSolicitud": "https://sede.miteco.gob.es/portal/site/seMITECO/ficha-procedimiento?procedure_id=489",
+      "enlaceInfo": "https://sede.miteco.gob.es/portal/site/seMITECO/ficha-procedimiento?procedure_id=489",
+      "estado": "automatico",
+      "notas": "No hace falta solicitarlo: se concede de oficio a partir de la lista de beneficiarios del bono social eléctrico, y lo paga tu comunidad autónoma directamente en la cuenta asociada al contrato de la luz."
+    },
+    {
+      "id": "pnc-invalidez",
+      "nombre": "Pensión No Contributiva de Invalidez",
+      "categoria": "discapacidad-mayores",
+      "organismo": "IMSERSO / comunidades autónomas",
+      "descripcion": "Prestación mensual, financiada con impuestos y no con cotizaciones, para personas de 18 a 64 años con un grado de discapacidad reconocido igual o superior al 65% y sin recursos suficientes.",
+      "cuantia": "628,80 €/mes (8.803,20 €/año) en 14 pagas; 157,20 €/mes en su cuantía mínima (25%); hasta 943,20 €/mes con el complemento por necesidad de asistencia de otra persona (discapacidad ≥75%)",
+      "requisitos": [
+        "Entre 18 y 64 años",
+        "Grado de discapacidad o enfermedad crónica reconocido ≥65%",
+        "Residencia legal en España durante 5 años, 2 de ellos justo antes de la solicitud",
+        "Ingresos anuales inferiores a 8.803,20 € (el límite crece según el número de personas del hogar)"
+      ],
+      "enlaceSolicitud": "https://imserso.es/en/pnc-prestaciones-subvenciones/donde-solicitar-pension-no-contributiva-pnc",
+      "enlaceInfo": "https://imserso.es/en/pnc-prestaciones-subvenciones/pnc-invalidez",
+      "estado": "regional",
+      "notas": "La reconoce y gestiona cada comunidad autónoma a través de sus servicios sociales; el IMSERSO solo la gestiona directamente en Ceuta y Melilla."
+    },
+    {
+      "id": "pnc-jubilacion",
+      "nombre": "Pensión No Contributiva de Jubilación",
+      "categoria": "discapacidad-mayores",
+      "organismo": "IMSERSO / comunidades autónomas",
+      "descripcion": "Prestación mensual para personas de 65 años o más que nunca cotizaron lo suficiente para una pensión contributiva y no tienen recursos suficientes.",
+      "cuantia": "628,80 €/mes (8.803,20 €/año) en 14 pagas; 157,20 €/mes en su cuantía mínima (25%)",
+      "requisitos": [
+        "65 años o más en el momento de la solicitud",
+        "Residencia legal en España durante 10 años entre los 16 años y la edad de jubilación, 2 de ellos consecutivos e inmediatamente anteriores a la solicitud",
+        "Ingresos anuales inferiores a 8.803,20 € (el límite crece según el número de personas del hogar)"
+      ],
+      "enlaceSolicitud": "https://imserso.es/en/pnc-prestaciones-subvenciones/donde-solicitar-pension-no-contributiva-pnc",
+      "enlaceInfo": "https://imserso.es/en/pnc-prestaciones-subvenciones/pnc-jubilacion",
+      "estado": "regional",
+      "notas": "La reconoce y gestiona cada comunidad autónoma a través de sus servicios sociales; el IMSERSO solo la gestiona directamente en Ceuta y Melilla."
+    },
+    {
+      "id": "brecha-genero",
+      "nombre": "Complemento para la Reducción de la Brecha de Género",
+      "categoria": "discapacidad-mayores",
+      "organismo": "Seguridad Social (INSS)",
+      "descripcion": "Complemento que se añade a una pensión contributiva de jubilación, incapacidad permanente o viudedad, para compensar el impacto de la maternidad o paternidad en la carrera de cotización.",
+      "cuantia": "36,90 €/mes por cada hijo o hija, con un máximo de 4 veces ese importe (147,60 €/mes)",
+      "requisitos": [
+        "Ser beneficiario de una pensión contributiva de jubilación, incapacidad permanente o viudedad causada desde el 1 de febrero de 2021",
+        "Haber tenido hijos o hijas biológicos o adoptados"
+      ],
+      "enlaceSolicitud": "https://sede.seg-social.gob.es",
+      "enlaceInfo": "https://prestaciones.seg-social.es/servicio/complemento-brecha.html?categoria=jubilacion",
+      "estado": "permanente",
+      "notas": "Una sentencia del Tribunal de Justicia de la UE (mayo de 2025) extiende este complemento también a los hombres en las mismas condiciones; confirma el procedimiento vigente al solicitarlo."
+    },
+    {
+      "id": "becas-mec",
+      "nombre": "Becas Generales del Ministerio de Educación (Becas MEC)",
+      "categoria": "educacion-juventud",
+      "organismo": "Ministerio de Educación, Formación Profesional y Deportes",
+      "descripcion": "Ayuda económica para estudiantes de bachillerato, FP, enseñanzas artísticas/deportivas y universidad con rentas familiares por debajo de determinados umbrales, que combina beca de matrícula, cuantía fija, cuantía variable y un plus por excelencia académica.",
+      "cuantia": "Beca de matrícula (importe del precio público) + cuantía fija ligada a la renta (1.700 €) + cuantía fija ligada a la residencia (2.700 €) + beca básica (300 €, 350 € en FP Grado Básico) + cuantía variable (mínimo 60 €) + hasta 125 € más por excelencia académica",
+      "requisitos": [
+        "Estar matriculado en un programa postobligatorio reconocido (bachillerato, FP, enseñanzas artísticas o deportivas, grado universitario o máster habilitante)",
+        "Renta familiar por debajo del umbral correspondiente al número de miembros del hogar (por ejemplo, en torno a 22.100-23.300 € para una familia de 4 miembros en el umbral más bajo)",
+        "Patrimonio familiar por debajo del límite fijado",
+        "Rendimiento académico mínimo exigido en el curso anterior"
+      ],
+      "enlaceSolicitud": "https://sede.educacion.gob.es/sede/",
+      "enlaceInfo": "https://www.becaseducacion.gob.es",
+      "estado": "cerrado",
+      "notas": "La convocatoria del curso 2026-2027 estuvo abierta del 7 de abril al 19 de mayo de 2026 (con una ventana especial hasta el 10 de septiembre para necesidades específicas de apoyo educativo) y ya está cerrada. La siguiente convocatoria (curso 2027-2028) se espera en primavera de 2027."
+    },
+    {
+      "id": "bono-cultural-joven",
+      "nombre": "Bono Cultural Joven",
+      "categoria": "educacion-juventud",
+      "organismo": "Ministerio de Cultura",
+      "descripcion": "Ayuda única de 400 € para que los jóvenes que cumplen 18 años consuman cultura: espectáculos en vivo, cine, música, libros, museos, patrimonio, instrumentos musicales o cursos y talleres culturales.",
+      "cuantia": "400 € en una tarjeta prepago virtual, válida durante 12 meses desde su concesión",
+      "requisitos": [
+        "Haber nacido en 2008 (cumplir 18 años en 2026)",
+        "Nacionalidad española, residencia legal en España, solicitante de asilo, persona desplazada temporalmente, o antiguo menor extranjero no acompañado bajo tutela pública",
+        "Sin requisito de ingresos"
+      ],
+      "enlaceSolicitud": "https://bonoculturajoven.gob.es/",
+      "enlaceInfo": "https://www.cultura.gob.es/actualidad/2026/06/260622-bono-cultural-joven-2026.html",
+      "estado": "abierto",
+      "notas": "La 5ª edición (2026) está abierta del 22 de junio al 31 de octubre de 2026."
+    }
+  ]
+}

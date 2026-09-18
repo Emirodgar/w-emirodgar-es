@@ -147,6 +147,19 @@
                 <a href="https://emirodgar.es/simulador-hipotecas-espana" class="link proyecto-cta">Explorar el panel completo →</a>
             </div>
 
+            <div class="proyecto-card proyecto-card--featured">
+                <span class="proyecto-badge">Panel en vivo</span>
+                <h3>Catálogo de Ayudas Sociales en España</h3>
+                <p>Directorio filtrable de las principales ayudas y prestaciones estatales, con cuantías, requisitos y el enlace oficial para solicitarlas.</p>
+                <div class="proyecto-chart-wrapper" id="ayudasSparkline" aria-hidden="true"></div>
+                <div class="proyecto-chart-legend">
+                    <span><i class="legend-swatch legend-swatch--blue"></i> Solicitables ahora</span>
+                    <span><i class="legend-swatch"></i> Resto del catálogo</span>
+                </div>
+                <p id="ayudasResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
+                <a href="https://emirodgar.es/catalogo-ayudas-espana" class="link proyecto-cta">Explorar el panel completo →</a>
+            </div>
+
         </div>
     </section>
 
@@ -311,6 +324,43 @@
                     }
                     if (dataset.sparklineSvg) {
                         sparklineEl.innerHTML = dataset.sparklineSvg;
+                    }
+                })
+                .catch(() => {
+                    if (resumenEl) {
+                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
+                    }
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sparklineEl = document.getElementById('ayudasSparkline');
+            const resumenEl = document.getElementById('ayudasResumen');
+            if (!sparklineEl) return;
+
+            fetch('proyectos/catalogo-ayudas-espana/data.json', { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar data.json');
+                    return res.json();
+                })
+                .then(dataset => {
+                    if (resumenEl) {
+                        resumenEl.textContent = dataset.resumenEjecutivo || '';
+                    }
+                    const ayudas = dataset.ayudas || [];
+                    const total = ayudas.length;
+                    const abiertas = ayudas.filter(a => a.estado === 'abierto' || a.estado === 'permanente').length;
+                    if (total > 0) {
+                        const wAbiertas = Math.round((abiertas / total) * 296);
+                        const wResto = 296 - wAbiertas;
+                        sparklineEl.innerHTML = `
+                            <svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ayudas solicitables ahora sobre el total del catalogo" style="width:100%;height:100%">
+                                <text x="12" y="18" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Ayudas solicitables ahora mismo</text>
+                                <rect x="12" y="34" width="${Math.max(wAbiertas, 2)}" height="34" rx="8" fill="#2563eb"/>
+                                <rect x="${12 + Math.max(wAbiertas, 2)}" y="34" width="${Math.max(wResto, 2)}" height="34" rx="8" fill="#e2e8f0"/>
+                                <text x="12" y="90" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1e293b">${abiertas} de ${total} ayudas</text>
+                            </svg>
+                        `;
                     }
                 })
                 .catch(() => {
