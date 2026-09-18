@@ -97,6 +97,25 @@ se mantiene siempre alineada con el catálogo vigente sin ningún paso manual ad
 Solo tócala si el usuario pide explícitamente añadir, quitar o reformular alguna pregunta — en ese caso,
 edita el array que construye `getFAQs()` en `index.html`, no un campo de `data.json`.
 
+## Calculadora de elegibilidad (al principio del panel)
+
+El panel abre con un bloque `#elegibilidadSection` donde la persona rellena edad, situación laboral,
+ingresos, miembros del hogar, hijos a cargo, discapacidad, alquiler, familia numerosa/monoparental,
+nacimiento reciente y violencia de género; al pulsar "Ver mis ayudas" el grid se filtra para mostrar solo
+las ayudas a las que ese perfil podría tener derecho, y "Borrar todo y ver todas las ayudas" limpia el
+formulario y los filtros de categoría/búsqueda.
+
+**No se guarda en `data.json`**: la lógica vive en `index.html`, en el objeto `ELEGIBILIDAD` (una función
+por `id` de ayuda) y la función `evaluarElegibilidad()`. Es un cribado orientativo, no una resolución
+oficial — está diseñado a propósito para **no descartar por error** una ayuda dudosa (si una ayuda no
+tiene regla en `ELEGIBILIDAD`, se considera "posible" por defecto en vez de ocultarla).
+
+Si añades una ayuda nueva a `data.json`, añade también su regla en `ELEGIBILIDAD` (usa el mismo `id`) —
+si no lo haces, la ayuda simplemente se mostrará siempre que se aplique el filtro, lo cual es seguro pero
+menos útil. Si cambias un umbral de renta oficial (IMV, asignación por hijo a cargo, bono social...),
+actualiza también la fórmula correspondiente en `index.html` (`imvThreshold`, `umbralAsignacionFamiliar`,
+`bonoSocialThreshold`) para que la calculadora no quede desalineada con las cifras de las fichas.
+
 ## Notas
 
 - Este catálogo es deliberadamente **solo de ayudas estatales**. No añadas rentas mínimas de inserción

@@ -83,6 +83,84 @@
 
     <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
 
+        <!-- Calculadora de elegibilidad -->
+        <section id="elegibilidadSection" class="bg-white p-5 sm:p-6 rounded-xl shadow-sm border-2 border-brand-200">
+            <div class="flex items-center gap-2 mb-1">
+                <i class="fa-solid fa-magnifying-glass-dollar text-brand-600"></i>
+                <h2 class="text-base font-bold text-slate-800">¿A qué ayudas puedo optar?</h2>
+            </div>
+            <p class="text-xs text-slate-500 mb-4">Rellena tus datos y el catálogo se filtrará para mostrar solo las ayudas a las que podrías tener derecho. Es un primer cribado orientativo, no una resolución oficial: siempre debes comprobar los requisitos exactos en la fuente correspondiente.</p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div>
+                    <label for="perfilEdad" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Edad</label>
+                    <input type="number" id="perfilEdad" min="0" max="120" placeholder="Ej. 35" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilSituacion" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Situación laboral</label>
+                    <select id="perfilSituacion" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="">Selecciona…</option>
+                        <option value="cuenta-ajena">Trabajo por cuenta ajena</option>
+                        <option value="autonomo">Trabajo por cuenta propia (autónomo/a)</option>
+                        <option value="desempleo">En desempleo</option>
+                        <option value="jubilado">Jubilado/a o pensionista</option>
+                        <option value="estudiante">Estudiante</option>
+                        <option value="otra">Otra situación</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="perfilIngresos" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Ingresos netos mensuales del hogar (€)</label>
+                    <input type="number" id="perfilIngresos" min="0" step="50" placeholder="Ej. 1200" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilMiembros" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Miembros del hogar (incluido tú)</label>
+                    <input type="number" id="perfilMiembros" min="1" step="1" value="1" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilHijos" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Hijos o menores a cargo</label>
+                    <input type="number" id="perfilHijos" min="0" step="1" value="0" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label for="perfilDiscapacidad" class="text-xs font-semibold text-slate-500 uppercase tracking-wide">Grado de discapacidad reconocido</label>
+                    <select id="perfilDiscapacidad" class="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-500">
+                        <option value="0">Sin discapacidad reconocida</option>
+                        <option value="33">33% - 64%</option>
+                        <option value="65">65% - 74%</option>
+                        <option value="75">75% o más</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mt-4 flex flex-wrap gap-x-6 gap-y-2">
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilAlquiler" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Vivo de alquiler en mi vivienda habitual
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilFamiliaEspecial" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Familia numerosa o monoparental
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilNacimiento" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Parto, adopción o acogimiento reciente
+                </label>
+                <label class="inline-flex items-center gap-2 text-sm text-slate-600">
+                    <input type="checkbox" id="perfilViolenciaGenero" class="rounded border-slate-300 text-brand-600 focus:ring-brand-500">
+                    Víctima de violencia de género
+                </label>
+            </div>
+
+            <div class="mt-5 flex flex-wrap gap-3 items-center">
+                <button type="button" id="calcularElegibilidadBtn" class="px-4 py-2.5 bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold rounded-lg shadow-sm transition flex items-center gap-2">
+                    <i class="fa-solid fa-filter"></i> Ver mis ayudas
+                </button>
+                <button type="button" id="borrarElegibilidadBtn" class="px-4 py-2.5 bg-white hover:bg-slate-50 text-slate-600 text-sm font-semibold rounded-lg border border-slate-300 transition flex items-center gap-2">
+                    <i class="fa-solid fa-rotate-left"></i> Borrar todo y ver todas las ayudas
+                </button>
+                <span id="elegibilidadResultado" class="text-sm font-medium text-slate-600"></span>
+            </div>
+        </section>
+
         <!-- Filter and Info Bar -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
             <div>
@@ -248,6 +326,9 @@
         let filtroCategoria = 'todas';
         let filtroTexto = '';
 
+        // Perfil de elegibilidad activo (null = sin filtro, se muestran todas las ayudas)
+        let perfilElegibilidad = null;
+
         window.addEventListener('DOMContentLoaded', () => {
             loadDataset();
             setupEventListeners();
@@ -348,6 +429,111 @@
                 body.classList.toggle('hidden');
                 if (icon) icon.classList.toggle('rotate-180');
             });
+
+            document.getElementById('calcularElegibilidadBtn').addEventListener('click', aplicarElegibilidad);
+            document.getElementById('borrarElegibilidadBtn').addEventListener('click', borrarElegibilidad);
+        }
+
+        // --- Calculadora de elegibilidad ---
+        // Cribado orientativo: cada regla usa solo los datos que puede rellenar
+        // alguien en un formulario simple, así que se prioriza no descartar por
+        // error una ayuda a la que la persona sí podría tener derecho.
+        function leerPerfilForm() {
+            const val = id => document.getElementById(id).value;
+            const checked = id => document.getElementById(id).checked;
+            return {
+                edad: parseFloat(val('perfilEdad')) || 0,
+                situacion: val('perfilSituacion'),
+                ingresosMensuales: parseFloat(val('perfilIngresos')) || 0,
+                miembrosHogar: parseFloat(val('perfilMiembros')) || 1,
+                hijos: parseFloat(val('perfilHijos')) || 0,
+                discapacidad: parseFloat(val('perfilDiscapacidad')) || 0,
+                alquiler: checked('perfilAlquiler'),
+                familiaEspecial: checked('perfilFamiliaEspecial'),
+                nacimientoReciente: checked('perfilNacimiento'),
+                violenciaGenero: checked('perfilViolenciaGenero')
+            };
+        }
+
+        function imvThreshold(miembros) {
+            const factor = Math.min(1 + 0.30 * Math.max(0, miembros - 1), 2.20);
+            return 733.60 * factor;
+        }
+
+        function bonoSocialThreshold(p) {
+            const adultosExtra = Math.max(0, p.miembrosHogar - p.hijos - 1);
+            return 600 * (1.5 + 0.3 * adultosExtra + 0.5 * p.hijos);
+        }
+
+        function umbralAsignacionFamiliar(p) {
+            const base = p.familiaEspecial ? 23109 : 15356;
+            const extra = p.familiaEspecial ? Math.max(0, p.hijos - 4) * 3745 : 0;
+            return base + extra;
+        }
+
+        // Una regla por ayuda; si una ayuda no tiene regla definida, se considera
+        // "posible" por defecto para no ocultarla por error (falso negativo).
+        const ELEGIBILIDAD = {
+            imv: p => (p.edad >= 23 || (p.edad >= 18 && p.hijos > 0)) && p.ingresosMensuales <= imvThreshold(p.miembrosHogar),
+            capi: p => p.hijos > 0 && p.ingresosMensuales <= imvThreshold(p.miembrosHogar) * 3,
+            'asignacion-hijo-cargo': p => p.hijos > 0 && (p.ingresosMensuales * 12) <= umbralAsignacionFamiliar(p),
+            'nacimiento-cuidado-menor': p => p.nacimientoReciente,
+            'parto-multiple': p => p.nacimientoReciente,
+            'nacimiento-familias-especiales': p => p.nacimientoReciente && (p.familiaEspecial || p.discapacidad >= 65) && (p.ingresosMensuales * 12) <= umbralAsignacionFamiliar(p),
+            'paro-contributivo': p => p.situacion === 'desempleo',
+            'subsidio-desempleo': p => p.situacion === 'desempleo',
+            'subsidio-mayores-52': p => p.situacion === 'desempleo' && p.edad >= 52,
+            'cese-actividad-autonomos': p => p.situacion === 'autonomo',
+            rai: () => false,
+            'bono-alquiler-joven': p => p.alquiler && p.edad >= 18 && p.edad <= 35,
+            'ayuda-alquiler-vulnerabilidad': p => p.alquiler && (p.violenciaGenero || p.ingresosMensuales <= 600 * (p.discapacidad >= 65 || p.familiaEspecial ? 5 : 3)),
+            'bono-social-electrico': p => p.ingresosMensuales <= bonoSocialThreshold(p),
+            'bono-social-termico': p => p.ingresosMensuales <= bonoSocialThreshold(p),
+            'pnc-invalidez': p => p.edad >= 18 && p.edad <= 64 && p.discapacidad >= 65 && p.ingresosMensuales <= 733.60,
+            'pnc-jubilacion': p => p.edad >= 65 && p.ingresosMensuales <= 733.60,
+            'brecha-genero': p => p.situacion === 'jubilado',
+            'becas-mec': p => p.situacion === 'estudiante',
+            'bono-cultural-joven': p => p.edad === 18
+        };
+
+        function evaluarElegibilidad(ayuda, perfil) {
+            const regla = ELEGIBILIDAD[ayuda.id];
+            if (!regla) return true;
+            try {
+                return !!regla(perfil);
+            } catch (e) {
+                return true;
+            }
+        }
+
+        function aplicarElegibilidad() {
+            perfilElegibilidad = leerPerfilForm();
+            renderAyudasGrid();
+            const ayudas = currentDataset.ayudas || [];
+            const total = ayudas.length;
+            const match = ayudas.filter(a => evaluarElegibilidad(a, perfilElegibilidad)).length;
+            document.getElementById('elegibilidadResultado').textContent = `Según tus datos, podrías optar a ${match} de ${total} ayudas.`;
+        }
+
+        function borrarElegibilidad() {
+            perfilElegibilidad = null;
+            document.getElementById('perfilEdad').value = '';
+            document.getElementById('perfilSituacion').value = '';
+            document.getElementById('perfilIngresos').value = '';
+            document.getElementById('perfilMiembros').value = '1';
+            document.getElementById('perfilHijos').value = '0';
+            document.getElementById('perfilDiscapacidad').value = '0';
+            document.getElementById('perfilAlquiler').checked = false;
+            document.getElementById('perfilFamiliaEspecial').checked = false;
+            document.getElementById('perfilNacimiento').checked = false;
+            document.getElementById('perfilViolenciaGenero').checked = false;
+            document.getElementById('elegibilidadResultado').textContent = '';
+
+            filtroCategoria = 'todas';
+            filtroTexto = '';
+            document.getElementById('buscadorAyudas').value = '';
+            renderCategoriasFiltro();
+            renderAyudasGrid();
         }
 
         function renderHeader() {
@@ -567,7 +753,8 @@
                 const pasaCategoria = filtroCategoria === 'todas' || a.categoria === filtroCategoria;
                 const haystack = `${a.nombre} ${a.descripcion}`.toLowerCase();
                 const pasaTexto = !filtroTexto || haystack.includes(filtroTexto);
-                return pasaCategoria && pasaTexto;
+                const pasaElegibilidad = !perfilElegibilidad || evaluarElegibilidad(a, perfilElegibilidad);
+                return pasaCategoria && pasaTexto && pasaElegibilidad;
             });
 
             grid.innerHTML = filtradas.map((a, i) => ayudaCardHTML(a, i)).join('');
@@ -706,7 +893,9 @@
                 currentDataset = parsed;
                 filtroCategoria = 'todas';
                 filtroTexto = '';
+                perfilElegibilidad = null;
                 document.getElementById('buscadorAyudas').value = '';
+                document.getElementById('elegibilidadResultado').textContent = '';
                 initApp();
                 closeJsonModal();
             } catch (e) {
