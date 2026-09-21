@@ -173,6 +173,18 @@
                 <a href="https://emirodgar.es/ayudas-castilla-leon-salamanca" class="link proyecto-cta">Explorar el panel completo →</a>
             </div>
 
+            <div class="proyecto-card proyecto-card--featured">
+                <span class="proyecto-badge">Panel en vivo</span>
+                <h3>Lo Más Leído en Wikipedia</h3>
+                <p>Cada semana, un resumen en español de los 25 artículos más leídos de Wikipedia (Top 25 Report): qué temas generan más interés y por qué.</p>
+                <div class="proyecto-chart-wrapper" id="wikipediaTopSparkline" aria-hidden="true"></div>
+                <div class="proyecto-chart-legend">
+                    <span><i class="legend-swatch legend-swatch--violet"></i> Visitas de los artículos más leídos</span>
+                </div>
+                <p id="wikipediaTopResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
+                <a href="https://emirodgar.es/lo-mas-leido-wikipedia" class="link proyecto-cta">Explorar el panel completo →</a>
+            </div>
+
         </div>
     </section>
 
@@ -411,6 +423,31 @@
                                 <text x="12" y="90" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1e293b">${abiertas} de ${total} ayudas</text>
                             </svg>
                         `;
+                    }
+                })
+                .catch(() => {
+                    if (resumenEl) {
+                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
+                    }
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sparklineEl = document.getElementById('wikipediaTopSparkline');
+            const resumenEl = document.getElementById('wikipediaTopResumen');
+            if (!sparklineEl) return;
+
+            fetch('proyectos/lo-mas-leido-wikipedia/data.json', { cache: 'no-store' })
+                .then(res => {
+                    if (!res.ok) throw new Error('No se pudo cargar data.json');
+                    return res.json();
+                })
+                .then(dataset => {
+                    if (resumenEl) {
+                        resumenEl.textContent = dataset.resumenEjecutivo || '';
+                    }
+                    if (dataset.sparklineSvg) {
+                        sparklineEl.innerHTML = dataset.sparklineSvg;
                     }
                 })
                 .catch(() => {

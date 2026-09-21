@@ -1,0 +1,110 @@
+{
+  "lastUpdated": "21 de Septiembre, 2026",
+  "semanaAnalizada": {
+    "etiqueta": "6-12 de septiembre de 2026",
+    "inicio": "2026-09-06",
+    "fin": "2026-09-12"
+  },
+  "resumenEjecutivo": "En la semana del 6 al 12 de septiembre de 2026, el artículo más leído de Wikipedia en inglés fue el del caso judicial por la muerte de los hijos de Clancy, con 1.901.020 visitas, seguido muy de cerca por la ficha de Elizabeth Holmes (1.712.595) y por los atentados del 11 de septiembre (1.577.890), que coincidieron con su 25º aniversario. Entre los 25 artículos más leídos se acumularon 19.267.433 visitas, con el cine y la televisión como categoría claramente dominante: 11 de los 25 artículos y el 34,6% de las visitas totales, impulsados por estrenos como Hanuman Ansh, Mirzapur o la segunda temporada de The Gentlemen. El deporte también tuvo un papel destacado gracias al US Open de tenis, con Ben Shelton, Elena Rybakina, Aryna Sabalenka y Frances Tiafoe entre los más consultados, tras un torneo que dejó nueva número uno del ranking WTA. La actualidad política asomó con las elecciones en Sajonia-Anhalt y el resultado de Alternative for Germany, mientras que el aniversario del 11-S explica también el interés por el vuelo United 93 y la fotografía conocida como \"The Falling Man\". Esta es la primera semana registrada en este panel, por lo que todavía no hay comparación con semanas anteriores; a partir de la próxima actualización podrá seguirse la evolución semana a semana.",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"Los 5 articulos mas leidos de Wikipedia esta semana\" style=\"width:100%;height:100%\"><text x=\"0\" y=\"18\" font-family=\"Inter, sans-serif\" font-size=\"9\" fill=\"#475569\">1. Caso Clancy</text><rect x=\"118\" y=\"8\" width=\"190.0\" height=\"12\" rx=\"3\" fill=\"#4338ca\"/><text x=\"0\" y=\"38\" font-family=\"Inter, sans-serif\" font-size=\"9\" fill=\"#475569\">2. Elizabeth Holmes</text><rect x=\"118\" y=\"28\" width=\"171.2\" height=\"12\" rx=\"3\" fill=\"#4338ca\"/><text x=\"0\" y=\"58\" font-family=\"Inter, sans-serif\" font-size=\"9\" fill=\"#475569\">3. Atentados 11-S</text><rect x=\"118\" y=\"48\" width=\"157.7\" height=\"12\" rx=\"3\" fill=\"#4338ca\"/><text x=\"0\" y=\"78\" font-family=\"Inter, sans-serif\" font-size=\"9\" fill=\"#475569\">4. Ben Shelton</text><rect x=\"118\" y=\"68\" width=\"105.7\" height=\"12\" rx=\"3\" fill=\"#4338ca\"/><text x=\"0\" y=\"98\" font-family=\"Inter, sans-serif\" font-size=\"9\" fill=\"#475569\">5. Fallecidos en 2026</text><rect x=\"118\" y=\"88\" width=\"98.1\" height=\"12\" rx=\"3\" fill=\"#4338ca\"/></svg>",
+  "sources": {
+    "topArticulos": "Wikipedia:Top 25 Report, edición del 6 al 12 de septiembre de 2026 (en.wikipedia.org/wiki/Wikipedia:Top_25_Report), informe semanal elaborado por editores voluntarios de la Wikipedia en inglés a partir de las estadísticas oficiales de visitas de la Wikimedia Foundation",
+    "categorias": "Clasificación temática propia de cada artículo del Top 25 por contenido y motivo de su popularidad esa semana; no es un campo oficial del informe original",
+    "resumenes": "Resúmenes en español redactados de forma independiente a partir de los hechos recogidos en el Top 25 Report original; no son traducción literal de su comentario en inglés"
+  },
+  "indicators": [
+    {
+      "id": "articuloTop",
+      "title": "Artículo Más Leído: Killing of the Clancy children",
+      "currentValue": 1901020,
+      "unit": "visitas",
+      "change": null,
+      "changeLabel": "Nº 1 del ranking esta semana",
+      "description": "Caso judicial por la muerte de los hijos de Clancy, con seguimiento activo del jurado",
+      "target": null,
+      "icon": "fa-crown",
+      "color": "rose"
+    },
+    {
+      "id": "totalVisitas",
+      "title": "Visitas Totales del Top 25",
+      "currentValue": 19267433,
+      "unit": "visitas",
+      "change": null,
+      "changeLabel": "Suma de las 25 páginas más leídas",
+      "description": "Total de visitas acumuladas por los 25 artículos de esta semana",
+      "target": null,
+      "icon": "fa-eye",
+      "color": "indigo"
+    },
+    {
+      "id": "categoriaDominante",
+      "title": "Categoría Dominante: Cine y TV",
+      "currentValue": 11,
+      "unit": "de 25 artículos",
+      "change": null,
+      "changeLabel": "6.661.339 visitas conjuntas (34,6% del Top 25)",
+      "description": "Impulsada por estrenos como Hanuman Ansh, Mirzapur o The Gentlemen",
+      "target": null,
+      "icon": "fa-clapperboard",
+      "color": "violet"
+    },
+    {
+      "id": "diversidadTematica",
+      "title": "Temas Distintos Representados",
+      "currentValue": 7,
+      "unit": "categorías",
+      "change": null,
+      "changeLabel": "Reparto por categoría temática del Top 25",
+      "description": "Deportes, Cine y TV, Sucesos y Justicia, Historia y Sociedad, Política, Fallecimientos, Internet y Cultura Digital",
+      "target": null,
+      "icon": "fa-shapes",
+      "color": "amber"
+    }
+  ],
+  "topArticulos": [
+    { "rank": 1, "titulo": "Killing of the Clancy children", "categoria": "Sucesos y Justicia", "visitas": 1901020, "enlace": "https://en.wikipedia.org/wiki/Killing_of_the_Clancy_children", "resumen": "El juicio por la muerte de los hijos de Clancy sigue generando seguimiento: esta semana varios miembros del jurado han hablado públicamente sobre lo difícil que fue el proceso y sobre un resultado sin consenso claro." },
+    { "rank": 2, "titulo": "Elizabeth Holmes", "categoria": "Sucesos y Justicia", "visitas": 1712595, "enlace": "https://en.wikipedia.org/wiki/Elizabeth_Holmes", "resumen": "La fundadora de Theranos, condenada por fraude, vuelve a la actualidad por un nuevo documental sobre su caso, después de que ya fuera protagonista de una miniserie y un documental previos." },
+    { "rank": 3, "titulo": "September 11 attacks", "categoria": "Historia y Sociedad", "visitas": 1577890, "enlace": "https://en.wikipedia.org/wiki/September_11_attacks", "resumen": "Se cumplen 25 años de los atentados del 11-S y, para conmemorarlo, se ha organizado en Nueva York un espectáculo con casi 3.000 drones, uno por cada víctima." },
+    { "rank": 4, "titulo": "Ben Shelton", "categoria": "Deportes", "visitas": 1057388, "enlace": "https://en.wikipedia.org/wiki/Ben_Shelton", "resumen": "El tenista estadounidense eliminó al vigente campeón en cuartos de final del US Open en un partido que se prolongó hasta la madrugada, y alcanzó su mejor puesto histórico en el ranking mundial." },
+    { "rank": 5, "titulo": "Deaths in 2026", "categoria": "Fallecimientos", "visitas": 981529, "enlace": "https://en.wikipedia.org/wiki/Deaths_in_2026", "resumen": "El artículo que recopila los fallecimientos del año sigue siendo, como cada semana, uno de los más consultados de Wikipedia." },
+    { "rank": 6, "titulo": "Hanuman Ansh", "categoria": "Cine y TV", "visitas": 948090, "enlace": "https://en.wikipedia.org/wiki/Hanuman_Ansh", "resumen": "Esta película biográfica india sobre un gurú espiritual se ha convertido en un éxito de taquilla inesperado, con una recaudación muy superior a su presupuesto." },
+    { "rank": 7, "titulo": "Elena Rybakina", "categoria": "Deportes", "visitas": 920230, "enlace": "https://en.wikipedia.org/wiki/Elena_Rybakina", "resumen": "La tenista, nacida en Rusia y nacionalizada kazaja, se convirtió esta semana en la nueva número uno del ranking WTA tras ganar el US Open." },
+    { "rank": 8, "titulo": "Mirzapur (film)", "categoria": "Cine y TV", "visitas": 891939, "enlace": "https://en.wikipedia.org/wiki/Mirzapur_(film)", "resumen": "Esta película de Bollywood, secuela de una popular serie, se ha convertido en uno de los grandes éxitos de taquilla del año en la India." },
+    { "rank": 9, "titulo": "Aryna Sabalenka", "categoria": "Deportes", "visitas": 673796, "enlace": "https://en.wikipedia.org/wiki/Aryna_Sabalenka", "resumen": "La bielorrusa perdió el número uno del ranking WTA tras el US Open, poniendo fin a una racha de más de dos años en la cima." },
+    { "rank": 10, "titulo": "The Gentlemen (2024 TV series)", "categoria": "Cine y TV", "visitas": 650224, "enlace": "https://en.wikipedia.org/wiki/The_Gentlemen_(2024_TV_series)", "resumen": "El estreno de la segunda temporada de esta serie creada por Guy Ritchie ha disparado el interés por el spin-off de la película homónima." },
+    { "rank": 11, "titulo": "United Airlines Flight 93", "categoria": "Historia y Sociedad", "visitas": 644223, "enlace": "https://en.wikipedia.org/wiki/United_Airlines_Flight_93", "resumen": "Coincidiendo con el aniversario del 11-S, este vuelo —en el que los pasajeros se enfrentaron a los secuestradores— vuelve a generar interés cada año por su papel en evitar un atentado aún mayor." },
+    { "rank": 12, "titulo": "Frances Tiafoe", "categoria": "Deportes", "visitas": 610921, "enlace": "https://en.wikipedia.org/wiki/Frances_Tiafoe", "resumen": "El tenista estadounidense, rival de Ben Shelton en semifinales del US Open, subirá puestos en el ranking ATP tras su buen torneo." },
+    { "rank": 13, "titulo": "Charlie Kirk", "categoria": "Política", "visitas": 595904, "enlace": "https://en.wikipedia.org/wiki/Charlie_Kirk", "resumen": "Se cumple un año de la muerte de este comentarista político, un suceso que en su momento batió récords de visitas en Wikipedia." },
+    { "rank": 14, "titulo": "You Can See Everything", "categoria": "Cine y TV", "visitas": 594338, "enlace": "https://en.wikipedia.org/wiki/You_Can_See_Everything", "resumen": "Este documental sobre Elizabeth Holmes, dirigido por Nathan Fielder, se ha estrenado esta semana en el Festival de Telluride." },
+    { "rank": 15, "titulo": "Toxic (2026 film)", "categoria": "Cine y TV", "visitas": 573011, "enlace": "https://en.wikipedia.org/wiki/Toxic_(2026_film)", "resumen": "A diferencia de otros estrenos indios de la semana, esta película no ha logrado recuperar su elevado presupuesto en taquilla." },
+    { "rank": 16, "titulo": "G. D. Naidu", "categoria": "Cine y TV", "visitas": 566280, "enlace": "https://en.wikipedia.org/wiki/G._D._Naidu", "resumen": "El interés por este inventor e industrial indio, apodado \"el Edison de la India\", ha repuntado gracias al estreno de una biopic sobre su vida." },
+    { "rank": 17, "titulo": "Spider-Man: Brand New Day", "categoria": "Cine y TV", "visitas": 534896, "enlace": "https://en.wikipedia.org/wiki/Spider-Man:_Brand_New_Day", "resumen": "La última entrega de Spider-Man continúa entre las películas más taquilleras del año, aunque su interés en Wikipedia ya empieza a moderarse." },
+    { "rank": 18, "titulo": "The Falling Man", "categoria": "Historia y Sociedad", "visitas": 500391, "enlace": "https://en.wikipedia.org/wiki/The_Falling_Man", "resumen": "Esta fotografía tomada durante los atentados del 11-S, muy controvertida en su momento, vuelve a consultarse con motivo del aniversario." },
+    { "rank": 19, "titulo": "The Odyssey (2026 film)", "categoria": "Cine y TV", "visitas": 498828, "enlace": "https://en.wikipedia.org/wiki/The_Odyssey_(2026_film)", "resumen": "La adaptación de Christopher Nolan de la Odisea completa ya diez semanas seguidas en este ranking, reflejo de su popularidad sostenida en cartelera." },
+    { "rank": 20, "titulo": "2026 Saxony-Anhalt state election", "categoria": "Política", "visitas": 486059, "enlace": "https://en.wikipedia.org/wiki/2026_Saxony-Anhalt_state_election", "resumen": "Las elecciones en este estado alemán han atraído atención internacional ante el fuerte resultado de la extrema derecha." },
+    { "rank": 21, "titulo": "Neem Karoli Baba", "categoria": "Cine y TV", "visitas": 476708, "enlace": "https://en.wikipedia.org/wiki/Neem_Karoli_Baba", "resumen": "El interés por este gurú indio, fallecido en 1973, ha resurgido gracias al éxito de la película biográfica sobre uno de sus discípulos." },
+    { "rank": 22, "titulo": "Anna's Archive", "categoria": "Internet y Cultura Digital", "visitas": 474359, "enlace": "https://en.wikipedia.org/wiki/Anna%27s_Archive", "resumen": "Esta biblioteca digital en la sombra sigue generando un interés sostenido, en medio del debate sobre preservación digital y derechos de autor en la era de la inteligencia artificial." },
+    { "rank": 23, "titulo": "Alternative for Germany", "categoria": "Política", "visitas": 469789, "enlace": "https://en.wikipedia.org/wiki/Alternative_for_Germany", "resumen": "El partido de extrema derecha alemán vuelve a la actualidad tras un fuerte resultado electoral en Sajonia-Anhalt." },
+    { "rank": 24, "titulo": "Nathan Fielder", "categoria": "Cine y TV", "visitas": 464290, "enlace": "https://en.wikipedia.org/wiki/Nathan_Fielder", "resumen": "El cineasta y cómico canadiense es noticia por dirigir el nuevo documental sobre Elizabeth Holmes, en el que también aparece como entrevistador." },
+    { "rank": 25, "titulo": "Coyote vs. Acme", "categoria": "Cine y TV", "visitas": 462735, "enlace": "https://en.wikipedia.org/wiki/Coyote_vs._Acme", "resumen": "Esta película, que estuvo a punto de cancelarse por motivos fiscales antes de conseguir distribución en cines, ha sido bien recibida por la crítica." }
+  ],
+  "categorias": [
+    { "categoria": "Cine y TV", "articulos": 11, "visitas": 6661339 },
+    { "categoria": "Sucesos y Justicia", "articulos": 2, "visitas": 3613615 },
+    { "categoria": "Deportes", "articulos": 4, "visitas": 3262335 },
+    { "categoria": "Historia y Sociedad", "articulos": 3, "visitas": 2722504 },
+    { "categoria": "Política", "articulos": 3, "visitas": 1551752 },
+    { "categoria": "Fallecimientos", "articulos": 1, "visitas": 981529 },
+    { "categoria": "Internet y Cultura Digital", "articulos": 1, "visitas": 474359 }
+  ],
+  "historicoSemanal": [
+    { "semana": "6-12 de septiembre de 2026", "articuloTop": "Killing of the Clancy children", "visitasArticuloTop": 1901020, "visitasTotalesTop25": 19267433, "categoriaDominante": "Cine y TV" }
+  ],
+  "notas": {
+    "primeraSemana": "Esta es la primera semana registrada en el panel (sembrada el 21 de septiembre de 2026): todavía no hay serie histórica con la que comparar, por lo que los campos 'change' de los indicadores están en null.",
+    "categorias": "La columna 'Categoría' de cada artículo y el desglose de 'categorias' son una clasificación propia por contenido, no un campo oficial del Top 25 Report.",
+    "resumenes": "Los resúmenes en español de cada artículo son redacción propia a partir de los hechos del informe original, no traducción literal de su comentario en inglés.",
+    "historico": "El array 'historicoSemanal' conserva como máximo las últimas 12 semanas; al añadir una nueva, se elimina la más antigua si ya hay 12."
+  }
+}
