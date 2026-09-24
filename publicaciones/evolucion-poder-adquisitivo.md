@@ -1,19 +1,20 @@
 ---
 title: Evolución del poder adquisitivo de los españoles
-description: 
-image: 
+description: La inflación acumulada desde 2020 supera el 19% y en 2026 ha vuelto a repuntar. Analizamos por qué los salarios reales españoles siguen sin recuperar el nivel de 2021.
+image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-10-08
+date_modified: 2026-09-24
 folder: espana
 permalink: evolucion-poder-adquisitivo
 ---
 
 # Evolución del poder adquisitivo de los españoles: anatomía de una crisis silenciosa
 
-El análisis que se presenta sobre la pérdida de poder adquisitivo de los españoles no es simplemente una crónica económica: es el retrato de una transformación profunda que ha erosionado la capacidad de compra de millones de familias españolas. Los datos oficiales revelan una realidad incómoda que contradice los discursos optimistas -a menudo [políticos](https://emirodgar.es/glosario-politico)- sobre la recuperación económica.
+El análisis que se presenta sobre la pérdida de poder adquisitivo de los españoles no es simplemente una crónica económica: es el retrato de una transformación profunda que ha erosionado la capacidad de compra de millones de familias españolas. Los datos oficiales revelan una realidad incómoda que contradice los discursos optimistas -a menudo [políticos](https://emirodgar.es/glosario-politico)- sobre la recuperación económica, y que en 2026 ha vuelto a agravarse con un repunte inflacionario que la propia OCDE advierte que no se corregirá ni el año que viene.
 
 ## La secuencia económica: del estímulo artificial a la factura real
 
@@ -27,7 +28,7 @@ Esta inyección masiva de liquidez mantuvo artificialmente la demanda mientras l
 
 ## El impacto acumulativo de la inflación: números que hablan por sí solos
 
-Los datos del Instituto Nacional de Estadística confirman que la inflación acumulada desde 2020 hasta 2024 ha alcanzado aproximadamente el 19%. Esta cifra, aparentemente técnica, tiene una traducción directa en la vida de las familias: lo que costaba 100 euros en 2020 cuesta ahora 119 euros. Y eso se nota mucho en los bolsillos de los españoles a día de hoy.
+Los datos del Instituto Nacional de Estadística confirman que la inflación acumulada entre 2020 y 2025 ha alcanzado el 19,1%. Esta cifra, aparentemente técnica, tiene una traducción directa en la vida de las familias: lo que costaba 100 euros en 2020 cuesta ahora más de 119 euros. Y eso se nota mucho en los bolsillos de los españoles a día de hoy.
 
 La inflación alcanzó su pico en julio de 2022 con un 10,8%, pero su efecto más devastador no reside en ese momento puntual, sino en su carácter acumulativo. Según el Instituto Juan de Mariana, esta escalada ha resultado en una pérdida acumulada de poder adquisitivo de 1.230 euros para un hogar con dos trabajadores que perciben el salario medio.
 
@@ -49,11 +50,12 @@ La inflación ha actuado de manera desigual, castigando especialmente a los hoga
 
 | Indicador | Valor |
 | :-- | :-- |
-| Inflación acumulada 2020-2024 | 19% |
-| Pérdida poder adquisitivo desde pandemia | 5,5% |
+| Inflación acumulada 2020-2025 | 19,1% |
+| IPC interanual agosto 2026 | 4,3% (máximo en tres años) |
+| Salarios reales frente al primer trimestre de 2021 | -2% |
 | Incremento precios alimentos 2018-2024 | 37,9% |
 | Pérdida poder adquisitivo hogar medio | 1.230 euros |
-| Posición España OCDE salarios reales | 4º peor |
+| Posición España OCDE salarios reales (30 años) | 4º peor |
 
 ## Las consecuencias en el consumo y el ahorro
 
@@ -72,12 +74,18 @@ Las políticas implementadas durante la pandemia, aunque necesarias para evitar 
 
 El Tribunal de Cuentas ha identificado irregularidades en la gestión de los ERTE que afectan a 278.757 empresas y 1,7 millones de trabajadores, poniendo en evidencia que la urgencia de la respuesta sanitaria comprometió los controles habituales.
 
+## El repunte de 2026: la recuperación que no llegó
+
+Durante 2025 hubo motivos para el optimismo moderado: los salarios reales crecieron un 2% respecto al año anterior y la renta bruta disponible de los hogares avanzó por encima de una inflación media que se quedó en el 2,7%. Ese respiro, sin embargo, ha durado poco. En agosto de 2026 el IPC interanual se disparó al 4,3%, su nivel más alto en más de tres años, arrastrado por una subida del 16,9% en los productos energéticos -carburantes, electricidad y gas- tras la retirada parcial de las rebajas fiscales y el encarecimiento de las materias primas.
+
+El propio informe de la OCDE de julio de 2026 confirma que el problema no es coyuntural: los salarios reales españoles siguen un 2% por debajo de los del primer trimestre de 2021, y el organismo prevé que no se recuperará poder adquisitivo ni en 2026 ni en 2027, señalando el crecimiento salarial como el "punto débil" de la economía española. La causa de fondo es estructural, no solo inflacionaria: la productividad laboral lleva una década estancada, lo que limita el margen para subidas salariales reales sostenibles. En este periodo reciente, desde 2021, España queda entre las tres grandes economías de la OCDE con peor evolución del salario real, solo por delante de Italia (-6,1%) y muy lejos de Portugal (+5,9%) o Alemania (+0,9%).
+
+El impacto también alcanza al ahorro: con 1,43 billones de euros acumulados en depósitos a finales de 2025, los hogares españoles que mantienen ese dinero en cuentas no remuneradas pierden alrededor de 2.700 euros de poder adquisitivo al año por cada 100.000 euros ahorrados, un coste silencioso que crecerá si la inflación media de 2026 termina superando, como se espera, a la de 2025.
+
 ## Perspectivas futuras: ¿recuperación o estancamiento?
 
-Los datos más recientes sugieren una lenta recuperación del poder adquisitivo. La OCDE señala que España experimentó un crecimiento del poder adquisitivo del 1,9% en 2024, aunque esta mejora no compensa la pérdida acumulada de años anteriores. En comparación con 2019, el poder adquisitivo sigue siendo un 1% inferior.
+Los datos más recientes sugieren que hablar de recuperación es, por ahora, prematuro. Los salarios reales en España han crecido sólo un 2,76% en treinta años, el cuarto peor desempeño de la OCDE, frente al 30,8% de la media del club de países desarrollados. Esta cifra confirma que el problema va más allá de un episodio inflacionario puntual: refleja un patrón estructural que se repite ciclo tras ciclo, en un contexto global marcado además por un [índice de incertidumbre](https://emirodgar.es/indice-incertidumbre) que no deja de crecer.
 
-Sin embargo, esta recuperación es frágil y desigual. Los salarios reales en España han crecido sólo un 2,76% en treinta años, el cuarto peor desempeño de la OCDE. Esta cifra sugiere problemas estructurales que van más allá de la crisis coyuntural de la inflación, en un contexto global marcado además por un [índice de incertidumbre](https://emirodgar.es/indice-incertidumbre) que no deja de crecer.
+La evolución del poder adquisitivo de los españoles durante estos años representa la crónica de una crisis silenciosa que ha erosionado el nivel de vida de millones de familias, y que el repunte inflacionario de 2026 demuestra que no ha quedado atrás. El análisis presentado inicialmente sobre las consecuencias del estímulo masivo y su posterior factura inflacionaria ha demostrado ser no solo certero, sino profético: **los españoles seguimos pagando, en forma de menor capacidad de compra, las políticas extraordinarias implementadas durante la pandemia, y el alivio de 2025 no ha sido más que una tregua**.
 
-La evolución del poder adquisitivo de los españoles durante estos años representa la crónica de una crisis silenciosa que ha erosionado el nivel de vida de millones de familias. El análisis presentado inicialmente sobre las consecuencias del estímulo masivo y su posterior factura inflacionaria ha demostrado ser no solo certero, sino profético: **los españoles estamos pagando ahora, en forma de menor capacidad de compra, las políticas extraordinarias implementadas durante la pandemia**.
-
-Esta situación plantea interrogantes fundamentales sobre el modelo económico español y su capacidad para generar prosperidad real, más allá de los indicadores agregados. La recuperación del poder adquisitivo requerirá no solo el control de la inflación, sino reformas estructurales que impulsen la productividad y la competitividad de la economía española en el contexto internacional, además de la adecuada gestión de las [pensiones](https://emirodgar.es/pensiones-smi), que sigue siendo el elefante en la habitación de la economía española.
+Esta situación plantea interrogantes fundamentales sobre el modelo económico español y su capacidad para generar prosperidad real, más allá de los indicadores agregados de empleo. La recuperación del poder adquisitivo requerirá no solo el control de la inflación, sino reformas estructurales que impulsen la productividad y la competitividad de la economía española en el contexto internacional, además de la adecuada gestión de las [pensiones](https://emirodgar.es/pensiones-smi), que sigue siendo el elefante en la habitación de la economía española.
