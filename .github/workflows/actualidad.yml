@@ -2,12 +2,14 @@ name: Hemeroteca diaria (Gemini)
 
 on:
   schedule:
-    # Dos disparos cada tarde (20:30 y 22:30 hora de Madrid en verano, 19:30 y
-    # 21:30 en invierno). GitHub Actions retrasa o se salta triggers de
-    # `schedule` bajo carga, así que el segundo es un respaldo del primero: el
-    # script mira si el resumen de hoy ya existe y, si es así, termina sin
-    # llamar a Gemini. Por eso no hace falta acertar una hora exacta.
-    - cron: '30 18,20 * * *'
+    # Objetivo: 7:00 hora de Madrid. GitHub programa en UTC y no conoce el
+    # horario de verano: 5:00 UTC = 7:00 en verano (CEST) y 6:00 UTC = 7:00 en
+    # invierno (CET). Se programan ambas y el paso "Comprobar hora" descarta la
+    # que cae antes de las 7 en Madrid. Los minutos van en :07 (no en punto)
+    # porque GitHub retrasa menos los triggers que no coinciden con la hora
+    # en punto; aun así puede retrasarse. El tercer disparo (7:07 UTC) es un
+    # respaldo si se salta alguno: el script no repite un día que ya existe.
+    - cron: '7 5,6,7 * * *'
   workflow_dispatch:
     inputs:
       forzar:
@@ -29,13 +31,26 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Comprobar hora (solo a partir de las 7:00 de Madrid)
+        id: hora
+        run: |
+          h=$(TZ=Europe/Madrid date +%-H)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$h" -lt 7 ]; then
+            echo "Son las ${h}h en Madrid: todavía no toca."
+            echo "ejecutar=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ejecutar=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Configurar Python
+        if: steps.hora.outputs.ejecutar == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: Generar el resumen del día con Gemini
         id: build
+        if: steps.hora.outputs.ejecutar == 'true'
         env:
           # Secret del repo; si se guardó como "variable" de Actions, se
           # recoge igualmente con vars.

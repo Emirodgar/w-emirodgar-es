@@ -55,7 +55,7 @@ MEDIOS = [
 
 CATEGORIAS = ["Política", "Economía", "Internacional", "Sociedad", "Sucesos", "Deportes", "Cultura", "Ciencia y Tecnología"]
 
-VENTANA_HORAS = 26          # algo más de 24 h para no dejar huecos entre ejecuciones
+VENTANA_HORAS = 25          # algo más de 24 h para no dejar huecos entre ejecuciones
 DIAS_YA_VISTOS = 3          # días anteriores cuyas URLs no se vuelven a resumir
 MAX_PAGINAS = 14
 MAX_POR_MEDIO_EN_PROMPT = 50  # tope de titulares por medio que viajan a Gemini
@@ -348,7 +348,9 @@ def construir_dia(r, elegidas, todas):
         n = por_id.get(h.get("id"))
         if n and h.get("categoria") in CATEGORIAS and h.get("titulo", "").strip() and h.get("descripcion", "").strip():
             hitos.append({
-                "fecha": HOY.isoformat(),
+                # fecha de la noticia (no de la ejecución): a las 7:00 se resume lo de ayer
+                "fecha": datetime.fromisoformat(n["fecha"]).astimezone(MADRID).date().isoformat(),
+                "edicion": HOY.isoformat(),
                 "titulo": h["titulo"].strip()[:100],
                 "categoria": h["categoria"],
                 "descripcion": h["descripcion"].strip(),
@@ -395,15 +397,16 @@ def escribir_dia(dia):
                   | {"temas": [{k: t[k] for k in ("tema", "categoria", "descripcion")} for t in dia["temas"][:4]]})
     tocados.append(rel(ruta_l))
 
-    # hitos del mes (timeline)
-    mes = dia["fecha"][:7]
-    ruta_m = DATOS / "meses" / f"{mes}.json"
-    m = leer_json(ruta_m, {})
-    hitos = [h for h in m.get("hitos", []) if h["fecha"] != dia["fecha"]]  # re-ejecutar un día lo sustituye
-    hitos += dia["hitos"]
-    hitos.sort(key=lambda h: h["fecha"])
-    if hitos:
-        mejor = max(hitos, key=lambda h: (h["relevancia"], -hitos.index(h)))
+    # hitos por mes (timeline): cada hito va al mes de su noticia
+    por_mes = {}
+    for h in dia["hitos"]:
+        por_mes.setdefault(h["fecha"][:7], []).append(h)
+    for mes, nuevos in por_mes.items():
+        ruta_m = DATOS / "meses" / f"{mes}.json"
+        m = leer_json(ruta_m, {})
+        hitos = [h for h in m.get("hitos", []) if h.get("edicion") != dia["fecha"]]  # re-ejecutar una edición la sustituye
+        hitos = sorted(hitos + nuevos, key=lambda h: h["fecha"])
+        mejor = max(reversed(hitos), key=lambda h: h["relevancia"])  # en empate, el más antiguo
         for h in hitos:
             h["destacado"] = h is mejor
         a, mm = int(mes[:4]), int(mes[5:])
