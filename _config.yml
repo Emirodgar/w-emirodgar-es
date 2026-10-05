@@ -31,3 +31,6 @@ compress_html: # - http://jch.penibelst.de/
     envs: development
 
 
+
+exclude:
+  - scripts

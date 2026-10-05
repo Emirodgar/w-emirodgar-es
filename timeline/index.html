@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea de tiempo de la actualidad: los hitos de cada mes | Emirodgar</title>
+    <meta name="description" content="Los hechos más destacados de la actualidad española mes a mes, extraídos de los resúmenes diarios de El Mundo y The Objective. Histórico de los últimos 12 meses.">
+    <link rel="canonical" href="https://emirodgar.es/timeline/">
+    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .cat-chip { display: inline-flex; align-items: center; gap: .4rem; font-size: .7rem; font-weight: 600; padding: .15rem .6rem; border-radius: 999px; background: #f1f5f9; color: #334155; }
+        .cat-dot { width: .5rem; height: .5rem; border-radius: 999px; background: var(--c, #64748b); }
+        .hitos { position: relative; border-left: 2px solid #e2e8f0; margin-left: .5rem; }
+        .hito { position: relative; padding-left: 1.5rem; }
+        .hito::before { content: ''; position: absolute; left: -.45rem; top: 1.1rem; width: .75rem; height: .75rem; border-radius: 999px; background: var(--c, #64748b); border: 2px solid #f8fafc; }
+        .hito--destacado::before { width: 1rem; height: 1rem; left: -.55rem; top: 1rem; box-shadow: 0 0 0 3px color-mix(in srgb, var(--c) 25%, transparent); }
+        .hito--oculto { display: none; }
+        .mes-oculto { display: none; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <div class="bg-slate-950 text-slate-400 text-xs">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2">
+            <a href="https://emirodgar.es/" class="hover:text-white transition"><i class="fa-solid fa-house"></i> Emirodgar.es</a>
+            <span>/</span>
+            <a href="/actualidad/" class="hover:text-white transition">Actualidad</a>
+            <span>/</span>
+            <a href="/timeline/" class="hover:text-white transition">Línea de tiempo</a>
+        </div>
+    </div>
+
+    <header class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">Línea de tiempo</h1>
+            <p class="text-sm text-slate-500 mt-1 max-w-2xl">Los hitos de la actualidad, mes a mes. Cada día se extraen los hechos con más peso de la jornada y aquí se van acumulando; el histórico completo se conserva.</p>
+            <nav class="mt-4 flex gap-2 text-sm font-medium" aria-label="Secciones">
+                <a href="/actualidad/" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition"><i class="fa-regular fa-newspaper mr-1"></i> Día a día</a>
+                <a href="/timeline/" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white" aria-current="page"><i class="fa-solid fa-timeline mr-1"></i> Línea de tiempo (12 meses)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <p id="estado" class="text-slate-500">Cargando la línea de tiempo…</p>
+
+        <div id="controles" class="hidden sticky top-0 z-10 -mx-4 px-4 py-3 bg-slate-50/95 backdrop-blur border-b border-slate-200 mb-6 space-y-2">
+            <div id="filtros" class="flex flex-wrap gap-2"></div>
+            <div id="mesesNav" class="flex gap-2 overflow-x-auto pb-1"></div>
+        </div>
+
+        <div id="contenido" class="space-y-12"></div>
+
+        <div class="text-center mt-10">
+            <button id="verMas" type="button" class="hidden px-4 py-2 rounded-lg text-sm font-medium bg-white border border-slate-300 hover:bg-slate-100 transition">Mostrar meses anteriores a los últimos 12</button>
+        </div>
+
+        <p class="text-xs text-slate-500 pt-4 mt-10 border-t border-slate-200">
+            Hitos seleccionados automáticamente con inteligencia artificial (Gemini) a partir de los resúmenes diarios de
+            El Mundo y The Objective. Cada hito enlaza a la noticia original y a su día en la hemeroteca.
+        </p>
+    </main>
+
+    <script>
+    (function () {
+        const BASE = '/actualidad/datos/';
+        const MESES_VISIBLES = 12;
+        const COLORES = {
+            'Política': '#4f46e5', 'Economía': '#059669', 'Internacional': '#0284c7', 'Sociedad': '#d97706',
+            'Sucesos': '#dc2626', 'Deportes': '#16a34a', 'Cultura': '#9333ea', 'Ciencia y Tecnología': '#0891b2'
+        };
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const urlSegura = u => /^https?:\/\//i.test(u) ? esc(u) : '#';
+        const corto = m => { const [a, n] = m.split('-'); return ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'][+n - 1] + ' ' + a.slice(2); };
+        const fecha = iso => new Date(iso + 'T12:00:00').toLocaleDateString('es-ES', { day: 'numeric', month: 'short' });
+        const mesActual = new Date().toISOString().slice(0, 7);
+
+        let categoria = null;
+
+        function renderMes(m, oculto) {
+            const hitos = m.hitos.slice().sort((a, b) => b.fecha.localeCompare(a.fecha));
+            return `<section id="mes-${m.mes}" class="${oculto ? 'mes-oculto' : ''}" data-mes="${m.mes}">
+                <div class="mb-4">
+                    <h2 class="text-xl font-bold text-slate-900">${esc(m.titulo_mes)}${m.mes === mesActual ? ' <span class="ml-2 align-middle text-[11px] font-semibold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-700">En curso</span>' : ''}</h2>
+                    ${m.resumen_mes ? `<p class="text-sm text-slate-600 mt-1">${esc(m.resumen_mes)}</p>` : ''}
+                </div>
+                <div class="hitos space-y-4">${hitos.map(h => {
+                    const c = COLORES[h.categoria] || '#64748b';
+                    return `<article class="hito ${h.destacado ? 'hito--destacado' : ''}" data-categoria="${esc(h.categoria)}" style="--c:${c}">
+                        <div class="bg-white rounded-xl border ${h.destacado ? 'border-indigo-300 shadow-md' : 'border-slate-200 shadow-sm'} p-4">
+                            ${h.destacado ? '<p class="text-[11px] font-bold uppercase tracking-wide text-indigo-600 mb-1"><i class="fa-solid fa-star mr-1"></i>Lo más destacado del mes</p>' : ''}
+                            <div class="flex items-center gap-2 mb-1"><span class="cat-chip" style="--c:${c}"><span class="cat-dot"></span>${esc(h.categoria)}</span>
+                                <a class="text-xs text-slate-500 hover:underline" href="/actualidad/#${esc(h.fecha)}" title="Ver el resumen de ese día">${esc(fecha(h.fecha))}</a></div>
+                            <h3 class="font-semibold text-slate-900 leading-snug">${esc(h.titulo)}</h3>
+                            <p class="text-sm text-slate-600 mt-1">${esc(h.descripcion)}</p>
+                            ${h.fuente ? `<p class="text-xs text-slate-400 mt-2"><i class="fa-solid fa-arrow-up-right-from-square text-[9px] mr-1"></i><a class="hover:underline" href="${urlSegura(h.fuente.url)}" target="_blank" rel="noopener">${esc(h.fuente.medio)}</a></p>` : ''}
+                        </div>
+                    </article>`;
+                }).join('')}</div>
+            </section>`;
+        }
+
+        function aplicarFiltro() {
+            document.querySelectorAll('.hito').forEach(el => el.classList.toggle('hito--oculto', !!categoria && el.dataset.categoria !== categoria));
+            document.querySelectorAll('section[data-mes]').forEach(s => {
+                s.style.display = s.querySelector('.hito:not(.hito--oculto)') ? '' : 'none';
+            });
+        }
+
+        fetch(BASE + 'meses/index.json', { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(idx => {
+                const meses = (idx.meses || []).slice().sort().reverse();
+                if (!meses.length) throw new Error('vacio');
+                return Promise.all(meses.map(m => fetch(`${BASE}meses/${m}.json`, { cache: 'no-cache' }).then(r => r.json())));
+            })
+            .then(datos => {
+                datos = datos.filter(m => m.hitos && m.hitos.length);
+                if (!datos.length) throw new Error('vacio');
+                $('estado').classList.add('hidden');
+                $('controles').classList.remove('hidden');
+
+                $('contenido').innerHTML = datos.map((m, i) => renderMes(m, i >= MESES_VISIBLES)).join('');
+                $('mesesNav').innerHTML = datos.slice(0, MESES_VISIBLES).map(m =>
+                    `<a href="#mes-${m.mes}" class="shrink-0 px-3 py-1 rounded-lg text-xs font-medium bg-white border border-slate-200 hover:bg-slate-100 capitalize">${corto(m.mes)}</a>`).join('');
+
+                const presentes = Object.keys(COLORES).filter(c => datos.some(m => m.hitos.some(h => h.categoria === c)));
+                $('filtros').innerHTML = ['Todos', ...presentes].map((c, k) =>
+                    `<button type="button" data-c="${k ? esc(c) : ''}" class="px-3 py-1 rounded-lg text-xs font-medium ${k ? 'bg-white border border-slate-200 hover:bg-slate-100' : 'bg-indigo-600 text-white'}">${esc(c)}</button>`).join('');
+                $('filtros').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+                    categoria = b.dataset.c || null;
+                    $('filtros').querySelectorAll('button').forEach(x => {
+                        x.className = 'px-3 py-1 rounded-lg text-xs font-medium ' + (x === b ? 'bg-indigo-600 text-white' : 'bg-white border border-slate-200 hover:bg-slate-100');
+                    });
+                    aplicarFiltro();
+                }));
+
+                if (datos.length > MESES_VISIBLES) {
+                    $('verMas').classList.remove('hidden');
+                    $('verMas').addEventListener('click', () => {
+                        document.querySelectorAll('.mes-oculto').forEach(s => s.classList.remove('mes-oculto'));
+                        $('verMas').classList.add('hidden');
+                    });
+                }
+            })
+            .catch(() => { $('estado').textContent = 'Todavía no hay hitos publicados. Aparecerán tras la primera ejecución diaria.'; });
+    })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualidad: qué ha pasado hoy y en días anteriores | Emirodgar</title>
+    <meta name="description" content="Hemeroteca diaria de la actualidad española: un resumen automático de lo más destacado de El Mundo y The Objective, con el archivo de todos los días anteriores.">
+    <link rel="canonical" href="https://emirodgar.es/actualidad/">
+    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = { theme: { extend: { fontFamily: { sans: ['Inter', 'sans-serif'] } } } };
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .resumen p + p { margin-top: 0.85rem; }
+        .cat-chip { display: inline-flex; align-items: center; gap: .4rem; font-size: .7rem; font-weight: 600; padding: .15rem .6rem; border-radius: 999px; background: #f1f5f9; color: #334155; }
+        .cat-dot { width: .5rem; height: .5rem; border-radius: 999px; background: var(--c, #64748b); }
+        .medio-badge { font-size: .68rem; font-weight: 600; padding: .1rem .5rem; border-radius: .4rem; border: 1px solid #e2e8f0; color: #475569; background: #fff; }
+        .dia-item[aria-current="true"] { background: #eef2ff; border-color: #a5b4fc; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+
+    <div class="bg-slate-950 text-slate-400 text-xs">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2">
+            <a href="https://emirodgar.es/" class="hover:text-white transition"><i class="fa-solid fa-house"></i> Emirodgar.es</a>
+            <span>/</span>
+            <a href="/actualidad/" class="hover:text-white transition">Actualidad</a>
+        </div>
+    </div>
+
+    <header class="bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+            <h1 class="text-2xl sm:text-3xl font-bold text-slate-900">Actualidad</h1>
+            <p class="text-sm text-slate-500 mt-1 max-w-2xl">Qué ha pasado cada día, según la portada de El Mundo y The Objective. Un resumen automático diario que se queda archivado: aquí abajo puedes volver a cualquier día anterior.</p>
+            <nav class="mt-4 flex gap-2 text-sm font-medium" aria-label="Secciones">
+                <a href="/actualidad/" class="px-3 py-1.5 rounded-lg bg-indigo-600 text-white" aria-current="page"><i class="fa-regular fa-newspaper mr-1"></i> Día a día</a>
+                <a href="/timeline/" class="px-3 py-1.5 rounded-lg bg-slate-100 text-slate-700 hover:bg-slate-200 transition"><i class="fa-solid fa-timeline mr-1"></i> Línea de tiempo (12 meses)</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+
+        <p id="estado" class="text-slate-500">Cargando la actualidad…</p>
+
+        <div id="contenido" class="hidden space-y-6">
+
+            <!-- Navegación entre días -->
+            <div class="flex items-center justify-between gap-3 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <button id="btnAnterior" type="button" class="px-3 py-2 rounded-lg text-sm font-medium bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:cursor-not-allowed transition"><i class="fa-solid fa-chevron-left mr-1"></i> <span class="hidden sm:inline">Día anterior</span></button>
+                <div class="text-center">
+                    <p id="fechaLarga" class="font-semibold text-slate-900"></p>
+                    <p id="fechaEstado" class="text-xs text-slate-500"></p>
+                </div>
+                <button id="btnSiguiente" type="button" class="px-3 py-2 rounded-lg text-sm font-medium bg-slate-100 hover:bg-slate-200 disabled:opacity-40 disabled:cursor-not-allowed transition"><span class="hidden sm:inline">Día siguiente</span> <i class="fa-solid fa-chevron-right ml-1"></i></button>
+            </div>
+
+            <!-- Resumen principal -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5 sm:p-7">
+                <h2 id="titular" class="text-xl sm:text-2xl font-bold text-slate-900 leading-snug"></h2>
+                <div id="resumen" class="resumen mt-4 text-slate-700 leading-relaxed"></div>
+                <p id="metaDia" class="mt-4 text-xs text-slate-500"></p>
+            </section>
+
+            <!-- Temas -->
+            <section>
+                <h2 class="text-lg font-semibold text-slate-900 mb-3">De qué se ha hablado</h2>
+                <div id="temas" class="grid gap-4 sm:grid-cols-2"></div>
+            </section>
+
+            <!-- Enfoques -->
+            <section id="enfoquesCard" class="hidden bg-indigo-50 border border-indigo-100 rounded-xl p-5">
+                <h2 class="text-sm font-semibold text-indigo-900 mb-1"><i class="fa-solid fa-scale-balanced mr-1"></i> Cómo lo han contado los dos medios</h2>
+                <p id="enfoques" class="text-sm text-indigo-950/80 leading-relaxed"></p>
+            </section>
+
+            <!-- Volumen -->
+            <section class="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
+                <h2 class="text-sm font-semibold text-slate-900 mb-3">Titulares recogidos por medio</h2>
+                <div id="barras" class="space-y-2"></div>
+            </section>
+
+            <!-- Titulares del día -->
+            <details class="bg-white rounded-xl border border-slate-200 shadow-sm">
+                <summary class="cursor-pointer p-4 font-semibold text-slate-900 text-sm">Ver todos los titulares de este día (<span id="numTitulares">0</span>)</summary>
+                <div class="px-4 pb-4">
+                    <div id="filtroMedio" class="flex flex-wrap gap-2 mb-3"></div>
+                    <ul id="titulares" class="divide-y divide-slate-100 text-sm"></ul>
+                </div>
+            </details>
+        </div>
+
+        <!-- Archivo -->
+        <section id="archivoSection" class="hidden">
+            <h2 class="text-lg font-semibold text-slate-900 mb-1">Hemeroteca</h2>
+            <p class="text-sm text-slate-500 mb-3">Todos los días archivados, del más reciente al más antiguo. No se borra nada.</p>
+            <div id="archivo" class="space-y-5"></div>
+        </section>
+
+        <p class="text-xs text-slate-500 pt-4 border-t border-slate-200">
+            Resumen generado automáticamente con inteligencia artificial (Gemini) a partir de los titulares y entradillas públicos de las portadas de
+            <a class="underline" href="https://www.elmundo.es/" rel="noopener">El Mundo</a> y
+            <a class="underline" href="https://theobjective.com/" rel="noopener">The Objective</a>.
+            Puede contener errores u omisiones y no sustituye la lectura de las noticias originales, que se enlazan en cada tema.
+        </p>
+    </main>
+
+    <script>
+    (function () {
+        const BASE = '/actualidad/datos/';
+        const COLORES = {
+            'Política': '#4f46e5', 'Economía': '#059669', 'Internacional': '#0284c7', 'Sociedad': '#d97706',
+            'Sucesos': '#dc2626', 'Deportes': '#16a34a', 'Cultura': '#9333ea', 'Ciencia y Tecnología': '#0891b2'
+        };
+        const MEDIO_COLOR = { 'El Mundo': '#0f172a', 'The Objective': '#4f46e5' };
+
+        const $ = id => document.getElementById(id);
+        const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        const urlSegura = u => /^https?:\/\//i.test(u) ? esc(u) : '#';
+        const chip = cat => `<span class="cat-chip" style="--c:${COLORES[cat] || '#64748b'}"><span class="cat-dot"></span>${esc(cat)}</span>`;
+
+        const mayus = s => s.charAt(0).toUpperCase() + s.slice(1);
+        function fechaLarga(iso) {
+            return mayus(new Date(iso + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }));
+        }
+        function fechaCorta(iso) {
+            return mayus(new Date(iso + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'short', day: 'numeric', month: 'short' }));
+        }
+        function hora(isoUtc) {
+            return new Date(isoUtc).toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit', timeZone: 'Europe/Madrid' });
+        }
+
+        let dias = [];       // índice, del más reciente al más antiguo
+        let actual = null;   // fecha ISO mostrada
+        let datosDia = null;
+        let medioFiltrado = null;
+
+        function pintarTitulares() {
+            const lista = (datosDia.noticias || []).filter(n => !medioFiltrado || n.medio === medioFiltrado);
+            $('titulares').innerHTML = lista.map(n => `
+                <li class="py-2 flex gap-3">
+                    <span class="text-xs text-slate-400 w-10 shrink-0 pt-0.5">${hora(n.fecha)}</span>
+                    <span><a class="hover:underline" href="${urlSegura(n.url)}" target="_blank" rel="noopener">${esc(n.titulo)}</a>
+                    <span class="medio-badge ml-1">${esc(n.medio)}</span></span>
+                </li>`).join('');
+        }
+
+        function pintar(d) {
+            datosDia = d;
+            $('fechaLarga').textContent = fechaLarga(d.fecha);
+            const i = dias.findIndex(x => x.fecha === d.fecha);
+            $('fechaEstado').textContent = i === 0 ? 'Último resumen disponible' : 'Del archivo';
+            $('btnAnterior').disabled = i >= dias.length - 1;
+            $('btnSiguiente').disabled = i <= 0;
+
+            $('titular').textContent = d.titular;
+            $('resumen').innerHTML = String(d.resumen || '').split(/\n\s*\n/).map(p => `<p>${esc(p)}</p>`).join('');
+            $('metaDia').textContent = `Resumen de ${(d.noticias || []).length} titulares · generado a las ${hora(d.generado_en)} (hora de Madrid)`;
+
+            $('temas').innerHTML = (d.temas || []).map(t => `
+                <article class="bg-white rounded-xl border border-slate-200 shadow-sm p-4 flex flex-col gap-2">
+                    <div class="flex items-center justify-between gap-2">${chip(t.categoria)}
+                        <span class="flex gap-1">${(t.medios || []).map(m => `<span class="medio-badge">${esc(m)}</span>`).join('')}</span></div>
+                    <h3 class="font-semibold text-slate-900 leading-snug">${esc(t.tema)}</h3>
+                    <p class="text-sm text-slate-600">${esc(t.descripcion)}</p>
+                    <ul class="mt-auto pt-2 space-y-1 text-xs text-slate-500">
+                        ${(t.fuentes || []).map(f => `<li><i class="fa-solid fa-arrow-up-right-from-square text-[9px] mr-1"></i><a class="hover:underline" href="${urlSegura(f.url)}" target="_blank" rel="noopener">${esc(f.titulo)}</a> <span class="text-slate-400">· ${esc(f.medio)}</span></li>`).join('')}
+                    </ul>
+                </article>`).join('');
+
+            $('enfoquesCard').classList.toggle('hidden', !d.enfoques);
+            $('enfoques').textContent = d.enfoques || '';
+
+            const pm = Object.entries(d.por_medio || {});
+            const max = Math.max(1, ...pm.map(([, n]) => n));
+            $('barras').innerHTML = pm.map(([m, n]) => `
+                <div class="flex items-center gap-3 text-sm">
+                    <span class="w-28 shrink-0 text-slate-600">${esc(m)}</span>
+                    <div class="flex-1 h-2.5 bg-slate-100 rounded-full overflow-hidden"><div class="h-full rounded-full" style="width:${(n / max * 100).toFixed(0)}%;background:${MEDIO_COLOR[m] || '#64748b'}"></div></div>
+                    <span class="w-8 text-right tabular-nums text-slate-500">${n}</span>
+                </div>`).join('');
+
+            medioFiltrado = null;
+            $('numTitulares').textContent = (d.noticias || []).length;
+            const medios = [...new Set((d.noticias || []).map(n => n.medio))];
+            $('filtroMedio').innerHTML = ['Todos', ...medios].map((m, k) =>
+                `<button type="button" data-m="${k ? esc(m) : ''}" class="px-3 py-1 rounded-lg text-xs font-medium ${k ? 'bg-slate-100 hover:bg-slate-200' : 'bg-indigo-600 text-white'}">${esc(m)}</button>`).join('');
+            $('filtroMedio').querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+                medioFiltrado = b.dataset.m || null;
+                $('filtroMedio').querySelectorAll('button').forEach(x => { x.className = 'px-3 py-1 rounded-lg text-xs font-medium ' + (x === b ? 'bg-indigo-600 text-white' : 'bg-slate-100 hover:bg-slate-200'); });
+                pintarTitulares();
+            }));
+            pintarTitulares();
+            pintarArchivo();
+            document.title = `Actualidad del ${fechaLarga(d.fecha).toLowerCase()} | Emirodgar`;
+        }
+
+        function pintarArchivo() {
+            const porMes = {};
+            dias.forEach(d => { (porMes[d.fecha.slice(0, 7)] = porMes[d.fecha.slice(0, 7)] || []).push(d); });
+            $('archivo').innerHTML = Object.keys(porMes).sort().reverse().map(mes => {
+                const nombre = new Date(mes + '-15T12:00:00').toLocaleDateString('es-ES', { month: 'long', year: 'numeric' });
+                return `<div><h3 class="text-sm font-semibold text-slate-500 uppercase tracking-wide mb-2">${esc(nombre)}</h3>
+                    <ul class="grid gap-2">${porMes[mes].map(d => `
+                        <li><a href="#${d.fecha}" class="dia-item block bg-white border border-slate-200 rounded-lg px-4 py-3 hover:border-indigo-300 transition" ${d.fecha === actual ? 'aria-current="true"' : ''}>
+                            <span class="text-xs text-slate-500">${esc(fechaCorta(d.fecha))}</span>
+                            <span class="block text-sm font-medium text-slate-900">${esc(d.titular)}</span></a></li>`).join('')}
+                    </ul></div>`;
+            }).join('');
+        }
+
+        function ir(fecha) {
+            if (!dias.some(d => d.fecha === fecha)) fecha = dias[0].fecha;
+            actual = fecha;
+            if (location.hash !== '#' + fecha) history.replaceState(null, '', (fecha === dias[0].fecha ? location.pathname : '#' + fecha));
+            fetch(`${BASE}dias/${fecha}.json`, { cache: 'no-cache' })
+                .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+                .then(pintar)
+                .catch(() => { $('estado').textContent = 'No se ha podido cargar ese día.'; $('estado').classList.remove('hidden'); });
+        }
+
+        function mover(delta) {
+            const i = dias.findIndex(d => d.fecha === actual);
+            const j = i - delta; // el índice 0 es el día más reciente
+            if (j >= 0 && j < dias.length) { ir(dias[j].fecha); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+        }
+
+        $('btnAnterior').addEventListener('click', () => mover(-1));
+        $('btnSiguiente').addEventListener('click', () => mover(1));
+        window.addEventListener('hashchange', () => ir(location.hash.slice(1)));
+
+        fetch(BASE + 'index.json', { cache: 'no-cache' })
+            .then(r => { if (!r.ok) throw new Error(r.status); return r.json(); })
+            .then(idx => {
+                dias = idx.dias || [];
+                if (!dias.length) { $('estado').textContent = 'Todavía no hay resúmenes publicados. El primero aparecerá tras la próxima ejecución diaria.'; return; }
+                $('estado').classList.add('hidden');
+                $('contenido').classList.remove('hidden');
+                $('archivoSection').classList.remove('hidden');
+                ir(location.hash.slice(1));
+            })
+            .catch(() => { $('estado').textContent = 'Todavía no hay resúmenes publicados. El primero aparecerá tras la próxima ejecución diaria.'; });
+    })();
+    </script>
+</body>
+</html>

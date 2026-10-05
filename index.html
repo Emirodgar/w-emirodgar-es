@@ -62,6 +62,20 @@
         </div>
       </section>
 
+    <section id="actualidad-home" class="section actualidad-home-section" hidden>
+        <h2>Qué ha pasado hoy</h2>
+        <p>Resumen automático de las portadas de El Mundo y The Objective, con archivo de todos los días anteriores.</p>
+        <div class="actualidad-home-card">
+            <p class="actualidad-home-fecha" id="actualidadHomeFecha"></p>
+            <h3 class="actualidad-home-titular" id="actualidadHomeTitular"></h3>
+            <ul class="actualidad-home-temas" id="actualidadHomeTemas"></ul>
+            <p class="actualidad-home-links">
+                <a href="/actualidad/" class="link">Leer el resumen completo y la hemeroteca →</a>
+                <a href="/timeline/" class="link">Ver la línea de tiempo →</a>
+            </p>
+        </div>
+    </section>
+
     <section id="riesgo-recesion" class="section thermo-section">
         <h2>Termómetro de Riesgo de Recesión</h2>
         <p>Un vistazo rápido al riesgo de recesión en España, calculado en vivo a partir de los indicadores de MacroData España.</p>
@@ -430,6 +444,29 @@
                         resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
                     }
                 });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const seccion = document.getElementById('actualidad-home');
+            if (!seccion) return;
+            fetch('actualidad/datos/latest.json', { cache: 'no-cache' })
+                .then(res => { if (!res.ok) throw new Error('sin datos'); return res.json(); })
+                .then(d => {
+                    document.getElementById('actualidadHomeFecha').textContent =
+                        new Date(d.fecha + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+                    document.getElementById('actualidadHomeTitular').textContent = d.titular;
+                    const lista = document.getElementById('actualidadHomeTemas');
+                    (d.temas || []).forEach(t => {
+                        const li = document.createElement('li');
+                        const b = document.createElement('strong');
+                        b.textContent = t.tema;
+                        li.appendChild(b);
+                        li.appendChild(document.createTextNode(' · ' + t.descripcion));
+                        lista.appendChild(li);
+                    });
+                    seccion.hidden = false;
+                })
+                .catch(() => { /* sin resumen todavía: el bloque se queda oculto */ });
         });
 
         document.addEventListener('DOMContentLoaded', function () {

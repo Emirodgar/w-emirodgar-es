@@ -544,3 +544,55 @@ a.link:hover {
     background-color: transparent;
     text-decoration: underline;
 }
+
+/* Actualidad de hoy (home) */
+.actualidad-home-section {
+    background-color: #ffffff;
+}
+
+.actualidad-home-section[hidden] {
+    display: none;
+}
+
+.actualidad-home-card {
+    max-width: 900px;
+    margin: 30px auto 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
+    padding: 30px;
+    text-align: left;
+}
+
+.actualidad-home-fecha {
+    margin: 0 0 6px;
+    font-size: 0.85rem;
+    color: #64748b;
+    text-transform: capitalize;
+}
+
+.actualidad-home-titular {
+    margin: 0 0 16px;
+    font-size: 1.4rem;
+    line-height: 1.35;
+    color: #111827;
+}
+
+.actualidad-home-temas {
+    margin: 0 0 20px;
+    padding-left: 20px;
+    color: #475569;
+    line-height: 1.55;
+}
+
+.actualidad-home-temas li {
+    margin-bottom: 8px;
+}
+
+.actualidad-home-links {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 0;
+}

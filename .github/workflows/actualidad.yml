@@ -1,0 +1,59 @@
+name: Hemeroteca diaria (Gemini)
+
+on:
+  schedule:
+    # Dos disparos cada tarde (20:30 y 22:30 hora de Madrid en verano, 19:30 y
+    # 21:30 en invierno). GitHub Actions retrasa o se salta triggers de
+    # `schedule` bajo carga, así que el segundo es un respaldo del primero: el
+    # script mira si el resumen de hoy ya existe y, si es así, termina sin
+    # llamar a Gemini. Por eso no hace falta acertar una hora exacta.
+    - cron: '30 18,20 * * *'
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: 'Regenerar el resumen de hoy aunque ya exista'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: actualidad
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Generar el resumen del día con Gemini
+        id: build
+        env:
+          # Secret del repo; si se guardó como "variable" de Actions, se
+          # recoge igualmente con vars.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || vars.GEMINI_API_KEY }}
+          FORZAR: ${{ inputs.forzar && '1' || '' }}
+        run: python3 scripts/actualidad/build.py
+
+      - name: Commit y push de lo que haya cambiado
+        if: steps.build.outputs.ficheros != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Solo los ficheros que el script declara haber tocado (nunca add -A).
+          git add ${{ steps.build.outputs.ficheros }}
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git commit -m "Actualiza hemeroteca de actualidad (${{ steps.build.outputs.periodo }})"
+          git pull --rebase
+          git push
