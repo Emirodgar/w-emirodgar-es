@@ -1,0 +1,31 @@
+{
+  "fecha": "2026-10-05",
+  "generado_en": "2026-10-05T07:52:00+00:00",
+  "titular": "Sánchez adelanta las elecciones generales al 29 de noviembre tras el fracaso de los decretos de vivienda",
+  "por_medio": {
+    "El Mundo": 29,
+    "The Objective": 113
+  },
+  "temas": [
+    {
+      "tema": "Adelanto electoral en España",
+      "categoria": "Política",
+      "descripcion": "Pedro Sánchez convoca elecciones generales para el 29 de noviembre, una decisión que se produce tras el fracaso de los decretos de vivienda y que reconfigura el panorama político español."
+    },
+    {
+      "tema": "Elecciones en Brasil",
+      "categoria": "Internacional",
+      "descripcion": "Flávio Bolsonaro se impone a Lula da Silva en la primera vuelta de las elecciones presidenciales, con un 47,03% de los votos, y se enfrentará en segunda vuelta al actual presidente."
+    },
+    {
+      "tema": "Asesinato en Madrid",
+      "categoria": "Sucesos",
+      "descripcion": "Un hombre de 36 años ha sido detenido por presuntamente matar a sus padres con una mancuerna en su vivienda del distrito de Latina."
+    },
+    {
+      "tema": "Gestión de vivienda y fondos de inversión",
+      "categoria": "Economía",
+      "descripcion": "Blackstone cierra un contrato con Sareb para gestionar miles de pisos, incluyendo sociales, a pesar de las críticas del Gobierno que lo considera un \"fondo buitre\"."
+    }
+  ]
+}

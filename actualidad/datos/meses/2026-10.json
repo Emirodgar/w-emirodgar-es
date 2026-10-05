@@ -1,0 +1,33 @@
+{
+  "mes": "2026-10",
+  "titulo_mes": "Octubre 2026",
+  "resumen_mes": "",
+  "hitos": [
+    {
+      "fecha": "2026-10-05",
+      "titulo": "Pedro Sánchez convoca elecciones generales anticipadas",
+      "categoria": "Política",
+      "descripcion": "El presidente del Gobierno, Pedro Sánchez, anuncia el adelanto de las elecciones generales al 29 de noviembre, una decisión que marca un punto de inflexión en la legislatura.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Pedro Sánchez adelanta las elecciones generales al 29 de noviembre",
+        "url": "https://www.elmundo.es/espana/2026/10/05/6ac3493de4d4d82d6e8b4580.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-05",
+      "titulo": "Flávio Bolsonaro gana la primera vuelta en Brasil",
+      "categoria": "Internacional",
+      "descripcion": "Flávio Bolsonaro se impone a Lula da Silva en la primera vuelta de las elecciones presidenciales de Brasil con el 47,03% de los votos, enfrentándose en segunda vuelta.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Brasil se prepara para el regreso de los Bolsonaro, que tendrán más poder que nunca: \"Vamos camino a una monarquía bolsonarista\"",
+        "url": "https://www.elmundo.es/internacional/2026/10/05/6ac33b01fdddffad1b8b4596.html"
+      },
+      "destacado": false
+    }
+  ]
+}
