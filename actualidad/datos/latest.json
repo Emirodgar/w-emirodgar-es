@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-05",
-  "generado_en": "2026-10-05T07:52:00+00:00",
-  "titular": "Sánchez adelanta las elecciones generales al 29 de noviembre tras el fracaso de los decretos de vivienda",
+  "fecha": "2026-10-06",
+  "generado_en": "2026-10-06T14:14:19+00:00",
+  "titular": "El Constitucional avala la amnistía y allana el regreso de Puigdemont, mientras Sánchez adelanta elecciones",
   "por_medio": {
-    "El Mundo": 29,
-    "The Objective": 113
+    "El Mundo": 34,
+    "The Objective": 205
   },
   "temas": [
     {
-      "tema": "Adelanto electoral en España",
+      "tema": "Amnistía y regreso de Puigdemont",
       "categoria": "Política",
-      "descripcion": "Pedro Sánchez convoca elecciones generales para el 29 de noviembre, una decisión que se produce tras el fracaso de los decretos de vivienda y que reconfigura el panorama político español."
+      "descripcion": "El Tribunal Constitucional ha avalado la amnistía a los líderes del procés, lo que ha llevado al Supremo a retirar la orden de detención contra Carles Puigdemont, abriendo la puerta a su regreso a España. La decisión ha generado reacciones encontradas en el ámbito político."
     },
     {
-      "tema": "Elecciones en Brasil",
+      "tema": "Adelanto electoral y precampaña",
+      "categoria": "Política",
+      "descripcion": "Pedro Sánchez ha iniciado la precampaña electoral desde La Moncloa, centrándose en la vivienda y prometiendo medidas para intervenir el mercado. La decisión de adelantar las elecciones se habría basado en encuestas internas, y se han generado debates sobre el voto por correo."
+    },
+    {
+      "tema": "Protestas estudiantiles en Francia",
       "categoria": "Internacional",
-      "descripcion": "Flávio Bolsonaro se impone a Lula da Silva en la primera vuelta de las elecciones presidenciales, con un 47,03% de los votos, y se enfrentará en segunda vuelta al actual presidente."
+      "descripcion": "Decenas de miles de franceses se han manifestado en apoyo a los estudiantes, con bloqueos de institutos y enfrentamientos violentos con la policía, resultando en heridos y detenidos."
     },
     {
-      "tema": "Asesinato en Madrid",
-      "categoria": "Sucesos",
-      "descripcion": "Un hombre de 36 años ha sido detenido por presuntamente matar a sus padres con una mancuerna en su vivienda del distrito de Latina."
-    },
-    {
-      "tema": "Gestión de vivienda y fondos de inversión",
-      "categoria": "Economía",
-      "descripcion": "Blackstone cierra un contrato con Sareb para gestionar miles de pisos, incluyendo sociales, a pesar de las críticas del Gobierno que lo considera un \"fondo buitre\"."
+      "tema": "Caso de peste en Rusia",
+      "categoria": "Internacional",
+      "descripcion": "La Organización Mundial de la Salud (OMS) ha solicitado a Rusia más información sobre un caso de peste en una trabajadora de un laboratorio de alta seguridad, mientras Rusia atribuye el caso a una \"neumonía de etiología desconocida\"."
     }
   ]
 }

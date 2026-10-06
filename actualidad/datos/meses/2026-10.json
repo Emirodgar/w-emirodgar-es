@@ -14,7 +14,7 @@
         "titulo": "Pedro Sánchez adelanta las elecciones generales al 29 de noviembre",
         "url": "https://www.elmundo.es/espana/2026/10/05/6ac3493de4d4d82d6e8b4580.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-05",
@@ -26,6 +26,48 @@
         "medio": "El Mundo",
         "titulo": "Brasil se prepara para el regreso de los Bolsonaro, que tendrán más poder que nunca: \"Vamos camino a una monarquía bolsonarista\"",
         "url": "https://www.elmundo.es/internacional/2026/10/05/6ac33b01fdddffad1b8b4596.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-06",
+      "edicion": "2026-10-06",
+      "titulo": "El Tribunal Constitucional avala la amnistía a los líderes del 'procés'",
+      "categoria": "Política",
+      "descripcion": "El Pleno del Tribunal Constitucional ha amparado a la ex consellera Dolors Bassa, lo que allana el camino al regreso del ex presidente catalán Carles Puigdemont, estimando la ponencia del presidente Conde-Pumpido.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Constitucional ampara a los líderes del 'procés' y Llarena levanta la orden de detención contra Puigdemont, que podrá regresar ya",
+        "url": "https://www.elmundo.es/espana/2026/10/06/6ac4c58c21efa0dc1f8b45ba.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-06",
+      "edicion": "2026-10-06",
+      "titulo": "El Supremo levanta la orden de detención contra Puigdemont",
+      "categoria": "Política",
+      "descripcion": "Tras el aval del Tribunal Constitucional a la amnistía, el magistrado del Tribunal Supremo Pablo Llarena ha dejado sin efecto la orden nacional de busca y captura y detención del expresidente catalán Carles Puigdemont.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "El Supremo retira la orden de detención contra Puigdemont tras el aval a la amnistía",
+        "url": "https://theobjective.com/espana/tribunales/2026-10-06/supremo-orden-puigdmeont-aval-amnistia/"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-06",
+      "edicion": "2026-10-06",
+      "titulo": "Sánchez anuncia 10.000 millones para comprar vivienda en precampaña",
+      "categoria": "Economía",
+      "descripcion": "El presidente del Gobierno, Pedro Sánchez, ha anunciado en el inicio de la precampaña electoral una inversión de 10.000 millones de euros para la compra de vivienda, con el objetivo de \"intervenir el mercado\".",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Sánchez arranca la campaña prometiendo 10.000 millones para comprar vivienda",
+        "url": "https://theobjective.com/espana/politica/2026-10-06/sanchez-campana-decretos-millones-vivienda/"
       },
       "destacado": false
     }
