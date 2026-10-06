@@ -2,14 +2,18 @@ name: Hemeroteca diaria (Gemini)
 
 on:
   schedule:
-    # Objetivo: 7:00 hora de Madrid. GitHub programa en UTC y no conoce el
-    # horario de verano: 5:00 UTC = 7:00 en verano (CEST) y 6:00 UTC = 7:00 en
-    # invierno (CET). Se programan ambas y el paso "Comprobar hora" descarta la
-    # que cae antes de las 7 en Madrid. Los minutos van en :07 (no en punto)
-    # porque GitHub retrasa menos los triggers que no coinciden con la hora
-    # en punto; aun así puede retrasarse. El tercer disparo (7:07 UTC) es un
-    # respaldo si se salta alguno: el script no repite un día que ya existe.
-    - cron: '7 5,6,7 * * *'
+    # Objetivo: a partir de las 7:00 hora de Madrid. GitHub programa en UTC y
+    # no conoce el horario de verano (5:00 UTC = 7:00 en verano, 6:00 UTC = 7:00
+    # en invierno), así que el paso "Comprobar hora" descarta los disparos que
+    # caen antes de las 7 en Madrid.
+    #
+    # GitHub descarta o retrasa horas los triggers de `schedule` (el 6/10 se
+    # saltó los tres que había programados, a las 5:07, 6:07 y 7:07 UTC). Por
+    # eso hay un disparo cada hora hasta las 12:07 UTC: el primero que GitHub
+    # se digne a lanzar tras las 7:00 genera el día, y los siguientes terminan
+    # al instante porque el script no repite un día que ya existe ni llama a
+    # Gemini. Minuto :07 (no en punto) para evitar la hora de mayor carga.
+    - cron: '7 5-12 * * *'
   workflow_dispatch:
     inputs:
       forzar:
