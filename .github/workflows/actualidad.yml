@@ -76,3 +76,13 @@ jobs:
           git commit -m "Actualiza hemeroteca de actualidad (${{ steps.build.outputs.periodo }})"
           git pull --rebase
           git push
+
+      - name: Enviar el resumen por Telegram
+        # Un fallo aquí (o la falta de secrets) no debe tumbar el workflow:
+        # el commit ya está hecho.
+        if: steps.build.outputs.ficheros != ''
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python3 scripts/actualidad/telegram.py "${{ steps.build.outputs.periodo }}"
