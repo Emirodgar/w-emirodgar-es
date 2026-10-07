@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-06",
-  "generado_en": "2026-10-06T14:14:19+00:00",
-  "titular": "El Constitucional avala la amnistía y allana el regreso de Puigdemont, mientras Sánchez adelanta elecciones",
+  "fecha": "2026-10-07",
+  "generado_en": "2026-10-07T11:38:55+00:00",
+  "titular": "Junts descarta investir a Sánchez, la Fiscalía pide absolver a Begoña Gómez y se convoca huelga general por la vivienda.",
   "por_medio": {
-    "El Mundo": 34,
-    "The Objective": 205
+    "El Mundo": 28,
+    "The Objective": 178
   },
   "temas": [
     {
-      "tema": "Amnistía y regreso de Puigdemont",
+      "tema": "Junts descarta investir a Sánchez y la amnistía sigue generando debate",
       "categoria": "Política",
-      "descripcion": "El Tribunal Constitucional ha avalado la amnistía a los líderes del procés, lo que ha llevado al Supremo a retirar la orden de detención contra Carles Puigdemont, abriendo la puerta a su regreso a España. La decisión ha generado reacciones encontradas en el ámbito político."
+      "descripcion": "Junts per Catalunya ha declarado que ve \"imposible\" volver a investir a Pedro Sánchez, aunque también ha descartado un gobierno del PP y Vox. La Ley de Amnistía y el posible regreso de Puigdemont continúan siendo puntos centrales del debate político, con diferentes valoraciones sobre su impacto y legitimidad."
     },
     {
-      "tema": "Adelanto electoral y precampaña",
+      "tema": "La Fiscalía pide la absolución de Begoña Gómez",
       "categoria": "Política",
-      "descripcion": "Pedro Sánchez ha iniciado la precampaña electoral desde La Moncloa, centrándose en la vivienda y prometiendo medidas para intervenir el mercado. La decisión de adelantar las elecciones se habría basado en encuestas internas, y se han generado debates sobre el voto por correo."
+      "descripcion": "La Fiscalía ha presentado su escrito de conclusiones provisionales solicitando la absolución de Begoña Gómez, manteniendo su postura inicial de que no hubo tráfico de influencias, malversación ni perjuicio para la Complutense."
     },
     {
-      "tema": "Protestas estudiantiles en Francia",
-      "categoria": "Internacional",
-      "descripcion": "Decenas de miles de franceses se han manifestado en apoyo a los estudiantes, con bloqueos de institutos y enfrentamientos violentos con la policía, resultando en heridos y detenidos."
+      "tema": "Huelga general por la vivienda y debate sobre políticas habitacionales",
+      "categoria": "Economía",
+      "descripcion": "Los sindicatos CCOO y UGT están ultimando la convocatoria de una huelga general por la vivienda para el 11 de noviembre, coincidiendo con el inicio de la campaña electoral. El sector inmobiliario, por su parte, pide un pacto de Estado y critica la politización de la crisis de la vivienda."
     },
     {
-      "tema": "Caso de peste en Rusia",
-      "categoria": "Internacional",
-      "descripcion": "La Organización Mundial de la Salud (OMS) ha solicitado a Rusia más información sobre un caso de peste en una trabajadora de un laboratorio de alta seguridad, mientras Rusia atribuye el caso a una \"neumonía de etiología desconocida\"."
+      "tema": "Investigación del 'caso Air Europa' y citaciones judiciales",
+      "categoria": "Política",
+      "descripcion": "El juez del 'caso Air Europa' ha citado a declarar como testigos a la ministra Aagesen, Pedro Saura e Íñigo Errejón, entre otras personas, en relación con el rescate de la aerolínea, a pocos días de las elecciones."
     }
   ]
 }

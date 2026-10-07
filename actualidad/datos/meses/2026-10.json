@@ -70,6 +70,48 @@
         "url": "https://theobjective.com/espana/politica/2026-10-06/sanchez-campana-decretos-millones-vivienda/"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-07",
+      "edicion": "2026-10-07",
+      "titulo": "Junts descarta investir a Sánchez",
+      "categoria": "Política",
+      "descripcion": "Junts per Catalunya ha declarado que ve \"imposible\" volver a apoyar una investidura del presidente del Gobierno, Pedro Sánchez, tras las elecciones.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Junts descarta volver a investir a Sánchez: \"Imposible. Salimos escaldados\"",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/07/6ac6260de9cf4a293e8b45b9.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-07",
+      "edicion": "2026-10-07",
+      "titulo": "La Fiscalía pide la absolución de Begoña Gómez",
+      "categoria": "Política",
+      "descripcion": "La Fiscalía ha presentado su escrito de conclusiones provisionales solicitando la absolución de Begoña Gómez, esposa del presidente del Gobierno, al no apreciar delitos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Fiscalía pide la absolución de Begoña Gómez: no hubo tráfico de influencias ni malversación ni perjuicio para la Complutense",
+        "url": "https://www.elmundo.es/espana/2026/10/07/6ac6112be4d4d8936a8b457c.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-07",
+      "edicion": "2026-10-07",
+      "titulo": "Convocatoria de huelga general por la vivienda",
+      "categoria": "Economía",
+      "descripcion": "Los sindicatos CCOO y UGT ultiman la convocatoria de una huelga general por la vivienda para el 11 de noviembre, a las puertas del inicio de la campaña electoral.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Los sindicatos ultiman la huelga general por la vivienda para el 11 de noviembre, a las puertas del inicio de la campaña electoral",
+        "url": "https://www.elmundo.es/economia/2026/10/07/6ac61a03e4d4d87a778b45a1.html"
+      },
+      "destacado": false
     }
   ]
 }
