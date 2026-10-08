@@ -1,13 +1,13 @@
 ---
 title: Evolución del poder adquisitivo de los españoles
-description: La inflación acumulada desde 2020 supera el 19% y en 2026 ha vuelto a repuntar. Analizamos por qué los salarios reales españoles siguen sin recuperar el nivel de 2021.
+description: La inflación acumulada desde 2020 supera el 19% y en 2026 ha vuelto a repuntar hasta el 4,9% en septiembre. Analizamos por qué los salarios reales españoles siguen sin recuperar el nivel de 2021.
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-10-08
-date_modified: 2026-09-24
+date_modified: 2026-10-08
 folder: espana
 permalink: evolucion-poder-adquisitivo
 ---
@@ -51,7 +51,8 @@ La inflación ha actuado de manera desigual, castigando especialmente a los hoga
 | Indicador | Valor |
 | :-- | :-- |
 | Inflación acumulada 2020-2025 | 19,1% |
-| IPC interanual agosto 2026 | 4,3% (máximo en tres años) |
+| IPC interanual septiembre 2026 (adelantado) | 4,9% (agosto: 4,3%) |
+| Inflación subyacente septiembre 2026 (adelantado) | 3,1% |
 | Salarios reales frente al primer trimestre de 2021 | -2% |
 | Incremento precios alimentos 2018-2024 | 37,9% |
 | Pérdida poder adquisitivo hogar medio | 1.230 euros |
@@ -76,7 +77,7 @@ El Tribunal de Cuentas ha identificado irregularidades en la gestión de los ERT
 
 ## El repunte de 2026: la recuperación que no llegó
 
-Durante 2025 hubo motivos para el optimismo moderado: los salarios reales crecieron un 2% respecto al año anterior y la renta bruta disponible de los hogares avanzó por encima de una inflación media que se quedó en el 2,7%. Ese respiro, sin embargo, ha durado poco. En agosto de 2026 el IPC interanual se disparó al 4,3%, su nivel más alto en más de tres años, arrastrado por una subida del 16,9% en los productos energéticos -carburantes, electricidad y gas- tras la retirada parcial de las rebajas fiscales y el encarecimiento de las materias primas.
+Durante 2025 hubo motivos para el optimismo moderado: los salarios reales crecieron un 2% respecto al año anterior y la renta bruta disponible de los hogares avanzó por encima de una inflación media que se quedó en el 2,7%. Ese respiro, sin embargo, ha durado poco. En agosto de 2026 el IPC interanual se disparó al 4,3%, su nivel más alto en más de tres años, arrastrado por una subida del 16,9% en los productos energéticos -carburantes, electricidad y gas- tras la retirada parcial de las rebajas fiscales y el encarecimiento de las materias primas. Y la escalada ha continuado: el indicador adelantado del INE para septiembre sitúa la inflación en el 4,9%, seis décimas más, con la subyacente (sin energía ni alimentos frescos) subiendo dos décimas hasta el 3,1%, empujada de nuevo por los carburantes. Es un dato provisional que el INE confirmará a mediados de octubre.
 
 El propio informe de la OCDE de julio de 2026 confirma que el problema no es coyuntural: los salarios reales españoles siguen un 2% por debajo de los del primer trimestre de 2021, y el organismo prevé que no se recuperará poder adquisitivo ni en 2026 ni en 2027, señalando el crecimiento salarial como el "punto débil" de la economía española. La causa de fondo es estructural, no solo inflacionaria: la productividad laboral lleva una década estancada, lo que limita el margen para subidas salariales reales sostenibles. En este periodo reciente, desde 2021, España queda entre las tres grandes economías de la OCDE con peor evolución del salario real, solo por delante de Italia (-6,1%) y muy lejos de Portugal (+5,9%) o Alemania (+0,9%).
 
