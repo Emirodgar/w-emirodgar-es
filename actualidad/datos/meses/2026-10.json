@@ -55,7 +55,7 @@
         "titulo": "El Supremo retira la orden de detención contra Puigdemont tras el aval a la amnistía",
         "url": "https://theobjective.com/espana/tribunales/2026-10-06/supremo-orden-puigdmeont-aval-amnistia/"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-06",
@@ -110,6 +110,48 @@
         "medio": "El Mundo",
         "titulo": "Los sindicatos ultiman la huelga general por la vivienda para el 11 de noviembre, a las puertas del inicio de la campaña electoral",
         "url": "https://www.elmundo.es/economia/2026/10/07/6ac61a03e4d4d87a778b45a1.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-08",
+      "edicion": "2026-10-08",
+      "titulo": "Anne Carson gana el Premio Nobel de Literatura 2026",
+      "categoria": "Cultura",
+      "descripcion": "La poeta canadiense Anne Carson ha sido galardonada con el Premio Nobel de Literatura 2026 por su obra singular.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Nobel de Literatura para la poeta canadiense Anne Carson",
+        "url": "https://www.elmundo.es/cultura/literatura/2026/10/08/6ac76831fc6c833e4b8b45c8.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-08",
+      "edicion": "2026-10-08",
+      "titulo": "El Supremo anula el decreto de Universidades",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo ha anulado el decreto de creación, reconocimiento y autorización de centros universitarios por falta de justificación en su tramitación urgente.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Supremo anula el decreto de Universidades por falta de justificación para su tramitación urgente",
+        "url": "https://www.elmundo.es/espana/2026/10/08/6ac77f7ae4d4d852518b4582.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-08",
+      "edicion": "2026-10-08",
+      "titulo": "Italia aprueba la reforma electoral de Meloni",
+      "categoria": "Internacional",
+      "descripcion": "La Cámara de los Diputados de Italia ha aprobado de forma definitiva la reforma electoral promovida por la primera ministra Giorgia Meloni.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Meloni saca adelante la reforma electoral en el Parlamento",
+        "url": "https://www.elmundo.es/internacional/2026/10/08/6ac776aae85ece165a8b4584.html"
       },
       "destacado": false
     }
