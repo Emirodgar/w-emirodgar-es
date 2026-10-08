@@ -1,7 +1,7 @@
 {
-  "lastUpdated": "15 de Septiembre, 2026",
-  "resumenEjecutivo": "El catálogo de convocatorias de empleo público de la Junta de Castilla y León registró 77 procesos selectivos en 2025 (19 más que en 2024) por 1.418 plazas, frente a las 2.588 de 2024 —un año con convocatorias muy numerosas como Veterinarios (99 plazas) o Cuerpo de Gestión (86)—. En lo que va de 2026 se han publicado ya 30 convocatorias con 1.039 plazas, aunque a día de hoy ninguna tiene el plazo de solicitud abierto: la última se publicó el 28 de julio (Médico de Salud Pública, Segovia, 1 plaza). Desde 2020 el catálogo acumula 7.113 plazas convocadas, y la inmensa mayoría de los ejercicios se celebran en Valladolid, sede habitual de los tribunales, con independencia de la provincia de destino del puesto. Por perfil profesional, Administración General concentra el mayor número de plazas desde 2023 (2.179), seguida de Oficios y Mantenimiento (836) y Servicios Sociales y Educación (686); Sanidad es el área con más convocatorias distintas (50), aunque de menor tamaño media. Más allá de las convocatorias, la plantilla de la Junta asciende a 92.299 efectivos en enero de 2026, un 1,16% más que un año antes; casi todas las provincias crecen, salvo Segovia (-0,4%) y Palencia (-0,6%), las únicas con menos personal que hace un año. Valladolid y León concentran casi el 40% de toda la plantilla autonómica.",
-  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de plazas ofertadas en convocatorias de empleo publico de Castilla y Leon, 2020-2026\" style=\"width:100%;height:100%\"><polygon points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,62.0 308,100 12,100\" fill=\"rgba(37,99,235,0.08)\"/><polyline points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,62.0\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"89.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"61.3\" cy=\"85.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"110.7\" cy=\"44.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"160.0\" cy=\"84.2\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"209.3\" cy=\"20.4\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"258.7\" cy=\"51.8\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"308.0\" cy=\"62.0\" r=\"3\" fill=\"#2563eb\"/></svg>",
+  "lastUpdated": "08 de Octubre, 2026",
+  "resumenEjecutivo": "El catálogo de convocatorias de empleo público de la Junta de Castilla y León registró 77 procesos selectivos en 2025 (19 más que en 2024) por 1.418 plazas, frente a las 2.588 de 2024 —un año con convocatorias muy numerosas como Veterinarios (99 plazas) o Cuerpo de Gestión (86)—. En lo que va de 2026 se han publicado ya 31 convocatorias con 1.158 plazas, y hay una con el plazo de solicitud abierto ahora mismo: Agentes Medioambientales (2024/25), con 119 plazas y fecha límite el 20 de octubre. Desde 2020 el catálogo acumula 7.232 plazas convocadas, y la inmensa mayoría de los ejercicios se celebran en Valladolid, sede habitual de los tribunales, con independencia de la provincia de destino del puesto. Por perfil profesional, Administración General concentra el mayor número de plazas desde 2023 (2.179), seguida de Oficios y Mantenimiento (836) y Servicios Sociales y Educación (686); Sanidad es el área con más convocatorias distintas (50), aunque de menor tamaño media. Más allá de las convocatorias, la plantilla de la Junta asciende a 94.155 efectivos en julio de 2026, un 1,72% más que un año antes, y todas las provincias suman personal, con León (+359) a la cabeza y Soria (+23) como la que menos crece, tras revertirse los descensos de Segovia y Palencia de enero; Valladolid y León concentran casi el 40% de toda la plantilla autonómica.",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion de plazas ofertadas en convocatorias de empleo publico de Castilla y Leon, 2020-2026\" style=\"width:100%;height:100%\"><polygon points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,58.8 308,100 12,100\" fill=\"rgba(37,99,235,0.08)\"/><polyline points=\"12.0,89.6 61.3,85.6 110.7,44.6 160.0,84.2 209.3,20.4 258.7,51.8 308.0,58.8\" fill=\"none\" stroke=\"#2563eb\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12.0\" cy=\"89.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"61.3\" cy=\"85.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"110.7\" cy=\"44.6\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"160.0\" cy=\"84.2\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"209.3\" cy=\"20.4\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"258.7\" cy=\"51.8\" r=\"2.5\" fill=\"#2563eb\"/><circle cx=\"308.0\" cy=\"58.8\" r=\"3\" fill=\"#2563eb\"/></svg>",
   "sources": {
     "convocatorias": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público' (analisis.datosabiertos.jcyl.es), vía su API pública, filtrado por tipo 'Convocatoria'",
     "plazas": "Portal de datos abiertos de la Junta de Castilla y León, dataset 'Convocatorias de Empleo Público', suma del campo 'numeroplazas' por convocatoria",
@@ -40,7 +40,7 @@
     {
       "id": "historico",
       "title": "Plazas Acumuladas 2020-2026",
-      "currentValue": 7113,
+      "currentValue": 7232,
       "unit": "plazas",
       "change": null,
       "changeLabel": "Total del catálogo histórico disponible",
@@ -52,22 +52,22 @@
     {
       "id": "abiertas",
       "title": "Convocatorias Abiertas Ahora",
-      "currentValue": 0,
+      "currentValue": 1,
       "unit": "convocatorias",
       "change": null,
-      "changeLabel": "Ninguna con plazo de solicitud abierto hoy",
-      "description": "Última publicada: 28/07/2026 (Médico de Salud Pública, Segovia, 1 plaza)",
+      "changeLabel": "1 con plazo de solicitud abierto hoy",
+      "description": "Agentes Medioambientales (2024/25): 119 plazas, plazo hasta el 20/10/2026 (publicada el 21/09/2026)",
       "target": null,
       "icon": "fa-hourglass-half",
       "color": "amber"
     },
     {
       "id": "efectivos",
-      "title": "Personal de la Junta (Enero 2026)",
-      "currentValue": 92299,
+      "title": "Personal de la Junta (Julio 2026)",
+      "currentValue": 94155,
       "unit": "efectivos",
-      "change": 1056,
-      "changeLabel": "vs enero 2025 (91.243)",
+      "change": 1590,
+      "changeLabel": "vs julio 2025 (92.565)",
       "description": "Personal funcionario y laboral de la Administración General de la Junta, las 9 provincias",
       "target": null,
       "icon": "fa-users-gear",
@@ -81,10 +81,10 @@
     { "year": "2023", "convocatorias": 18, "plazas": 212, "bolsasEmpleo": 16 },
     { "year": "2024", "convocatorias": 58, "plazas": 2588, "bolsasEmpleo": 8 },
     { "year": "2025", "convocatorias": 77, "plazas": 1418, "bolsasEmpleo": 0 },
-    { "year": "2026", "convocatorias": 30, "plazas": 1039, "bolsasEmpleo": 12 }
+    { "year": "2026", "convocatorias": 31, "plazas": 1158, "bolsasEmpleo": 12 }
   ],
   "sedes": [
-    { "sede": "Valladolid", "plazas": 4132 },
+    { "sede": "Valladolid", "plazas": 4251 },
     { "sede": "Sin especificar", "plazas": 2207 },
     { "sede": "Varias sedes (Burgos, León, Salamanca, Valladolid)", "plazas": 437 },
     { "sede": "Segovia", "plazas": 114 },
@@ -97,27 +97,28 @@
     { "sede": "Soria", "plazas": 1 }
   ],
   "provincias": [
-    { "provincia": "Valladolid", "efectivos": 21173, "efectivosAnterior": 20977, "variacion": 196 },
-    { "provincia": "León", "efectivos": 15722, "efectivosAnterior": 15338, "variacion": 384 },
-    { "provincia": "Burgos", "efectivos": 12438, "efectivosAnterior": 12299, "variacion": 139 },
-    { "provincia": "Salamanca", "efectivos": 11882, "efectivosAnterior": 11732, "variacion": 150 },
-    { "provincia": "Zamora", "efectivos": 6979, "efectivosAnterior": 6835, "variacion": 144 },
-    { "provincia": "Ávila", "efectivos": 6440, "efectivosAnterior": 6393, "variacion": 47 },
-    { "provincia": "Segovia", "efectivos": 6365, "efectivosAnterior": 6389, "variacion": -24 },
-    { "provincia": "Palencia", "efectivos": 6238, "efectivosAnterior": 6275, "variacion": -37 },
-    { "provincia": "Soria", "efectivos": 5062, "efectivosAnterior": 5005, "variacion": 57 }
+    { "provincia": "Valladolid", "efectivos": 21397, "efectivosAnterior": 21130, "variacion": 267 },
+    { "provincia": "León", "efectivos": 15873, "efectivosAnterior": 15514, "variacion": 359 },
+    { "provincia": "Burgos", "efectivos": 12753, "efectivosAnterior": 12487, "variacion": 266 },
+    { "provincia": "Salamanca", "efectivos": 12149, "efectivosAnterior": 11938, "variacion": 211 },
+    { "provincia": "Zamora", "efectivos": 7066, "efectivosAnterior": 6989, "variacion": 77 },
+    { "provincia": "Ávila", "efectivos": 6592, "efectivosAnterior": 6411, "variacion": 181 },
+    { "provincia": "Segovia", "efectivos": 6556, "efectivosAnterior": 6495, "variacion": 61 },
+    { "provincia": "Palencia", "efectivos": 6457, "efectivosAnterior": 6312, "variacion": 145 },
+    { "provincia": "Soria", "efectivos": 5312, "efectivosAnterior": 5289, "variacion": 23 }
   ],
   "perfiles": [
     { "perfil": "Administración General", "convocatorias": 21, "plazas": 2179 },
     { "perfil": "Oficios y Mantenimiento", "convocatorias": 35, "plazas": 836 },
     { "perfil": "Servicios Sociales y Educación", "convocatorias": 24, "plazas": 686 },
     { "perfil": "Sanidad", "convocatorias": 50, "plazas": 664 },
+    { "perfil": "Medio Ambiente y Montes", "convocatorias": 12, "plazas": 465 },
     { "perfil": "Ingeniería y Técnicos", "convocatorias": 29, "plazas": 445 },
-    { "perfil": "Medio Ambiente y Montes", "convocatorias": 11, "plazas": 346 },
     { "perfil": "Otros perfiles", "convocatorias": 11, "plazas": 93 },
     { "perfil": "Inspección y Consumo", "convocatorias": 2, "plazas": 8 }
   ],
   "convocatoriasRecientes": [
+    { "titulo": "Agentes Medioambientales (2024/25)", "municipio": "Valladolid", "plazas": 119, "fechaPublicacion": "2026-09-21", "fechaLimite": "2026-10-20", "estado": "abierta", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285681027756/Empleo" },
     { "titulo": "Médico de Salud Pública del Servicio Territorial de Sanidad de Segovia", "municipio": "Segovia", "plazas": 1, "fechaPublicacion": "2026-07-28", "fechaLimite": "2026-08-11", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285666772937/Empleo" },
     { "titulo": "Ayudante Técnico de Laboratorio (2025)", "municipio": "Valladolid", "plazas": 8, "fechaPublicacion": "2026-07-27", "fechaLimite": "2026-08-24", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285666480084/Empleo" },
     { "titulo": "Ingenieros Técnicos de Obras Públicas (2025)", "municipio": "Valladolid", "plazas": 4, "fechaPublicacion": "2026-07-27", "fechaLimite": "2026-08-24", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285666500281/Empleo" },
@@ -131,11 +132,10 @@
     { "titulo": "Médicos Especialistas en Medicina del Trabajo o Empresa (2023/2025)", "municipio": "Valladolid", "plazas": 9, "fechaPublicacion": "2026-07-09", "fechaLimite": "2026-08-06", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285661501009/Empleo" },
     { "titulo": "Químicos (2025)", "municipio": "Valladolid", "plazas": 1, "fechaPublicacion": "2026-07-09", "fechaLimite": "2026-08-06", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285661523292/Empleo" },
     { "titulo": "Médicos (2024/25)", "municipio": "Valladolid", "plazas": 21, "fechaPublicacion": "2026-07-09", "fechaLimite": "2026-08-06", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285661470023/Empleo" },
-    { "titulo": "Jefe de Sección de Epidemiología del Servicio Territorial de Sanidad de Soria", "municipio": "Soria", "plazas": 1, "fechaPublicacion": "2026-06-23", "fechaLimite": "2026-07-07", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285653978112/Empleo" },
-    { "titulo": "Jefe de Sección de Epidemiología del Servicio Territorial de Sanidad de Zamora", "municipio": "Sin especificar", "plazas": 1, "fechaPublicacion": "2026-06-12", "fechaLimite": "2026-06-26", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285648380720/Empleo" }
+    { "titulo": "Jefe de Sección de Epidemiología del Servicio Territorial de Sanidad de Soria", "municipio": "Soria", "plazas": 1, "fechaPublicacion": "2026-06-23", "fechaLimite": "2026-07-07", "estado": "cerrada", "enlace": "https://empleopublico.jcyl.es/web/jcyl/EmpleoPublico/es/Plantilla100Detalle/1246947697738/Convocatoria/1285653978112/Empleo" }
   ],
   "notas": {
-    "2026parcial": "El dato de 2026 está incompleto (extraído a 15 de septiembre de 2026) y se completará en próximas actualizaciones",
+    "2026parcial": "El dato de 2026 está incompleto (extraído a 8 de octubre de 2026) y se completará en próximas actualizaciones",
     "sede": "El campo 'municipio' del dataset refleja la sede donde se celebran las pruebas selectivas (mayoritariamente Valladolid), no necesariamente la provincia de destino final de la plaza",
     "subgrupo": "El dataset no incluye un campo limpio de subgrupo (A1/A2/C1/C2) ni de cuerpo/especialidad agregable; esa información solo aparece dentro de tablas de texto libre en cada convocatoria y no se procesa automáticamente en este panel",
     "efectivosFrecuencia": "'Estadísticas de personal' se publica dos veces al año (enero y julio), por lo que este dato cambia con menor frecuencia que el resto del panel",
