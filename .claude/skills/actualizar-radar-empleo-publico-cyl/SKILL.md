@@ -70,6 +70,8 @@ preguntas distintas y ambas tienen su propio gráfico en el panel.
 
 ## Fuente de datos: dataset `convocatorias-de-empleo-publico`
 
+> Nota: en octubre de 2026 la Junta renombró dos campos del dataset: `numeroplazas` → `numero_de_plazas` y `fechafinalizacion` → `fecha_de_finalizacion`. Si una consulta devuelve `Unknown field`, consulta el esquema (`.../catalog/datasets/convocatorias-de-empleo-publico`, campo `fields`) por si ha vuelto a cambiar algún nombre.
+
 Es un dataset del portal de datos abiertos de la Junta, consultable sin autenticación vía API
 OpenDataSoft. Todas las consultas siguientes filtran por `tipo='Convocatoria'` salvo que se indique lo
 contrario (el dataset también incluye `tipo='Bolsa de Empleo'`, que se trata aparte).
@@ -77,7 +79,7 @@ contrario (el dataset también incluye `tipo='Bolsa de Empleo'`, que se trata ap
 ### 1. Convocatorias y plazas por año
 
 ```
-https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=year(fechabocyl)%20as%20y,count(*)%20as%20n,sum(numeroplazas)%20as%20plazas&group_by=year(fechabocyl)&order_by=y
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=year(fechabocyl)%20as%20y,count(*)%20as%20n,sum(numero_de_plazas)%20as%20plazas&group_by=year(fechabocyl)&order_by=y
 ```
 
 Actualiza `historicalData`: `convocatorias` = `n`, `plazas` = `plazas`, para cada año. Añade el año en
@@ -96,7 +98,7 @@ resultado, no lo dejes vacío).
 ### 3. Plazas por sede de examen
 
 ```
-https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=municipio,count(*)%20as%20n,sum(numeroplazas)%20as%20plazas&group_by=municipio&order_by=plazas%20desc&limit=15
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=municipio,count(*)%20as%20n,sum(numero_de_plazas)%20as%20plazas&group_by=municipio&order_by=plazas%20desc&limit=15
 ```
 
 Reescribe `sedes` de mayor a menor `plazas`. El valor `municipio: null` corresponde a convocatorias sin
@@ -106,7 +108,7 @@ fracción grande del total y ocultarlo distorsionaría el gráfico).
 ### 4. Total histórico acumulado
 
 ```
-https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=sum(numeroplazas)%20as%20total
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=sum(numero_de_plazas)%20as%20total
 ```
 
 Usa este valor para el indicador `historico` (`currentValue`), y actualiza su `changeLabel` si cambia el
@@ -115,7 +117,7 @@ rango de años cubierto (por ejemplo, "Total del catálogo histórico disponible
 ### 5. Convocatorias con plazo abierto ahora mismo
 
 ```
-https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27%20AND%20fechafinalizacion%20%3E%3D%20date%27AAAA-MM-DD%27&order_by=fechafinalizacion%20asc
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27%20AND%20fecha_de_finalizacion%20%3E%3D%20date%27AAAA-MM-DD%27&order_by=fecha_de_finalizacion%20asc
 ```
 
 Sustituye `AAAA-MM-DD` por la fecha de hoy. Usa el `total_count` para el indicador `abiertas`. Si es `0`,
@@ -153,7 +155,7 @@ el mes/año de comparación, `title` con el mes/año del dato nuevo).
 
 ### 7. Perfiles profesionales más demandados
 
-Vuelve al dataset `convocatorias-de-empleo-publico`. Descarga el `titulo` y `numeroplazas` de todas las
+Vuelve al dataset `convocatorias-de-empleo-publico`. Descarga el `titulo` y `numero_de_plazas` de todas las
 convocatorias (`tipo='Convocatoria'`) publicadas desde el 1 de enero de 2023 (usa
 `where=tipo%3D%27Convocatoria%27%20AND%20fechabocyl%20%3E%3D%20date%272023-01-01%27`), paginando con
 `limit`/`offset` si hace falta (esta API pagina en bloques de 100). No amplíes el rango a años anteriores:
@@ -185,18 +187,18 @@ en este orden de prioridad (para cuando un título encaje en más de uno, gana e
    patrón de título nuevo y frecuente merece su propia categoría o encaja en una existente)
 
 Reescribe `perfiles` por completo con la suma de `convocatorias` (nº de filas) y `plazas`
-(`numeroplazas`) de cada perfil, para todo el rango 2023-en curso (no solo el año más reciente). No crees
+(`numero_de_plazas`) de cada perfil, para todo el rango 2023-en curso (no solo el año más reciente). No crees
 una categoría nueva sin decírselo antes al usuario: los 8 perfiles anteriores son fijos salvo que se pida
 explícitamente ampliarlos.
 
 ### 8. Últimas convocatorias publicadas
 
 ```
-https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=titulo,numeroplazas,municipio,fechabocyl,fechafinalizacion,enlace_al_contenido&order_by=fechabocyl%20desc&limit=15
+https://analisis.datosabiertos.jcyl.es/api/explore/v2.1/catalog/datasets/convocatorias-de-empleo-publico/records?where=tipo%3D%27Convocatoria%27&select=titulo,numero_de_plazas,municipio,fechabocyl,fecha_de_finalizacion,enlace_al_contenido&order_by=fechabocyl%20desc&limit=15
 ```
 
 Reescribe `convocatoriasRecientes` por completo con estas 15 filas: `fechaPublicacion` = `fechabocyl`,
-`fechaLimite` = `fechafinalizacion`, `municipio` = el valor del campo (o `"Sin especificar"` si es `null`),
+`fechaLimite` = `fecha_de_finalizacion`, `municipio` = el valor del campo (o `"Sin especificar"` si es `null`),
 `enlace` = `enlace_al_contenido`. Calcula `estado` comparando `fechaLimite` con la fecha de esta
 actualización: `"abierta"` si `fechaLimite >= hoy`, `"cerrada"` en caso contrario — no dejes un `estado`
 de una ejecución anterior sin recalcular, ya que una convocatoria puede cerrarse entre una actualización y
