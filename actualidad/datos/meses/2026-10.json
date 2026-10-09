@@ -125,7 +125,7 @@
         "titulo": "Nobel de Literatura para la poeta canadiense Anne Carson",
         "url": "https://www.elmundo.es/cultura/literatura/2026/10/08/6ac76831fc6c833e4b8b45c8.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-08",
@@ -152,6 +152,48 @@
         "medio": "El Mundo",
         "titulo": "Meloni saca adelante la reforma electoral en el Parlamento",
         "url": "https://www.elmundo.es/internacional/2026/10/08/6ac776aae85ece165a8b4584.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-09",
+      "edicion": "2026-10-09",
+      "titulo": "Navi Pillay, Premio Nobel de la Paz 2026",
+      "categoria": "Internacional",
+      "descripcion": "La jurista sudafricana Navanethem 'Navi' Pillay ha sido galardonada con el Premio Nobel de la Paz 2026.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Navi Pillay, la Nobel de la Paz que acusó a Israel de cometer un genocidio en Gaza",
+        "url": "https://www.elmundo.es/internacional/2026/10/09/6ac89d94fc6c83a6328b4588.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-09",
+      "edicion": "2026-10-09",
+      "titulo": "Zaragoza, Capital Verde Europea 2028",
+      "categoria": "Sociedad",
+      "descripcion": "Zaragoza ha sido elegida por la Comisión Europea como Capital Verde Europea 2028 por sus políticas ambientales.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Zaragoza se convierte en Capital Verde Europea 2028",
+        "url": "https://theobjective.com/espana/2026-10-09/zaragoza-capital-verde-europea/"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-09",
+      "edicion": "2026-10-09",
+      "titulo": "Primer fusilamiento militar público en EE.UU. desde 1936",
+      "categoria": "Internacional",
+      "descripcion": "El Pentágono emitirá por streaming el fusilamiento de Nidal Malik Hasan, el primer militar ejecutado en 65 años en EE.UU. y la primera pena de muerte aplicada en público desde 1936.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Pentágono emitirá por streaming el fusilamiento del soldado musulmán que mató a 13 personas en una base de Texas",
+        "url": "https://www.elmundo.es/internacional/2026/10/09/6ac87781e85ece40788b4583.html"
       },
       "destacado": false
     }

@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-08",
-  "generado_en": "2026-10-08T11:53:31+00:00",
-  "titular": "Nobel de Literatura para Anne Carson y polémica política por la vivienda y las elecciones.",
+  "fecha": "2026-10-09",
+  "generado_en": "2026-10-09T11:45:25+00:00",
+  "titular": "Nobel de la Paz para Navi Pillay y prisión para un hijo de Al-Thani; el Banco de España alerta sobre la inflación.",
   "por_medio": {
-    "El Mundo": 29,
-    "The Objective": 235
+    "El Mundo": 34,
+    "The Objective": 203
   },
   "temas": [
     {
-      "tema": "Premio Nobel de Literatura 2026",
-      "categoria": "Cultura",
-      "descripcion": "La poeta canadiense Anne Carson ha sido galardonada con el Premio Nobel de Literatura 2026 por su obra que fusiona realidad y sueño."
-    },
-    {
-      "tema": "Preocupación y debate sobre la vivienda",
-      "categoria": "Sociedad",
-      "descripcion": "La vivienda es una preocupación mayoritaria en España, con un amplio apoyo a la intervención estatal y la construcción de vivienda pública, mientras la muerte de una anciana desahuciada genera controversia política."
-    },
-    {
-      "tema": "Anulación del decreto de Universidades",
-      "categoria": "Política",
-      "descripcion": "El Tribunal Supremo ha anulado el decreto de creación, reconocimiento y autorización de centros universitarios por irregularidades en su tramitación urgente."
-    },
-    {
-      "tema": "Reforma electoral en Italia",
+      "tema": "Nobel de la Paz y asuntos judiciales",
       "categoria": "Internacional",
-      "descripcion": "El Parlamento italiano ha aprobado la reforma electoral promovida por la primera ministra Giorgia Meloni, que beneficia a la coalición ganadora."
+      "descripcion": "La jurista sudafricana Navi Pillay recibe el Nobel de la Paz 2026. En España, se ordena prisión para un hijo de Al-Thani y el juez Pedraz rechaza imputar al PSOE en el 'caso Cloacas' por el momento."
+    },
+    {
+      "tema": "Economía y vivienda",
+      "categoria": "Economía",
+      "descripcion": "El Banco de España alerta sobre la inflación y las restricciones en la construcción de viviendas. El campo convoca una tractorada por el gasoil y se anuncian ayudas para el sector pesquero."
+    },
+    {
+      "tema": "Actividad de la Casa Real y política nacional",
+      "categoria": "Política",
+      "descripcion": "Los Reyes pernoctarán en Ceuta por primera vez desde Alfonso XIII. Se intensifica la batalla por las listas electorales del Frente Amplio y Feijóo acepta dos debates con Sánchez."
+    },
+    {
+      "tema": "Sucesos y seguridad",
+      "categoria": "Sucesos",
+      "descripcion": "Robo de 30.000 botellas de vino en Italia, un 'narcotúnel' en Palma y un tiroteo de un agente del ICE en Nueva York. También se reporta el asesinato de un cirujano en Marbella."
     }
   ]
 }
