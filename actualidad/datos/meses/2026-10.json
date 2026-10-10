@@ -167,7 +167,7 @@
         "titulo": "Navi Pillay, la Nobel de la Paz que acusó a Israel de cometer un genocidio en Gaza",
         "url": "https://www.elmundo.es/internacional/2026/10/09/6ac89d94fc6c83a6328b4588.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-09",
@@ -196,6 +196,48 @@
         "url": "https://www.elmundo.es/internacional/2026/10/09/6ac87781e85ece40788b4583.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-10",
+      "edicion": "2026-10-10",
+      "titulo": "Irlanda propone un recorte de más de 140.000 millones en el presupuesto de la UE",
+      "categoria": "Economía",
+      "descripcion": "La presidencia irlandesa de la Unión Europea ha planteado una reducción del 8% en el próximo presupuesto de la UE, lo que representa más de 140.000 millones de euros menos respecto a las cifras iniciales de la Comisión.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La presidencia irlandesa se acerca a los frugales y se aleja de España al proponer un recorte en el próximo presupuesto de la UE de más de 140.000 millones",
+        "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/10/6aca056ce4d4d85f2e8b459a.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-10",
+      "edicion": "2026-10-10",
+      "titulo": "Nvidia supera a Alemania como tercera 'economía' del planeta",
+      "categoria": "Economía",
+      "descripcion": "El fabricante de chips Nvidia se sitúa al borde de superar los 6 billones de dólares de capitalización, adelantando a Alemania en valor de mercado.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Nvidia adelanta a Alemania como tercera 'economía' del planeta al borde de superar los 6 billones de dólares",
+        "url": "https://www.elmundo.es/economia/dinero-inversion/2026/10/10/6ac8dc10e4d4d884128b45ad.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-10",
+      "edicion": "2026-10-10",
+      "titulo": "Anticorrupción atribuye al PSOE cohecho y tráfico de influencias",
+      "categoria": "Política",
+      "descripcion": "La Fiscalía Anticorrupción ha señalado indicios \"de singular importancia\" que atribuyen al PSOE delitos de cohecho y tráfico de influencias, destacando el descontrol en la actuación de Cerdán y la falta de explicaciones de la gerente del partido.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Indicios \"de singular importancia\": Anticorrupción atribuye al PSOE cohecho y tráfico de influencias",
+        "url": "https://www.elmundo.es/espana/2026/10/10/6ac92eade85ece5a4d8b458f.html"
+      },
+      "destacado": true
     }
   ]
 }
