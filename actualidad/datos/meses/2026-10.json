@@ -238,6 +238,48 @@
         "url": "https://www.elmundo.es/espana/2026/10/10/6ac92eade85ece5a4d8b458f.html"
       },
       "destacado": true
+    },
+    {
+      "fecha": "2026-10-11",
+      "edicion": "2026-10-11",
+      "titulo": "El Papa anuncia operación de nódulo pulmonar",
+      "categoria": "Internacional",
+      "descripcion": "El Papa León XIV ha comunicado que deberá someterse a una operación por un nódulo en el pulmón en fase \"muy inicial\".",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Papa anuncia que deberá operarse de un nódulo en el pulmón en fase \"muy inicial\"",
+        "url": "https://www.elmundo.es/internacional/2026/10/11/6acb6381e9cf4a4d388b459c.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-11",
+      "edicion": "2026-10-11",
+      "titulo": "Máximo Quiles, campeón del mundo de Moto3",
+      "categoria": "Deportes",
+      "descripcion": "Máximo Quiles se ha proclamado campeón del mundo de Moto3 tras vencer en Indonesia.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Máximo Quiles, campeón del mundo, tras vencer en Indonesia",
+        "url": "https://www.elmundo.es/deportes/motociclismo/2026/10/11/6acb1bd0fdddff6c2a8b457d.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-11",
+      "edicion": "2026-10-11",
+      "titulo": "Desalojo del último gran asentamiento ilegal en Ceuta",
+      "categoria": "Sociedad",
+      "descripcion": "La Policía ha iniciado el desalojo del asentamiento de la playa de El Guano, el último gran campamento de inmigrantes en Ceuta.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Policía se despliega en El Guano para desalojar el último gran asentamiento ilegal de inmigrantes",
+        "url": "https://www.elmundo.es/espana/2026/10/11/6acb3418e85ece49688b458e.html"
+      },
+      "destacado": false
     }
   ]
 }

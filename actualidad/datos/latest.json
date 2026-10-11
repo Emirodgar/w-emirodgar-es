@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-10",
-  "generado_en": "2026-10-10T11:03:12+00:00",
-  "titular": "Podemos endurece su discurso contra el PSOE mientras la UE debate recortes presupuestarios y Trump critica el Nobel de la Paz",
+  "fecha": "2026-10-11",
+  "generado_en": "2026-10-11T11:20:10+00:00",
+  "titular": "El Papa anuncia una operación de pulmón, mientras el huracán Isaías causa estragos en EE.UU. y la tensión crece en el Golfo.",
   "por_medio": {
-    "El Mundo": 27,
-    "The Objective": 146
+    "El Mundo": 26,
+    "The Objective": 93
   },
   "temas": [
     {
-      "tema": "Elecciones y tensiones políticas en España",
-      "categoria": "Política",
-      "descripcion": "Podemos endurece su discurso contra el PSOE, el PP propone debates sobre vivienda y se forman alianzas para el Senado. Anticorrupción investiga al PSOE por cohecho y tráfico de influencias."
-    },
-    {
-      "tema": "Presupuesto de la UE y economía global",
-      "categoria": "Economía",
-      "descripcion": "Irlanda propone un recorte significativo en el presupuesto de la UE, mientras Nvidia supera a Alemania en capitalización de mercado."
-    },
-    {
-      "tema": "Controversias en el Premio Nobel de la Paz y conflictos internacionales",
+      "tema": "Salud del Papa",
       "categoria": "Internacional",
-      "descripcion": "Donald Trump critica al comité del Nobel de la Paz, la galardonada bromea con entregarle el premio y Ucrania ataca una terminal petrolera rusa tras un acuerdo entre Trump y Putin."
+      "descripcion": "El Papa León XIV ha anunciado que será operado de un nódulo pulmonar detectado en una fase muy inicial."
     },
     {
-      "tema": "Inmigración y explotación laboral",
+      "tema": "Crisis migratoria en Ceuta",
       "categoria": "Sociedad",
-      "descripcion": "Cuatro detenidos en Madrid por captar inmigrantes ilegales en iglesias y explotarlos como repartidores a domicilio."
+      "descripcion": "La Policía ha desalojado el último gran asentamiento ilegal de inmigrantes en El Guano, Ceuta, con denuncias de devoluciones forzosas a Marruecos."
+    },
+    {
+      "tema": "Tensión en el Golfo Pérsico",
+      "categoria": "Internacional",
+      "descripcion": "Los hutíes amenazan con más ataques a aeropuertos saudíes tras un incidente en Riad que dejó 12 muertos y 309 heridos, provocando cancelaciones de vuelos."
+    },
+    {
+      "tema": "Elecciones generales en España",
+      "categoria": "Política",
+      "descripcion": "Gabriel Rufián liderará la candidatura de ERC, el PP busca frenar la fuga de votos a Vox, y Sánchez impulsa ayudas millonarias para electores."
     }
   ]
 }
