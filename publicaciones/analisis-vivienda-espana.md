@@ -1,6 +1,6 @@
 ---
 title: Como hemos llegado a un mercado de vivienda casi imposible en España
-description: Un recorrido rápido y claro por 20 años de burbuja, crisis y escasez de vivienda en España, y por qué hoy es tan difícil acceder a una casa.
+description: Un recorrido claro por 20 años de burbuja, crisis y escasez de vivienda en España, con datos actualizados a octubre de 2026: precios en récord, déficit de 755.000 viviendas y el nuevo Plan Estatal 2026-2030.
 image: 
 author: Emirodgar
 lang: es_ES
@@ -11,7 +11,9 @@ folder: espana
 permalink: analisis-vivienda-espana
 ---
 
-# Análisis de la evolución del mercado de vivienda en España (2005-2025)
+# Análisis de la evolución del mercado de vivienda en España (2005-2026)
+
+*Actualizado en octubre de 2026 con los últimos datos del INE, el Ministerio de Vivienda y el Banco de España.*
 
 ## ¿Por qué estamos otra vez hablando de un problema de vivienda?
 
@@ -19,13 +21,13 @@ Si miras los titulares de los últimos años, parece que ya lo hemos vivido todo
 
 Pero la situación actual no es una simple repetición de 2008. **El mercado de la vivienda en España ha pasado de un exceso brutal de construcción a una escasez clara de oferta donde más gente quiere vivir**, sobre todo en grandes ciudades y zonas costeras.
 
-Entre 2005 y 2025 se pueden distinguir tres grandes etapas:
+Entre 2005 y 2026 se pueden distinguir tres grandes etapas:
 
 - **El boom y la burbuja (2005-2007)**  
 - **El colapso y la resaca de la crisis (2008-2014)**  
-- **La recuperación con nuevos desequilibrios (2015-2025)**  
+- **La recuperación con nuevos desequilibrios (2015-2026)**  
 
-El resultado: **un déficit de entre 600.000 y 700.000 viviendas**, según el Banco de España, en un país que ya tiene casi 3,8 millones de viviendas vacías. La paradoja es evidente.
+El resultado: **un déficit acumulado de unas 755.000 viviendas desde 2021**, según el Banco de España, que prevé que **supere el millón en 2028**. Y todo en un país que ya tiene casi 3,8 millones de viviendas vacías. La paradoja es evidente.
 
 En este artículo te cuento, de forma ordenada y sin tecnicismos, **cómo hemos llegado hasta aquí, qué ha hecho (y dejado de hacer) cada gobierno y por qué para un joven hoy es mucho más difícil acceder a una vivienda que hace 20 años.**
 
@@ -42,7 +44,10 @@ En este artículo te cuento, de forma ordenada y sin tecnicismos, **cómo hemos 
 | 2013 | 1.450               | Mínimo post-crisis   |
 | 2019 | 1.680               | Pre-pandemia         |
 | 2024 | 2.300               | Récord recuperación  |
-| 2025 | 2.405               | Actual               |
+| 2025 | 2.405               | Referencia 2025      |
+| 2026 (sep.) | 2.930        | A un 1% del máximo de 2007 |
+
+*Precios de oferta de portales inmobiliarios (idealista). Las estadísticas oficiales de tasación y del INE usan otra metodología y dan cifras más bajas, aunque con la misma tendencia.*
 
 
 ### ¿Qué pasó durante la burbuja (2005-2007)?
@@ -67,17 +72,18 @@ Cuando estalló la crisis, el mercado se dio la vuelta:
 
 En muy poco tiempo, pasamos del “hay que comprar ya o se escapará” al “nadie quiere o puede comprar”. La vivienda dejó de ser una máquina de hacer dinero para convertirse en un activo problemático para familias, bancos y promotores.
 
-### ¿Y qué ha pasado desde 2015 hasta 2025?
+### ¿Y qué ha pasado desde 2015 hasta 2026?
 
 A partir de 2015, con la mejora económica, los tipos de interés en mínimos históricos y el retorno del inversor extranjero, **los precios empezaron a remontar**.
 
-En 2025, los datos son claros:
+Los datos más recientes son claros:
 
-- El precio medio se sitúa por encima de los **2.150 €/m²** según el INE.  
-- Portales inmobiliarios estiman valores alrededor de **2.400 €/m²**, muy similares a los de 2005… **pero con un poder adquisitivo menor**.  
-- El Índice de Precios de Vivienda ha registrado subidas interanuales de doble dígito en algunos tramos, algo que no se veía desde los años de la burbuja.
+- Según el **INE**, el Índice de Precios de Vivienda subió un **12,2% interanual en el segundo trimestre de 2026**: es la tasa más baja desde principios de 2025, pero sigue siendo de dos dígitos. La vivienda de segunda mano sube un 12,9% y la nueva, un 7,4%.
+- El **Ministerio de Vivienda** (valor tasado) sitúa el precio medio en **2.355 €/m²**, un **máximo histórico** de una serie que arranca en 1995. En la Comunidad de Madrid ya supera los 4.000 €/m².
+- Los portales inmobiliarios recogen precios de oferta de unos **2.930 €/m² en septiembre de 2026**, prácticamente en el máximo de 2007 (2.952 €/m²).
+- Ninguna comunidad autónoma registra bajadas. Las mayores subidas se dan en **Asturias (15,0%) y Castilla y León (14,8%)**, y las menores en Navarra, País Vasco y Cataluña, todas por encima del 9%.
 
-En términos nominales, podríamos decir que “hemos vuelto” a niveles de hace 20 años. Pero **en términos reales, con la [evolución del poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo) por delante, estamos peor**: la vivienda pesa más en el presupuesto de los hogares y el ahorro previo necesario para comprar es más alto.
+En términos nominales, podríamos decir que “hemos vuelto” a los niveles del pico de 2007. Pero **en términos reales, con la [evolución del poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo) por delante, estamos peor**: la vivienda pesa más en el presupuesto de los hogares y el ahorro previo necesario para comprar es más alto.
 
 ---
 
@@ -108,6 +114,7 @@ Este contraste genera una realidad difícil de encajar: **el problema de acceso 
 | 2013 | 35.000              | 65.000               | 15.000          |
 | 2020 | 85.000              | 86.000               | 8.000           |
 | 2024 | 136.000             | 101.000              | 14.400          |
+| 2025 | 137.000             | 92.000               | 11.100          |
 
 
 ### ¿Cuánto se construía en pleno boom inmobiliario?
@@ -132,8 +139,11 @@ Muchas empresas quebraron, miles de trabajadores del sector se quedaron sin empl
 
 Sí, pero **no lo suficiente**:
 
-- En 2024 se terminaron alrededor de **101.000 viviendas** y se iniciaron unas **136.000**.  
-- Son las mejores cifras en más de diez años, pero todavía muy lejos del boom: **apenas un 17% del máximo de 2006**.  
+- En 2025 se iniciaron unas **137.000 viviendas** (las libres, un 8,6% más), con el **mejor cuarto trimestre en 17 años**.  
+- Pero las **terminadas cayeron cerca de un 10%, hasta unas 92.000** (101.000 en 2024).  
+- Seguimos muy lejos del boom: las viviendas iniciadas son **apenas un 17% del máximo de 2006**.  
+
+Es decir, se empieza a construir más, pero **las viviendas no llegan a entregarse al ritmo que necesita el mercado**.  
 
 Además, solo una pequeña parte de esta oferta es **vivienda protegida** o realmente asequible, algo clave si se quiere reducir el déficit para las rentas medias y bajas.
 
@@ -177,7 +187,7 @@ Es decir, **sobran viviendas en zonas donde falta población y faltan viviendas 
 
 ### ¿Cómo se calcula el déficit actual de vivienda?
 
-El Banco de España estima que entre 2022 y 2025 se ha acumulado un **déficit de 600.000 a 700.000 viviendas**. Este déficit se concentra sobre todo en:
+El Banco de España estima que desde 2021 se ha acumulado un **déficit de unas 755.000 viviendas**, que podría crecer en otras **300.000 entre 2026 y 2028** hasta superar el millón. Este déficit se concentra sobre todo en:
 
 - **Madrid**  
 - **Barcelona**  
@@ -190,7 +200,7 @@ Solo estas cinco provincias concentran más de la mitad del déficit.
 Además, la **formación de nuevos hogares** (por ejemplo, jóvenes que se independizan o parejas que se van a vivir juntas) va por delante del ritmo de construcción:
 
 - En 2024 se crearon unos **183.000 nuevos hogares**.  
-- Ese mismo año se terminaron unas **100.000 viviendas**.  
+- Ese mismo año se terminaron unas **100.000 viviendas** (y en 2025, solo unas 92.000).  
 
 La brecha se agranda año tras año.
 
@@ -207,13 +217,14 @@ Las **transacciones de compraventa** reflejan bastante bien los ciclos del merca
 
 - Máximo histórico en 2006, con casi **955.000 operaciones**.  
 - Mínimo en 2013, con apenas **300.000**.  
-- En 2024 se cerraron alrededor de **715.000 compraventas**, una de las cifras más altas desde la crisis.  
+- En 2025 se cerraron **714.237 compraventas**, un **11,5% más que en 2024** y la cifra más alta en 18 años.  
+- En 2026 el ritmo se ha enfriado: hasta julio acumulan una **caída del 3,0%**, con precios que siguen subiendo.  
 
 Es decir, el mercado está muy activo, pero con una composición que importa mucho.
 
 ### ¿Qué peso tiene la vivienda nueva frente a la usada?
 
-Un dato revelador: **solo alrededor del 10% de las viviendas vendidas en 2025 son de nueva construcción**.
+Un dato revelador: **solo alrededor del 22% de las viviendas vendidas en 2025 fueron nuevas** (unas 156.000 de 714.000), frente a casi 558.000 de segunda mano.
 
 Esto indica claramente que:
 
@@ -242,11 +253,12 @@ A partir de 2012, sin embargo, la producción se hundió:
 
 ### ¿Se está recuperando la vivienda protegida?
 
-En los últimos años se observa una cierta mejora:
+La mejora de 2024 no se ha consolidado:
 
 - En 2024 se calificaron algo más de **14.000 VPO**, un 60% más que el año anterior y el dato más alto desde 2014.  
+- En 2025 se calificaron unas **11.100**, un **23% menos**. La promoción pública creció (un 7,9%), pero la privada se desplomó (un 33,5%).  
 
-Pero, aun así, **seguimos un 80% por debajo de los niveles de 2008**.  
+Así, **seguimos un 80% por debajo de los niveles de 2008**.  
 La VPO ha pasado de ser una pieza central de la política de vivienda a una figura casi residual, justo cuando **más falta hace vivienda asequible**.
 
 ---
@@ -279,7 +291,7 @@ Con el Partido Popular, el enfoque cambió hacia la **austeridad y el recorte de
 Estas decisiones coincidieron con el **mínimo histórico de construcción** y el desplome de la vivienda protegida.  
 El mercado se “limpió” a base de ajuste de precios, pero **sin un plan claro para reconstruir una oferta asequible y estable**.
 
-### ¿Qué plantea el gobierno de Sánchez (2018-2025)?
+### ¿Qué plantea el gobierno de Sánchez (2018-2026)?
 
 El actual gobierno ha optado por una política más **intervencionista**:
 
@@ -290,6 +302,8 @@ El actual gobierno ha optado por una política más **intervencionista**:
   - Calificación indefinida de VPO durante un mínimo de 30 años.  
 - Anuncio de un **PERTE de Viviendas** y una nueva empresa pública para impulsar la construcción de vivienda pública.  
 - Objetivo declarado de **184.000 viviendas públicas hasta 2036**.  
+- **Plan Estatal de Vivienda 2026-2030**, en vigor desde abril de 2026 (Real Decreto 326/2026), con **7.000 millones de euros** (60% el Estado, 40% las comunidades). Destina un 40% a vivienda pública asequible, prevé **protección permanente** para las viviendas que financie y sube el Bono Alquiler Joven a **300 €/mes**.  
+- **Real Decreto-ley 26/2026**, de septiembre, con nuevas medidas urgentes para ampliar la oferta asequible y proteger la función social de la vivienda, como recargos del IBI a la vivienda vacía.  
 
 Junto a estas medidas conviven también iniciativas más simbólicas, como la creación de nuevos observatorios de vivienda, un fenómeno [que analizamos en detalle en este artículo](https://emirodgar.es/analisis-observatorios) sobre la proliferación de observatorios en la administración española.
 
@@ -303,14 +317,14 @@ El gran interrogante es si **estas medidas llegarán a tiempo y a escala suficie
 
 Los datos del Consejo de la Juventud de España son bastante claros:
 
-- Un joven asalariado debe destinar alrededor del **90% de su sueldo para alquilar un piso en solitario**.  
+- Un joven asalariado debe destinar prácticamente **todo su sueldo para alquilar un piso en solitario**: el alquiler medio (1.176 €/mes) equivale al **98,7%** del salario medio joven, según el último Observatorio de Emancipación.  
 - Para comprar, el esfuerzo se sitúa por encima del **60%** de sus ingresos.  
 
 Cuando lo recomendable es no superar el **30% de los ingresos** para vivienda, la conclusión es obvia: **la mayoría de los jóvenes solo puede emanciparse compartiendo piso o permaneciendo más tiempo en casa de sus padres**.
 
 ### ¿Cómo ha cambiado la emancipación y la riqueza de los hogares jóvenes?
 
-- La **tasa de emancipación juvenil (16-29 años)** cayó a poco más del **15% en 2024**, la cifra más baja desde 2006.  
+- La **tasa de emancipación juvenil** ha caído hasta el **14,5%**, un mínimo histórico, y la edad media de emancipación ya ronda los **30,2 años**.  
 - Desde 2002, la **riqueza de los hogares menores de 35 años** ha caído alrededor de un **75%**, en paralelo a una caída generalizada del [endeudamiento de los hogares españoles](https://emirodgar.es/analisis-endeudamiento-hogares-espana) que refleja, más que salud financiera, la dificultad de acceder al crédito.  
 - Solo **un tercio de los hogares liderados por menores de 35 años tiene vivienda en propiedad**, frente a cerca del 65% de hace dos décadas.  
 
@@ -331,7 +345,7 @@ Las políticas de vivienda han ido cambiando con cada gobierno, pero **ninguno h
 
 - Unos apostaron por impulsar la construcción sin controlar la burbuja.  
 - Otros recortaron gasto justo cuando más se necesitaba vivienda asequible.  
-- Los últimos han optado por limitar precios y anunciar nueva vivienda pública, pero **los resultados reales aún están por ver**.
+- Los últimos han optado por limitar precios y anunciar nueva vivienda pública, pero **los resultados reales aún están por ver**: las terminaciones siguen cayendo y la VPO privada se hunde mientras los precios marcan récords.
 
 El gran reto ahora no es solo “construir más”, sino **construir mejor y donde hace falta**: vivienda asequible, especialmente de alquiler, en las zonas de mayor demanda, y con una planificación que mire más allá del próximo ciclo económico.
 
