@@ -35,7 +35,7 @@ Las señales de alarma son obvias:
 * **Paro juvenil galopante:** Con un paro juvenil que ya es de los más altos de Europa, la llegada de la IA podría agravar la situación, dificultando aún más la entrada de los jóvenes en el mercado.
 * **Brecha de experiencia:** La brecha entre los que tienen experiencia y los que no, se hará aún más grande. Los jóvenes que pierdan sus trabajos no solo se enfrentarán al paro, sino que también verán mermadas sus oportunidades de ganar esa experiencia que tanto valoran los empleadores.
 
-Estos datos encajan con el patrón que ya describíamos en nuestro repaso de los [puestos de trabajo que podrían verse afectados por la IA en la próxima década](https://emirodgar.es/trabajos-afectados-ia). Aunque conviene matizar cuánto de este ajuste es realmente atribuible a la IA y cuánto responde a otras dinámicas, como analizamos en [por qué la productividad de la IA sigue sin despegar](https://emirodgar.es/productividad-inteligencia-artificial-no-despega).
+Estos datos encajan con el patrón que ya describíamos en nuestro repaso de los [puestos de trabajo que podrían verse afectados por la IA en la próxima década](https://emirodgar.es/trabajos-afectados-ia). Aunque conviene matizar cuánto de este ajuste es realmente atribuible a la IA y cuánto responde a otras dinámicas, como analizamos en [por qué la productividad de la IA sigue sin despegar](https://emirodgar.es/productividad-inteligencia-artificial-no-despega). La clave, como recuerda incluso la crítica a economistas tan citados como Acemoglu, está en **qué tipo de automatización se despliega y quién captura sus beneficios**: no toda automatización destruye tareas, también puede crear otras nuevas.
 
 ---
 

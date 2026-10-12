@@ -83,6 +83,14 @@ Y eso, como siempre, **lleva tiempo**.
 > Como suelo decir en mis formaciones, el verdadero desafío de la IA **no es técnico, sino organizativo**.
 
 
+## El debate sobre cómo se reparten los beneficios
+
+Conviene no pasar de un extremo al otro. Daron Acemoglu, probablemente uno de los economistas más citados del momento, lleva años advirtiendo de que la automatización puede **reducir salarios, elevar la desigualdad, debilitar la competencia y concentrar poder**. Y su propio marco teórico admite, en principio, que la tecnología también puede **crear nuevas tareas, aumentar la productividad y complementar el trabajo humano**.
+
+El riesgo está en convertir cualquier avance tecnológico en una pieza más de una narrativa inevitablemente oscura sobre capitalismo, represión y deterioro democrático. Parte de la crítica a su trabajo es precisamente que es muy teórico y apenas contrasta sus predicciones con datos reales. Y es algo que me pasa a menudo en eventos: alguien suelta una idea contundente, pregunto por la evidencia y la respuesta suele ser "lo dice todo el mundo". Ahí suelo dar por terminada mi intervención.
+
+Quizá el debate maduro no sea "IA sí o IA no", ni optimismo tecnológico frente a pesimismo institucional. Las preguntas útiles son otras: **¿qué tipo de automatización estamos desplegando, quién captura sus beneficios y qué tareas humanas destruye o crea?** Y eso, de nuevo, se responde con datos y con rediseño organizativo, no con eslóganes.
+
 ## ¿Qué tendría que pasar para que la IA cambie realmente la productividad?
 
 Si miramos lo ocurrido con otras tecnologías, el patrón se repite bastante.

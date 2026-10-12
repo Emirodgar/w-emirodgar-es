@@ -100,6 +100,14 @@ Echo de menos las argucias y comentarios rápidos de los políticos de antaño. 
 [<img width="726" class="img-responsive" alt="Ronald Reagan los mejores debates" src="https://github.com/user-attachments/assets/55e21660-7b20-46e2-b3ff-f0170216d06b" />](https://www.youtube.com/watch?v=Z97_qDsrqgU)
 
 
+## La IA ya escribe con acento propio
+
+Hay un dato reciente que encaja con todo esto. El investigador Louis Abraham analizó **más de 461.000 descripciones de *pull requests* en GitHub**, recopiladas entre enero de 2025 y agosto de 2026, y encontró patrones muy claros en el vocabulario asociado a Claude. No buscaba "detectar IA" de forma directa, sino agrupar textos por el uso de palabras.
+
+Una descripción de *pull request* no es literatura, pero sí comunicación profesional: explica qué se ha cambiado, por qué importa y qué debe revisar otra persona. Si miles de equipos aceptan texto generado sin editar, la documentación se vuelve **intercambiable, vaga y menos fiable**. La IA no solo automatiza la producción: también **homogeneiza la voz**.
+
+No es que vayamos a escribir peor de golpe, sino que todos podemos acabar sonando un poco igual. Si las redes sociales nos dividieron, quizá la IA acabe uniéndonos, aunque sea en el estilo.
+
 ## ¿Qué podemos hacer como lectores?
 
 La buena noticia es que **esto tiene una solución bastante sencilla**. No se trata de rechazar los textos breves. Muchas veces son la mejor forma de comunicar una idea.

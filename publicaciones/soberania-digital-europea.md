@@ -41,6 +41,14 @@ Y digo inercia porque Qwant y Ecosia existen, sí, pero durante años han depend
 
 La conclusión es que la dependencia tecnológica no se rompe solo creando alternativas. Se rompe cambiando **hábitos, estándares, compras públicas, incentivos empresariales y expectativas de usuario**. Quizá habría que incentivar al europeo por usar estos productos ;-) Aunque ahí llegaría otro problema de libre mercado, claro: ¿quién premia a quien no elige la opción dominante, si nadie más lo hace?
 
+## Corea del Sur: la IA como servicio público
+
+Un contraejemplo interesante llega de Asia. El Gobierno surcoreano ha anunciado un proyecto para ofrecer a toda la ciudadanía un **chatbot generalista de IA, gratuito y sin límites de uso**, basado principalmente en **modelos propios desarrollados en el país**.
+
+Hay dos lecturas. La primera es que Corea entiende la IA como una **nueva infraestructura pública**: igual que en su momento internet, los servicios digitales o la administración electrónica se convirtieron en capas básicas de ciudadanía, saber usar IA y poder acceder a ella no debería depender solo del mercado. La segunda es una apuesta clara por la **soberanía tecnológica**: no se trata de dar acceso a "un ChatGPT coreano", sino de impulsar modelos nacionales, reducir la dependencia de proveedores estadounidenses y fortalecer su propio ecosistema de empresas, datos, aplicaciones y talento.
+
+Es justo lo que Europa discute sin acabar de ejecutar. La pregunta que queda abierta es si un servicio gratuito e ilimitado será **sostenible** en costes de computación, y si bastará para romper la inercia de los usuarios.
+
 ## Por qué esto no es solo un debate de infraestructura
 
 Esta dependencia tiene consecuencias muy concretas más allá de la teoría geopolítica. Las [gigafábricas de IA](https://emirodgar.es/europa-ia) que Europa quiere construir necesitan chips que hoy no fabrica, alojados en [centros de datos](https://emirodgar.es/centros-de-datos) que hoy no son mayoritariamente europeos, para entrenar modelos que compiten con los de empresas estadounidenses y chinas que sí controlan su propia cadena de valor de punta a punta. Cuanto más avanza la carrera de la IA, más caro y más urgente se vuelve resolver esta dependencia, porque cada capa que no se controla —chips, nube, modelos— es una capa en la que Europa negocia desde una posición más débil, tanto frente a Washington como frente a Pekín.
