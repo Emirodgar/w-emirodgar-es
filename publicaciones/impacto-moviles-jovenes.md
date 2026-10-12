@@ -49,6 +49,8 @@ Parece una contradicción. Con un móvil estás en contacto con todos tus amigos
 
 Las encuestas sobre tiempo adolescente lo reflejan: la interacción cara a cara cayó con fuerza justo después de 2010, y la soledad aumentó.
 
+Lo que se pierde tiene nombre. Ray Oldenburg llamó "tercer espacio" a los sitios que no son casa ni trabajo, donde una comunidad se encuentra sin otro objetivo que estar. Un estudio con la encuesta de uso del tiempo de EE. UU. entre 2003 y 2020 ([Kannan y Veazie, 2023](https://pubmed.ncbi.nlm.nih.gov/36618547/)) apunta a menos compañía y más aislamiento, aunque otros análisis discuten cuánto pesa ahí la caída de los adolescentes. Lo desarrollo en [El mentidero se mudó al móvil](https://emirodgar.es/tercer-espacio-mentidero-digital).
+
 ## Casi todas las explicaciones pasan por el móvil
 
 Si miramos las hipótesis habituales sobre el malestar adolescente, la mayoría **dependen, de un modo u otro, del teléfono**:
@@ -89,7 +91,7 @@ No creo que la respuesta sea retirar el smartphone, igual que no retiramos el co
 
 - **Retrasar la edad del primer móvil y de las redes sociales**, y dar más peso a la educación digital que a la prohibición, como ya comentábamos en el [artículo sobre la medida del Gobierno](https://emirodgar.es/prohibir-redes-sociales-menores-16-anos).
 - **Poner el móvil fuera de juego en los momentos que importan**: comidas, clases, noche.
-- **Priorizar el tiempo en persona**. Quedar con amigos ya no es algo que ocurre solo; hay que proponérselo y ponerlo en el calendario.
+- **Priorizar el tiempo en persona**. Quedar con amigos ya no es algo que ocurre solo; hay que proponérselo y ponerlo en el calendario. Ayuda tener un [tercer espacio](https://emirodgar.es/tercer-espacio-mentidero-digital) fijo, un sitio al que ir siempre y encontrar a los mismos.
 - **Quitarle importancia a las redes**. No hace falta ser viral para tener amigos ni para ser alguien.
 - **Medir lo que pasa**. Proyectos como [FARO](https://emirodgar.es/faro-monitorizacion-salud-mental) apuntan a monitorizar la salud mental en redes con datos y no con intuiciones.
 

@@ -210,6 +210,7 @@ Las muertes por trastornos mentales incluyen diversas causas:
 - **Inversión en prevención**: Programas basados en evidencia científica
 - **Formación profesional**: Mejora en la detección y tratamiento de riesgo suicida
 - **Reducción del estigma**: Campañas de sensibilización social
+- **Vida comunitaria**: la soledad no deseada afecta a una quinta parte de la población en España según el barómetro de la Fundación ONCE y Fundación AXA. Conservar espacios de encuentro (el bar, la plaza, la biblioteca) también es prevención. Lo reflexiono en [El mentidero se mudó al móvil](https://emirodgar.es/tercer-espacio-mentidero-digital)
 - **Coordinación institucional**: Entre diferentes niveles de gobierno y sectores
 
 **Cada muerte por suicidio afecta directamente a unas 20 personas del entorno**, multiplicando el impacto social de esta problemática que requiere una respuesta inmediata y coordinada de toda la sociedad española.

@@ -75,3 +75,5 @@ Proteger a los menores en internet es necesario. En eso hay poco debate. Pero **
 Sin tecnología fiable, sin un enfoque educativo fuerte y sin reconocer que muchas de estas conductas ya están reguladas, la medida corre el riesgo de quedarse en un titular potente pero poco eficaz.
 
 Regular mejor, educar antes y aplicar la ley con rigor quizá no suene tan bien en una cumbre internacional. Pero probablemente funcione bastante mejor.
+
+Y hay otra cara que ninguna ley resuelve: si las redes ocupan el sitio del bar o de la plaza, hay que recuperar esos [espacios de encuentro](https://emirodgar.es/tercer-espacio-mentidero-digital), no solo limitar el acceso.
