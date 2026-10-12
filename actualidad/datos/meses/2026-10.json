@@ -280,6 +280,34 @@
         "url": "https://www.elmundo.es/espana/2026/10/11/6acb3418e85ece49688b458e.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-12",
+      "edicion": "2026-10-12",
+      "titulo": "Premio Nobel de Economía 2026",
+      "categoria": "Economía",
+      "descripcion": "Robert E. Hall y Michael Woodford son galardonados con el Nobel de Economía por sus estudios sobre fundamentos microeconómicos y estabilización macroeconómica.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Los estadounidenses Robert E. Hall y Michael Woodford se llevan el Nobel de Economía por estudiar los fundamentos micro en la estabilización macroeconómica",
+        "url": "https://www.elmundo.es/economia/2026/10/12/6accaf72fdddff80638b45a9.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-12",
+      "edicion": "2026-10-12",
+      "titulo": "Pacto comercial Europa-China sobre híbridos",
+      "categoria": "Economía",
+      "descripcion": "Bruselas limitará a 350.000 unidades anuales las importaciones de coches híbridos fabricados en China.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Europa pone un dique a la avalancha de coches híbridos chinos: las claves del pacto comercial con Pekín",
+        "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/12/6accc5eb21efa0354d8b4575.html"
+      },
+      "destacado": false
     }
   ]
 }

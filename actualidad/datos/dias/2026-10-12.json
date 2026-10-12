@@ -1,0 +1,1137 @@
+{
+  "fecha": "2026-10-12",
+  "generado_en": "2026-10-12T12:56:18+00:00",
+  "modelo": "gemini-2.5-flash",
+  "titular": "Abucheos a Sánchez en el 12-O y el PP pide a Bruselas investigar presiones en el caso David Sánchez",
+  "resumen": "La jornada del 12 de octubre ha estado marcada por el desfile de la Fiesta Nacional en Madrid, donde el presidente del Gobierno, Pedro Sánchez, fue recibido con pitos e insultos a su llegada y salida. Este evento, que congregó a miles de ciudadanos, también destacó por la presencia de los Reyes, la princesa Leonor y la infanta Sofía, con especial atención a los estilismos de la Reina Letizia y la presidenta madrileña Isabel Díaz Ayuso. En el ámbito político, se ha generado controversia en torno a la situación de David Sánchez, hermano del presidente, con el PP solicitando a Bruselas una investigación por presuntas presiones a la jueza del caso. Además, se ha producido un desalojo de un asentamiento ilegal de inmigrantes en Ceuta, mientras que el presidente de Canarias alerta de un nuevo brote migratorio en las islas.\n\nEn el plano económico, se ha anunciado el Premio Nobel de Economía 2026 a Robert E. Hall y Michael Woodford por sus estudios en fundamentos microeconómicos y estabilización macroeconómica. Europa, por su parte, ha establecido un pacto comercial con Pekín para limitar la importación de coches híbridos chinos. En Alemania, la ministra de Trabajo ha dimitido, abriendo una crisis en la coalición de gobierno. Otros temas destacados incluyen la investigación de la muerte violenta de un hombre en Barcelona, la hospitalización del Papa para una operación de pulmón, y un tiroteo en un instituto francés. En el ámbito deportivo, Carlos Alcaraz ha sido eliminado del Masters 1000 de Shanghai.",
+  "temas": [
+    {
+      "tema": "Desfile del 12-O y abucheos a Pedro Sánchez",
+      "categoria": "Política",
+      "descripcion": "El presidente del Gobierno, Pedro Sánchez, fue abucheado e insultado durante el desfile de la Fiesta Nacional en Madrid, un evento presidido por los Reyes y la Familia Real.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Sánchez, tras el desfile del 12-O: \"No veía a la izquierda tan movilizada desde 2019\"",
+          "url": "https://www.elmundo.es/espana/2026/10/12/6acc7ecdea01db221420cd8d-directo.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Así han sido los insultos a Pedro Sánchez al llegar al desfile del 12 de Octubre",
+          "url": "https://www.elmundo.es/espana/2026/10/12/6accd440e4d4d8642d8b456f-video.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "El momento en que el Rey ha ayudado a la princesa Leonor",
+          "url": "https://www.elmundo.es/espana/2026/10/12/6accceb6fdddff16088b4573-video.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "El presidente abandona el desfile militar con insultos a mes y medio de las elecciones",
+          "url": "https://www.elmundo.es/espana/2026/10/12/6acc994efc6c83b5608b4577.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "La Reina Letizia sorprende con un delicado vestido rosa empolvado; la Princesa de Asturias, de uniforme militar; y la Infanta Sofía, con traje rojo: los looks reales en el desfile del Día de la Hispanidad",
+          "url": "https://www.elmundo.es/yodona/moda/reina-letizia/2026/10/12/6acc9db5fdddff6c2a8b459a.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El desfile militar del 12 de octubre en Madrid, en imágenes",
+          "url": "https://theobjective.com/galerias/espana/2026-10-12/desfile-militar-12-octubre-imagenes/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Los Reyes presiden el desfile militar del 12-O en el que Sánchez recibió una nueva pitada",
+          "url": "https://theobjective.com/espana/2026-10-12/reyes-desfile-militar-12-o-sanchez/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez acompaña a los Reyes en su saludo a las autoridades y ministros, entre abucheos: «¡Traidor!»",
+          "url": "https://theobjective.com/videos/espana/2026-10-12/sanchez-reyes-abucheos-traidor/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez recibe una nueva pitada y abucheos a su llegada al desfile del 12 de octubre",
+          "url": "https://theobjective.com/espana/politica/2026-10-12/sanchez-pitada-12-octubre/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Pedro Sánchez es recibido con pitos e insultos tras su llegada al desfile militar del 12 de octubre",
+          "url": "https://theobjective.com/videos/espana/2026-10-12/pedro-sanchez-pito-insultos-desfile-12-octubre/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Leonor no se desprende de su uniforme y comienza el desfile por la Hispanidad con un traspié: su curiosa reacción con guiño a su padre",
+          "url": "https://theobjective.com/gente/2026-10-12/leonor-deja-uniforme-acto-militar/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sofía se salta sus clases en París y brilla en el desfile del Día de la Hispanidad: desempolva su traje rojo de Tommy que lució en los Princesa de Asturias",
+          "url": "https://theobjective.com/gente/2026-10-12/sofia-salta-clases-paris-desfile-dia-hispanidad/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Letizia triunfa en el Día de la Hispanidad con su ‘look’ más ‘chic’: rescata su vestido rosa empolvado de The 2nd Skin Co que llevó en 2025",
+          "url": "https://theobjective.com/gente/2026-10-12/letizia-triunfa-dia-hispanidad-look-mas-chic/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "DIRECTO | Desfile del 12 de octubre en Madrid por el Día de la Hispanidad",
+          "url": "https://theobjective.com/videos/espana/2026-10-12/directo-desfile-12-octubre-madrid-dia-hispanidad/"
+        }
+      ]
+    },
+    {
+      "tema": "Investigación del caso David Sánchez",
+      "categoria": "Política",
+      "descripcion": "El Partido Popular ha solicitado a Bruselas que investigue las presuntas presiones a la jueza encargada del caso que afecta a David Sánchez, hermano del presidente.",
+      "medios": [
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "The Objective",
+          "titulo": "El PP pide a Bruselas investigar las presuntas presiones a la jueza del caso David Sánchez",
+          "url": "https://theobjective.com/espana/politica/2026-10-12/pp-bruselas-jueza-david-sanchez/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Madrid y Portalegre: los viajes más repetidos de David Sánchez en la Diputación de Badajoz",
+          "url": "https://theobjective.com/espana/2026-10-12/madrid-portalegre-viajes-mas-repetidos-david-sanchez/"
+        }
+      ]
+    },
+    {
+      "tema": "Premio Nobel de Economía 2026",
+      "categoria": "Economía",
+      "descripcion": "Los economistas estadounidenses Robert E. Hall y Michael Woodford han sido galardonados con el Premio Nobel de Economía 2026 por sus estudios sobre fundamentos microeconómicos y estabilización macroeconómica.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Los estadounidenses Robert E. Hall y Michael Woodford se llevan el Nobel de Economía por estudiar los fundamentos micro en la estabilización macroeconómica",
+          "url": "https://www.elmundo.es/economia/2026/10/12/6accaf72fdddff80638b45a9.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Robert E. Hall y Michael Woodford ganan el Nobel de Economía 2026",
+          "url": "https://theobjective.com/sociedad/2026-10-12/nobel-economia-2026/"
+        }
+      ]
+    },
+    {
+      "tema": "Crisis migratoria en Ceuta y Canarias",
+      "categoria": "Política",
+      "descripcion": "Se ha llevado a cabo el desalojo de un gran asentamiento ilegal de inmigrantes en Ceuta, mientras que el presidente de Canarias alerta de un nuevo brote migratorio en el archipiélago.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Abascal arremete desde Ceuta contra el \"Gobierno de traidores\" y exige \"militarizar\" la frontera",
+          "url": "https://www.elmundo.es/espana/2026/10/12/6accc854fc6c835e4f8b458e.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Así se ha visto desde el aire el desalojo del último gran asentamiento ilegal de inmigrantes en Ceuta",
+          "url": "https://www.elmundo.es/espana/2026/10/11/6acba81ae9cf4a69248b456c-video.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Clavijo alerta de un nuevo «brote migratorio» en Canarias con más de 3.800 llegadas",
+          "url": "https://theobjective.com/espana/politica/2026-10-12/clavijo-canarias-brote-migratorio-gobierno/"
+        }
+      ]
+    },
+    {
+      "tema": "Pacto comercial Europa-China sobre coches híbridos",
+      "categoria": "Economía",
+      "descripcion": "Europa ha alcanzado un acuerdo con Pekín para limitar la importación de coches híbridos fabricados en China, buscando poner un dique a la avalancha de estos vehículos.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Europa pone un dique a la avalancha de coches híbridos chinos: las claves del pacto comercial con Pekín",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/12/6accc5eb21efa0354d8b4575.html"
+        }
+      ]
+    },
+    {
+      "tema": "Situación política en Alemania",
+      "categoria": "Internacional",
+      "descripcion": "La ministra de Trabajo alemana ha dimitido, acusando a los conservadores de atacarla y abriendo una crisis en la dirección de los socialdemócratas y en la coalición de gobierno.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "La ministra de Trabajo alemana dimite y acusa a los conservadores de Merz de atacarla durante el duelo de su hijastra",
+          "url": "https://www.elmundo.es/internacional/2026/10/12/6accb34afc6c83c4438b457c.html"
+        }
+      ]
+    }
+  ],
+  "enfoques": "Ambos medios coinciden en destacar el desfile del 12 de octubre y los abucheos recibidos por Pedro Sánchez, así como el anuncio del Premio Nobel de Economía. El Mundo ofrece una cobertura más amplia de los detalles del desfile, incluyendo los looks de la Familia Real y de Isabel Díaz Ayuso, y aborda la situación migratoria en Ceuta y las declaraciones de Abascal. The Objective, por su parte, pone un foco más específico en la tensión en Sol entre acampados y manifestantes, y en la solicitud del PP a Bruselas sobre el caso David Sánchez, además de ofrecer más contenido en formato de vídeo y galerías fotográficas del desfile.",
+  "por_medio": {
+    "El Mundo": 31,
+    "The Objective": 99
+  },
+  "por_categoria": {
+    "Política": 3,
+    "Economía": 2,
+    "Internacional": 1
+  },
+  "hitos": [
+    {
+      "fecha": "2026-10-12",
+      "edicion": "2026-10-12",
+      "titulo": "Premio Nobel de Economía 2026",
+      "categoria": "Economía",
+      "descripcion": "Robert E. Hall y Michael Woodford son galardonados con el Nobel de Economía por sus estudios sobre fundamentos microeconómicos y estabilización macroeconómica.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Los estadounidenses Robert E. Hall y Michael Woodford se llevan el Nobel de Economía por estudiar los fundamentos micro en la estabilización macroeconómica",
+        "url": "https://www.elmundo.es/economia/2026/10/12/6accaf72fdddff80638b45a9.html"
+      }
+    },
+    {
+      "fecha": "2026-10-12",
+      "edicion": "2026-10-12",
+      "titulo": "Pacto comercial Europa-China sobre híbridos",
+      "categoria": "Economía",
+      "descripcion": "Bruselas limitará a 350.000 unidades anuales las importaciones de coches híbridos fabricados en China.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Europa pone un dique a la avalancha de coches híbridos chinos: las claves del pacto comercial con Pekín",
+        "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/12/6accc5eb21efa0354d8b4575.html"
+      }
+    }
+  ],
+  "noticias": [
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Sánchez, tras el desfile del 12-O: \"No veía a la izquierda tan movilizada desde 2019\"",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6acc7ecdea01db221420cd8d-directo.html",
+      "fecha": "2026-10-12T12:51:39+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "Colau se revuelve contra Rufián y Montero y confirma que los 'comunes' se presentarán con el Frente Amplio en las generales",
+      "url": "https://www.elmundo.es/cataluna/2026/10/12/6accce6ae4d4d8812d8b4592.html",
+      "fecha": "2026-10-12T12:49:15+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Alcaraz se pierde en Shanghai y cae en tercera ronda ante Bergs",
+      "url": "https://www.elmundo.es/deportes/tenis/2026/10/12/6accd1f821efa0fe378b4573.html",
+      "fecha": "2026-10-12T12:40:56+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Así han sido los insultos a Pedro Sánchez al llegar al desfile del 12 de Octubre",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6accd440e4d4d8642d8b456f-video.html",
+      "fecha": "2026-10-12T12:36:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Tensión en Sol entre los acampados y manifestantes con banderas de España",
+      "url": "https://theobjective.com/sociedad/2026-10-12/tension-puerta-sol-acampada-espana/",
+      "fecha": "2026-10-12T12:34:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cultura",
+      "titulo": "Carmen de Bizet en el Palau de les Arts; elenco problemático, poderosa dirección musical, enconada frialdad",
+      "url": "https://www.elmundo.es/cultura/musica/2026/10/12/6accccfb21efa0c11f8b458b.html",
+      "fecha": "2026-10-12T12:14:45+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "El momento en que el Rey ha ayudado a la princesa Leonor",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6accceb6fdddff16088b4573-video.html",
+      "fecha": "2026-10-12T12:12:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Muere una menor en un accidente con un patinete en Málaga capital",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-12/muere-menor-accidente-patinete-malaga/",
+      "fecha": "2026-10-12T12:12:02+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "El Papa será hospitalizado mañana a mediodía para ser operado del nódulo en el pulmón",
+      "url": "https://www.elmundo.es/internacional/2026/10/12/6accb125e9cf4a18268b456f.html",
+      "fecha": "2026-10-12T12:09:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cronica",
+      "titulo": "Konstantin Kholodilin, el académico más citado contra la congelación de los alquileres: \"El político aprueba la ley y después no tiene que pagar por ella. Paga la sociedad\"",
+      "url": "https://www.elmundo.es/cronica/2026/10/12/6ac68f75e85ece13048b458d.html",
+      "fecha": "2026-10-12T12:02:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP pide a Bruselas investigar las presuntas presiones a la jueza del caso David Sánchez",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/pp-bruselas-jueza-david-sanchez/",
+      "fecha": "2026-10-12T11:58:14+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Abascal arremete desde Ceuta contra el \"Gobierno de traidores\" y exige \"militarizar\" la frontera",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6accc854fc6c835e4f8b458e.html",
+      "fecha": "2026-10-12T11:48:27+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "Isabel Díaz Ayuso, la más cañí en el desfile militar del Día de la Hispanidad con una torera bordada",
+      "url": "https://www.elmundo.es/yodona/moda/2026/10/12/6accc0e7fc6c83803b8b45a2.html",
+      "fecha": "2026-10-12T11:47:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Los legionarios desfilan acompañados de la cabra de la Legión, Babieca",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/babieca-cabra-legion/",
+      "fecha": "2026-10-12T11:47:13+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Europa pone un dique a la avalancha de coches híbridos chinos: las claves del pacto comercial con Pekín",
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/12/6accc5eb21efa0354d8b4575.html",
+      "fecha": "2026-10-12T11:37:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "galerias",
+      "titulo": "El desfile militar del 12 de octubre en Madrid, en imágenes",
+      "url": "https://theobjective.com/galerias/espana/2026-10-12/desfile-militar-12-octubre-imagenes/",
+      "fecha": "2026-10-12T11:00:08+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "La ministra de Trabajo alemana dimite y acusa a los conservadores de Merz de atacarla durante el duelo de su hijastra",
+      "url": "https://www.elmundo.es/internacional/2026/10/12/6accb34afc6c83c4438b457c.html",
+      "fecha": "2026-10-12T10:51:05+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "El presidente abandona el desfile militar con insultos a mes y medio de las elecciones",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6acc994efc6c83b5608b4577.html",
+      "fecha": "2026-10-12T10:49:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los Reyes presiden el desfile militar del 12-O en el que Sánchez recibió una nueva pitada",
+      "url": "https://theobjective.com/espana/2026-10-12/reyes-desfile-militar-12-o-sanchez/",
+      "fecha": "2026-10-12T10:48:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Podemos acuerda unirse a la candidatura de ERC: Rufián y Montero harán campaña juntos",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/podemos-candidatura-erc-rufian-montero/",
+      "fecha": "2026-10-12T10:30:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Adiós al rojo pasión y al azul: Zara y Mango tienen los vestidos rosa pastel inspirados en el elegante look de la reina Letizia para deslumbrar durante el Día de la Hispanidad",
+      "url": "https://theobjective.com/lifestyle/moda/2026-10-12/adios-al-rojo-pasion-y-al-azul-zara-y-mango-tienen-los-vestidos-rosa-pastel-inspirados-en-el-elegante-look-de-la-reina-letizia-para-deslumbrar-durante-el-dia-de-la-hispanidad/",
+      "fecha": "2026-10-12T10:29:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "El Ejército del Aire tiñe el cielo de Madrid con los colores de la bandera de España",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/ejercito-aire-cielo-madrid-bandera-espana/",
+      "fecha": "2026-10-12T10:27:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Así ha sido el acto de izado de la bandera de España para celebrar el 12 de octubre",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/izado-bandera-12-octubre/",
+      "fecha": "2026-10-12T10:16:02+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "La Reina Letizia sorprende con un delicado vestido rosa empolvado; la Princesa de Asturias, de uniforme militar; y la Infanta Sofía, con traje rojo: los looks reales en el desfile del Día de la Hispanidad",
+      "url": "https://www.elmundo.es/yodona/moda/reina-letizia/2026/10/12/6acc9db5fdddff6c2a8b459a.html",
+      "fecha": "2026-10-12T10:08:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Robert E. Hall y Michael Woodford ganan el Nobel de Economía 2026",
+      "url": "https://theobjective.com/sociedad/2026-10-12/nobel-economia-2026/",
+      "fecha": "2026-10-12T10:08:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Así ha sido el aterrizaje de los paracaidistas durante el desfile militar del 12 de octubre",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/aterrizaje-paracaidas-12-octubre/",
+      "fecha": "2026-10-12T10:03:24+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Los estadounidenses Robert E. Hall y Michael Woodford se llevan el Nobel de Economía por estudiar los fundamentos micro en la estabilización macroeconómica",
+      "url": "https://www.elmundo.es/economia/2026/10/12/6accaf72fdddff80638b45a9.html",
+      "fecha": "2026-10-12T10:03:12+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Un estudiante de 14 años dispara contra un director y una profesora y desata la alerta en los institutos franceses",
+      "url": "https://www.elmundo.es/internacional/2026/10/12/6acca8f121efa090288b4597.html",
+      "fecha": "2026-10-12T09:45:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Sánchez acompaña a los Reyes en su saludo a las autoridades y ministros, entre abucheos: «¡Traidor!»",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/sanchez-reyes-abucheos-traidor/",
+      "fecha": "2026-10-12T09:37:26+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez recibe una nueva pitada y abucheos a su llegada al desfile del 12 de octubre",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/sanchez-pitada-12-octubre/",
+      "fecha": "2026-10-12T09:32:37+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "Los Mossos investigan la muerte de un hombre atacado por un grupo de personas en Nou Barris",
+      "url": "https://www.elmundo.es/cataluna/2026/10/12/6acc9ec821efa004528b4574.html",
+      "fecha": "2026-10-12T09:19:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Pedro Sánchez es recibido con pitos e insultos tras su llegada al desfile militar del 12 de octubre",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/pedro-sanchez-pito-insultos-desfile-12-octubre/",
+      "fecha": "2026-10-12T09:18:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Leonor no se desprende de su uniforme y comienza el desfile por la Hispanidad con un traspié: su curiosa reacción con guiño a su padre",
+      "url": "https://theobjective.com/gente/2026-10-12/leonor-deja-uniforme-acto-militar/",
+      "fecha": "2026-10-12T09:17:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Sofía se salta sus clases en París y brilla en el desfile del Día de la Hispanidad: desempolva su traje rojo de Tommy que lució en los Princesa de Asturias",
+      "url": "https://theobjective.com/gente/2026-10-12/sofia-salta-clases-paris-desfile-dia-hispanidad/",
+      "fecha": "2026-10-12T09:14:03+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Clavijo alerta de un nuevo «brote migratorio» en Canarias con más de 3.800 llegadas",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/clavijo-canarias-brote-migratorio-gobierno/",
+      "fecha": "2026-10-12T09:11:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Letizia triunfa en el Día de la Hispanidad con su ‘look’ más ‘chic’: rescata su vestido rosa empolvado de The 2nd Skin Co que llevó en 2025",
+      "url": "https://theobjective.com/gente/2026-10-12/letizia-triunfa-dia-hispanidad-look-mas-chic/",
+      "fecha": "2026-10-12T09:10:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "DIRECTO | Desfile del 12 de octubre en Madrid por el Día de la Hispanidad",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/directo-desfile-12-octubre-madrid-dia-hispanidad/",
+      "fecha": "2026-10-12T08:52:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Ibex 35 sube un 1,27% y recupera los 19.200 puntos pese a la tensión en Oriente Próximo",
+      "url": "https://theobjective.com/economia/2026-10-12/ibex-35-puntos-petroleo/",
+      "fecha": "2026-10-12T08:01:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "tecnologia",
+      "titulo": "Japón, en alerta nacional de ciberseguridad tras una oleada de ataques impulsados por IA",
+      "url": "https://theobjective.com/tecnologia/2026-10-12/japon-alerta-nacional-ciberseguridad-ia/",
+      "fecha": "2026-10-12T07:18:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez reivindica la diversidad de España en su mensaje por el 12 de octubre",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/sanchez-espana-12-de-octubre/",
+      "fecha": "2026-10-12T07:11:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Detenido un hombre colombiano acusado de blanqueo de capitales vinculado a Maduro",
+      "url": "https://theobjective.com/internacional/2026-10-12/detenido-blanqueo-capitales-maduro/",
+      "fecha": "2026-10-12T06:26:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Jen Edwards, entrenadora: «A partir de los 40, la mayoría no hace este ejercicio y no solo sirve para mejorar todo el cuerpo, sino para incrementar la fuerza y movilidad»",
+      "url": "https://theobjective.com/lifestyle/fitness/2026-10-12/jen-edwards-entrenadora-la-mayor-parte-de-las-personas-no-hacen-este-ejercicio-a-partir-de-los-40-y-sirve-para-mejorar-todo-el-cuerpo-ademas-de-incrementar-la-fuerza-y-movilidad/",
+      "fecha": "2026-10-12T05:56:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Nuria Roca, sobre su patrimonio: «Juan no tiene nada, todo lo tengo yo; estuvimos durante más de un año buscando casa en Candeleda»",
+      "url": "https://theobjective.com/gente/2026-10-12/nuria-roca-patrimonio-juan-no-tiene-nada-buscando-casa-candeleda/",
+      "fecha": "2026-10-12T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "La fruta que deberías desayunar para mejorar la digestión y evitar la hinchazón abdominal",
+      "url": "https://theobjective.com/lifestyle/nutricion/2026-10-12/la-fruta-que-deberias-desayunar-para-mejorar-la-digestion-y-evitar-la-hinchazon-abdominal/",
+      "fecha": "2026-10-12T05:30:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "La ofensiva migratoria de Trump llega a las urnas entre temor e indignación",
+      "url": "https://www.elmundo.es/internacional/2026/10/12/6ac6a19821efa0606c8b45c0.html",
+      "fecha": "2026-10-12T05:23:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Ada Colau, sobre su infancia y la separación de sus padres cuando tenía 3 años: «Sigo siendo aquella niña que creció en el Guinardó junto a su madre, a quien quiero infinitamente»",
+      "url": "https://theobjective.com/gente/2026-10-12/ada-colau-sobre-su-infancia-y-la-separacion-de-sus-padres-cuando-tenia-3-anos-sigo-siendo-aquella-nina-que-crecio-en-el-guinardo-junto-a-su-madre-a-quien-quiero-infinitamente/",
+      "fecha": "2026-10-12T05:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "La psiquiatra Ana Isabel Sanz revela por qué hay películas que nos hacen sufrir tanto: «El cerebro siente antes de razonar»",
+      "url": "https://theobjective.com/lifestyle/2026-10-12/la-psiquiatra-ana-isabel-sanz-revela-por-que-hay-peliculas-que-nos-hacen-sufrir-tanto-el-cerebro-siente-antes-de-razonar/",
+      "fecha": "2026-10-12T04:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VIDEO | John Müller: «Pedro Sánchez es un presidente que no tolera los límites»",
+      "url": "https://theobjective.com/videos/economia/2026-10-12/video-muller-gobierno-deuda/",
+      "fecha": "2026-10-12T03:35:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Fuera de micrófono con John Müller",
+      "url": "https://theobjective.com/podcasts/fuera-de-microfono/podcast-john-muller-entrevista-fuera-de-microfono/",
+      "fecha": "2026-10-12T03:25:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Votar al PSOE hoy",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-12/votar-psoe-articulo-julio-llorente/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Primeras (convulsas) notas de balance económico",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-12/primeras-notas-balance-economico-legislatura-articulo-santacruz/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Anfibios del centro político",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-12/anfibios-del-centro-politico-articulo-casabon/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Hacia una democracia popular",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-12/hacia-una-democracia-popular-articulo-cano/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Por qué convoca elecciones",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-12/por-que-convoca-elecciones/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Votar democráticamente por el fin de la democracia",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-12/votar-democraticamente-fin-democracia-articulo-cayuela/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "branded-content",
+      "titulo": "¿Parto vaginal o cesárea? Así se decide la vía más segura para el nacimiento",
+      "url": "https://theobjective.com/branded-content/2026-10-12/parto-vaginal-cesarea-via-segura-nacimiento/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Madrid y Portalegre: los viajes más repetidos de David Sánchez en la Diputación de Badajoz",
+      "url": "https://theobjective.com/espana/2026-10-12/madrid-portalegre-viajes-mas-repetidos-david-sanchez/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Alex Elvira, educador canino: «Para que un border collie deje de perseguir coches y motos se deben seguir dos pasos: trabajar el control de estímulos y después su carga instintiva»",
+      "url": "https://theobjective.com/lifestyle/2026-10-12/alex-elvira-educador-canino-para-que-un-border-collie-deje-de-perseguir-coches-y-motos-se-deben-seguir-dos-pasos-trabajar-el-control-de-estimulos-y-despues-su-carga-instintiva/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Karlos Arguiñano, cocinero: «Ni con carne ni con pollo, las hamburguesas más económicas y sabrosas se hacen con 550 g de lentejas pardinas de bote, 300 g de arroz y verduras»",
+      "url": "https://theobjective.com/gastronomia/2026-10-12/karlos-arguinano-cocinero-ni-con-carne-ni-con-pollo-las-hamburguesas-mas-economicas-y-sabrosas-se-hacen-con-550-g-de-lentejas-pardinas-de-bote-300-g-de-arroz-y-verduras/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "‘Caso Negreira’: nueva denuncia ante la Fiscalía por dietas y acompañar a los árbitros",
+      "url": "https://theobjective.com/espana/tribunales/2026-10-12/caso-negreira-nuevas-denuncias-dietas-acompanamiento-arbitros/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "John Müller: «Pedro Sánchez es un presidente que no tolera los límites»",
+      "url": "https://theobjective.com/medios/2026-10-12/john-muller-entrevista-fuera-de-microfono/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La SEPI nombra una fiel del vicepresidente imputado como ‘número tres’ de la empresa",
+      "url": "https://theobjective.com/economia/2026-10-12/sepi-nombra-fiel-vicepresidente-imputado-numero-tres/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Roberto Moraga, gestor de 142 pisos: «Para acceder a la primera vivienda los jóvenes no necesitan hipotecas del 110%, sino ahorrarse los 30.000 euros que tienen que pagar de IVA O ITP»",
+      "url": "https://theobjective.com/economia/2026-10-12/roberto-moraga-gestor-de-142-pisos-para-acceder-a-la-primera-vivienda-los-jovenes-no-necesitan-hipotecas-del-110-sino-ahorrarse-los-30-000-euros-que-tienen-que-pagar-de-iva-o-itp/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Tambores de crisis: esta vez tampoco será diferente",
+      "url": "https://theobjective.com/economia/2026-10-12/tambores-crisis-esta-vez-tampoco-sera-diferente/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sanidad",
+      "titulo": "El consumo de medicamentos para la diabetes aumenta un 22% desde 2022",
+      "url": "https://theobjective.com/sanidad/2026-10-12/consumo-medicamentos-diabetes-aumenta-22-desde-2022/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Caroline Idiens, entrenadora: «A partir de los 40 años hay ocho ejercicios fundamentales: son los patrones esenciales de movimiento en la madurez»",
+      "url": "https://theobjective.com/lifestyle/fitness/2026-10-12/caroline-idiens-entrenadora-a-partir-de-los-40-anos-hay-ocho-ejercicios-fundamentales-son-los-patrones-esenciales-de-movimiento-en-la-madurez/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Gobierno mantiene cuatro años de margen para las segundas residencias que estén vacías",
+      "url": "https://theobjective.com/economia/2026-10-12/gobierno-mantiene-cuatro-anos-margen-segundas-residencias-vacias/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Los radares fijos de la DGT registran el triple de infracciones que los móviles y los de tramo",
+      "url": "https://theobjective.com/sociedad/2026-10-12/radares-fijos-dgt-triple-moviles-tramo/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El desembarco chino en España se acelera: abre una sucursal el gran rival de AliExpress",
+      "url": "https://theobjective.com/economia/distribucion/2026-10-12/desembarco-chino-espana-rival-aliexpress-sucursal/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "PharmaMar se prepara para nuevos acuerdos con un plan de recompra de acciones propias",
+      "url": "https://theobjective.com/economia/2026-10-12/pharmamar-nuevos-acuerdos-plan-recompra-acciones/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Denuncian al embajador en México por acoso laboral contra su último subinspector de Policía",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/policia-mexico-embajador-acoso/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Un nuevo estudio desmonta la violencia vicaria: el 63% de los filicidios los cometen las madres",
+      "url": "https://theobjective.com/espana/2026-10-12/estudio-violencia-vicaria/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Sánchez pierde el relato en la prensa extranjera: de símbolo progresista a líder en apuros",
+      "url": "https://theobjective.com/internacional/2026-10-12/sanchez-pierde-relato-prensa-extranjera/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Ni Cillian Murphy ni Robert Downey Jr.: el ‘top 6’ de Netflix en España, con más de 6 millones de visualizaciones, ya es cosa de este anime",
+      "url": "https://theobjective.com/cultura/cine/2026-10-12/ni-cillian-murphy-ni-robert-downey-jr-el-top-6-de-netflix-en-espana-con-mas-de-6-millones-de-visualizaciones-ya-es-cosa-de-este-anime/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "María Cristina Buendía, notaria: «La ayuda de hasta 50.000 euros para la primera vivienda sí es un préstamo al 0%, pero no una subvención a fondo perdido: se tiene que devolver»",
+      "url": "https://theobjective.com/economia/2026-10-12/maria-cristina-buendia-notaria-la-ayuda-de-hasta-50-000-euros-para-la-primera-vivienda-si-es-un-prestamo-al-0-pero-no-una-subvencion-a-fondo-perdido-se-tiene-que-devolver/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Antonio Gala, escritor español, sobre la felicidad: «Para vivir bien lo único esencial es aprender a estar en paz con uno mismo y dejar de perseguir la perfección»",
+      "url": "https://theobjective.com/lifestyle/2026-10-12/antonio-gala-escritor-espanol-sobre-la-felicidad-para-vivir-bien-lo-unico-esencial-es-aprender-a-estar-en-paz-con-uno-mismo-y-dejar-de-perseguir-la-perfeccion/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Un nuevo frente contra la ‘ley de nietos’: piden por vía administrativa acceso a los expedientes",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/ley-nietos-voto/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "RTVE destina 7.000 euros al control de conejos silvestres en su centro de Las Rozas",
+      "url": "https://theobjective.com/medios/2026-10-12/rtve-destina-7000-euros-control-conejos-silvestres/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Rabat medirá su respuesta a la visita de los Reyes a Ceuta para evitar favorecer al PP",
+      "url": "https://theobjective.com/internacional/2026-10-12/campana-electoral-condiciona-respuesta-rabat-visita-reyes-ceuta/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "RTVE premia al tiktoker Marc Biarnés con un espacio propio en su plataforma En Play",
+      "url": "https://theobjective.com/medios/2026-10-12/rtve-premia-tiktoker-marc-biarnes-espacio-propio-plataforma-enplay/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sanidad",
+      "titulo": "Sanidad dice que el 60% de los daños sufridos por pacientes de UCI podría haberse evitado",
+      "url": "https://theobjective.com/sanidad/2026-10-12/sanidad-danos-sufridos-pacientes-uci/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Juan Carlos Ferrero, sobre el entorno de Carlos Alcaraz: «Siempre intentaba advertirle no solo de quiénes eran sus amigos y de los que iban por interés, sino de lo que hacía por la noche»",
+      "url": "https://theobjective.com/deportes/2026-10-12/juan-carlos-ferrero-sobre-el-entorno-de-carlos-alcaraz-siempre-intentaba-advertirle-no-solo-de-quienes-eran-sus-amigos-y-de-los-que-iban-por-interes-sino-de-lo-que-hacia-por-la-noche/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "motor",
+      "titulo": "El Geely Starray EM-i se conduce como un eléctrico y viaja como una berlina",
+      "url": "https://theobjective.com/motor/2026-10-12/geely-starray-em-i-conduce-electrico-viaja-berlina/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Azorín, escritor español del 98, sobre la buena vida: «El verdadero éxito no nace de exagerar ni de buscar impresionar, sino del trabajo constante, la reflexión y la precisión»",
+      "url": "https://theobjective.com/lifestyle/2026-10-12/azorin-escritor-espanol-del-98-sobre-la-buena-vida-el-verdadero-exito-no-nace-de-exagerar-ni-de-buscar-impresionar-sino-del-trabajo-constante-la-reflexion-y-la-precision/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "El Rey Elnó de Ánjel María Fernández",
+      "url": "https://theobjective.com/cultura/2026-10-12/el-rey-elno-de-anjel-maria-fernandez/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Salvar al soldado Sánchez: así montó el PSOE su ‘cloaca’ durante los cinco días de reflexión",
+      "url": "https://theobjective.com/espana/2026-10-12/sanchez-psoe-cloaca/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El director de THE OBJECTIVE visita Ceuta con motivo de la fiesta nacional de España",
+      "url": "https://theobjective.com/espana/2026-10-12/el-director-de-the-objective-visita-ceuta-con-motivo-de-la-fiesta-nacional-de-espana/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Felipe VI, esplendoroso; Mohamed VI, agonizante",
+      "url": "https://theobjective.com/opinion/2026-10-12/felipe-vi-esplendoroso-mohamed-vi-agonizante/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Wembanyama no apuesta por la avaricia del Rey James 2.0",
+      "url": "https://theobjective.com/deportes/2026-10-12/wembanyama-rey-james-la-otra-cara-del-dinero/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Adiós al azul cielo y al rojo pasión: Zara y Primark apuestan por el color tendencia del otoño 2026 para sofisticar los looks de oficina y diario",
+      "url": "https://theobjective.com/lifestyle/moda/2026-10-12/adios-al-azul-cielo-y-al-rojo-pasion-zara-y-primark-apuestan-por-el-color-tendencia-del-otono-2026-para-sofisticar-los-looks-de-oficina-y-diario/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El exjuez de la trama Leire intentó personarse en la causa de David Sánchez para reventarla",
+      "url": "https://theobjective.com/espana/2026-10-12/exjuez-trama-leire-causa-david-sanchez-reventarla/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "La colección de secretos de Violeta Niebla",
+      "url": "https://theobjective.com/cultura/2026-10-12/coleccion-secretos-violeta-niebla/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "España ha empeorado en tres ‘rankings’ de pobreza de la UE desde que gobierna Sánchez",
+      "url": "https://theobjective.com/economia/2026-10-12/espana-empeora-tres-rankings-pobreza-ue-gobierna-sanchez/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Ada Colau, una manera de darnos por desahuciados",
+      "url": "https://theobjective.com/opinion/2026-10-12/ada-colau-manera-darnos-desahuciados/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El pacto Montero-Rufián descoloca al Frente Amplio, que ahora teme el ‘sorpasso’",
+      "url": "https://theobjective.com/espana/politica/2026-10-12/pacto-montero-rufian-descoloca-frente-amplio-teme-sorpasso/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "La viñeta animada sobre… Las 7 plagas del gafe",
+      "url": "https://theobjective.com/videos/espana/politica/2026-10-12/la-vineta-animada-sobre-las-7-plagas-del-gafe/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "El director de THE OBJECTIVE visita Ceuta con motivo de la fiesta nacional de España",
+      "url": "https://theobjective.com/videos/espana/2026-10-12/el-director-de-the-objective-visita-ceuta-con-motivo-de-la-fiesta-nacional-de-espana/",
+      "fecha": "2026-10-12T03:25:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "El Gobierno defiende en su decreto que el propietario que debe pagar 12 meses es porque se lo ha buscado: \"Es en gran medida elegido\"",
+      "url": "https://www.elmundo.es/economia/2026/10/12/6acb6caefc6c830e5c8b4573.html",
+      "fecha": "2026-10-12T00:15:21+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Lo mismo la calle no es lo que piensas, Pedro",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6acbab81fc6c830e5c8b4585.html",
+      "fecha": "2026-10-12T00:15:20+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "El Gobierno crea otras 500 plazas de jueces y 200 de fiscales en plena precampaña del 29-N",
+      "url": "https://www.elmundo.es/espana/2026/10/12/6acb808de9cf4aa30e8b4583.html",
+      "fecha": "2026-10-12T00:10:58+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "album",
+      "titulo": "Un otoño con intensidad cromática; más de 20 piezas de diseño para recibir la nueva estación",
+      "url": "https://www.elmundo.es/album/yodona/lifestyle/2026/10/12/6ac4dbe221efa012438b45ab.html",
+      "fecha": "2026-10-11T22:14:29+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "Miguel López Moreno, nutricionista: \"Nos hemos obsesionado con evitar los picos de glucosa sin entender cómo funciona el metabolismo\"",
+      "url": "https://www.elmundo.es/yodona/vida-saludable/2026/10/12/6aa7c67bfdddff963b8b4586.html",
+      "fecha": "2026-10-11T22:14:24+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "metropoli",
+      "titulo": "Grandes vinos sin pedir botella: cinco direcciones para beber por copas en Madrid",
+      "url": "https://www.elmundo.es/metropoli/elmundovino/2026/10/12/6ac7ac79e9cf4ac6398b458c.html",
+      "fecha": "2026-10-11T22:13:24+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "madrid",
+      "titulo": "Más de 21.000 metros cuadrados, 29 nuevas boutiques, cómodas suites privadas... Las claves de la ambiciosa transformación de Las Rozas Village, el outlet de las compras de lujo",
+      "url": "https://www.elmundo.es/madrid/2026/10/12/6abfffcce4d4d8a03b8b4581.html",
+      "fecha": "2026-10-11T22:12:52+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "madrid",
+      "titulo": "Del mando del Sindicato de Inquilinas a la ausencia de liderazgo: Sol se convierte en un escaparate de causas sociales con 2.000 tiendas de campaña",
+      "url": "https://www.elmundo.es/madrid/2026/10/12/6acbae3afc6c83d16f8b456e.html",
+      "fecha": "2026-10-11T22:12:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Levantadas las acampadas por la vivienda de Málaga y Granada tras dos semanas",
+      "url": "https://theobjective.com/sociedad/2026-10-11/levantadas-acampadas-vivienda-malaga-granada/",
+      "fecha": "2026-10-11T21:41:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Al menos trece muertos en bombardeos en la frontera entre Sudán y Egipto",
+      "url": "https://theobjective.com/internacional/2026-10-11/al-menos-trece-muertos-bombardeos-frontera-sudan-egipto/",
+      "fecha": "2026-10-11T21:13:35+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "La izquierda sigue KO tras el adelanto: PSOE y Sumar repiten en mínimos mientras Vox logra un récord a costa del PP",
+      "url": "https://www.elmundo.es/espana/encuestas/2026/10/11/6acba028e85ece77088b4580.html",
+      "fecha": "2026-10-11T20:40:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "UGT y CCOO apelan a un acuerdo para Frente Amplio: «El país os espera»",
+      "url": "https://theobjective.com/economia/2026-10-11/ugt-ccoo-apelan-acuerdo-frente-amplio/",
+      "fecha": "2026-10-11T20:34:06+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "la-lectura",
+      "titulo": "El pisazo del siglo XX, aquel extraño lujo 'typical spanish': \"Los 'edificios cebra' son réplicas malas, quieren reproducir el modelo en la mitad de espacio y con peor calidad de construcción\"",
+      "url": "https://www.elmundo.es/la-lectura/2026/10/11/6abe7b7f21efa0814d8b45a5.html",
+      "fecha": "2026-10-11T20:33:51+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "La increíble historia de Álvaro Núñez, ex tenista, empresario de lujo en Miami y deportista extremo: \"Busqué en internet los retos más difíciles del mundo\"",
+      "url": "https://www.elmundo.es/deportes/mas-deporte/2026/10/11/6ac3d419fdddffac588b45b2.html",
+      "fecha": "2026-10-11T20:18:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Cinco desaparecidos en nuevas inundaciones en Nepal",
+      "url": "https://theobjective.com/internacional/2026-10-11/cinco-desaparecidos-nuevas-inundaciones-nepal/",
+      "fecha": "2026-10-11T19:42:50+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cultura",
+      "titulo": "Ana Curra: \"¿Ser un icono? Es un lugar donde me sitúan otros, pero no me incomoda\"",
+      "url": "https://www.elmundo.es/cultura/musica/2026/10/11/6acb603bfdddff2e4a8b4580.html",
+      "fecha": "2026-10-11T19:39:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Éxtasis en Las Ventas: sangre, épica y pasión de Antonio Ferrera y Román",
+      "url": "https://theobjective.com/cultura/2026-10-11/extasis-en-las-ventas-antonio-ferrera-y-roman/",
+      "fecha": "2026-10-11T19:07:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Abascal insta a votar presencialmente: «Es desconfianza de Pedro Sánchez»",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/abascal-insta-votar-presencialmente-desconfianza-pedro-sanchez/",
+      "fecha": "2026-10-11T18:46:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Abascal apunta a UGT y CCOO por convocar una huelga general «en medio» de una campaña electoral",
+      "url": "https://theobjective.com/videos/espana/politica/2026-10-11/abascal-apunta-ugt-ccoo-huelga-elecciones/",
+      "fecha": "2026-10-11T17:29:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "ERC, «muy cerca» de un acuerdo con Podemos para que no presente candidatura en Cataluña",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/erc-muy-cerca-acuerdo-podemos-candidatura-cataluna/",
+      "fecha": "2026-10-11T17:09:56+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Salvamento rescata dos embarcaciones en Canarias con más de 300 inmigrantes",
+      "url": "https://theobjective.com/sociedad/2026-10-11/salvamento-rescata-dos-embarcaciones-canarias-300-inmigrantes/",
+      "fecha": "2026-10-11T16:34:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "DIRECTO | Santiago Abascal participa en un acto de precampaña electoral en Estepona (Málaga)",
+      "url": "https://theobjective.com/videos/espana/politica/2026-10-11/directo-santiago-abascal-vox-estepona/",
+      "fecha": "2026-10-11T15:58:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Robles agradece a los militares su «difícil trabajo» en la defensa de Ceuta",
+      "url": "https://theobjective.com/espana/2026-10-11/robles-agradece-militares-dificil-trabajo-defensa-ceuta/",
+      "fecha": "2026-10-11T15:43:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Carlos Martínez augura un «Pedro Sánchez 2030» y acusa al PP de «desanimar el voto»",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/carlos-martinez-pedro-sanchez/",
+      "fecha": "2026-10-11T15:18:21+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Así se ha visto desde el aire el desalojo del último gran asentamiento ilegal de inmigrantes en Ceuta",
+      "url": "https://www.elmundo.es/espana/2026/10/11/6acba81ae9cf4a69248b456c-video.html",
+      "fecha": "2026-10-11T15:15:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Trump anuncia un «alto el fuego para la energía» entre Rusia y Ucrania",
+      "url": "https://theobjective.com/internacional/2026-10-11/trump-anuncia-alto-el-fuego-energia-rusia-ucrania/",
+      "fecha": "2026-10-11T14:39:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Torres da por concluidos los desalojos en Ceuta y cifra en 12.000 los retornos a Marruecos",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/torres-desalojos-ceuta-marruecos/",
+      "fecha": "2026-10-11T14:26:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Verstappen conquista Singapur por primera vez: Alonso y Sainz, sin opciones",
+      "url": "https://theobjective.com/deportes/formula-1/2026-10-11/verstappen-conquista-singapur-alonso-sainz-sin-opciones/",
+      "fecha": "2026-10-11T14:03:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Mertxe Aizpurua no será candidata por EH Bildu al Congreso",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/mertxe-aizpurua-no-sera-candidata-por-eh-bildu-al-congreso/",
+      "fecha": "2026-10-11T13:37:23+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Mertxe Aizpurua: «El 29 de noviembre hay partido para derrotar a la extrema derecha»",
+      "url": "https://theobjective.com/videos/espana/politica/2026-10-11/mertxe-aizpurua-derrotar-extrema-derecha/",
+      "fecha": "2026-10-11T13:31:36+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Ester Muñoz tacha al PSOE de partido de «saunas, cloacas y joyas»",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/ester-munoz-psoe-saunas-cloacas-joyas/",
+      "fecha": "2026-10-11T13:02:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Más Madrid propone a Emilio Delgado como cabeza de lista por Madrid seguido de García",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/mas-madrid-propone-emilio-delgado-cabeza-lista-madrid/",
+      "fecha": "2026-10-11T12:25:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo evoca a los trabajadores de la «España del sacrificio»: «Tu esfuerzo merecerá la pena»",
+      "url": "https://theobjective.com/espana/politica/2026-10-11/feijoo-espana-sacrificio/",
+      "fecha": "2026-10-11T11:57:41+00:00"
+    }
+  ]
+}
