@@ -161,7 +161,8 @@
 
         <!-- TEST DE AFINIDAD -->
         <section id="sec-test" class="space-y-4">
-            <div class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-brand-600"></i><h2 class="text-lg font-bold">Test de afinidad</h2></div>
+            <div class="flex items-center justify-between flex-wrap gap-2"><div class="flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-brand-600"></i><h2 class="text-lg font-bold">Test de afinidad</h2></div>
+                <a href="/a-quien-votar/" class="text-xs font-semibold text-brand-600 hover:underline">¿Quieres un test más completo, con temas prioritarios y explicación? → A quién votar</a></div>
             <div id="testBox" class="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden"></div>
         </section>
 
@@ -200,6 +201,14 @@
         <section id="sec-historico" class="space-y-4">
             <div class="flex items-center gap-2"><i class="fa-solid fa-clock-rotate-left text-brand-600"></i><h2 class="text-lg font-bold">Histórico de elecciones</h2></div>
             <div id="historyGrid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4"></div>
+        </section>
+
+        <section aria-labelledby="guiaRel" class="space-y-3">
+            <h2 id="guiaRel" class="text-lg font-bold">Más guías sobre las elecciones generales</h2>
+            <div class="grid sm:grid-cols-2 gap-3">
+                <a href="/a-quien-votar/" class="block bg-white rounded-xl border border-slate-200 p-4 hover:border-brand-500 transition"><i class="fa-solid fa-wand-magic-sparkles text-brand-600 mb-2"></i><h3 class="font-semibold text-sm text-slate-900">¿A quién votar? Test de afinidad completo</h3><p class="text-xs text-slate-500 mt-1">Descubre con qué partido coincides más, por temas y con sus fuentes.</p></a>
+                <a href="/programas-electorales/" class="block bg-white rounded-xl border border-slate-200 p-4 hover:border-brand-500 transition"><i class="fa-solid fa-scale-balanced text-brand-600 mb-2"></i><h3 class="font-semibold text-sm text-slate-900">Programas electorales: qué propone cada partido</h3><p class="text-xs text-slate-500 mt-1">Comparador de posiciones por temas con la cita y la fuente de cada una.</p></a>
+            </div>
         </section>
 
         <div class="text-xs text-slate-500 bg-white border border-slate-200 rounded-xl p-4 leading-relaxed">
@@ -256,6 +265,8 @@
             getJSON(base + 'convocatoria.json'), getJSON(base + 'partidos.json'), getJSON(base + 'candidatos.json', true),
             getJSON(base + 'encuestas.json', true), getJSON(base + 'afinidad.json', true), getJSON(base + 'resultados.json', true)
         ]);
+        // El panel usa la versión corta del test (afirmaciones con "corto": true); el test completo vive en /a-quien-votar/
+        if (afi && afi.afirmaciones && afi.afirmaciones.some(a => a.corto)) afi.afirmaciones = afi.afirmaciones.filter(a => a.corto);
         S.d = { conv, partidos, cand: cand || { candidatos: [] }, enc: enc || { sondeos: [] }, afi, res: res || { disponible: false } };
         S.meta = S.list.find(e => e.id === id);
         S.answers = {}; S.step = 0;
@@ -308,7 +319,7 @@
     function buildNav() {
         const items = [['sec-calendario','Calendario'],['sec-encuestas','Encuestas'],['sec-partidos','Partidos'],['sec-congreso', isHistoric() ? 'Resultados' : 'Congreso'],['sec-test','Test'],['sec-votar','Cómo se vota'],['sec-faq','FAQ'],['sec-historico','Histórico']]
             .filter(([id]) => !$(id).classList.contains('hidden'));
-        $('subnavInner').innerHTML = items.map(([id, l]) => `<a href="#${id}" class="nav-link py-2.5 border-b-2 border-transparent hover:text-brand-600">${l}</a>`).join('');
+        $('subnavInner').innerHTML = items.map(([id, l]) => `<a href="#${id}" class="nav-link py-2.5 border-b-2 border-transparent hover:text-brand-600">${l}</a>`).join('') + (isHistoric() ? '' : '<a href="/a-quien-votar/" class="py-2.5 border-b-2 border-transparent hover:text-brand-600">A quién votar</a><a href="/programas-electorales/" class="py-2.5 border-b-2 border-transparent hover:text-brand-600">Programas</a>');
     }
 
     /* ---------- HERO ---------- */

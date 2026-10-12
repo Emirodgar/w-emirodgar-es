@@ -25,7 +25,25 @@ proyectos/elecciones-espana/
 Panel: [proyectos/elecciones-espana/index.html](../../../proyectos/elecciones-espana/index.html) ·
 Documentación: [publicaciones/proyecto-elecciones-espana.md](../../../publicaciones/proyecto-elecciones-espana.md)
 
-Tras cualquier cambio, actualiza `lastUpdated` en `data/elecciones.json` (formato «12 de Octubre, 2026»).
+Tras cualquier cambio, actualiza `lastUpdated` (formato «12 de Octubre, 2026») **y `lastUpdatedISO`** (AAAA-MM-DD) en `data/elecciones.json`.
+
+## Páginas SEO generadas (IMPORTANTE)
+
+Además del panel hay dos páginas con contenido estático que se **generan** a partir de estos mismos JSON
+(para que los buscadores lean tablas, FAQ y JSON-LD sin ejecutar JavaScript):
+
+- `a-quien-votar/index.html`: test de afinidad ampliado + explicación + FAQ.
+- `programas-electorales/index.html`: comparador de posiciones por tema, con cita y fuente.
+
+**Después de tocar `afinidad.json`, `partidos.json`, `candidatos.json` o `convocatoria.json`, ejecuta:**
+
+```bash
+python -I scripts/elecciones/generar_paginas.py
+```
+
+y comprueba las dos páginas en el navegador. No edites esos HTML a mano: se sobrescriben. Las páginas se enlazan entre
+sí y con el panel (navegación de grupo, bloque «Sigue explorando», migas y JSON-LD); si añades una página al grupo,
+actualiza `GROUP_NAV` y `related()` en el script, y añádela a `sitemap.xml`.
 
 ## Reglas de neutralidad (no negociables)
 
@@ -60,7 +78,7 @@ y la página de Wikipedia «Encuestas de opinión para las elecciones generales 
 campo, muestra) contra la ficha de la empresa o el medio cuando sea posible. Añade solo sondeos nuevos, no reescribas los antiguos.
 
 ### `afinidad.json`
-`aviso`, `afirmaciones[]`: `id`, `tema`, `texto`, `contexto?`, `posiciones` `{ "PP": { "posicion": "favor"|"contra"|"matizada"|"sin_posicion",
+`aviso`, `afirmaciones[]`: `id`, `tema`, `texto`, `contexto?`, `corto?` (true = también entra en el test corto del panel; el test completo de `/a-quien-votar/` usa todas), `posiciones` `{ "PP": { "posicion": "favor"|"contra"|"matizada"|"sin_posicion",
 "cita": "...", "fuente": "https://...", "fecha": "AAAA-MM" } }`. Solo para partidos con `enTest: true`. Cuando se publiquen los
 programas 2026, **sustituye** las posiciones basadas en programas anteriores por las del programa nuevo y actualiza `fecha` y `fuente`.
 
@@ -99,3 +117,4 @@ constituyan las Cortes, cambia el `estado` de la convocatoria a `historica` en `
 - [ ] Todos los `partidoId` y claves de `voto`/`posiciones` existen en `partidos.json`.
 - [ ] La suma de escaños del hemiciclo es el total del Congreso (`escanosActuales` + `escanosOtros`).
 - [ ] Ninguna URL de `fuente` o `programaUrl` está inventada.
+- [ ] Has ejecutado `scripts/elecciones/generar_paginas.py` y las páginas `/a-quien-votar/` y `/programas-electorales/` reflejan los datos nuevos.

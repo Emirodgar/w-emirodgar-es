@@ -27,6 +27,8 @@ Cuando se convocan elecciones, la información útil para decidir el voto está 
 - **Cómo se vota**, con un simulador de la ley D'Hondt, y unas **preguntas frecuentes** generadas a partir de los datos.
 - **Histórico**: cada convocatoria queda archivada con sus resultados.
 
+El proyecto se completa con dos guías específicas: [¿A quién votar? Test de afinidad completo](https://emirodgar.es/a-quien-votar/), con temas prioritarios y explicación de cada resultado, y el [comparador de programas electorales](https://emirodgar.es/programas-electorales/), con las posiciones de cada partido por temas y su fuente.
+
 ## Una plantilla fija para todas las elecciones
 
 La página no cambia entre convocatorias. Cada una vive en su propia carpeta de ficheros JSON (`convocatoria`, `partidos`, `candidatos`, `encuestas`, `afinidad`, `resultados`) y un índice `elecciones.json` decide cuál es la próxima y cuáles son histórico. Para unas autonómicas o unas europeas basta con crear una nueva carpeta con el mismo esquema.
