@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-15
+date_modified: 2026-10-12
 folder: proyectos
 permalink: quien-gobierna-cyl
 ---
@@ -50,6 +51,12 @@ distinta (Movilidad, Agricultura y ahora Medio Ambiente) en sus tres gobiernos c
 Vicepresidencia, por su parte, ha cambiado de partido dos veces desde 2022: la ocupó primero Vox (Juan
 García-Gallardo), luego el PP (Isabel Blanco) y ahora se reparte entre ambos con dos vicepresidencias
 distintas.
+
+Esa consejería, la de Medio Ambiente, Vivienda y Ordenación del Territorio, es la que impulsa proyectos
+con impacto directo en la calle, como los cuatro puntos limpios móviles que Salamanca estrena el 13 de
+octubre de 2026, cofinanciados con fondos europeos Next Generation. Para ver qué otras competencias y
+partidas gestiona cada consejería, el [Panel Económico CyL](https://emirodgar.es/panel-economico-cyl) recoge
+el presupuesto autonómico y las subvenciones concedidas.
 
 ## Fuentes de los datos
 
