@@ -1,6 +1,6 @@
 ---
 title: Como hemos llegado a un mercado de vivienda casi imposible en España
-description: Un recorrido claro por 20 años de burbuja, crisis y escasez de vivienda en España, con datos actualizados a octubre de 2026: precios en récord, déficit de 755.000 viviendas y el nuevo Plan Estatal 2026-2030.
+description: Un recorrido claro por 20 años de burbuja, crisis y escasez de vivienda en España, con datos actualizados a octubre de 2026, precios en récord, déficit de 755.000 viviendas y el nuevo Plan Estatal 2026-2030.
 image: 
 author: Emirodgar
 lang: es_ES
