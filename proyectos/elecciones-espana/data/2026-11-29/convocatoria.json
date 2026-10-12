@@ -1,0 +1,30 @@
+{
+  "nombre": "Elecciones Generales 2026",
+  "tipo": "generales",
+  "fecha": "2026-11-29",
+  "horarioVotacion": "9:00 a 20:00",
+  "resumen": "Pedro Sánchez anunció el 5 de octubre de 2026 la disolución de las Cortes y la convocatoria anticipada de elecciones generales para el domingo 29 de noviembre (Real Decreto 806/2026, publicado en el BOE el 6 de octubre).",
+  "camaras": [
+    { "id": "congreso", "nombre": "Congreso de los Diputados", "escanos": 350, "mayoria": 176, "nota": "Se eligen los 350 diputados. Madrid gana un escaño y Cádiz pierde uno respecto a 2023." },
+    { "id": "senado", "nombre": "Senado", "escanos": 209, "nota": "209 de los 267 senadores se eligen por voto directo; los otros 58 los designan los parlamentos autonómicos. Ibiza y Formentera eligen cada una un senador por primera vez." }
+  ],
+  "vedaEncuestas": { "desde": "2026-11-24", "hasta": "2026-11-29", "nota": "La ley electoral (LOREG) prohíbe publicar o difundir encuestas durante los cinco días previos a la votación." },
+  "hitos": [
+    { "fecha": "2026-10-05", "titulo": "Anuncio de la convocatoria", "detalle": "El presidente del Gobierno anuncia el adelanto electoral." },
+    { "fecha": "2026-10-06", "titulo": "Publicación en el BOE", "detalle": "Real Decreto 806/2026 de disolución de las Cortes y convocatoria de elecciones." },
+    { "fecha": "2026-10-21", "fechaFin": "2026-10-26", "titulo": "Presentación de candidaturas", "detalle": "Ante las Juntas Electorales Provinciales." },
+    { "fecha": "2026-11-02", "titulo": "Proclamación de candidaturas", "detalle": "Las Juntas Electorales proclaman las listas definitivas (publicadas en el BOE el 3 de noviembre)." },
+    { "fecha": "2026-11-13", "fechaFin": "2026-11-27", "titulo": "Campaña electoral", "detalle": "Desde las 00:00 del viernes 13 hasta las 24:00 del viernes 27." },
+    { "fecha": "2026-11-19", "titulo": "Último día para solicitar el voto por correo", "detalle": "La solicitud se abrió el 6 de octubre." },
+    { "fecha": "2026-11-23", "titulo": "Último día para publicar encuestas", "detalle": "Desde el 24 de noviembre y hasta la votación no pueden difundirse sondeos." },
+    { "fecha": "2026-11-28", "titulo": "Jornada de reflexión", "detalle": "No se permite hacer campaña ni pedir el voto." },
+    { "fecha": "2026-11-29", "titulo": "Jornada de votación", "detalle": "Los colegios abren de 9:00 a 20:00." },
+    { "fecha": "2026-12-04", "fechaFin": "2026-12-07", "titulo": "Escrutinio general", "detalle": "Las Juntas Electorales Provinciales hacen el recuento oficial y proclaman a los electos." },
+    { "fecha": "2026-12-23", "titulo": "Constitución de las Cortes", "detalle": "Sesiones constitutivas del Congreso y del Senado (10:00). La investidura no tiene fecha fijada." }
+  ],
+  "fuentes": [
+    { "titulo": "Junta Electoral Central · Calendario electoral EG 2026", "url": "https://www.juntaelectoralcentral.es/cs/jec/documentos/eg2026_calendario.pdf" },
+    { "titulo": "La Moncloa · Anuncio de la convocatoria", "url": "https://www.lamoncloa.gob.es/presidente/actividades/Paginas/2026/051026-sanchez-convocatoria-elecciones.aspx" },
+    { "titulo": "Wikipedia · Elecciones generales de España de 2026", "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" }
+  ]
+}

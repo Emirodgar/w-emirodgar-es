@@ -1,0 +1,21 @@
+{
+  "lastUpdated": "12 de Octubre, 2026",
+  "elecciones": [
+    {
+      "id": "2026-11-29",
+      "nombre": "Elecciones Generales 2026",
+      "tipo": "generales",
+      "ambito": "España",
+      "fecha": "2026-11-29",
+      "estado": "proxima"
+    },
+    {
+      "id": "2023-07-23",
+      "nombre": "Elecciones Generales 2023",
+      "tipo": "generales",
+      "ambito": "España",
+      "fecha": "2023-07-23",
+      "estado": "historica"
+    }
+  ]
+}

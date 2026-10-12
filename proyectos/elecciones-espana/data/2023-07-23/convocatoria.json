@@ -1,0 +1,22 @@
+{
+ "nombre": "Elecciones Generales 2023",
+ "tipo": "generales",
+ "fecha": "2023-07-23",
+ "horarioVotacion": "9:00 a 20:00",
+ "resumen": "Elecciones anticipadas tras la convocatoria de Pedro Sánchez en mayo de 2023. Ganó el PP en votos y escaños, pero Pedro Sánchez fue investido presidente con el apoyo de Sumar y de partidos nacionalistas.",
+ "camaras": [
+  {
+   "id": "congreso",
+   "nombre": "Congreso de los Diputados",
+   "escanos": 350,
+   "mayoria": 176
+  }
+ ],
+ "hitos": [],
+ "fuentes": [
+  {
+   "titulo": "Wikipedia · Elecciones generales de España de 2023",
+   "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023"
+  }
+ ]
+}

@@ -1,0 +1,93 @@
+{
+ "criterioOrden": "Escaños obtenidos",
+ "partidos": [
+  {
+   "id": "PP",
+   "nombre": "Partido Popular",
+   "siglas": "PP",
+   "color": "#0A5EB0",
+   "ambito": "estatal",
+   "ideologia": "Centroderecha"
+  },
+  {
+   "id": "PSOE",
+   "nombre": "Partido Socialista Obrero Español",
+   "siglas": "PSOE",
+   "color": "#E2231A",
+   "ambito": "estatal",
+   "ideologia": "Centroizquierda"
+  },
+  {
+   "id": "VOX",
+   "nombre": "Vox",
+   "siglas": "Vox",
+   "color": "#5FA52A",
+   "ambito": "estatal",
+   "ideologia": "Derecha nacionalista"
+  },
+  {
+   "id": "SUMAR",
+   "nombre": "Sumar / Frente Amplio",
+   "siglas": "Sumar",
+   "color": "#D6246E",
+   "ambito": "estatal",
+   "ideologia": "Izquierda"
+  },
+  {
+   "id": "ERC",
+   "nombre": "Esquerra Republicana de Catalunya",
+   "siglas": "ERC",
+   "color": "#E8A612",
+   "ambito": "autonomico",
+   "ideologia": "Independentista de izquierdas"
+  },
+  {
+   "id": "JUNTS",
+   "nombre": "Junts per Catalunya",
+   "siglas": "Junts",
+   "color": "#14B3A6",
+   "ambito": "autonomico",
+   "ideologia": "Independentista de centroderecha"
+  },
+  {
+   "id": "BILDU",
+   "nombre": "EH Bildu",
+   "siglas": "EH Bildu",
+   "color": "#8DAA13",
+   "ambito": "autonomico",
+   "ideologia": "Izquierda independentista"
+  },
+  {
+   "id": "PNV",
+   "nombre": "Partido Nacionalista Vasco",
+   "siglas": "EAJ-PNV",
+   "color": "#3C9B3C",
+   "ambito": "autonomico",
+   "ideologia": "Nacionalismo vasco de centro"
+  },
+  {
+   "id": "BNG",
+   "nombre": "Bloque Nacionalista Galego",
+   "siglas": "BNG",
+   "color": "#6DAEDB",
+   "ambito": "autonomico",
+   "ideologia": "Nacionalismo gallego de izquierdas"
+  },
+  {
+   "id": "CC",
+   "nombre": "Coalición Canaria",
+   "siglas": "CC",
+   "color": "#E8C300",
+   "ambito": "autonomico",
+   "ideologia": "Nacionalismo canario de centro"
+  },
+  {
+   "id": "UPN",
+   "nombre": "Unión del Pueblo Navarro",
+   "siglas": "UPN",
+   "color": "#C8312F",
+   "ambito": "autonomico",
+   "ideologia": "Regionalismo navarro de centroderecha"
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "nota": "Las candidaturas se presentan del 21 al 26 de octubre y las Juntas Electorales proclaman las listas definitivas el 2 de noviembre. Hasta entonces, los cabezas de lista son los anunciados por cada partido.",
+  "candidatos": [
+    { "partidoId": "PP", "nombre": "Alberto Núñez Feijóo", "cargo": "Presidente del PP", "estado": "anunciado" },
+    { "partidoId": "PSOE", "nombre": "Pedro Sánchez", "cargo": "Presidente del Gobierno y secretario general del PSOE", "estado": "anunciado" },
+    { "partidoId": "VOX", "nombre": "Santiago Abascal", "cargo": "Presidente de Vox", "estado": "anunciado" },
+    { "partidoId": "SUMAR", "nombre": null, "cargo": null, "estado": "por_definir", "nota": "Se presentará el 17 de octubre junto con el proyecto de alianza «Frente Amplio»." },
+    { "partidoId": "PODEMOS", "nombre": null, "cargo": null, "estado": "por_definir", "nota": "Sin decidir si concurre en solitario o en coalición; Irene Montero ha expresado su intención de encabezar la lista." },
+    { "partidoId": "ERC", "nombre": "Gabriel Rufián", "cargo": "Portavoz de ERC en el Congreso", "estado": "anunciado" },
+    { "partidoId": "JUNTS", "nombre": "Míriam Nogueras", "cargo": "Portavoz de Junts en el Congreso", "estado": "anunciado" },
+    { "partidoId": "BILDU", "nombre": null, "cargo": null, "estado": "por_definir" },
+    { "partidoId": "PNV", "nombre": "Maribel Vaquero", "cargo": null, "estado": "anunciado" },
+    { "partidoId": "COMPROMIS", "nombre": null, "cargo": null, "estado": "por_definir" },
+    { "partidoId": "BNG", "nombre": "Néstor Rego", "cargo": "Portavoz del BNG en el Congreso", "estado": "anunciado" },
+    { "partidoId": "CC", "nombre": "Cristina Valido", "cargo": "Diputada de Coalición Canaria", "estado": "anunciado" },
+    { "partidoId": "UPN", "nombre": "Alberto Catalán", "cargo": "Diputado de UPN", "estado": "anunciado" },
+    { "partidoId": "SALF", "nombre": null, "cargo": null, "estado": "por_definir" }
+  ],
+  "fuentes": [
+    { "titulo": "Wikipedia · Elecciones generales de España de 2026", "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" },
+    { "titulo": "El Economista · Partidos que se presentan y cabezas de lista", "url": "https://www.eleconomista.es/actualidad/noticias/14018810/10/26/que-partidos-politicos-se-presentan-y-quienes-encabezan-las-listas-de-las-elecciones-generales-2026-en-espanael-proximo-29n.html" }
+  ]
+}

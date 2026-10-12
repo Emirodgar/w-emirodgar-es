@@ -1,0 +1,503 @@
+{
+ "aviso": "Test orientativo, no un consejo de voto. Las posiciones proceden de programas anteriores, votaciones y declaraciones públicas recientes de cada partido, con la fuente enlazada; los programas electorales de 2026 aún no se han publicado y pueden cambiarlas. Cuando no hay evidencia clara, la posición se marca como «sin posición» y esa afirmación no cuenta para ese partido. Solo incluye a los partidos de ámbito estatal con presencia en el Congreso.",
+ "afirmaciones": [
+  {
+   "id": "alquiler",
+   "tema": "Vivienda",
+   "texto": "Limitar por ley el precio de los alquileres en las zonas tensionadas.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Paloma Martín (PP): \"eliminaremos las zonas tensionadas y el intervencionismo\"; propone quitar los topes de alquiler de la Ley de Vivienda.",
+     "fuente": "https://www.eldiario.es/politica/pp-propone-eliminar-topes-precios-alquiler-ley-vivienda_1_11699904.html",
+     "fecha": "2024-10"
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "Votó a favor de la Ley de Vivienda, que permite limitar precios del alquiler en zonas tensionadas (voto previsto, abril 2023).",
+     "fuente": "https://www.ondavasca.com/el-congreso-aprueba-este-miercoles-la-ley-de-vivienda-que-limita-los-precios-de-alquiler/",
+     "fecha": "2023-04"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Votó en contra de la Ley de Vivienda junto al PP (voto previsto, abril 2023); su programa 2023 propone beneficios fiscales al alquiler.",
+     "fuente": "https://www.ondavasca.com/el-congreso-aprueba-este-miercoles-la-ley-de-vivienda-que-limita-los-precios-de-alquiler/",
+     "fecha": "2023-04"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Programa 2023: modificar la Ley de Vivienda para exigir alquiler social a grandes tenedores (resumen El Debate). Apoya la regulación de precios de la ley.",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "PODEMOS": {
+     "posicion": "favor",
+     "cita": "Podemos plantea reducir por ley un 40% el alquiler y prohibir la compra especulativa; Belarra pide intervenir el mercado.",
+     "fuente": "https://www.bolsamania.com/noticias/empresas/economia--podemos-dice-que-el-problema-en-vivienda-no-es-quien-sea-ministra-sino-un-gobierno-a-favor-de-los-rentistas--21081021.html",
+     "fecha": "2025-10"
+    }
+   }
+  },
+  {
+   "id": "defensa",
+   "tema": "Defensa",
+   "texto": "España debe elevar el gasto en defensa hacia el 3,5 %-5 % del PIB que reclama la OTAN.",
+   "posiciones": {
+    "PP": {
+     "posicion": "matizada",
+     "cita": "Sémper (PP) criticó que Sánchez eludiera el Congreso y preguntó cómo lo financiaría sin presupuestos; no aclaró si el PP asumiría el 5%.",
+     "fuente": "https://rtvc.es/socios-sanchez-asumen-gasto-militar-evitar-5-23-junio-2025/",
+     "fecha": "2025-06"
+    },
+    "PSOE": {
+     "posicion": "contra",
+     "cita": "Sánchez rechazó subir el gasto al 5% y fijó el 2,1% del PIB en declaración institucional del 22 de junio.",
+     "fuente": "https://rtvc.es/socios-sanchez-asumen-gasto-militar-evitar-5-23-junio-2025/",
+     "fecha": "2025-06"
+    },
+    "VOX": {
+     "posicion": "favor",
+     "cita": "Abascal se mostró partidario de aumentar el gasto en defensa; calificó de \"cojo\" el acuerdo OTAN por no mencionar Ceuta, Melilla ni Canarias.",
+     "fuente": "https://rtvc.es/socios-sanchez-asumen-gasto-militar-evitar-5-23-junio-2025/",
+     "fecha": "2025-06"
+    },
+    "SUMAR": {
+     "posicion": "contra",
+     "cita": "Urtasun calificó de paso en la buena dirección que Sánchez no aceptara el 5%; Sumar sigue rechazando aumentar el gasto militar.",
+     "fuente": "https://rtvc.es/socios-sanchez-asumen-gasto-militar-evitar-5-23-junio-2025/",
+     "fecha": "2025-06"
+    },
+    "PODEMOS": {
+     "posicion": "contra",
+     "cita": "Isa Serra criticó la declaración de la OTAN por exigir objetivos \"para aumentar el gasto militar\" y pidió a Sánchez que no la firmara.",
+     "fuente": "https://rtvc.es/socios-sanchez-asumen-gasto-militar-evitar-5-23-junio-2025/",
+     "fecha": "2025-06"
+    }
+   }
+  },
+  {
+   "id": "jornada",
+   "tema": "Empleo",
+   "texto": "Reducir por ley la jornada laboral máxima a 37,5 horas semanales.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Juan Baena (PP) defendió la enmienda a la totalidad: \"Tenemos que ser más productivos para trabajar menos horas, no [...] al revés\".",
+     "fuente": "https://www.elsaltodiario.com/reduccion-jornada/congreso-rechaza-reduccion-jornada-laboral-diaz-promete-volver-intentarlo",
+     "fecha": "2025-09"
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "El acuerdo de coalición PSOE-Sumar incluye reducir la jornada a 37,5 horas semanales sin rebaja salarial.",
+     "fuente": "https://forbes.es/ultima-hora/354915/sumar-confirma-que-la-reduccion-de-jornada-pactada-es-de-375-horas-y-espera-reducirla-mas-con-dialogo-social/",
+     "fecha": "2023-10"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Figaredo (Vox) calificó la norma de \"un desastre para España\" y defendió su enmienda a la totalidad; el veto salió adelante 178-170.",
+     "fuente": "https://www.elsaltodiario.com/reduccion-jornada/congreso-rechaza-reduccion-jornada-laboral-diaz-promete-volver-intentarlo",
+     "fecha": "2025-09"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Urtasun: \"El compromiso de la reducción a 37,5 horas está en el acuerdo y eso se va a cumplir\". Díaz prometió volver a intentarlo.",
+     "fuente": "https://forbes.es/ultima-hora/354915/sumar-confirma-que-la-reduccion-de-jornada-pactada-es-de-375-horas-y-espera-reducirla-mas-con-dialogo-social/",
+     "fecha": "2023-10"
+    },
+    "PODEMOS": {
+     "posicion": "favor",
+     "cita": "Califica la reforma de \"modesta\" y se acerca a las 35 horas; Sánchez Serna: \"Votaremos todo lo que sean avances\".",
+     "fuente": "https://www.elindependiente.com/espana/2025/05/06/podemos-advierte-a-yolanda-diaz-de-que-no-aprobara-una-reduccion-de-jornada-laboral-con-recortes-para-atraer-a-junts/amp/",
+     "fecha": "2025-05"
+    }
+   }
+  },
+  {
+   "id": "patrimonio",
+   "tema": "Impuestos",
+   "texto": "Mantener el impuesto a las grandes fortunas.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Programa 2023: suprimir el impuesto a las grandes fortunas (resumen de El Debate).",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "PSOE": {
+     "posicion": "matizada",
+     "cita": "Programa 2023: \"avanzar en el debate sobre la tributación de la riqueza\"; el impuesto sigue vigente (modelo 718 ejercicio 2025 en 2026).",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Programa 2023: suprimir los impuestos de Sucesiones, Donaciones y Patrimonio. En 2022 votó contra el impuesto de Podemos.",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Programa 2023: impuesto a las grandes fortunas (resumen de El Debate); propuso hacerlo permanente.",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "PODEMOS": {
+     "posicion": "favor",
+     "cita": "Txema Guijarro defendió en el Congreso el impuesto a grandes fortunas de Podemos y dijo que la reforma fiscal debía \"acelerarse\".",
+     "fuente": "https://www.estrategiasdeinversion.com/actualidad/noticias/otras/psoe-pp-vox-y-cs-tumban-en-el-congreso-el-impuesto-n-532195",
+     "fecha": "2022-06"
+    }
+   }
+  },
+  {
+   "id": "regularizacion",
+   "tema": "Inmigración",
+   "texto": "Regularizar de forma extraordinaria a los inmigrantes en situación irregular que ya viven en España.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Feijóo: \"en la España socialista, la ilegalidad se premia\"; fuentes del PP la calificaron de \"cortina de humo\".",
+     "fuente": "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html",
+     "fecha": "2026-01"
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "La portavoz del Gobierno dijo compartir el contenido de la ILP y pidió que se apruebe lo antes posible; el Gobierno aprobó el decreto en 2026.",
+     "fuente": "https://es.ara.cat/politica/regularizacion-500-000-personas-varada-congreso-psoe-descarta-decreto-alternativo_1_5513675.html",
+     "fecha": "2025-09"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Abascal: \"Sánchez promueve el efecto llamada y la invasión por decreto\". Único grupo contra la toma en consideración de la ILP.",
+     "fuente": "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html",
+     "fecha": "2026-01"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Yolanda Díaz: \"Nuestro modelo es el de los derechos humanos, la convivencia y la regularización\".",
+     "fuente": "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html",
+     "fecha": "2026-01"
+    },
+    "PODEMOS": {
+     "posicion": "favor",
+     "cita": "Montero celebró el acuerdo (\"medio millón de personas\"); Belarra: \"no son ilegales, son personas sin papeles\".",
+     "fuente": "https://www.periodicodeibiza.es/noticias/nacional/2026/01/27/2557523/regularizacion-migratoria-espana-gobierno-acuerda-podemos-reforma-extraordinaria.html",
+     "fecha": "2026-01"
+    }
+   }
+  },
+  {
+   "id": "expulsiones",
+   "tema": "Inmigración",
+   "texto": "Priorizar la expulsión de los inmigrantes en situación irregular.",
+   "posiciones": {
+    "PP": {
+     "posicion": "matizada",
+     "cita": "Plan migratorio PP: \"tolerancia cero\"; delitos graves implican perder la residencia. Rechaza tratar al inmigrante como delincuente \"por defecto\".",
+     "fuente": "https://theobjective.com/espana/politica/2025-09-29/plan-migratorio-feijoo/",
+     "fecha": "2025-09"
+    },
+    "PSOE": {
+     "posicion": "contra",
+     "cita": "Rechazó la PNL de Vox sobre expulsión inmediata; Diouf la llamó \"propaganda de miedo\" (abril 2024; posición sobre expulsión generalizada).",
+     "fuente": "https://theobjective.com/espana/politica/2024-04-23/grupos-congreso-propuesta-vox-migrantes-irregulares/",
+     "fecha": "2024-04"
+    },
+    "VOX": {
+     "posicion": "favor",
+     "cita": "Abascal propuso expulsar a los irregulares: si Vox gobierna \"se irán todos\"; Millán: \"la ley se puede cambiar\".",
+     "fuente": "https://es.ara.cat/politica/propuesta-vox-deportacion-masiva-inmigrantes-presiona-pp_1_5436826.html",
+     "fecha": "2025-07"
+    },
+    "SUMAR": {
+     "posicion": "contra",
+     "cita": "Tesh Sidi tachó la PNL de Vox de \"apocalíptica\" y dijo que votarían no \"al racismo\" (abril 2024).",
+     "fuente": "https://theobjective.com/espana/politica/2024-04-23/grupos-congreso-propuesta-vox-migrantes-irregulares/",
+     "fecha": "2024-04"
+    },
+    "PODEMOS": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    }
+   }
+  },
+  {
+   "id": "competencias",
+   "tema": "Modelo territorial",
+   "texto": "Devolver al Estado competencias hoy transferidas a las comunidades autónomas, como sanidad o educación.",
+   "posiciones": {
+    "PP": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara y reciente de su posición sobre esta afirmación."
+    },
+    "PSOE": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    },
+    "VOX": {
+     "posicion": "favor",
+     "cita": "Registró una PNL para devolver al Estado las competencias sanitarias; programa 2023: devolver Educación y recuperar las sanitarias.",
+     "fuente": "https://www.redaccionmedica.com/politica/20240412/vox-aboga-por-un-sns-recentralizado-frente-al-declive-autonomico/220296_0.amp.html",
+     "fecha": "2024-04"
+    },
+    "SUMAR": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara y reciente de su posición sobre esta afirmación."
+    },
+    "PODEMOS": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    }
+   }
+  },
+  {
+   "id": "cotizaciones",
+   "tema": "Pensiones",
+   "texto": "Subir las cotizaciones de los salarios más altos (topes máximos de cotización) para financiar las pensiones.",
+   "posiciones": {
+    "PP": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "El Gobierno (Saiz) impulsa la cuota de solidaridad sobre salarios por encima de 5.100 euros mensuales; 567 millones previstos en 2026.",
+     "fuente": "https://www.eldiario.es/economia/salarios-altos-disparan-aportacion-solidaridad-pensiones-publicas-567-millones_1_13306656.html",
+     "fecha": "2026-06"
+    },
+    "VOX": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara y reciente de su posición sobre esta afirmación."
+    },
+    "SUMAR": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    },
+    "PODEMOS": {
+     "posicion": "favor",
+     "cita": "Nacho Álvarez pidió un destope progresivo de la base máxima para que las rentas altas contribuyan más.",
+     "fuente": "https://www.moncloa.com/2021/11/17/podemos-destope-cotizaciones-rentas-altas-1092549/",
+     "fecha": "2021-11"
+    }
+   }
+  },
+  {
+   "id": "sanidad",
+   "tema": "Sanidad",
+   "texto": "Limitar los conciertos con la sanidad privada para reforzar la sanidad pública.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Rechaza la ley de gestión pública: \"No responde ni a los problemas ni a las necesidades de la sanidad\"; acusa de criminalizar la colaboración público-privada.",
+     "fuente": "https://www.redaccionmedica.com/politica/20260318/la-ley-de-gestion-publica-llegara-herida-al-congreso-por-el-modelo-catalan/260331_0.amp.html",
+     "fecha": "2026-03"
+    },
+    "PSOE": {
+     "posicion": "matizada",
+     "cita": "Fuentes del PSOE: \"es pronto para pronunciarse\" sobre el anteproyecto de ley de gestión pública del Gobierno.",
+     "fuente": "https://www.redaccionmedica.com/politica/20260318/la-ley-de-gestion-publica-llegara-herida-al-congreso-por-el-modelo-catalan/260331_0.amp.html",
+     "fecha": "2026-03"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Vox defendió que la colaboración público-privada \"es necesaria para una sanidad eficaz y eficiente\" (2024).",
+     "fuente": "https://www.redaccionmedica.com/politica/20260318/la-ley-de-gestion-publica-llegara-herida-al-congreso-por-el-modelo-catalan/260331_0.amp.html",
+     "fecha": "2026-03"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Defiende la ley y dice \"la vamos a pelear\"; objetivo: \"una ley que impida la privatización de la sanidad\".",
+     "fuente": "https://www.redaccionmedica.com/politica/20260318/la-ley-de-gestion-publica-llegara-herida-al-congreso-por-el-modelo-catalan/260331_0.amp.html",
+     "fecha": "2026-03"
+    },
+    "PODEMOS": {
+     "posicion": "favor",
+     "cita": "Unidas Podemos pidió habilitar a las CCAA para \"abrir un proceso de desprivatización de los servicios de salud\" (2022).",
+     "fuente": "https://www.redaccionmedica.com/politica/20220623/el-congreso-tumba-los-limites-de-unidas-podemos-conciertos-sanitarios/189846_0.html",
+     "fecha": "2022-06"
+    }
+   }
+  },
+  {
+   "id": "nuclear",
+   "tema": "Energía",
+   "texto": "Mantener el calendario de cierre de las centrales nucleares.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Feijóo pide la \"cancelación urgente\" del calendario de cierres nucleares y promete permanencia de las centrales más allá de 2030.",
+     "fuente": "https://www.moncloa.com/2026/08/14/pp-prorroga-almaraz-3415416/",
+     "fecha": "2026-08"
+    },
+    "PSOE": {
+     "posicion": "matizada",
+     "cita": "El Gobierno prorrogó Almaraz hasta el 8 de junio de 2030 (BOE, 14-ago-2026); el calendario general de cierres se mantiene hasta 2035.",
+     "fuente": "https://es.euronews.com/my-europe/2026/08/14/el-gobierno-de-espana-prorroga-la-central-nuclear-de-almaraz-hasta-2030-y-aplaza-su-cierre",
+     "fecha": "2026-08"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Figaredo: la \"supervivencia de Almaraz es esencial para el sistema energético de España\"; celebra el giro del PSOE.",
+     "fuente": "https://www.moncloa.com/2026/08/14/pp-prorroga-almaraz-3415416/",
+     "fecha": "2026-08"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Acusa al PSOE de \"seguir el camino de la extrema derecha\" y plegarse al \"oligopolio\" al prorrogar Almaraz; único rechazo explícito.",
+     "fuente": "https://www.moncloa.com/2026/08/14/pp-prorroga-almaraz-3415416/",
+     "fecha": "2026-08"
+    },
+    "PODEMOS": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    }
+   }
+  },
+  {
+   "id": "aborto",
+   "tema": "Derechos",
+   "texto": "Incluir el derecho al aborto en la Constitución.",
+   "posiciones": {
+    "PP": {
+     "posicion": "contra",
+     "cita": "Silvia Franco (PP) defendió la enmienda a la totalidad: reforma \"un error político y jurídico\" y \"fraude\" al procedimiento agravado.",
+     "fuente": "https://www.redaccionmedica.com/politica/20260430/el-proyecto-de-blindaje-constitucional-al-aborto-sortea-el-veto-pp-vox/262226_0.amp.html",
+     "fecha": "2026-04"
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "Ministra Redondo: reforma \"imprescindible para garantizar la libertad de interrupción voluntaria del embarazo de manera real y efectiva\".",
+     "fuente": "https://www.redaccionmedica.com/politica/20260430/el-proyecto-de-blindaje-constitucional-al-aborto-sortea-el-veto-pp-vox/262226_0.amp.html",
+     "fecha": "2026-04"
+    },
+    "VOX": {
+     "posicion": "contra",
+     "cita": "Joaquín Robles (Vox) presentó enmienda a la totalidad; calificó la reforma de \"chapuza\" y \"un debate artificioso\".",
+     "fuente": "https://www.redaccionmedica.com/politica/20260430/el-proyecto-de-blindaje-constitucional-al-aborto-sortea-el-veto-pp-vox/262226_0.amp.html",
+     "fecha": "2026-04"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Registró su propia reforma del art. 43; Martínez Barbero: es \"constitucionalmente válido y jurídicamente coherente\".",
+     "fuente": "https://www.redaccionmedica.com/politica/20260430/el-proyecto-de-blindaje-constitucional-al-aborto-sortea-el-veto-pp-vox/262226_0.amp.html",
+     "fecha": "2026-04"
+    },
+    "PODEMOS": {
+     "posicion": "matizada",
+     "cita": "Belarra: el aborto \"ya goza de una protección reforzada\"; la reforma del art. 43 rebajaría \"su nivel político y protección jurídica\".",
+     "fuente": "https://www.elsaltodiario.com/derechos-reproductivos/congreso-rechaza-enmiendas-totalidad-pp-vox-incluir-aborto-constitucion",
+     "fecha": "2026-04"
+    }
+   }
+  },
+  {
+   "id": "monarquia",
+   "tema": "Modelo de Estado",
+   "texto": "Mantener la monarquía parlamentaria como forma de Estado.",
+   "posiciones": {
+    "PP": {
+     "posicion": "favor",
+     "cita": "Feijóo: \"absoluto defensor de la monarquía parlamentaria y constitucional\", uno de los grandes pactos de la Transición.",
+     "fuente": "https://www.moncloa.com/2022/04/06/feijoo-defiende-monarquia-1351763/",
+     "fecha": "2022-04"
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "Sánchez: \"El pacto constitucional es un todo y ahí se compromete la perdurabilidad de la monarquía parlamentaria\".",
+     "fuente": "https://valenciaplaza.com/valenciaplaza/sanchez-habla-de-practicas-no-ejemplares-del-rey-emerito-e-insiste-en-el-compromiso-del-psoe-con-la-monarquia",
+     "fecha": "2020-09"
+    },
+    "VOX": {
+     "posicion": "favor",
+     "cita": "Abascal sostiene que la Corona \"goza de muy buena salud\" y que los españoles la respaldan.",
+     "fuente": "https://www.moncloa.com/2020/08/05/abascal-no-cree-corona-peligro-pese-amenazas-gobierno-298228/",
+     "fecha": "2020-08"
+    },
+    "SUMAR": {
+     "posicion": "sin_posicion",
+     "cita": "Sin evidencia clara de su posición sobre esta afirmación."
+    },
+    "PODEMOS": {
+     "posicion": "contra",
+     "cita": "Belarra reclama acabar con la monarquía: la Corona es \"el candado\" del bipartidismo; pide avanzar hacia una república.",
+     "fuente": "https://www.eldebate.com/espana/20250222/belarra-pide-fin-monarquia-sectores-reaccionarios-idea-psoe-trajo-democracia_272866.html",
+     "fecha": "2025-02"
+    }
+   }
+  },
+  {
+   "id": "vivienda_publica",
+   "tema": "Vivienda",
+   "texto": "Que el Estado construya vivienda pública masiva, con una empresa pública, para alquiler asequible.",
+   "posiciones": {
+    "PP": {
+     "posicion": "matizada",
+     "cita": "Programa 2023: promover vivienda social y movilizar suelo público (resumen de El Debate); sin empresa pública estatal masiva.",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "PSOE": {
+     "posicion": "favor",
+     "cita": "Sánchez presentó CASA 47: \"alquileres realistas para salarios reales\", viviendas protegidas \"para siempre\" y renta máxima del 30% de ingresos.",
+     "fuente": "https://rtvc.es/casa-47-primer-portal-parque-publico-estatal-vivienda-7-septiembre-2026/",
+     "fecha": "2026-09"
+    },
+    "VOX": {
+     "posicion": "matizada",
+     "cita": "Programa 2023: impulsar la construcción de viviendas sociales públicas (resumen de El Debate); no apoya un parque masivo estatal.",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "SUMAR": {
+     "posicion": "favor",
+     "cita": "Programa 2023: 1% del PIB para un parque de alquiler protegido; hoy critica que Casa 47 hace poco para resolver el problema.",
+     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
+     "fecha": "2023-07"
+    },
+    "PODEMOS": {
+     "posicion": "sin_posicion",
+     "cita": "Solo consta que califica Casa 47 de farsa (sep-2026); sin propuesta propia verificada de empresa pública.",
+     "fuente": "https://www.mallorca.com/en/magazin/news/casa-47-affordable-homes-madrid",
+     "fecha": "2026-09"
+    }
+   }
+  },
+  {
+   "id": "impuestos",
+   "tema": "Impuestos",
+   "texto": "Bajar el IRPF y el Impuesto de Sociedades aunque eso reduzca la recaudación.",
+   "posiciones": {
+    "PP": {
+     "posicion": "favor",
+     "cita": "Propuesta PP 2023: rebajar el IRPF a rentas de menos de 40.000 euros y simplificar IRPF y Sociedades para pymes.",
+     "fuente": "https://theobjective.com/espana/politica/2023-07-07/programas-pp-psoe-sumar-vox/",
+     "fecha": "2023-07"
+    },
+    "PSOE": {
+     "posicion": "matizada",
+     "cita": "Programa 2023: bajar gravámenes a salarios bajos y subirlos a rentas altas; incentivos fiscales a I+D+i en Sociedades.",
+     "fuente": "https://alicanteplaza.es/alicanteplaza/elirpfyelimpuestodesociedadesenjuegolasmedidasfiscalesdelosprogramaselectorales1",
+     "fecha": "2023-07"
+    },
+    "VOX": {
+     "posicion": "favor",
+     "cita": "Programa 2023: tipo único reducido del 15% en IRPF hasta 70.000 euros y reducir Sociedades hasta el 15%.",
+     "fuente": "https://alicanteplaza.es/alicanteplaza/elirpfyelimpuestodesociedadesenjuegolasmedidasfiscalesdelosprogramaselectorales1",
+     "fecha": "2023-07"
+    },
+    "SUMAR": {
+     "posicion": "contra",
+     "cita": "Programa 2023: más progresividad en IRPF (tramos desde 120.000 euros) y reforma del Impuesto de Sociedades para que las grandes empresas contribuyan más.",
+     "fuente": "https://alicanteplaza.es/alicanteplaza/elirpfyelimpuestodesociedadesenjuegolasmedidasfiscalesdelosprogramaselectorales1",
+     "fecha": "2023-07"
+    },
+    "PODEMOS": {
+     "posicion": "contra",
+     "cita": "Podemos exigió una subida del IRPF \"a quienes ganen a partir de 120.000 euros brutos al año\".",
+     "fuente": "https://www.vozpopuli.com/espana/ofensiva-podemos-subir-irpf-2023-quienes-ganen-10-000-euros-mes.html",
+     "fecha": "2022-07"
+    }
+   }
+  }
+ ]
+}
