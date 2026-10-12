@@ -7,7 +7,6 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-10-12
-date_modified: 2026-10-12
 folder: elecciones
 permalink: elecciones-29n-pais-al-reves
 ---
@@ -36,7 +35,7 @@ Pocas veces se ha visto jugar tan pegado a la línea. Para mí, urge revisar la 
 
 A los economistas se les acusa, con ironía, de ser buenos prediciendo el pasado. La economía es una ciencia especulativa y el comportamiento de los agentes influye mucho en el resultado. Aun así, hay una certeza sobre el futuro: **el próximo inquilino de Moncloa se encontrará un polvorín**.
 
-- **Los fondos Next Generation son historia.** Ese colchón ya no está. Aún se ven sus últimos proyectos: el martes 13 de octubre Salamanca estrena cuatro puntos limpios móviles, cofinanciados con esos fondos a través de la Junta de Castilla y León, que admitirán hasta 22 tipos de residuos. Cuando se acabe el dinero europeo, habrá que decidir qué se mantiene con presupuesto propio.
+- **Los fondos Next Generation son historia.** Ese colchón ya no está.
 - **La política comercial de EEUU es imprevisible**, y lo que se decide en Bruselas, Washington o Pekín afecta a Madrid. La economía española no es una isla, y el [pulso entre las potencias por la IA](https://emirodgar.es/china-eeuu-carrera-inteligencia-artificial) no ayuda.
 - **La inflación por los hidrocarburos es galopante.** El IPC ya se ha situado en el 4,9% en septiembre y la [pérdida de poder adquisitivo](https://emirodgar.es/evolucion-poder-adquisitivo) sigue sin corregirse. Con la [luz](https://emirodgar.es/analisis-precio-electricidad-espana) ya vimos que un precio de mercado bajo no garantiza una factura baja.
 - **La deuda limita el margen.** Con la [deuda de las autonomías](https://emirodgar.es/deuda-autonomias) y la del Estado, las restricciones presupuestarias serán protagonistas, y habrá que compaginarlas con compromisos como el [5% de la OTAN](https://emirodgar.es/gasto-defensa-otan-espana).
