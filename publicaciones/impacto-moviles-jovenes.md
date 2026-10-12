@@ -24,6 +24,8 @@ Los Centros para el Control y la Prevención de Enfermedades de EE. UU. (CDC) pu
 - **Chicos de 15 a 19 años**: la tasa pasó de 10,8 por cada 100.000 en 2007 a 14,2 en 2015, un **31% más**.
 - **Chicas de 15 a 19 años**: la tasa pasó de 2,4 a 5,1 en el mismo periodo. Es decir, **se duplicó** y alcanzó la cifra más alta de toda la serie.
 
+<img width="720" class="img-responsive" alt="Gráfico con la tasa de suicidio de adolescentes de 15 a 19 años en EE. UU. por sexo, con el repunte entre 2007 y 2015" src="https://emirodgar.es/images/impacto-moviles-jovenes.svg" />
+
 Antes de 2007, la tendencia iba a la baja. El giro llega justo en los años en que **el smartphone deja de ser un aparato de nicho y se convierte en algo que lleva todo el mundo en el bolsillo**. A esto se suman otros indicadores que apuntan en la misma dirección desde 2012-2013: más tristeza, más ansiedad, más depresión, más autolesiones y menos satisfacción vital entre los adolescentes, sobre todo entre las chicas.
 
 Esto **no demuestra por sí solo que el móvil sea la causa**. Una serie temporal que coincide con otra no es una prueba. Pero sí nos da un punto de partida bastante razonable.
