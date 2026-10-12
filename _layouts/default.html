@@ -40,10 +40,9 @@
         <hr>
         <div class="meta mb-3">
           <span class="date">
-            {% if page.date_modified == null %}
-              Publicado el {{ page.date | date: ' %d/%m/%Y' }}
-            {% else %}
-              Actualizado el {{ page.date_modified | date: ' %d/%m/%Y' }}
+            Publicado el {{ page.date | date: '%d/%m/%Y' }}
+            {% if page.date_modified %}
+              / Actualizado el {{ page.date_modified | date: '%d/%m/%Y' }}
             {% endif %}
           </span>
 

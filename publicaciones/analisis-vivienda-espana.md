@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-11-28
+date_modified: 2026-10-12
 folder: espana
 permalink: analisis-vivienda-espana
 ---

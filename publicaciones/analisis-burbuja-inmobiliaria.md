@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-08-13
+date_modified: 2026-10-12
 folder: analisis
 permalink: analisis-burbuja-inmobiliaria
 ---
