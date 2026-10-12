@@ -38,6 +38,12 @@ Aquí el contraste es útil. Los años de más televisión en EE. UU., entre fin
 
 El smartphone sí lo hace. Mete en el bolsillo **el grupo, la comparación, el estatus, el conflicto, la necesidad de aprobación y la vigilancia social**, y lo hace las 24 horas. Mi lectura, y es una hipótesis, es que el problema no es tanto el vídeo corto o el entretenimiento digital como **la combinación de móvil, redes sociales y conexión permanente**.
 
+## De los BBS al smartphone: cómo cambió la red social
+
+Las redes sociales no nacieron como las conocemos hoy. Su origen está en los primeros espacios digitales de encuentro: foros, chats, comunidades online y sistemas como los BBS, donde la gente dejaba mensajes, compartía intereses y conversaba a distancia. A finales de los 90 aparecieron plataformas que ya se parecían a una red social moderna: **SixDegrees**, lanzada en 1997, permitía crear un perfil, añadir contactos y ver conexiones entre personas. Después llegaron Friendster, MySpace y, más tarde, Facebook.
+
+Ahí cambió la escala. La red dejó de ser un lugar para comunidades específicas y pasó a ser una extensión de la identidad personal: quién soy, a quién conozco, qué escucho, qué pienso, qué fotos comparto. Y con el smartphone dieron el salto definitivo: dejaron de ser páginas que visitábamos desde el ordenador y se convirtieron en una capa permanente de la vida diaria. Ya no entrábamos a internet para socializar: la vida social empezó a estar siempre conectada.
+
 ## ¿Por qué el móvil nos aísla si nos conecta?
 
 Parece una contradicción. Con un móvil estás en contacto con todos tus amigos. Pero **conectado no es lo mismo que acompañado**:

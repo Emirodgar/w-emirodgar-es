@@ -63,6 +63,15 @@ Por eso, cuesta no pensar que esta medida **llega tarde o apunta en otra direcci
 
 Prohibir sin capacidad real de control suele generar **falsas expectativas** y una sensación de seguridad que no siempre se corresponde con la realidad.
 
+## Qué apoya realmente la evidencia
+
+Regular el uso de redes entre menores parece una dirección razonable, pero con un matiz: la evidencia apoya sobre todo **limitar la exposición y proteger determinados momentos del día**, más que prohibir sin más.
+
+- **Dos horas diarias y pausas periódicas.** Reducir temporalmente el uso puede mejorar algunos indicadores de bienestar, en parte por su efecto sobre el sueño, como muestran [algunos ensayos experimentales](https://substack.com/redirect/f87934ec-95ef-400e-b8e2-ae291ea291bd?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE). Pero las dos horas no son un umbral médico universal: importa también cómo, cuándo y para qué se usan las plataformas.
+- **Noche y horario escolar.** Los bloqueos nocturnos encajan con la [evidencia que relaciona el insomnio con problemas de salud mental](https://substack.com/redirect/940d78c1-df7e-441d-9087-957b6ca55238?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE), y retirar notificaciones en clase puede reducir interrupciones. Aun así, el problema no desaparece del todo: la consulta compulsiva puede mantenerse por el [Fear of Missing Out (FOMO)](https://substack.com/redirect/5340c0f7-54dd-45d9-8a87-af02c89b4f4a?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE), incluso sin avisos.
+
+Por eso el debate no debería quedarse en fijar un número de horas o apagar avisos. La cuestión de fondo es cómo diseñamos entornos digitales que reduzcan la fricción sobre el sueño, la atención y la autorregulación de los menores.
+
 ## ¿Qué hay detrás de este anuncio?
 
 Mi impresión es que **la medida responde más al contexto político y comunicativo que a su eficacia real**. El anuncio se hace en un foro internacional, con un mensaje potente y fácil de entender, y en un momento en el que la regulación tecnológica está en el centro del debate global.

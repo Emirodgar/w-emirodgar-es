@@ -33,6 +33,12 @@ El famoso **AI Act** ya está en marcha desde agosto de 2024, aunque como repasa
 
 Personalmente, tengo mis dudas, sobre todo si comparamos este enfoque regulatorio con el más ágil y menos garantista que está impulsando Estados Unidos con su [Presidential AI Challenge](https://emirodgar.es/analisis-ia-eeuu-europa). No es la primera vez que se promete simplificar y luego llegan más trámites. Aun así, me parece una buena noticia que, por una vez, no se hable solo de multas. Porque si sólo regulamos y no construimos, podemos acabar con pocas opciones sobre la mesa. **Imagina una Europa sin WhatsApp.** Parece exagerado, pero ya hemos vivido bloqueos que rozan ese escenario.
 
+## Una idea poco frecuente: la subsidiariedad
+
+Casi todo el debate sobre gobernar la IA repite las mismas palabras: regulación, transparencia, seguridad, supervisión humana. Por eso me ha llamado la atención un [marco de gobernanza ética de la IA](https://substack.com/redirect/2b7996d7-6b36-490c-9534-a77b266172ca?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE) desarrollado por investigadores de la Universidad Católica Juan Pablo II de Lublin, inspirado en el pensamiento social católico. Propone ocho principios, entre ellos la dignidad humana, la solidaridad y la **subsidiariedad**. Los dos primeros aparecen, con distintos nombres, en muchos documentos de ética tecnológica. El tercero es mucho menos frecuente: una decisión debería tomarse en el nivel más cercano y competente posible, en lugar de concentrarse automáticamente en una instancia superior.
+
+Frente a modelos muy centralizados, donde las decisiones sobre sistemas, límites o usos acaban en grandes laboratorios, gobiernos o departamentos tecnológicos, la subsidiariedad obliga a preguntarse quién está realmente en mejores condiciones de decidir cada cosa. Algunas decisiones requerirán regulación global; otras quizá deberían quedarse en manos de organizaciones, equipos, profesionales o incluso usuarios. Casi todos preguntamos quién debe controlar sistemas cada vez más capaces. La subsidiariedad añade una pregunta más incómoda: qué decisiones no deberíamos centralizar nunca. Y es una buena pregunta para una Unión Europea que legisla mucho desde arriba.
+
 ## ¿Por qué es importante esto?
 
 Europa ha sido tradicionalmente buena en regulación, pero no tanto en escalar productos tecnológicos. Este plan puede ser una oportunidad para equilibrar la balanza. Se quiere pasar del “control” al “impulso”. Y eso, en sectores estratégicos como la IA, es crucial.

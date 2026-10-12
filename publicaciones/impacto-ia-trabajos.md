@@ -39,6 +39,19 @@ Estos datos encajan con el patrón que ya describíamos en nuestro repaso de los
 
 ---
 
+## ¿Y qué pasa con el mérito?
+
+Durante décadas hemos asumido, al menos en teoría, que estudiar más, adquirir mejores capacidades y trabajar bien aumentaba las probabilidades de progresar. La IA obliga a revisar esa idea. Si una parte creciente del valor económico depende menos de lo que una persona sabe hacer y más de su acceso a modelos, datos, capital o infraestructuras, la relación entre mérito y progreso se vuelve mucho más frágil. Y esto lo pienso en primera persona: soy hijo de ese mérito y de esa movilidad social llegada "desde cero".
+
+- Tareas que antes diferenciaban a perfiles por experiencia, formación o capacidad analítica pueden ser automatizadas o amplificadas por herramientas disponibles de forma desigual.
+- Si la productividad individual depende cada vez más del entorno tecnológico al que se tiene acceso, podrían ganar peso factores como la empresa en la que trabajas, las herramientas disponibles o la capacidad de inversión, frente a la experiencia o el esfuerzo acumulado.
+
+Buena parte de la conversación sobre IA y empleo se centra en cuántos puestos desaparecerán. Quizá la pregunta más profunda sea qué ocurrirá con la posibilidad de ascender social y profesionalmente si cambian los mecanismos que hasta ahora premiaban determinadas capacidades.
+
+Y hay un matiz que conviene no olvidar: nos gusta pensar que nuestras capacidades son fruto solo del esfuerzo individual, pero buena parte de lo que sabemos procede de otras personas, de alguien que nos enseñó, nos corrigió o nos abrió una puerta. Un artículo de The New York Times pone el foco en esa idea: quienes progresan mejor suelen **pedir ayuda antes y mejor**. Pedir apoyo no implica falta de capacidad; muchas veces es reconocer antes los límites propios y aprovechar el conocimiento que ya existe en el entorno. Mentores, colegas, expertos o equipos complementarios reducen errores, contrastan decisiones y dan más criterio. Saber pedir ayuda sin convertirla en dependencia importa más de lo que imaginamos, también cuando la ayuda es una herramienta de IA.
+
+---
+
 ## Acciones urgentes para evitar el "futuro sin ascensor"
 
 Si queremos evitar un futuro en el que los jóvenes no puedan ni siquiera poner el pie en el primer escalón de la carrera profesional, hay que actuar ya.

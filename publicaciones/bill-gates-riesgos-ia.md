@@ -35,6 +35,15 @@ El tercer punto de Gates es el que menos titulares suele generar y probablemente
 
 Gates no es el único que ha puesto el foco ahí, pero su advertencia pesa distinto viniendo de alguien que construyó buena parte de su fortuna con tecnología de consumo masivo.
 
+## Frenar, pero sin quedarse atrás: la presión competitiva
+
+Cada gran tecnología ha obligado a equilibrar avance y riesgos. Ocurrió con el ADN recombinante en la [conferencia de Asilomar](https://substack.com/redirect/bc323f15-e921-4d17-95a9-150994405932?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE) de 1975 y, décadas después, con el debate estadounidense sobre los [límites a la criptografía](https://substack.com/redirect/e1a7f15e-2abc-4196-a487-22aa772a3754?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE). La IA comparte parte de esa historia, pero con una diferencia: esta vez la carrera científica convive con una competencia comercial extraordinariamente intensa.
+
+- Las empresas pueden reconocer riesgos y, a la vez, temer que cualquier pausa deje espacio a un rival. El precedente del [Boeing 737 Max](https://substack.com/redirect/2fe04a39-951b-4546-af36-9246aef36bee?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE) recuerda hasta qué punto la presión por competir puede deteriorar los mecanismos internos de seguridad.
+- Algunas compañías plantean límites, pausas o mayores controles, pero no siempre es fácil distinguir cuánto responde a seguridad y cuánto a estrategia empresarial, como analiza [este artículo de The Conversation](https://substack.com/redirect/3478be8f-50ac-4870-af53-5aaf703630ac?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE).
+
+Quizá el problema no sea solo que las empresas de IA sepan cuándo frenar, sino que puedan hacerlo sin asumir que el competidor que no frene se llevará la carrera. Y ahí la autorregulación se queda corta.
+
 ## Por qué es relevante
 
 Gates no se ha vuelto antitecnológico. Sigue pensando que la IA puede mejorar sanidad, educación, ciencia y productividad, y en eso no se diferencia de lo que ha dicho siempre. Lo que cambia es el mensaje de fondo: esta vez el despliegue no se puede dejar solo en manos del mercado. Reservar empleos, gravar a los robots y poner límites en la infancia son tres formas distintas de decir lo mismo: la sociedad tiene que decidir dónde pone el freno, porque la tecnología sola no lo va a hacer por ella.
