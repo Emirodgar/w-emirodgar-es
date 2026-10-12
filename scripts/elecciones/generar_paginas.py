@@ -6,6 +6,7 @@
 Escribe:
   a-quien-votar/index.html          (test de afinidad ampliado + contenido explicativo)
   programas-electorales/index.html  (comparador de posiciones por tema)
+  encuestas-elecciones-generales/index.html  (media de encuestas; en la veda genera una versión sin sondeos)
 
 El contenido (tablas, FAQ, JSON-LD) se escribe en el HTML para que los buscadores lo lean sin ejecutar
 JavaScript; el JS solo añade la interactividad. Hay que volver a ejecutarlo cada vez que cambien los
@@ -72,7 +73,8 @@ siglas_lista = ", ".join(p["siglas"] for p in partidos[:-1]) + " y " + partidos[
 
 # ---------------------------------------------------------------- bloques comunes
 GROUP_NAV = [
-    ("Panel y encuestas", "/proyectos/elecciones-espana/", "chart"),
+    ("Panel", "/proyectos/elecciones-espana/", "chart"),
+    ("Encuestas", "/encuestas-elecciones-generales/", "enc"),
     ("A quién votar", "/a-quien-votar/", "test"),
     ("Programas electorales", "/programas-electorales/", "prog"),
     ("Cómo votar", "/proyectos/elecciones-espana/#sec-votar", "votar"),
@@ -142,7 +144,8 @@ def topbar(crumbs, active):
 
 def related(active):
     cards = {
-        "chart": ("Panel y encuestas", "Cuenta atrás, calendario, media de encuestas, candidatos y Congreso.", "/proyectos/elecciones-espana/", "fa-chart-line"),
+        "chart": ("Panel de las elecciones", "Cuenta atrás, calendario, candidatos, Congreso y cómo se vota.", "/proyectos/elecciones-espana/", "fa-chart-pie"),
+        "enc": ("Encuestas: media de sondeos", "Quién lidera las encuestas de las elecciones generales y cómo evolucionan.", "/encuestas-elecciones-generales/", "fa-chart-line"),
         "test": ("A quién votar: test de afinidad", f"{n_stm} preguntas para saber con qué partido coincides más, con sus fuentes.", "/a-quien-votar/", "fa-wand-magic-sparkles"),
         "prog": ("Programas electorales por temas", "Qué propone cada partido en vivienda, sanidad, pensiones, impuestos…", "/programas-electorales/", "fa-scale-balanced"),
         "votar": ("Cómo votar el 29N", "Voto por correo, papeletas, plazos y el simulador de la ley D'Hondt.", "/proyectos/elecciones-espana/#sec-votar", "fa-envelope-open-text"),
@@ -151,7 +154,7 @@ def related(active):
         f'<a href="{u}" class="block bg-white rounded-xl border border-slate-200 p-4 hover:border-brand-500 transition"><i class="fa-solid {ic} text-brand-600 mb-2"></i><h3 class="font-semibold text-sm text-slate-900">{e(t)}</h3><p class="text-xs text-slate-500 mt-1 leading-snug">{e(d)}</p></a>'
         for k, (t, d, u, ic) in cards.items() if k != active
     )
-    return f"""<section aria-labelledby="rel" class="space-y-3"><h2 id="rel" class="text-lg font-bold">Sigue explorando las elecciones generales</h2><div class="grid sm:grid-cols-3 gap-3">{items}</div></section>"""
+    return f"""<section aria-labelledby="rel" class="space-y-3"><h2 id="rel" class="text-lg font-bold">Sigue explorando las elecciones generales</h2><div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-3">{items}</div></section>"""
 
 
 def footer():
@@ -525,7 +528,225 @@ def build_programas():
     out.write_text(h + "\n" + body, encoding="utf-8")
 
 
+
+# ---------------------------------------------------------------- ENCUESTAS
+import datetime as _dt
+
+
+def _d(iso):
+    return _dt.date.fromisoformat(iso)
+
+
+def _avg(ref, polls, pid_):
+    num = den = 0.0
+    for s_ in polls:
+        age = (ref - _d(s_["fecha"])).days
+        v = s_["voto"].get(pid_)
+        if age < 0 or age > 30 or v is None:
+            continue
+        w = 0.5 ** (age / 14) * s_["muestra"] ** 0.5
+        num += w * v
+        den += w
+    return num / den if den else None
+
+
+def _pct(x, dec=1):
+    return "–" if x is None else f"{x:.{dec}f}".replace(".", ",") + " %"
+
+
+def svg_chart(polls, dates, series_ids):
+    W, H, L, R_, T, B = 760, 340, 44, 90, 16, 36
+    t0, t1 = _d(dates[0]), _d(dates[-1])
+    span = max((t1 - t0).days, 1)
+    allv = [v for s_ in polls for k, v in s_["voto"].items() if k in series_ids]
+    ymax = (int(max(allv) // 5) + 1) * 5
+    X = lambda dt: L + (dt - t0).days / span * (W - L - R_)
+    Y = lambda v: T + (1 - v / ymax) * (H - T - B)
+    g = ""
+    for v in range(0, ymax + 1, 5):
+        g += f'<line x1="{L}" x2="{W - R_}" y1="{Y(v):.1f}" y2="{Y(v):.1f}" stroke="#e2e8f0"/><text x="{L - 6}" y="{Y(v) + 4:.1f}" text-anchor="end" font-size="11" fill="#64748b">{v} %</text>'
+    m = t0.replace(day=1)
+    while m <= t1:
+        if m >= t0:
+            g += f'<text x="{X(m):.1f}" y="{H - 14}" text-anchor="middle" font-size="11" fill="#64748b">{MESES[m.month - 1][:3]}</text>'
+        m = (m.replace(day=28) + _dt.timedelta(days=4)).replace(day=1)
+    lines = pts = lab = ""
+    for sid in series_ids:
+        col = pid[sid]["color"]
+        series = [(_d(dt), _avg(_d(dt), polls, sid)) for dt in dates]
+        series = [(a, b) for a, b in series if b is not None]
+        if not series:
+            continue
+        coords = " ".join(f"{X(a):.1f},{Y(b):.1f}" for a, b in series)
+        lines += f'<polyline fill="none" stroke="{col}" stroke-width="2.6" stroke-linejoin="round" stroke-linecap="round" points="{coords}"><title>Media {e(pid[sid]["siglas"])}</title></polyline>'
+        for s_ in polls:
+            if sid in s_["voto"]:
+                pts += f'<circle cx="{X(_d(s_["fecha"])):.1f}" cy="{Y(s_["voto"][sid]):.1f}" r="2.2" fill="{col}" opacity=".28"><title>{e(s_["empresa"])} ({fecha_larga(s_["fecha"])}): {e(pid[sid]["siglas"])} {_pct(s_["voto"][sid])}</title></circle>'
+        lab += f'<text x="{W - R_ + 6}" y="{Y(series[-1][1]) + 4:.1f}" font-size="12" font-weight="700" fill="{col}">{e(pid[sid]["siglas"])} {_pct(series[-1][1])}</text>'
+    desc_ = "Evolución de la media de encuestas de " + ", ".join(pid[i]["siglas"] for i in series_ids)
+    return f'<svg viewBox="0 0 {W} {H}" class="w-full h-auto" role="img" aria-label="{e(desc_)}"><title>{e(desc_)}</title>{g}{pts}{lines}{lab}</svg>'
+
+
+def build_encuestas():
+    path = "/encuestas-elecciones-generales/"
+    enc = load(base / "encuestas.json")
+    hoy = _dt.date.today()
+    v = conv.get("vedaEncuestas")
+    veda = bool(enc.get("ocultas")) or bool(v and _d(v["desde"]) <= hoy <= _d(v["hasta"]))
+    out_dir = ROOT / "encuestas-elecciones-generales"
+    out_dir.mkdir(exist_ok=True)
+    crumbs = [("Emirodgar.es", "/"), ("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Encuestas", path)]
+
+    if veda or not enc.get("sondeos"):
+        title = "Encuestas elecciones generales 2026: prohibida su publicación"
+        desc = f"La ley electoral prohíbe publicar encuestas en los cinco días previos a la votación del {fecha_elec}. Cuándo vuelven y dónde ver el resto de la guía electoral."
+        nota = v["nota"] if v else "La ley electoral prohíbe publicar encuestas en los días previos a la votación."
+        faq = [("¿Por qué no se muestran encuestas ahora?", nota + " Las encuestas volverán a mostrarse después de la jornada de votación.")]
+        jsonld = [webpage_ld(title, desc, path), breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Encuestas", path)]), faq_ld(faq)]
+        main = f"""<section class="space-y-3"><h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Encuestas de las elecciones generales: periodo de prohibición</h1>
+            <p class="bg-amber-50 border border-amber-300 text-amber-900 rounded-lg p-4 text-sm">{e(faq[0][1])}</p>
+            <p class="text-slate-600">Mientras tanto, consulta el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/">panel de las elecciones</a>, los <a class="text-brand-600 underline" href="/programas-electorales/">programas electorales por temas</a> o el <a class="text-brand-600 underline" href="/a-quien-votar/">test «¿A quién votar?»</a>.</p></section>
+            {faq_block(faq)}{related("enc")}"""
+        html_ = head(title, desc, path, jsonld) + "\n" + topbar(crumbs, "enc") + f'\n<main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">{main}</main>{footer()}</body></html>\n'
+        (out_dir / "index.html").write_text(html_, encoding="utf-8")
+        return
+
+    polls_all = enc["sondeos"]
+    polls = [x for x in polls_all if x["tipo"] != "oficial"]
+    latest = max(_d(x["fecha"]) for x in polls)
+    latest_iso = latest.isoformat()
+    ids = [i for i in pid if any(i in x["voto"] for x in polls)]
+    cur = {i: _avg(latest, polls, i) for i in ids}
+    prev = {i: _avg(latest - _dt.timedelta(days=14), polls, i) for i in ids}
+    ranked = sorted([i for i in ids if cur[i] is not None], key=lambda i: -cur[i])
+    win = [x for x in polls if 0 <= (latest - _d(x["fecha"])).days <= 30]
+    in_test = {p["id"] for p in partidos}
+    top5 = [i for i in ranked if i in in_test][:5]
+    lead, second, third = ranked[0], ranked[1], ranked[2]
+    gap = f"{cur[lead] - cur[second]:.1f}".replace(".", ",")
+    cis = next((x for x in sorted(polls_all, key=lambda x: x["fecha"], reverse=True) if x["tipo"] == "oficial"), None)
+    resumen = (f"A {fecha_larga(latest_iso)}, la media de las {len(win)} encuestas de los últimos 30 días sitúa a {pid[lead]['siglas']} en el {_pct(cur[lead])} de estimación de voto, "
+               f"seguido de {pid[second]['siglas']} ({_pct(cur[second])}) y {pid[third]['siglas']} ({_pct(cur[third])}).")
+    title = "Encuestas elecciones generales 2026: media de sondeos"
+    desc = (f"Media de las encuestas de las elecciones generales del {fecha_elec}: {pid[lead]['siglas']} {_pct(cur[lead])}, {pid[second]['siglas']} {_pct(cur[second])}, "
+            f"{pid[third]['siglas']} {_pct(cur[third])}. Evolución, todos los sondeos y metodología. Actualizada el {modified_txt}.")
+    cis_txt = ""
+    if cis:
+        top_cis = max(cis["voto"], key=cis["voto"].get)
+        cis_txt = f" El CIS, organismo público con metodología propia, publicó el {fecha_larga(cis['fecha'])} una estimación distinta: {pid[top_cis]['siglas']} {_pct(cis['voto'][top_cis])}."
+    faq = [
+        ("¿Qué partido gana las encuestas de las elecciones generales 2026?",
+         f"{resumen} {pid[lead]['siglas']} lidera la media con {gap} puntos de ventaja sobre {pid[second]['siglas']}. Son estimaciones de voto y no de escaños: el reparto final depende de los resultados en cada provincia."),
+        ("¿Cómo se calcula la media de encuestas?", enc["metodologia"]),
+        ("¿Por qué las encuestas dan resultados tan distintos?",
+         "Cada empresa usa su propia muestra, método de entrevista (telefónico, online, mixto) y modelo para estimar el voto de quienes no responden o dudan. Por eso conviene mirar la media y la tendencia más que una encuesta aislada." + cis_txt),
+        ("¿Cuál es el margen de error de una encuesta?",
+         "Para una muestra de 1.000 personas es de aproximadamente ±3,1 puntos con un 95 % de confianza, y de ±1,5 puntos con 4.000. Esa cifra se refiere al conjunto de la muestra; el margen es mayor en los partidos pequeños y en las estimaciones por provincia."),
+        ("¿Qué encuesta es la más fiable?",
+         "No hay una respuesta objetiva antes de las elecciones: solo se puede comparar cada encuesta con el resultado real después de la votación. Mientras tanto, la media de varias empresas reduce el efecto de los errores individuales."),
+        ("¿Hay estimaciones de escaños?",
+         "Esta página recoge estimaciones de voto. Convertirlas en escaños requiere modelos por provincia (ley D'Hondt y barrera del 3 %); en el panel de las elecciones tienes un simulador de la ley D'Hondt y el Congreso actual."),
+        ("¿Cuándo se pueden publicar encuestas electorales?",
+         "La ley electoral prohíbe publicarlas durante los cinco días previos a la votación; en estas elecciones, del 24 al 29 de noviembre de 2026. Esta página retira los sondeos durante ese periodo y los recupera después de la votación."),
+    ]
+    jsonld = [webpage_ld(title, desc, path),
+              {"@context": "https://schema.org", "@type": "Dataset", "name": "Encuestas de las elecciones generales de España 2026", "description": desc,
+               "url": SITE + path, "inLanguage": "es-ES", "dateModified": latest_iso, "creator": {"@type": "Person", "name": "Emilio Rodríguez"},
+               "isBasedOn": [f["url"] for f in enc.get("fuentes", [])], "variableMeasured": "Estimación de voto (%)"},
+              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Encuestas", path)]), faq_ld(faq)]
+
+    rows = ""
+    for i in ranked:
+        vals = [x["voto"][i] for x in win if i in x["voto"]]
+        d_ = None if prev.get(i) is None else cur[i] - prev[i]
+        if d_ is None:
+            dtxt = "–"
+        elif abs(d_) < 0.05:
+            dtxt = "= 0,0"
+        else:
+            dtxt = ("▲ +" if d_ > 0 else "▼ −") + f"{abs(d_):.1f}".replace(".", ",")
+        dcls = "text-slate-400" if d_ is None or abs(d_) < 0.05 else ("text-emerald-600" if d_ > 0 else "text-rose-600")
+        rows += (f'<tr class="border-t border-slate-100"><th scope="row" class="px-3 py-2 text-left"><span class="inline-block w-2.5 h-2.5 rounded-full mr-1.5" style="background:{pid[i]["color"]}"></span>{e(pid[i]["nombre"])}</th>'
+                 f'<td class="px-3 py-2 text-right font-bold tabular-nums">{_pct(cur[i])}</td><td class="px-3 py-2 text-right text-xs font-semibold {dcls}">{dtxt}</td>'
+                 f'<td class="px-3 py-2 text-right text-slate-500 tabular-nums">{_pct(min(vals))} – {_pct(max(vals))}</td><td class="px-3 py-2 text-right text-slate-500">{len(vals)}</td></tr>')
+    media_tbl = ('<div class="overflow-x-auto bg-white rounded-xl border border-slate-200"><table class="w-full text-sm"><caption class="sr-only">Media de las encuestas por partido</caption>'
+                 '<thead class="text-xs text-slate-500"><tr><th scope="col" class="px-3 py-2 text-left">Partido</th><th scope="col" class="px-3 py-2 text-right">Media</th>'
+                 '<th scope="col" class="px-3 py-2 text-right">Cambio en 2 semanas</th><th scope="col" class="px-3 py-2 text-right">Rango (mín – máx)</th><th scope="col" class="px-3 py-2 text-right">Sondeos</th></tr></thead>'
+                 f'<tbody>{rows}</tbody></table></div>')
+
+    def poll_rows(lst):
+        cols = top5 + [i for i in ranked if i not in top5][:2]
+        head_ = "".join(f'<th scope="col" class="px-2 py-2 text-right" style="color:{pid[i]["color"]}">{e(pid[i]["siglas"])}</th>' for i in cols)
+        body_ = ""
+        for x in lst:
+            mx = max(x["voto"].get(i, -1) for i in cols)
+            cells = "".join(
+                f'<td class="px-2 py-2 text-right tabular-nums {"font-bold text-slate-900" if x["voto"].get(i) == mx else ""}">{"–" if i not in x["voto"] else _pct(x["voto"][i]).replace(" %", "")}</td>'
+                for i in cols)
+            ofi = ' <span class="text-[10px] bg-slate-100 text-slate-600 px-1.5 rounded">oficial</span>' if x["tipo"] == "oficial" else ""
+            med = f' <span class="text-xs text-slate-400">({e(x["medio"])})</span>' if x["medio"] != x["empresa"] else ""
+            muestra = f'{x["muestra"]:,}'.replace(",", ".")
+            body_ += (f'<tr class="border-t border-slate-100"><td class="px-3 py-2 whitespace-nowrap"><time datetime="{x["fecha"]}">{fecha_larga(x["fecha"])}</time></td>'
+                      f'<td class="px-2 py-2">{e(x["empresa"])}{med}{ofi}</td><td class="px-2 py-2 text-right tabular-nums">{muestra}</td>{cells}</tr>')
+        return ('<div class="overflow-x-auto bg-white rounded-xl border border-slate-200"><table class="w-full text-sm"><thead class="text-xs text-slate-500"><tr>'
+                '<th scope="col" class="px-3 py-2 text-left">Fecha</th><th scope="col" class="px-2 py-2 text-left">Empresa (medio)</th><th scope="col" class="px-2 py-2 text-right">Muestra</th>'
+                f'{head_}</tr></thead><tbody>{body_}</tbody></table></div>')
+
+    ordered = sorted(polls_all, key=lambda x: x["fecha"], reverse=True)
+    last_by = {}
+    for x in ordered:
+        last_by.setdefault(x["empresa"], x)
+    por_empresa = sorted(last_by.values(), key=lambda x: x["fecha"], reverse=True)
+    dates = sorted({x["fecha"] for x in polls})
+    chart = svg_chart(polls_all, dates, top5)
+    legend = " ".join(f'<span class="inline-flex items-center gap-1.5 text-xs"><span class="inline-block w-3" style="background:{pid[i]["color"]};height:3px"></span>{e(pid[i]["siglas"])}</span>' for i in top5)
+    fuentes = "".join(f'<li><a class="text-brand-600 underline" href="{e(f["url"])}" target="_blank" rel="noopener">{e(f["titulo"])}</a></li>' for f in enc.get("fuentes", []))
+    cis_note = " El CIS aparece marcado como «oficial» y no entra en la media." if any(x["tipo"] == "oficial" for x in polls_all) else ""
+    veda_txt = f"del {fecha_larga(v['desde'])} al {fecha_larga(v['hasta'])}" if v else "los días previos a la votación"
+
+    body = f"""{topbar(crumbs, "enc")}
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">
+        <section class="space-y-3">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Encuestas de las elecciones generales 2026: media de sondeos</h1>
+            <p class="text-lg text-slate-600">{e(resumen)}</p>
+            <p class="text-sm text-slate-500">Elecciones generales: <strong>{e(fecha_elec)}</strong>. Último sondeo incluido: {e(fecha_larga(latest_iso))}.</p>
+            {byline()}
+        </section>
+
+        <section aria-labelledby="media" class="space-y-3"><h2 id="media" class="text-xl font-bold">Media de las encuestas hoy</h2>
+            <p class="text-sm text-slate-600">Estimación de voto (%) ponderada por antigüedad y tamaño de muestra, con los sondeos privados de los últimos 30 días. No son escaños.</p>
+            {media_tbl}</section>
+
+        <section aria-labelledby="evol" class="space-y-3"><h2 id="evol" class="text-xl font-bold">Evolución de la media desde {MESES[_d(dates[0]).month - 1]}</h2>
+            <div class="bg-white rounded-xl border border-slate-200 p-4"><div class="flex flex-wrap gap-3 mb-2">{legend}<span class="text-xs text-slate-400">Los puntos claros son sondeos individuales.</span></div>{chart}</div></section>
+
+        <section aria-labelledby="ultimas" class="space-y-3"><h2 id="ultimas" class="text-xl font-bold">Última encuesta de cada empresa</h2>
+            <p class="text-sm text-slate-600">Porcentaje de estimación de voto. En negrita, el partido con más voto estimado en cada sondeo.{cis_note}</p>
+            {poll_rows(por_empresa)}</section>
+
+        <section class="prose-x text-slate-700"><h2 class="text-xl font-bold text-slate-900">Cómo leer las encuestas electorales</h2>
+            <p>Una encuesta no es una predicción: es una fotografía del momento, con un margen de error. Con 1.000 entrevistas el margen es de unos ±3 puntos; por eso diferencias pequeñas entre dos partidos no son concluyentes. Las empresas difieren en el método de entrevista y en el modelo con el que estiman el voto de los indecisos, lo que explica que unas encuestas den resultados distintos a otras. Fíjate en la <strong>tendencia de la media</strong> más que en un único sondeo.</p>
+            <p>Estas cifras son <strong>estimación de voto</strong>. En unas elecciones al Congreso los escaños se reparten por provincias con la ley D'Hondt, así que un porcentaje no se traduce linealmente en escaños. Puedes probar el reparto en el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/#sec-votar">simulador D'Hondt del panel</a> y ver el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/#sec-congreso">Congreso actual</a>.</p>
+            <h2 class="text-xl font-bold text-slate-900">Metodología de la media</h2>
+            <p>{e(enc["metodologia"])}</p>
+            <p class="text-sm">Fuentes de los sondeos:</p><ul class="list-disc pl-6 text-sm">{fuentes}</ul>
+            <p class="text-sm">Las encuestas se retiran de esta página durante el periodo en que la ley electoral prohíbe publicarlas ({e(veda_txt)}).</p></section>
+
+        <details class="bg-white rounded-xl border border-slate-200 p-4"><summary class="cursor-pointer font-semibold text-slate-900 flex justify-between items-center"><span>Histórico completo de sondeos ({len(polls_all)})</span><i class="fa-solid fa-chevron-down chev text-xs transition-transform"></i></summary><div class="mt-3">{poll_rows(ordered)}</div></details>
+
+        {faq_block(faq)}
+        <section class="bg-brand-50 border border-brand-100 rounded-xl p-5 space-y-1"><h2 class="font-bold text-slate-900">¿Con qué partido coincides tú?</h2><p class="text-sm text-slate-600">Las encuestas dicen cuánto voto tiene cada partido, no cuál se parece más a ti. Haz el <a class="text-brand-600 underline font-semibold" href="/a-quien-votar/">test «¿A quién votar?»</a> o compara sus <a class="text-brand-600 underline font-semibold" href="/programas-electorales/">programas electorales por temas</a>.</p></section>
+        {related("enc")}
+    </main>
+    {footer()}
+</body>
+</html>
+"""
+    (out_dir / "index.html").write_text(head(title, desc, path, jsonld) + "\n" + body, encoding="utf-8")
+
+
 if __name__ == "__main__":
     build_a_quien_votar()
     build_programas()
+    build_encuestas()
     print(f"OK · {n_stm} afirmaciones · {n_temas} temas · {len(partidos)} partidos · {modified_txt}")

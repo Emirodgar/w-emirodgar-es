@@ -34,6 +34,7 @@ Además del panel hay dos páginas con contenido estático que se **generan** a 
 
 - `a-quien-votar/index.html`: test de afinidad ampliado + explicación + FAQ.
 - `programas-electorales/index.html`: comparador de posiciones por tema, con cita y fuente.
+- `encuestas-elecciones-generales/index.html`: media de encuestas, gráfico SVG, tablas por empresa e histórico completo. Se regenera a partir de `encuestas.json`; **si `ocultas` es true (o la fecha de hoy cae en la veda), genera una versión sin sondeos**.
 
 **Después de tocar `afinidad.json`, `partidos.json`, `candidatos.json` o `convocatoria.json`, ejecuta:**
 
@@ -41,7 +42,7 @@ Además del panel hay dos páginas con contenido estático que se **generan** a 
 python -I scripts/elecciones/generar_paginas.py
 ```
 
-y comprueba las dos páginas en el navegador. No edites esos HTML a mano: se sobrescriben. Las páginas se enlazan entre
+y comprueba las tres páginas en el navegador. No edites esos HTML a mano: se sobrescriben. Las páginas se enlazan entre
 sí y con el panel (navegación de grupo, bloque «Sigue explorando», migas y JSON-LD); si añades una página al grupo,
 actualiza `GROUP_NAV` y `related()` en el script, y añádela a `sitemap.xml`.
 
@@ -100,7 +101,7 @@ en `partidos.json` con la URL oficial y revisa `afinidad.json` para ese partido.
 ### C) Veda de encuestas (OBLIGATORIO antes del 24 de noviembre de 2026)
 La ley electoral prohíbe publicar encuestas los 5 días previos al voto (24-28 nov y el 29). La página las oculta sola en esas fechas por
 seguridad, pero el JSON sigue siendo público en el repositorio. Por tanto, **el 23 de noviembre por la noche**: copia `encuestas.json` fuera
-del repo, sustitúyelo por `{"ocultas": true, "sondeos": []}`, haz commit y despliega. Tras la votación, restaura el fichero.
+del repo, sustitúyelo por `{"ocultas": true, "sondeos": []}`, **ejecuta `generar_paginas.py`** (la página `/encuestas-elecciones-generales/` queda sin sondeos y el HTML estático ya no los contiene), haz commit y despliega. Tras la votación, restaura el fichero y vuelve a ejecutar el generador.
 
 ### D) Resultados (noche del 29N y escrutinio del 4 al 7 de diciembre)
 Rellena `resultados.json`, restaura las encuestas, pon `partidos.json.escanosActuales` sin tocar (es el Congreso disuelto) y, cuando se

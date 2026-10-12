@@ -27,7 +27,7 @@ Cuando se convocan elecciones, la información útil para decidir el voto está 
 - **Cómo se vota**, con un simulador de la ley D'Hondt, y unas **preguntas frecuentes** generadas a partir de los datos.
 - **Histórico**: cada convocatoria queda archivada con sus resultados.
 
-El proyecto se completa con dos guías específicas: [¿A quién votar? Test de afinidad completo](https://emirodgar.es/a-quien-votar/), con temas prioritarios y explicación de cada resultado, y el [comparador de programas electorales](https://emirodgar.es/programas-electorales/), con las posiciones de cada partido por temas y su fuente.
+El proyecto se completa con tres guías específicas: el [análisis de las encuestas de las elecciones generales](https://emirodgar.es/encuestas-elecciones-generales/), con la media, la evolución y la tabla por empresa; [¿A quién votar? Test de afinidad completo](https://emirodgar.es/a-quien-votar/), con temas prioritarios y explicación de cada resultado; y el [comparador de programas electorales](https://emirodgar.es/programas-electorales/), con las posiciones de cada partido por temas y su fuente.
 
 ## Una plantilla fija para todas las elecciones
 
