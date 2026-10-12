@@ -1,5 +1,5 @@
 ---
-title: Impacto de los móviles en los jóvenes: lo que dicen los datos
+title: "Impacto de los móviles en los jóvenes: lo que dicen los datos"
 description: El malestar adolescente empeora desde 2012. Repasamos los datos de suicidio del CDC y los estudios causales sobre móvil y redes sociales para ver qué sabemos y qué no.
 image: 
 author: Emirodgar
