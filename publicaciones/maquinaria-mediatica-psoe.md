@@ -7,12 +7,15 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-11-28
+date_modified: 2026-10-12
 folder: espana
 permalink: /la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez
 
 ---
 
 ## ¿Por qué hablar de la maquinaria mediática del PSOE ahora?
+
+*Actualizado en octubre de 2026, con las elecciones del 29N convocadas, nuevos datos de publicidad institucional y los últimos pasos judiciales de los casos que rodean al PSOE y a la familia del presidente.*
 
 En los últimos años, el **Partido Socialista Obrero Español** ha pasado de ser un partido más dentro del [tablero político](https://emirodgar.es/glosario-politico) a construir una auténtica **maquinaria de comunicación**. 
 No hablamos sólo de buenos discursos o de campañas bien diseñadas, sino de un sistema integrado que combina **control institucional**, **relato emocional** y **presencia digital estratégica**.
@@ -32,6 +35,8 @@ En el caso de RTVE, el cambio legal que rebajó la mayoría necesaria para elegi
 
 La Agencia EFE añade otra capa. Con miles de profesionales y millones de noticias distribuidas cada año, se convierte en un **multiplicador internacional del relato gubernamental**. Cuando controlas una gran agencia de noticias, no sólo influyes en España: condicionas cómo se cuenta el país hacia fuera.
 
+Desde diciembre de 2024 preside la corporación José Pablo López, que necesitó una segunda votación en el Congreso porque no alcanzó los dos tercios en la primera. Y con las elecciones del 29N en el horizonte, los debates televisados que organicen RTVE y el resto de cadenas serán una buena prueba de hasta dónde llega esa percepción de neutralidad.
+
 El problema no es sólo quién manda, sino **cómo se usa esa posición**. Cuando un medio público se percibe como **herramienta de propaganda** en lugar de servicio público, la confianza se erosiona. Y sin confianza, el sistema mediático pierde una de sus funciones clave: ser contrapoder.
 
 ### ¿Cómo se utiliza la publicidad institucional como palanca de influencia?
@@ -39,6 +44,10 @@ El problema no es sólo quién manda, sino **cómo se usa esa posición**. Cuand
 El segundo pilar es el uso de la **publicidad institucional**. En los últimos años se han alcanzado cifras récord en inversión pública en campañas de comunicación. Más allá del número, lo relevante es el **criterio de reparto**.
 
 Cuando el Gobierno decide quién recibe campañas y quién no, la publicidad institucional se convierte en una forma de **premio y castigo**. Un medio muy crítico puede ver cómo cae la inversión pública; uno más alineado, cómo se mantiene o aumenta. No hace falta una llamada directa: el mensaje se entiende solo.
+
+Los números de 2026 ayudan a ponerlo en contexto. El Consejo de Ministros aprobó un **Plan de Publicidad y Comunicación Institucional de 155,6 millones de euros** para 124 campañas (en 2025 había 146 previstas), con el medio digital como canal más utilizado. El reparto concreto no ha estado exento de polémica: El Español, que es parte del conflicto, denuncia que Moncloa le destina solo 57.300 euros de ese total.
+
+El Gobierno ha respondido con un **anteproyecto de ley de Publicidad del Sector Público** que fija un tope: **ningún medio podrá obtener más del 35% de sus ingresos anuales de publicidad institucional**, y que crea un **registro de medios** con propiedad, gestión y origen de ingresos. Se presenta como adaptación del Reglamento europeo de Libertad de los Medios (EMFA), aunque los críticos recuerdan que el reglamento exige criterios objetivos y transparentes, pero no fija ningún porcentaje. Habrá que ver qué queda de la propuesta tras su paso por la CNMC y las Cortes, ahora disueltas.
 
 Además, el debate sobre los llamados "pseudomedios" y la idea de limitar el acceso a fondos públicos bajo etiquetas poco definidas abre la puerta a un escenario peligroso: **el Gobierno decide qué medio es “legítimo” y cuál no**. Y cuando quien reparte el dinero también define las reglas, el incentivo para la crítica disminuye.
 
@@ -158,6 +167,14 @@ Primero, aislamiento progresivo de las personas implicadas: se las aparta, se le
 
 Esta fórmula puede funcionar a corto plazo si el caso se percibe como algo aislado. Pero cuando se encadenan varias tramas y aparecen nombres del núcleo duro de la organización, el relato empieza a **agrietarse**.
 
+Y desde que se escribió este artículo, los procedimientos han avanzado:
+
+- **Caso Koldo:** el Tribunal Supremo notificó en junio de 2026 su sentencia, que condena al exministro José Luis Ábalos a más de 24 años de prisión y a Koldo García a casi 20, por organización criminal, cohecho, malversación y tráfico de influencias. Las presuntas mordidas en obra pública se investigan en una pieza separada en la Audiencia Nacional, con Santos Cerdán, ex secretario de Organización del PSOE, entre los investigados.
+- **Begoña Gómez:** el juez Peinado la envió en septiembre de 2026 a juicio con jurado popular por tráfico de influencias y malversación. La Fiscalía pide su absolución, y el juicio no se espera antes de mediados de 2027.
+- **David Sánchez:** el hermano del presidente fue condenado en primera instancia por la Audiencia de Badajoz a nueve años de inhabilitación por prevaricación administrativa, aunque fue absuelto de tráfico de influencias. La sentencia no es firme: la defensa la ha recurrido y la Fiscalía sostiene que vulnera la presunción de inocencia.
+
+Conviene separar cada caso, porque su estado procesal es muy distinto: unos tienen sentencia, otros están pendientes de recurso y otros ni siquiera han llegado a juicio. Pero el efecto sobre el relato, ese de la "regeneración" y la ejemplaridad, es acumulativo.
+
 ### ¿Está el partido perdiendo el control del relato en estas crisis?
 
 Diversos análisis apuntan a que, ante la acumulación de escándalos y la sensación de desconexión entre discurso y realidad, el PSOE ha empezado a **perder parte del relato**, especialmente entre los más jóvenes.
@@ -183,4 +200,19 @@ Si el mismo Gobierno que exige claridad absoluta a los medios sobre propiedad y 
 
 La narrativa del líder acosado, perseguido por poderes oscuros, funciona bien cuando se utiliza de forma puntual. Pero su repetición constante puede generar **fatiga**.
 
-Si cada crítica, escándalo o decisión judicial se presenta como una operación contra el presidente, una parte del electorado puede acabar desconectando: **deja de ser creíble que todo sea siempre una conspiración**. En ese punto, la estrategia deja d
+Si cada crítica, escándalo o decisión judicial se presenta como una operación contra el presidente, una parte del electorado puede acabar desconectando: **deja de ser creíble que todo sea siempre una conspiración**. En ese punto, la estrategia deja de ser un activo para convertirse en un lastre.
+
+
+## ¿Qué cambia con las elecciones del 29N?
+
+El 5 de octubre de 2026, Pedro Sánchez disolvió las Cortes y convocó elecciones generales para el **29 de noviembre**, unos nueve meses antes del final natural de la legislatura. Lo hace con un Gobierno en funciones y sin una mayoría estable desde que Junts rompió el acuerdo de investidura en octubre de 2025. Es, además, el momento en que más se pone a prueba cada pilar de esta maquinaria: la campaña, los debates, la publicidad institucional y la presencia en redes. Sobre el contexto económico y político que rodea esa cita ya hablé en [este artículo sobre el 29N](https://emirodgar.es/elecciones-29n-pais-al-reves).
+
+Las encuestas muestran, de nuevo, el contraste entre el relato y los datos. El CIS sigue dando ventaja al PSOE, mientras que las encuestas privadas sitúan al PP entre cinco y ocho puntos por delante, y la media de institutos ronda el 32% del PP, el 26,5% del PSOE y el 18,6% de Vox. En varios sondeos, PP y Vox suman cerca de 200 escaños. Para contrastarlo, tienes todas las [encuestas de intención de voto](https://emirodgar.es/encuestas-intencion-voto) en un mismo sitio.
+
+## Conclusión: una maquinaria potente, pero no invulnerable
+
+La maquinaria mediática del PSOE ha demostrado ser muy eficaz para **marcar agenda, movilizar a su base y controlar el marco del debate**. Se apoya en tres patas: el control institucional, un relato emocional muy bien trabajado y una presencia digital cada vez más profesional.
+
+Pero también tiene límites claros: la dependencia de una sola figura, la distancia entre el discurso y la práctica, el desgaste de la victimización y el efecto acumulado de los casos judiciales. Y la ley de publicidad institucional, si sale adelante, será un buen termómetro de si el Gobierno quiere un ecosistema mediático más plural o simplemente cambiar quién decide el reparto.
+
+Sea cual sea el resultado del 29N, queda una lección para todos los partidos: **ganar el relato no sustituye a gobernar, y la credibilidad es lo único que no se puede fabricar**.
