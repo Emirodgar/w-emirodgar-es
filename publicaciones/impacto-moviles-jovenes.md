@@ -76,6 +76,17 @@ Aquí es donde me interesa ser riguroso. Las correlaciones son fáciles de encon
 
 No son todos los que hay, y existen estudios que no encuentran efectos. Sin embargo, **los que sí los encuentran suelen tener muestras mucho más grandes**, y casi todos apuntan en el mismo sentido: menos redes, más bienestar.
 
+## Las redes también son refugio, pero no sustituto
+
+Conviene no caricaturizar. Las redes pueden funcionar como un [espacio de apoyo para muchos jóvenes que se sienten mal](https://substack.com/redirect/6f7eb61d-9f03-41d7-add1-4277d098d2c4?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE): permiten hablar, encontrar comunidades, compartir experiencias y reducir la sensación de aislamiento. Durante el confinamiento, de hecho, evitaron que la desconexión social fuera total.
+
+El problema aparece cuando el refugio sustituye a la vida social real:
+
+- **Evitación**: si se usan como vía para esquivar situaciones que generan ansiedad, se entra en un círculo peligroso. Cuanto más se evita el encuentro presencial, más cuesta afrontarlo después.
+- **Tipo de contenido**: un uso sesgado expone a comparaciones constantes con vidas aparentemente perfectas, cuerpos idealizados, logros ajenos o imágenes de dolor emocional. En vez de aliviar el malestar, la red puede amplificarlo.
+
+Por eso las redes no son buenas ni malas: depende de cómo y para qué se usen.
+
 ## Lo que no sabemos (todavía)
 
 Conviene ser honestos:
@@ -83,6 +94,7 @@ Conviene ser honestos:
 - **Falta una explicación completa de los mecanismos.** No sabemos qué parte del daño viene del tiempo de uso, qué parte del tipo de contenido y qué parte del diseño de las plataformas.
 - **Los efectos varían** según la edad, el sexo y el tipo de uso. Las chicas de 11 a 13 años parecen especialmente sensibles.
 - **El suicidio es multicausal.** Incluso si el móvil influye, no es la única variable.
+- **Las redes no son solo un riesgo**: para muchos jóvenes con malestar funcionan también como apoyo y comunidad, así que el efecto depende del uso.
 - **Las tecnologías anteriores también despertaron alarma** y la mayoría acabaron integrándose sin catástrofe.
 
 ## ¿Entonces, qué hacemos?

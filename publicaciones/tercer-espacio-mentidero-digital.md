@@ -43,6 +43,10 @@ Mi explicación, que es una hipótesis, tiene tres partes. El mentidero digital 
 
 Tampoco quiero idealizar. El mentidero también difundía bulos, y el nombre lo dice. La diferencia es que el bulo del bar tenía alcance de barrio y dueño conocido.
 
+## Un apunte sobre Byung-Chul Han
+
+Este malestar (cansancio, hiperconexión, pérdida del otro, agotamiento digital) es el terreno donde Byung-Chul Han ha conectado con tanta gente, y es de los filósofos más críticos con la tecnología y la IA. Reconozco el mérito: pone nombre a algo que se siente. Pero me cuesta ir más allá. Su estilo aforístico es sugerente y literario, aunque no siempre sistemático, y sus diagnósticos evocan más que demuestran. Además, tiende a presentar la sociedad digital y el capitalismo como fuerzas casi totalizantes, con poco margen para la ambivalencia, la resistencia o los usos positivos. Lo veo más como un gran productor de imágenes críticas que como alguien que ofrece modelos empíricos de la sociedad contemporánea. Sigo sin entender muy bien por qué se le da tanto recorrido. Para eso prefiero los datos de arriba.
+
 ## Qué hacemos
 
 No creo que se pueda recrear un mentidero por decreto. Sí podemos decidir dónde pasamos el tiempo. Esto es lo que me parece sensato:
