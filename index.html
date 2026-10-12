@@ -101,6 +101,20 @@
 
             <div class="proyecto-card proyecto-card--featured">
                 <span class="proyecto-badge">Panel en vivo</span>
+                <h3>Elecciones en España</h3>
+                <p>Guía y seguimiento de cada convocatoria electoral: calendario, partidos y candidatos, media de encuestas, test de afinidad con fuentes e histórico. Empieza con las generales del 29 de noviembre.</p>
+                <div class="proyecto-chart-wrapper" id="eleccionesSparkline" aria-hidden="true"></div>
+                <div class="proyecto-chart-legend">
+                    <span><i class="legend-swatch" style="border-top-color:#0A5EB0"></i> PP</span>
+                    <span><i class="legend-swatch" style="border-top-color:#E2231A"></i> PSOE</span>
+                    <span><i class="legend-swatch" style="border-top-color:#5FA52A"></i> Vox</span>
+                </div>
+                <p id="eleccionesResumen" class="proyecto-resumen">Cargando resumen…</p>
+                <a href="https://emirodgar.es/elecciones-espana" class="link proyecto-cta">Explorar el panel completo →</a>
+            </div>
+
+            <div class="proyecto-card proyecto-card--featured">
+                <span class="proyecto-badge">Panel en vivo</span>
                 <h3>MacroData España</h3>
                 <p>Indicadores macroeconómicos de España: inflación, prima de riesgo, tipos del BCE, Euríbor y Fed, PIB y paro, con un termómetro propio de riesgo de recesión.</p>
                 <div class="proyecto-chart-wrapper" id="macrodataSparkline" aria-hidden="true"></div>
@@ -319,6 +333,65 @@
                     if (resumenEl) {
                         resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
                     }
+                });
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const sparklineEl = document.getElementById('eleccionesSparkline');
+            const resumenEl = document.getElementById('eleccionesResumen');
+            if (!sparklineEl) return;
+
+            const DAY = 86400000;
+            const toDate = iso => { const [y, m, d] = iso.split('-').map(Number); return new Date(y, m - 1, d); };
+            const fmtPct = n => n.toFixed(1).replace('.', ',') + ' %';
+            const getJSON = url => fetch(url, { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(url); return r.json(); });
+            // Media ponderada: antigüedad (vida media 14 días) x raíz de la muestra, sondeos de los 30 días previos
+            const average = (ref, polls, id) => {
+                let num = 0, den = 0;
+                polls.forEach(s => {
+                    const age = (ref - toDate(s.fecha)) / DAY;
+                    if (age < 0 || age > 30 || s.voto[id] == null) return;
+                    const w = Math.pow(0.5, age / 14) * Math.sqrt(s.muestra);
+                    num += w * s.voto[id]; den += w;
+                });
+                return den ? num / den : null;
+            };
+
+            getJSON('proyectos/elecciones-espana/data/elecciones.json')
+                .then(idx => {
+                    const e = idx.elecciones.find(x => x.estado !== 'historica') || idx.elecciones[0];
+                    const base = 'proyectos/elecciones-espana/data/' + e.id + '/';
+                    return Promise.all([getJSON(base + 'convocatoria.json'), getJSON(base + 'encuestas.json'), getJSON(base + 'resultados.json').catch(() => ({ disponible: false })), e]);
+                })
+                .then(([conv, enc, res, e]) => {
+                    const t = new Date(); const today = new Date(t.getFullYear(), t.getMonth(), t.getDate());
+                    const days = Math.round((toDate(e.fecha) - today) / DAY);
+                    const v = conv.vedaEncuestas;
+                    const veda = enc.ocultas || (v && today >= toDate(v.desde) && today <= toDate(v.hasta));
+                    let head = days > 1 ? 'Faltan ' + days + ' días para las ' + conv.nombre.toLowerCase() + '.' : days === 1 ? 'Mañana se vota en las ' + conv.nombre.toLowerCase() + '.' : days === 0 ? 'Hoy se vota en las ' + conv.nombre.toLowerCase() + '.' : conv.nombre + ': ya se ha votado.';
+                    if (res.disponible || veda || !enc.sondeos.length) {
+                        resumenEl.textContent = head + (veda ? ' Las encuestas no se pueden publicar en los cinco días previos a la votación.' : '');
+                        return;
+                    }
+                    const polls = enc.sondeos.filter(s => s.tipo !== 'oficial');
+                    const dates = [...new Set(polls.map(s => s.fecha))].sort();
+                    const last = toDate(dates[dates.length - 1]);
+                    const series = [['PP', '#0A5EB0'], ['PSOE', '#E2231A'], ['VOX', '#5FA52A']].map(([id, color]) => ({
+                        id, color, pts: dates.slice(-16).map(d => average(toDate(d), polls, id))
+                    }));
+                    const all = series.flatMap(s => s.pts).filter(x => x != null);
+                    const min = Math.floor(Math.min(...all)) - 1, max = Math.ceil(Math.max(...all)) + 1;
+                    const W = 320, H = 110, px = 12, py = 10;
+                    const n = series[0].pts.length;
+                    const x = i => px + i * (W - 2 * px) / Math.max(n - 1, 1);
+                    const y = val => H - py - (val - min) / (max - min) * (H - 2 * py);
+                    const paths = series.map(s => '<polyline fill="none" stroke="' + s.color + '" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="' + s.pts.map((p, i) => p == null ? '' : x(i).toFixed(1) + ',' + y(p).toFixed(1)).filter(Boolean).join(' ') + '"/>').join('');
+                    sparklineEl.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evolución de la media de encuestas de PP, PSOE y Vox" style="width:100%;height:100%">' + paths + '</svg>';
+                    const cur = series.map(s => s.id.replace('VOX', 'Vox') + ' ' + fmtPct(s.pts[s.pts.length - 1]));
+                    resumenEl.textContent = head + ' Media de encuestas: ' + cur.join(', ') + '.';
+                })
+                .catch(() => {
+                    resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
                 });
         });
 
