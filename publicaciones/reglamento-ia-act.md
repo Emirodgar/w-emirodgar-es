@@ -56,6 +56,12 @@ Con este calendario ya más claro, el trabajo práctico para cualquier empresa q
 
 Vale la pena recordar que este reglamento conviene entenderlo junto al debate sobre soberanía tecnológica europea que ya tratamos con [ALIA y la promesa fallida de la IA pública en España](https://emirodgar.es/alia-promesa-fallida-ia-publica-espana): Europa quiere liderar en regulación mientras sigue dependiendo casi por completo de infraestructura y modelos de fuera.
 
+## ChatGPT ya es "infraestructura": la DSA entra en juego
+
+El AI Act no es la única norma europea que afecta a los asistentes de IA. Bruselas ha [designado a ChatGPT como motor de búsqueda online de muy gran tamaño (VLOSE)](https://substack.com/redirect/1e9eccc3-67b6-4c1e-8356-a970c329888e?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE) bajo la Ley de Servicios Digitales (DSA). OpenAI declaró que ChatGPT Search alcanzó unos **159,1 millones de destinatarios activos mensuales medios en la UE** en el semestre cerrado el 31 de marzo de 2026, muy por encima del umbral de **45 millones** que fija la DSA.
+
+Desde la notificación, OpenAI tiene **cuatro meses** para cumplir obligaciones reforzadas: evaluar y mitigar riesgos sistémicos (contenidos ilícitos, menores, salud mental, derechos fundamentales, procesos electorales, seguridad pública), ser más transparente y facilitar auditorías. La lectura de fondo es que, cuando un asistente de IA alcanza escala masiva y media el acceso a la información, deja de tratarse como un producto experimental y empieza a parecerse a una infraestructura de confianza pública.
+
 ## La ley más ambiciosa, aplicada a fogonazos
 
 El AI Act nació con la ambición de ser el estándar mundial de regulación de IA, a la manera en que el RGPD lo fue para la protección de datos. Lo que estamos viendo en 2026 es una ley que cumple esa ambición sobre el papel, pero que en la práctica avanza a trompicones: parte ya aplicada, parte que llega este agosto, y la parte más dura, aplazada otra vez. Ni tan rígida como parecía en 2024, ni tan simple como pide la industria. Habrá que ver si para 2027 seguimos hablando del mismo calendario.
