@@ -34,6 +34,7 @@ Además del panel hay dos páginas con contenido estático que se **generan** a 
 
 - `a-quien-votar/index.html`: test de afinidad ampliado + explicación + FAQ.
 - `programas-electorales/index.html`: comparador de posiciones por tema, con cita y fuente.
+- `como-votar-por-correo/index.html`: guía del voto por correo (plazos oficiales de `convocatoria.json → votoPorCorreo`: solicitud, envío de documentación y entrega; revisa las fechas contra el calendario de la Junta Electoral Central y Correos en cada convocatoria).
 - `encuestas-elecciones-generales/index.html`: media de encuestas, gráfico SVG, tablas por empresa e histórico completo. Se regenera a partir de `encuestas.json`; **si `ocultas` es true (o la fecha de hoy cae en la veda), genera una versión sin sondeos**.
 
 **Después de tocar `afinidad.json`, `partidos.json`, `candidatos.json` o `convocatoria.json`, ejecuta:**
@@ -42,7 +43,7 @@ Además del panel hay dos páginas con contenido estático que se **generan** a 
 python -I scripts/elecciones/generar_paginas.py
 ```
 
-y comprueba las tres páginas en el navegador. No edites esos HTML a mano: se sobrescriben. Las páginas se enlazan entre
+y comprueba las cuatro páginas en el navegador. No edites esos HTML a mano: se sobrescriben. Las páginas se enlazan entre
 sí y con el panel (navegación de grupo, bloque «Sigue explorando», migas y JSON-LD); si añades una página al grupo,
 actualiza `GROUP_NAV` y `related()` en el script, y añádela a `sitemap.xml`.
 

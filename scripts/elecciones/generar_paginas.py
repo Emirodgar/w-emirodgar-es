@@ -6,6 +6,7 @@
 Escribe:
   a-quien-votar/index.html          (test de afinidad ampliado + contenido explicativo)
   programas-electorales/index.html  (comparador de posiciones por tema)
+  como-votar-por-correo/index.html  (guía del voto por correo; lee convocatoria.json → votoPorCorreo)
   encuestas-elecciones-generales/index.html  (media de encuestas; en la veda genera una versión sin sondeos)
 
 El contenido (tablas, FAQ, JSON-LD) se escribe en el HTML para que los buscadores lo lean sin ejecutar
@@ -77,7 +78,7 @@ GROUP_NAV = [
     ("Encuestas", "/encuestas-elecciones-generales/", "enc"),
     ("A quién votar", "/a-quien-votar/", "test"),
     ("Programas electorales", "/programas-electorales/", "prog"),
-    ("Cómo votar", "/proyectos/elecciones-espana/#sec-votar", "votar"),
+    ("Voto por correo", "/como-votar-por-correo/", "correo"),
 ]
 
 
@@ -148,6 +149,7 @@ def related(active):
         "enc": ("Encuestas: media de sondeos", "Quién lidera las encuestas de las elecciones generales y cómo evolucionan.", "/encuestas-elecciones-generales/", "fa-chart-line"),
         "test": ("A quién votar: test de afinidad", f"{n_stm} preguntas para saber con qué partido coincides más, con sus fuentes.", "/a-quien-votar/", "fa-wand-magic-sparkles"),
         "prog": ("Programas electorales por temas", "Qué propone cada partido en vivienda, sanidad, pensiones, impuestos…", "/programas-electorales/", "fa-scale-balanced"),
+        "correo": ("Cómo votar por correo", "Plazos oficiales, pasos y documentación para votar por correo el 29N.", "/como-votar-por-correo/", "fa-envelope"),
         "votar": ("Cómo votar el 29N", "Voto por correo, papeletas, plazos y el simulador de la ley D'Hondt.", "/proyectos/elecciones-espana/#sec-votar", "fa-envelope-open-text"),
     }
     items = "".join(
@@ -745,8 +747,120 @@ def build_encuestas():
     (out_dir / "index.html").write_text(head(title, desc, path, jsonld) + "\n" + body, encoding="utf-8")
 
 
+
+# ---------------------------------------------------------------- VOTO POR CORREO
+CORREO_JS = r"""
+(function () {
+    const el = document.getElementById('estado-plazo'); if (!el) return;
+    const D = JSON.parse(el.dataset.fechas);
+    const d = s => { const [y, m, dd] = s.split('-').map(Number); return new Date(y, m - 1, dd); };
+    const t = new Date(); const today = new Date(t.getFullYear(), t.getMonth(), t.getDate());
+    const days = (a, b) => Math.round((b - a) / 86400000);
+    const f = s => { const x = d(s); return x.getDate() + ' de ' + ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][x.getMonth()]; };
+    const pl = n => n + (n === 1 ? ' día' : ' días');
+    let msg, tone = 'bg-emerald-50 border-emerald-200 text-emerald-900';
+    if (today < d(D.solDesde)) msg = 'Aún no se puede solicitar: el plazo se abre el ' + f(D.solDesde) + '.';
+    else if (today <= d(D.solHasta)) { const n = days(today, d(D.solHasta)); msg = 'Todavía puedes solicitarlo: el plazo termina el ' + f(D.solHasta) + ' (' + (n === 0 ? 'es hoy' : 'quedan ' + pl(n)) + ').'; if (n <= 7) tone = 'bg-amber-50 border-amber-300 text-amber-900'; }
+    else if (today <= d(D.remHasta)) { tone = 'bg-amber-50 border-amber-300 text-amber-900'; const n = days(today, d(D.remHasta)); msg = 'El plazo para solicitarlo ya ha terminado. Si ya lo pediste, puedes entregar tu voto en Correos hasta el ' + f(D.remHasta) + (n === 0 ? ' (es hoy).' : ' (quedan ' + pl(n) + ').'); }
+    else if (today < d(D.votacion)) { tone = 'bg-rose-50 border-rose-200 text-rose-900'; msg = 'Los plazos del voto por correo han terminado. Si no lo solicitaste, puedes votar en persona el ' + f(D.votacion) + '.'; }
+    else if (today.getTime() === d(D.votacion).getTime()) { tone = 'bg-sky-50 border-sky-200 text-sky-900'; msg = 'Hoy es la jornada de votación (colegios abiertos de ' + D.horario + ').'; }
+    else { tone = 'bg-slate-50 border-slate-200 text-slate-700'; msg = 'Estas elecciones ya se han celebrado.'; }
+    el.className = 'rounded-xl border p-4 text-sm font-semibold ' + tone; el.textContent = msg;
+})();
+"""
+
+
+def build_voto_correo():
+    vc = conv.get("votoPorCorreo")
+    if not vc:
+        return
+    path = "/como-votar-por-correo/"
+    sd, sh = fecha_larga(vc["solicitudDesde"]), fecha_larga(vc["solicitudHasta"])
+    ed, eh = fecha_larga(vc["envioDesde"]), fecha_larga(vc["envioHasta"])
+    rd, rh = fecha_larga(vc["remisionDesde"]), fecha_larga(vc["remisionHasta"])
+    title = "Cómo votar por correo en las elecciones generales 2026"
+    desc = (f"Guía para votar por correo el {fecha_elec}: quién puede, cómo pedirlo en Correos u online, plazos oficiales "
+            f"(solicitud hasta el {sh}, entrega del voto hasta el {rh}) y qué hacer con la documentación.")
+    faq = [
+        ("¿Hasta cuándo se puede pedir el voto por correo en las elecciones generales de 2026?",
+         f"Desde el {sd} hasta el {sh}, según el calendario electoral oficial de la Junta Electoral Central. Se puede solicitar en cualquier oficina de Correos o por internet."),
+        ("¿Cómo se pide el voto por correo?",
+         "En persona en una oficina de Correos, presentando el original del DNI, el pasaporte o el carné de conducir (el trámite es personal), o por internet en la web de Correos con DNI electrónico o un certificado digital válido y AutoFirma. La Junta Electoral Central ha admitido también la versión simple de la app MiDNI para acreditar la identidad."),
+        ("¿Hasta cuándo hay que entregar el voto por correo?",
+         f"Desde que recibes la documentación y hasta el {rh}, según el calendario oficial (antes del tercer día previo a la votación). Algunas fuentes publican otras fechas, así que conviene confirmarlo con Correos al solicitarlo. Hay que entregarlo en una oficina de Correos acreditando tu identidad; no basta con echarlo a un buzón."),
+        ("¿Qué documentación recibo y qué tengo que hacer con ella?",
+         "Recibes por correo certificado las papeletas y sobres electorales, el certificado de inscripción en el censo, un sobre dirigido a tu mesa electoral y las instrucciones. Eliges la papeleta del Congreso y la del Senado, metes cada una en su sobre, y todo junto con el certificado de censo en el sobre dirigido a la mesa. Se entrega en Correos sin necesidad de sello."),
+        ("¿Puedo votar en persona si ya he pedido el voto por correo?",
+         "No. Una vez aceptada la solicitud y anotada en el censo, no puedes votar presencialmente el día de las elecciones, aunque finalmente no llegues a enviar tu voto por correo. Por eso conviene pedirlo solo si estás seguro de que no podrás acudir a tu mesa."),
+        ("¿Quién puede votar por correo?",
+         "Cualquier persona inscrita en el censo electoral que prevea no estar en su localidad el día de la votación o que no pueda acudir a su colegio por cualquier motivo, como trabajo, viaje o enfermedad. No hace falta residir fuera de tu municipio."),
+        ("¿Qué pasa si estoy enfermo o tengo una incapacidad?",
+         "Si no puedes hacer la solicitud en persona, puede hacerla otra persona en tu nombre con un certificado médico oficial gratuito y una autorización notarial o consular. La autorización es individual y una misma persona no puede representar a varios electores."),
+        ("¿Y si vivo en el extranjero?",
+         "Los residentes en el extranjero inscritos en el censo CERA tienen un procedimiento propio a través de los consulados. Consulta las instrucciones del Ministerio de Asuntos Exteriores o de tu consulado."),
+    ]
+    jsonld = [webpage_ld(title, desc, path),
+              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Cómo votar por correo", path)]),
+              faq_ld(faq)]
+    fechas = json.dumps({"solDesde": vc["solicitudDesde"], "solHasta": vc["solicitudHasta"], "remHasta": vc["remisionHasta"],
+                         "votacion": actual["fecha"], "horario": conv["horarioVotacion"]})
+    cal = [("Solicitud del voto por correo", f"{sd} – {sh}", "En oficinas de Correos o por internet."),
+           ("Envío de la documentación", f"{ed} – {eh}", "La Oficina del Censo Electoral la envía por correo certificado."),
+           ("Entrega del voto en Correos", f"{rd} – {rh}", "Desde que recibes la documentación; plazo máximo según el calendario oficial."),
+           ("Jornada de votación", fecha_elec, f"Colegios abiertos de {conv['horarioVotacion']}. Si has pedido el voto por correo, no puedes votar en persona.")]
+    cal_html = "".join(f'<tr class="border-t border-slate-100"><th scope="row" class="px-3 py-2.5 text-left font-semibold">{e(a)}</th><td class="px-3 py-2.5 whitespace-nowrap">{e(b)}</td><td class="px-3 py-2.5 text-slate-600">{e(c)}</td></tr>' for a, b, c in cal)
+    pasos = [
+        ("Pide el voto por correo", f"Hasta el {sh}. En persona en una oficina de Correos con el original del DNI, pasaporte o carné de conducir, o por internet con DNI electrónico o certificado digital y AutoFirma (la Junta Electoral Central admite también la versión simple de MiDNI)."),
+        ("Recibe la documentación", f"Te llegará por correo certificado entre el {ed} y el {eh} al domicilio que indiques o, si no, al del censo. Debes acreditar tu identidad al recibirla; si no hay nadie, te dejarán un aviso para recogerla."),
+        ("Prepara tu voto", "Elige la papeleta del Congreso y la del Senado, mete cada una en su sobre de votación y, con el certificado de inscripción en el censo, introdúcelas en el sobre dirigido a tu mesa electoral."),
+        ("Entrégalo en Correos", f"Hasta el {rh}, en una oficina de Correos y acreditando tu identidad. No lleva franqueo. No basta con dejarlo en un buzón. Correos habilitará cita previa para este trámite."),
+    ]
+    pasos_html = "".join(f'<li class="flex gap-4"><span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-600 text-white font-extrabold flex items-center justify-center">{i}</span><div><h3 class="font-semibold text-slate-900">{e(t)}</h3><p class="text-sm text-slate-600 mt-1 leading-relaxed">{e(d_)}</p></div></li>' for i, (t, d_) in enumerate(pasos, 1))
+    fuentes = "".join(f'<li><a class="text-brand-600 underline" href="{e(f["url"])}" target="_blank" rel="noopener">{e(f["titulo"])}</a></li>' for f in vc.get("fuentes", []))
+    body = f"""{topbar([("Emirodgar.es", "/"), ("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Cómo votar por correo", path)], "correo")}
+    <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">
+        <section class="space-y-3">
+            <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Cómo votar por correo en las elecciones generales del 29N</h1>
+            <p class="text-lg text-slate-600">Puedes pedir el voto por correo hasta el <strong>{e(sh)}</strong> y entregarlo en Correos hasta el <strong>{e(rh)}</strong>. Estos son los pasos, los plazos oficiales y lo que tienes que saber antes de solicitarlo.</p>
+            {byline()}
+            <div id="estado-plazo" data-fechas='{e(fechas)}' class="rounded-xl border p-4 text-sm font-semibold bg-slate-50 border-slate-200 text-slate-700" role="status">Plazo de solicitud: hasta el {e(sh)}.</div>
+        </section>
+
+        <section aria-labelledby="plazos" class="space-y-3"><h2 id="plazos" class="text-xl font-bold">Plazos del voto por correo</h2>
+            <div class="overflow-x-auto bg-white rounded-xl border border-slate-200"><table class="w-full text-sm"><caption class="sr-only">Calendario oficial del voto por correo</caption><thead class="text-xs text-slate-500"><tr><th scope="col" class="px-3 py-2 text-left">Qué</th><th scope="col" class="px-3 py-2 text-left">Cuándo</th><th scope="col" class="px-3 py-2 text-left">Detalle</th></tr></thead><tbody>{cal_html}</tbody></table></div>
+            <p class="text-xs text-slate-500">Fechas según el calendario electoral de la Junta Electoral Central. Algunos medios publican otras fechas de envío y entrega: confirma siempre el plazo en Correos al solicitarlo.</p></section>
+
+        <section aria-labelledby="pasos" class="space-y-4"><h2 id="pasos" class="text-xl font-bold">Cómo votar por correo, paso a paso</h2><ol class="space-y-5">{pasos_html}</ol></section>
+
+        <section class="prose-x text-slate-700"><h2 class="text-xl font-bold text-slate-900">Quién puede votar por correo</h2>
+            <p>Cualquier persona inscrita en el censo electoral que prevea no estar en su localidad el día de la votación, o que no pueda acudir a su mesa por cualquier motivo (trabajo, viaje, enfermedad…). No hace falta residir fuera de tu municipio.</p>
+            <h2 class="text-xl font-bold text-slate-900">Qué ocurre si ya has pedido el voto por correo</h2>
+            <p><strong>No podrás votar en persona</strong> el {e(fecha_elec)}: una vez aceptada la solicitud y anotada en el censo, el voto presencial queda cerrado aunque no llegues a enviar el voto por correo. Pídelo solo si estás seguro de que no podrás acudir a tu colegio.</p>
+            <h2 class="text-xl font-bold text-slate-900">Casos especiales</h2>
+            <ul class="list-disc pl-6 space-y-1"><li><strong>Enfermedad o incapacidad:</strong> otra persona puede hacer la solicitud por ti con un certificado médico oficial gratuito y una autorización notarial o consular. La autorización es individual: una misma persona no puede representar a varios electores.</li>
+            <li><strong>Residentes en el extranjero (CERA):</strong> tienen un procedimiento propio a través de los consulados; consulta el <a class="text-brand-600 underline" href="https://www.exteriores.gob.es" target="_blank" rel="noopener">Ministerio de Asuntos Exteriores</a>.</li></ul>
+            <h2 class="text-xl font-bold text-slate-900">Qué hacer con la documentación</h2>
+            <p>El sobre que recibes incluye las papeletas y sobres electorales, el certificado de inscripción en el censo, un sobre dirigido a tu mesa electoral y las instrucciones. Sigue el orden indicado: papeleta del Congreso y del Senado en sus sobres, y todo junto con el certificado de censo en el sobre de la mesa.</p>
+            <p>Antes de decidir tu voto, puedes consultar el <a class="text-brand-600 underline" href="/a-quien-votar/">test «¿A quién votar?»</a>, el <a class="text-brand-600 underline" href="/programas-electorales/">comparador de programas electorales</a> y la <a class="text-brand-600 underline" href="/encuestas-elecciones-generales/">media de encuestas</a>. Si votas por correo, ten en cuenta que tu voto se emite antes de que termine la campaña (hasta el 27 de noviembre).</p>
+            <p class="text-sm text-slate-500">Fuentes: calendario oficial de la Junta Electoral Central y procedimiento descrito por Correos y la prensa (Euronews, RTVC). Esta guía es informativa: la información oficial es la de <a class="underline" href="https://www.correos.es" target="_blank" rel="noopener">Correos</a> y el <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a>.</p>
+            <ul class="list-disc pl-6 text-sm">{fuentes}</ul></section>
+
+        {faq_block(faq)}
+        {related("correo")}
+    </main>
+    {footer()}
+    <script>{CORREO_JS}</script>
+</body>
+</html>
+"""
+    out = ROOT / "como-votar-por-correo"
+    out.mkdir(exist_ok=True)
+    (out / "index.html").write_text(head(title, desc, path, jsonld) + "\n" + body, encoding="utf-8")
+
+
 if __name__ == "__main__":
     build_a_quien_votar()
     build_programas()
     build_encuestas()
+    build_voto_correo()
     print(f"OK · {n_stm} afirmaciones · {n_temas} temas · {len(partidos)} partidos · {modified_txt}")
