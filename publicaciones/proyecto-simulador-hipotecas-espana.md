@@ -36,6 +36,16 @@ Este es el componente más particular del panel. En lugar de inventar una predic
 
 Con eso se reparte una probabilidad entre subir, mantenerse o bajar, que se recalcula en el momento cada vez que cambian los datos de MacroData España. Es un modelo propio y simplificado con fines divulgativos: **no es una predicción de mercado ni asesoramiento financiero**, y así se indica de forma visible en el propio panel.
 
+## Qué no incluye la calculadora: las ayudas autonómicas a la compra
+
+La cuota que calcula el simulador no descuenta los incentivos fiscales de cada comunidad, que pueden cambiar el coste real de comprar vivienda. Un ejemplo es el proyecto de presupuestos de Castilla y León para 2027, aprobado por el Consejo de Gobierno el 13 de octubre de 2026 y pendiente de las Cortes. Según [Tribuna de Salamanca](https://www.tribunasalamanca.com/noticias/462460/el-presupuesto-de-castilla-y-leon-para-2027-ascendera-a-16-472-millones-de-euros), incluye:
+
+- **292 millones para vivienda** (+46,97%), de los que 80 millones son para fomento del alquiler.
+- Una **Cuenta Ahorro Vivienda Joven**, con deducción del 15% de lo depositado (máximo 1.500 euros al año) para menores de 40 años.
+- **«Impuestos Cero» en el medio rural**: exención en la compra de primera vivienda.
+
+Conviene tenerlo en cuenta junto al contexto de tipos: con el BCE subiendo y la rentabilidad del bono español por encima del 4%, como cuento en el [primer balance de MacroData España](https://emirodgar.es/macrodata-espana-primer-balance), cada ayuda pesa más en la decisión de comprar. Las ayudas estatales y autonómicas vigentes están en el [catálogo de ayudas de Castilla y León y Salamanca](https://emirodgar.es/ayudas-castilla-leon-salamanca).
+
 ## Fuentes de los datos
 
 - **Mercado hipotecario**: INE, Estadística de Hipotecas (tipo de interés medio, importe medio, número de hipotecas constituidas y reparto fijo/variable/mixto).
