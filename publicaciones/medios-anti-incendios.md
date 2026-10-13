@@ -52,6 +52,7 @@ El dispositivo estatal, gestionado especialmente por el **Ministerio para la Tra
 > *En 2025 el presupuesto del Estado para la campaña de incendios fue de 109,3 M€. El plan especial de actuaciones se dotó con 115,8 M€ (incluye prevención y extinción); cifra inferior a la de diez años atrás.
 
 - El gasto real es mayor porque a la cifra MITECO se añade la inversión de comunidades autónomas (Andalucía 257 M€, Galicia 200 M€, Castilla y León 127 M€, C. Valenciana 116 M€, etc.), un gasto autonómico que conviene contrastar con la [evolución de la deuda de las comunidades autónomas](https://emirodgar.es/deuda-autonomias).
+- En Castilla y León, el proyecto de presupuestos de la Junta para 2027 destina **205 millones a prevención y extinción de incendios forestales** (+45,76%), con **59 millones para medios aéreos y unidades helitransportadas** (+163,08%), dentro de una partida de medio ambiente de 623 millones. Es un proyecto pendiente de aprobación en las Cortes; los datos proceden de [Tribuna de Salamanca](https://www.tribunasalamanca.com/noticias/462460/el-presupuesto-de-castilla-y-leon-para-2027-ascendera-a-16-472-millones-de-euros).
 - El presupuesto de la UME para operaciones y sostenimiento propios fue de unos 42 M€ en 2024, mientras que el coste estructural de todo el dispositivo alcanza anualmente los 150 M€.
 
 

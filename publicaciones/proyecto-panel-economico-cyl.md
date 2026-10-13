@@ -37,6 +37,19 @@ responder de un vistazo si la Comunidad va mejor o peor que la media nacional en
 - **Contratos registrados**, con el desglose entre indefinidos y temporales.
 - **Detalle por provincia**: cómo se reparten el paro, la afiliación y la contratación entre las 9 provincias, para comparar de un vistazo cómo se desarrolla cada una.
 
+## El presupuesto de 2027, el dato que viene
+
+El 13 de octubre de 2026 el Consejo de Gobierno aprobó el proyecto de presupuestos de Castilla y León para 2027, que asciende a **16.472 millones de euros**, un **13,11% más** que las últimas cuentas aprobadas, las de 2024. Es todavía un proyecto de ley pendiente de las Cortes, y es el tipo de dato que el panel distingue entre presupuesto aprobado y prorrogado. Según la información publicada por [Tribuna de Salamanca](https://www.tribunasalamanca.com/noticias/462460/el-presupuesto-de-castilla-y-leon-para-2027-ascendera-a-16-472-millones-de-euros), a partir de la presentación de Mañueco y Pollán:
+
+- **Sanidad y Bienestar Social**: 6.881 millones (+18%).
+- **Educación y enseñanzas universitarias**: 3.308 millones (+24,09%).
+- **Agricultura, Ganadería y Medio Rural**: 1.664 millones (+16,53%).
+- **Vivienda**: 292 millones (+46,97%), con 80 millones para fomento del alquiler.
+- **Medio ambiente**: 623 millones (+19,79%), con 205 millones para prevención y extinción de incendios.
+- **Beneficios fiscales**: 920 millones para 704.000 contribuyentes, con 36 rebajas tributarias y la bajada del tipo mínimo autonómico del IRPF del 9% al 8,75%.
+
+El gasto social (Sanidad, Educación y Servicios Sociales) suma 10.670 millones, el 77,72% de los recursos de las consejerías.
+
 ## Un panorama con más sombras que luces frente a España
 
 El termómetro con el que abre el panel deja un balance poco favorable: de los cuatro indicadores comparables con España, solo la tasa de paro EPA (8,37% frente al 9,87% nacional) le es claramente favorable a Castilla y León. En los otros tres —PIB, afiliación a la Seguridad Social y variación del paro registrado— la Comunidad mejora en términos absolutos, pero crece o mejora por debajo del ritmo español.
