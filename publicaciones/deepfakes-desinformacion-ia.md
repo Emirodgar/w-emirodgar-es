@@ -39,6 +39,10 @@ Aquí hay un vacío que sorprende: en España **no existe un delito llamado "dee
 
 Aquí es donde entra el [Reglamento Europeo de IA (AI Act)](https://emirodgar.es/reglamento-europeo-ia-act), que desde el 2 de agosto de 2026 obliga a etiquetar como tal cualquier contenido sintético generado por IA, deepfakes incluidos. No es una solución mágica —una etiqueta no impide que alguien caiga en una estafa si no la ve o no la entiende—, pero sí es la primera vez que existe una obligación legal clara a nivel europeo de identificar este tipo de contenido en origen, en lugar de perseguirlo solo después del daño.
 
+## No hace falta un vídeo: basta una estadística falsa
+
+La desinformación con IA no se limita a imágenes y voces clonadas. Un experimento reciente publicó 50.000 estadísticas inventadas en una web nueva por unos 50 dólares, y ChatGPT las siguió citando meses después, hasta el punto de acabar en un informe de inversión bancario y en un artículo académico. Es la versión de texto del mismo problema: cuando verificar cuesta más que fabricar, lo falso se cuela con apariencia de fuente. Lo desarrollamos en [lo fácil que es manipular a la IA](https://emirodgar.es/manipular-ia-estadisticas-falsas).
+
 ## Se puede detectar, pero no siempre a tiempo
 
 La buena noticia es que la misma tecnología que permite crear un deepfake convincente también permite detectarlo: análisis forense de metadatos, de frecuencias de audio o de artefactos de generación que el ojo humano no percibe. La mala noticia es que ninguna herramienta de detección es infalible al cien por cien, y la carrera entre quien genera y quien detecta se parece bastante a la que ya vivimos con otros contenidos generados por IA, como analizamos al ver que [la mitad de los contenidos digitales ya los escribe una inteligencia artificial](https://emirodgar.es/la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial).

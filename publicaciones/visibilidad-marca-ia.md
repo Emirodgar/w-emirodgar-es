@@ -44,6 +44,10 @@ Lo relevante de este ecosistema de herramientas no es que exista, sino la veloci
 
 La medición de visibilidad en IA va a tener que distinguir entre presencia orgánica y presencia pagada. OpenAI ha llevado **ChatGPT Ads a Europa, incluida España**, con acceso de autoservicio mediante Ads Manager en 31 mercados. Los anuncios solo se muestran en los planes Free y Go, van etiquetados y separados de las respuestas, y la compañía asegura que no influyen en ellas. Para quien mida share of model, esto añade una capa: una cosa es que ChatGPT te recomiende y otra que pagues por aparecer, y los informes deberían separar ambas. Además, con ChatGPT designado como motor de búsqueda de muy gran tamaño bajo la DSA, esa publicidad deberá poder auditarse.
 
+## Cuidado con medir solo la cita: una cita no es una verificación
+
+Que una IA cite tu web, o la de un competidor, no dice nada sobre si lo que cita es cierto. Un experimento reciente de Peec AI lo dejó claro: una web con 50.000 estadísticas inventadas llegó a ser la **segunda fuente más visible** en un conjunto de prompts de seguimiento, solo por detrás de Statista, y ChatGPT la consultó decenas de miles de veces en un solo mes. Para quien interprete un informe de share of model, la consecuencia es doble: conviene mirar **quién** gana esas citas y no solo cuántas son, y conviene medir también las menciones sin enlace, porque las cifras acaban circulando sin que nadie las atribuya. Lo analizamos en [lo fácil que es manipular a la IA con estadísticas falsas](https://emirodgar.es/manipular-ia-estadisticas-falsas).
+
 ## Medir antes de optimizar
 
 La lección de fondo es sencilla, aunque incómoda para quien todavía no ha empezado: no se puede mejorar el share of model de una marca sin medirlo primero, y ya no hace falta esperar a que la herramienta perfecta exista, porque el mercado de medición de visibilidad en IA ya tiene jugadores maduros, metodologías con rigor estadístico y datos a escala de cientos de millones de conversaciones. La pregunta para cualquier marca, a estas alturas, ya no es si merece la pena medir esto, sino cuánto tiempo lleva sin hacerlo.

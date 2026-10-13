@@ -37,7 +37,7 @@ Ejemplo: un agente que recibe la instrucción "resérvame el vuelo más barato p
 
 ## 🔍 RAG (Retrieval-Augmented Generation)
 
-Es una técnica que combina un LLM con una base de datos o documentos externos: antes de responder, el modelo "busca" información relevante y la usa como apoyo, en lugar de fiarse solo de lo que memorizó durante su entrenamiento. Reduce (aunque no elimina) el riesgo de alucinaciones.
+Es una técnica que combina un LLM con una base de datos o documentos externos: antes de responder, el modelo "busca" información relevante y la usa como apoyo, en lugar de fiarse solo de lo que memorizó durante su entrenamiento. Reduce (aunque no elimina) el riesgo de alucinaciones, y tampoco garantiza que lo recuperado sea cierto: el sistema puntúa si un texto encaja con la pregunta, no si es verdad, como demuestra [el experimento de las 50.000 estadísticas falsas](https://emirodgar.es/manipular-ia-estadisticas-falsas).
 Ejemplo: un asistente interno de una empresa que responde dudas de RRHH consultando primero el convenio laboral real, no solo lo que el modelo "cree" recordar.
 
 ## ⚖️ AI Act (Reglamento Europeo de IA)
@@ -70,6 +70,7 @@ Ejemplo: varios medios y editoriales han demandado a empresas de IA por usar su 
 - **Sesgo algorítmico**: cuando un modelo reproduce o amplifica desigualdades presentes en los datos con los que fue entrenado.
 - **Deepfake**: contenido audiovisual sintético (voz, vídeo o imagen) generado con IA para simular que una persona real dijo o hizo algo que nunca ocurrió. Ya mueve un fraude de cientos de millones de euros al año, como contamos en [deepfakes, la desinformación que ya cuesta 929 millones de euros](https://emirodgar.es/deepfakes-desinformacion-ia).
 - **Chief AI Officer (CAIO)**: el cargo directivo responsable de la estrategia de IA de una empresa, cada vez más habitual en organizaciones grandes. Lo tratamos en detalle en [este artículo](https://emirodgar.es/chief-ai-officer).
+- **Blanqueo de citas (*citation laundering*)**: proceso por el que un dato falso gana credibilidad al ser citado sucesivamente por fuentes cada vez más serias, hasta que parece verificado. Un experimento con 50.000 estadísticas inventadas acabó citado en un paper y en un informe bancario; lo contamos en [lo fácil que es manipular a la IA](https://emirodgar.es/manipular-ia-estadisticas-falsas).
 - **Guardrails**: reglas y filtros técnicos que limitan lo que un modelo puede decir o hacer, pensados para evitar respuestas peligrosas, ilegales o fuera de política.
 
 Este glosario seguirá creciendo a medida que aparezcan nuevos términos. Si echas en falta alguno, dímelo y lo añado.

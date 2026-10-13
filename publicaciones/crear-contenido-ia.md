@@ -33,6 +33,7 @@ La inteligencia artificial ha revolucionado la creación de contenidos, pero el 
 
 ## 4. Valor real: información útil y profundidad
 
+- **Verifica cada cifra antes de publicarla.** Un modelo rellena los huecos con números que suenan bien, y quien copia sin comprobar los pone a circular con apariencia de dato. Un experimento con 50.000 estadísticas inventadas acabó citado por ChatGPT, un paper y un banco, como explicamos en [lo fácil que es manipular a la IA](https://emirodgar.es/manipular-ia-estadisticas-falsas). Cita siempre la fuente primaria y el año.
 - **Aporta valor único**: Ofrece datos, insights, ejemplos o perspectivas que no se encuentren fácilmente en otros sitios. La IA puede ayudarte a curar y sintetizar información, pero el análisis y la interpretación deben ser tuyos.
 - **Expande el contenido con recursos adicionales**: Añade estadísticas, citas de expertos, gráficos o enlaces a guías más completas para enriquecer la experiencia del usuario.
 
