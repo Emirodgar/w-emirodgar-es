@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-12",
-  "generado_en": "2026-10-12T12:56:18+00:00",
-  "titular": "Abucheos a Sánchez en el 12-O y el PP pide a Bruselas investigar presiones en el caso David Sánchez",
+  "fecha": "2026-10-13",
+  "generado_en": "2026-10-13T12:33:29+00:00",
+  "titular": "Los Reyes visitan Ceuta en medio de la polémica por la 'ley de nietos' y la crisis migratoria",
   "por_medio": {
-    "El Mundo": 31,
-    "The Objective": 99
+    "El Mundo": 27,
+    "The Objective": 126
   },
   "temas": [
     {
-      "tema": "Desfile del 12-O y abucheos a Pedro Sánchez",
+      "tema": "Visita Real a Ceuta y crisis migratoria",
       "categoria": "Política",
-      "descripcion": "El presidente del Gobierno, Pedro Sánchez, fue abucheado e insultado durante el desfile de la Fiesta Nacional en Madrid, un evento presidido por los Reyes y la Familia Real."
+      "descripcion": "Los Reyes Felipe VI y Letizia visitan Ceuta, dos meses y medio después de la crisis migratoria, recibiendo un masivo apoyo popular y el agradecimiento del presidente de la ciudad. La UE exige el retorno de inmigrantes y advierte a Marruecos."
     },
     {
-      "tema": "Investigación del caso David Sánchez",
+      "tema": "Polémica por la 'ley de nietos'",
       "categoria": "Política",
-      "descripcion": "El Partido Popular ha solicitado a Bruselas que investigue las presuntas presiones a la jueza encargada del caso que afecta a David Sánchez, hermano del presidente."
+      "descripcion": "El Gobierno critica el fallo del Supremo que suspende el voto de los beneficiados por la 'ley de nietos', calificándolo de \"trumpismo\" y de \"extrema gravedad\"."
     },
     {
-      "tema": "Premio Nobel de Economía 2026",
-      "categoria": "Economía",
-      "descripcion": "Los economistas estadounidenses Robert E. Hall y Michael Woodford han sido galardonados con el Premio Nobel de Economía 2026 por sus estudios sobre fundamentos microeconómicos y estabilización macroeconómica."
+      "tema": "Alianzas electorales y tensiones políticas",
+      "categoria": "Política",
+      "descripcion": "PP y UPN recuperan su alianza para las elecciones del 29N, mientras Podemos se enroca en la candidatura de Irene Montero y el PSOE culpa al PP de los insultos a Sánchez."
     },
     {
-      "tema": "Crisis migratoria en Ceuta y Canarias",
-      "categoria": "Política",
-      "descripcion": "Se ha llevado a cabo el desalojo de un gran asentamiento ilegal de inmigrantes en Ceuta, mientras que el presidente de Canarias alerta de un nuevo brote migratorio en el archipiélago."
+      "tema": "Salud del Papa León XIV",
+      "categoria": "Internacional",
+      "descripcion": "El Papa León XIV ha ingresado en el Hospital Gemelli para ser operado de un nódulo en el pulmón, cancelando sus audiencias hasta el 20 de octubre."
     }
   ]
 }

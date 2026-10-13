@@ -308,6 +308,48 @@
         "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/12/6accc5eb21efa0354d8b4575.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-13",
+      "edicion": "2026-10-13",
+      "titulo": "Visita de los Reyes a Ceuta tras la crisis migratoria",
+      "categoria": "Política",
+      "descripcion": "Los Reyes Felipe VI y Letizia visitan Ceuta dos meses y medio después de la entrada masiva de inmigrantes, en un gesto de apoyo a la ciudad autónoma.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Las imágenes de la visita de los Reyes a Ceuta",
+        "url": "https://www.elmundo.es/album/espana/2026/10/13/6acdf3eefdddffe44a8b4576.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-13",
+      "edicion": "2026-10-13",
+      "titulo": "Alianza electoral PP y UPN para el 29N",
+      "categoria": "Política",
+      "descripcion": "El Partido Popular y UPN recuperan su alianza para presentarse en coalición a las elecciones generales del 29 de noviembre, con el objetivo de disputar la victoria al PSOE y eliminar la vía de anexión de Navarra a Euskadi.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "PP y UPN recuperan su alianza para disputar al PSOE la victoria el 29N y eliminar su vía de incorporación a Euskadi",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/13/6ace18a621efa0c63d8b45a5.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-13",
+      "edicion": "2026-10-13",
+      "titulo": "Ingreso del Papa León XIV para ser operado",
+      "categoria": "Internacional",
+      "descripcion": "El Papa León XIV ingresa en el Hospital Gemelli para ser operado de un nódulo en el pulmón, cancelando todas sus audiencias hasta el 20 de octubre.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Papa ingresa en el Hospital Gemelli para ser operado de un nódulo en el pulmón",
+        "url": "https://www.elmundo.es/internacional/2026/10/13/6acdee53e9cf4abd688b4578.html"
+      },
+      "destacado": false
     }
   ]
 }
