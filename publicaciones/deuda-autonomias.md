@@ -103,6 +103,10 @@ La Autoridad Independiente de Responsabilidad Fiscal proyecta una **reducción g
 - **Escenario pesimista**: Posible repunte por encima del máximo histórico a partir de 2028, un riesgo que se agravaría si se cumplen los augurios de quienes ven venir [una crisis económica impulsada por la burbuja de la inteligencia artificial](https://emirodgar.es/crisis-economica-ia)
 
 
+### El factor de los tipos de interés
+
+Con la rentabilidad de los bonos soberanos en máximos de años (el español ya supera el 4%), refinanciar deuda cuesta más. Funcas calcula que solo los intereses de la deuda pública española pasarán de unos 40.000 millones de euros actuales a unos 60.000 millones en 2030. La elevada dependencia de la financiación estatal protege a las comunidades de los vaivenes del mercado, pero el coste acaba recayendo igualmente en el conjunto de las cuentas públicas. Lo desarrollo en [el análisis de la crisis económica que se avecina](https://emirodgar.es/crisis-economica-ia).
+
 ### Propuesta de condonación gubernamental
 
 El Gobierno ha aprobado una **quita de deuda de 83.252 millones de euros** (aproximadamente el 25% de la deuda autonómica). Los principales beneficiarios serían:

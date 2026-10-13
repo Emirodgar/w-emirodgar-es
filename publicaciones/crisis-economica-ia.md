@@ -47,11 +47,25 @@ El resultado será un **aumento del paro** que golpeará directamente al consumo
 La situación no depende solo de la inteligencia artificial o de los mercados financieros. Existen además **otros focos de tensión**:  
 
 - **Tipos de interés altos**, que encarecen la financiación de empresas y familias.  
-- **[Deuda](https://emirodgar.es/deuda-autonomias) mundial en niveles récord**, lo que hace a los estados más vulnerables.  
+- **[Deuda](https://emirodgar.es/deuda-autonomias) mundial en niveles récord**, lo que hace a los estados más vulnerables. Más abajo explico por qué el mercado de deuda es el foco que más me preocupa.  
 - **Desaceleración de China**, que arrastra al comercio internacional.  
 - **Inestabilidad geopolítica**, con conflictos y tensiones que añaden incertidumbre.  
 
 En conjunto, estos factores actúan como combustible para que una chispa relativamente pequeña pueda desencadenar un incendio económico de gran magnitud.
+
+## ¿Y si la chispa salta en el mercado de deuda?
+
+Las crisis financieras suelen nacer en lugares remotos, poco visibles para el ciudadano de a pie. En 2008 fueron las hipotecas *subprime*, productos complejos que empaquetaban deuda de distinto tipo. Hoy el riesgo apunta a una versión moderna de aquello: el **apalancamiento sobre el apalancamiento**. Yo tengo una deuda y se la vendo a un tercero para liberar mi carga; el problema llega cuando ese tercero reclama los intereses y yo no puedo pagarlos. Se rompería la cadena en el mercado de deuda, el mayor del mundo, y nadie sabe con precisión qué tamaño tiene todo lo que no se ve. El aviso ya llegó antes del verano en EEUU, cuando gestoras como BlackRock o Morgan Stanley limitaron los reembolsos de algunos fondos de deuda privada tras una huida masiva de inversores que temían más impagos de los reconocidos.
+
+Los mercados ya están imponiendo disciplina sin esperar a ninguna suspensión de pagos:
+
+- La deuda de EEUU a diez años ronda el **5,25%**, máximos desde 2002. Donald Trump lo aprendió a principios de 2025, cuando los inversores le obligaron a recular en sus aranceles vendiendo bonos estadounidenses.
+- El bono francés se acerca al **4,9%** con una deuda por encima del 120% del PIB y cinco primeros ministros en dos años. Según su propio Ministerio de Finanzas, el coste de los intereses se encarecerá un **59% hasta 2030** y ya es la primera partida del presupuesto.
+- Reino Unido no pagaba tanto por su deuda a largo plazo desde los años 90, el bono japonés a diez años ha tocado máximos de tres décadas y el español supera el 4%, como detallo en el [primer balance de MacroData España](https://emirodgar.es/macrodata-espana-primer-balance).
+
+Como resume Funcas, los mercados no necesitan esperar a una suspensión de pagos para castigar: lo hacen con tipos más altos, más volatilidad y un coste de refinanciación que acaba llegando al presupuesto y al resto de la economía. Para España, Funcas calcula que solo los intereses de la deuda pasarán de unos **40.000 millones de euros actuales a unos 60.000 millones en 2030**. Y esa presión llega cuando ya pesa la [deuda de las comunidades autónomas](https://emirodgar.es/deuda-autonomias).
+
+Esta chispa podría coincidir además con el pinchazo de la burbuja de la IA: dos fuentes de tensión que se retroalimentan, porque unos mercados en caída encarecen todavía más la financiación de estados y empresas.
 
 ## ¿Estamos preparados para lo que viene?
 
