@@ -56,6 +56,8 @@ Un aspecto particularmente preocupante es que el **sesgo político varía según
 
 La investigación indica que el sesgo es **más fuerte en inglés, francés y español**, pero existe en todos los idiomas evaluados. Además, los modelos más grandes acentúan el sesgo y aumentan las similitudes entre predicciones en diferentes idiomas. Este matiz lingüístico recuerda a otro fenómeno que ya analizamos: [cómo la simplificación del lenguaje también condiciona la forma en la que pensamos y debatimos](https://emirodgar.es/por-que-cada-vez-escribimos-y-leemos-frases-mas-cortas).
 
+Esta variación no se limita a la política. Anthropic publicó en julio de 2026 un informe sobre los valores de Claude en los 20 idiomas más habituales, con unas 310.000 conversaciones reales, y observó que el modelo tiende a mostrar más calidez en hindi y árabe y más rigor en inglés y ruso. Y un análisis posterior en *Search Engine Journal* mostró que el idioma también altera **qué marcas recomienda** el modelo: en vuelos de Londres a Tenerife, Claude elegía British Airways en el 52,5% de las respuestas en persa y en ninguna en ruso. Lo desarrollamos en [qué es el GEO](https://emirodgar.es/geo). Los modelos no traducen una respuesta única, razonan y componen cada una en el idioma que reciben.
+
 ### Intentos de mitigación y sus limitaciones
 
 
