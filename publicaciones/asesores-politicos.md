@@ -15,7 +15,7 @@ permalink: asesores-politicos
 
 ## Evolución histórica y tendencias
 
-El análisis de los asesores gubernamentales en España durante los últimos 15 años revela un **crecimiento exponencial sin precedentes**, especialmente durante el mandato de Pedro Sánchez. Los datos muestran que España ha pasado de tener 302 asesores en 1990 a **924 en 2024**, representando un incremento del **206%**.
+El análisis de los asesores gubernamentales en España durante los últimos 15 años revela un **crecimiento exponencial sin precedentes**, especialmente durante el mandato de Pedro Sánchez. Los datos muestran que España ha pasado de tener 302 asesores en 1990 a **924 en 2024**, representando un incremento del **206%**. Y la cifra ha seguido subiendo: a enero de 2026 ya se superan los **1.000 asesores** (véase la [actualización de 2026](#actualización-2026-ya-son-más-de-mil)).
 
 <img width="659" class="img-responsive" alt="Evolución del número de asesores del Gobierno de España (1990-2024)" src="https://github.com/user-attachments/assets/ed7d4b36-0df0-4c56-aa1e-e4bb73ff415a" />
 
@@ -34,9 +34,26 @@ La evolución por mandatos presidenciales muestra diferencias significativas, en
 
 **Pedro Sánchez ha establecido múltiples récords históricos**: con 471 asesores exclusivos para la Presidencia del Gobierno, supera significativamente las cifras de Zapatero (455 asesores en Presidencia en 2010) y duplica prácticamente el número total de asesores de sus predecesores, un salto que recuerda al que ya identificamos en su propio [currículum académico](https://emirodgar.es/cv-politicos) frente al de anteriores presidentes.
 
+## Actualización 2026: ya son más de mil
+
+Los últimos datos de la Estadística del Personal al Servicio de las Administraciones Públicas (enero de 2026) confirman que la tendencia no se ha frenado: el Gobierno suma ya **1.006 asesores** (959 en los ministerios y 47 en organismos autónomos), un **68% más** que los 599 de enero de 2018, según el [análisis de Libre Mercado](https://www.libertaddigital.com/libremercado/2026-08-20/sanchez-supera-el-millar-de-asesores-un-68-por-ciento-mas-que-cuando-llego-a-moncloa-7449325/). Parte del salto se explica porque se ha pasado de 13 a 22 ministerios, pero no todo.
+
+| Ministerio (enero de 2026) | Asesores |
+| :-- | :-- |
+| Presidencia, Justicia y Relaciones con las Cortes | 490 |
+| Política Territorial y Memoria Democrática | 148 |
+| Resto de ministerios | 321 |
+| Organismos autónomos | 47 |
+
+Por su parte, [The Objective](https://theobjective.com/espana/2026-04-18/sanchez-record-asesores-609-moncloa-coste-eventuales/) contabiliza, a partir de las relaciones de puestos de trabajo, **609 asesores y cargos de confianza en Moncloa** (máximo de la serie) y **1.264 en el conjunto del Gobierno** a 1 de abril de 2026. De ellos, 793 (el 63%) están en los niveles 30 a 26, los más altos de la escala.
+
+Las cifras difieren según el perímetro que se mida: solo personal eventual o también otros cargos de confianza y de libre designación.
+
+En cuanto al gasto, según datos de la IGAE la dotación inicial para personal eventual pasó de **40,4 millones de euros en 2018 a 71,2 millones en 2025** (+76,5%), y el gasto reconocido hasta noviembre de 2025 (unos 70,2 millones) es casi un **90% superior** al del mismo periodo de 2018.
+
 ## Análisis de costes
 
-### Impacto económico actual
+### Impacto económico (datos de 2024)
 
 El gasto en asesores durante el gobierno de Sánchez ha alcanzado niveles históricos. **En 2024, el gasto total en personal eventual ascendió a 75.4 millones de euros**, mientras que el coste acumulado desde 2018 **supera los 382 millones de euros**.
 
@@ -154,5 +171,7 @@ Los análisis sugieren la urgencia de establecer:
 ## Conclusiones
 
 El análisis revela que España ha experimentado una **hipertrofia sin precedentes en el número de asesores gubernamentales**, con un crecimiento que se ha acelerado dramáticamente durante el mandato actual. Con **924 asesores y un coste que supera los 75 millones de euros anuales**, el sistema actual plantea serias cuestiones sobre eficiencia, transparencia y equilibrio democrático.
+
+Los datos de 2026 refuerzan esta lectura: **más de 1.000 asesores en los ministerios y organismos autónomos** y un gasto en personal eventual que ha crecido entre un 76% y un 90% desde 2018, según la fuente y el periodo que se tomen.
 
 La **concentración del 51% de los asesores en la Presidencia del Gobierno** es histórica y sin paralelos en la democracia española, superando significativamente los recursos humanos destinados a ministerios técnicos esenciales. Esta tendencia, combinada con un **incremento del coste del 65% respecto a gobiernos anteriores**, sugiere la necesidad urgente de reformas estructurales que garanticen un uso más eficiente y transparente de los recursos públicos destinados al asesoramiento gubernamental.
