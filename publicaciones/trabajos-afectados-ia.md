@@ -114,7 +114,7 @@ Este ajuste ya se percibe con fuerza en el sector tecnológico, como muestra nue
 **Justificación:** La IA puede ayudar a diagnosticar, pero no sustituye del todo el contacto humano. Podría ser un primer filtro para el sistema sanitario a modo de triaje.
 
 ### 👨‍💻 Informáticos
-**Justificación:** Los perfiles junior o con tareas repetitivas están más expuestos. Los expertos en IA, seguridad o arquitectura tienen futuro.
+**Justificación:** Los perfiles junior o con tareas repetitivas están más expuestos. Los expertos en IA, seguridad o arquitectura tienen futuro. Profesionales del sector ya comentan una menor contratación de juniors, como contamos en [el impacto de la IA en los trabajos](https://emirodgar.es/impacto-ia-trabajos).
 
 ---
 

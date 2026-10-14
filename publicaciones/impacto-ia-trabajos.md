@@ -39,6 +39,19 @@ Estos datos encajan con el patrón que ya describíamos en nuestro repaso de los
 
 ---
 
+## Lo que cuentan los profesionales del sector
+
+Los datos de Stanford encuentran eco en conversaciones mucho menos académicas. En un debate reciente entre profesionales del sector, la tesis de partida era la contraria: que en el sector del software el impacto de la IA en el empleo es "prácticamente nulo", que los despidos son los de siempre y que los desarrolladores ahora solo dirigen a la herramienta. Son testimonios, no estadística, así que conviene leerlos con cautela. Pero lo que cuentan los que trabajan en el sector matiza bastante esa tesis:
+
+* **Los juniors, los primeros afectados.** Varios profesionales coinciden en que los puestos de recién graduado casi han desaparecido, lo que encaja con la caída del 13% en el empleo de 22 a 25 años que mide Stanford.
+* **Menos contratación, no tanto más despidos.** Un profesional de SAP cuenta que apenas hay despidos masivos, pero sí un parón de contrataciones. Otro, preguntado por el motivo en su empresa, responde que es por la IA: los mismos empleados sacan más trabajo.
+* **Ofertas a la baja.** El mismo profesional de SAP apunta que las búsquedas de ABAP en InfoJobs han pasado de 80 ofertas o más a unas 30 para toda España, y que los sueldos bajan. Es una observación individual, sin verificar, pero indica por dónde van las percepciones.
+* **El efecto en quien trabaja con IA.** Otro testimonio describe el paso de "estar de relax" mientras la IA trabaja a quedar como mero revisor de código ajeno, con menos creatividad y una merma de habilidades técnicas.
+
+Sobre la "ausencia de impacto" en realidad hay dos lecturas posibles: o todavía no se ve en las cifras de despidos, o se está notando antes en lo que no se publica, que son las plazas que ya no se abren. Las anécdotas no permiten decidir entre ambas, pero sí sugieren que el efecto se mide mejor en **contratación** que en despidos.
+
+---
+
 ## ¿Y qué pasa con el mérito?
 
 Durante décadas hemos asumido, al menos en teoría, que estudiar más, adquirir mejores capacidades y trabajar bien aumentaba las probabilidades de progresar. La IA obliga a revisar esa idea. Si una parte creciente del valor económico depende menos de lo que una persona sabe hacer y más de su acceso a modelos, datos, capital o infraestructuras, la relación entre mérito y progreso se vuelve mucho más frágil. Y esto lo pienso en primera persona: soy hijo de ese mérito y de esa movilidad social llegada "desde cero".
