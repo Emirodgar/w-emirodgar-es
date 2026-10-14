@@ -23,6 +23,8 @@ La demanda de alternativas ya existe: el **60% de los directores de Sistemas de 
 
 Esa dependencia llega también a la ciencia. Google DeepMind y Google Cloud han ofrecido a hasta **200 investigadores europeos** acceso directo a modelos como AlphaFold 3, WeatherNext, AlphaGenome, AlphaEvolve y AlphaEarth Foundations, junto con **3 millones de dólares en créditos de computación**, dentro de la iniciativa europea RAISE, que busca cerrar la brecha de cómputo de los científicos del continente. Es una ayuda útil, pero también un ejemplo de que la capacidad de investigar con IA de frontera sigue pasando por infraestructura y modelos estadounidenses.
 
+Un ejemplo de que sí puede haber alternativas con escala es [STACKIT](https://emirodgar.es/stackit-nube-europea-soberania), la nube de Schwarz Gruppe (Lidl y Kaufland), que ya trabaja con SAP, la Comisión Europea o el banco central de los Países Bajos.
+
 ## Los chips, la meta que la propia Unión Europea ya ha rebajado
 
 Si en la nube el diagnóstico es de dependencia, en los semiconductores es directamente de objetivo fallido. La primera Ley de Chips europea, de 2023, se marcó como meta alcanzar el **20% de la cuota mundial de fabricación de semiconductores para 2030**. La cuota real de Europa lleva estancada en torno al **10%** desde entonces, y el Tribunal de Cuentas Europeo concluyó en 2025 que es **altamente improbable** que se llegue al objetivo, con una previsión de apenas el **11,7% en 2030**.
