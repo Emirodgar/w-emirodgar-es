@@ -36,6 +36,12 @@ Cada indicador se muestra con su valor actual, su variación respecto al periodo
 
 El termómetro con el que abre el panel deja un patrón claro: España crece muy por encima de la media europea (2,7% interanual frente al 1,2% de la eurozona en el 2º trimestre), pero paga esa fortaleza con más inflación (4,5% frente al 3,3% de agosto, en términos armonizados) y, sobre todo, con una tasa de paro que casi triplica la media de la eurozona (10% frente al 6,4% en julio). Es la fotografía habitual de la economía española de los últimos años: crecimiento fuerte, pero con un mercado laboral que sigue sin converger con el resto de la eurozona.
 
+## Lo que el panel no ve: el mercado de deuda y la escala regional
+
+La prima de riesgo mide la confianza en España frente a Alemania, pero no recoge la tensión en el conjunto del mercado de deuda. La rentabilidad del bono de EEUU a diez años ronda el 5,25%, máximos desde 2002; la del francés se acerca al 4,9%; y la española supera el 4%. Según la EBA, la banca española es la segunda más expuesta de la eurozona a deuda soberana, con más de 650.000 millones de euros. Lo detallo en el [primer balance de MacroData España](https://emirodgar.es/macrodata-espana-primer-balance) y en el análisis de [la crisis económica que se avecina](https://emirodgar.es/crisis-economica-ia).
+
+El panel tampoco baja a la escala autonómica. Para eso está el [Panel Económico CyL](https://emirodgar.es/proyectos/panel-economico-cyl/), que recoge, por ejemplo, el proyecto de presupuestos de Castilla y León para 2027: 16.472 millones de euros, un 13,11% más que las últimas cuentas aprobadas, las de 2024, según [Tribuna de Salamanca](https://www.tribunasalamanca.com/noticias/462460/el-presupuesto-de-castilla-y-leon-para-2027-ascendera-a-16-472-millones-de-euros). Sigue pendiente de las Cortes.
+
 ## ¿Por qué estos indicadores?
 
 Son las variables que más habitualmente aparecen en la conversación pública sobre la economía española porque, combinadas, cuentan una misma historia desde ángulos distintos:
