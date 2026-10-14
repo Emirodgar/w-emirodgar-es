@@ -83,6 +83,8 @@ Y eso, como siempre, **lleva tiempo**.
 > Como suelo decir en mis formaciones, el verdadero desafío de la IA **no es técnico, sino organizativo**.
 
 
+Hay datos que apuntan a que, cuando se rediseña el proceso y no solo se compran licencias, el efecto aparece. El Banco Europeo de Inversiones estima que la IA eleva la productividad laboral una media del **4% en las empresas que la adoptan**, sin desplazar empleo. Google cita en su informe de impacto económico en Europa el caso de Renault: con IA para predecir averías y detectar defectos en tiempo real, la fábrica ha reducido a la mitad las paradas y los defectos, y los técnicos han pasado de buscar errores a corregirlos, con un ahorro de entre **100 y 120 millones de euros al año**. Conviene leerlo con cautela: el caso lo cuenta el propio proveedor de la tecnología, y el dato del BEI es una media de empresas que ya han adoptado la IA.
+
 ## El debate sobre cómo se reparten los beneficios
 
 Conviene no pasar de un extremo al otro. Daron Acemoglu, probablemente uno de los economistas más citados del momento, lleva años advirtiendo de que la automatización puede **reducir salarios, elevar la desigualdad, debilitar la competencia y concentrar poder**. Y su propio marco teórico admite, en principio, que la tecnología también puede **crear nuevas tareas, aumentar la productividad y complementar el trabajo humano**.

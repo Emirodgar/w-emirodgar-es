@@ -35,6 +35,8 @@ Los casos de uso más citados se concentran en tareas repetitivas con datos estr
 - **E-commerce**: detección automática de productos con bajo rendimiento, tests A/B sin intervención manual y recomendaciones en tiempo real.
 - **Logística**: optimización de inventario y de la cadena de suministro sobre datos que cambian constantemente.
 
+La ciencia es otro terreno donde los agentes ya se prueban. Google.org ha repartido **36 millones de dólares entre 17 organizaciones** de su Impact Challenge: AI for Science, elegidas entre candidaturas de 30 países. Entre ellas, el MIT entrena agentes que interpretan de forma autónoma imágenes de microscopía para descubrir materiales, y UC San Diego ha montado una *pipeline* agéntica que extrae física climática de las observaciones de la Tierra y decide dónde conviene recoger nuevas mediciones del océano.
+
 No es casualidad que estos sean los primeros terrenos: son entornos con datos limpios, reglas claras y un margen de error acotado. Justo lo contrario de lo que ocurre, por ejemplo, cuando un agente tiene que moverse en una web abierta o interactuar con un cliente real.
 
 ## Los riesgos que conviene no ignorar

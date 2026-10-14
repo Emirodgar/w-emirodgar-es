@@ -432,6 +432,10 @@ España está experimentando una **transición climática** de patrones **medite
 - **Mayor variabilidad interanual**
 
 
+## La IA como herramienta para anticipar el clima
+
+Además de medir el problema, ya se usa IA para adelantarse a sus efectos. Google.org ha destinado **36 millones de dólares a 17 organizaciones** en su Impact Challenge: AI for Science, y ocho de ellas trabajan en clima y ciencias ambientales. AfriClimate AI busca ampliar el margen de aviso de inundaciones repentinas en África de menos de tres horas a más de seis; Inria Chile construye un gemelo digital de los ecosistemas marinos; el Instituto Max Planck de Física del Plasma y la Universidad de Texas en Austin modelan con IA reactores de fusión; y la Universidad de Cambridge predice la degradación de cátodos para baterías de sodio-ion más duraderas.
+
 ## Contexto europeo e internacional
 
 España forma parte de un **esfuerzo coordinado europeo** que requiere inversiones masivas:

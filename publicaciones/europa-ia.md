@@ -27,6 +27,14 @@ Entre sus grandes apuestas están:
 
 Además, se han abierto varias **consultas públicas** para que empresas, ciudadanos e instituciones opinen y contribuyan a diseñar este nuevo escenario. La más llamativa es quizás la del *Cloud and AI Development Act*, que busca incentivar la inversión en infraestructura en la nube y centros de datos. También se preparan nuevas reglas para el uso y circulación de datos bajo el paraguas de una *Estrategia de Unión de Datos*.
 
+## Ciencia con IA: el cuello de botella es el cómputo
+
+La UE impulsa RAISE para cerrar la brecha de cómputo que a veces frena a sus científicos. En ese marco, Google DeepMind y Google Cloud ofrecerán a hasta 200 investigadores europeos acceso a modelos como AlphaFold 3, WeatherNext, AlphaGenome, AlphaEvolve y AlphaEarth Foundations, con 3 millones de dólares en créditos de computación. Refuerza la competitividad científica europea, aunque plantea la misma pregunta que recogemos en [soberanía digital europea](https://emirodgar.es/soberania-digital-europea): hasta qué punto depende de tecnología de fuera.
+
+## Cuánto se juega Europa en términos económicos
+
+Google estima en su informe de impacto económico europeo que la IA podría aportar **1,2 billones de euros al año** a la economía de la UE en una década, y pide un marco regulatorio predecible que no frene la innovación. Es una cifra de parte, procedente de una de las grandes tecnológicas, pero marca el debate: la regulación que repasamos a continuación también se mide por lo que facilita o dificulta ese potencial. Sobre el efecto real en la productividad, hablamos en [la paradoja de la IA y la productividad](https://emirodgar.es/la-paradoja-de-la-inteligencia-artificial-y-la-productividad).
+
 ## Más regulación, pero también más apoyo
 
 El famoso **AI Act** ya está en marcha desde agosto de 2024, aunque como repasamos en detalle en [qué es el AI Act y qué cambia realmente en 2026](https://emirodgar.es/reglamento-europeo-ia-act), su calendario de aplicación ha sufrido más de un vaivén. Se espera que aumente la confianza ciudadana y dé seguridad jurídica a quienes desarrollan y usan estas tecnologías. Pero también ha sido criticado por su complejidad. La Comisión Europea parece haber tomado nota y promete **simplificar el marco regulador**, sobre todo en lo que respecta al Reglamento General de Protección de Datos (GDPR).
