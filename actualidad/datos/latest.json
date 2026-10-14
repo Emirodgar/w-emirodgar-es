@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-13",
-  "generado_en": "2026-10-13T12:33:29+00:00",
-  "titular": "Los Reyes visitan Ceuta en medio de la polémica por la 'ley de nietos' y la crisis migratoria",
+  "fecha": "2026-10-14",
+  "generado_en": "2026-10-14T10:00:41+00:00",
+  "titular": "El Tribunal de Cuentas absuelve a independentistas catalanes por el 'procés' aplicando la ley de amnistía",
   "por_medio": {
-    "El Mundo": 27,
-    "The Objective": 126
+    "El Mundo": 26,
+    "The Objective": 166
   },
   "temas": [
     {
-      "tema": "Visita Real a Ceuta y crisis migratoria",
+      "tema": "Aplicación de la Ley de Amnistía en el Tribunal de Cuentas",
       "categoria": "Política",
-      "descripcion": "Los Reyes Felipe VI y Letizia visitan Ceuta, dos meses y medio después de la crisis migratoria, recibiendo un masivo apoyo popular y el agradecimiento del presidente de la ciudad. La UE exige el retorno de inmigrantes y advierte a Marruecos."
+      "descripcion": "El Tribunal de Cuentas absuelve a Carles Puigdemont, Oriol Junqueras, Artur Mas y otros 34 encausados por gastos del 'procés', perdonando más de 4 millones de euros, en aplicación de la Ley de Amnistía."
     },
     {
-      "tema": "Polémica por la 'ley de nietos'",
+      "tema": "División en el CGPJ por el apoyo a la juez Biedma",
       "categoria": "Política",
-      "descripcion": "El Gobierno critica el fallo del Supremo que suspende el voto de los beneficiados por la 'ley de nietos', calificándolo de \"trumpismo\" y de \"extrema gravedad\"."
+      "descripcion": "Los vocales conservadores del CGPJ apoyan a la juez Biedma ante presuntas amenazas, mientras que los progresistas se niegan a firmar un comunicado de respaldo, evidenciando la división interna del órgano."
     },
     {
-      "tema": "Alianzas electorales y tensiones políticas",
+      "tema": "Resultados de encuestas electorales en Cataluña",
       "categoria": "Política",
-      "descripcion": "PP y UPN recuperan su alianza para las elecciones del 29N, mientras Podemos se enroca en la candidatura de Irene Montero y el PSOE culpa al PP de los insultos a Sánchez."
+      "descripcion": "El PSC ganaría las elecciones catalanas, aunque a la baja, mientras que Aliança Catalana se dispara y podría disputar la segunda plaza con ERC."
     },
     {
-      "tema": "Salud del Papa León XIV",
-      "categoria": "Internacional",
-      "descripcion": "El Papa León XIV ha ingresado en el Hospital Gemelli para ser operado de un nódulo en el pulmón, cancelando sus audiencias hasta el 20 de octubre."
+      "tema": "Huelga indefinida en la educación pública de Madrid",
+      "categoria": "Sociedad",
+      "descripcion": "Arranca una huelga indefinida en la educación pública de Madrid con movilizaciones, cargas policiales y cortes de tráfico, con los educadores infantiles protestando en la Castellana."
     }
   ]
 }

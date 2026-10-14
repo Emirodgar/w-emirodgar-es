@@ -237,7 +237,7 @@
         "titulo": "Indicios \"de singular importancia\": Anticorrupción atribuye al PSOE cohecho y tráfico de influencias",
         "url": "https://www.elmundo.es/espana/2026/10/10/6ac92eade85ece5a4d8b458f.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-11",
@@ -348,6 +348,34 @@
         "medio": "El Mundo",
         "titulo": "El Papa ingresa en el Hospital Gemelli para ser operado de un nódulo en el pulmón",
         "url": "https://www.elmundo.es/internacional/2026/10/13/6acdee53e9cf4abd688b4578.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-14",
+      "edicion": "2026-10-14",
+      "titulo": "El Tribunal de Cuentas absuelve a independentistas catalanes por el 'procés' aplicando la ley de amn",
+      "categoria": "Política",
+      "descripcion": "El Tribunal de Cuentas ha absuelto a Carles Puigdemont, Oriol Junqueras, Artur Mas y otros 34 encausados por gastos del 'procés', perdonando más de 4 millones de euros, en aplicación de la Ley de Amnistía.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Tribunal de Cuentas, obligado a aplicar la ley de amnistía y perdonar más de 4 millones a los independentistas por el procés",
+        "url": "https://www.elmundo.es/espana/2026/10/14/6acf3bd4fdddffec208b45bd.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-14",
+      "edicion": "2026-10-14",
+      "titulo": "La inflación escala al 4,9% en septiembre, su nivel más alto desde febrero de 2023",
+      "categoria": "Economía",
+      "descripcion": "El Índice de Precios de Consumo (IPC) elevó su tasa interanual seis décimas en septiembre, hasta el 4,9%, su nivel más alto desde febrero de 2023, debido al encarecimiento de los carburantes.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La inflación escala al 4,9% en septiembre por el golpe de los carburantes",
+        "url": "https://www.elmundo.es/economia/2026/10/14/6acf27b9fc6c83af588b4570.html"
       },
       "destacado": false
     }
