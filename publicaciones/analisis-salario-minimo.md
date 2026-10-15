@@ -147,7 +147,7 @@ El análisis del período 2018-2025 muestra que las subidas del SMI han tenido u
 
 1. **Sostenibilidad empresarial**: Las pymes necesitan apoyo para absorber los incrementos de costes
 2. **Reforma fiscal**: Es necesario revisar la tributación del SMI para evitar tipos marginales excesivos
-3. **Productividad**: El crecimiento sostenible requiere mejoras en la productividad empresarial
+3. **Productividad**: El crecimiento sostenible requiere mejoras en la productividad empresarial. El FMI estima (octubre de 2026) que España es la única gran economía de la eurozona que pierde productividad entre 2018 y 2027 (-0,1% de media anual) mientras lidera la subida de los costes laborales unitarios (3,1% anual), un desequilibrio que limita el margen para absorber nuevas subidas salariales sin perder competitividad
 
 ### Perspectivas futuras
 

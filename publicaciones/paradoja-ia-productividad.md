@@ -93,6 +93,10 @@ El riesgo está en convertir cualquier avance tecnológico en una pieza más de 
 
 Quizá el debate maduro no sea "IA sí o IA no", ni optimismo tecnológico frente a pesimismo institucional. Las preguntas útiles son otras: **¿qué tipo de automatización estamos desplegando, quién captura sus beneficios y qué tareas humanas destruye o crea?** Y eso, de nuevo, se responde con datos y con rediseño organizativo, no con eslóganes.
 
+## El caso de España: más inversión no es más productividad
+
+La experiencia española con los fondos europeos es un buen recordatorio de que **inyectar recursos no equivale a mejorar la productividad**. Según las últimas estimaciones del FMI (octubre de 2026), España es la única gran economía de la eurozona que pierde productividad entre 2018 y 2027 (-0,1% de media anual, frente al +0,5% de la zona euro y el +1,0% de Alemania), pese a tener asignados desde 2021 más de 100.000 millones de euros en fondos europeos destinados a transformar la economía. El mismo patrón: dinero y tecnología disponibles, pero sin el rediseño de procesos y los cambios organizativos que son los que realmente se traducen en productividad. Con la IA corremos el mismo riesgo si nos quedamos en comprar licencias.
+
 ## ¿Qué tendría que pasar para que la IA cambie realmente la productividad?
 
 Si miramos lo ocurrido con otras tecnologías, el patrón se repite bastante.

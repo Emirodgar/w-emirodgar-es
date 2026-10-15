@@ -37,6 +37,10 @@ El dato que más debería llamar la atención de cualquiera que revise el panel 
 
 El cuarto indicador, el crecimiento del PIB, se mantiene clavado en el **2,7% interanual** en los doce meses que cubre el panel. Aquí conviene la lectura honesta: parte de esa aparente estabilidad es un artefacto de la propia frecuencia de los datos, ya que el INE solo publica una cifra nueva de Contabilidad Nacional cada trimestre, así que el mismo dato se repite varios meses seguidos en el histórico. Pero, más allá de ese matiz metodológico, la cifra real de fondo también describe una economía que ha crecido de forma notablemente estable durante un año en el que la inflación se ha movido con fuerza y el BCE ha cambiado de política monetaria dos veces.
 
+### Un matiz sobre el crecimiento: España crece, pero no gana productividad
+
+Esa estabilidad del PIB convive con un dato menos amable que acaba de difundir el FMI: España es la única gran economía de la eurozona que pierde productividad entre 2018 y 2027 (-0,1% de media anual, frente al +0,5% de la zona euro), pese a los más de 100.000 millones de euros de fondos europeos recibidos desde 2021. Y, a la vez, lidera la subida de los costes laborales unitarios (3,1% anual, frente al 2,5% de la eurozona). Es una combinación que limita el margen para subir salarios reales aunque el PIB aguante, como detallo en la [evolución del poder adquisitivo](https://emirodgar.es/evolucion-poder-adquisitivo).
+
 ## Lo que ha hecho el BCE mientras tanto
 
 Detrás de buena parte de estos movimientos está el giro del Banco Central Europeo: tras mantener el tipo de la facilidad principal de financiación en el **2,15%** entre septiembre de 2025 y mayo de 2026, lo subió al **2,4% en junio** y de nuevo al **2,65% el 10 de septiembre de 2026** (con efecto desde el día 16), respondiendo al repunte de la inflación. La próxima decisión está fijada para el **29 de octubre de 2026**. Es la misma subida que explica, en gran medida, por qué el Euríbor no ha dejado de subir mes a mes durante todo este periodo.
