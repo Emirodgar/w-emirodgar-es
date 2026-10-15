@@ -378,6 +378,48 @@
         "url": "https://www.elmundo.es/economia/2026/10/14/6acf27b9fc6c83af588b4570.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-15",
+      "edicion": "2026-10-15",
+      "titulo": "IU rechaza la estrategia de Podemos de dividir el Frente Amplio",
+      "categoria": "Política",
+      "descripcion": "Izquierda Unida ha rechazado la propuesta de Podemos de negociar alianzas electorales de forma fragmentada, acusándolos de intentar \"trocear\" el Frente Amplio por cálculos electorales.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Podemos deja a Madrid y Cataluña fuera de la unidad y trata de dividir al Frente Amplio en el resto, pero IU rechaza la maniobra: \"Aquí no se trocea por cálculos\"",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/15/6ad099b9e4d4d8275d8b4589.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-15",
+      "edicion": "2026-10-15",
+      "titulo": "Funcas mantiene previsión de crecimiento pero alerta de desaceleración por IPC",
+      "categoria": "Economía",
+      "descripcion": "Funcas mantiene su previsión de crecimiento económico del 2,5% para España, pero advierte de una desaceleración en los próximos dos años debido a la inflación, con un IPC proyectado del 3,7% este año y 3,1% el próximo.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Funcas mantiene en el 2,5% su previsión de crecimiento pero avisa de una desaceleración económica en los próximos dos años por el IPC",
+        "url": "https://www.elmundo.es/economia/2026/10/15/6acfe44bfc6c834e608b4593.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-15",
+      "edicion": "2026-10-15",
+      "titulo": "España, única gran economía del euro que pierde productividad desde 2018",
+      "categoria": "Economía",
+      "descripcion": "El Fondo Monetario Internacional ha señalado que España es la única de las grandes economías de la Eurozona que ha experimentado una pérdida de productividad desde 2018, a pesar de haber recibido 100.000 millones de euros en fondos europeos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "España, única gran economía del euro que pierde productividad desde 2018 pese a recibir 100.000 milllones de fondos europeos",
+        "url": "https://www.elmundo.es/economia/2026/10/15/6acfc0db21efa0734c8b45de.html"
+      },
+      "destacado": false
     }
   ]
 }

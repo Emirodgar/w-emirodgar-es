@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-14",
-  "generado_en": "2026-10-14T10:00:41+00:00",
-  "titular": "El Tribunal de Cuentas absuelve a independentistas catalanes por el 'procés' aplicando la ley de amnistía",
+  "fecha": "2026-10-15",
+  "generado_en": "2026-10-15T09:42:44+00:00",
+  "titular": "Podemos y el PSOE marcan la agenda preelectoral con tensiones internas y polémicas por vivienda",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 166
+    "El Mundo": 27,
+    "The Objective": 195
   },
   "temas": [
     {
-      "tema": "Aplicación de la Ley de Amnistía en el Tribunal de Cuentas",
+      "tema": "Tensiones en el Frente Amplio y estrategia electoral de Podemos",
       "categoria": "Política",
-      "descripcion": "El Tribunal de Cuentas absuelve a Carles Puigdemont, Oriol Junqueras, Artur Mas y otros 34 encausados por gastos del 'procés', perdonando más de 4 millones de euros, en aplicación de la Ley de Amnistía."
+      "descripcion": "Podemos busca excluir a Madrid y Cataluña de la unidad del Frente Amplio, una estrategia rechazada por Izquierda Unida que la considera un intento de dividir la coalición."
     },
     {
-      "tema": "División en el CGPJ por el apoyo a la juez Biedma",
+      "tema": "Polémica inmobiliaria del PSOE y respaldo de Sánchez",
       "categoria": "Política",
-      "descripcion": "Los vocales conservadores del CGPJ apoyan a la juez Biedma ante presuntas amenazas, mientras que los progresistas se niegan a firmar un comunicado de respaldo, evidenciando la división interna del órgano."
+      "descripcion": "La pareja de la portavoz del PSOE, Montse Mínguez, se ve envuelta en una controversia por la posesión de \"30 pisos\", generando críticas en la campaña socialista contra los \"rentistas\", aunque Pedro Sánchez ha defendido a Mínguez."
     },
     {
-      "tema": "Resultados de encuestas electorales en Cataluña",
-      "categoria": "Política",
-      "descripcion": "El PSC ganaría las elecciones catalanas, aunque a la baja, mientras que Aliança Catalana se dispara y podría disputar la segunda plaza con ERC."
+      "tema": "Previsiones económicas y productividad en España",
+      "categoria": "Economía",
+      "descripcion": "Funcas mantiene su previsión de crecimiento, pero alerta de una desaceleración económica por el IPC. España es la única gran economía del euro que pierde productividad desde 2018."
     },
     {
-      "tema": "Huelga indefinida en la educación pública de Madrid",
-      "categoria": "Sociedad",
-      "descripcion": "Arranca una huelga indefinida en la educación pública de Madrid con movilizaciones, cargas policiales y cortes de tráfico, con los educadores infantiles protestando en la Castellana."
+      "tema": "Hallazgo del cadáver de Rami y acusaciones en el caso Sandra Peña",
+      "categoria": "Sucesos",
+      "descripcion": "Se ha encontrado el cuerpo de Rami, el niño de 12 años con autismo desaparecido en Granollers. La Fiscalía acusa a dos menores por acoso en el caso del suicidio de Sandra Peña."
     }
   ]
 }
