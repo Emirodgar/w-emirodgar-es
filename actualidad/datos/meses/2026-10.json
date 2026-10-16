@@ -420,6 +420,34 @@
         "url": "https://www.elmundo.es/economia/2026/10/15/6acfc0db21efa0734c8b45de.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-15",
+      "edicion": "2026-10-16",
+      "titulo": "Isabel Allende gana el 75º Premio Planeta",
+      "categoria": "Cultura",
+      "descripcion": "La escritora Isabel Allende ha ganado el 75º Premio Planeta con la segunda parte de 'La casa de los espíritus', dotado con un millón de euros.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Pelotazo del Premio Planeta: gana Isabel Allende con la segunda parte de 'La casa de los espíritus'",
+        "url": "https://www.elmundo.es/cultura/literatura/2026/10/15/6ad0c084e4d4d8eb218b456f.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-15",
+      "edicion": "2026-10-16",
+      "titulo": "Mayor agujero patrimonial de la Seguridad Social",
+      "categoria": "Economía",
+      "descripcion": "La Tesorería General de la Seguridad Social ha alcanzado un patrimonio neto negativo de 116.100 millones de euros, el mayor de su historia.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno se anota el mayor agujero patrimonial de la historia de la Seguridad Social tras dos reformas de las pensiones",
+        "url": "https://www.elmundo.es/espana/2026/10/15/6ad12428e9cf4a56628b4596.html"
+      },
+      "destacado": false
     }
   ]
 }

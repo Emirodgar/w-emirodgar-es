@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-15",
-  "generado_en": "2026-10-15T09:42:44+00:00",
-  "titular": "Podemos y el PSOE marcan la agenda preelectoral con tensiones internas y polémicas por vivienda",
+  "fecha": "2026-10-16",
+  "generado_en": "2026-10-16T09:36:30+00:00",
+  "titular": "Doble crimen en Cantabria y tensiones políticas marcan la jornada, con Isabel Allende ganando el Premio Planeta.",
   "por_medio": {
-    "El Mundo": 27,
-    "The Objective": 195
+    "El Mundo": 29,
+    "The Objective": 196
   },
   "temas": [
     {
-      "tema": "Tensiones en el Frente Amplio y estrategia electoral de Podemos",
-      "categoria": "Política",
-      "descripcion": "Podemos busca excluir a Madrid y Cataluña de la unidad del Frente Amplio, una estrategia rechazada por Izquierda Unida que la considera un intento de dividir la coalición."
-    },
-    {
-      "tema": "Polémica inmobiliaria del PSOE y respaldo de Sánchez",
-      "categoria": "Política",
-      "descripcion": "La pareja de la portavoz del PSOE, Montse Mínguez, se ve envuelta en una controversia por la posesión de \"30 pisos\", generando críticas en la campaña socialista contra los \"rentistas\", aunque Pedro Sánchez ha defendido a Mínguez."
-    },
-    {
-      "tema": "Previsiones económicas y productividad en España",
-      "categoria": "Economía",
-      "descripcion": "Funcas mantiene su previsión de crecimiento, pero alerta de una desaceleración económica por el IPC. España es la única gran economía del euro que pierde productividad desde 2018."
-    },
-    {
-      "tema": "Hallazgo del cadáver de Rami y acusaciones en el caso Sandra Peña",
+      "tema": "Doble crimen en Mataporquera",
       "categoria": "Sucesos",
-      "descripcion": "Se ha encontrado el cuerpo de Rami, el niño de 12 años con autismo desaparecido en Granollers. La Fiscalía acusa a dos menores por acoso en el caso del suicidio de Sandra Peña."
+      "descripcion": "Dos hermanastros han sido asesinados en Mataporquera, Cantabria, y el presunto autor ha sido detenido por la Guardia Civil."
+    },
+    {
+      "tema": "Cierre de la estación de Sol por insalubridad",
+      "categoria": "Sociedad",
+      "descripcion": "La Comunidad de Madrid ha cerrado la estación de Metro de Sol debido a las condiciones insalubres causadas por una acampada ilegal por la vivienda."
+    },
+    {
+      "tema": "Tensiones en los pactos electorales de la izquierda",
+      "categoria": "Política",
+      "descripcion": "Las negociaciones para las elecciones generales han provocado una ruptura en la Comunidad Valenciana y críticas en Podemos, mientras Gabriel Rufián lamenta no haber logrado una candidatura unitaria."
+    },
+    {
+      "tema": "Presión europea sobre España por la migración",
+      "categoria": "Internacional",
+      "descripcion": "Italia y Dinamarca preparan nuevas críticas a España por la regularización masiva, y el Consejo Europeo abordará la crisis migratoria de Ceuta. España e Italia negocian el fin de los controles fronterizos."
     }
   ]
 }
