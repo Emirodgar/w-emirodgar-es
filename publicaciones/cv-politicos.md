@@ -1,6 +1,6 @@
 ---
 title: Currículum de políticos españoles
-description: 
+description: Análisis de la formación académica de los políticos españoles (2004-2025): títulos de los líderes, evolución del Congreso, datos por partido y polémicas de currículums.
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
@@ -17,7 +17,7 @@ En España contamos -dentro del Portal de Transparencia- con el [currículum vit
 
 ## Del pupitre al Congreso: Así ha cambiado la formación de los políticos españoles (2004-2025)
 
-Durante las dos últimas décadas la **trayectoria formativa de los dirigentes españoles** se convertido en objeto de escrutinio público. Este análisis se ha basado en los siguientes puntos:
+Durante las dos últimas décadas la **trayectoria formativa de los dirigentes españoles** se ha convertido en objeto de escrutinio público. Este análisis se ha basado en los siguientes puntos:
 
 1. Los títulos que poseen los principales líderes de cada partido.
 2. La evolución del nivel educativo medio de los diputados de la VIII Legislatura (2004-2008) a la XV (2023-2025).
@@ -109,6 +109,18 @@ Dejamos también la tabla comparativa por si se quieren reutilizar los datos del
 - **Tesis Sánchez (2018):** acusaciones de plagio sin condena; tesis publicada para consulta pública.
 - **“Másteres” rebajados (2024-2025):** Moncloa modificó currículos de Yolanda Díaz y otros altos cargos, sustituyendo másteres por “cursos superiores”.
 - **Dimisión Noelia Núñez (PP, 2025):** infló tres carreras no terminadas; reabrió el debate sobre verificación curricular y terminó dimitiendo, un debate de transparencia que también alcanza al entorno de [asesores y personal de confianza](https://emirodgar.es/asesores-politicos) de los Gobiernos.
+- **Efecto dominó (julio-agosto 2025):** tras Núñez dimitieron en pocos días José María Ángel Batalla (PSPV), tras un informe de la Agencia Antifraude valenciana que detectó un título universitario falso, e Ignacio Higuero, consejero de la Junta de Extremadura, por una licenciatura en Marketing del CEU que no figura en el Registro de Universidades (RUCT). Tres dimisiones en diez días y de partidos distintos.
+- **Borrados y correcciones masivas:** a raíz de esas dimisiones, varias administraciones y partidos retocaron discretamente biografías y fichas de cargos públicos, y ese goteo de cambios sin explicación es también un problema de transparencia.
+- **Casos de fichas que cambian entre legislaturas:** medios como [Newtral](https://www.newtral.es/lista-curriculum-politicos-discrepancias/20250804/) y [The Objective](https://theobjective.com/espana/politica/2025-07-25/sanchez-puente-bernabe-politicos-cv-titulos/) han señalado discrepancias en las biografías de Óscar Puente (un máster de la Fundación Jaime Vera, que no expide títulos oficiales), Cristina Narbona (de doctora a licenciada en 2023) o Juanma Moreno (de licenciado en ADE a "estudios en ADE"). Son cambios en fichas oficiales, y en la mayoría de los casos no hubo consecuencias.
+
+### Cómo verificar un currículum político
+
+Cualquiera puede contrastar una formación con fuentes públicas:
+
+1. **Registro de Universidades, Centros y Títulos (RUCT):** confirma si un título oficial existe en esa universidad.
+2. **Fichas del Congreso y el Senado:** conviene guardar versiones antiguas, porque las biografías cambian entre legislaturas.
+3. **Portal de Transparencia:** publica los currículums de los altos cargos del Gobierno.
+4. **Máster oficial, propio o curso:** solo el primero es un título universitario oficial, y esa diferencia explica buena parte de las polémicas.
 
 
 ## 6. Interpretación y perspectivas
