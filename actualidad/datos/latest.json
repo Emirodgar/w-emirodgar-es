@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-16",
-  "generado_en": "2026-10-16T09:36:30+00:00",
-  "titular": "Doble crimen en Cantabria y tensiones políticas marcan la jornada, con Isabel Allende ganando el Premio Planeta.",
+  "fecha": "2026-10-17",
+  "generado_en": "2026-10-17T09:07:55+00:00",
+  "titular": "Dimisión en el PSOE por la polémica de la vivienda, mientras la izquierda fracasa en la unidad electoral",
   "por_medio": {
-    "El Mundo": 29,
-    "The Objective": 196
+    "El Mundo": 26,
+    "The Objective": 154
   },
   "temas": [
     {
-      "tema": "Doble crimen en Mataporquera",
-      "categoria": "Sucesos",
-      "descripcion": "Dos hermanastros han sido asesinados en Mataporquera, Cantabria, y el presunto autor ha sido detenido por la Guardia Civil."
-    },
-    {
-      "tema": "Cierre de la estación de Sol por insalubridad",
-      "categoria": "Sociedad",
-      "descripcion": "La Comunidad de Madrid ha cerrado la estación de Metro de Sol debido a las condiciones insalubres causadas por una acampada ilegal por la vivienda."
-    },
-    {
-      "tema": "Tensiones en los pactos electorales de la izquierda",
+      "tema": "Dimisión y relevo en la portavocía del PSOE",
       "categoria": "Política",
-      "descripcion": "Las negociaciones para las elecciones generales han provocado una ruptura en la Comunidad Valenciana y críticas en Podemos, mientras Gabriel Rufián lamenta no haber logrado una candidatura unitaria."
+      "descripcion": "Montse Mínguez dimite como portavoz del PSOE por la polémica de los \"30 pisos\", siendo reemplazada por Rebeca Torró. El suceso genera apoyo interno y debate sobre la redefinición del partido."
     },
     {
-      "tema": "Presión europea sobre España por la migración",
+      "tema": "Fracaso de la unidad de la izquierda en las elecciones",
+      "categoria": "Política",
+      "descripcion": "La izquierda no logra la unidad en la mayoría de España para las próximas elecciones, aunque se alcanza un acuerdo para el Senado entre PSOE y Frente Amplio."
+    },
+    {
+      "tema": "Suspensión de sanciones de EE.UU. a Rusia",
       "categoria": "Internacional",
-      "descripcion": "Italia y Dinamarca preparan nuevas críticas a España por la regularización masiva, y el Consejo Europeo abordará la crisis migratoria de Ceuta. España e Italia negocian el fin de los controles fronterizos."
+      "descripcion": "Donald Trump suspende las sanciones del Congreso contra Rusia, alegando \"interés nacional\", una decisión que el Kremlin considera \"histórica\"."
+    },
+    {
+      "tema": "Cierre de la estación de Metro de Sol por acampada",
+      "categoria": "Sociedad",
+      "descripcion": "La estación de Metro de Sol en Madrid permanece cerrada debido a una acampada que ha provocado \"contaminación química\" y \"riesgo biológico\", afectando también el tránsito de personas con discapacidad."
     }
   ]
 }

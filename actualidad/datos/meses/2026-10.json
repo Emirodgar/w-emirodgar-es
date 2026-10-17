@@ -448,6 +448,48 @@
         "url": "https://www.elmundo.es/espana/2026/10/15/6ad12428e9cf4a56628b4596.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-17",
+      "edicion": "2026-10-17",
+      "titulo": "Dimisión de Montse Mínguez como portavoz del PSOE",
+      "categoria": "Política",
+      "descripcion": "Montse Mínguez dimite como portavoz del PSOE tras la polémica por sus declaraciones sobre la vivienda, siendo relevada por Rebeca Torró.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Sánchez deja la portavocía a Rebeca Torró tras la dimisión de Montse Mínguez y Page se ausenta de un Comité Federal \"sin posibilidad de intervención\"",
+        "url": "https://www.elmundo.es/espana/2026/10/17/6ad32408fdddffb0328b4578.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-17",
+      "edicion": "2026-10-17",
+      "titulo": "Suspensión de sanciones de EE.UU. a Rusia por \"interés nacional\"",
+      "categoria": "Internacional",
+      "descripcion": "El presidente de Estados Unidos, Donald Trump, suspende las sanciones del Congreso contra Rusia, una decisión calificada de \"momento histórico\" por el Kremlin.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Trump suspende las sanciones del Congreso contra Rusia por \"interés nacional\" y el Kremlin lo califica de \"momento histórico\"",
+        "url": "https://www.elmundo.es/internacional/2026/10/17/6ad3068ffdddffb8258b45b6.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-17",
+      "edicion": "2026-10-17",
+      "titulo": "Luz verde al cannabis medicinal en España",
+      "categoria": "Sociedad",
+      "descripcion": "España aprueba el cannabis medicinal, con los primeros preparados disponibles en hospitales este mes.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Luz verde al cannabis medicinal en España: los hospitales contarán con los primeros preparados este mes",
+        "url": "https://www.elmundo.es/salud/2026/10/17/6ad24320fdddff917d8b4598.html"
+      },
+      "destacado": false
     }
   ]
 }
