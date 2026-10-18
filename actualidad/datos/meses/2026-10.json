@@ -363,7 +363,7 @@
         "titulo": "El Tribunal de Cuentas, obligado a aplicar la ley de amnistía y perdonar más de 4 millones a los independentistas por el procés",
         "url": "https://www.elmundo.es/espana/2026/10/14/6acf3bd4fdddffec208b45bd.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-14",
@@ -488,6 +488,48 @@
         "medio": "El Mundo",
         "titulo": "Luz verde al cannabis medicinal en España: los hospitales contarán con los primeros preparados este mes",
         "url": "https://www.elmundo.es/salud/2026/10/17/6ad24320fdddff917d8b4598.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-18",
+      "edicion": "2026-10-18",
+      "titulo": "Más de 1.200 detenidos en protestas violentas en Francia",
+      "categoria": "Internacional",
+      "descripcion": "Una jornada de protestas en Francia degeneró en extrema violencia, con más de 1.200 personas detenidas, 855 de ellas en París, y 150 policías heridos, además de daños materiales significativos.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Francia despierta con la resaca de la extrema violencia en las protestas: caos, pillaje, incendios y más de 1.200 detenidos con \"perfiles peligrosos\"",
+        "url": "https://www.elmundo.es/internacional/2026/10/18/6ad46f11e85ece497e8b457f.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-18",
+      "edicion": "2026-10-18",
+      "titulo": "Alerta roja por DANA en el litoral sur de Valencia y norte de Alicante",
+      "categoria": "Sociedad",
+      "descripcion": "La DANA Adam ha provocado la activación de la alerta roja en estas zonas, con previsiones de acumulados de hasta 400 l/m2, afectando a varias comunidades autónomas.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La dana Adam pone en aviso rojo el litoral sur de Valencia y norte de Alicante, donde se prevén acumulados de hasta 400 l/m2",
+        "url": "https://www.elmundo.es/espana/2026/10/18/6ad45bca3e9f6f8c524ef422-directo.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-18",
+      "edicion": "2026-10-18",
+      "titulo": "Ucrania lanza uno de los mayores ataques con drones contra San Petersburgo",
+      "categoria": "Internacional",
+      "descripcion": "San Petersburgo ha sido objetivo de uno de los mayores ataques con drones desde el inicio de la guerra, resultando en el fallecimiento de una persona y el derribo de 144 aparatos no tripulados.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Ucrania lanza contra San Petersburgo uno de los mayores ataques con drones de la guerra",
+        "url": "https://www.elmundo.es/internacional/2026/10/18/6ad47819fdddffbd688b457a.html"
       },
       "destacado": false
     }

@@ -1,6 +1,16 @@
 {
   "dias": [
     {
+      "fecha": "2026-10-18",
+      "titular": "Francia, en caos por protestas violentas con más de 1.200 detenidos; España, en alerta roja por DANA.",
+      "noticias": 125,
+      "temas": [
+        "Violencia y detenciones en Francia",
+        "Alerta meteorológica en España por DANA",
+        "Operación policial y migración en Ceuta"
+      ]
+    },
+    {
       "fecha": "2026-10-17",
       "titular": "Dimisión en el PSOE por la polémica de la vivienda, mientras la izquierda fracasa en la unidad electoral",
       "noticias": 180,

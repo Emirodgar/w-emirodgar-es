@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-17",
-  "generado_en": "2026-10-17T09:07:55+00:00",
-  "titular": "Dimisión en el PSOE por la polémica de la vivienda, mientras la izquierda fracasa en la unidad electoral",
+  "fecha": "2026-10-18",
+  "generado_en": "2026-10-18T09:25:20+00:00",
+  "titular": "Francia, en caos por protestas violentas con más de 1.200 detenidos; España, en alerta roja por DANA.",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 154
+    "El Mundo": 22,
+    "The Objective": 103
   },
   "temas": [
     {
-      "tema": "Dimisión y relevo en la portavocía del PSOE",
-      "categoria": "Política",
-      "descripcion": "Montse Mínguez dimite como portavoz del PSOE por la polémica de los \"30 pisos\", siendo reemplazada por Rebeca Torró. El suceso genera apoyo interno y debate sobre la redefinición del partido."
-    },
-    {
-      "tema": "Fracaso de la unidad de la izquierda en las elecciones",
-      "categoria": "Política",
-      "descripcion": "La izquierda no logra la unidad en la mayoría de España para las próximas elecciones, aunque se alcanza un acuerdo para el Senado entre PSOE y Frente Amplio."
-    },
-    {
-      "tema": "Suspensión de sanciones de EE.UU. a Rusia",
+      "tema": "Violencia y detenciones en Francia",
       "categoria": "Internacional",
-      "descripcion": "Donald Trump suspende las sanciones del Congreso contra Rusia, alegando \"interés nacional\", una decisión que el Kremlin considera \"histórica\"."
+      "descripcion": "Francia ha experimentado una jornada de protestas violentas con más de 1.200 detenidos y daños significativos en edificios públicos, incluyendo el ayuntamiento de Limoges."
     },
     {
-      "tema": "Cierre de la estación de Metro de Sol por acampada",
+      "tema": "Alerta meteorológica en España por DANA",
       "categoria": "Sociedad",
-      "descripcion": "La estación de Metro de Sol en Madrid permanece cerrada debido a una acampada que ha provocado \"contaminación química\" y \"riesgo biológico\", afectando también el tránsito de personas con discapacidad."
+      "descripcion": "Una DANA ha provocado una alerta roja en la Comunidad Valenciana y el norte de Alicante, con previsiones de fuertes lluvias, afectando a varias comunidades autónomas."
+    },
+    {
+      "tema": "Operación policial y migración en Ceuta",
+      "categoria": "Sociedad",
+      "descripcion": "La Policía ha intervenido en Ceuta para retirar a migrantes de las calles, trasladándolos a centros o facilitando su regreso, lo que ha provocado la huida de algunos al monte."
+    },
+    {
+      "tema": "Acuerdo PP-Vox y estrategia electoral",
+      "categoria": "Política",
+      "descripcion": "PP y Vox han pactado no agredirse mutuamente de cara a las elecciones, mientras el Gobierno enfoca su campaña en las pensiones y Feijóo busca pasar página en Cataluña."
     }
   ]
 }

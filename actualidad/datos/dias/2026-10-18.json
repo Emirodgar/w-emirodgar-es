@@ -1,0 +1,1083 @@
+{
+  "fecha": "2026-10-18",
+  "generado_en": "2026-10-18T09:25:20+00:00",
+  "modelo": "gemini-2.5-flash",
+  "titular": "Francia, en caos por protestas violentas con más de 1.200 detenidos; España, en alerta roja por DANA.",
+  "resumen": "Francia ha vivido una jornada de extrema violencia tras las protestas, resultando en más de 1.200 detenidos, 855 de ellos en París, y 150 policías heridos. Se han registrado actos de pillaje e incendios, con el ayuntamiento de Limoges destrozado. Los fiscales solicitarán prisión provisional para los arrestados, muchos de ellos con \"perfiles peligrosos\", según El Mundo. En Ucrania, se ha producido uno de los mayores ataques con drones contra San Petersburgo, con un fallecido y 144 aparatos derribados.\n\nEn España, la DANA Adam ha puesto en aviso rojo el litoral sur de Valencia y norte de Alicante, con previsiones de hasta 400 l/m2, afectando a siete comunidades autónomas, Ceuta y Melilla. La Policía ha desplegado un operativo en Los Rosales y el Tarajal de Ceuta para retirar a los últimos migrantes de las calles, trasladándolos a centros de atención o facilitando su retorno voluntario a Marruecos. Este despliegue se produce tras una operación policial que, según The Objective, provocó la huida de decenas de inmigrantes al monte. Además, se ha detenido a dos radicales 'abertzales' en el País Vasco por terrorismo, acusados de poseer datos de guardias civiles.\n\nEn el ámbito político, PP y Vox han alcanzado un \"pacto de no agresión\" con la vista puesta en el Senado. El Gobierno, por su parte, busca capitalizar el debate sobre las pensiones tras la caída de Montse Mínguez, apuntando a los votantes mayores de 65 años. Feijóo ha manifestado su intención de \"pasar página\" en Cataluña, mientras que Abascal ha alertado de que las próximas elecciones \"no van a ser limpias\".",
+  "temas": [
+    {
+      "tema": "Violencia y detenciones en Francia",
+      "categoria": "Internacional",
+      "descripcion": "Francia ha experimentado una jornada de protestas violentas con más de 1.200 detenidos y daños significativos en edificios públicos, incluyendo el ayuntamiento de Limoges.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Francia despierta con la resaca de la extrema violencia en las protestas: caos, pillaje, incendios y más de 1.200 detenidos con \"perfiles peligrosos\"",
+          "url": "https://www.elmundo.es/internacional/2026/10/18/6ad46f11e85ece497e8b457f.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Más de 1.200 detenidos y 150 policías heridos tras la jornada de protestas en Francia",
+          "url": "https://theobjective.com/internacional/2026-10-18/1-200-detenidos-150-policias-heridos-protestas-francia/"
+        }
+      ]
+    },
+    {
+      "tema": "Alerta meteorológica en España por DANA",
+      "categoria": "Sociedad",
+      "descripcion": "Una DANA ha provocado una alerta roja en la Comunidad Valenciana y el norte de Alicante, con previsiones de fuertes lluvias, afectando a varias comunidades autónomas.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "La dana Adam pone en aviso rojo el litoral sur de Valencia y norte de Alicante, donde se prevén acumulados de hasta 400 l/m2",
+          "url": "https://www.elmundo.es/espana/2026/10/18/6ad45bca3e9f6f8c524ef422-directo.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Siete comunidades, Ceuta y Melilla, en alerta por lluvias con aviso rojo en Valencia",
+          "url": "https://theobjective.com/espana/2026-10-18/siete-comunidades-ceuta-melilla-rojo-valencia/"
+        }
+      ]
+    },
+    {
+      "tema": "Operación policial y migración en Ceuta",
+      "categoria": "Sociedad",
+      "descripcion": "La Policía ha intervenido en Ceuta para retirar a migrantes de las calles, trasladándolos a centros o facilitando su regreso, lo que ha provocado la huida de algunos al monte.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "La Policía se despliega en Los Rosales y el Tarajal para retirar a los últimos migrantes de las calles de Ceuta",
+          "url": "https://www.elmundo.es/espana/2026/10/18/6ad4888ae9cf4aae258b458a.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Decenas de inmigrantes huyen al monte tras una operación policial en el Tarajal de Ceuta",
+          "url": "https://theobjective.com/espana/2026-10-18/decenas-inmigrantes-monte-policial-tarajal-ceuta/"
+        }
+      ]
+    },
+    {
+      "tema": "Acuerdo PP-Vox y estrategia electoral",
+      "categoria": "Política",
+      "descripcion": "PP y Vox han pactado no agredirse mutuamente de cara a las elecciones, mientras el Gobierno enfoca su campaña en las pensiones y Feijóo busca pasar página en Cataluña.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "\"Pacto de no agresión\" de Feijóo y Abascal con la mirada en el Senado",
+          "url": "https://www.elmundo.es/espana/2026/10/18/6ad3a436fdddfffb408b459c.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "El Gobierno exprime el debate sobre las pensiones tras la caída de Mínguez: a por 9 millones de votos donde se resiente Vox",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/18/6ad3b836fdddff74548b45bf.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Abascal alerta de que el 29-N «no va a ser limpio» y acusa a Sánchez de preparar trampas",
+          "url": "https://theobjective.com/espana/politica/2026-10-18/abascal-29-n-sanchez-trampas/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Feijóo pasa página con la amnistía: «España no funciona con el motor catalán apagado»",
+          "url": "https://theobjective.com/espana/politica/2026-10-18/feijoo-pagina-amnistia-motor-catalan/"
+        }
+      ]
+    },
+    {
+      "tema": "Ataque con drones en San Petersburgo",
+      "categoria": "Internacional",
+      "descripcion": "Ucrania ha lanzado uno de los mayores ataques con drones de la guerra contra San Petersburgo, resultando en un fallecido y numerosos aparatos derribados.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Ucrania lanza contra San Petersburgo uno de los mayores ataques con drones de la guerra",
+          "url": "https://www.elmundo.es/internacional/2026/10/18/6ad47819fdddffbd688b457a.html"
+        }
+      ]
+    },
+    {
+      "tema": "Detenciones por terrorismo en Euskadi",
+      "categoria": "Sucesos",
+      "descripcion": "La Ertzaintza ha detenido a dos radicales 'abertzales' por terrorismo, acusados de poseer información sobre guardias civiles destinados en el País Vasco.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "La Ertzaintza detiene por terrorismo a dos radicales 'abertzales' con datos de guardias civiles destinados en Euskadi",
+          "url": "https://www.elmundo.es/pais-vasco/2026/10/17/6ad3e8bbe9cf4afa078b4587.html"
+        }
+      ]
+    },
+    {
+      "tema": "Incursiones marroquíes y cambios en Defensa",
+      "categoria": "Política",
+      "descripcion": "El Ministerio de Defensa ha modificado sus protocolos de actuación tras las incursiones de buques marroquíes en julio, incrementando la vigilancia.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Defensa cambia los protocolos tras la incursión de buques marroquíes el 30 de julio: \"Ya no esperamos para actuar\"",
+          "url": "https://www.elmundo.es/espana/2026/10/18/6ad39e44e4d4d8a1748b4580.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Fragatas, cazas, satélites… Así ejecutó Rabat su pulso a España disfrazado de crisis migratoria",
+          "url": "https://theobjective.com/espana/2026-10-18/fragatas-cazas-satelites-rabat-espana-crisis-migratoria/"
+        }
+      ]
+    }
+  ],
+  "enfoques": "Ambos medios coinciden en destacar la violencia en las protestas en Francia, informando sobre el número de detenidos y los daños. También comparten la noticia de la alerta roja por la DANA en España y la operación policial en Ceuta para retirar a los migrantes. The Objective añade el detalle de la huida de inmigrantes al monte tras la intervención. En el ámbito político, El Mundo subraya el \"pacto de no agresión\" entre PP y Vox y la estrategia del Gobierno con las pensiones, mientras que The Objective se centra en las declaraciones de Abascal sobre la limpieza de las elecciones y la intención de Feijóo de \"pasar página\" en Cataluña. El Mundo también aborda el ataque con drones en Ucrania y las detenciones por terrorismo en Euskadi, aspectos no cubiertos por The Objective en sus titulares principales.",
+  "por_medio": {
+    "El Mundo": 22,
+    "The Objective": 103
+  },
+  "por_categoria": {
+    "Política": 2,
+    "Internacional": 2,
+    "Sociedad": 2,
+    "Sucesos": 1
+  },
+  "hitos": [
+    {
+      "fecha": "2026-10-18",
+      "edicion": "2026-10-18",
+      "titulo": "Más de 1.200 detenidos en protestas violentas en Francia",
+      "categoria": "Internacional",
+      "descripcion": "Una jornada de protestas en Francia degeneró en extrema violencia, con más de 1.200 personas detenidas, 855 de ellas en París, y 150 policías heridos, además de daños materiales significativos.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Francia despierta con la resaca de la extrema violencia en las protestas: caos, pillaje, incendios y más de 1.200 detenidos con \"perfiles peligrosos\"",
+        "url": "https://www.elmundo.es/internacional/2026/10/18/6ad46f11e85ece497e8b457f.html"
+      }
+    },
+    {
+      "fecha": "2026-10-18",
+      "edicion": "2026-10-18",
+      "titulo": "Alerta roja por DANA en el litoral sur de Valencia y norte de Alicante",
+      "categoria": "Sociedad",
+      "descripcion": "La DANA Adam ha provocado la activación de la alerta roja en estas zonas, con previsiones de acumulados de hasta 400 l/m2, afectando a varias comunidades autónomas.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La dana Adam pone en aviso rojo el litoral sur de Valencia y norte de Alicante, donde se prevén acumulados de hasta 400 l/m2",
+        "url": "https://www.elmundo.es/espana/2026/10/18/6ad45bca3e9f6f8c524ef422-directo.html"
+      }
+    },
+    {
+      "fecha": "2026-10-18",
+      "edicion": "2026-10-18",
+      "titulo": "Ucrania lanza uno de los mayores ataques con drones contra San Petersburgo",
+      "categoria": "Internacional",
+      "descripcion": "San Petersburgo ha sido objetivo de uno de los mayores ataques con drones desde el inicio de la guerra, resultando en el fallecimiento de una persona y el derribo de 144 aparatos no tripulados.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Ucrania lanza contra San Petersburgo uno de los mayores ataques con drones de la guerra",
+        "url": "https://www.elmundo.es/internacional/2026/10/18/6ad47819fdddffbd688b457a.html"
+      }
+    }
+  ],
+  "noticias": [
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "La dana Adam pone en aviso rojo el litoral sur de Valencia y norte de Alicante, donde se prevén acumulados de hasta 400 l/m2",
+      "url": "https://www.elmundo.es/espana/2026/10/18/6ad45bca3e9f6f8c524ef422-directo.html",
+      "fecha": "2026-10-18T09:18:56+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Francia despierta con la resaca de la extrema violencia en las protestas: caos, pillaje, incendios y más de 1.200 detenidos con \"perfiles peligrosos\"",
+      "url": "https://www.elmundo.es/internacional/2026/10/18/6ad46f11e85ece497e8b457f.html",
+      "fecha": "2026-10-18T09:18:41+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "La Policía se despliega en Los Rosales y el Tarajal para retirar a los últimos migrantes de las calles de Ceuta",
+      "url": "https://www.elmundo.es/espana/2026/10/18/6ad4888ae9cf4aae258b458a.html",
+      "fecha": "2026-10-18T08:52:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Decenas de inmigrantes huyen al monte tras una operación policial en el Tarajal de Ceuta",
+      "url": "https://theobjective.com/espana/2026-10-18/decenas-inmigrantes-monte-policial-tarajal-ceuta/",
+      "fecha": "2026-10-18T08:45:03+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "El embajador de EEUU pide a Israel \"años de prisión\" para los colonos que atacaron a la fotoperiodista en Ramala",
+      "url": "https://www.elmundo.es/internacional/2026/10/18/6ad4856ce9cf4aae258b4583.html",
+      "fecha": "2026-10-18T08:41:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Abascal alerta de que el 29-N «no va a ser limpio» y acusa a Sánchez de preparar trampas",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/abascal-29-n-sanchez-trampas/",
+      "fecha": "2026-10-18T08:36:46+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Masters 1000 de Shanghai : Davidovich y Jódar juegan la final española en China",
+      "url": "https://www.elmundo.es/deportes/tenis/masters-1000/alejandro-davidovich-fokina-rafa-jodar/2026/10/18/04_0412_20261018_127-directo.html",
+      "fecha": "2026-10-18T08:11:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El ICO oculta si la empresa de las balizas V16 ha devuelto los préstamos avalados por el Estado",
+      "url": "https://theobjective.com/economia/2026-10-18/ico-empresa-balizas-v16-prestamos-estado/",
+      "fecha": "2026-10-18T08:11:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo pasa página con la amnistía: «España no funciona con el motor catalán apagado»",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/feijoo-pagina-amnistia-motor-catalan/",
+      "fecha": "2026-10-18T08:09:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Más de 1.200 detenidos y 150 policías heridos tras la jornada de protestas en Francia",
+      "url": "https://theobjective.com/internacional/2026-10-18/1-200-detenidos-150-policias-heridos-protestas-francia/",
+      "fecha": "2026-10-18T07:55:13+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Ucrania lanza contra San Petersburgo uno de los mayores ataques con drones de la guerra",
+      "url": "https://www.elmundo.es/internacional/2026/10/18/6ad47819fdddffbd688b457a.html",
+      "fecha": "2026-10-18T07:48:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Sigue la búsqueda de la mujer arrastrada por la riera en Cabrera de Mar este sábado",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-18/sigue-busqueda-mujer-cabrera-mar-sabado/",
+      "fecha": "2026-10-18T07:43:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Siete comunidades, Ceuta y Melilla, en alerta por lluvias con aviso rojo en Valencia",
+      "url": "https://theobjective.com/espana/2026-10-18/siete-comunidades-ceuta-melilla-rojo-valencia/",
+      "fecha": "2026-10-18T07:07:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Dos muertos, entre ellos un niño, tras irrumpir un coche en un partido de fútbol en EEUU",
+      "url": "https://theobjective.com/internacional/2026-10-18/dos-muertos-nino-coche-partido-futbol-eeuu/",
+      "fecha": "2026-10-18T07:01:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Rajoy, en 2015: «Zapatero coincidió con un hermano mío en la escuela y ambos tenían muy buenas notas; yo en el colegio era muy bueno»",
+      "url": "https://theobjective.com/gente/2026-10-18/rajoy-zapatero-hermano-escuela-notas-colegio-bueno/",
+      "fecha": "2026-10-18T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Zendaya y Hailey Bieber ya se han rendido a estas tres tendencias de maquillaje coreano que arrasarán este otoño",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-10-18/zendaya-y-hailey-bieber-ya-se-han-rendido-a-estas-tres-tendencias-de-maquillaje-coreano-que-arrasaran-este-otono/",
+      "fecha": "2026-10-18T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Seis señales de que estás comiendo demasiado azúcar y que tu cuerpo podría estar intentando avisarte",
+      "url": "https://theobjective.com/lifestyle/2026-10-18/seis-senales-de-que-estas-comiendo-demasiado-azucar-y-que-tu-cuerpo-podria-estar-intentando-avisarte/",
+      "fecha": "2026-10-18T04:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | La trampa que impidió un Senado en las Cortes de Cádiz",
+      "url": "https://theobjective.com/podcasts/historia-canalla/podcast-historia-canalla-trampa-senado-cortes-cadiz/",
+      "fecha": "2026-10-18T03:25:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Uwe Wittstock en La Europa de las letras",
+      "url": "https://theobjective.com/podcasts/la-europa-de-las-letras/podcast-uwe-wittstock-europa-letras-marsella-berlin/",
+      "fecha": "2026-10-18T03:25:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "El podcast de ‘El Liberal’ con José Carlos Díez",
+      "url": "https://theobjective.com/podcasts/el-liberal-podcast/podcast-el-liberal-con-jose-carlos-diez/",
+      "fecha": "2026-10-18T03:25:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Israel, un año después",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/israel-despues-articulo-anna-grau/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Legislatura fallida",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/legislatura-fallida-articulo-teresa-freixes/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "El silencio de Alemania",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/silencio-alemania-articulo-andreu-jaume/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "El humor como actitud vital",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/humor-actitud-vital-articulo-jorge-freire/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "La ley como propaganda",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/ley-propaganda-articulo-benito-arrunada/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "El bumerán Rufián y Colacau",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/rufian-colacau-clon-de-la-semana/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Ni maldición ni milagro",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/maldicion-milagro-articulo-fernando-savater/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Servil pero incompetente Defensor del Pueblo",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-18/defensor-del-pueblo-articulo-javier-borrego/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "tecnologia",
+      "titulo": "La máquina de la verdad: del plató de Julián Lago a la IA que quiere leer tu mente",
+      "url": "https://theobjective.com/tecnologia/2026-10-18/maquina-de-la-verdad-leer-mente/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Hacienda admite que justificar los gastos del teletrabajo es «complejo y restrictivo»",
+      "url": "https://theobjective.com/economia/2026-10-18/hacienda-justificar-gastos-autonomos-problema-recurrente/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "José Carlos Díez: «El futuro de nuestros hijos no se puede sacrificar para pagar las pensiones»",
+      "url": "https://theobjective.com/economia/2026-10-18/jose-carlos-diez-sacrificar-todo-pensiones-el-liberal/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Fragatas, cazas, satélites… Así ejecutó Rabat su pulso a España disfrazado de crisis migratoria",
+      "url": "https://theobjective.com/espana/2026-10-18/fragatas-cazas-satelites-rabat-espana-crisis-migratoria/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "La productora de ‘Polònia’ se lleva más de dos millones por resucitar la Guerra Civil en TVE",
+      "url": "https://theobjective.com/medios/2026-10-18/productora-polonia-lleva-dos-millones-guerra-civil-rtve/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La propuesta fiscal de Vox requeriría ajustes en sanidad, educación o Seguridad Social",
+      "url": "https://theobjective.com/economia/2026-10-18/propuesta-fiscal-vox-inviable-pensiones-sanidad-educacion/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El ‘Black Friday’ complica el voto por correo del 29-N con 7.400 carteros menos",
+      "url": "https://theobjective.com/espana/2026-10-18/black-friday-voto-correo-29-n-carteros/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Jordi Cruz, chef catalán: «Los tomates que más potencian una ensalada y cualquier receta son los de colgar, pero aliñándolos con za’atar y asándolos en la freidora de aire a 120 grados»",
+      "url": "https://theobjective.com/gastronomia/2026-10-18/jordi-cruz-chef-catalan-los-tomates-que-mas-potencian-una-ensalada-y-cualquier-receta-son-los-de-colgar-pero-alinandolos-con-zaatar-y-asandolos-en-la-freidora-de-aire-a-120-grados/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Parecía cosa del pasado pero vuelve con fuerza: la tendencia que Zara, Mango y Primark recuperan para conseguir los ‘looks’ más elegantes de este otoño-invierno 2026",
+      "url": "https://theobjective.com/lifestyle/moda/2026-10-18/parecia-cosa-del-pasado-pero-vuelve-con-fuerza-la-tendencia-que-zara-mango-y-primark-recuperan-para-conseguir-los-looks-mas-elegantes-de-este-otono-invierno-2026/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Brad Pitt (62 años), sobre la relación con su padre: «Somos gente de campo. No profundizamos, pero a veces surge una frase que llega hasta el fondo y luego, a otra cosa»",
+      "url": "https://theobjective.com/cultura/cine/2026-10-18/brad-pitt-62-anos-sobre-la-relacion-con-su-padre-somos-gente-de-campo-no-profundizamos-pero-veces-surge-una-frase-que-llega-hasta-el-fondo-y-luego-a-otra-cosa/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Marc Márquez, piloto de MotoGP, sobre su casa en Andorra: «Se pagan menos impuestos; probé con una segunda residencia dos meses con 22 años, pero siempre he tributado en España»",
+      "url": "https://theobjective.com/deportes/2026-10-18/marc-marquez-piloto-de-motogp-sobre-su-casa-en-andorra-se-pagan-menos-impuestos-probe-con-una-segunda-residencia-dos-meses-con-22-anos-pero-siempre-he-tributado-en-espana/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Álvaro Bañón, economista: «Los préstamos de 50.000 euros sin intereses para comprar vivienda del Gobierno ceban la demanda: hay las mismas casas, pero el precio sube»",
+      "url": "https://theobjective.com/economia/2026-10-18/alvaro-banon-economista-los-prestamos-de-50-000-euros-sin-intereses-para-comprar-vivienda-del-gobierno-ceban-la-demanda-hay-las-mismas-casas-pero-el-precio-sube/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Montse Mínguez, la doblez y la ‘hipocresía 0,2’ del sanchismo",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/montse-minguez-bestiario/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Ferrer estima que su antidepresivo Ludiomil no volverá al suministro habitual hasta 2029",
+      "url": "https://theobjective.com/economia/2026-10-18/ferrer-antidepresivo-ludiomil-suministro-habitual-2029/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PSOE salvó de la quiebra a la Fundación Pablo Iglesias un mes antes del 23-J",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/psoe-quiebra-fundacion-pablo-iglesias/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Delcy Rodríguez pretende asistir a una reunión en Madrid en plena precampaña del 29-N",
+      "url": "https://theobjective.com/espana/2026-10-18/delcy-rodriguez-cumbre-iberoamericana-madrid-precampana/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Ministerio de Defensa prevé desahuciar a sus inquilinos después de tres meses de impago",
+      "url": "https://theobjective.com/espana/2026-10-18/defensa-desahucios-impagos-viviendas-seguridad-social/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Policías trans denuncian ser detenidas por violencia de género a pesar de ser mujeres",
+      "url": "https://theobjective.com/espana/2026-10-18/policias-trans-violencia-genero-mujeres/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Abogacía del Estado tumbó un vídeo de autobombo de Sánchez y Albares para el 12-O",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/abogacia-autobombo-sanchez-albares/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Miguel de Cervantes, escritor español, sobre la felicidad: «Solo hay un camino para construir una buena vida de verdad: lo logra aquel que se basa en el esfuerzo y la constancia»",
+      "url": "https://theobjective.com/lifestyle/2026-10-18/miguel-de-cervantes-escritor-espanol-sobre-la-felicidad-solo-hay-un-camino-para-construir-una-buena-vida-de-verdad-lo-logra-aquel-que-se-basa-en-el-esfuerzo-y-la-constancia/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los abogados alertan de que la reforma del turno de oficio empeora sus condiciones",
+      "url": "https://theobjective.com/espana/tribunales/2026-10-18/abogados-reforma-oficio-condiciones/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Las plazas ‘malditas’ de Hacienda: cinco puestos que nunca se han cubierto",
+      "url": "https://theobjective.com/espana/2026-10-18/plazas-malditas-hacienda-cinco-puestos-administracion/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Bronca en el Frente Amplio: Bustinduy avisa de que no atacará a Podemos",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/bronca-frente-amplio-bustinduy-podemos/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Emilio Prados, escritor español, sobre la felicidad: «El éxito de la existencia pasa por llegar a ser capaz de mirar de frente al dolor y continuar la batalla de la vida»",
+      "url": "https://theobjective.com/lifestyle/2026-10-18/emilio-prados-escritor-espanol-sobre-la-felicidad-el-exito-de-la-existencia-pasa-llegar-a-ser-capaz-de-mirar-de-frente-al-dolor-y-continuar-la-batalla-de-la-vida/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP cambia su estrategia en redes para combatir a la izquierda «cuerpo a cuerpo»",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/pp-redes-estrategia/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La pasividad de Antifraude de Cataluña amenaza con la prescripción del ‘caso Carreras’",
+      "url": "https://theobjective.com/espana/2026-10-18/pasividad-antifraude-cataluna-prescripcion-carreras/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "España es la gran economía del euro con más inflación tras subir seis puestos en el ‘ranking’",
+      "url": "https://theobjective.com/economia/macroeconomia/2026-10-18/espana-economia-euro-inflacion-ranking/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "La trampa que impidió un Senado en las Cortes de Cádiz",
+      "url": "https://theobjective.com/cultura/2026-10-18/historia-canalla-trampa-senado-cortes-cadiz/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Uwe Wittstock: de Berlín 1933 a Marsella 1940",
+      "url": "https://theobjective.com/cultura/literatura/2026-10-18/uwe-wittstock-europa-de-las-letras-marsella-berlin/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Agustín Selfa, jubilado con 47 años cotizados: «Empecé a trabajar con 15 años, pero el premio es una pensión penalizada en un 24% y no contabilizarme 10 años como autónomo»",
+      "url": "https://theobjective.com/economia/2026-10-18/agustin-selfa-jubilado-con-47-anos-cotizados-empece-a-trabajar-con-15-anos-pero-el-premio-es-una-pension-penalizada-en-un-24-y-no-contabilizarme-10-anos-como-autonomo/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Españoles, el ‘wokismo’ ha muerto",
+      "url": "https://theobjective.com/espana/2026-10-18/espanoles-el-wokismo-ha-muerto/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Saturado de canallas, escribo en medicinal penumbra",
+      "url": "https://theobjective.com/opinion/2026-10-18/saturado-de-canallas-montanoscopia/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "La Plaza Mayor de las Españas",
+      "url": "https://theobjective.com/cultura/2026-10-18/plaza-mayor-historias-de-la-historia/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Manuel Gutiérrez Aragón: «Un director de cine es el doctor Frankenstein creando su criatura»",
+      "url": "https://theobjective.com/cultura/cine/2026-10-18/entrevista-manuel-gutierrez-aragon/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "¿Sueñan los niños cíborg con autos voladores?",
+      "url": "https://theobjective.com/cultura/2026-10-18/ciborg-autos-voladores/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El CNI se vengó de Sánchez con la filtración de la fragata marroquí",
+      "url": "https://theobjective.com/espana/politica/2026-10-18/cni-vengo-sanchez-filtracion-danos-colaterales/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Retrato de un Gobierno puntual",
+      "url": "https://theobjective.com/opinion/2026-10-18/gobierno-puntual-fotomaton/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno nacionaliza a mexicanos con padres nacidos en México antes de 1920",
+      "url": "https://theobjective.com/espana/2026-10-18/gobierno-nacionalizo-padres-mexico-1920/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Varios psicólogos coinciden: «En las parejas que duran toda la vida hay algo más importante que el hecho de estar enamorados»",
+      "url": "https://theobjective.com/lifestyle/2026-10-18/varios-psicologos-coinciden-en-las-parejas-que-duran-toda-la-vida-hay-algo-mas-importante-que-el-hecho-de-estar-enamorados/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | José Carlos Díez: «El futuro de nuestros hijos no se puede sacrificar para pagar las pensiones»",
+      "url": "https://theobjective.com/videos/economia/2026-10-18/video-jose-carlos-diez-economia-espana-pensiones-futuro/",
+      "fecha": "2026-10-18T03:25:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "\"Pacto de no agresión\" de Feijóo y Abascal con la mirada en el Senado",
+      "url": "https://www.elmundo.es/espana/2026/10/18/6ad3a436fdddfffb408b459c.html",
+      "fecha": "2026-10-17T23:25:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "El Gobierno exprime el debate sobre las pensiones tras la caída de Mínguez: a por 9 millones de votos donde se resiente Vox",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/18/6ad3b836fdddff74548b45bf.html",
+      "fecha": "2026-10-17T23:24:59+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Defensa cambia los protocolos tras la incursión de buques marroquíes el 30 de julio: \"Ya no esperamos para actuar\"",
+      "url": "https://www.elmundo.es/espana/2026/10/18/6ad39e44e4d4d8a1748b4580.html",
+      "fecha": "2026-10-17T23:18:09+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Feijóo, ante un problema si gana: sospecha que Sánchez oculta déficit, pero aflorarlo dispararía la prima de riesgo de España",
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/18/6ad102ebe85ecef44b8b458d.html",
+      "fecha": "2026-10-17T23:17:31+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Las incógnitas del crimen de una anciana en Burgos a manos de dos adolescentes: la Policía busca a más implicados en el robo que acabó en muerte",
+      "url": "https://www.elmundo.es/espana/2026/10/18/6ad3be9b21efa0481e8b45ac.html",
+      "fecha": "2026-10-17T23:06:22+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "El aviso de la jefa de L'Oréal sobre la caída de los influencers: \"Van a seguir, pero son un mercado que cada vez medimos más con retorno de inversión\"",
+      "url": "https://www.elmundo.es/economia/empresas/2026/10/18/6ad0a4f2e4d4d8ed218b4593.html",
+      "fecha": "2026-10-17T23:06:20+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "La flor en el pelo, el velo en el suelo",
+      "url": "https://www.elmundo.es/internacional/2026/10/18/6ad3a09ee4d4d85f2b8b456e.html",
+      "fecha": "2026-10-17T23:06:17+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "salud",
+      "titulo": "Una dieta con ultraprocesados deja una huella invisible en el cerebro de los adultos sanos y acelera su envejecimiento",
+      "url": "https://www.elmundo.es/salud/2026/10/18/6ad34259e9cf4a77518b4591.html",
+      "fecha": "2026-10-17T22:41:05+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "Gigi Hadid, la supermodelo que acumula likes y ya se considera la tercera novia de América",
+      "url": "https://www.elmundo.es/yodona/moda/2026/10/18/6ad0bf54e4d4d812408b45aa.html",
+      "fecha": "2026-10-17T22:09:45+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "pais-vasco",
+      "titulo": "La Ertzaintza detiene por terrorismo a dos radicales 'abertzales' con datos de guardias civiles destinados en Euskadi",
+      "url": "https://www.elmundo.es/pais-vasco/2026/10/17/6ad3e8bbe9cf4afa078b4587.html",
+      "fecha": "2026-10-17T21:38:08+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Metro reabre en Sol tras constatar las condiciones de «seguridad y salud necesarias»",
+      "url": "https://theobjective.com/espana/madrid/2026-10-17/metro-reabre-sol-seguridad/",
+      "fecha": "2026-10-17T21:29:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Los nacionalistas escoceses relanzan su apuesta por la independencia de Reino Unido",
+      "url": "https://theobjective.com/internacional/2026-10-17/nacionalistas-escoceses-independencia-reino-unido/",
+      "fecha": "2026-10-17T21:23:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Zelenski dice que las restricciones a Starlink en Ucrania «es una operación deliberada»",
+      "url": "https://theobjective.com/internacional/2026-10-17/zelenski-restricciones-starlink-operacion-deliberada/",
+      "fecha": "2026-10-17T21:08:38+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "El bloqueo de Exteriores a los datos de la 'ley de nietos' abocará a impugnaciones masivas del voto tras las elecciones",
+      "url": "https://www.elmundo.es/espana/2026/10/17/6ad3c675fdddff332c8b456d.html",
+      "fecha": "2026-10-17T20:59:17+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cronica",
+      "titulo": "El imperio de Sergi, el gran casero de Lérida que hundió la campaña del PSOE: \"En dos meses teníamos la licencia, lo normal era un año\"",
+      "url": "https://www.elmundo.es/cronica/2026/10/17/6ad28ca4e4d4d868398b4598.html",
+      "fecha": "2026-10-17T20:58:52+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Las elecciones en España, Francia, Italia y Polonia reconfigurarán el tablero europeo",
+      "url": "https://www.elmundo.es/internacional/2026/10/17/6ad2291ae85ece6f5f8b4599.html",
+      "fecha": "2026-10-17T20:58:43+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Así ha pasado la alta velocidad del \"mejor momento de la historia del tren\" a ser la sospechosa habitual de todos los retrasos",
+      "url": "https://www.elmundo.es/economia/2026/10/17/6ad3b8b0e9cf4abe208b4580.html",
+      "fecha": "2026-10-17T20:58:32+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Gemma Arenas, la mejor ultrafondista de España tiene 47 años, dos hijos y un trabajo: \"He tenido que robar tiempo a la familia\"",
+      "url": "https://www.elmundo.es/deportes/mas-deporte/2026/10/17/6ad0f077e9cf4a276e8b457f.html",
+      "fecha": "2026-10-17T20:58:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Anoche fui al teatro, me llamaron asesina",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-17/teatro-asesina/",
+      "fecha": "2026-10-17T20:44:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "PNV, tras la detención de los proetarras en Irún: «Ni un paso atrás» para preservar la paz",
+      "url": "https://theobjective.com/espana/pais-vasco/2026-10-17/pnv-detencion-proetarras-irun/",
+      "fecha": "2026-10-17T20:16:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Betis se queja del árbitro tras perder 2-5 con el Barcelona: «Ha sido lamentable»",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-10-17/betis-queja-arbitro-perder-barcelona/",
+      "fecha": "2026-10-17T20:00:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Audiencia Nacional acepta la denuncia de Liberum contra Sánchez «por traición»",
+      "url": "https://theobjective.com/espana/tribunales/2026-10-17/denuncia-liberum-sanchez-traicion/",
+      "fecha": "2026-10-17T19:51:50+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Marruecos prevé crecer un 4,7% en 2026 y alerta del coste económico de los conflictos",
+      "url": "https://theobjective.com/internacional/2026-10-17/marruecos-preve-crecer-2026-conflictos/",
+      "fecha": "2026-10-17T19:40:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "México detiene a un exfiscal en un caso vinculado con la muerte de agentes de la CIA",
+      "url": "https://theobjective.com/internacional/2026-10-17/mexico-detiene-exfiscal-muerte-agentes-cia/",
+      "fecha": "2026-10-17T19:30:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Detenidas 400 personas en Francia por actos de violencia en una protesta masiva",
+      "url": "https://theobjective.com/internacional/2026-10-17/detenidas-400-personas-francia/",
+      "fecha": "2026-10-17T19:07:50+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Detenidos en Irún dos proetarras con acceso a listados de guardias civiles en el País Vasco",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-17/detenidos-irun-acusados-terrorismo-explosivos/",
+      "fecha": "2026-10-17T18:40:25+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "El cruce de bailes de Junts y el PSOE da el pistoletazo de salida a la campaña electoral",
+      "url": "https://www.elmundo.es/espana/2026/10/17/6ad3af9efdddff8a0d8b45b1-video.html",
+      "fecha": "2026-10-17T17:25:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Álvarez de Toledo carga contra la «indecencia» de un PSOE «en descomposición»",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/alvarez-de-toledo-psoe-en-descomposicion/",
+      "fecha": "2026-10-17T17:15:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Al menos 166 detenidos hasta las 12 horas en las protestas en Francia",
+      "url": "https://theobjective.com/internacional/2026-10-17/166-detenidos-protestas-francia/",
+      "fecha": "2026-10-17T17:03:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Iustitia Europa pide al Constitucional rechazar la petición de Gabilondo sobre la ‘ley de nietos’",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/iustitia-europa-constitucional-rechazar-gabilondo-ley-de-nietos/",
+      "fecha": "2026-10-17T16:42:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "La acampada de Valencia «no se desaloja» pese a la alerta de la Aemet por lluvias",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-17/acampada-valencia-desaloja-lluvias/",
+      "fecha": "2026-10-17T16:35:54+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Rodalies suspenderá el servicio en la R2 Sud y Regionals Sud a las 22 por las alertas por lluvias",
+      "url": "https://theobjective.com/espana/cataluna/2026-10-17/rodalies-suspendera-r2-sud-regionals-sud-lluvias/",
+      "fecha": "2026-10-17T16:12:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Yolanda Díaz presume de que el Gobierno apruebe medidas «hasta el último día»",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/yolanda-diaz-presume-ultimo-dia/",
+      "fecha": "2026-10-17T15:50:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Irán informa del impacto y posterior incendio de dos superpetroleros en Ormuz",
+      "url": "https://theobjective.com/internacional/2026-10-17/iran-impacto-posterior-incendio-superpetroleros-ormuz/",
+      "fecha": "2026-10-17T15:34:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Envían un mensaje Es-Alert a los municipios de la comarca de Poniente y Almería capital",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-17/es-alert-municipios-almeria-capital/",
+      "fecha": "2026-10-17T14:34:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Xavier García Albiol será el candidato del PP al Congreso por Barcelona el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/xavier-garcia-albiol-candidato-pp-congreso-29-n/",
+      "fecha": "2026-10-17T14:05:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "León XIV abandona el hospital por su propio pie tras ser operado de cáncer de pulmón",
+      "url": "https://theobjective.com/sociedad/2026-10-17/leon-xiv-hospital-operado-cancer-pulmon/",
+      "fecha": "2026-10-17T13:53:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El Sindicato de Inquilinas denuncia la retirada del altar en recuerdo de Maricarmen",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-17/sindicato-inquilinas-altar-recuerdo-maricarmen/",
+      "fecha": "2026-10-17T13:42:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Detenidos dos menores por matar a una anciana de 83 años durante un robo en Burgos",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-17/detenidos-menores-anciana-83-anos-burgos/",
+      "fecha": "2026-10-17T13:07:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PNV reivindica que sus votos han impedido gobernar a Vox durante los últimos años",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/pnv-votos-vox-ultimos-anos/",
+      "fecha": "2026-10-17T12:56:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Nogueras reivindica a Junts como freno a los «dos bloques españoles» y sus extremos",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/nogueras-junts-freno-espanoles-extremos/",
+      "fecha": "2026-10-17T12:45:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Colau sobre Podemos: «Si alguien no se quiere sentar a una mesa, no se le puede obligar»",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/colau-podemos-mesa-obligar-nadie/",
+      "fecha": "2026-10-17T12:09:52+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Tellado ironiza con que Sánchez ha tenido que recurrir a Colau para «salvar los muebles»",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/tellado-sanchez-colau-muebles/",
+      "fecha": "2026-10-17T11:59:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "galerias",
+      "titulo": "El mitin de Pedro Sánchez en Fuenlabrada tras el Comité Federal del PSOE, en imágenes",
+      "url": "https://theobjective.com/galerias/espana/politica/2026-10-17/mitin-pedro-sanchez-fuenlabrada-psoe-imagenes/",
+      "fecha": "2026-10-17T11:50:48+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El Hospital Universitario Infanta Elena, reconocido por los Premios Top 20",
+      "url": "https://theobjective.com/sociedad/ciencia/2026-10-17/hospital-universitario-infanta-top-20-servimedia/",
+      "fecha": "2026-10-17T11:49:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Foro Asturias anuncia su apoyo al PP para las elecciones generales del 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/foro-asturias-pp-elecciones-generales-29-n/",
+      "fecha": "2026-10-17T11:36:24+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Davidovich tumba a Zverev y se mete en la final de Shanghái",
+      "url": "https://theobjective.com/deportes/2026-10-17/davidovich-zverev-final-shanghai/",
+      "fecha": "2026-10-17T11:11:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez recuerda a Maricarmen y dice que ganará el 29-N «en su honor»",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/sanchez-ganaran-vivienda-honor-maricarmen/",
+      "fecha": "2026-10-17T11:08:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Así ha sido el beso de Sánchez y Begoña Gómez ante la militancia del PSOE",
+      "url": "https://theobjective.com/videos/espana/politica/2026-10-17/beso-sanchez-begona-militancia-psoe/",
+      "fecha": "2026-10-17T11:02:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez convierte su mitin en una declaración de amor: «Que lo oigan claro: Begoña, te quiero»",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/sanchez-declaracion-de-amor-begona-te-quiero/",
+      "fecha": "2026-10-17T10:43:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Montero asume las disculpas de Rufián por el «espectáculo» de la izquierda",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/montero-disculpas-rufian-espectaculo-izquierda/",
+      "fecha": "2026-10-17T10:37:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Aemet activa el aviso rojo por lluvias torrenciales en Valencia y Alicante",
+      "url": "https://theobjective.com/espana/2026-10-17/aemet-aviso-rojo-lluvias-torrenciales-valencia-alicante/",
+      "fecha": "2026-10-17T10:17:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El papa León XIV recibe el alta médica tras su operación de pulmón",
+      "url": "https://theobjective.com/sociedad/2026-10-17/papa-leon-xiv-alta-medica-pulmon/",
+      "fecha": "2026-10-17T09:55:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PSOE proclama por unanimidad a Sánchez candidato a la reelección el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/psoe-unanimidad-sanchez-candidato-29-n/",
+      "fecha": "2026-10-17T09:42:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Abascal promete hacer «lo necesario» para que España no dependa de Sánchez",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/abascal-espana-dependa-sanchez/",
+      "fecha": "2026-10-17T09:28:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo tacha de «coalición de desesperados» el pacto entre PSOE y Frente Amplio",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/feijoo-coalicion-pacto-psoe-frente-amplio/",
+      "fecha": "2026-10-17T09:19:52+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "García-Page planta al PSOE y no acude al Comité Federal por no poder intervenir",
+      "url": "https://theobjective.com/espana/politica/2026-10-17/garcia-page-psoe-comite-federal/",
+      "fecha": "2026-10-17T09:12:44+00:00"
+    }
+  ]
+}
