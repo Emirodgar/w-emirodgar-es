@@ -35,6 +35,14 @@ Es el argumento que más se repite en contra: que la mujer trabajando fuera de c
 
 La caída de la natalidad en España tiene causas mucho más documentadas -precariedad, vivienda, retraso de la maternidad- que la incorporación de la mujer al mercado laboral. Achacársela a eso es una correlación cómoda, no una explicación respaldada por los datos.
 
+## Igualdad de condiciones también es quién hace el trabajo que no se premia
+
+Entrar en el mercado laboral no garantiza progresar dentro de él. Hay tareas que sostienen a una organización y que apenas pesan cuando llega el momento de reconocer, promocionar o recompensar a quien las hace: organizar la reunión, tomar notas, formar a los recién llegados, hacer de comité de la fiesta o de apoyo emocional del equipo. La economista Linda Babcock y sus colaboradoras llamaron a esto *non-promotable work*: **tareas necesarias, pero con escaso retorno profesional para quien las asume**. El concepto conecta con ideas como el trabajo emocional, el comportamiento de ciudadanía organizacional o el trabajo invisible.
+
+Su [investigación experimental](https://doi.org/10.1257/aer.20141734) (Babcock, Recalde, Vesterlund y Weingart, 2017) sugiere que ese reparto no es neutro: a las mujeres se les pide con más frecuencia que se encarguen de estas tareas y, cuando se les pide, aceptan más a menudo que los hombres. Son resultados de experimentos de laboratorio en Estados Unidos, que yo no he contrastado con datos de empresas españolas, pero ayudan a leer las cifras anteriores. Una brecha de empleo que se cierra en el INE puede seguir abierta en lo que ocurre después, en quién progresa.
+
+La pregunta es incómoda: ¿quién acaba haciendo el trabajo que todos necesitan, pero que casi nadie valora cuando se decide quién asciende? Ahí es donde una organización real empieza a diferenciarse de la que dibuja el organigrama.
+
 ## La conclusión que dejan los números
 
 Ningún país se ha vuelto más pobre por dejar trabajar a la mitad de su población en igualdad de condiciones. Los datos apuntan justo en la dirección contraria: cuanta más gente capacitada participa en el mercado laboral, más crece la economía. Un país que aprovecha todo su talento disponible, sin descartar a nadie por su género, es sencillamente un país más avanzado.
