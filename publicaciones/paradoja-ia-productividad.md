@@ -97,6 +97,12 @@ Quizá el debate maduro no sea "IA sí o IA no", ni optimismo tecnológico frent
 
 La experiencia española con los fondos europeos es un buen recordatorio de que **inyectar recursos no equivale a mejorar la productividad**. Según las últimas estimaciones del FMI (octubre de 2026), España es la única gran economía de la eurozona que pierde productividad entre 2018 y 2027 (-0,1% de media anual, frente al +0,5% de la zona euro y el +1,0% de Alemania), pese a tener asignados desde 2021 más de 100.000 millones de euros en fondos europeos destinados a transformar la economía. El mismo patrón: dinero y tecnología disponibles, pero sin el rediseño de procesos y los cambios organizativos que son los que realmente se traducen en productividad. Con la IA corremos el mismo riesgo si nos quedamos en comprar licencias.
 
+## ¿Estamos midiendo bien la productividad con IA?
+
+Hay una posible razón más sutil. Trabajar con otras personas tiene fricciones: nos contradicen, cuestionan una idea o nos avisan de que quizá estamos resolviendo el problema equivocado. Igual que viajar en un coche autónomo elimina la conversación, a veces incómoda, con el conductor, trabajar con un modelo de lenguaje elimina parte de la fricción que supone pensar con otros.
+
+Automatizar revisiones bibliográficas, análisis o escritura permite avanzar más rápido, pero también evita conversaciones y desacuerdos que obligaban a revisar las propias ideas. Si universidades y empresas premian sobre todo la cantidad y la velocidad del output, trabajar solo con IA resulta más atractivo que colaborar: la máquina nunca discute, nunca llega tarde y no reclama aparecer como coautora. Quizá estemos midiendo mal una parte de la productividad: **eliminar fricción no siempre es eliminar desperdicio**, y a veces la idea que necesitamos está en la conversación incómoda que hemos conseguido evitar. Es una hipótesis recogida en un boletín de novedades sobre IA (octubre de 2026), no un resultado medido.
+
 ## ¿Qué tendría que pasar para que la IA cambie realmente la productividad?
 
 Si miramos lo ocurrido con otras tecnologías, el patrón se repite bastante.

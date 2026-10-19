@@ -83,6 +83,12 @@ Es parecido a lo que ocurre con el ejercicio físico. Si siempre haces entrenami
 
 Y eso tiene consecuencias, sobre todo en temas donde los matices importan como economía, política pública, tecnología, regulación o ciencia, entre otras áreas.  
 
+### La atención también juega en contra
+
+Un trabajo de Netanel Eliav, del Machine Human Intelligence Lab, describe una "divergencia cognitiva": mientras las ventanas de contexto de los modelos de IA crecen, nuestra capacidad de concentración parece ir en dirección contraria. Eliav recuerda que el tiempo medio frente a una pantalla antes de cambiar de tarea habría pasado de unos **150 segundos en 2004** a unos **47 en 2020**.
+
+Hay además un círculo vicioso: cuanto más delegamos en la IA la lectura, la síntesis o el análisis, menos ejercitamos esas capacidades, y cuanto menos las ejercitamos, más tentador es delegarlas otra vez. Lo importante, a mi juicio, no es cuánto contexto puede manejar una IA, sino cuánto seguimos manejando nosotros. Si las herramientas sustituyen sistemáticamente el esfuerzo cognitivo, ganamos velocidad pero podemos perder la capacidad de supervisar lo que hemos acelerado. Son datos que conozco por un boletín de novedades sobre IA (octubre de 2026), no por el estudio original.
+
 ## ¿Estamos perdiendo profundidad en el debate público?
 
 Cuando el lenguaje se simplifica demasiado, el debate también tiende a simplificarse.
