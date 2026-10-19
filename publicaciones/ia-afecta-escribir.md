@@ -85,9 +85,11 @@ Y eso tiene consecuencias, sobre todo en temas donde los matices importan como e
 
 ### La atención también juega en contra
 
-Un trabajo de Netanel Eliav, del Machine Human Intelligence Lab, describe una "divergencia cognitiva": mientras las ventanas de contexto de los modelos de IA crecen, nuestra capacidad de concentración parece ir en dirección contraria. Eliav recuerda que el tiempo medio frente a una pantalla antes de cambiar de tarea habría pasado de unos **150 segundos en 2004** a unos **47 en 2020**.
+Un [preprint de Netanel Eliav](https://arxiv.org/html/2603.26707v1), del Machine Human Intelligence Lab (marzo de 2026, sin revisión por pares), describe una **"divergencia cognitiva"**: las ventanas de contexto de los modelos pasaron de 512 tokens en 2017 a 2 millones en 2026, mientras que nuestra capacidad de sostener la atención parece ir en dirección contraria. El autor estima que el "contexto efectivo" humano habría bajado de unos 16.000 tokens en 2004 a unos 1.800 en 2026, aunque reconoce que la cifra de 2026 es una extrapolación y que parte de supuestos de modelización.
 
-Hay además un círculo vicioso: cuanto más delegamos en la IA la lectura, la síntesis o el análisis, menos ejercitamos esas capacidades, y cuanto menos las ejercitamos, más tentador es delegarlas otra vez. Lo importante, a mi juicio, no es cuánto contexto puede manejar una IA, sino cuánto seguimos manejando nosotros. Si las herramientas sustituyen sistemáticamente el esfuerzo cognitivo, ganamos velocidad pero podemos perder la capacidad de supervisar lo que hemos acelerado. Son datos que conozco por un boletín de novedades sobre IA (octubre de 2026), no por el estudio original.
+Recuerda además que el tiempo medio frente a una pantalla antes de cambiar de tarea pasó de unos **150 segundos en 2004** a unos **47 entre 2016 y 2020**. Son datos de Gloria Mark, no del propio Eliav, y miden cuánto dura cada episodio de atención en pantalla, no la capacidad de atención en sí. El propio preprint señala que ese descenso parece haberse estabilizado más que seguir cayendo.
+
+Eliav propone también un círculo vicioso, que él mismo dice que no está probado como sistema: cuanto más delegamos en la IA la lectura, la síntesis o el análisis, menos ejercitamos esas capacidades, y cuanto menos las ejercitamos, más tentador es delegarlas otra vez. Lo importante, a mi juicio, no es cuánto contexto puede manejar una IA, sino cuánto seguimos manejando nosotros. Si las herramientas sustituyen sistemáticamente el esfuerzo cognitivo, ganamos velocidad pero podemos perder la capacidad de supervisar lo que hemos acelerado.
 
 ## ¿Estamos perdiendo profundidad en el debate público?
 
