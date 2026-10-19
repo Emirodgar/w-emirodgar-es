@@ -145,3 +145,13 @@ Dejo algunos ejemplos.
 
 ---
 
+## Una mirada técnica: qué se puede hacer con el aviso temprano
+
+Buena parte del debate político gira en torno a quién avisó y cuándo. Conviene mirar también lo que ya permite la tecnología, porque el aviso temprano es una pieza clave de la [adaptación al cambio climático](https://emirodgar.es/analisis-cambio-climatico).
+
+Según el [white paper de Google sobre resiliencia ante crisis](https://blog.google/innovation-and-ai/models-and-research/google-research/crisis-resilience-white-paper/) (octubre de 2026), sus sistemas de predicción de inundaciones ofrecen hasta **7 días** de antelación en inundaciones fluviales, con cobertura sobre más de **2.000 millones de personas en 150 países**, y hasta **24 horas** en inundaciones repentinas urbanas, el tipo de episodio que se vivió en el Poyo.
+
+La otra cara es la alerta que llega al móvil. El [sistema Android Earthquake Alerts](https://blog.google/products-and-platforms/platforms/android/android-earthquake-alerts-expansion-2026/) ha enviado más de **mil millones de alertas** desde 2021 y se ha ampliado de 98 a más de **200 países y regiones**. Es un sistema de terremotos, no de inundaciones, pero muestra que un aviso masivo, con distintos niveles de gravedad y mensajes claros, es técnicamente viable. Los datos son de Google y no he podido contrastarlos de forma independiente. En el caso del Poyo, lo que se discute es si la información existía y quién debía actuar con ella.
+
+---
+

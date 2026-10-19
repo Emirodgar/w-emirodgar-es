@@ -436,6 +436,15 @@ España está experimentando una **transición climática** de patrones **medite
 
 Además de medir el problema, ya se usa IA para adelantarse a sus efectos. Google.org ha destinado **36 millones de dólares a 17 organizaciones** en su Impact Challenge: AI for Science, y ocho de ellas trabajan en clima y ciencias ambientales. AfriClimate AI busca ampliar el margen de aviso de inundaciones repentinas en África de menos de tres horas a más de seis; Inria Chile construye un gemelo digital de los ecosistemas marinos; el Instituto Max Planck de Física del Plasma y la Universidad de Texas en Austin modelan con IA reactores de fusión; y la Universidad de Cambridge predice la degradación de cátodos para baterías de sodio-ion más duraderas.
 
+La misma lógica se aplica ya a la gestión de desastres. En su [white paper sobre resiliencia ante crisis](https://blog.google/innovation-and-ai/models-and-research/google-research/crisis-resilience-white-paper/) (15 de octubre de 2026), Google Research y el área de Sostenibilidad de Google recogen estos avances:
+
+- **Inundaciones fluviales**: predicción con hasta **7 días** de antelación, con cobertura sobre más de **2.000 millones de personas en 150 países**. Para inundaciones repentinas urbanas, el aviso llega hasta **24 horas** antes.
+- **Ciclones**: el modelo WeatherNext puede predecirlos con hasta **15 días** de antelación.
+- **Incendios forestales**: mapas de límites de incendio casi en tiempo real en **34 países**. El proyecto FireSat, una constelación de satélites, aspira a detectar incendios del tamaño de un aula en unos **20 minutos**.
+- **Información en crisis**: en 2025, Google conectó a las personas con información sobre crisis más de **10 millones de veces al día**, de media.
+
+Son datos que aporta la propia compañía y no los he contrastado con una fuente independiente, pero marcan hacia dónde va la adaptación: menos reacción y más aviso temprano.
+
 ## Contexto europeo e internacional
 
 España forma parte de un **esfuerzo coordinado europeo** que requiere inversiones masivas:
