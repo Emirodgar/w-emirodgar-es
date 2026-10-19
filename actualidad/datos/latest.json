@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-18",
-  "generado_en": "2026-10-18T09:25:20+00:00",
-  "titular": "Francia, en caos por protestas violentas con más de 1.200 detenidos; España, en alerta roja por DANA.",
+  "fecha": "2026-10-19",
+  "generado_en": "2026-10-19T10:38:16+00:00",
+  "titular": "La DANA Adam azota el litoral valenciano y alicantino mientras el Constitucional debate la 'ley de nietos'",
   "por_medio": {
-    "El Mundo": 22,
-    "The Objective": 103
+    "El Mundo": 27,
+    "The Objective": 139
   },
   "temas": [
     {
-      "tema": "Violencia y detenciones en Francia",
-      "categoria": "Internacional",
-      "descripcion": "Francia ha experimentado una jornada de protestas violentas con más de 1.200 detenidos y daños significativos en edificios públicos, incluyendo el ayuntamiento de Limoges."
-    },
-    {
-      "tema": "Alerta meteorológica en España por DANA",
+      "tema": "Impacto de la DANA Adam en la Comunidad Valenciana y Alicante",
       "categoria": "Sociedad",
-      "descripcion": "Una DANA ha provocado una alerta roja en la Comunidad Valenciana y el norte de Alicante, con previsiones de fuertes lluvias, afectando a varias comunidades autónomas."
+      "descripcion": "La DANA Adam ha causado rescates dramáticos y el despliegue de la UME en el litoral valenciano y alicantino, con avisos de peligro extremo y cierres de carreteras."
     },
     {
-      "tema": "Operación policial y migración en Ceuta",
-      "categoria": "Sociedad",
-      "descripcion": "La Policía ha intervenido en Ceuta para retirar a migrantes de las calles, trasladándolos a centros o facilitando su regreso, lo que ha provocado la huida de algunos al monte."
-    },
-    {
-      "tema": "Acuerdo PP-Vox y estrategia electoral",
+      "tema": "Debate en el Constitucional sobre la 'ley de nietos'",
       "categoria": "Política",
-      "descripcion": "PP y Vox han pactado no agredirse mutuamente de cara a las elecciones, mientras el Gobierno enfoca su campaña en las pensiones y Feijóo busca pasar página en Cataluña."
+      "descripcion": "El Tribunal Constitucional ha avocado a Pleno la decisión sobre el amparo del Defensor del Pueblo en la ley de nietos, mientras Exteriores considera \"imposible\" cumplir la orden del Supremo de suspender el voto."
+    },
+    {
+      "tema": "Dimisión del alcalde de Algeciras por denuncias de abusos sexuales",
+      "categoria": "Política",
+      "descripcion": "El alcalde de Algeciras, José Ignacio Landaluce, ha anunciado su dimisión tras dos denuncias por abusos sexuales, negando los hechos."
+    },
+    {
+      "tema": "Violencia y disturbios en Francia",
+      "categoria": "Internacional",
+      "descripcion": "El presidente Macron ha rechazado la dimisión del ministro de Interior tras la explosión de violencia en Francia, donde se ha incendiado el Ayuntamiento de Limoges y una menor ha perdido la visión de un ojo."
     }
   ]
 }
