@@ -19,6 +19,8 @@ El **presupuesto militar español alcanzará los 33,123 millones de euros en 202
 
 > En la actualidad, España cuenta con un ejército profesional y, aunque algunos socios europeos han vuelto a poner el [servicio militar obligatorio](https://emirodgar.es/servicio-militar-obligatorio) para parte de su población, nuestro país no lo ve necesario en este momento geopolítico, marcado por unos niveles de [incertidumbre mundial](https://emirodgar.es/indice-incertidumbre) que empujan a muchos socios europeos a reforzar su gasto en defensa.
 
+> **Actualización de octubre de 2026**: la crisis de Ceuta de finales de julio y las posteriores incursiones de buques marroquíes en aguas españolas han devuelto al primer plano la capacidad de disuasión de nuestras Fuerzas Armadas. Lo repasamos en la sección [Tensión con Marruecos: Ceuta y Melilla](#tensión-con-marruecos-ceuta-y-melilla).
+
 ## Estructura y efectivos de las Fuerzas Armadas Españolas
 
 <img width="978" class="img-responsive" alt="Distribución de efectivos por rama de las Fuerzas Armadas españolas" src="https://github.com/user-attachments/assets/2a71dfaa-a0bc-4338-ab75-608e94750ec0" />
@@ -142,6 +144,10 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 | **España** | 33,123 | 2.0% |
 | **Polonia** | 28,000 | 4.7% |
 
+### Situación en 2026
+
+Según los datos de la OTAN publicados este año, el gasto en defensa de España en 2026 equivale al **2,1% del PIB**, tras haber alcanzado el 2% en 2025. El Consejo de Ministros autorizó en junio un gasto extraordinario de 8.450 millones de euros para defensa. Las cifras difieren según la fuente: mientras el Gobierno cifraba el presupuesto de 2025 en 33.123 millones, el SIPRI lo sitúa en 40.211 millones y el Centro Delàs en 39.476 millones (un 2,42% del PIB), al incluir partidas como la Guardia Civil.
+
 ### Nuevos objetivos de la OTAN
 
 **El nuevo objetivo del 5% del PIB para 2035** representa un desafío significativo para España. Mientras que el presidente Sánchez ha declarado que España "cumplirá los requerimientos militares sin ceñirse a un porcentaje específico", países como Polonia ya se aproximan a esta meta con el 4.7% actual. Analizamos con más detalle este pulso entre España y la Alianza en [España y el pulso del 5% de la OTAN](https://emirodgar.es/gasto-defensa-otan-espana).
@@ -158,6 +164,33 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 | **Programa Coraza** | 1,200 | Nuevos carros de combate |
 | **Modernización F-100** | 800 | Actualización fragatas |
 
+## Tensión con Marruecos: Ceuta y Melilla
+
+### La crisis de Ceuta de julio de 2026
+
+Entre el 30 y el 31 de julio de 2026 entraron en Ceuta decenas de miles de personas, sobre todo a pie por el espigón de El Tarajal y también a nado, con intentos de menor escala en Melilla. El Ministerio del Interior fijó la cifra oficial en **72.000 entradas** (4 de agosto), de las que hasta 48.300 regresaron después a Marruecos. Los balances de fallecidos varían según la fuente: 67 según Interior a 1 de agosto, y 141 (78 en España y 63 en Marruecos) según los recuentos que recoge la [Wikipedia](https://es.wikipedia.org/wiki/Incidente_fronterizo_entre_Espa%C3%B1a_y_Marruecos_de_2026). Resultaron heridos seis militares y un guardia civil.
+
+La crisis tuvo antecedentes inmediatos: entre el 1 y el 29 de julio ya se habían contabilizado 1.026 entradas a nado, en paralelo a una sentencia del Tribunal Supremo del 8 de julio que limitó las devoluciones en caliente para quienes llegaban así.
+
+### Incursiones navales marroquíes
+
+Además de la presión migratoria, se han registrado **incursiones de buques de la Marina marroquí en aguas de Ceuta**. Según [Moncloa.com](https://www.moncloa.com/2026/10/18/defensa-armada-vigilancia-maritima-ceuta-3450779), citando fuentes sin identificar, el buque insignia marroquí *Mohamed VI* navegó por aguas territoriales españolas el 30 de julio, con la llegada de otros dos patrulleros. El Jefe de Estado Mayor de la Defensa contactó con Rabat para pedir que cesaran, y esas incursiones no se han vinculado de forma concluyente con los movimientos migratorios.
+
+### Respuesta española
+
+- **Despliegue**: Ejército de Tierra, Guardia Civil, Policía Nacional y Armada. La fragata *Navarra* y el buque *Rayo* reforzaron la presencia naval, y las incursiones cesaron tras ese despliegue y los contactos de alto nivel.
+- **Armada**: patrulleros permanentes en Ceuta (*Atalaya*) y Melilla (*Isla de León*) y un cambio de protocolo: antes el tráfico marroquí se vigilaba de forma pasiva desde el COVAM, ahora los buques salen al encuentro de las embarcaciones sin esperar a que entren.
+- **Gobierno**: el 24-25 de agosto declaró la situación de interés para la Seguridad Nacional y creó un mando único. Sánchez habló de «violación de la integridad territorial» sin responsabilizar directamente a Marruecos, y se aprobó un plan económico de 309 millones para Ceuta.
+- **Mensaje político**: Margarita Robles afirmó que cualquier agresión contra Ceuta o Melilla sería una agresión contra España. Los Reyes visitaron ambas ciudades el 13 y 14 de octubre.
+
+### ¿Quién está detrás?
+
+Los servicios de inteligencia y la Policía concluyeron que Marruecos **permitió o facilitó los cruces**, aunque sin hallar pruebas sólidas de una operación planificada. Rabat lo niega y lo atribuye a redes de tráfico de personas y a rumores en redes sociales. Algunos analistas hablan de una estrategia híbrida (presión migratoria, desinformación y ciberataques), pero conviene tomar con cautela las informaciones no confirmadas sobre supuestas emboscadas a patrullas españolas.
+
+### ¿Hay superioridad militar española?
+
+Un informe de la Escuela Superior de las Fuerzas Armadas (ESFAS) de julio de 2025, recogido por [The Objective](https://theobjective.com/espana/2026-08-05/ejercito-superioridad-militar-marruecos-ceuta-melilla/), sostiene que España ya no goza de la superioridad de hace dos décadas y que mantener «una relativa superioridad militar» es la mejor disuasión. Desde 2002, Marruecos ha invertido unos 70.000 millones de dólares en defensa y destina cerca del 4% de su PIB, con F-16 Block 72, helicópteros Apache AH-64E, sistemas HIMARS, drones MQ-9B y Bayraktar TB2 y el antiaéreo Barak-8. De ahí que los refuerzos previstos en Ceuta y Melilla, como los carros Leopard 2A8, cobren más sentido.
+
 ## Desafíos y perspectivas futuras
 
 ### Principales retos
@@ -167,6 +200,7 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 1. **Envejecimiento del personal**: La edad media es elevada, especialmente en la tropa (cabos con 39 años de media), un reto demográfico que también sufren otros cuerpos del Estado, como vimos en nuestro [análisis de los funcionarios en España](https://emirodgar.es/analisis-funcionarios)
 2. **Déficit de efectivos**: Necesidad de incorporar 60,000 militares adicionales para alcanzar la media europea
 3. **Brecha tecnológica**: Requerimiento de modernización en ciberdefensa y operaciones espaciales
+4. **Defensa de Ceuta y Melilla**: la crisis de 2026 ha mostrado la necesidad de reforzar la vigilancia marítima y la disuasión frente a un vecino que ha modernizado sus Fuerzas Armadas
 
 ### Oportunidades de desarrollo
 
@@ -182,5 +216,7 @@ Evolución del gasto militar español como % del PIB (2014-2025)
 **España ha logrado un avance significativo en la modernización de sus Fuerzas Armadas**, cumpliendo finalmente con el objetivo del 2% del PIB de la OTAN tras más de una década de incrementos graduales. Con 139,281 efectivos totales y un presupuesto de 33,123 millones de euros, España se posiciona como la quinta potencia militar europea en términos de gasto absoluto.
 
 **Los programas de modernización en curso, especialmente el Programa Halcón y la renovación naval, fortalecerán significativamente las capacidades españolas**. Sin embargo, **España debe abordar el desafío demográfico de sus Fuerzas Armadas y la necesidad de incrementar efectivos** para mantener su relevancia estratégica en el contexto europeo.
+
+**La crisis de Ceuta de 2026 y las incursiones navales marroquíes han añadido un frente concreto a ese debate**: más allá de la cifra del PIB, la prioridad será reforzar la vigilancia y la disuasión en el Estrecho y en las dos ciudades autónomas.
 
 **En el contexto del nuevo objetivo del 5% del PIB para 2035, España deberá definir una estrategia que equilibre las demandas de la OTAN con las prioridades nacionales**, manteniendo su compromiso de cumplir los requerimientos operativos de la Alianza.
