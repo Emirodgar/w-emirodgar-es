@@ -170,6 +170,14 @@ Las muertes por trastornos mentales incluyen diversas causas:
 - **Mujeres jóvenes**: Incremento preocupante en el grupo 15-29 años
 
 
+### Qué dice la investigación sobre pedir ayuda y sobre el entorno cercano
+
+Las cifras de suicidio por sexo invitan a preguntarse por la demanda de ayuda. Un [estudio sobre hombres víctimas de violencia de pareja](https://doi.org/10.1037/men0000560) apunta a que ellos buscan ayuda con menos frecuencia que las mujeres, y señala cuatro motivos principales: la vergüenza, ver el maltrato como un asunto privado, el miedo a represalias y la preocupación por que no los crean. Es un trabajo sobre violencia de pareja, no sobre suicidio, así que no permite explicar por sí solo la diferencia de 3 a 1, pero sí muestra barreras que pueden repetirse en otros problemas de salud mental.
+
+También importa con quién se convive. Un [estudio sueco con más de 700.000 personas con diagnóstico psiquiátrico](https://doi.org/10.1001/jamapsychiatry.2015.3192) (Nordsletten et al., 2016) encontró que quienes tienen una condición psiquiátrica tienen más probabilidades de tener una pareja con otra, igual o distinta. Ocurre con el TDAH, el autismo, la depresión, la esquizofrenia o el abuso de sustancias, entre otros. Para la prevención, esto sugiere que en algunos hogares la carga puede ser doble y que conviene atender a la pareja y a la familia, no solo a la persona diagnosticada.
+
+Ambos estudios los conozco por un [resumen mensual de investigaciones de Steve Stewart-Williams](https://www.stevestewartwilliams.com/p/flattering-mirrors-ai-therapists) (septiembre de 2026), no he revisado los artículos completos, y son datos de Suecia y de muestras de otros países, no de España.
+
 ### Factores socioeconómicos
 
 - **Desempleo**: Factor de riesgo significativo
