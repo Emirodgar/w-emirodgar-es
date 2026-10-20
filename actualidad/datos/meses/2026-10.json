@@ -574,6 +574,48 @@
         "url": "https://theobjective.com/espana/politica/2026-10-19/sanchez-millones-euros-residencias-universitarias/"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-20",
+      "edicion": "2026-10-20",
+      "titulo": "Detención de presuntos yihadistas en Cataluña",
+      "categoria": "Sucesos",
+      "descripcion": "La Policía Nacional ha detenido a dos presuntos yihadistas en Barcelona y Tarragona, inmersos en un \"severo proceso de radicalización\".",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Detenidos en Barcelona y Tarragona dos presuntos yihadistas \"en un severo proceso de radicalización\"",
+        "url": "https://www.elmundo.es/cataluna/2026/10/20/6ad736aa21efa00b7b8b45ab.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-20",
+      "edicion": "2026-10-20",
+      "titulo": "Confirmación de negociaciones PP-Vox para el Senado",
+      "categoria": "Política",
+      "descripcion": "Alberto Núñez Feijóo ha confirmado conversaciones con Vox para las elecciones al Senado con el fin de evitar el control de la Cámara Alta por parte de la izquierda.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Feijóo confirma conversaciones con Vox para las elecciones al Senado: \"Sería un error facilitar al 'sanchismo' el control\"",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/20/6ad710e4e9cf4aed3d8b459a.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-20",
+      "edicion": "2026-10-20",
+      "titulo": "Hallazgo de un agricultor muerto tras inundaciones en Oliva",
+      "categoria": "Sucesos",
+      "descripcion": "Los servicios de rescate han encontrado el cadáver de un agricultor en la marjal de Pego-Oliva, una de las zonas más afectadas por las inundaciones de la DANA.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Hallan muerto a un agricultor en Oliva (Valencia) tras las inundaciones de la dana",
+        "url": "https://theobjective.com/sociedad/suceso/2026-10-20/hallan-muerto-agricultor-marjal-pego-oliva-inundaciones-dana/"
+      },
+      "destacado": false
     }
   ]
 }
