@@ -53,6 +53,18 @@ Los entornos urbanos presentan desafíos únicos que complican significativament
 
 Los sistemas de conducción semiautónoma han demostrado que la verdadera dificultad radica en prever todas las posibles situaciones que pueden surgir en calles y carreteras urbanas. Esta complejidad ha llevado a que los primeros vehículos autónomos operativos, como los de Waymo en San Francisco, funcionen únicamente en espacios restringidos, mapeados y estudiados exhaustivamente. Además, estos vehículos no pueden operar en condiciones de baja visibilidad, como tormentas, niebla o durante gran parte de la noche.
 
+## La IA ya está en el coche, aunque no conduzca por ti
+
+Mientras la conducción autónoma espera a la regulación, la IA entra en el vehículo por otra puerta: el asistente de voz. Google anunció que Gemini está disponible globalmente en [Android Auto](https://blog.google/products-and-platforms/platforms/android/android-in-cars-updates/) y en los coches con Google integrado, y que lanza [Personal Intelligence](https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/), una función que, con permiso del usuario, conecta Gmail, Google Calendar, Google Fotos, Google Maps, YouTube y Search para dar respuestas personalizadas sin tocar el móvil.
+
+Los ejemplos de Google ilustran bien el salto respecto a los asistentes clásicos:
+
+ - Preguntar por la puerta de embarque y si el vuelo va con retraso, sin buscar el correo de confirmación ni hacer una segunda consulta.
+ - Pedir un restaurante en la ruta "que encaje con mi estilo de siempre" y recibir opciones acordes a tus preferencias.
+ - Decir "llévame a mi cita con el médico" sin recordar la dirección, o "busca el túnel de lavado de la foto de la semana pasada y llévame" sin rebuscar en la galería.
+
+Es un caso útil para la seguridad, porque reduce las distracciones, pero también abre la cuestión de la privacidad. Google asegura que las apps no se conectan hasta que el usuario lo activa, que puede desactivarlo en los ajustes de Gemini y que en los coches con Google integrado las respuestas personales solo se comparten con el móvil conectado. Sin Personal Intelligence, navegación, música, llamadas y preguntas siguen funcionando, pero sin personalizar. En Android Auto se despliega desde el día del anuncio y en los coches con Google integrado llegará "en los próximos meses". Google no detalla idiomas ni países concretos más allá de "global".
+
 ## Aspectos sociales y de aceptación pública
 
 La aceptación social de los vehículos autónomos representa un factor crítico que trasciende las consideraciones puramente técnicas o regulatorias. A pesar de las evidencias científicas que demuestran la superior seguridad de estos sistemas, existe una resistencia psicológica natural hacia la transferencia del control de conducción a algoritmos automatizados. Somos humanos, al fin y al cabo, y tendemos a rechazar lo que no conocemos. Esta reticencia se fundamenta en factores como la pérdida de control personal, la desconfianza hacia la tecnología, y la falta de familiaridad con sistemas autónomos.

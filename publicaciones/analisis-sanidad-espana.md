@@ -39,6 +39,12 @@ Este trasvase hacia la sanidad privada no ocurre en el vacío. Encaja con el mis
 
 También está directamente relacionado con la [pérdida de poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo): pagar una segunda vez por algo que ya pagas con impuestos solo es una opción real si tu economía lo permite. Y con el reto demográfico de fondo: a medida que [la población envejece](https://emirodgar.es/evolucion-poblacion), la presión sobre el sistema público de salud —y sobre las pensiones, como analizamos en [pensiones frente al salario mínimo](https://emirodgar.es/pensiones-smi)— solo va a crecer.
 
+## ¿Puede la IA devolver tiempo a la consulta?
+
+Una de las quejas más repetidas, tanto en la pública como en la privada, es que la consulta dura poco y buena parte se va en recopilar datos básicos. Google está investigando una vía para aliviarlo: **AMIE** (Articulate Medical Intelligence Explorer), un agente de IA con el que el paciente conversa antes de la cita. En lugar de un formulario estándar, hace preguntas de seguimiento adaptadas a lo que cuenta (qué tipo de dolor, cuándo empezó, dónde exactamente) y entrega al médico un resumen conciso de la historia clínica. Según los investigadores de Google Anil Palepu y Mike Schaekermann, en una entrevista en el blog de Google, los médicos participantes dicen que así pasan de recoger información a colaborar más con el paciente en el tratamiento y las decisiones.
+
+Conviene no pasarse de entusiasmo: es un estudio de investigación en el que un médico supervisaba cada conversación (sin llegar a intervenir) y todavía no es un servicio disponible. Google prepara un estudio más amplio en Estados Unidos, con comparaciones controladas y con pruebas de audio y vídeo, además del texto y las fotos actuales. Aun así, apunta a una aplicación de la IA con encaje claro en un sistema con listas de espera: no sustituir al médico, sino liberarle minutos para lo que solo él puede hacer.
+
 ## ¿Hacia dónde va esto?
 
 No creo que estemos ante el fin de la sanidad pública en España, sigue siendo universal y la eligen mayoritariamente millones de personas cada día. Pero sí ante un sistema de dos velocidades cada vez más asentado: quien puede pagar un seguro accede rápido a especialistas y pruebas, y quien no puede, espera. Y ese reparto silencioso, poco a poco, normaliza algo que hace veinte años hubiera sonado extraño: que tener una sanidad pública universal no sea suficiente para no necesitar, además, una privada.

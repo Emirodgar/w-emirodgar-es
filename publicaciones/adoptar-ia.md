@@ -53,7 +53,7 @@ La IA **multiplica nuestro punto de partida**. Si tienes una base sólida de con
 ### Estrategias prácticas para el upskilling con IA
 
 - **Identifica tus fortalezas**: Analiza tus habilidades actuales y determina cuáles pueden beneficiarse más del apoyo de la IA.
-- **Explora herramientas generalistas**: Comienza con plataformas como ChatGPT, Gemini o Copilot para familiarizarte con las capacidades básicas de la IA.
+- **Explora herramientas generalistas**: Comienza con plataformas como ChatGPT, Gemini o Copilot para familiarizarte con las capacidades básicas de la IA. Si tienes un pequeño negocio, Gemini acaba de [sumar una página de inicio para negocios](https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/) con conexión a Google Business Profile, Google Ads, Shopify o Xero, visuales de marca y análisis financiero.
 - **Personaliza tu aprendizaje**: Aprovecha la capacidad de la IA para crear rutas de aprendizaje adaptadas a tus necesidades específicas.
 - **Practica con proyectos reales**: Aplica tus nuevos conocimientos en situaciones laborales concretas para consolidar el aprendizaje.
 - **Integra extensiones de IA**: Incorpora herramientas de IA en tus dispositivos para facilitar tareas cotidianas como la navegación web o la traducción de contenidos.

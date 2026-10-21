@@ -36,6 +36,18 @@ No todos los modelos de IA son iguales. Cada uno tiene su propósito específico
  - **Gemini**: Excelente para procesar documentos extensos, como analizar contratos largos sin perder información
  - **Claude**: Especializado en generar texto que suena natural y humano, ideal para emails o informes que requieren un toque personal
 
+#### Novedad: Gemini se pone el traje de pyme
+
+El 20 de octubre de 2026 Google [presentó nuevas herramientas de la app Gemini para pequeños negocios](https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/) y, de paso, deja claro hacia dónde va el mercado: asistentes que ya no solo responden, sino que se conectan a los datos del negocio. Según Google, lo usan ya decenas de millones de pequeños empresarios. Lo anunciado:
+
+ - **Página de inicio para negocios**: un centro desde el que gestionar la marca, analizar las finanzas y revisar los datos de clientes.
+ - **Conexiones con otras apps**: Google Business Profile, Google Ads y Google Workspace, además de Adobe, Canva, Dropbox, Shopify, Wix, Zoho y Xero.
+ - **Visuales de marca**: subes tu web, kit de marca, tipografías o paleta y Gemini mantiene ese estilo en las imágenes que genera (con Nano Banana 2.1), sin pedirte la guía de estilo en cada sesión.
+ - **Perspectivas financieras**: convierte hojas de cálculo, recibos y registros de compras en gráficos y modelos interactivos.
+ - **Habilidades de marketing y finanzas** que se despliegan junto con lo anterior.
+
+Llega a todos los usuarios de la app "en los próximos días", sin que Google detalle países, idiomas ni planes. Para quien quiera construir herramientas de IA para empresas, la lectura es doble: parte del trabajo básico (informes, recursos de marca, cuadros financieros) empieza a venir de serie en el asistente, así que el valor está en las automatizaciones a medida y en integrar los datos propios del cliente.
+
 ### Paso 2: Aprende las Herramientas Esenciales
 
 Plataformas `No-Code` como Punto de Partida. Comienza con n8n o Make — son flexibles y te permiten construir sin programar intensivamente. Domina `webhooks`, `APIs`, `JSON` y manejo de errores. YouTube es tu mejor aliado; busca "n8n básicos" para encontrar contenido de gran valor con el que puedes iniciar este camino.
