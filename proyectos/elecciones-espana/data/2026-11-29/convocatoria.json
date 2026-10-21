@@ -10,15 +10,25 @@
       "nombre": "Congreso de los Diputados",
       "escanos": 350,
       "mayoria": 176,
-      "nota": "Se eligen los 350 diputados. Madrid gana un escaño y Cádiz pierde uno respecto a 2023."
+      "nota": "Se eligen los 350 diputados. Se reparten por provincias según su población, con un mínimo de dos por provincia; Ceuta y Melilla eligen un diputado cada una. Madrid gana un escaño y Cádiz pierde uno respecto a 2023."
     },
     {
       "id": "senado",
       "nombre": "Senado",
       "escanos": 209,
-      "nota": "209 de los 267 senadores se eligen por voto directo; los otros 58 los designan los parlamentos autonómicos. Ibiza y Formentera eligen cada una un senador por primera vez."
+      "mayoria": 134,
+      "nota": "209 de los 267 senadores se eligen por voto directo; los otros 58 los designan los parlamentos autonómicos. Ibiza y Formentera eligen cada una un senador por primera vez. En cada provincia se reparten cuatro escaños y cada elector marca hasta tres nombres, por lo que la lista más votada suele llevarse tres y la segunda uno. En las circunscripciones insulares de Gran Canaria, Mallorca y Tenerife se eligen tres senadores; en las de Ibiza, Formentera, Menorca, Fuerteventura, La Gomera, El Hierro, Lanzarote y La Palma, uno; y Ceuta y Melilla eligen dos cada una. Tres quintos (161) permiten renovar los cuatro magistrados del Tribunal Constitucional con mandato caducado."
     }
   ],
+  "portalOficial": {
+    "nombre": "29neleccionesgenerales.es",
+    "url": "https://29neleccionesgenerales.es",
+    "idiomas": ["castellano", "catalán", "gallego", "euskera", "valenciano", "inglés"],
+    "apartados": ["Información general", "Formaciones políticas", "Información de mesas", "Accesibilidad"],
+    "descripcion": "Portal oficial del Ministerio del Interior para las elecciones del 29N. Resuelve dudas sobre el voto presencial y por correo, los horarios de los colegios, los documentos de identificación que se piden en las mesas, el calendario y las candidaturas, e incluye información de accesibilidad para votantes y miembros de mesa. También tiene un destacado en la web del Ministerio (interior.gob.es).",
+    "logo": "El logo oficial es de color granate (con versiones en blanco y en negro) y simula el hemiciclo del Congreso de los Diputados, sostenido en su base por la inscripción «29N elecciones generales»."
+  },
+  "duracionCampana": "quince días",
   "vedaEncuestas": {
     "desde": "2026-11-24",
     "hasta": "2026-11-29",
@@ -39,7 +49,7 @@
       "fecha": "2026-10-21",
       "fechaFin": "2026-10-26",
       "titulo": "Presentación de candidaturas",
-      "detalle": "Ante las Juntas Electorales Provinciales."
+      "detalle": "Ante las Juntas Electorales Provinciales. Es también el margen para que los partidos pacten candidaturas conjuntas al Senado (PSOE y sus socios del Frente Amplio concurren como «Senado de Progreso»)."
     },
     {
       "fecha": "2026-11-02",
@@ -85,6 +95,10 @@
     }
   ],
   "fuentes": [
+    {
+      "titulo": "Ministerio del Interior · Portal oficial de las elecciones generales del 29N",
+      "url": "https://29neleccionesgenerales.es"
+    },
     {
       "titulo": "Junta Electoral Central · Calendario electoral EG 2026",
       "url": "https://www.juntaelectoralcentral.es/cs/jec/documentos/eg2026_calendario.pdf"

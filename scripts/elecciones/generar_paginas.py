@@ -70,6 +70,7 @@ for a in stm:
 n_stm, n_temas = len(stm), len(temas)
 fecha_elec = fecha_larga(actual["fecha"])
 camp = next((h for h in conv["hitos"] if "Campaña" in h["titulo"]), None)
+portal = conv.get("portalOficial")
 siglas_lista = ", ".join(p["siglas"] for p in partidos[:-1]) + " y " + partidos[-1]["siglas"]
 
 # ---------------------------------------------------------------- bloques comunes
@@ -163,7 +164,7 @@ def footer():
     return f"""<footer class="bg-slate-900 text-slate-400 text-xs mt-10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-2">
             <p>Proyecto educativo y experimental de <a class="text-slate-200 underline" href="https://emirodgar.es/">Emilio Rodríguez (Emirodgar)</a>, sin vinculación con ningún partido ni administración. Actualizado el {e(modified_txt)}.</p>
-            <p>Datos oficiales: <a class="underline" href="https://www.juntaelectoralcentral.es" target="_blank" rel="noopener">Junta Electoral Central</a> · <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a>. <a class="underline" href="https://emirodgar.es/elecciones-espana">Documentación del proyecto</a>.</p>
+            <p>Datos oficiales: <a class="underline" href="https://www.juntaelectoralcentral.es" target="_blank" rel="noopener">Junta Electoral Central</a> · <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a> · <a class="underline" href="https://29neleccionesgenerales.es" target="_blank" rel="noopener">29neleccionesgenerales.es</a>. <a class="underline" href="https://emirodgar.es/elecciones-espana">Documentación del proyecto</a>.</p>
         </div></footer>"""
 
 
@@ -392,7 +393,7 @@ def build_a_quien_votar():
 
         <section class="prose-x space-y-2 text-slate-700">
             <h2 class="text-xl font-bold text-slate-900">Cómo funciona este test para decidir tu voto</h2>
-            <p>Las elecciones generales del <strong>{e(fecha_elec)}</strong> renuevan el Congreso (350 diputados) y el Senado. Para decidir tu voto no basta con la intención de voto: importa qué piensa cada partido sobre las cuestiones concretas que te afectan. Este test te presenta {n_stm} afirmaciones y compara tu respuesta con la <strong>posición documentada</strong> de {e(siglas_lista)}.</p>
+            <p>Las elecciones generales del <strong>{e(fecha_elec)}</strong> renuevan el Congreso (350 diputados, repartidos por provincias según su población, con un mínimo de dos por provincia salvo Ceuta y Melilla, que eligen uno) y el Senado (cuatro senadores por provincia, con reglas propias para las islas y dos para Ceuta y Melilla). La campaña dura quince días y va del {e(fecha_larga(camp["fecha"]))} al {e(fecha_larga(camp["fechaFin"]))}. Para decidir tu voto no basta con la intención de voto: importa qué piensa cada partido sobre las cuestiones concretas que te afectan. Este test te presenta {n_stm} afirmaciones y compara tu respuesta con la <strong>posición documentada</strong> de {e(siglas_lista)}.</p>
             <ol class="list-decimal pl-6 space-y-1">
                 <li><strong>Elige tus prioridades.</strong> Los temas que marques pesan el doble.</li>
                 <li><strong>Responde</strong> «de acuerdo», «en desacuerdo» o «paso» a cada afirmación.</li>
@@ -796,6 +797,8 @@ def build_voto_correo():
          "Cualquier persona inscrita en el censo electoral que prevea no estar en su localidad el día de la votación o que no pueda acudir a su colegio por cualquier motivo, como trabajo, viaje o enfermedad. No hace falta residir fuera de tu municipio."),
         ("¿Qué pasa si estoy enfermo o tengo una incapacidad?",
          "Si no puedes hacer la solicitud en persona, puede hacerla otra persona en tu nombre con un certificado médico oficial gratuito y una autorización notarial o consular. La autorización es individual y una misma persona no puede representar a varios electores."),
+        ("¿Dónde encuentro la información oficial de las elecciones del 29N?",
+         "El Ministerio del Interior ha puesto en marcha el portal 29neleccionesgenerales.es, disponible en castellano, catalán, gallego, euskera, valenciano e inglés, con información sobre las modalidades de voto presencial y por correo, los horarios de los colegios, los documentos de identificación que se piden en las mesas, el calendario y las candidaturas. También es accesible desde un destacado en interior.gob.es."),
         ("¿Y si vivo en el extranjero?",
          "Los residentes en el extranjero inscritos en el censo CERA tienen un procedimiento propio a través de los consulados. Consulta las instrucciones del Ministerio de Asuntos Exteriores o de tu consulado."),
     ]
@@ -842,6 +845,8 @@ def build_voto_correo():
             <h2 class="text-xl font-bold text-slate-900">Qué hacer con la documentación</h2>
             <p>El sobre que recibes incluye las papeletas y sobres electorales, el certificado de inscripción en el censo, un sobre dirigido a tu mesa electoral y las instrucciones. Sigue el orden indicado: papeleta del Congreso y del Senado en sus sobres, y todo junto con el certificado de censo en el sobre de la mesa.</p>
             <p>Antes de decidir tu voto, puedes consultar el <a class="text-brand-600 underline" href="/a-quien-votar/">test «¿A quién votar?»</a>, el <a class="text-brand-600 underline" href="/programas-electorales/">comparador de programas electorales</a> y la <a class="text-brand-600 underline" href="/encuestas-elecciones-generales/">media de encuestas</a>. Si votas por correo, ten en cuenta que tu voto se emite antes de que termine la campaña (hasta el 27 de noviembre).</p>
+            <h2 class="text-xl font-bold text-slate-900">Portal oficial del Ministerio del Interior</h2>
+            <p>Interior ha lanzado <a class="text-brand-600 underline" href="https://29neleccionesgenerales.es" target="_blank" rel="noopener">29neleccionesgenerales.es</a>, la web oficial de las elecciones del 29N, en castellano, catalán, gallego, euskera, valenciano e inglés. Está organizada en cuatro apartados (información general, formaciones políticas, información de mesas y accesibilidad) y resuelve dudas sobre el voto presencial y por correo, los horarios de los colegios y los documentos de identificación que debes llevar. Incluye un apartado de accesibilidad para quienes acuden a votar y para quienes forman parte de las mesas.</p>
             <p class="text-sm text-slate-500">Fuentes: calendario oficial de la Junta Electoral Central y procedimiento descrito por Correos y la prensa (Euronews, RTVC). Esta guía es informativa: la información oficial es la de <a class="underline" href="https://www.correos.es" target="_blank" rel="noopener">Correos</a> y el <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a>.</p>
             <ul class="list-disc pl-6 text-sm">{fuentes}</ul></section>
 
