@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-09-02
+date_modified: 2026-10-21
 folder: analisis
 permalink: analisis-funcionarios
 ---
@@ -186,6 +187,18 @@ La **distribución territorial** refleja el modelo descentralizado del Estado:
 ### Rejuvenecimiento y ofertas de Empleo
 
 Las **ofertas de empleo público récord** de 2023 y 2024 (39.000+ plazas cada año) han comenzado a **revertir la tendencia** de envejecimiento, aunque de forma muy gradual. El porcentaje de menores de 40 años ha aumentado **4 puntos** en dos años, situándose en el 17,85%.
+
+## Fondos europeos para la propia Administración
+
+Un último dato de contexto, ya de octubre de 2026: España es el país de la UE que **más fondos Next Generation ha destinado a su propia Administración**, según un informe del Tribunal de Cuentas Europeo. Son **11.033 millones de euros**, más que Italia (9.039 millones), Grecia (6.678), Rumanía (5.598) o Alemania (4.109). De los unos **50.000 millones** que la UE ha aceptado entregar para mejorar sus administraciones, España concentra el **22%**.
+
+Los auditores no cuestionan que haya base legal para ese uso, sino los resultados: hablan de "escasos resultados" y de "oportunidad perdida" en toda la UE, y no ven mejoras significativas en la capacidad de la Administración española. Ven un lado positivo en la digitalización: tres de las cuatro medidas españolas examinadas mostraron resultados significativos, como las 14 aplicaciones móviles de servicios públicos de la AGE, con unos 8 millones de descargas y 7,4 millones de usuarios hasta octubre de 2025. El propio Tribunal advierte de que es una muestra limitada y no generalizable al conjunto del plan.
+
+La consejera Ivana Maletic resume el problema: los países priorizaron lo fácil de ejecutar en plazo, como digitalizar, frente a reformas de gobernanza y coordinación más complejas, y "poner un procedimiento en línea no lo hace automáticamente más sencillo o rápido". Conecta con el reto de [la IA en la administración pública](https://emirodgar.es/ia-en-la-administracion-publica): sin cambios de fondo, la tecnología sola no reduce la burocracia.
+
+A falta de unos dos meses y medio para cerrar el Mecanismo de Recuperación y Resiliencia, según los datos del Gobierno se ha resuelto el 75% de las convocatorias, el 70% de los fondos ha llegado "al sector empresarial" (cerca de 1,5 millones de sociedades receptoras, sobre todo por el Kit Digital) y quedarían unos 25.000 millones por recibir y adjudicar.
+
+*Fuente: Tribunal de Cuentas Europeo, con datos de abril de 2026 de la Comisión Europea, según El Mundo.*
 
 ## Conclusiones
 

@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-11-28
-date_modified: 2026-10-12
+date_modified: 2026-10-21
 folder: espana
 permalink: analisis-vivienda-espana
 ---
@@ -309,6 +309,26 @@ El actual gobierno ha optado por una política más **intervencionista**:
 Junto a estas medidas conviven también iniciativas más simbólicas, como la creación de nuevos observatorios de vivienda, un fenómeno [que analizamos en detalle en este artículo](https://emirodgar.es/analisis-observatorios) sobre la proliferación de observatorios en la administración española.
 
 El gran interrogante es si **estas medidas llegarán a tiempo y a escala suficiente** para reducir el déficit actual y ofrecer alternativas reales a quienes hoy no pueden acceder a una vivienda digna.
+
+---
+
+## ¿Está desapareciendo el alquiler de larga duración?
+
+La demanda de alquiler crece, pero la oferta se vuelve **más inestable y más temporal**. Según los datos de Idealista sobre anuncios activos, al cierre del tercer trimestre de 2026 los **alquileres de temporada ya suponen el 34% de la oferta**, un 7% más que un año antes, mientras que la **oferta de alquiler permanente cae un 10%**. Un alquiler temporal dura normalmente menos de 12 meses y exige una causa justificada.
+
+Ambas cifras están parcialmente correlacionadas: diversos análisis apuntan a que, desde la Ley de Vivienda, muchos propietarios han pasado sus pisos de alquiler permanente a temporal para evitar las obligaciones de la norma.
+
+- **Mayor peso del alquiler de temporada**: San Sebastián (62%), Cádiz (61%), Bilbao (59%) y Barcelona (57%, desde el 51% del trimestre anterior).
+- **Zonas tensionadas, mayor crecimiento anual del temporal**: La Coruña (+44%), Vitoria (+37%), Bilbao (+36%) y Pamplona (+14%).
+- **Fuera de zonas tensionadas**: Melilla (+82%), Madrid (+52%), Valladolid (+50%), Zaragoza (+41%), Zamora (+33%) y León (+31%).
+- **Caída del alquiler permanente en mercados tensionados**: San Sebastián (-52%), La Coruña (-41%), Bilbao (-41%), Pamplona (-33%), Vitoria (-32%), Tarragona (-31%), Lérida (-29%) y Barcelona (-22%). Gerona es la única excepción (+4%).
+- **Resto de grandes mercados**: Alicante (-22%), Valencia (-12%), Málaga (-11%), Madrid (-6%) y Palma (-2%).
+
+Es una lectura que hay que tomar con cuidado: Idealista es un portal con su propia mirada sobre el efecto de los topes de precios, y mide anuncios, no contratos firmados. Aun así, el dato es coherente con lo que vemos en el resto del mercado: la intervención no ha aliviado la presión, y en Cataluña, donde la legislación autonómica limita el temporal, el ajuste tampoco se ha traducido en más oferta de alquiler permanente.
+
+Estos datos aterrizan además en plena precampaña: los dos decretos de vivienda que el Gobierno aprobó tras anunciar las elecciones del 29N, conocidos como "decretos Maricarmen", siguen pendientes de convalidación en la Diputación Permanente (hablo del procedimiento en [este artículo sobre el 29N](https://emirodgar.es/elecciones-29n-pais-al-reves)). Según Idealista, los datos del tercer trimestre aún no reflejan su posible efecto.
+
+*Fuente: Idealista, tercer trimestre de 2026.*
 
 ---
 

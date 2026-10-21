@@ -7,6 +7,7 @@ sitemap: 1
 feed: 1
 folder: analisis
 date: 2025-04-25
+date_modified: 2026-10-21
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 permalink: analisis-barranco-poyo
 
@@ -142,6 +143,27 @@ Dejo algunos ejemplos.
 ...y señala que:
 
 > "Generalitat y Gobierno central se atribuyen de forma recíproca la vigilancia del barranco que se desbordó".
+
+---
+
+## Lo que cuesta una inundación: la factura del Consorcio de Compensación de Seguros
+
+Más allá de la batalla política, la dana de octubre de 2024 fue también la **catástrofe más cara de la historia del Consorcio de Compensación de Seguros (CCS)**, que lleva registros desde 1971. Solo en la Comunidad Valenciana indemnizó **más de 5.164 millones de euros**, y ese año destinó **5.327 millones** a inundaciones, el **48%** de todo lo abonado por este riesgo entre 2004 y 2025.
+
+Por tipo de bien asegurado, el reparto de los cerca de 5.264 millones fue este:
+
+| Tipo de bien | % del total | Millones de euros |
+|---|---|---|
+| Comercios | 27,1% | 1.401 |
+| Industrias | 24,6% | 1.271 |
+| Vehículos | 24,0% | 1.239 |
+| Viviendas | 21,9% | 1.129 |
+
+El 93% fueron daños materiales y el 7% restante, pérdidas pecuniarias y daños personales. La segunda inundación más costosa fue la del País Vasco, Cantabria y Navarra de agosto de 1983, con **1.033 millones** (a valores de 2025) y 34 fallecidos.
+
+También se midió en días de despliegue: los efectivos de la UME estuvieron **64 días** activados por esta dana, el despliegue por inundación más largo de su historia. Y el patrón se repite: este otoño de 2026 la **dana Adam** ha dejado seis fallecidos y más de 850.000 personas confinadas en 145 municipios valencianos, y el Gobierno ha declarado zona catastrófica los municipios afectados. Puedes ver el cuadro completo, con 20 años de indemnizaciones, en el [análisis del cambio climático en España](https://emirodgar.es/analisis-cambio-climatico).
+
+*Fuentes: Consorcio de Compensación de Seguros y Unidad Militar de Emergencias, según el reportaje publicado por El Mundo en octubre de 2026.*
 
 ---
 

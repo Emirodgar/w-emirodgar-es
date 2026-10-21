@@ -23,7 +23,7 @@ España ha dado pasos significativos para posicionarse en la vanguardia de la re
 
 Adicionalmente, en marzo de 2025, el Gobierno dio luz verde al anteproyecto de ley de gobernanza de la Inteligencia Artificial, que adapta la legislación española al [reglamento europeo de IA](https://emirodgar.es/europa-ia). Entre las iniciativas más destacadas se encuentra la puesta en marcha de un Sandbox en materia de IA, un proyecto novedoso destinado a ayudar a proveedores, responsables, operadores y reguladores a establecer un marco claro de cumplimiento de requisitos y obligaciones.
 
-Sin embargo, a pesar de estos avances, persisten importantes desafíos que requieren una atención urgente por parte de las administraciones públicas.
+Sin embargo, a pesar de estos avances, persisten importantes desafíos que requieren una atención urgente por parte de las administraciones públicas. El Tribunal de Cuentas Europeo lo ha subrayado en octubre de 2026: España es el país de la UE que más fondos Next Generation ha dedicado a su propia Administración (11.033 millones) y, aunque ve ejemplos positivos de digitalización, advierte de que poner un trámite en línea no lo hace automáticamente más sencillo (más datos en el [análisis de los funcionarios](https://emirodgar.es/analisis-funcionarios)).
 
 ## Principales riesgos y desafíos de la IA para la administración pública
 

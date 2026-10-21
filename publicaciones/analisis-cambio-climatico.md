@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-09-10
+date_modified: 2026-10-21
 folder: analisis
 permalink: analisis-cambio-climatico
 ---
@@ -317,6 +318,23 @@ Entre 2000-2019, los eventos meteorológicos extremos causaron en España:
 - **2021**: Borrasca Filomena, **nevada histórica** en Madrid con **50 cm de acumulación**
 - **2022**: **41 días de calor extremo**, **siete veces más** que la media 1981-2010
 - **2023**: **Siete olas de calor** y **dos olas de frío**
+
+
+### La factura de las inundaciones (2004-2025)
+
+Entre todos los fenómenos naturales, las inundaciones son los que más dinero cuestan en España. Según el Consorcio de Compensación de Seguros (CCS), entre 2004 y 2025 destinó **11.090 millones de euros** a indemnizar riadas, el **77,8%** de todo lo que paga por catástrofes. Les siguen las tempestades ciclónicas atípicas (13,6%, 1.946 millones) y los terremotos (4,8%, 684 millones). Como explica Francisco Espejo, del CCS, los terremotos llegan de vez en cuando, pero "inundaciones hay todos los años".
+
+- **95%** de lo indemnizado por inundaciones son daños en bienes (unos 10.531 millones), **4,9%** pérdidas pecuniarias y **0,1%** daños personales.
+- **Siete de los diez eventos más costosos** desde 1971 han sido inundaciones. El mayor, la dana de octubre de 2024, con más de **5.164 millones** solo en la Comunidad Valenciana (más detalle en el [análisis del Barranco del Poyo](https://emirodgar.es/analisis-barranco-poyo)).
+- **2019**: segundo año con más indemnizaciones de las dos últimas décadas (795 millones), con la dana de septiembre en la Vega Baja y el Campo de Cartagena (550 millones).
+- **Borrasca Gloria (enero de 2020)**: más de **247 millones** en indemnizaciones, el 74,3% de lo pagado ese año por inundaciones.
+- **2022** fue el mínimo reciente (136 millones) y **2024** el máximo absoluto (5.406 millones, con un 98% de todo lo indemnizado por inundación).
+
+También crece la presión sobre los servicios de emergencia. La UME ha intervenido en **un centenar de inundaciones y rescates** desde su creación, más de la mitad (56) desde 2018, y **2026 es el año récord**: 19 activaciones entre enero y septiembre, frente a 9 en 2019 y 8 en 2025, el 73,6% de ellas en Andalucía. Valencia es la provincia que más la ha necesitado (8), seguida de Zaragoza (7) y Sevilla (5).
+
+Un dato de contexto: las pólizas han pasado de 68,8 a 146,3 millones entre 2004 y 2025 (+114,7%), pero los recargos que financian al CCS solo han crecido un 17,4% en términos reales (de 739,7 a 868,4 millones) y el capital asegurado un 16%. El Consorcio se financia con recargos de las pólizas, no con los Presupuestos, aunque la ley prevé una garantía del Estado si se quedara sin fondos, algo que nunca ha ocurrido.
+
+*Fuente: CCS y UME, según El Mundo (octubre de 2026).*
 
 
 ## Evolución del término "Cambio Climático" en medios
