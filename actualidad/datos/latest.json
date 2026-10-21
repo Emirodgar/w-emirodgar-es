@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-20",
-  "generado_en": "2026-10-20T09:55:10+00:00",
-  "titular": "Operativos antiterroristas en Cataluña y País Vasco, negociaciones PP-Vox para el Senado y temporal en el Mediterráneo.",
+  "fecha": "2026-10-21",
+  "generado_en": "2026-10-21T09:57:30+00:00",
+  "titular": "Tensión política en España con la visita de Milei, apagón en Ceuta y propuestas electorales de vivienda",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 194
+    "El Mundo": 29,
+    "The Objective": 218
   },
   "temas": [
     {
-      "tema": "Operaciones antiterroristas en España",
+      "tema": "Visita de Milei y confrontación política",
+      "categoria": "Política",
+      "descripcion": "El presidente argentino Javier Milei ha realizado su séptima visita a España, generando un nuevo choque con el Gobierno de Pedro Sánchez a quien ha insultado, mientras se ha reunido con Isabel Díaz Ayuso y Vox."
+    },
+    {
+      "tema": "Propuestas electorales y panorama político",
+      "categoria": "Política",
+      "descripcion": "Feijóo ha presentado un plan de vivienda para jóvenes con rebajas fiscales, mientras un análisis sugiere la necesidad de que Vox se retire en varias provincias para que la derecha sume mayoría."
+    },
+    {
+      "tema": "Crisis en Ceuta y declaraciones de Trump",
+      "categoria": "Internacional",
+      "descripcion": "Ceuta ha sufrido un apagón generalizado y se han encontrado inmigrantes en pisos patera y un cadáver en el puerto, mientras Donald Trump ha criticado la gestión española y europea de la crisis migratoria."
+    },
+    {
+      "tema": "Sucesos y seguridad",
       "categoria": "Sucesos",
-      "descripcion": "La Policía Nacional ha detenido a dos presuntos yihadistas en Cataluña, mientras que dos personas acusadas de terrorismo han pasado a disposición judicial en el País Vasco."
-    },
-    {
-      "tema": "Negociaciones PP-Vox para el Senado",
-      "categoria": "Política",
-      "descripcion": "El PP ha confirmado conversaciones con Vox para las elecciones al Senado con el objetivo de evitar el control de la Cámara Alta por parte de la izquierda, tras un pacto oculto entre Frente Amplio y PSOE."
-    },
-    {
-      "tema": "Mónica García y las elecciones",
-      "categoria": "Política",
-      "descripcion": "Mónica García ha renunciado a presentarse por Madrid en las listas del Frente Amplio al Congreso para centrarse en su papel como candidata de Más Madrid contra Ayuso."
-    },
-    {
-      "tema": "Temporal Adam e inundaciones",
-      "categoria": "Sociedad",
-      "descripcion": "El temporal Adam ha provocado inundaciones en la Comunidad Valenciana y Andalucía, con el hallazgo de un agricultor muerto y el corte de numerosas carreteras."
+      "descripcion": "Un asesinato machista en Carabanchel, la detención de presuntos terroristas en Irún y el procesamiento de una profesora por amenazas de muerte son algunos de los sucesos destacados."
     }
   ]
 }

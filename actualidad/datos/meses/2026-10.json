@@ -616,6 +616,48 @@
         "url": "https://theobjective.com/sociedad/suceso/2026-10-20/hallan-muerto-agricultor-marjal-pego-oliva-inundaciones-dana/"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-21",
+      "edicion": "2026-10-21",
+      "titulo": "Feijóo propone rebajas fiscales de 25.000 euros para jóvenes compradores de vivienda",
+      "categoria": "Política",
+      "descripcion": "El candidato del PP, Alberto Núñez Feijóo, ha detallado un plan para facilitar la compra de la primera vivienda a jóvenes, incluyendo rebajas de impuestos y la construcción de un millón de viviendas.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Feijóo promete rebajas de 25.000 euros en impuestos para los jóvenes que compren su primera vivienda: \"Vamos a crear una nueva generación de propietarios\"",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/21/6ad86d31e85ece145b8b459b.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-21",
+      "edicion": "2026-10-21",
+      "titulo": "Apagón generalizado en Ceuta por avería eléctrica",
+      "categoria": "Sociedad",
+      "descripcion": "La ciudad autónoma de Ceuta ha sufrido un \"cero energético\" que ha dejado sin luz a toda la localidad debido a una avería, paralizando la actividad comercial.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Ceuta sufre un \"cero energético\" al irse la luz en toda la ciudad por una avería",
+        "url": "https://www.elmundo.es/economia/2026/10/21/6ad87ca5e4d4d8f70e8b4599.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-21",
+      "edicion": "2026-10-21",
+      "titulo": "Regreso de Lluís Puig al Parlament tras 9 años de fuga",
+      "categoria": "Política",
+      "descripcion": "El ex consejero catalán Lluís Puig ha regresado a España y se espera su presencia en el Parlament, después de que el Tribunal Supremo levantara las órdenes de detención en su contra.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El ex consejero Lluís Puig regresa 9 años después de su fuga y estará el jueves en el Parlament",
+        "url": "https://www.elmundo.es/cataluna/2026/10/21/6ad874f5e85ece81428b4575.html"
+      },
+      "destacado": false
     }
   ]
 }
