@@ -658,6 +658,34 @@
         "url": "https://www.elmundo.es/cataluna/2026/10/21/6ad874f5e85ece81428b4575.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-22",
+      "edicion": "2026-10-22",
+      "titulo": "Corte Penal Internacional, Premio Sájarov",
+      "categoria": "Internacional",
+      "descripcion": "La Corte Penal Internacional ha sido galardonada con el Premio Sájarov a la libertad de conciencia por el Parlamento Europeo.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Corte Penal Internacional, Premio Sájarov a la libertad de conciencia del Parlamento Europeo",
+        "url": "https://www.elmundo.es/internacional/2026/10/22/6ad9da9ee9cf4a830a8b4579.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-22",
+      "edicion": "2026-10-22",
+      "titulo": "Procesada la cúpula de ETA por atentado en Santa Pola",
+      "categoria": "Sucesos",
+      "descripcion": "El juez Antonio Piña ha procesado a la cúpula completa de ETA por el atentado contra la casa cuartel de Santa Pola en 2002.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Procesada la cúpula completa de ETA por el atentado contra la casa cuartel de Santa Pola",
+        "url": "https://www.elmundo.es/espana/2026/10/22/6ad8fe2ffdddff70628b45ad.html"
+      },
+      "destacado": false
     }
   ]
 }
