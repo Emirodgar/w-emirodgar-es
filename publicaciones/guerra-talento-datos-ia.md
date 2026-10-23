@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-10-06
+date_modified: 2026-10-23
 folder: ia
 permalink: guerra-talento-datos-ia
 ---
@@ -78,5 +79,9 @@ Tiene sentido: son quienes venden la IA a las empresas y los primeros que necesi
 Si algo deja esta noticia es que el responsable de datos e IA no es un puesto de apoyo. Si lo tienes y no lo cuidas, otro lo hará por ti. Si no lo tienes, estás comprando herramientas sin saber quién responde de ellas.
 
 Y si eres profesional, la lección es la misma que muestran estas trayectorias: **el dato, la gobernanza y la gestión de equipos valen más que saber manejar una herramienta concreta**. Las herramientas cambian cada seis meses. Quien entiende cómo se usan en una organización, no.
+
+Hay un dato de la otra punta del mercado que encaja con esto. Emily Kramer, de MKT1, analizó más de 1.100 ofertas de marketing abiertas en septiembre y octubre de 2026, la mayoría de startups B2B de EE. UU., y encontró que las descripciones van por detrás de la práctica. De las 791 de la muestra principal, solo el **47 %** pide habilidades de IA para el puesto, el 40 % menciona la IA únicamente para describir el producto de la empresa y el 13 % no la menciona. Solo el **15 %** pide algo más que usar un chatbot, como construir flujos de trabajo o agentes, y apenas 9 empresas explican cómo se espera que se use la IA durante la selección. Por nivel, la piden en el 25 % de las ofertas de entrada y en el 52 % de las senior.
+
+Es una muestra concreta, de startups estadounidenses y revisada por la propia autora, así que no la extrapolaría a España. Pero apunta en la misma dirección que lo anterior: las empresas pelean por los directivos de datos e IA mientras sus ofertas de marketing siguen describiendo el trabajo de hace tres años. Su recomendación para quien contrata es dejar de prohibir la IA en el proceso y decir cómo se espera que se use, y pedir al candidato que recorra un trabajo real de principio a fin y que enseñe algo que haya construido con IA, en lugar de fiarse de una lista de herramientas.
 
 La IA se compra. El criterio para usarla, no.

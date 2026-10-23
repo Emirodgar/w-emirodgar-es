@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-15
+date_modified: 2026-10-23
 folder: ia
 permalink: geo
 ---
@@ -42,6 +43,8 @@ Estos sistemas no citan al azar. Funcionan mediante RAG (Retrieval-Augmented Gen
 Semrush analizó en 2026 qué señales correlacionan más con salir citado en esas respuestas: la **claridad del texto (+32,83%)**, las **señales de E-E-A-T** —experiencia, autoridad y confianza— **(+30,64%)** y el **formato de pregunta-respuesta (+25,45%)**. Un estudio de Princeton, por su parte, confirmó que incluir citas y estadísticas concretas mejora la visibilidad hasta un **40%**, mientras que meter palabras clave a la fuerza no aporta ningún beneficio, datos que resume [DonWeb](https://blog.donweb.com/citas-ia-modelos-chatgpt-claude-perplexity-fuentes/).
 
 Y aquí está el dato que más debería cambiar la estrategia de cualquiera que siga pensando solo en Google: casi el **90% de las citas en ChatGPT Search** provienen de páginas que ni siquiera aparecen en la primera página de Google, sino en la posición 21 o más abajo, según [Attrifast](https://attrifast.com/blog/ai-search-ranking-factors-2026). Estar bien posicionado en un buscador tradicional ya no es requisito para que una IA te recomiende.
+
+Antes de ser citado hay que ser descubierto, y ahí también se está moviendo algo. Cloudflare y OpenAI lanzaron en julio de 2026 un piloto en el que el rastreador de búsqueda de OpenAI recibe señales de la red de Cloudflare: qué URLs no existen, cuáles redirigen a la portada o duplican otra, cuándo una página ha cambiado y merece otra visita, y cuáles parecen peligrosas, como un falso formulario de acceso. Según Cloudflare, con una cohorte de en torno al 1 % de su red, OpenAI descubrió e indexó cientos de millones de páginas que antes no conocía. Es un resultado que cuenta uno de los participantes, sin cifras auditables, pero deja claras las señales que ayudan a que una página entre en el índice que consulta ChatGPT, según [el propio artículo](https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/): contenido específico y de primera mano, respuestas válidas en cada URL y fechas de cambio coherentes. Y una precisión que hace el mismo texto: que se envíe una señal sobre una página no da permiso para acceder a ella, el control sigue siendo del dueño del dominio.
 
 Esa misma lógica tiene un reverso incómodo: estos sistemas puntúan la relevancia de un fragmento, no su veracidad. Un experimento de Peec AI lo demostró publicando 50.000 estadísticas inventadas en una web nueva, que Google dejó de mostrar pero que ChatGPT siguió consultando durante meses hasta acabar citada en un informe bancario y en un artículo académico. Lo contamos en [lo fácil que es manipular a la IA con estadísticas falsas](https://emirodgar.es/manipular-ia-estadisticas-falsas): el GEO funciona, pero precisamente por eso conviene que lo que publiques sea verificable.
 

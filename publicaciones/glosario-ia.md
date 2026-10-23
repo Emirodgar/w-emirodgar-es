@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
+date_modified: 2026-10-23
 folder: guias
 permalink: glosario-ia
 ---
@@ -71,6 +72,7 @@ Ejemplo: varios medios y editoriales han demandado a empresas de IA por usar su 
 - **Deepfake**: contenido audiovisual sintético (voz, vídeo o imagen) generado con IA para simular que una persona real dijo o hizo algo que nunca ocurrió. Ya mueve un fraude de cientos de millones de euros al año, como contamos en [deepfakes, la desinformación que ya cuesta 929 millones de euros](https://emirodgar.es/deepfakes-desinformacion-ia).
 - **Chief AI Officer (CAIO)**: el cargo directivo responsable de la estrategia de IA de una empresa, cada vez más habitual en organizaciones grandes. Lo tratamos en detalle en [este artículo](https://emirodgar.es/chief-ai-officer).
 - **Blanqueo de citas (*citation laundering*)**: proceso por el que un dato falso gana credibilidad al ser citado sucesivamente por fuentes cada vez más serias, hasta que parece verificado. Un experimento con 50.000 estadísticas inventadas acabó citado en un paper y en un informe bancario; lo contamos en [lo fácil que es manipular a la IA](https://emirodgar.es/manipular-ia-estadisticas-falsas).
+- **Harness**: el sistema que rodea a un modelo para que actúe como agente: instrucciones, herramientas, memoria, skills y orquestación. Optimizarlo (*harnessing*) permite mejorar los resultados sin tocar el modelo. Google Research ha publicado [Harness²](https://github.com/google-research/harness2), un framework de código abierto que refina ese entorno de forma recursiva, y según sus autores mejora hasta 11,8 puntos porcentuales en una de sus pruebas. Es un resultado de su propio equipo sobre benchmarks propios, y el proyecto aclara que no es un producto oficial de Google.
 - **Guardrails**: reglas y filtros técnicos que limitan lo que un modelo puede decir o hacer, pensados para evitar respuestas peligrosas, ilegales o fuera de política.
 
 Este glosario seguirá creciendo a medida que aparezcan nuevos términos. Si echas en falta alguno, dímelo y lo añado.
