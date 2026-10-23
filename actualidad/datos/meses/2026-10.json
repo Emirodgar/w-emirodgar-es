@@ -503,7 +503,7 @@
         "titulo": "Francia despierta con la resaca de la extrema violencia en las protestas: caos, pillaje, incendios y más de 1.200 detenidos con \"perfiles peligrosos\"",
         "url": "https://www.elmundo.es/internacional/2026/10/18/6ad46f11e85ece497e8b457f.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-18",
@@ -684,6 +684,48 @@
         "medio": "El Mundo",
         "titulo": "Procesada la cúpula completa de ETA por el atentado contra la casa cuartel de Santa Pola",
         "url": "https://www.elmundo.es/espana/2026/10/22/6ad8fe2ffdddff70628b45ad.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-22",
+      "edicion": "2026-10-23",
+      "titulo": "UCO detecta desaparición de facturas en contabilidad del PSOE",
+      "categoria": "Política",
+      "descripcion": "La UCO detecta la desaparición de facturas en la contabilidad del PSOE al rastrear la financiación ilegal, constatando descuadres relevantes.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La UCO detecta la desaparición de facturas en la contabilidad del PSOE al rastrear la financiación ilegal",
+        "url": "https://www.elmundo.es/espana/2026/10/22/6ada535cfdddff545b8b45a9.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-23",
+      "edicion": "2026-10-23",
+      "titulo": "Netanyahu ordena el cierre total de Cisjordania",
+      "categoria": "Internacional",
+      "descripcion": "El primer ministro israelí, Benjamín Netanyahu, ordena el cierre «total» de Cisjordania ocupada tras un ataque a tiros perpetrado contra israelíes.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Netanyahu ordena el cierre inmediato sobre Hebrón tras un ataque armado palestino",
+        "url": "https://www.elmundo.es/internacional/2026/10/23/6adb233f21efa0232d8b45a1.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-23",
+      "edicion": "2026-10-23",
+      "titulo": "Récord histórico de muertes por calor extremo en Europa",
+      "categoria": "Sociedad",
+      "descripcion": "El calor extremo bate un récord histórico en Europa con más de 50.300 muertes en un solo verano, con el cambio climático antropogénico detrás de dos tercios de los fallecimientos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El calor extremo bate un récord histórico en Europa con más de 50.300 muertes en un solo verano",
+        "url": "https://www.elmundo.es/salud/2026/10/23/6ada5bb9e9cf4a6b638b456d.html"
       },
       "destacado": false
     }

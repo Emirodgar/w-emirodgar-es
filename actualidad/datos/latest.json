@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-22",
-  "generado_en": "2026-10-22T09:57:42+00:00",
-  "titular": "El PP refuerza su lista electoral con Álvarez de Toledo y Sémper, mientras el PSOE se niega a entregar contratos al juez Pedraz",
+  "fecha": "2026-10-23",
+  "generado_en": "2026-10-23T09:52:20+00:00",
+  "titular": "Netanyahu ordena el cierre de Cisjordania tras un ataque, mientras Feijóo genera debate sobre el aborto y la financiación del PSOE es invest",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 199
+    "El Mundo": 28,
+    "The Objective": 191
   },
   "temas": [
     {
-      "tema": "Configuración de listas electorales del PP",
-      "categoria": "Política",
-      "descripcion": "Feijóo ha nombrado a Cayetana Álvarez de Toledo como número dos y a Borja Sémper como número tres en las listas electorales por Madrid, generando reacciones diversas en el espectro político."
-    },
-    {
-      "tema": "Negativa del PSOE a entregar contratos al juez Pedraz",
-      "categoria": "Política",
-      "descripcion": "El PSOE ha invocado el secreto profesional y la confidencialidad para no entregar al juez de la Audiencia Nacional los contratos con abogados relacionados con el 'caso Cloacas'."
-    },
-    {
-      "tema": "Polémica por la 'ley de nietos' y el voto exterior",
-      "categoria": "Política",
-      "descripcion": "El Tribunal Constitucional ha rechazado el recurso del Defensor del Pueblo sobre la 'ley de nietos', mientras persiste la incertidumbre sobre la validez del voto de miles de electores del exterior."
-    },
-    {
-      "tema": "Premios y sanciones a la Corte Penal Internacional",
+      "tema": "Conflicto Israel-Palestina",
       "categoria": "Internacional",
-      "descripcion": "La Corte Penal Internacional ha recibido el Premio Sájarov a la libertad de conciencia, mientras que el Gobierno de Estados Unidos ha anunciado nuevas sanciones contra este organismo."
+      "descripcion": "Netanyahu ordena el cierre total de Cisjordania tras un ataque armado en Hebrón, donde dos atacantes palestinos fueron abatidos."
+    },
+    {
+      "tema": "Debate sobre el aborto y la política de Igualdad",
+      "categoria": "Política",
+      "descripcion": "Feijóo plantea el debate sobre el aborto en menores de 16 años y anuncia que las competencias de Igualdad se repartirán en otros ministerios, generando críticas del Gobierno."
+    },
+    {
+      "tema": "Investigación de financiación del PSOE",
+      "categoria": "Política",
+      "descripcion": "La UCO detecta la desaparición de facturas en la contabilidad del PSOE al rastrear una posible financiación ilegal."
+    },
+    {
+      "tema": "Violencia y orden público en España",
+      "categoria": "Sucesos",
+      "descripcion": "Incidentes en Zaragoza con cinco detenidos y siete policías heridos tras un acto de Vito Quiles, y dos detenidos en el País Vasco por la Ertzaintza en un desahucio. En Granada, un hombre dispara a su exmujer y a la hermana de esta."
     }
   ]
 }
