@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-23",
-  "generado_en": "2026-10-23T09:52:20+00:00",
-  "titular": "Netanyahu ordena el cierre de Cisjordania tras un ataque, mientras Feijóo genera debate sobre el aborto y la financiación del PSOE es invest",
+  "fecha": "2026-10-24",
+  "generado_en": "2026-10-24T09:22:36+00:00",
+  "titular": "La política española se polariza en campaña mientras el mercado bursátil muestra nerviosismo y la clase media se siente desprotegida.",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 191
+    "El Mundo": 25,
+    "The Objective": 150
   },
   "temas": [
     {
-      "tema": "Conflicto Israel-Palestina",
-      "categoria": "Internacional",
-      "descripcion": "Netanyahu ordena el cierre total de Cisjordania tras un ataque armado en Hebrón, donde dos atacantes palestinos fueron abatidos."
-    },
-    {
-      "tema": "Debate sobre el aborto y la política de Igualdad",
+      "tema": "Campaña electoral y polarización política",
       "categoria": "Política",
-      "descripcion": "Feijóo plantea el debate sobre el aborto en menores de 16 años y anuncia que las competencias de Igualdad se repartirán en otros ministerios, generando críticas del Gobierno."
+      "descripcion": "La campaña electoral en España se intensifica con el PSOE confiando en el 'efecto arrastre' y el PP perdiendo votos, mientras se debaten los 'populismos simplones' y la política razonable."
     },
     {
-      "tema": "Investigación de financiación del PSOE",
-      "categoria": "Política",
-      "descripcion": "La UCO detecta la desaparición de facturas en la contabilidad del PSOE al rastrear una posible financiación ilegal."
+      "tema": "Situación económica y mercado bursátil",
+      "categoria": "Economía",
+      "descripcion": "El mercado se muestra nervioso por la inestabilidad política y la IA, mientras se compara el coste de la vivienda y la crianza, y las pensiones crecen más que los sueldos."
     },
     {
-      "tema": "Violencia y orden público en España",
+      "tema": "Deportes: MotoGP y venta del Valencia CF",
+      "categoria": "Deportes",
+      "descripcion": "Marc Márquez logra la pole y gana la sprint en Australia, mientras Jorge Martín se fractura un brazo. El Valencia CF es adquirido en un 42% por un conglomerado de inversores americanos."
+    },
+    {
+      "tema": "Sucesos y seguridad ciudadana",
       "categoria": "Sucesos",
-      "descripcion": "Incidentes en Zaragoza con cinco detenidos y siete policías heridos tras un acto de Vito Quiles, y dos detenidos en el País Vasco por la Ertzaintza en un desahucio. En Granada, un hombre dispara a su exmujer y a la hermana de esta."
+      "descripcion": "Un menor resulta herido grave por arma blanca en Madrid, un hombre muere arrollado por el metro en Vizcaya y la Ertzaintza carga contra manifestantes en un desahucio."
     }
   ]
 }

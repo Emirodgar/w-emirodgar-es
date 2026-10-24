@@ -728,6 +728,48 @@
         "url": "https://www.elmundo.es/salud/2026/10/23/6ada5bb9e9cf4a6b638b456d.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-23",
+      "edicion": "2026-10-24",
+      "titulo": "Exteriores solo acredita al 0,3% de los 'nietos' para votar el 29-N",
+      "categoria": "Política",
+      "descripcion": "A fecha 21 de octubre, de los 31.390 expedientes revisados para la Ley de Memoria Democrática, solo se han expedido 91 certificados, lo que representa un 0,3% de los 'nietos' que cumplen los requisitos para votar el 29-N, un reto calificado de 'inasumible' por los ministerios implicados.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Exteriores sólo acredita que el 0,3% de los 'nietos' cumple los requisitos para votar el 29-N",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/23/6adba990fc6c8325318b4587.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-24",
+      "edicion": "2026-10-24",
+      "titulo": "Marc Márquez gana la sprint y logra la pole, mientras Jorge Martín se fractura el brazo",
+      "categoria": "Deportes",
+      "descripcion": "El piloto español Marc Márquez (Ducati) ha ganado la carrera al sprint y conseguido la pole en el Gran Premio de Australia, mientras que Jorge Martín ha sufrido una caída y se ha fracturado el radio de un brazo, perdiéndose la carrera del domingo.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Marc Márquez vence la 'sprint y logra la pole mientras Jorge Martín se cae y se pierde la carrera del domingo por una fractura en el brazo",
+        "url": "https://www.elmundo.es/deportes/motociclismo/2026/10/24/6adc4939e4d4d899348b45a3.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-24",
+      "edicion": "2026-10-24",
+      "titulo": "Kim Jong-un cruza a China por sorpresa, sellando un nuevo acercamiento",
+      "categoria": "Internacional",
+      "descripcion": "El líder norcoreano Kim Jong-un ha cruzado a territorio chino a través de un paso fronterizo recién inaugurado, lo que, según Corea del Sur, sella un nuevo acercamiento entre Pekín y Pyongyang.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Kim Jong-un cruza por sorpresa a China por el puente que sella el nuevo acercamiento entre Pekín y Pyongyang, según Corea del Sur",
+        "url": "https://www.elmundo.es/internacional/2026/10/24/6adc5c87fc6c83187c8b4580.html"
+      },
+      "destacado": false
     }
   ]
 }
