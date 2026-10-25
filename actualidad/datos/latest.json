@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-24",
-  "generado_en": "2026-10-24T09:22:36+00:00",
-  "titular": "La política española se polariza en campaña mientras el mercado bursátil muestra nerviosismo y la clase media se siente desprotegida.",
+  "fecha": "2026-10-25",
+  "generado_en": "2026-10-25T09:40:59+00:00",
+  "titular": "Felipe VI, operado de cataratas, mientras la situación política y social en España se caldea con disturbios en Barcelona y el Tribunal de Cu",
   "por_medio": {
     "El Mundo": 25,
-    "The Objective": 150
+    "The Objective": 97
   },
   "temas": [
     {
-      "tema": "Campaña electoral y polarización política",
+      "tema": "Salud del Rey Felipe VI",
       "categoria": "Política",
-      "descripcion": "La campaña electoral en España se intensifica con el PSOE confiando en el 'efecto arrastre' y el PP perdiendo votos, mientras se debaten los 'populismos simplones' y la política razonable."
+      "descripcion": "El rey Felipe VI ha sido operado con éxito de cataratas en su ojo izquierdo y ha abandonado la clínica por su propio pie."
     },
     {
-      "tema": "Situación económica y mercado bursátil",
+      "tema": "Investigación al hermano de Pedro Sánchez",
+      "categoria": "Política",
+      "descripcion": "El Tribunal de Cuentas ha iniciado diligencias para recuperar 400.000 euros pagados irregularmente al hermano del presidente del Gobierno y a un amigo."
+    },
+    {
+      "tema": "Disturbios en Barcelona",
+      "categoria": "Sociedad",
+      "descripcion": "Una protesta juvenil violenta en Barcelona ha resultado en 128 detenidos, 15 policías heridos y numerosos destrozos y saqueos."
+    },
+    {
+      "tema": "Situación de las carreteras españolas",
       "categoria": "Economía",
-      "descripcion": "El mercado se muestra nervioso por la inestabilidad política y la IA, mientras se compara el coste de la vivienda y la crianza, y las pensiones crecen más que los sueldos."
-    },
-    {
-      "tema": "Deportes: MotoGP y venta del Valencia CF",
-      "categoria": "Deportes",
-      "descripcion": "Marc Márquez logra la pole y gana la sprint en Australia, mientras Jorge Martín se fractura un brazo. El Valencia CF es adquirido en un 42% por un conglomerado de inversores americanos."
-    },
-    {
-      "tema": "Sucesos y seguridad ciudadana",
-      "categoria": "Sucesos",
-      "descripcion": "Un menor resulta herido grave por arma blanca en Madrid, un hombre muere arrollado por el metro en Vizcaya y la Ertzaintza carga contra manifestantes en un desahucio."
+      "descripcion": "Las carreteras españolas se encuentran en su peor nivel en cuatro décadas, con un déficit de conservación récord de 13.500 millones de euros."
     }
   ]
 }

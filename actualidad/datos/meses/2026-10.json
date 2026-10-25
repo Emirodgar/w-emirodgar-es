@@ -770,6 +770,48 @@
         "url": "https://www.elmundo.es/internacional/2026/10/24/6adc5c87fc6c83187c8b4580.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-25",
+      "edicion": "2026-10-25",
+      "titulo": "Felipe VI, operado con éxito de cataratas",
+      "categoria": "Política",
+      "descripcion": "El rey Felipe VI ha sido intervenido quirúrgicamente de cataratas en su ojo izquierdo, saliendo de la clínica a pie.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Felipe VI, intervenido con éxito de cataratas en su ojo izquierdo, sale de la clínica a pie y con gafas de sol: \"¡Muy bien, bien, gracias!\"",
+        "url": "https://www.elmundo.es/espana/2026/10/24/6add1778fdddff48738b457b.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-25",
+      "edicion": "2026-10-25",
+      "titulo": "Tribunal de Cuentas investiga pagos irregulares al hermano de Sánchez",
+      "categoria": "Política",
+      "descripcion": "El Tribunal de Cuentas ha abierto diligencias para recuperar 400.000 euros pagados irregularmente al hermano de Pedro Sánchez y a un amigo en Badajoz.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Tribunal de Cuentas abre diligencias para la recuperación de 400.000 euros pagados irregularmente al hermano de Sánchez y su amigo en Badajoz",
+        "url": "https://www.elmundo.es/espana/2026/10/25/6adcd78fe9cf4a40228b4575.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-25",
+      "edicion": "2026-10-25",
+      "titulo": "Déficit récord en conservación de carreteras españolas",
+      "categoria": "Economía",
+      "descripcion": "Las carreteras españolas alcanzan un déficit en conservación récord de 13.500 millones de euros, estando en su peor nivel en cuatro décadas.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Las carreteras españolas se llenan de 'curvas' peligrosas: de ser la envidia de Europa a un déficit en conservación récord de 13.500 millones",
+        "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/24/6adc89e6e85ecec82f8b457a.html"
+      },
+      "destacado": false
     }
   ]
 }
