@@ -82,3 +82,5 @@ La suma PP + Vox alcanzaría entre 192 y 202 escaños según las diferentes proy
 ## Conclusiones
 
 El panorama demoscópico de 2025 evidencia una **reconfiguración sustancial del mapa político español**. La crisis de corrupción del PSOE ha acelerado una tendencia que ya se insinuaba en encuestas anteriores, consolidando al PP como primera fuerza y fortaleciendo significativamente a Vox. La diferencia metodológica entre el CIS y las casas privadas añade incertidumbre al análisis, pero el consenso mayoritario sugiere una clara ventaja de la derecha en un hipotético escenario electoral. Los próximos meses serán determinantes para confirmar si estas tendencias se consolidan o si el PSOE logra recuperar parte del terreno perdido.
+
+**Para estas elecciones:** consulta el [hub de elecciones](https://emirodgar.es/elecciones/).

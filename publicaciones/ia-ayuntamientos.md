@@ -251,3 +251,5 @@ Aunque la implementación de IA en ayuntamientos españoles está en fase de des
 3. García Sanz, N. (2025). Ventajas de la IA en la comunicación de las Administraciones Públicas.
 4. SINT. (2024). IA en la administración pública y sus beneficios.
 5. Bloomberg Philanthropies. (2023). Encuesta sobre uso de IA en ciudades.
+
+**Guía completa:** [IA en la administración pública](https://emirodgar.es/guia-ia-administracion-publica).

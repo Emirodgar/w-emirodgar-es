@@ -33,3 +33,6 @@ No son productos finales ni soluciones cerradas, sino pruebas de concepto que me
 | A quién votar y Programas electorales | Test de afinidad con los partidos (con fuentes) y comparador de propuestas por temas para las elecciones generales | [Enlace](https://emirodgar.es/programas-electorales/) | [Enlace](https://emirodgar.es/a-quien-votar/) |
 |                 |                                      |                |                     |
 
+
+
+Todos los paneles agrupados por tema: [Datos y dashboards](https://emirodgar.es/datos/).

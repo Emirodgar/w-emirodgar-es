@@ -74,3 +74,5 @@ El panel se actualiza mediante una skill de Claude Code creada para este proyect
 ## Proyecto experimental
 
 Como el resto de [proyectos e ideas de transformación digital](https://emirodgar.es/publicaciones-proyectos) que comparto, Panel Económico CyL es una prueba de concepto con fines educativos: no sustituye a las fuentes oficiales ni pretende ser una auditoría exhaustiva, sino una forma sencilla de ver de un vistazo cómo evolucionan las cuentas públicas y las ayudas de Castilla y León.
+
+**Más sobre la comunidad:** consulta el [hub de Castilla y León](https://emirodgar.es/castilla-y-leon/) con todos los paneles y análisis.

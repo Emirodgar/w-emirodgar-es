@@ -50,3 +50,4 @@ Este sistema puede influir positiva o negativamente en los siguientes factores:
 
 Es clave para entender por qué algunos partidos tienen más escaños que los votos que proporcionalmente les corresponderían, algo que conviene tener presente al interpretar las [proyecciones de escaños de las encuestas](https://emirodgar.es/encuestas-intencion-voto).
 
+**Para estas elecciones:** consulta el [hub de elecciones](https://emirodgar.es/elecciones/), con el panel, las encuestas y el simulador de reparto.

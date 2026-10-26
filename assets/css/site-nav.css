@@ -35,3 +35,14 @@
 .related li a:hover{border-color:#2d7788;text-decoration:none}
 .related .related__more{margin:12px 0 0;font-size:14px}
 @media (max-width:767px){.related ul{grid-template-columns:1fr}}
+/* Páginas hub */
+.hub-grid{list-style:none;margin:12px 0 24px;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.hub-grid li{margin:0;display:flex;flex-direction:column}
+.hub-grid .hub-card{display:flex;flex-direction:column;gap:4px;flex:1;padding:14px 16px;border:1px solid #e3e6ea;border-radius:8px;text-decoration:none;color:#333;background:#fff}
+.hub-grid .hub-card:hover{border-color:#2d7788;text-decoration:none}
+.hub-grid .hub-card strong{color:#1a2a40;font-size:16px}
+.hub-grid .hub-card span{font-size:14px;line-height:1.4;color:#555}
+.hub-card__meta{margin:6px 2px 0;font-size:13px}
+.hub-cta{margin:20px 0}
+.hub-cta a{display:inline-block;padding:12px 20px;background:#1a2a40;color:#fff !important;border-radius:8px;font-weight:600;text-decoration:none !important}
+@media (max-width:767px){.hub-grid{grid-template-columns:1fr}}

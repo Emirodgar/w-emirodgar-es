@@ -48,3 +48,5 @@ El panel se actualiza mediante una skill de Claude Code creada para este proyect
 ## Proyecto experimental
 
 Como el resto de [proyectos e ideas de transformación digital](https://emirodgar.es/publicaciones-proyectos) que comparto, Radar de Empleo Público CyL es una prueba de concepto con fines educativos: no sustituye al portal oficial de empleo público de la Junta ni pretende cubrir cada bolsa o convocatoria puntual, sino ofrecer una vista de conjunto de su evolución.
+
+**Más sobre la comunidad:** consulta el [hub de Castilla y León](https://emirodgar.es/castilla-y-leon/) con todos los paneles y análisis.

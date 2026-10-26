@@ -69,3 +69,5 @@ panel.
 ## Proyecto experimental
 
 Como el resto de [proyectos e ideas de transformación digital](https://emirodgar.es/publicaciones-proyectos) que comparto, ¿Quién Gobierna CyL? es una prueba de concepto con fines educativos: no sustituye a las fuentes oficiales ni pretende ser un análisis político, sino una forma sencilla y visual de saber quién es quién en el Gobierno de Castilla y León.
+
+**Más sobre la comunidad:** consulta el [hub de Castilla y León](https://emirodgar.es/castilla-y-leon/) con todos los paneles y análisis.

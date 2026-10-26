@@ -147,3 +147,5 @@ En mi opinión, convertir la innovación digital en un **proyecto estratégico d
 La IA no va a resolver todos los problemas de la administración. Pero ignorarla sí puede crearnos unos cuantos nuevos
 
 **Te puede interesar:** [la Ley de Martec](https://emirodgar.es/ley-martec).
+
+**Guía completa:** ordena todo lo publicado en la [guía de IA en la administración pública](https://emirodgar.es/guia-ia-administracion-publica).

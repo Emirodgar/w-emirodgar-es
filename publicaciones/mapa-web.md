@@ -13,6 +13,15 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 {% assign sorted_pages = site.pages | sort: 'date' | reverse %}
 
+## Guías y hubs temáticos
+
+<ul>
+<li><a href="https://emirodgar.es/datos/">Datos y dashboards</a></li>
+<li><a href="https://emirodgar.es/elecciones/">Elecciones en España</a></li>
+<li><a href="https://emirodgar.es/guia-ia-administracion-publica">IA en la administración pública</a></li>
+<li><a href="https://emirodgar.es/castilla-y-leon/">Castilla y León</a></li>
+</ul>
+
 ## Política y sociedad
 
 ---
