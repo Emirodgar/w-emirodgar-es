@@ -53,6 +53,7 @@ No creo que se pueda recrear un mentidero por decreto. Sí podemos decidir dónd
 
 - Elegir un sitio y repetir. El tercer espacio funciona por los habituales.
 - Dejar el móvil boca abajo. O en el bolsillo.
+- Conocer gente en persona. Cada vez más solteros se cansan de las [apps de citas](https://emirodgar.es/apps-de-citas-crisis) y vuelven a mirar alrededor.
 - Proteger lo que queda: el bar de la esquina, la plaza, la biblioteca. No solo cuando cierran, también cuando solo los usamos para pasar.
 
 Un mentidero con wifi no es un mentidero.

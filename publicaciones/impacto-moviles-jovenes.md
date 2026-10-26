@@ -91,7 +91,7 @@ El problema aparece cuando el refugio sustituye a la vida social real:
 - **Evitación**: si se usan como vía para esquivar situaciones que generan ansiedad, se entra en un círculo peligroso. Cuanto más se evita el encuentro presencial, más cuesta afrontarlo después.
 - **Tipo de contenido**: un uso sesgado expone a comparaciones constantes con vidas aparentemente perfectas, cuerpos idealizados, logros ajenos o imágenes de dolor emocional. En vez de aliviar el malestar, la red puede amplificarlo.
 
-Por eso las redes no son buenas ni malas: depende de cómo y para qué se usen.
+Por eso las redes no son buenas ni malas: depende de cómo y para qué se usen. Algo parecido ocurre con las [apps de citas](https://emirodgar.es/apps-de-citas-crisis), cada vez más cuestionadas por el agotamiento que provocan.
 
 ## Lo que no sabemos (todavía)
 
