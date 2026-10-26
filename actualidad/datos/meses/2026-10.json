@@ -713,7 +713,7 @@
         "titulo": "Netanyahu ordena el cierre inmediato sobre Hebrón tras un ataque armado palestino",
         "url": "https://www.elmundo.es/internacional/2026/10/23/6adb233f21efa0232d8b45a1.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-23",
@@ -810,6 +810,48 @@
         "medio": "El Mundo",
         "titulo": "Las carreteras españolas se llenan de 'curvas' peligrosas: de ser la envidia de Europa a un déficit en conservación récord de 13.500 millones",
         "url": "https://www.elmundo.es/economia/macroeconomia/2026/10/24/6adc89e6e85ecec82f8b457a.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-26",
+      "titulo": "Victoria de Lula da Silva en las elecciones de Brasil",
+      "categoria": "Internacional",
+      "descripcion": "Luiz Inácio Lula da Silva logra una victoria inédita en Brasil, derrotando al bolsonarismo y marcando un hito en la política del país.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Lula logra una victoria inédita en Brasil y derrota al bolsonarismo",
+        "url": "https://www.elmundo.es/internacional/2026/10/26/6ade9b3be4d4d8d04c8b458a.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-26",
+      "titulo": "Fallecimiento de Alfredo Sánchez Monteseirín",
+      "categoria": "Política",
+      "descripcion": "Muere a los 69 años Alfredo Sánchez Monteseirín, exalcalde de Sevilla, reconocido por su papel en la transformación de la ciudad tras la Expo.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Muere Alfredo Sánchez Monteseirín, el alcalde que lideró la mayor transformación de Sevilla tras la Expo, a los 69 años",
+        "url": "https://www.elmundo.es/andalucia/2026/10/26/6adf25b921efa0027e8b4577.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-26",
+      "titulo": "Regreso de María Corina Machado a Venezuela",
+      "categoria": "Internacional",
+      "descripcion": "María Corina Machado regresa a Venezuela para liderar la Transición, un acontecimiento significativo para la oposición venezolana.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "María Corina regresa para liderar la Transición",
+        "url": "https://www.elmundo.es/internacional/2026/10/26/6ade7f67fc6c835d488b4570.html"
       },
       "destacado": false
     }

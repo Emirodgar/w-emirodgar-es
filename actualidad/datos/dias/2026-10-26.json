@@ -1,0 +1,1374 @@
+{
+  "fecha": "2026-10-26",
+  "generado_en": "2026-10-26T10:55:05+00:00",
+  "modelo": "gemini-2.5-flash",
+  "titular": "Lula vence en Brasil, Podemos se suma a una coalición en Baleares y el PSOE recorta distancia a Feijóo",
+  "resumen": "La jornada política se ha centrado en las elecciones, tanto a nivel nacional como internacional. En Brasil, Lula da Silva ha logrado una victoria inédita, derrotando al bolsonarismo, un resultado celebrado por el Gobierno español y por formaciones como Frente Amplio y Podemos. A nivel nacional, Podemos ha renunciado a competir en Baleares para unirse a la coalición Ara Més-Front Ampli, mientras que el PSOE ha recortado distancia a Feijóo, aunque la suma de la derecha sigue cerca de los 200 escaños. El Frente Obrero ha conseguido los avales para presentarse en toda España, y el PP contará con Aznar y Rajoy en su campaña.\n\nEn el ámbito de la gestión, el ministro de Transportes, Óscar Puente, ha cifrado en 1.800 millones anuales el mantenimiento de la red ferroviaria, considerándolo el problema más urgente de su ministerio. También ha estimado en 5.000 millones de euros el déficit en las carreteras del Estado. En Madrid, la dimisión del delegado del Gobierno, Francisco Martín, ha sido celebrada por el Gobierno de Ayuso y valorada positivamente por Jupol, mientras que Rita Maestre ha defendido la acampada de Sol por la vivienda.\n\nOtros sucesos relevantes incluyen la muerte del exalcalde de Sevilla, Alfredo Sánchez Monteseirín, a los 69 años, y un grave accidente de autobús en Barcelona, que ha dejado 83 heridos, siete de ellos graves, tras precipitarse por un terraplén de 20 metros. En el deporte, el Real Madrid ha ganado al Barça en el Clásico, poniendo en ascuas la Liga, y se ha producido una escalofriante lesión de Jalen Williams en la NBA. En el plano internacional, Serbia ha visto el triunfo aplastante de la Lista Estudiantil frente al modelo de Aleksandar Vucic, y María Corina Machado ha regresado a Venezuela para liderar la Transición.",
+  "temas": [
+    {
+      "tema": "Elecciones en Brasil y sus repercusiones",
+      "categoria": "Internacional",
+      "descripcion": "Lula da Silva ha ganado las elecciones en Brasil, un resultado que ha sido celebrado por el Gobierno español y partidos de izquierda, y que ha provocado caídas en bolsa para empresas españolas con intereses en el país.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Telefónica se desploma un 8% tras la victoria de Lula en Brasil y Santander pierde un 5%",
+          "url": "https://www.elmundo.es/economia/dinero-inversion/2026/10/26/6adf0b5bfdddff98418b458f.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Lula logra una victoria inédita en Brasil y derrota al bolsonarismo",
+          "url": "https://www.elmundo.es/internacional/2026/10/26/6ade9b3be4d4d8d04c8b458a.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "\"Es imposible reconocer estas elecciones, vamos a pedir la anulación\"",
+          "url": "https://www.elmundo.es/internacional/2026/10/26/6adeb20fe4d4d868108b4590.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "La UE felicita a Lula por su victoria en Brasil: «La democracia y el multilateralismo han ganado»",
+          "url": "https://theobjective.com/internacional/2026-10-26/ue-lula-victoria-brasil-democracia-multilateralismo-ganado/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez celebra la victoria de Lula en Brasil: «Lo que ha pasado allí pasará en España",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/sanchez-victoria-lula-brasil-espana/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Frente Amplio y Podemos celebran la victoria de Lula en Brasil: «Mañana pierde Trump»",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/frente-amplio-podemos-victoria-lula-brasil-trump/"
+        }
+      ]
+    },
+    {
+      "tema": "Panorama electoral en España",
+      "categoria": "Política",
+      "descripcion": "Podemos se une a una coalición en Baleares, el PSOE recorta distancia al PP en las encuestas, y el Frente Obrero logra avales para presentarse en todo el país. Aznar y Rajoy participarán en la campaña del PP.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Podemos renuncia a competir en Baleares y se incorpora a la coalición Ara Més-Front Ampli",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/26/6adf039e3e9f6f8c529ca9ca-directo.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "La izquierda existe, la derecha resiste",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/26/6ade605b21efa000718b4577.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Sánchez recorta distancia a Feijóo pero la suma de la derecha sigue muy cerca de los 200 escaños",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Otro agujero negro en la 'ley de nietos': los hijos de los votantes suspendidos por el Supremo sí podrán votar",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/25/6ade3a6dfc6c8316208b4585.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Frente Obrero logra los avales para presentarse en toda España a las elecciones del 29-N",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/frente-obrero-avales-espanelecciones-29-n/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Vox y el PP siguen negociando la candidatura para el Senado: «El día es largo»",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/vox-pp-negociando-candidatura-senado/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Aznar y Rajoy participarán en la campaña del PP para el 29-N",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/aznar-rajoy-participaran-campana-pp/"
+        }
+      ]
+    },
+    {
+      "tema": "Infraestructuras y transporte",
+      "categoria": "Economía",
+      "descripcion": "El ministro de Transportes, Óscar Puente, destaca el mantenimiento de la red ferroviaria como el problema más urgente de su ministerio y cifra el déficit en carreteras.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Puente cifra en 1.800 millones anuales el mantenimiento de la red ferroviaria, el problema \"más urgente\" de su ministerio",
+          "url": "https://www.elmundo.es/economia/2026/10/26/6adf1616fc6c83253e8b4590.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Puente ve problemas más acuciantes en tren y critica que los nuevos llegan con «cuentagotas»",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/puente-problemas-tren-nuevos-ceuntagotas/"
+        }
+      ]
+    },
+    {
+      "tema": "Dimisión del delegado del Gobierno en Madrid",
+      "categoria": "Política",
+      "descripcion": "Francisco Martín renuncia a su cargo como delegado del Gobierno en Madrid, una decisión celebrada por el Gobierno de Ayuso y valorada positivamente por el sindicato Jupol.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "La inesperada renuncia del delegado Martín, el \"ariete\" de Sánchez en Madrid contra Ayuso y Almeida \"castigado\" sin listas para el 29-N",
+          "url": "https://www.elmundo.es/madrid/2026/10/26/6ade5e52fdddffb1248b4581.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Gobierno de Ayuso celebra la dimisión del «peor delegado» de la Comunidad de Madrid",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/gobierno-ayuso-celebra-dimision-delegado/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Jupol valora «positivamente» la dimisión del delegado del Gobierno en Madrid",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/jupol-positivamente-dimision-delegado-gobierno/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Maroto desvincula la dimisión del delegado del Gobierno de su respaldo a Enma López",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/maroto-dimision-delegado-gobierno-enma-lopez/"
+        }
+      ]
+    },
+    {
+      "tema": "Accidente de autobús en Barcelona",
+      "categoria": "Sucesos",
+      "descripcion": "Un autobús se precipita por un terraplén en Barcelona, dejando 83 heridos, siete de ellos en estado grave.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "83 heridos, siete graves, tras caer un autobús por un terraplén de 20 metros en Barcelona",
+          "url": "https://www.elmundo.es/cataluna/2026/10/26/6adf21c4fc6c835d488b4582-video.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Ochenta y tres heridos, siete de ellos en estado grave, tras precipitarse un autobús por un terraplén de 20 metros",
+          "url": "https://www.elmundo.es/cataluna/2026/10/25/6ade3c5121efa08a518b4592.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Una grúa intentará extraer el bus que cayó este domingo en un terraplén en Barcelona",
+          "url": "https://theobjective.com/sociedad/2026-10-26/una-grua-intentara-extraer-bus-terraplen-barcelona/"
+        }
+      ]
+    },
+    {
+      "tema": "Fallecimiento de Alfredo Sánchez Monteseirín",
+      "categoria": "Política",
+      "descripcion": "Muere a los 69 años el exalcalde de Sevilla, Alfredo Sánchez Monteseirín, reconocido por liderar la transformación de la ciudad tras la Expo.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Muere Alfredo Sánchez Monteseirín, el alcalde que lideró la mayor transformación de Sevilla tras la Expo, a los 69 años",
+          "url": "https://www.elmundo.es/andalucia/2026/10/26/6adf25b921efa0027e8b4577.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Muere el exalcalde de Sevilla Alfredo Sánchez Monteseirín, a los 69 años",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/muere-exalcalde-sevilla-alfredo-sanchez-monteseirin/"
+        }
+      ]
+    },
+    {
+      "tema": "Regreso de María Corina Machado a Venezuela",
+      "categoria": "Internacional",
+      "descripcion": "María Corina Machado regresa a Venezuela para liderar la Transición, un hecho calificado como una \"buena noticia\" por el Gobierno español.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "María Corina regresa para liderar la Transición",
+          "url": "https://www.elmundo.es/internacional/2026/10/26/6ade7f67fc6c835d488b4570.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "María Corina Machado aparece por sorpresa en un santuario en Venezuela",
+          "url": "https://www.elmundo.es/internacional/2026/10/25/6ade3955e85ece3f358b457a-video.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Gobierno ve una «buena noticia» el regreso de María Corina Machado a Venezuela",
+          "url": "https://theobjective.com/espana/politica/2026-10-26/gobierno-buena-noticia-regreso-machado-venezuela/"
+        }
+      ]
+    }
+  ],
+  "enfoques": "Ambos medios coinciden en destacar la victoria de Lula en Brasil, la dimisión del delegado del Gobierno en Madrid, el fallecimiento del exalcalde de Sevilla Alfredo Sánchez Monteseirín y el accidente de autobús en Barcelona. El Mundo pone un énfasis particular en las repercusiones económicas de la victoria de Lula para las empresas españolas y en el panorama electoral español, incluyendo la situación de Podemos y las encuestas. The Objective, por su parte, amplía la cobertura de la dimisión del delegado del Gobierno con reacciones de distintos actores políticos y sindicales, y ofrece más detalles sobre la situación de la vivienda en Madrid con la defensa de la acampada de Sol.",
+  "por_medio": {
+    "El Mundo": 27,
+    "The Objective": 130
+  },
+  "por_categoria": {
+    "Política": 3,
+    "Internacional": 2,
+    "Economía": 1,
+    "Sucesos": 1
+  },
+  "hitos": [
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-26",
+      "titulo": "Victoria de Lula da Silva en las elecciones de Brasil",
+      "categoria": "Internacional",
+      "descripcion": "Luiz Inácio Lula da Silva logra una victoria inédita en Brasil, derrotando al bolsonarismo y marcando un hito en la política del país.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Lula logra una victoria inédita en Brasil y derrota al bolsonarismo",
+        "url": "https://www.elmundo.es/internacional/2026/10/26/6ade9b3be4d4d8d04c8b458a.html"
+      }
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-26",
+      "titulo": "Fallecimiento de Alfredo Sánchez Monteseirín",
+      "categoria": "Política",
+      "descripcion": "Muere a los 69 años Alfredo Sánchez Monteseirín, exalcalde de Sevilla, reconocido por su papel en la transformación de la ciudad tras la Expo.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Muere Alfredo Sánchez Monteseirín, el alcalde que lideró la mayor transformación de Sevilla tras la Expo, a los 69 años",
+        "url": "https://www.elmundo.es/andalucia/2026/10/26/6adf25b921efa0027e8b4577.html"
+      }
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-26",
+      "titulo": "Regreso de María Corina Machado a Venezuela",
+      "categoria": "Internacional",
+      "descripcion": "María Corina Machado regresa a Venezuela para liderar la Transición, un acontecimiento significativo para la oposición venezolana.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "María Corina regresa para liderar la Transición",
+        "url": "https://www.elmundo.es/internacional/2026/10/26/6ade7f67fc6c835d488b4570.html"
+      }
+    }
+  ],
+  "noticias": [
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Rita Maestre defiende la acampada de Sol por la vivienda: «Hay razones» para continuar",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/rita-maestre-acampada-sol-vivienda/",
+      "fecha": "2026-10-26T10:51:47+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Podemos renuncia a competir en Baleares y se incorpora a la coalición Ara Més-Front Ampli",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/26/6adf039e3e9f6f8c529ca9ca-directo.html",
+      "fecha": "2026-10-26T10:49:55+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "andalucia",
+      "titulo": "Muere Alfredo Sánchez Monteseirín, el alcalde que lideró la mayor transformación de Sevilla tras la Expo, a los 69 años",
+      "url": "https://www.elmundo.es/andalucia/2026/10/26/6adf25b921efa0027e8b4577.html",
+      "fecha": "2026-10-26T10:44:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Serbia fulmina el modelo de Aleksandar Vucic con el triunfo aplastante de la Lista Estudiantil frente al Estado clientelar",
+      "url": "https://www.elmundo.es/internacional/2026/10/26/6adf136fe9cf4ad2528b4573.html",
+      "fecha": "2026-10-26T10:39:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno de Ayuso celebra la dimisión del «peor delegado» de la Comunidad de Madrid",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/gobierno-ayuso-celebra-dimision-delegado/",
+      "fecha": "2026-10-26T10:33:26+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Frente Obrero logra los avales para presentarse en toda España a las elecciones del 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/frente-obrero-avales-espanelecciones-29-n/",
+      "fecha": "2026-10-26T10:30:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Muere el exalcalde de Sevilla Alfredo Sánchez Monteseirín, a los 69 años",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/muere-exalcalde-sevilla-alfredo-sanchez-monteseirin/",
+      "fecha": "2026-10-26T10:29:26+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Cuatro detenidos en Alicante tras un ataque con disparos a un hombre por posible delito de odio",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-26/cuatro-detenidos-en-alicante-tras-un-ataque-con-disparos-a-un-hombre-por-posible-delito-de-odio/",
+      "fecha": "2026-10-26T10:15:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Carolina Herrera, 87 años: «Mis padres eran especiales; recuerdo mi infancia con alegría, había un jardín precioso y crecía un jazmín con un aroma divino»",
+      "url": "https://theobjective.com/gente/2026-10-26/carolina-herrera-padres-especiales-infancia-alegria-jardin-precioso/",
+      "fecha": "2026-10-26T10:15:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Encuesta | ¿Quién cree que ganará el Balón de Oro 2026?",
+      "url": "https://theobjective.com/deportes/futbol/2026-10-26/encuesta-cree-ganara-balon-oro-2026/",
+      "fecha": "2026-10-26T10:13:55+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Puente cifra en 1.800 millones anuales el mantenimiento de la red ferroviaria, el problema \"más urgente\" de su ministerio",
+      "url": "https://www.elmundo.es/economia/2026/10/26/6adf1616fc6c83253e8b4590.html",
+      "fecha": "2026-10-26T10:10:54+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Junts recibe a Toni Comín y Lluís Puig en su sede con aplausos y esteladas",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/junts-recibe-comin-lluis-puig-aplausos-esteladas/",
+      "fecha": "2026-10-26T10:07:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Desvelamos, en exclusiva, los detalles de la amistad especial entre Ferran Torres y Sara Sampaio: «No están juntos; solo son amigos»",
+      "url": "https://theobjective.com/gente/2026-10-26/desvelamos-exclusiva-detalles-amistad-especial-ferran-torres-sara-sampaio/",
+      "fecha": "2026-10-26T10:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "galerias",
+      "titulo": "La victoria del Real Madrid ante el Barcelona en el Clásico, en imágenes",
+      "url": "https://theobjective.com/galerias/deportes/futbol/2026-10-26/victoria-real-madrid-barcelona-clasico-imagenes/",
+      "fecha": "2026-10-26T09:59:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Incautan 4 toneladas de hachís en Huelva, una oculta en un zulo cubierto de barras de pan",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-26/incautan-4-toneladas-hachis-huelva-zulo-cubierto-pan/",
+      "fecha": "2026-10-26T09:53:51+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "83 heridos, siete graves, tras caer un autobús por un terraplén de 20 metros en Barcelona",
+      "url": "https://www.elmundo.es/cataluna/2026/10/26/6adf21c4fc6c835d488b4582-video.html",
+      "fecha": "2026-10-26T09:48:08+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "album",
+      "titulo": "De una Kim Kardashian más desatada y felina que nunca a Charlize Theron, con un mono de efecto trampantojo, entre los looks del día",
+      "url": "https://www.elmundo.es/album/yodona/moda/2026/10/26/6adf038ae4d4d8361d8b456f.html",
+      "fecha": "2026-10-26T09:44:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Jupol valora «positivamente» la dimisión del delegado del Gobierno en Madrid",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/jupol-positivamente-dimision-delegado-gobierno/",
+      "fecha": "2026-10-26T09:32:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Declaran lugar de memoria democrática el antiguo campo de reclusión de La Magdalena",
+      "url": "https://theobjective.com/espana/2026-10-26/declaran-lugar-memoria-democratica-antiguo-campo-reclusion-la-magdalena/",
+      "fecha": "2026-10-26T09:29:15+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "La \"mayor empresa emergente de la aviación\" opera a 400 kilómetros de su ciudad: así la ha golpeado la guerra",
+      "url": "https://www.elmundo.es/economia/2026/10/26/6adf1cbde85ece5b178b457f.html",
+      "fecha": "2026-10-26T09:26:26+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Maroto desvincula la dimisión del delegado del Gobierno de su respaldo a Enma López",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/maroto-dimision-delegado-gobierno-enma-lopez/",
+      "fecha": "2026-10-26T09:23:23+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "¿Ha pasado Flick de ser la solución a ser el problema del Barça?",
+      "url": "https://www.elmundo.es/deportes/futbol/2026/10/26/6ade8ac8e85ece3e7e8b459e.html",
+      "fecha": "2026-10-26T09:23:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Tesh Sidi, sobre su infancia en un campo de refugiados en Argelia: «A mi hermano mellizo y a mí nos tuvieron que amamantar otras madres»",
+      "url": "https://theobjective.com/gente/2026-10-26/tesh-sidi-infancia-campo-refugiados-argelia-hermano-mellizo/",
+      "fecha": "2026-10-26T09:15:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox y el PP siguen negociando la candidatura para el Senado: «El día es largo»",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/vox-pp-negociando-candidatura-senado/",
+      "fecha": "2026-10-26T09:09:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Elma Saiz, sobre los disturbios en Barcelona: «Con el caos siempre gana la extrema derecha»",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/elma-saiz-disturbios-barcelona-extrema-derecha/",
+      "fecha": "2026-10-26T09:03:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Puente ve problemas más acuciantes en tren y critica que los nuevos llegan con «cuentagotas»",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/puente-problemas-tren-nuevos-ceuntagotas/",
+      "fecha": "2026-10-26T09:02:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La CNMC da luz verde a la compra de Contigo Energía por Iberdrola",
+      "url": "https://theobjective.com/economia/2026-10-26/cnmc-luz-verde-compra-contigo-energia-iberdrola/",
+      "fecha": "2026-10-26T08:55:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Trump apoya a Netanyahu en las elecciones en Israel e insta a «terminar el trabajo»",
+      "url": "https://theobjective.com/internacional/2026-10-26/trump-apoya-netanyahu-elecciones-israel/",
+      "fecha": "2026-10-26T08:50:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El lehendakari recibe a Juanma Moreno en el Palacio de Ajuria Enea de Vitoria-Gasteiz",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/lehendakari-juanma-moreno-palacio-ajuria-vitoria/",
+      "fecha": "2026-10-26T08:46:56+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "La escalofriante lesión de Jalen Williams: retirado en camilla y caras de consternación en sus compañeros",
+      "url": "https://www.elmundo.es/deportes/baloncesto/nba/2026/10/26/6adf08c8e4d4d8bf5d8b457c.html",
+      "fecha": "2026-10-26T08:44:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Ibex 35 cae un 0,9% en la apertura, hasta los 18.815 puntos, con el petróleo bajando",
+      "url": "https://theobjective.com/economia/2026-10-26/ibex-35-cae-09-apertura-18815-puntos-petroleo-bajando/",
+      "fecha": "2026-10-26T08:42:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "OBJETIVO AL DÍA | Anhelos de remontada, disturbios y el efecto dominó de los ‘nietos’",
+      "url": "https://theobjective.com/opinion/2026-10-26/objetivo-al-dia-anhelos-de-remontada-disturbios-y-el-efecto-domino-de-los-nietos/",
+      "fecha": "2026-10-26T08:35:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "La Guardia Civil libera a 22 mujeres obligadas a ejercer la prostitución en varias provincias",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-26/guardia-civil-libera-22-mujeres-prostitucion/",
+      "fecha": "2026-10-26T08:33:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Cinco columnas de tractores tomarán Madrid este miércoles para protestar por la situación del campo",
+      "url": "https://theobjective.com/sociedad/2026-10-26/cinco-columnas-tractores-madrid-situacion-campo/",
+      "fecha": "2026-10-26T08:30:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "La clínica donde se ha operado de cataratas el Rey es de la familia de Aruca, mujer de Emilio Aragón: «En casa, la llamamos ‘teniente Aruca’»",
+      "url": "https://theobjective.com/gente/2026-10-26/clinica-operado-cataratas-rey-familia-aruca-mujer-emilio-aragon-casa/",
+      "fecha": "2026-10-26T08:24:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Una grúa intentará extraer el bus que cayó este domingo en un terraplén en Barcelona",
+      "url": "https://theobjective.com/sociedad/2026-10-26/una-grua-intentara-extraer-bus-terraplen-barcelona/",
+      "fecha": "2026-10-26T08:23:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno ve una «buena noticia» el regreso de María Corina Machado a Venezuela",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/gobierno-buena-noticia-regreso-machado-venezuela/",
+      "fecha": "2026-10-26T08:19:57+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Telefónica se desploma un 8% tras la victoria de Lula en Brasil y Santander pierde un 5%",
+      "url": "https://www.elmundo.es/economia/dinero-inversion/2026/10/26/6adf0b5bfdddff98418b458f.html",
+      "fecha": "2026-10-26T08:17:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "La UE felicita a Lula por su victoria en Brasil: «La democracia y el multilateralismo han ganado»",
+      "url": "https://theobjective.com/internacional/2026-10-26/ue-lula-victoria-brasil-democracia-multilateralismo-ganado/",
+      "fecha": "2026-10-26T08:09:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "José Coronado, sobre su patrimonio: «Tengo una hectárea de terreno en Toledo y he podido crear mi propio microhábitat»",
+      "url": "https://theobjective.com/gente/2026-10-26/jose-coronado-patrimonio-hectarea-terreno-toledo-microhabitat/",
+      "fecha": "2026-10-26T08:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez celebra la victoria de Lula en Brasil: «Lo que ha pasado allí pasará en España",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/sanchez-victoria-lula-brasil-espana/",
+      "fecha": "2026-10-26T07:54:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Aznar y Rajoy participarán en la campaña del PP para el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/aznar-rajoy-participaran-campana-pp/",
+      "fecha": "2026-10-26T07:54:22+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "La izquierda existe, la derecha resiste",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/26/6ade605b21efa000718b4577.html",
+      "fecha": "2026-10-26T07:43:59+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Sánchez recorta distancia a Feijóo pero la suma de la derecha sigue muy cerca de los 200 escaños",
+      "url": "https://www.elmundo.es/espana/encuestas/2026/10/26/6addf8c4fdddfff23d8b4581.html",
+      "fecha": "2026-10-26T07:42:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Madrid permitirá a los docentes actuar «de inmediato» ante insultos o conflictos en las aulas",
+      "url": "https://theobjective.com/sociedad/educacion/2026-10-26/madrid-permitira-docentes-actuar-de-inmediato-insultos-conflictos-aulas/",
+      "fecha": "2026-10-26T07:36:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Jaume Collboni cifra en 36.000 euros los destrozos de los disturbios en Barcelona",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/jaume-collboni-36-000-euros-disturbios-barcelona/",
+      "fecha": "2026-10-26T07:32:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Moeve y Galp ponen fin a sus negociaciones de fusión para un «campeón energético ibérico»",
+      "url": "https://theobjective.com/economia/2026-10-26/moeve-galp-ponen-fin-negociaciones-fusion-campeon-energetico-iberico/",
+      "fecha": "2026-10-26T07:16:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Frente Amplio y Podemos celebran la victoria de Lula en Brasil: «Mañana pierde Trump»",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/frente-amplio-podemos-victoria-lula-brasil-trump/",
+      "fecha": "2026-10-26T07:09:01+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "La rapera Nicki Minaj sube al avión presidencial, acompaña a Trump a un mitin en Michigan y él se refiere a su cuerpo en pleno discurso: \"Es difícil no verlo\"",
+      "url": "https://www.elmundo.es/internacional/2026/10/25/6ade8043e85ece8b078b45a1.html",
+      "fecha": "2026-10-26T07:01:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Norman Foster: «Madrid es una ciudad muy humana; la idea de ubicar nuestra fundación en Chamberí fue un compromiso global»",
+      "url": "https://theobjective.com/gente/2026-10-26/norman-foster-madrid-ciudad-humana-fundacion-chamberi-compromiso-global/",
+      "fecha": "2026-10-26T07:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El petróleo Brent cae más de un 1,5% pese a los ataques hutíes contra Arabia Saudí",
+      "url": "https://theobjective.com/economia/2026-10-26/petroleo-brent-15-ataques-huties-arabia-saudi/",
+      "fecha": "2026-10-26T06:59:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Muere el ex primer ministro japonés Yasuo Fukuda a los 90 años",
+      "url": "https://theobjective.com/internacional/2026-10-26/muere-ex-primer-ministro-japones-yasuo-fukuda/",
+      "fecha": "2026-10-26T06:59:01+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cultura",
+      "titulo": "Muere a los 46 años Eric Bauza, la voz de Bugs Bunny, Piolín y el Pato Lucas",
+      "url": "https://www.elmundo.es/cultura/2026/10/26/6adef73afc6c831e5c8b4575.html",
+      "fecha": "2026-10-26T06:55:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Netanyahu acusa a una «alianza de la izquierda y el islam radical» de «destruir» países europeos",
+      "url": "https://theobjective.com/internacional/2026-10-26/netanyahu-acusa-alianza-izquierda-islam-radical-destruir-paises-europeos/",
+      "fecha": "2026-10-26T06:45:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "«A Sánchez le gusta presumir de haberse criado en Tetuán, pero su casa era un pisazo»: el revelador testimonio de uno de sus amigos de la infancia",
+      "url": "https://theobjective.com/gente/2026-10-26/sanchez-presumir-criado-tetuan-casa-pisazo-testimonio-amigos-infancia/",
+      "fecha": "2026-10-26T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "YSL Beauty alerta sobre las nueve señales de maltrato que pueden confundirse con amor",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-10-26/ysl-beauty-alerta-sobre-las-nueve-senales-de-maltrato-que-pueden-confundirse-con-amor/",
+      "fecha": "2026-10-26T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Los hutíes afirman haber atacado el aeropuerto de Riad e instalaciones petroleras saudíes",
+      "url": "https://theobjective.com/internacional/2026-10-26/huties-atacado-aeropuerto-riad-instalaciones-petroleras/",
+      "fecha": "2026-10-26T06:27:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Iliana Iotova gana las elecciones en Bulgaria, pero tendrá que disputar una segunda vuelta",
+      "url": "https://theobjective.com/internacional/2026-10-26/iliana-lotova-elecciones-bulgaria-segunda-vuelta/",
+      "fecha": "2026-10-26T06:24:35+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Lula logra una victoria inédita en Brasil y derrota al bolsonarismo",
+      "url": "https://www.elmundo.es/internacional/2026/10/26/6ade9b3be4d4d8d04c8b458a.html",
+      "fecha": "2026-10-26T06:12:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Álvaro Fernández, farmacéutico: «La razón por la que no puedes tomar muchos medicamentos durante el embarazo te sorprenderá»",
+      "url": "https://theobjective.com/lifestyle/2026-10-26/alvaro-fernandez-farmaceutico-la-razon-por-la-que-no-puedes-tomar-muchos-medicamentos-durante-el-embarazo-te-sorprendera/",
+      "fecha": "2026-10-26T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Fuera de micrófono con Manuel Llamas",
+      "url": "https://theobjective.com/podcasts/fuera-de-microfono/podcast-fuera-de-microfono-manuel-llamas/",
+      "fecha": "2026-10-26T04:25:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "La futura España Insumisa",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-26/espana-insumisa-articulo-antonio-cano/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Los dos reinos de España",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-26/reinos-espana-articulo-ricardo-cayuela/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "El ‘community manager’ del PP",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-26/community-pp-articulo-julio-llorente/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Segundas notas de balance de una legislatura convulsa",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-26/legislatura-convulsa-articulo-javier-santacruz/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Amor corrupto",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-26/amor-corrupto-roman-cendoya/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Sinrazón de la revuelta en Europa",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-10-26/revuelta-europa-articulo-cristina-casabon/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los trabajos que sí pueden acreditar las hijas de Zapatero: una granja de vacas de Huawei",
+      "url": "https://theobjective.com/espana/2026-10-26/hijas-zapatero-granja-vacas-huawei/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Casa 47 sigue sin comprar viviendas con los 100 millones que anunció hace siete meses",
+      "url": "https://theobjective.com/economia/2026-10-26/casa-47-viviendas-anunciar-100-millones/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "Manuel Llamas: «El comodín de que viene la ultraderecha ya no funciona»",
+      "url": "https://theobjective.com/medios/2026-10-26/manuel-llamas-comodin-ultraderecha-fuera-de-microfono/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Antonio Machado, escritor español, sobre la felicidad: «Uno sólo puede ser feliz si es capaz de afrontar los cambios de la vida, sobre todo los malos, y si recuerda que al final todo pasa»",
+      "url": "https://theobjective.com/lifestyle/2026-10-26/antonio-machado-escritor-espanol-sobre-la-felicidad-uno-solo-puede-ser-feliz-si-es-capaz-de-afrontar-los-cambios-de-la-vida-sobre-todo-los-malos-y-si-recuerda-que-al-final-todo-pasa/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Inquietud en el PSOE por el auge de Adelante Andalucía: «Nos puede hacer un roto el 29-N»",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/inquietud-psoe-adelante-andalucia-elecciones/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "branded-content",
+      "titulo": "¿Dónde estás? Avísame cuando llegues",
+      "url": "https://theobjective.com/branded-content/2026-10-26/donde-estas-avisame-cuando-llegues/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "branded-content",
+      "titulo": "Por qué no todas las viviendas tienen el mismo riesgo de intrusión",
+      "url": "https://theobjective.com/branded-content/2026-10-26/todas-viviendas-mismo-riesgo-intrusion/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Las nacionalizaciones por la ‘ley de nietos’ en registros civiles en 2026 superan las de 2025",
+      "url": "https://theobjective.com/espana/2026-10-26/nacionalizaciones-ley-nietos-2026/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Podemos lo vuelve a hacer: logra 400.000 euros en diez días para la campaña del 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/podemos-400-000-euros-campana/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Abanca se coloca al frente del crecimiento de los préstamos para la construcción de vivienda",
+      "url": "https://theobjective.com/economia/banca/2026-10-26/abanca-crecimiento-prestamos-construccion-vivienda/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los organismos públicos y su existencia a debate",
+      "url": "https://theobjective.com/espana/2026-10-26/organismos-publicos-existencia-debate/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Olga Bartolomé, maquilladora: «A partir de los 50 años, para que el maquillaje no marque las arrugas y la piel se vea jugosa, yo siempre recominedo aplicar estos cambios y tonos»",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-10-26/olga-bartolome-maquilladora-a-partir-de-los-50-anos-para-que-el-maquillaje-no-marque-las-arrugas-y-la-piel-se-vea-jugosa-yo-siempre-recominedo-aplicar-estos-cambios-y-tonos/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Bella ‘Fitter’, entrenadora: «A partir de los 50 años, las planchas y las sentadillas están bien, pero se deben hacer estos cinco ejercicios básicos para mantenerse sano»",
+      "url": "https://theobjective.com/lifestyle/fitness/2026-10-26/bella-fitter-entrenadora-a-partir-de-los-50-anos-las-planchas-y-las-sentadillas-estan-bien-pero-se-deben-hacer-estos-cinco-ejercicios-basicos-para-mantenerse-sano/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Bolaños carga al erario un viaje a Canarias por la visita del Papa con dos días sin agenda oficial",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/bolanos-erario-viaje-canarias/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Zapatero renuncia a la presidencia de la Fundación ONUArt en pleno asedio judicial",
+      "url": "https://theobjective.com/espana/politica/2026-10-26/zapatero-fundacion-onuart/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox intenta frenar la campaña de violencia con querellas contra el Gobierno por delito de odio",
+      "url": "https://theobjective.com/espana/2026-10-26/vox-frenar-violencia-querellas-gobierno/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Las víctimas de ETA denuncian la inacción de la Fiscalía con los nuevos grupos ‘abertzales’",
+      "url": "https://theobjective.com/espana/tribunales/2026-10-26/limbo-legal-organizaciones-abertzales-radicales-investigacion/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Portugal estrenará sus nuevos aviones de repostaje en vuelo con cazas españoles",
+      "url": "https://theobjective.com/internacional/2026-10-26/portugal-aviones-repostaje-cazas/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Adiós al olor a fritanga: si el humo de la campana extractora de un vecino inunda de malos olores el patio interior, el resto de propietarios pueden acogerse al artículo 7.2 de la LPH",
+      "url": "https://theobjective.com/espana/tribunales/2026-10-26/adios-al-olor-a-fritanga-si-el-humo-de-la-campana-extractora-de-un-vecino-inunda-de-malos-olores-el-patio-interior-el-resto-de-propietarios-pueden-acogerse-al-articulo-7-2-de-la-lph/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "ADIF busca por sorpresa un nuevo secretario general a pocas semanas de las elecciones",
+      "url": "https://theobjective.com/economia/transporte/2026-10-26/adif-secretario-general-semanas-elecciones/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Carmen Martín Gaite, escritora española, sobre la felicidad a partir de los 50: «La vida ya no ofrece tiempo que perder, sino cicatrices y la duda de si podemos salvarnos del olvido»",
+      "url": "https://theobjective.com/lifestyle/2026-10-26/carmen-martin-gaite-escritora-espanola-sobre-la-felicidad-a-partir-de-los-50-la-vida-ya-no-ofrece-tiempo-que-perder-sino-cicatrices-y-la-duda-de-si-podemos-salvarnos-del-olvido/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Jordi Cruz, chef catalán: «Lavar la lechuga, la fruta y la verdura solo con agua no sirve para nada; yo recomiendo esta mezcla de 700 ml de agua, 250 ml de vinagre y 2 g de ácido cítrico»",
+      "url": "https://theobjective.com/gastronomia/2026-10-26/jordi-cruz-chef-catalan-lavar-la-lechuga-la-fruta-y-la-verdura-solo-con-agua-no-sirve-para-nada-yo-recomiendo-esta-mezcla-de-700-ml-de-agua-250-ml-de-vinagre-y-2-g-de-acido-citrico/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Vera Garzón, tricoterapeuta: «A partir de los 50 años, para rejuvenecer tu rostro, lo más aconsejable son los colores de pelo miel, caramelo, beige dorado o chocolate»",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-10-26/vera-garzon-tricoterapeuta-a-partir-de-los-50-anos-para-rejuvenecer-tu-rostro-lo-mas-aconsejable-son-los-colores-de-pelo-miel-caramelo-beige-dorado-o-chocolate/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Steve Jobs, fundador de Apple, sobre la felicidad: «La mejor manera que conozco de evitar pensar que tienes algo que perder es recordar que todos morimos algún día»",
+      "url": "https://theobjective.com/lifestyle/2026-10-26/steve-jobs-fundador-de-apple-sobre-la-felicidad-la-mejor-manera-que-conozco-de-evitar-pensar-que-tienes-algo-que-perder-es-recordar-que-todos-morimos-algun-dia/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El mercado laboral da la espalda a los hombres jóvenes: trabajan menos que hace 20 años",
+      "url": "https://theobjective.com/economia/2026-10-26/mercado-laboral-hombres-jovenes/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los antisistema se marcan como objetivo parar Madrid «como sea» en la huelga general",
+      "url": "https://theobjective.com/espana/2026-10-26/antisistema-madrid-huelga-general/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Las elecciones paralizan el rescate público de las renovables y el PP podría descartarlo",
+      "url": "https://theobjective.com/economia/2026-10-26/elecciones-paralizan-rescate-renovables-pp/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "motor",
+      "titulo": "El GWM Haval H7 se viste de Defender con hasta 435 CV y desde 28.000 euros",
+      "url": "https://theobjective.com/motor/2026-10-26/el-gwm-haval-h7-se-viste-de-defender-con-hasta-435-cv-y-desde-28-000-euros/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "José Mota (61 años), sobre su infancia: «En el colegio me llamaban ‘Pepito’, pero luego estudié en Villanueva de los Infantes y pasé a ser Mota, aunque es mi segundo apellido»",
+      "url": "https://theobjective.com/gente/2026-10-26/jose-mota-61-anos-sobre-su-infancia-en-el-colegio-me-llamaban-pepito-pero-luego-estudie-en-villanueva-de-los-infantes-y-pase-a-ser-mota-aunque-es-mi-segundo-apellido/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "El extraño desasosiego exasperante del PP",
+      "url": "https://theobjective.com/opinion/2026-10-26/desasosiego-pp-articulo-carlos-davila/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Epitafio para un petrodeporte: LIV, tus amigos del golf sí te olvidan",
+      "url": "https://theobjective.com/opinion/2026-10-26/epitafio-petrodeporte-liv-amigos-golf/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El mexicano de 93 años nacionalizado ilegalmente registró a otros cinco familiares",
+      "url": "https://theobjective.com/espana/2026-10-26/mexicano-nacionalizado-ilegalmente-cincos-familiares/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los Mossos descartan una injerencia externa en los graves disturbios de Barcelona",
+      "url": "https://theobjective.com/espana/cataluna/2026-10-26/mossos-injerencia-externa-disturbios-barcelona/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "La Veleta: 140 libros en 36 años",
+      "url": "https://theobjective.com/cultura/2026-10-26/veleta-140-libros-36-anos/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Carmen Morera, jubilada con 45 años cotizados: «Mi pensión está penalizada con un 18% de por vida, pero empecé a trabajar a los 15. Hay quienes se jubilan a los 60 con el 100%»",
+      "url": "https://theobjective.com/economia/2026-10-26/carmen-morera-jubilada-con-45-anos-cotizados-mi-pension-esta-penalizada-con-un-18-de-por-vida-pero-empece-a-trabajar-a-los-15-hay-quienes-se-jubilan-a-los-60-con-el-100/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Miguel Ríos (82 años), cantante: «Tengo muy presente el estrato social del que he salido. Me di cuenta de que estaba incómodo con los ricos»",
+      "url": "https://theobjective.com/gente/2026-10-26/miguel-rios-82-anos-cantante-tengo-muy-presente-el-estrato-social-del-que-he-salido-me-di-cuenta-de-que-estaba-incomodo-con-los-ricos/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Niño Becerra, economista: «En España, para 2027 habrá un déficit de 875.088 viviendas, pero la culpa es de quien ha estado cociendo el problema durante los últimos 60 años»",
+      "url": "https://theobjective.com/economia/2026-10-26/nino-becerra-economista-en-espana-para-2027-habra-un-deficit-de-875-088-viviendas-pero-la-culpa-es-de-quien-ha-estado-cociendo-el-problema-durante-los-ultimos-60-anos/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "María Belmonte encuentra en la rebeldía una forma de celebrar la vida",
+      "url": "https://theobjective.com/cultura/2026-10-26/maria-belmonte-rebeldia-forma-celebrar-vida/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Manuel Llamas: «El comodín de que viene la ultraderecha ya no funciona» | Fuera de Micrófono",
+      "url": "https://theobjective.com/videos/medios/2026-10-26/video-manuel-llamas-economia-ultraderecha-impuestos-fuera-microfono/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Zapatero deja la presidencia de la Fundación ONUArt en pleno escándalo judicial",
+      "url": "https://theobjective.com/videos/espana/2026-10-26/video-zapatero-presidencia-fundacion-onuart-escandolo-judicial/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "La viñeta sobre… I love PS",
+      "url": "https://theobjective.com/videos/espana/2026-10-26/la-vineta-sobre-i-love-ps/",
+      "fecha": "2026-10-26T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Lula derrota a Bolsonaro en unas polémicas elecciones que la derecha pide anular",
+      "url": "https://theobjective.com/internacional/2026-10-26/lula-derrota-a-bolsonaro-en-unas-polemicas-elecciones-que-la-derecha-pide-anular/",
+      "fecha": "2026-10-26T04:01:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Lula da Silva se impone a Flávio Bolsonaro",
+      "url": "https://theobjective.com/internacional/2026-10-26/lula-impone-flavio-bolsonaro/",
+      "fecha": "2026-10-26T02:11:35+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "\"Es imposible reconocer estas elecciones, vamos a pedir la anulación\"",
+      "url": "https://www.elmundo.es/internacional/2026/10/26/6adeb20fe4d4d868108b4590.html",
+      "fecha": "2026-10-26T02:05:37+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Amaya Echevarría, presidenta de Novartis España: \"Falta equidad en el sistema sanitario español\"",
+      "url": "https://www.elmundo.es/economia/empresas/2026/10/25/6ada0046fdddff962b8b45b7.html",
+      "fecha": "2026-10-26T00:48:45+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "madrid",
+      "titulo": "La inesperada renuncia del delegado Martín, el \"ariete\" de Sánchez en Madrid contra Ayuso y Almeida \"castigado\" sin listas para el 29-N",
+      "url": "https://www.elmundo.es/madrid/2026/10/26/6ade5e52fdddffb1248b4581.html",
+      "fecha": "2026-10-26T00:48:21+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "papel",
+      "titulo": "Carmen Posadas: \"En la Transición éramos más libres. Hay cosas hoy que yo puedo decir porque soy mujer y un hombre no puede\"",
+      "url": "https://www.elmundo.es/papel/2026/10/25/6ad76e7afc6c83c56d8b45a4.html",
+      "fecha": "2026-10-26T00:47:59+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "El Estado paga 50.000 euros al mes desde hace un año a medio centenar de funcionarios que no trabajan porque no tienen plaza",
+      "url": "https://www.elmundo.es/economia/2026/10/25/6adb4876fc6c83db3e8b45ab.html",
+      "fecha": "2026-10-26T00:45:34+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "María Corina regresa para liderar la Transición",
+      "url": "https://www.elmundo.es/internacional/2026/10/26/6ade7f67fc6c835d488b4570.html",
+      "fecha": "2026-10-26T00:09:25+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Zapatero, en un callejón sin salida con las joyas: o admite la malversación o que mintió al juez sobre su origen",
+      "url": "https://www.elmundo.es/espana/2026/10/26/6addf976fdddff05668b45a9.html",
+      "fecha": "2026-10-26T00:09:17+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "Elena Martín, planificadora de divorcios: \"El 85% de las rupturas las inician las mujeres. Si la casa está bien y sus hijos cuidados, los hombres se conforman con la vida que tienen\"",
+      "url": "https://www.elmundo.es/yodona/actualidad/2026/10/26/6ad1fb70e9cf4a7e2d8b4592.html",
+      "fecha": "2026-10-25T23:07:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Almeida blinda la vivienda y promete 9.000 pisos en pleno pulso electoral por la crisis",
+      "url": "https://theobjective.com/espana/madrid/2026-10-26/almeida-blinda-vivienda-electoral/",
+      "fecha": "2026-10-25T23:01:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Bolsonaro adelanta a Lula en las elecciones de Brasil con un 14,57% escrutado",
+      "url": "https://theobjective.com/internacional/2026-10-25/bolsonaro-lula-elecciones-brasil/",
+      "fecha": "2026-10-25T22:58:31+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Mourinho profana el Camp Nou con un plan que da la victoria al Madrid y pone en ascuas la Liga",
+      "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/10/25/6ade835de85ece1f1b8b4584.html",
+      "fecha": "2026-10-25T22:33:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Real Madrid gana a un Barça descafeinado en el Camp Nou con doblete de Mbappé",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-10-25/real-madrid-gana-barca-descafeinado-camp-nou-doblete-mbappe/",
+      "fecha": "2026-10-25T22:10:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Antonelli arrasa en EEUU y acaricia el título de F1: Alonso y Sainz, sin suerte",
+      "url": "https://theobjective.com/deportes/formula-1/2026-10-25/antonelli-arrasa-eeuu-f1-alonso-sainz-sin-suerte/",
+      "fecha": "2026-10-25T21:57:40+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Otro agujero negro en la 'ley de nietos': los hijos de los votantes suspendidos por el Supremo sí podrán votar",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/25/6ade3a6dfc6c8316208b4585.html",
+      "fecha": "2026-10-25T21:42:52+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "El movimiento estudiantil de Serbia gana las elecciones y desaloja a Vucic tras 12 años",
+      "url": "https://theobjective.com/internacional/2026-10-25/movimiento-estudiantil-serbia-poder-vucic-12-anos/",
+      "fecha": "2026-10-25T21:11:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Lula da Silva aventaja a Flávio Bolsonaro en el inicio del escrutinio, pausado por el Supremo",
+      "url": "https://theobjective.com/internacional/2026-10-25/lula-flavio-bolsonaro-inicio-escrutinio/",
+      "fecha": "2026-10-25T20:46:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Lula pide extender la votación en cinco estados de Brasil por «incidencias» en el transporte",
+      "url": "https://theobjective.com/internacional/2026-10-25/lula-votacion-cinco-estados-brasil-transporte/",
+      "fecha": "2026-10-25T19:49:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El rally Dakar 2027 se correrá fuera de Arabia Saudí por los ataques de los hutíes",
+      "url": "https://theobjective.com/deportes/2026-10-25/rally-dakar-2027-fuera-arabia-saudi-ataques-huties/",
+      "fecha": "2026-10-25T19:42:27+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "Ochenta y tres heridos, siete de ellos en estado grave, tras precipitarse un autobús por un terraplén de 20 metros",
+      "url": "https://www.elmundo.es/cataluna/2026/10/25/6ade3c5121efa08a518b4592.html",
+      "fecha": "2026-10-25T19:41:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Trump tras el regreso de Machado a Venezuela: «Espero que esté a salvo»",
+      "url": "https://theobjective.com/internacional/2026-10-25/trump-regreso-machado-venezuela-salvo/",
+      "fecha": "2026-10-25T18:37:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Al menos 20 heridos graves en un accidente de autobús en un pueblo de Barcelona",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-25/heridos-graves-accidente-autobus-pueblo-barcelona/",
+      "fecha": "2026-10-25T18:28:51+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "María Corina Machado aparece por sorpresa en un santuario en Venezuela",
+      "url": "https://www.elmundo.es/internacional/2026/10/25/6ade3955e85ece3f358b457a-video.html",
+      "fecha": "2026-10-25T17:16:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Dimite el delegado del Gobierno en Madrid tras quedarse fuera de la lista del PSOE para el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/dimite-delegado-gobierno-madrid-psoe-elecciones/",
+      "fecha": "2026-10-25T17:00:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "María Corina Machado en Venezuela tras 10 meses fuera del país",
+      "url": "https://theobjective.com/videos/internacional/2026-10-25/maria-corina-machado-venezuela-aparicion/",
+      "fecha": "2026-10-25T16:35:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Rufián ve «probable que la extrema derecha esté detrás» de los disturbios en Barcelona",
+      "url": "https://theobjective.com/videos/espana/2026-10-25/rufian-probable-extrema-derecha-barcelona/",
+      "fecha": "2026-10-25T16:13:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "María Corina Machado vuelve a Venezuela tras siete intentos de regreso y diez meses de exilio",
+      "url": "https://theobjective.com/internacional/2026-10-25/maria-corina-machado-anuncia-que-ha-vuelto-a-venezuela/",
+      "fecha": "2026-10-25T15:41:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Frente Amplio acusa al PSOE de limitarse a «gestionar la desigualdad» en vez de reducirla",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/frente-amplio-psoe-desigualdad/",
+      "fecha": "2026-10-25T15:28:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Melchor León, diputado del PSOE por Ceuta: «El Gobierno ha ido parcheando, pero no ha buscado una solución real»",
+      "url": "https://theobjective.com/videos/espana/2026-10-25/melchor-leon-gobierno-parcheando-solucion-real/",
+      "fecha": "2026-10-25T15:15:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Juan Jesús Vivas: «Los ceutíes han tenido que cambiar sus hábitos de vida»",
+      "url": "https://theobjective.com/videos/espana/2026-10-25/juan-jesus-vivas-ceuties-cambiar-habitos-vida/",
+      "fecha": "2026-10-25T15:10:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "galerias",
+      "titulo": "Fotogalería | Miles de ovejas y cabras toman las calles de Madrid en la Fiesta de la Trashumancia",
+      "url": "https://theobjective.com/galerias/espana/madrid/2026-10-25/miles-ovejas-madrid-fiesta-trashumancia/",
+      "fecha": "2026-10-25T14:27:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Detenido un hombre por agredir sexualmente a una mujer de 22 años en la acampada de Sol",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-25/detenido-agresion-sexual-acampada-sol/",
+      "fecha": "2026-10-25T14:11:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Landaluce dimite como alcalde de Algeciras tras las denuncias por agresiones sexuales",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/landaluce-dimite-denuncias-agresiones-sexuales/",
+      "fecha": "2026-10-25T13:58:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Muere un ciclista tras sufrir un atropello por parte de un turismo en Hontoba (Guadalajara)",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-25/muere-ciclista-atropello-hontoba-guadalajara/",
+      "fecha": "2026-10-25T13:41:21+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Illa advierte tras los disturbios en Barcelona: «Los responsables pagarán el precio»",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/illa-barcelona-responsables-pagaran/",
+      "fecha": "2026-10-25T13:08:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo saca a su plana mayor en Salamanca y señala a Sánchez por la violencia en Barcelona",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/feijoo-plana-mayor-sanchez-violencia-barcelona/",
+      "fecha": "2026-10-25T12:47:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Feijóo lanza una pregunta al Gobierno: «¿Cómo se atreven a pontificar por la paz en el mundo por la mañana y no garantizarla en su país por la noche?",
+      "url": "https://theobjective.com/videos/espana/politica/2026-10-25/feijoo-lanza-pregunta-gobierno/",
+      "fecha": "2026-10-25T12:41:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Abren las urnas en Brasil para la segunda vuelta entre Flávio Bolsonaro y Lula da Silva",
+      "url": "https://theobjective.com/internacional/2026-10-25/urnas-brasil-segunda-vuelta-bolsonaro-lula/",
+      "fecha": "2026-10-25T12:09:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Jupol denuncia la gravedad de los disturbios en Barcelona: «España parece un paraíso criminal»",
+      "url": "https://theobjective.com/espana/2026-10-25/jupol-barcelona-paraiso-criminal/",
+      "fecha": "2026-10-25T11:53:15+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Muere un hincha del Atleti en el Metropolitano antes del partido contra el Deportivo",
+      "url": "https://theobjective.com/sociedad/suceso/2026-10-25/muere-hincha-atleti/",
+      "fecha": "2026-10-25T11:38:21+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Junts exige explicaciones a la Generalitat por los altercados: «No queremos ser Francia»",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/junts-parlon-altercados/",
+      "fecha": "2026-10-25T11:28:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Un diluvio provoca la suspensión del Gran Premio de Australia por falta de seguridad",
+      "url": "https://theobjective.com/deportes/2026-10-25/diluvio-suspension-gran-premio-australia-falta-seguridad/",
+      "fecha": "2026-10-25T11:10:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Madrid se vuelca con Ceuta: miles de personas responden a la llamada de las ‘caballas’",
+      "url": "https://theobjective.com/espana/2026-10-25/madrid-ceuta-caballas/",
+      "fecha": "2026-10-25T10:58:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Muere el cineasta José Luis García Sánchez a los 85 años, Oso de Oro por ‘Las truchas’",
+      "url": "https://theobjective.com/cultura/cine/2026-10-25/muere-jose-luis-garcia-sanchez/",
+      "fecha": "2026-10-25T10:37:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Thibaut Courtois, baja de última hora en el Clásico por una gripe",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-10-25/thibaut-courtois-baja-clasico/",
+      "fecha": "2026-10-25T10:32:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Disturbios, saqueos, quema de contenedores y destrozos en Barcelona tras una protesta juvenil",
+      "url": "https://theobjective.com/videos/espana/cataluna/2026-10-25/disturbios-saqueos-quema-contenedores-destrozos-barcelona-protesta-juvenil/",
+      "fecha": "2026-10-25T10:17:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "La recolecta",
+      "url": "https://theobjective.com/lifestyle/2026-10-25/recoleta-mi-yo-salvaje/",
+      "fecha": "2026-10-25T10:16:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Alvise elige a un coronel retirado de candidato para el escaño en juego por Ceuta",
+      "url": "https://theobjective.com/espana/politica/2026-10-25/alvise-coronel-ceuta/",
+      "fecha": "2026-10-25T10:04:17+00:00"
+    }
+  ]
+}

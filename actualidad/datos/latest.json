@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-25",
-  "generado_en": "2026-10-25T09:40:59+00:00",
-  "titular": "Felipe VI, operado de cataratas, mientras la situación política y social en España se caldea con disturbios en Barcelona y el Tribunal de Cu",
+  "fecha": "2026-10-26",
+  "generado_en": "2026-10-26T10:55:05+00:00",
+  "titular": "Lula vence en Brasil, Podemos se suma a una coalición en Baleares y el PSOE recorta distancia a Feijóo",
   "por_medio": {
-    "El Mundo": 25,
-    "The Objective": 97
+    "El Mundo": 27,
+    "The Objective": 130
   },
   "temas": [
     {
-      "tema": "Salud del Rey Felipe VI",
+      "tema": "Elecciones en Brasil y sus repercusiones",
+      "categoria": "Internacional",
+      "descripcion": "Lula da Silva ha ganado las elecciones en Brasil, un resultado que ha sido celebrado por el Gobierno español y partidos de izquierda, y que ha provocado caídas en bolsa para empresas españolas con intereses en el país."
+    },
+    {
+      "tema": "Panorama electoral en España",
       "categoria": "Política",
-      "descripcion": "El rey Felipe VI ha sido operado con éxito de cataratas en su ojo izquierdo y ha abandonado la clínica por su propio pie."
+      "descripcion": "Podemos se une a una coalición en Baleares, el PSOE recorta distancia al PP en las encuestas, y el Frente Obrero logra avales para presentarse en todo el país. Aznar y Rajoy participarán en la campaña del PP."
     },
     {
-      "tema": "Investigación al hermano de Pedro Sánchez",
-      "categoria": "Política",
-      "descripcion": "El Tribunal de Cuentas ha iniciado diligencias para recuperar 400.000 euros pagados irregularmente al hermano del presidente del Gobierno y a un amigo."
-    },
-    {
-      "tema": "Disturbios en Barcelona",
-      "categoria": "Sociedad",
-      "descripcion": "Una protesta juvenil violenta en Barcelona ha resultado en 128 detenidos, 15 policías heridos y numerosos destrozos y saqueos."
-    },
-    {
-      "tema": "Situación de las carreteras españolas",
+      "tema": "Infraestructuras y transporte",
       "categoria": "Economía",
-      "descripcion": "Las carreteras españolas se encuentran en su peor nivel en cuatro décadas, con un déficit de conservación récord de 13.500 millones de euros."
+      "descripcion": "El ministro de Transportes, Óscar Puente, destaca el mantenimiento de la red ferroviaria como el problema más urgente de su ministerio y cifra el déficit en carreteras."
+    },
+    {
+      "tema": "Dimisión del delegado del Gobierno en Madrid",
+      "categoria": "Política",
+      "descripcion": "Francisco Martín renuncia a su cargo como delegado del Gobierno en Madrid, una decisión celebrada por el Gobierno de Ayuso y valorada positivamente por el sindicato Jupol."
     }
   ]
 }
