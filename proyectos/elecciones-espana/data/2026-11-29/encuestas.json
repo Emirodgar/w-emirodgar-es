@@ -4,6 +4,154 @@
  "metodologia": "La media pondera cada sondeo por su antigüedad (vida media de 14 días) y por la raíz de su muestra, y solo usa los publicados en los 30 días previos al último sondeo. Para cada partido se promedian únicamente los sondeos que lo incluyen. El CIS se muestra pero, por defecto, queda fuera de la media por usar una metodología distinta; puedes incluirlo con el interruptor.",
  "sondeos": [
   {
+   "fecha": "2026-10-18",
+   "empresa": "EM-Analytics",
+   "medio": "Electomanía",
+   "muestra": 3141,
+   "tipo": "privada",
+   "voto": {
+    "PP": 31.8,
+    "PSOE": 27.1,
+    "VOX": 18.9,
+    "SUMAR": 4.9,
+    "PODEMOS": 2.0
+   }
+  },
+  {
+   "fecha": "2026-10-12",
+   "empresa": "GESOP",
+   "medio": "Prensa Ibérica",
+   "muestra": 1000,
+   "tipo": "privada",
+   "voto": {
+    "PP": 28.7,
+    "PSOE": 26.1,
+    "VOX": 18.9,
+    "SUMAR": 8.0,
+    "PODEMOS": 2.6
+   }
+  },
+  {
+   "fecha": "2026-10-12",
+   "empresa": "GAD3",
+   "medio": "ABC",
+   "muestra": 1077,
+   "tipo": "privada",
+   "voto": {
+    "PP": 31.4,
+    "PSOE": 26.4,
+    "VOX": 18.2,
+    "SUMAR": 7.4,
+    "PODEMOS": 2.3
+   }
+  },
+  {
+   "fecha": "2026-10-11",
+   "empresa": "EM-Analytics",
+   "medio": "Electomanía",
+   "muestra": 4125,
+   "tipo": "privada",
+   "voto": {
+    "PP": 31.5,
+    "PSOE": 26.9,
+    "VOX": 19.1,
+    "SUMAR": 4.9,
+    "PODEMOS": 3.4
+   }
+  },
+  {
+   "fecha": "2026-10-11",
+   "empresa": "SocioMétrica",
+   "medio": "El Español",
+   "muestra": 1000,
+   "tipo": "privada",
+   "voto": {
+    "PP": 32.6,
+    "PSOE": 26.2,
+    "VOX": 18.8
+   }
+  },
+  {
+   "fecha": "2026-10-11",
+   "empresa": "Hamalgama Métrica",
+   "medio": "Vozpópuli",
+   "muestra": 1000,
+   "tipo": "privada",
+   "voto": {
+    "PP": 33.4,
+    "PSOE": 25.3,
+    "VOX": 19.6,
+    "SUMAR": 5.4,
+    "PODEMOS": 3.3
+   }
+  },
+  {
+   "fecha": "2026-10-11",
+   "empresa": "Target Point",
+   "medio": "El Debate",
+   "muestra": 1002,
+   "tipo": "privada",
+   "voto": {
+    "PP": 32.0,
+    "PSOE": 25.9,
+    "VOX": 18.7,
+    "SUMAR": 6.9
+   }
+  },
+  {
+   "fecha": "2026-10-09",
+   "empresa": "IMOP Insights",
+   "medio": "El Confidencial",
+   "muestra": 900,
+   "tipo": "privada",
+   "voto": {
+    "PP": 30.4,
+    "PSOE": 26.5,
+    "VOX": 19.0,
+    "SUMAR": 7.6,
+    "PODEMOS": 2.3
+   }
+  },
+  {
+   "fecha": "2026-10-09",
+   "empresa": "DYM",
+   "medio": "Henneo",
+   "muestra": 1011,
+   "tipo": "privada",
+   "voto": {
+    "PP": 34.0,
+    "PSOE": 28.2,
+    "VOX": 18.2
+   }
+  },
+  {
+   "fecha": "2026-10-09",
+   "empresa": "40dB",
+   "medio": "El País / SER",
+   "muestra": 800,
+   "tipo": "privada",
+   "voto": {
+    "PP": 31.9,
+    "PSOE": 28.1,
+    "VOX": 18.9,
+    "SUMAR": 5.3
+   }
+  },
+  {
+   "fecha": "2026-10-08",
+   "empresa": "NC Report",
+   "medio": "La Razón",
+   "muestra": 1000,
+   "tipo": "privada",
+   "voto": {
+    "PP": 34.1,
+    "PSOE": 25.0,
+    "VOX": 18.2,
+    "SUMAR": 5.3,
+    "PODEMOS": 3.9
+   }
+  },
+  {
    "fecha": "2026-10-05",
    "empresa": "Data10",
    "medio": "OKDiario",
@@ -21,6 +169,34 @@
     "SALF": 1.4,
     "BNG": 1.0,
     "PNV": 0.8
+   }
+  },
+  {
+   "fecha": "2026-10-04",
+   "empresa": "Winston",
+   "medio": "Artículo14",
+   "muestra": 1201,
+   "tipo": "privada",
+   "voto": {
+    "PP": 31.3,
+    "PSOE": 24.9,
+    "VOX": 19.1,
+    "SUMAR": 6.8,
+    "PODEMOS": 3.9
+   }
+  },
+  {
+   "fecha": "2026-10-04",
+   "empresa": "Sigma Dos",
+   "medio": "El Mundo",
+   "muestra": 2116,
+   "tipo": "privada",
+   "voto": {
+    "PP": 32.6,
+    "PSOE": 25.6,
+    "VOX": 18.3,
+    "SUMAR": 6.6,
+    "PODEMOS": 3.3
    }
   },
   {

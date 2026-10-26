@@ -83,6 +83,11 @@ GROUP_NAV = [
 ]
 
 
+def site_header():
+    """Cabecera global del sitio (misma que el resto de páginas): _includes/site-header.html."""
+    return (ROOT / "_includes" / "site-header.html").read_text(encoding="utf-8").strip()
+
+
 def head(title, desc, path, jsonld, extra_css=""):
     ld = "\n".join(f'    <script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in jsonld)
     return f"""<!DOCTYPE html>
@@ -120,6 +125,7 @@ def head(title, desc, path, jsonld, extra_css=""):
         .prose-x h2 {{ margin-top: 2rem; }}
 {extra_css}
     </style>
+    <link rel="stylesheet" href="/assets/css/site-nav.css">
 </head>"""
 
 
@@ -132,6 +138,7 @@ def topbar(crumbs, active):
         for t, u, k in GROUP_NAV
     )
     return f"""<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+{site_header()}
     <div class="bg-slate-950 text-slate-400 text-xs">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-2 flex items-center gap-2 flex-wrap">{bc}</div>
     </div>
