@@ -60,7 +60,7 @@
             <span>/</span>
             <a href="https://emirodgar.es/proyectos" class="hover:text-white transition">Proyectos</a>
             <span>/</span>
-            <a href="https://emirodgar.es/elecciones-espana" class="hover:text-white transition">Documentación de Elecciones en España</a>
+            <a href="https://emirodgar.es/proyectos/elecciones-espana/" class="hover:text-white transition">Elecciones en España</a>
         </div>
     </div>
 
@@ -612,6 +612,11 @@
         f.push(['¿Cuándo se pueden publicar encuestas?', `Hasta el ${c.hitos.find(h => /encuestas/i.test(h.titulo)) ? fmt(c.hitos.find(h => /encuestas/i.test(h.titulo)).fecha) : 'quinto día previo a la votación'}. La ley electoral prohíbe difundir sondeos durante los cinco días anteriores a la votación, por eso esta página los retira en ese periodo.`]);
         f.push(['¿Cómo funciona el voto por correo?', 'Se solicita en Correos presentando el DNI hasta el 19 de noviembre. Correos entrega la documentación y la papeleta para emitir el voto sin acudir al colegio.']);
         f.push(['¿Cómo se reparten los escaños?', 'Con la ley D\'Hondt en cada una de las 52 circunscripciones: los votos de cada candidatura se dividen entre 1, 2, 3… y los escaños se asignan a los cocientes más altos. Hace falta al menos un 3 % de los votos válidos de la circunscripción para entrar en el reparto. En esta página hay un simulador.']);
+        f.push(['¿Qué es este panel y qué incluye?', 'Elecciones en España reúne en un único panel la información que suele estar repartida entre el BOE, las webs de los partidos, los medios y los agregadores de encuestas: cuenta atrás y calendario electoral, media de encuestas, quién se presenta, el Congreso, un test de afinidad, cómo se vota con un simulador de la ley D\'Hondt y el histórico de cada convocatoria. Se completa con guías específicas: cómo votar por correo, análisis de encuestas, test de afinidad completo y comparador de programas electorales. Es un proyecto educativo y experimental.']);
+        f.push(['¿Cómo se calcula la media de encuestas?', 'Cada sondeo se pondera por su antigüedad (vida media de 14 días) y por la raíz de su muestra, y solo cuentan los publicados en los 30 días previos al último. Para cada partido se promedian únicamente los sondeos que lo incluyen. El CIS se muestra pero queda fuera de la media por defecto, porque su metodología es distinta, aunque se puede incluir con un interruptor. Son estimaciones de voto, no de escaños.']);
+        f.push(['¿Cómo se garantiza la neutralidad del panel?', 'Todos los partidos tienen el mismo formato y se ordenan por un criterio objetivo (escaños del Congreso disuelto). Las posiciones del test de afinidad se citan con su fuente y, cuando no hay evidencia clara, se marcan como sin posición y no cuentan en el resultado. El cálculo del test se hace en tu navegador y no se guarda nada.']);
+        f.push(['¿Sirve para otras elecciones además de estas?', 'Sí. La página es una plantilla fija: cada convocatoria vive en su propia carpeta de ficheros JSON (convocatoria, partidos, candidatos, encuestas, afinidad y resultados) y un índice decide cuál es la próxima y cuáles son histórico. Para unas autonómicas o unas europeas basta con crear una carpeta nueva con el mismo esquema.']);
+        f.push(['¿Dónde puedo comprobar los datos oficiales?', 'En la Junta Electoral Central (juntaelectoralcentral.es) y en el Ministerio del Interior (infoelectoral.interior.gob.es). Este panel es informativo: ante cualquier duda sobre plazos o requisitos, prevalece siempre la información oficial.']);
         f.push(['¿Qué pasa después de votar?', 'Las Juntas Electorales Provinciales realizan el escrutinio general del 4 al 7 de diciembre y proclaman a los electos. El Congreso y el Senado se constituyen el 23 de diciembre y, después, el Rey abre las consultas para proponer un candidato a la investidura.']);
         return f;
     }

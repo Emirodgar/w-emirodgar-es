@@ -22,8 +22,8 @@ proyectos/elecciones-espana/
       resultados.json              # {"disponible": false} hasta el escrutinio
 ```
 
-Panel: [proyectos/elecciones-espana/index.html](../../../proyectos/elecciones-espana/index.html) ·
-Documentación: [publicaciones/proyecto-elecciones-espana.md](../../../publicaciones/proyecto-elecciones-espana.md)
+Panel: [proyectos/elecciones-espana/index.html](../../../proyectos/elecciones-espana/index.html) (incluye las FAQ con la documentación del proyecto: `buildFaq()`)
+La antigua ficha `/elecciones-espana` ya no existe: es solo una redirección a la URL del panel.
 
 Tras cualquier cambio, actualiza `lastUpdated` (formato «12 de Octubre, 2026») **y `lastUpdatedISO`** (AAAA-MM-DD) en `data/elecciones.json`.
 
