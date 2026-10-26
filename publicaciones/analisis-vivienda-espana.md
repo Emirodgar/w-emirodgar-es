@@ -371,3 +371,5 @@ Las políticas de vivienda han ido cambiando con cada gobierno, pero **ninguno h
 El gran reto ahora no es solo “construir más”, sino **construir mejor y donde hace falta**: vivienda asequible, especialmente de alquiler, en las zonas de mayor demanda, y con una planificación que mire más allá del próximo ciclo económico.
 
 Si no se corrige este desequilibrio, el riesgo es claro: **convertir el acceso a la vivienda en una línea divisoria permanente entre quienes pudieron comprar a tiempo y quienes se quedarán fuera del mercado durante años**.
+
+**Te puede interesar:** [el turismo y la masificación en España](https://emirodgar.es/analisis-turismo-espana-masificacion).

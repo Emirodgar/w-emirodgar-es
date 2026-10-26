@@ -152,3 +152,5 @@ El análisis del período 2018-2025 muestra que las subidas del SMI han tenido u
 ### Perspectivas futuras
 
 Las previsiones apuntan a que el SMI podría **superar los 1.200 euros mensuales en 2026**, manteniendo la tendencia hacia el objetivo del 60% del salario medio, un debate estrechamente ligado al de las [pensiones frente al salario mínimo interprofesional](https://emirodgar.es/pensiones-smi). La sostenibilidad de esta política dependerá de la capacidad de la economía española para mantener su crecimiento diferencial respecto a Europa y de la implementación de medidas complementarias que apoyen la competitividad empresarial.
+
+**Te puede interesar:** [qué esperar del SMI en 2026 y 2027](https://emirodgar.es/analisis-smi-2026-2027).

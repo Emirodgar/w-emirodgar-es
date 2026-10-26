@@ -46,3 +46,5 @@ No hay forma de "desactivar" los AI Overviews para el propio contenido salvo dej
 ## Un problema con dueño, aunque no tenga solución fácil
 
 Lo que distingue este caso de otras caídas de tráfico habituales es que aquí hay un responsable identificable, no un algoritmo abstracto: es Google quien decide cuánta información entrega directamente en el buscador antes de que el usuario visite la web original. Los tribunales tardarán años en resolver si eso es competencia desleal o simple evolución del producto. Mientras tanto, la caída de tráfico ya está pasando, ya tiene ganadores y perdedores por sector, y esperar a que se resuelva el litigio no es una estrategia.
+
+**Te puede interesar:** [los navegadores con IA (Atlas, Comet, Gemini)](https://emirodgar.es/navegadores-ia).

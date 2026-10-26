@@ -212,3 +212,5 @@ Las empresas están aumentando significativamente sus presupuestos de IA. Según
 En España, el **72% de los CAIO** reporta directamente al CEO o COO, superando el promedio global del 57%. Esta tendencia indica que la IA está consolidando su papel en la definición de estrategia empresarial al más alto nivel.
 
 El Chief AI Officer representa una evolución natural en la estructura organizacional moderna, respondiendo a la necesidad crítica de las empresas de integrar la inteligencia artificial de manera estratégica, ética y efectiva en un mundo cada vez más digitalizado y basado en datos.
+
+**Te puede interesar:** [la guerra por los directivos de datos e IA](https://emirodgar.es/guerra-talento-datos-ia).

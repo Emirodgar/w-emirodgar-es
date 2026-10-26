@@ -98,3 +98,5 @@ Conviene no sacar la conclusión equivocada. Este experimento no demuestra que C
 Y hay un matiz ético que el propio investigador subraya: publicó el experimento como **investigación, no como manual**, y el sitio lleva ahora un aviso. La conclusión que queda no es "inventa datos para que te cite una IA", sino la contraria: **si los modelos premian los números sin preguntarse si son ciertos, la responsabilidad de que sean ciertos recae en quien los publica y en quien los copia.**
 
 *Fuente principal: [Peec AI, "Publish stats, get cited"](https://peec.ai/blog/publish-stats-get-cited-the-tactic-that-put-my-data-all-over-the-web), 7 de octubre de 2026. Las cifras del experimento son las que ofrece el propio autor.*
+
+**Te puede interesar:** [el cuarteto de Anscombe y por qué hay que visualizar los datos](https://emirodgar.es/cuarteto-anscombe).

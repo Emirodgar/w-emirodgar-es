@@ -40,3 +40,5 @@ El problema no es solo el volumen, es la velocidad: estos centros pueden generar
 ## Una factura que depende más de la política que de la física
 
 El precio de la luz en España nunca ha sido solo una cuestión de generación y demanda, sino también de cuánto IVA se cobra, cuántos peajes se acumulan y qué prioridades energéticas fija cada Gobierno, algo que ya se puso sobre la mesa cuando cada partido defendió su propio modelo energético tras el apagón. Mientras esa parte regulatoria de la factura siga pesando más que la electricidad en sí, España seguirá teniendo la paradoja de producir la energía más barata de Europa y facturarla como si fuera de las más caras. Y con los centros de datos de IA llamando a la puerta de la red eléctrica, esa ecuación está a punto de complicarse todavía más.
+
+**Te puede interesar:** [la evolución del precio de la luz en 15 años](https://emirodgar.es/analisis-evolucion-precio-luz-15-anos).

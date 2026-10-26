@@ -29,7 +29,7 @@ Además, se han abierto varias **consultas públicas** para que empresas, ciudad
 
 ## Ciencia con IA: el cuello de botella es el cómputo
 
-La UE impulsa RAISE para cerrar la brecha de cómputo que a veces frena a sus científicos. En ese marco, Google DeepMind y Google Cloud ofrecerán a hasta 200 investigadores europeos acceso a modelos como AlphaFold 3, WeatherNext, AlphaGenome, AlphaEvolve y AlphaEarth Foundations, con 3 millones de dólares en créditos de computación. Refuerza la competitividad científica europea, aunque plantea la misma pregunta que recogemos en [soberanía digital europea](https://emirodgar.es/soberania-digital-europea): hasta qué punto depende de tecnología de fuera.
+La UE impulsa RAISE para cerrar la brecha de cómputo que a veces frena a sus científicos. En ese marco, Google DeepMind y Google Cloud ofrecerán a hasta 200 investigadores europeos acceso a modelos como AlphaFold 3, WeatherNext, AlphaGenome, AlphaEvolve y AlphaEarth Foundations, con 3 millones de dólares en créditos de computación. Refuerza la competitividad científica europea, aunque plantea la misma pregunta que recogemos en [soberanía digital europea](https://emirodgar.es/soberania-digital-europea-nube-chips): hasta qué punto depende de tecnología de fuera.
 
 ## Cuánto se juega Europa en términos económicos
 

@@ -80,3 +80,5 @@ La sostenibilidad del sistema exige medidas estructurales urgentes. Las proyecci
 Las opciones disponibles incluyen el alargamiento de la vida laboral, el incremento de las cotizaciones, el fomento de la inmigración cualificada y el desarrollo de sistemas complementarios de ahorro. **La OCDE recomienda ampliar el período de cómputo de las pensiones de 25 a 40 años** y vincular la edad de jubilación a la esperanza de vida.
 
 El futuro del sistema español dependerá de la capacidad política para implementar reformas que equilibren la sostenibilidad financiera con la garantía de pensiones dignas, en un contexto demográfico sin precedentes en la historia del país.
+
+**Te puede interesar:** [la subida del SMI en 2026 y 2027](https://emirodgar.es/analisis-smi-2026-2027).

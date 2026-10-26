@@ -145,3 +145,5 @@ Y si te suena a utopía, piensa que hace solo unos años usar IA para resumir te
 En mi opinión, convertir la innovación digital en un **proyecto estratégico dentro de la administración pública** no debería ser una opción. Debería ser una prioridad, y un buen punto de partida sería aprovechar las [ventajas que ya se están viendo a nivel local en los ayuntamientos](https://emirodgar.es/ia-ayuntamientos). Ya no hablamos solo de modernizar trámites o poner formularios online. Estamos hablando de replantear desde dentro cómo se toman decisiones, cómo se redactan leyes, cómo se priorizan recursos.
 
 La IA no va a resolver todos los problemas de la administración. Pero ignorarla sí puede crearnos unos cuantos nuevos
+
+**Te puede interesar:** [la Ley de Martec](https://emirodgar.es/ley-martec).

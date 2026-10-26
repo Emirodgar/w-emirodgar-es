@@ -33,9 +33,14 @@
   label: Política
   url: /publicaciones-politica
 
-# NOTA: hay publicaciones con folder: guias / geopolitica / conceptos pero
-# todavía no existe una página de listado para esas categorías (no hay
-# publicaciones-guias.md, publicaciones-geopolitica.md ni
-# publicaciones-conceptos.md), así que de momento no se añaden aquí para no
-# generar enlaces rotos. Si se crean esas páginas, basta con añadir su
-# entrada aquí.
+- folder: guias
+  label: Guías y conceptos
+  url: /publicaciones-guias
+
+- folder: conceptos
+  label: Guías y conceptos
+  url: /publicaciones-guias
+
+- folder: geopolitica
+  label: Geopolítica
+  url: /publicaciones-geopolitica

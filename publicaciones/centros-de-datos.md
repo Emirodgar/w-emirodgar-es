@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1  
 feed: 1  
 date: 2025-09-29
-folder: ia  
+folder: ia
 permalink: centros-de-datos  
 ---
 

@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-05-10
-folder: politica2
+folder: politica
 permalink: jose-maria-lassalle
 ---
 

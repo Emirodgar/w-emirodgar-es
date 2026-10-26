@@ -75,3 +75,5 @@ Si queremos evitar un futuro en el que los jóvenes no puedan ni siquiera poner 
 * **Pacto de Estado por el futuro del trabajo:** Es el momento de que todos los actores políticos, empresariales y sociales se sienten para diseñar una estrategia nacional que prepare a España para esta revolución. No podemos seguir con parches, la IA es un tsunami que necesita de un plan serio y a largo plazo, máxime si, como venimos alertando, [se avecina una crisis económica impulsada por la inteligencia artificial](https://emirodgar.es/crisis-economica-ia).
 
 La IA no tiene por qué ser una amenaza, pero tampoco podemos quedarnos de brazos cruzados. Si no tomamos medidas, los jóvenes de hoy serán los "canarios en la mina" de un futuro sin oportunidades. El momento de actuar es ahora.
+
+**Te puede interesar:** [los "empleos reservados a humanos" y el impuesto a los robots que propone Bill Gates](https://emirodgar.es/bill-gates-riesgos-ia).

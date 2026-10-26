@@ -86,3 +86,5 @@ Los proyectos reales son complicados. Las APIs fallan, los clientes cambian de o
 - Construye una librería de componentes reutilizables
 
   Espero que estos consejos os ayuden a generar herramientas de IA de gran valor para vuestros proyectos empresariales.
+
+**Te puede interesar:** [los navegadores con IA y el fin del clic](https://emirodgar.es/navegadores-ia).

@@ -45,3 +45,4 @@ Otro peligro creciente es la discriminación algorítmica. Las IA no son imparci
 
 El desarrollo de [vehículos autónomos](https://emirodgar.es/coches-autonomos), drones y otros sistemas de IA que toman decisiones de manera independiente también plantea riesgos. Si bien estos sistemas están diseñados para ser más eficientes y seguros, todavía existen preocupaciones sobre su capacidad para manejar situaciones
 
+**Te puede interesar:** [de la inteligencia biológica a la artificial](https://emirodgar.es/inteligencia-biologica-artificial).
