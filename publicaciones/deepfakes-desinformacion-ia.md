@@ -43,6 +43,12 @@ Aquí es donde entra el [Reglamento Europeo de IA (AI Act)](https://emirodgar.es
 
 La desinformación con IA no se limita a imágenes y voces clonadas. Un experimento reciente publicó 50.000 estadísticas inventadas en una web nueva por unos 50 dólares, y ChatGPT las siguió citando meses después, hasta el punto de acabar en un informe de inversión bancario y en un artículo académico. Es la versión de texto del mismo problema: cuando verificar cuesta más que fabricar, lo falso se cuela con apariencia de fuente. Lo desarrollamos en [lo fácil que es manipular a la IA](https://emirodgar.es/manipular-ia-estadisticas-falsas).
 
+## Cuando la videollamada deja de ser una prueba
+
+Hasta ahora, ver y oír a alguien en directo era la verificación más intuitiva de que existía de verdad. Esa certeza se tambalea: la empresa Tavus asegura que su modelo **Griffin** es [el primero en superar el "test de Turing en vídeo"](https://x.com/tavus/status/2105704169009246248). Según la compañía, el 48% de las personas que hablaron con él en una videollamada creyeron que era un humano, frente a menos del 3% de los sistemas anteriores, y lidera el ranking de NVIDIA para vídeo con IA en modo conversación fluida.
+
+Conviene matizar: es un dato de la propia empresa y falta una validación independiente de la metodología. Pero el riesgo no depende de que la cifra sea exacta. Suplantaciones, estafas, fraude en procesos de selección o ingeniería social son escenarios donde la videollamada servía de garantía, y eso ya no basta. La respuesta práctica pasa por añadir capas de verificación, como códigos de confirmación, un segundo canal de contacto o protocolos internos en reuniones, contrataciones y operaciones sensibles.
+
 ## Se puede detectar, pero no siempre a tiempo
 
 La buena noticia es que la misma tecnología que permite crear un deepfake convincente también permite detectarlo: análisis forense de metadatos, de frecuencias de audio o de artefactos de generación que el ojo humano no percibe. La mala noticia es que ninguna herramienta de detección es infalible al cien por cien, y la carrera entre quien genera y quien detecta se parece bastante a la que ya vivimos con otros contenidos generados por IA, como analizamos al ver que [la mitad de los contenidos digitales ya los escribe una inteligencia artificial](https://emirodgar.es/la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial).
