@@ -4,7 +4,6 @@ description: Guía para entender y adoptar la inteligencia artificial en la admi
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
-date: 2026-10-26
 permalink: guia-ia-administracion-publica
 ---
 

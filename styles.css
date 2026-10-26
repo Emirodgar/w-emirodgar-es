@@ -596,3 +596,22 @@ a.link:hover {
     flex-wrap: wrap;
     margin: 0;
 }
+
+/* Doble entrada de la home */
+.entry-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 980px; margin: 36px auto 0; text-align: left; }
+.entry { background: #fff; color: #333; border-radius: 10px; padding: 24px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); display: flex; flex-direction: column; }
+.entry--pro { background: #1a2a40; color: #fff; }
+.entry h2 { font-size: 1.3rem; margin: 0 0 6px; }
+.entry p { margin: 0 0 12px; line-height: 1.4; }
+.entry-list { list-style: none; margin: 0 0 18px; padding: 0; flex: 1; }
+.entry-list li { margin: 0; border-top: 1px solid rgba(128, 128, 128, 0.25); }
+.entry-list li:first-child { border-top: 0; }
+.entry-list a { display: block; background: none; color: #1E3A8A; margin: 0; padding: 9px 2px; font-size: 0.98rem; text-decoration: none; }
+.entry-list a:hover { background: none; text-decoration: underline; }
+.entry--pro .entry-list a { color: #fff; }
+.entry a.entry-btn { display: inline-block; align-self: flex-start; margin: 0; padding: 11px 20px; border-radius: 6px; background: #35869A; color: #fff; font-weight: 600; text-decoration: none; }
+.entry a.entry-btn:hover { background: #2a6c7d; }
+.entry--pro a.entry-btn { background: #fff; color: #1a2a40; }
+.entry--pro a.entry-btn:hover { background: #e6edf3; }
+@media (max-width: 767px) { .entry-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 1.9rem; } }
+

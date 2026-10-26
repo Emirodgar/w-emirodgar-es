@@ -23,7 +23,7 @@
       {"@type":"Person","@id":"https://emirodgar.es/#person","name":"Emilio Rodríguez García","url":"https://emirodgar.es/emilio","image":"https://emirodgar.es/assets/images/emirodgar.jpg","jobTitle":"Estratega de datos e inteligencia artificial","sameAs":["https://www.linkedin.com/in/emirodgar/"]}
     ]}
     </script>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20261026">
 	<link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
 <link rel="stylesheet" href="/assets/css/site-nav.css">
 </head>
@@ -39,7 +39,7 @@
       <a href="https://emirodgar.es/publicaciones-inteligencia-artificial">IA</a>
       <a href="https://emirodgar.es/publicaciones-analisis">Análisis</a>
       <a href="https://emirodgar.es/actualidad/">Actualidad</a>
-      <a href="https://emirodgar.es/mapa">Mapa</a>
+      <a href="https://emirodgar.es/servicios/">Servicios</a>
       <a href="https://emirodgar.es/emilio">Sobre mí</a>
     </nav>
   </div>
@@ -47,84 +47,29 @@
     <section class="hero">
         <h1>Transformando la gestión pública a través de la IA responsable</h1>
         <h3>Estrategia, ética y eficiencia para los líderes del mañana</h3>
-        <!--<button onclick="#articulos">Descubre más</button>-->
-    </section>
-
-	<section class="about-me section">
-	    <div class="about-container">
-	        <div class="about-image">
-	            <img src="https://emirodgar.es/assets/images/emirodgar.jpg" alt="Emirodgar - Estrategia y IA" width="130" height="130" loading="lazy">
-	        </div>
-	        <div class="about-text">
-	            <h2>Emilio Rodríguez García</h2>
-	            <p>Ayudo a organizaciones y líderes a navegar la complejidad de la <strong>IA y los datos</strong>, transformando la gestión pública en un modelo más humano, ético y eficiente.</p>
-	        </div>
-	    </div>
-	</section>
-
-    <!-- Servicios -->
-    <section id="services" class="section">
-        <h2>Retos</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Actualización institucional</h3>
-                <p>La IA no espera. Existe riesgo de obsolescencia legislativa y operativa.</p>
+        <div class="entry-grid">
+            <div class="entry">
+                <h2>Busco datos y herramientas</h2>
+                <p>Paneles gratuitos con datos oficiales para entender España y decidir mejor.</p>
+                <ul class="entry-list">
+                    <li><a href="https://emirodgar.es/elecciones/">Elecciones del 29N: encuestas, programas y test de afinidad</a></li>
+                    <li><a href="https://emirodgar.es/proyectos/catalogo-ayudas-espana/">Ayudas sociales: ¿a cuáles puedo optar?</a></li>
+                    <li><a href="https://emirodgar.es/proyectos/simulador-hipotecas-espana/">Simulador de hipotecas</a></li>
+                    <li><a href="https://emirodgar.es/proyectos/macrodata-espana/">Economía: indicadores y riesgo de recesión</a></li>
+                    <li><a href="https://emirodgar.es/castilla-y-leon/">Castilla y León: empleo público, ayudas y gobierno</a></li>
+                </ul>
+                <a class="entry-btn" href="https://emirodgar.es/datos/">Ver todos los dashboards →</a>
             </div>
-            <div class="card">
-                <h3>Gobernanza y ética</h3>
-                <p>Un sesgo en la IA puede destruir años de reputación política en segundos.</p>
-            </div>
-            <div class="card">
-                <h3>Innovacción inclusiva y humana</h3>
-                <p>La burocracia digital puede ser excluyente y generar rechazo social.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="articulos" class="section bg-light">
-        <h2>Últimos Artículos</h2>
-        <p>Explora tendencias en IA, datos y transformación digital.</p>
-        <br>
-        <p><a href='https://emirodgar.es/mapa'>Ver publicaciones</a></p>
-    </section>
-
-    <section class="section publicaciones">
-        <!--<h2>Publicaciones destacadas</h2>-->
-        <div class="tabla-publicaciones">
-          <div class="fila" id="ultimosArticulosContainer">
-            <p>Cargando últimas publicaciones…</p>
-          </div>
-        </div>
-      </section>
-
-    <section id="actualidad-home" class="section actualidad-home-section" hidden>
-        <h2>Qué ha pasado en las últimas 24 horas</h2>
-        <p>Resumen automático de las portadas de El Mundo y The Objective, con archivo de todos los días anteriores.</p>
-        <div class="actualidad-home-card">
-            <p class="actualidad-home-fecha" id="actualidadHomeFecha"></p>
-            <h3 class="actualidad-home-titular" id="actualidadHomeTitular"></h3>
-            <ul class="actualidad-home-temas" id="actualidadHomeTemas"></ul>
-            <p class="actualidad-home-links">
-                <a href="/actualidad/" class="link">Leer el resumen completo y la hemeroteca →</a>
-                <a href="/timeline/" class="link">Ver la línea de tiempo →</a>
-            </p>
-        </div>
-    </section>
-
-    <section id="riesgo-recesion" class="section thermo-section">
-        <h2>Termómetro de Riesgo de Recesión</h2>
-        <p>Un vistazo rápido al riesgo de recesión en España, calculado en vivo a partir de los indicadores de MacroData España.</p>
-        <div class="thermo-card">
-            <div class="thermo-visual" id="homeThermoSvg" aria-hidden="true"></div>
-            <div class="thermo-info">
-                <div class="thermo-score-row">
-                    <span class="thermo-score" id="homeThermoScore">--</span>
-                    <span class="thermo-score-max">/ 100</span>
-                    <span class="thermo-band" id="homeThermoBand">Cargando…</span>
-                </div>
-                <div class="thermo-components" id="homeThermoComponents"></div>
-                <p class="thermo-disclaimer">Índice propio y simplificado con fines divulgativos (no es una predicción oficial ni de ninguna institución). No incorpora el tipo de la Fed.</p>
-                <a href="https://emirodgar.es/proyectos/macrodata-espana/" class="link thermo-cta">Ver análisis de parámetros económicos →</a>
+            <div class="entry entry--pro">
+                <h2>Soy una organización</h2>
+                <p>IA responsable, datos y estrategia digital para administraciones y empresas.</p>
+                <ul class="entry-list">
+                    <li><a href="https://emirodgar.es/servicios/">Qué puedo hacer por tu organización</a></li>
+                    <li><a href="https://emirodgar.es/guia-ia-administracion-publica">Guía de IA en la administración pública</a></li>
+                    <li><a href="https://emirodgar.es/reglamento-europeo-ia-act">Qué cambia con el AI Act</a></li>
+                    <li><a href="https://emirodgar.es/emilio">Quién soy y cómo trabajo</a></li>
+                </ul>
+                <a class="entry-btn" href="https://emirodgar.es/servicios/">Ver servicios →</a>
             </div>
         </div>
     </section>
@@ -253,6 +198,109 @@
         </div>
     </section>
 
+    <section id="actualidad-home" class="section actualidad-home-section" hidden>
+        <h2>Qué ha pasado en las últimas 24 horas</h2>
+        <p>Resumen automático de las portadas de El Mundo y The Objective, con archivo de todos los días anteriores.</p>
+        <div class="actualidad-home-card">
+            <p class="actualidad-home-fecha" id="actualidadHomeFecha"></p>
+            <h3 class="actualidad-home-titular" id="actualidadHomeTitular"></h3>
+            <ul class="actualidad-home-temas" id="actualidadHomeTemas"></ul>
+            <p class="actualidad-home-links">
+                <a href="/actualidad/" class="link">Leer el resumen completo y la hemeroteca →</a>
+                <a href="/timeline/" class="link">Ver la línea de tiempo →</a>
+            </p>
+        </div>
+    </section>
+
+    <section id="riesgo-recesion" class="section thermo-section">
+        <h2>Termómetro de Riesgo de Recesión</h2>
+        <p>Un vistazo rápido al riesgo de recesión en España, calculado en vivo a partir de los indicadores de MacroData España.</p>
+        <div class="thermo-card">
+            <div class="thermo-visual" id="homeThermoSvg" aria-hidden="true"></div>
+            <div class="thermo-info">
+                <div class="thermo-score-row">
+                    <span class="thermo-score" id="homeThermoScore">--</span>
+                    <span class="thermo-score-max">/ 100</span>
+                    <span class="thermo-band" id="homeThermoBand">Cargando…</span>
+                </div>
+                <div class="thermo-components" id="homeThermoComponents"></div>
+                <p class="thermo-disclaimer">Índice propio y simplificado con fines divulgativos (no es una predicción oficial ni de ninguna institución). No incorpora el tipo de la Fed.</p>
+                <a href="https://emirodgar.es/proyectos/macrodata-espana/" class="link thermo-cta">Ver análisis de parámetros económicos →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Para organizaciones -->
+    <section id="servicios-home" class="section">
+        <h2>Cómo puedo ayudar a tu organización</h2>
+        <p>Del diagnóstico a la puesta en marcha, con foco en el uso responsable de los datos y la IA.</p>
+        <div class="cards">
+            <div class="card">
+                <h3>Consultoría en IA</h3>
+                <p>Dónde aporta valor la IA en tu organización, con gobernanza, ética y cumplimiento normativo.</p>
+            </div>
+            <div class="card">
+                <h3>Datos y dashboards</h3>
+                <p>Paneles a medida con fuentes oficiales, como los que ves en este sitio.</p>
+            </div>
+            <div class="card">
+                <h3>Formación y ponencias</h3>
+                <p>Sesiones para equipos directivos y técnicos sobre IA, datos y transformación digital.</p>
+            </div>
+            <div class="card">
+                <h3>Visibilidad en buscadores e IA</h3>
+                <p>SEO y GEO: cómo aparecer en Google y en las respuestas de ChatGPT, Gemini o Perplexity.</p>
+            </div>
+        </div>
+        <p><a class="link" href="https://emirodgar.es/servicios/">Ver servicios en detalle →</a></p>
+    </section>
+
+	<section class="about-me section">
+	    <div class="about-container">
+	        <div class="about-image">
+	            <img src="https://emirodgar.es/assets/images/emirodgar.jpg" alt="Emirodgar - Estrategia y IA" width="130" height="130" loading="lazy">
+	        </div>
+	        <div class="about-text">
+	            <h2>Emilio Rodríguez García</h2>
+	            <p>Ayudo a organizaciones y líderes a navegar la complejidad de la <strong>IA y los datos</strong>, transformando la gestión pública en un modelo más humano, ético y eficiente.</p>
+	        </div>
+	    </div>
+	</section>
+
+    <section id="services" class="section">
+        <h2>Retos</h2>
+        <div class="cards">
+            <div class="card">
+                <h3>Actualización institucional</h3>
+                <p>La IA no espera. Existe riesgo de obsolescencia legislativa y operativa.</p>
+            </div>
+            <div class="card">
+                <h3>Gobernanza y ética</h3>
+                <p>Un sesgo en la IA puede destruir años de reputación política en segundos.</p>
+            </div>
+            <div class="card">
+                <h3>Innovacción inclusiva y humana</h3>
+                <p>La burocracia digital puede ser excluyente y generar rechazo social.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="articulos" class="section bg-light">
+        <h2>Últimos Artículos</h2>
+        <p>Explora tendencias en IA, datos y transformación digital.</p>
+        <br>
+        <p><a href='https://emirodgar.es/mapa'>Ver publicaciones</a></p>
+    </section>
+
+    <section class="section publicaciones">
+        <!--<h2>Publicaciones destacadas</h2>-->
+        <div class="tabla-publicaciones">
+          <div class="fila" id="ultimosArticulosContainer">
+            <p>Cargando últimas publicaciones…</p>
+          </div>
+        </div>
+      </section>
+
 	<section class="quote-container">
 	  <div class="quote-wrapper">
 	    <blockquote class="strategic-quote">
@@ -264,12 +312,11 @@
 	    </blockquote>
 	  </div>
 	</section>
-	
-    <!-- Contacto -->
-    <section class="section">
+
+    <section id="contacto" class="section">
         <h2>¿Hablamos?</h2>
-        <p>Si quieres impulsar tu estrategia con datos e inteligencia artificial, contáctame.</p><br>
-        <a href="mailto:hola@emirodgar.com">Email</a>  <a href="https://www.linkedin.com/in/emirodgar/">LinkedIn</a>
+        <p>Si quieres impulsar tu estrategia con datos e inteligencia artificial, cuéntame tu caso.</p><br>
+        <a href="mailto:hola@emirodgar.com">Email</a>  <a href="https://www.linkedin.com/in/emirodgar/">LinkedIn</a>  <a href="https://emirodgar.es/servicios/">Servicios</a>
     </section>
 
     <!--<script src="script.js"></script>-->

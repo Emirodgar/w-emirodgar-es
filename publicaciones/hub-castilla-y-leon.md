@@ -4,7 +4,6 @@ description: Datos y herramientas sobre Castilla y León y Salamanca: panel econ
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
-date: 2026-10-26
 permalink: castilla-y-leon
 ---
 

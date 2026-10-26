@@ -4,7 +4,6 @@ description: Todo para seguir las elecciones generales del 29 de noviembre de 20
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
-date: 2026-10-26
 permalink: elecciones
 ---
 
