@@ -8,15 +8,10 @@
 <body>
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   {% include analytics.html %}
-  <div class="wrapper">
+  {% include site-header.html %}
+  <div class="wrapper wrapper--single">
 
     <main class="main-wrapper" id="main-content">
-      <header class="page-header">
-        <a class="home-chip" href="https://emirodgar.es">
-          <i class="fas fa-home" aria-hidden="true"></i> Inicio
-        </a>
-      </header>
-
       {% assign category = nil %}
       {% if page.folder %}
         {% for cat in site.data.publication_categories %}
@@ -59,10 +54,11 @@
           <span><a href="{{ site.url }}{{ category.url }}">{{ category.label }}</a></span>
           {% endif %}
         </div>
+
+        {% include author-box.html %}
+        {% include related.html %}
       {% endif %}
     </main>
-
-    {% include sidebar.html %}
   </div>
 
   {% include footer.html %}

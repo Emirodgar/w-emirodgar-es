@@ -10,8 +10,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	 <link rel="shortcut icon" href="https://emirodgar.com/cdn/images/hash.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="/assets/css/site-nav.css">
 </head>
 <body>
+<header class="sg-header" role="banner">
+  <div class="sg-header__inner">
+    <a class="sg-brand" href="https://emirodgar.es/">Emirodgar</a>
+    <button class="sg-toggle" type="button" aria-expanded="false" aria-controls="sg-nav" onclick="var n=document.getElementById('sg-nav'),o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o)">Menú</button>
+    <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
+      <a href="https://emirodgar.es/#proyectos">Dashboards</a>
+      <a href="https://emirodgar.es/proyectos/elecciones-espana/">Elecciones</a>
+      <a href="https://emirodgar.es/publicaciones-inteligencia-artificial">IA</a>
+      <a href="https://emirodgar.es/publicaciones-analisis">Análisis</a>
+      <a href="https://emirodgar.es/actualidad/">Actualidad</a>
+      <a href="https://emirodgar.es/mapa">Mapa</a>
+      <a href="https://emirodgar.es/emilio">Sobre mí</a>
+    </nav>
+  </div>
+</header>
     <!-- Header -->
     <header class="header">
         <div class="header-content">
