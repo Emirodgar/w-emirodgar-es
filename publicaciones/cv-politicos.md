@@ -1,6 +1,6 @@
 ---
 title: Currículum de políticos españoles
-description: Análisis de la formación académica de los políticos españoles (2004-2025): títulos de los líderes, evolución del Congreso, datos por partido y polémicas de currículums.
+description: "Análisis de la formación académica de los políticos españoles (2004-2025): títulos de los líderes, evolución del Congreso, datos por partido y polémicas de currículums."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

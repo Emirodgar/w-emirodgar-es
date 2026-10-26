@@ -1,6 +1,6 @@
 ---
 title: Por qué las apps de citas están en crisis
-description: Dos tercios de los solteros en Estados Unidos ya no usan apps de citas. Repasamos por qué agotan: exceso de elección, recompensas intermitentes y fatiga de decisión.
+description: "Dos tercios de los solteros en Estados Unidos ya no usan apps de citas. Repasamos por qué agotan: exceso de elección, recompensas intermitentes y fatiga de decisión."
 image: 
 author: Emirodgar
 lang: es_ES

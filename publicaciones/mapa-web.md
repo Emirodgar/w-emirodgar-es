@@ -3,6 +3,7 @@ title: Mapa web
 description: 
 lang: es_ES
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
+schema: CollectionPage
 permalink: mapa
 
 ---

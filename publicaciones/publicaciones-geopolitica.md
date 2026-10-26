@@ -4,6 +4,7 @@ description: Análisis sobre el equilibrio de poder, la tecnología y las tensio
 lang: es_ES
 author: Emirodgar
 image: 
+schema: CollectionPage
 permalink: publicaciones-geopolitica
 
 ---

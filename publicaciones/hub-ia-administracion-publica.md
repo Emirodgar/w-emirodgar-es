@@ -1,9 +1,10 @@
 ---
-title: IA en la administración pública: guía, riesgos y regulación
-description: Guía para entender y adoptar la inteligencia artificial en la administración pública: conceptos básicos, casos en ayuntamientos, regulación europea, soberanía digital, riesgos y ética.
+title: "IA en la administración pública: guía, riesgos y regulación"
+description: "Guía para entender y adoptar la inteligencia artificial en la administración pública: conceptos básicos, casos en ayuntamientos, regulación europea, soberanía digital, riesgos y ética."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
+schema: CollectionPage
 permalink: guia-ia-administracion-publica
 ---
 

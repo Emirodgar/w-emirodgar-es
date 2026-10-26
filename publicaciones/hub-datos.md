@@ -1,9 +1,10 @@
 ---
-title: Datos y dashboards sobre España: economía, ayudas, elecciones y Castilla y León
-description: Paneles públicos con datos oficiales de España y Castilla y León: indicadores económicos, hipotecas, ayudas sociales, elecciones, empleo público y más.
+title: "Datos y dashboards sobre España: economía, ayudas, elecciones y Castilla y León"
+description: "Paneles públicos con datos oficiales de España y Castilla y León: indicadores económicos, hipotecas, ayudas sociales, elecciones, empleo público y más."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
+schema: CollectionPage
 permalink: datos
 ---
 

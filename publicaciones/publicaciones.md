@@ -5,6 +5,7 @@ lang: es_ES
 layout: emirodgar_post
 author: Emirodgar
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
+schema: CollectionPage
 permalink: publicaciones
 
 ---

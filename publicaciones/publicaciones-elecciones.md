@@ -4,6 +4,7 @@ description:
 lang: es_ES
 author: Emirodgar
 image: 
+schema: CollectionPage
 permalink: publicaciones-elecciones
 
 ---

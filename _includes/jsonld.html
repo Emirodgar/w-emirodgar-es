@@ -1,0 +1,45 @@
+{%- comment -%}
+  Datos estructurados de las páginas Jekyll (artículos, hubs, listados, servicios).
+  - Article: páginas con `folder` y `date` (publicaciones).
+  - CollectionPage: páginas con `schema: CollectionPage` (listados por categoría, mapa y hubs).
+  - WebPage: resto de páginas con título (o el tipo indicado en `schema`).
+  - BreadcrumbList en todas: Inicio > categoría (si existe) > página.
+{%- endcomment -%}
+{%- if page.title and page.url != "/" and page.url != "/404.html" -%}
+{%- assign jl_cat = nil -%}
+{%- if page.folder -%}
+  {%- for c in site.data.publication_categories -%}{%- if c.folder == page.folder -%}{%- assign jl_cat = c -%}{%- endif -%}{%- endfor -%}
+{%- endif -%}
+{%- assign jl_url = "https://emirodgar.es" | append: page.url -%}
+{%- assign jl_type = "WebPage" -%}
+{%- if page.schema == "CollectionPage" -%}
+  {%- assign jl_type = "CollectionPage" -%}
+{%- elsif page.folder and page.date -%}
+  {%- assign jl_type = "Article" -%}
+{%- elsif page.schema -%}
+  {%- assign jl_type = page.schema -%}
+{%- endif -%}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://emirodgar.es/#website","url":"https://emirodgar.es/","name":"Emirodgar","inLanguage":"es"},
+{"@type":"Person","@id":"https://emirodgar.es/#person","name":"Emilio Rodríguez García","url":"https://emirodgar.es/emilio"},
+{"@type":"{{ jl_type }}","@id":"{{ jl_url }}#{{ jl_type | downcase }}","url":"{{ jl_url }}","name":{{ page.title | jsonify }},"inLanguage":"es","isPartOf":{"@id":"https://emirodgar.es/#website"}
+{%- if page.description and page.description != "" -%},"description":{{ page.description | jsonify }}{%- endif -%}
+{%- if jl_type == "Article" -%}
+,"headline":{{ page.title | jsonify }},"mainEntityOfPage":{"@id":"{{ jl_url }}"},"author":{"@id":"https://emirodgar.es/#person"},"publisher":{"@id":"https://emirodgar.es/#person"},"datePublished":"{{ page.date | date_to_xmlschema }}","dateModified":"{% if page.date_modified %}{{ page.date_modified | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}"
+{%- if page.image and page.image != "" -%},"image":{{ page.image | jsonify }}{%- endif -%}
+{%- if jl_cat -%},"articleSection":{{ jl_cat.label | jsonify }}{%- endif -%}
+{%- endif -%}
+,"breadcrumb":{"@id":"{{ jl_url }}#breadcrumb"}},
+{"@type":"BreadcrumbList","@id":"{{ jl_url }}#breadcrumb","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Inicio","item":"https://emirodgar.es/"}
+{%- if jl_cat -%}
+,{"@type":"ListItem","position":2,"name":{{ jl_cat.label | jsonify }},"item":"https://emirodgar.es{{ jl_cat.url }}"},
+{"@type":"ListItem","position":3,"name":{{ page.title | jsonify }},"item":"{{ jl_url }}"}
+{%- else -%}
+,{"@type":"ListItem","position":2,"name":{{ page.title | jsonify }},"item":"{{ jl_url }}"}
+{%- endif -%}
+]}
+]}
+</script>
+{%- endif -%}

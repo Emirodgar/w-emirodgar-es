@@ -1,9 +1,10 @@
 ---
-title: Castilla y León: datos, empleo público, ayudas y quién gobierna
-description: Datos y herramientas sobre Castilla y León y Salamanca: panel económico, radar de empleo público, composición de la Junta, catálogo de ayudas y análisis.
+title: "Castilla y León: datos, empleo público, ayudas y quién gobierna"
+description: "Datos y herramientas sobre Castilla y León y Salamanca: panel económico, radar de empleo público, composición de la Junta, catálogo de ayudas y análisis."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
+schema: CollectionPage
 permalink: castilla-y-leon
 ---
 

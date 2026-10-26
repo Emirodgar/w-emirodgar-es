@@ -1,9 +1,10 @@
 ---
 title: Guías y conceptos clave
-description: Glosarios, guías prácticas y conceptos explicados de forma sencilla: de la inteligencia artificial a los datos.
+description: "Glosarios, guías prácticas y conceptos explicados de forma sencilla: de la inteligencia artificial a los datos."
 lang: es_ES
 author: Emirodgar
 image: 
+schema: CollectionPage
 permalink: publicaciones-guias
 
 ---

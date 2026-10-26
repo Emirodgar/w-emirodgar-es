@@ -4,6 +4,7 @@ description: Listado de análisis de datos realizados
 lang: es_ES
 author: Emirodgar
 image: 
+schema: CollectionPage
 permalink: publicaciones-analisis
 
 ---

@@ -1,9 +1,10 @@
 ---
-title: Elecciones en España: encuestas, programas, test de afinidad y cómo votar
-description: Todo para seguir las elecciones generales del 29 de noviembre de 2026: panel con calendario y candidatos, media de encuestas, comparador de programas, test de afinidad y guía del voto por correo.
+title: "Elecciones en España: encuestas, programas, test de afinidad y cómo votar"
+description: "Todo para seguir las elecciones generales del 29 de noviembre de 2026: panel con calendario y candidatos, media de encuestas, comparador de programas, test de afinidad y guía del voto por correo."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
+schema: CollectionPage
 permalink: elecciones
 ---
 
