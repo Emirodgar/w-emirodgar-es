@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-26",
-  "generado_en": "2026-10-26T10:55:05+00:00",
-  "titular": "Lula vence en Brasil, Podemos se suma a una coalición en Baleares y el PSOE recorta distancia a Feijóo",
+  "fecha": "2026-10-27",
+  "generado_en": "2026-10-27T10:18:47+00:00",
+  "titular": "Elecciones en Israel con alta participación y acuerdo PP-Vox para el Senado marcan la jornada",
   "por_medio": {
-    "El Mundo": 27,
-    "The Objective": 130
+    "El Mundo": 28,
+    "The Objective": 184
   },
   "temas": [
     {
-      "tema": "Elecciones en Brasil y sus repercusiones",
+      "tema": "Elecciones en Israel y situación en Oriente Medio",
       "categoria": "Internacional",
-      "descripcion": "Lula da Silva ha ganado las elecciones en Brasil, un resultado que ha sido celebrado por el Gobierno español y partidos de izquierda, y que ha provocado caídas en bolsa para empresas españolas con intereses en el país."
+      "descripcion": "Israel celebra elecciones legislativas con una alta participación, la mayor desde 1981, en un contexto post-7 de octubre. Se reportan detenciones por presunta compra de votos."
     },
     {
-      "tema": "Panorama electoral en España",
+      "tema": "Acuerdo PP-Vox para el Senado y panorama político español",
       "categoria": "Política",
-      "descripcion": "Podemos se une a una coalición en Baleares, el PSOE recorta distancia al PP en las encuestas, y el Frente Obrero logra avales para presentarse en todo el país. Aznar y Rajoy participarán en la campaña del PP."
+      "descripcion": "El PP y Vox han pactado una coordinación electoral para el Senado que podría dar a la derecha el control de la Cámara Alta, con el objetivo de renovar el Tribunal Constitucional sin el PSOE. Este acuerdo ha generado críticas de Frente Amplio."
     },
     {
-      "tema": "Infraestructuras y transporte",
-      "categoria": "Economía",
-      "descripcion": "El ministro de Transportes, Óscar Puente, destaca el mantenimiento de la red ferroviaria como el problema más urgente de su ministerio y cifra el déficit en carreteras."
-    },
-    {
-      "tema": "Dimisión del delegado del Gobierno en Madrid",
+      "tema": "Financiación ilegal y dimisión de cargos en España",
       "categoria": "Política",
-      "descripcion": "Francisco Martín renuncia a su cargo como delegado del Gobierno en Madrid, una decisión celebrada por el Gobierno de Ayuso y valorada positivamente por el sindicato Jupol."
+      "descripcion": "La UCO ha acreditado 300.000 euros vinculados a la financiación ilegal del PSOE. El exdelegado del Gobierno en Madrid dimitió tras una amenaza de demanda y será denunciado por el Ayuntamiento por \"inacción\" en la acampada de Sol."
+    },
+    {
+      "tema": "Disturbios y seguridad en España",
+      "categoria": "Sociedad",
+      "descripcion": "El Gobierno Vasco atribuye los altercados de Bilbao a \"grupos organizados vascos\". En Cataluña, los Mossos alertan de un posible saqueo masivo. Se reporta un choque entre Policía y Guardia Civil en Ceuta por falta de indicaciones."
     }
   ]
 }

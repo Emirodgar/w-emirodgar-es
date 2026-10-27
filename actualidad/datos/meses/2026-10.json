@@ -854,6 +854,48 @@
         "url": "https://www.elmundo.es/internacional/2026/10/26/6ade7f67fc6c835d488b4570.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-27",
+      "titulo": "Acuerdo PP-Vox para el Senado",
+      "categoria": "Política",
+      "descripcion": "El Partido Popular y Vox alcanzan un acuerdo de coordinación electoral para el Senado, que podría dar a la derecha el control de la Cámara Alta y la posibilidad de renovar magistrados del Tribunal Constitucional sin el PSOE.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El pacto de PP y Vox acerca a la derecha al control total del Senado: la fórmula elegida puede ser decisiva en 13 provincias",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/10/26/6adfc1a4fdddff58628b4571.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-26",
+      "edicion": "2026-10-27",
+      "titulo": "España arrasa en los Balones de Oro 2026",
+      "categoria": "Deportes",
+      "descripcion": "El fútbol español gana ocho de los doce premios Balón de Oro, con Alexia Putellas, De la Fuente, Lamine Yamal y Unai Simón entre los galardonados.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "España se baña en oro: Alexia Putellas, De la Fuente, Lamine Yamal, Unai Simón y el Barça femenino",
+        "url": "https://www.elmundo.es/deportes/futbol/2026/10/26/6adfd73afdddffea718b456d.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-27",
+      "edicion": "2026-10-27",
+      "titulo": "Alta participación en las elecciones de Israel",
+      "categoria": "Internacional",
+      "descripcion": "Las primeras elecciones en Israel desde el ataque de Hamás del 7 de octubre registran la participación más alta desde 1981.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Israel vota bajo la sombra del 7-O: la participación es la más alta desde 1981",
+        "url": "https://www.elmundo.es/internacional/2026/10/27/6adfb67ae4d4d8bf5d8b45b9.html"
+      },
+      "destacado": false
     }
   ]
 }
