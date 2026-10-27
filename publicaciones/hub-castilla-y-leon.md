@@ -5,7 +5,7 @@ image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
 schema: CollectionPage
-permalink: castilla-y-leon
+permalink: /castilla-y-leon/
 ---
 
 # Castilla y León

@@ -4,7 +4,7 @@ description: Consultoría en inteligencia artificial, dashboards de datos a medi
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
-permalink: servicios
+permalink: /servicios/
 ---
 
 # Servicios para organizaciones

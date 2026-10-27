@@ -5,7 +5,7 @@ image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
 schema: CollectionPage
-permalink: elecciones
+permalink: /elecciones/
 ---
 
 # Elecciones en España

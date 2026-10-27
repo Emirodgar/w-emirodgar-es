@@ -3,7 +3,7 @@ title: Buscar en emirodgar.es
 description: Busca entre artículos, análisis, dashboards y guías de emirodgar.es.
 lang: es_ES
 author: Emirodgar
-permalink: buscar
+permalink: /buscar/
 noindex: true
 schema: WebPage
 ---
