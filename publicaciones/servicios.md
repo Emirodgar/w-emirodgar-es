@@ -5,6 +5,7 @@ image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
 permalink: /servicios/
+hub: true
 ---
 
 # Servicios para organizaciones

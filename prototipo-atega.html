@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Prototipo de portada | Emirodgar</title>
+  <meta name="description" content="Prototipo visual de la portada de emirodgar.es inspirado en el estilo del tema Atega.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/prototipo-atega.css">
+  <script>
+    try { var t = localStorage.getItem('theme'); if (t) document.documentElement.setAttribute('data-theme', t); } catch (e) {}
+  </script>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="/">Emirodgar</a>
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+    </nav>
+    <div class="tools">
+      <a class="icon-btn" href="/buscar/" aria-label="Buscar">&#128269;</a>
+      <button class="icon-btn" id="theme" type="button" aria-label="Cambiar entre modo claro y oscuro">&#9680;</button>
+      <button class="icon-btn menu-btn" id="menu" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="hero">
+    <div class="container">
+      <div class="hero__inner">
+        <div class="hero__left">
+          <span class="hero__kicker">Datos · IA · Estrategia</span>
+          <h1 class="hero__title">Hola, soy <span>Emilio Rodríguez.</span></h1>
+          <span class="hero__job">Estratega de datos e IA</span>
+          <p class="hero__description">Convierto datos oficiales e inteligencia artificial responsable en herramientas útiles para ciudadanos, administraciones y organizaciones.</p>
+          <a class="hero__button" href="/datos/"><i>&rarr;</i> Explorar los dashboards</a>
+          <a class="hero__button" href="/servicios/"><i>&rarr;</i> Trabajemos juntos</a>
+        </div>
+        <div class="hero__right">
+          <div class="hero__image">
+            <img src="/assets/images/emirodgar-profile.png" alt="Retrato de Emilio Rodríguez García">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container">
+
+    <section class="section" aria-labelledby="destacados">
+      <div class="section__head">
+        <h2 class="section__title" id="destacados">Paneles destacados</h2>
+        <a class="section__more" href="/datos/">Ver todos →</a>
+      </div>
+      <div class="grid grid--4">
+        <article class="card">
+          <div class="card__image g-red"><span class="card__badge">En vivo</span><div><strong>29N</strong><small>Elecciones generales</small></div></div>
+          <div class="card__content">
+            <div class="card__meta">Actualizado esta semana</div>
+            <h3 class="card__title"><a href="/proyectos/elecciones-espana/">Elecciones en España</a></h3>
+            <p class="card__excerpt">Calendario, candidatos, media de encuestas y test de afinidad con fuentes.</p>
+            <div class="tags"><span class="tag">Elecciones</span><span class="tag">Encuestas</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__image g-blue"><span class="card__badge">En vivo</span><div><strong>IPC</strong><small>Prima de riesgo · Euríbor</small></div></div>
+          <div class="card__content">
+            <div class="card__meta">Datos oficiales</div>
+            <h3 class="card__title"><a href="/macrodata-espana">MacroData España</a></h3>
+            <p class="card__excerpt">Indicadores macroeconómicos y un termómetro propio de riesgo de recesión.</p>
+            <div class="tags"><span class="tag">Economía</span><span class="tag">Datos</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__image g-green"><span class="card__badge">En vivo</span><div><strong>TIN/TAE</strong><small>Simulador de cuota</small></div></div>
+          <div class="card__content">
+            <div class="card__meta">Calculadora</div>
+            <h3 class="card__title"><a href="/simulador-hipotecas-espana">Simulador de hipotecas</a></h3>
+            <p class="card__excerpt">Mercado hipotecario, comparativa de bancos y escenarios de tipos.</p>
+            <div class="tags"><span class="tag">Vivienda</span><span class="tag">Herramienta</span></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="card__image g-violet"><span class="card__badge">En vivo</span><div><strong>Top 25</strong><small>Wikipedia, cada semana</small></div></div>
+          <div class="card__content">
+            <div class="card__meta">Semanal</div>
+            <h3 class="card__title"><a href="/lo-mas-leido-wikipedia">Lo más leído en Wikipedia</a></h3>
+            <p class="card__excerpt">Resumen en español de los 25 artículos más visitados y por qué.</p>
+            <div class="tags"><span class="tag">Tendencias</span><span class="tag">Wikipedia</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="itinerarios">
+      <div class="section__head"><h2 class="section__title" id="itinerarios">¿Por dónde empiezo?</h2></div>
+      <div class="grid grid--2">
+        <div class="entry">
+          <h3>Busco datos y herramientas</h3>
+          <p>Paneles gratuitos con datos oficiales para entender España y decidir mejor.</p>
+          <ul>
+            <li><a href="/elecciones/">Elecciones del 29N: encuestas y test de afinidad</a></li>
+            <li><a href="/proyectos/catalogo-ayudas-espana/">Ayudas sociales: ¿a cuáles puedo optar?</a></li>
+            <li><a href="/castilla-y-leon/">Castilla y León: empleo público, ayudas y gobierno</a></li>
+          </ul>
+          <a class="button" href="/datos/">Ver los dashboards</a>
+        </div>
+        <div class="entry entry--pro">
+          <h3>Soy una organización</h3>
+          <p>IA responsable, datos y estrategia digital para administraciones y empresas.</p>
+          <ul>
+            <li><a href="/servicios/">Qué puedo hacer por tu organización</a></li>
+            <li><a href="/guia-ia-administracion-publica">Guía de IA en la administración pública</a></li>
+            <li><a href="/reglamento-europeo-ia-act">Qué cambia con el AI Act</a></li>
+          </ul>
+          <a class="button" href="/servicios/">Ver servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <blockquote class="quote">
+      La IA en lo público solo vale si es útil, transparente y auditable.
+      <cite>Emilio Rodríguez García</cite>
+    </blockquote>
+
+    <section class="section" aria-labelledby="servicios">
+      <div class="section__head"><h2 class="section__title" id="servicios">Qué hago</h2></div>
+      <div class="links">
+        <div class="link-card">
+          <div class="link-card__icon g-blue">&#9881;</div>
+          <div class="link-card__body"><h3><a href="/servicios/">IA responsable para la administración</a></h3><p>Casos de uso, gobernanza y cumplimiento del AI Act.</p></div>
+        </div>
+        <div class="link-card">
+          <div class="link-card__icon g-violet">&#9783;</div>
+          <div class="link-card__body"><h3><a href="/servicios/">Dashboards y analítica de datos</a></h3><p>Paneles a medida con fuentes oficiales y actualización automática.</p></div>
+        </div>
+        <div class="link-card">
+          <div class="link-card__icon g-dark">&#9873;</div>
+          <div class="link-card__body"><h3><a href="/servicios/">Estrategia y marketing político</a></h3><p>Datos para entender al electorado y planificar campañas.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="ultimos">
+      <div class="section__head">
+        <h2 class="section__title" id="ultimos">Últimos artículos</h2>
+        <a class="section__more" href="/mapa">Todas las publicaciones →</a>
+      </div>
+      <div class="post-list">
+        <article class="post-row">
+          <time datetime="2026-10-27">27 de octubre, 2026</time>
+          <h3><a href="/actualidad/">Hemeroteca de actualidad: lo que ha pasado esta semana</a></h3>
+          <p>Resumen de las noticias que importan sobre política, economía e inteligencia artificial.</p>
+          <div class="tags"><span class="tag">Actualidad</span></div>
+        </article>
+        <article class="post-row">
+          <time datetime="2026-10-20">20 de octubre, 2026</time>
+          <h3><a href="/reglamento-europeo-ia-act">Qué cambia con el Reglamento Europeo de IA</a></h3>
+          <p>Obligaciones, plazos y qué deben revisar ya las administraciones públicas.</p>
+          <div class="tags"><span class="tag">IA</span><span class="tag">Regulación</span></div>
+        </article>
+        <article class="post-row">
+          <time datetime="2026-10-13">13 de octubre, 2026</time>
+          <h3><a href="/guia-ia-administracion-publica">Guía de IA en la administración pública</a></h3>
+          <p>Por dónde empezar, qué riesgos vigilar y cómo medir el impacto real.</p>
+          <div class="tags"><span class="tag">IA</span><span class="tag">Administración</span></div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__head">
+        <div>
+          <h4>Recibe lo nuevo</h4>
+          <p>Un aviso cuando haya nuevos paneles, datos o análisis. Sin ruido.</p>
+          <form class="subscribe" action="#" onsubmit="return false">
+            <input type="email" placeholder="Tu correo electrónico" aria-label="Correo electrónico" required>
+            <button class="button" type="submit">Suscribirme</button>
+          </form>
+        </div>
+        <div>
+          <h4>Explorar</h4>
+          <ul>
+            <li><a href="/datos/">Dashboards</a></li>
+            <li><a href="/elecciones/">Elecciones</a></li>
+            <li><a href="/castilla-y-leon/">Castilla y León</a></li>
+            <li><a href="/actualidad/">Actualidad</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Sobre mí</h4>
+          <ul>
+            <li><a href="/emilio">Quién soy</a></li>
+            <li><a href="/servicios/">Servicios</a></li>
+            <li><a href="https://www.linkedin.com/in/emirodgar/">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__info">
+        <ul class="social">
+          <li><a href="https://www.linkedin.com/in/emirodgar/">LinkedIn</a></li>
+          <li><a href="/feed.xml">RSS</a></li>
+        </ul>
+        <p class="copyright">© 2026 Emilio Rodríguez García · Prototipo de diseño inspirado en el tema Atega</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    var nav = document.getElementById('nav'), menu = document.getElementById('menu');
+    menu.addEventListener('click', function () {
+      var open = nav.classList.toggle('is-open');
+      menu.setAttribute('aria-expanded', open);
+    });
+    document.getElementById('theme').addEventListener('click', function () {
+      var r = document.documentElement, next = r.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      r.setAttribute('data-theme', next);
+      try { localStorage.setItem('theme', next); } catch (e) {}
+    });
+  })();
+</script>
+</body>
+</html>

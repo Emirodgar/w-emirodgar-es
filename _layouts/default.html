@@ -9,7 +9,7 @@
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   {% include analytics.html %}
   {% include site-header.html %}
-  <div class="wrapper wrapper--single">
+  <div class="wrapper wrapper--single{% if page.schema == 'CollectionPage' or page.hub %} wrapper--hub{% endif %}">
 
     <main class="main-wrapper" id="main-content">
       {% assign category = nil %}

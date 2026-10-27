@@ -3,13 +3,13 @@
     <a class="sg-brand" href="https://emirodgar.es/">Emirodgar</a>
     <button class="sg-toggle" type="button" aria-expanded="false" aria-controls="sg-nav" onclick="var n=document.getElementById('sg-nav'),o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o)">Menú</button>
     <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
-      <a href="https://emirodgar.es/datos/">Dashboards</a>
-      <a href="https://emirodgar.es/elecciones/">Elecciones</a>
-      <a href="https://emirodgar.es/castilla-y-leon/">Castilla y León</a>
+      <a href="https://emirodgar.es/datos/"{% if page.url == '/datos/' %} aria-current="page"{% endif %}>Dashboards</a>
+      <a href="https://emirodgar.es/elecciones/"{% if page.url == '/elecciones/' %} aria-current="page"{% endif %}>Elecciones</a>
+      <a href="https://emirodgar.es/castilla-y-leon/"{% if page.url == '/castilla-y-leon/' %} aria-current="page"{% endif %}>Castilla y León</a>
       <a href="https://emirodgar.es/publicaciones-inteligencia-artificial">IA</a>
       <a href="https://emirodgar.es/publicaciones-analisis">Análisis</a>
-      <a href="https://emirodgar.es/actualidad/">Actualidad</a>
-      <a href="https://emirodgar.es/servicios/">Servicios</a>
+      <a href="https://emirodgar.es/actualidad/"{% if page.url == '/actualidad/' %} aria-current="page"{% endif %}>Actualidad</a>
+      <a href="https://emirodgar.es/servicios/"{% if page.url == '/servicios/' %} aria-current="page"{% endif %}>Servicios</a>
       <a href="https://emirodgar.es/emilio">Sobre mí</a>
       <a class="sg-search" href="https://emirodgar.es/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
     </nav>
