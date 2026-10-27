@@ -1,14 +1,21 @@
-{% if page.folder and page.folder != "" %}
-{% assign related = site.pages | where: "folder", page.folder | where_exp: "p", "p.title and p.url != page.url and p.date" | sort: "date" | reverse %}
-{% if related.size > 0 %}
+{%- if page.folder -%}
+{%- assign rel_sorted = site.pages | sort: "date" | reverse -%}
+{%- assign rel_count = 0 -%}
+{%- capture rel_items -%}
+{%- for p in rel_sorted -%}
+  {%- if rel_count < 4 and p.folder == page.folder and p.title and p.date and p.url != page.url -%}
+    {%- assign rel_count = rel_count | plus: 1 -%}
+    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
+  {%- endif -%}
+{%- endfor -%}
+{%- endcapture -%}
+{%- if rel_count > 0 %}
 <section class="related" aria-labelledby="related-title">
   <h2 id="related-title">Sigue leyendo</h2>
   <ul>
-    {% for p in related limit: 4 %}
-    <li><a href="{{ p.url }}">{{ p.title }}</a></li>
-    {% endfor %}
+    {{ rel_items }}
   </ul>
   {% if category %}<p class="related__more"><a href="{{ site.url }}{{ category.url }}">Ver todo en {{ category.label }} →</a></p>{% endif %}
 </section>
-{% endif %}
-{% endif %}
+{%- endif -%}
+{%- endif -%}

@@ -2,7 +2,7 @@
 layout: null
 ---
 [
-{%- assign first = true -%}
+{%- assign is_first = true -%}
 {%- for p in site.pages -%}
   {%- assign prefix = p.path | slice: 0, 14 -%}
   {%- assign is_list = p.permalink | slice: 0, 14 -%}
@@ -10,8 +10,8 @@ layout: null
     {%- assign cat = "" -%}
     {%- for c in site.data.publication_categories -%}{%- if c.folder == p.folder -%}{%- assign cat = c.label -%}{%- endif -%}{%- endfor -%}
     {%- capture ex -%}{{ p.content | markdownify | strip_html | normalize_whitespace | truncate: 350 }}{%- endcapture -%}
-    {%- unless first -%},{%- endunless -%}
-    {%- assign first = false %}
+    {%- unless is_first -%},{%- endunless -%}
+    {%- assign is_first = false %}
     {"t": {{ p.title | jsonify }}, "u": {{ p.url | jsonify }}, "d": {{ p.description | default: "" | jsonify }}, "c": {{ cat | jsonify }}, "x": {{ ex | jsonify }}}
   {%- endif -%}
 {%- endfor %},
