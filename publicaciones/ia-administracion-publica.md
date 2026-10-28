@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-04-30
+date_modified: 2026-10-28
 folder: espana
 permalink: ia-en-la-administracion-publica
 ---
@@ -145,6 +146,16 @@ Y si te suena a utopía, piensa que hace solo unos años usar IA para resumir te
 En mi opinión, convertir la innovación digital en un **proyecto estratégico dentro de la administración pública** no debería ser una opción. Debería ser una prioridad, y un buen punto de partida sería aprovechar las [ventajas que ya se están viendo a nivel local en los ayuntamientos](https://emirodgar.es/ia-ayuntamientos). Ya no hablamos solo de modernizar trámites o poner formularios online. Estamos hablando de replantear desde dentro cómo se toman decisiones, cómo se redactan leyes, cómo se priorizan recursos.
 
 La IA no va a resolver todos los problemas de la administración. Pero ignorarla sí puede crearnos unos cuantos nuevos
+
+> Actualización 10/2026
+
+## Países Bajos: menos funcionarios gracias a la IA
+
+El ejemplo más claro de lo que pasa cuando una administración convierte la IA en una palanca de ahorro llega ahora de Países Bajos. Según [elEconomista, que cita a Bloomberg](https://www.eleconomista.es/economia/noticias/14023810/10/26/la-seguridad-social-concede-7670-euros-al-mes-a-cada-pensionista-de-jubilacion-viudedad-o-incapacidad-permanente-con-hijos-aunque-sean-hombres.html), el Gobierno neerlandés prepara la eliminación de unos **25.000 puestos** de la administración central, más del 15% de sus empleados públicos. Busca ahorrar **900 millones de euros al año en 2027** y **3.500 millones anuales a partir de 2035**.
+
+El recorte no será uniforme. Ministerios, organismos de inspección y agencias ejecutoras concentrarán lo más duro, con reducciones de plantilla del **45% o incluso el 60%** en algunos departamentos, mientras que la policía y la defensa quedan fuera. El secretario de Estado para una Administración Eficaz, Eric van den Burg, lo justifica con una frase directa: "No podemos seguir haciendo lo mismo que hasta ahora". El plan se apoya en dos patas: eliminar unas 500 normas innecesarias al año para reducir burocracia y aplicar la IA de forma más amplia, atendiendo a unas mociones parlamentarias que piden subir un 20% la productividad pública. El Gobierno presentará los detalles de implantación a principios del próximo año, y quiere trabajar con proveedores neerlandeses y europeos para no depender de tecnología de fuera de la UE, una preocupación que ya tratamos al hablar de [soberanía digital europea](https://emirodgar.es/soberania-digital-europea-nube-chips).
+
+Conviene leerlo con matices. Es un anuncio, no un resultado, y los efectos reales de la IA en la productividad pública están por demostrar. Países Bajos parte además de unas cuentas sólidas (déficit del 1,6% y deuda del 44% del PIB, frente al 100% de España, según Eurostat) y de una plantilla que había alcanzado un récord de 160.000 funcionarios a finales de 2025, un 41% más que en 2018. España va en otra dirección: en el [análisis de los funcionarios](https://emirodgar.es/analisis-funcionarios) se ve cómo el empleo público sigue creciendo. La pregunta que deja el caso neerlandés para nuestra administración es qué ahorro se espera de la IA, quién lo mide y qué pasa con las personas cuyas tareas se automatizan.
 
 **Te puede interesar:** [la Ley de Martec](https://emirodgar.es/ley-martec).
 

@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
+date_modified: 2026-10-28
 folder: ia
 permalink: deepfakes-desinformacion-ia
 ---
@@ -52,6 +53,12 @@ Conviene matizar: es un dato de la propia empresa y falta una validación indepe
 ## Se puede detectar, pero no siempre a tiempo
 
 La buena noticia es que la misma tecnología que permite crear un deepfake convincente también permite detectarlo: análisis forense de metadatos, de frecuencias de audio o de artefactos de generación que el ojo humano no percibe. La mala noticia es que ninguna herramienta de detección es infalible al cien por cien, y la carrera entre quien genera y quien detecta se parece bastante a la que ya vivimos con otros contenidos generados por IA, como analizamos al ver que [la mitad de los contenidos digitales ya los escribe una inteligencia artificial](https://emirodgar.es/la-mitad-de-los-contenidos-digitales-los-escribe-una-inteligencia-artificial).
+
+### El Detector SynthID, abierto a todo el mundo
+
+Un ejemplo concreto es el **Detector SynthID** de Google. SynthID marca con una huella imperceptible las imágenes, los vídeos y los audios generados por sus modelos, y desde el 7 de octubre de 2026 la herramienta de detección está disponible a nivel global para cualquiera, aunque de momento solo en inglés. [Según Google](https://blog.google/intl/es-es/productos/informacion/estamos-facilitando-la-identificacion-de-contenido-generado-por-ia-a-nivel-global/), ya ha marcado más de **180.000 millones de imágenes y vídeos** y 240.000 años de audio, y el detector reconoce también contenido creado con IA de socios como OpenAI, NVIDIA o Kakao, con Apple anunciada. Las funciones de verificación integradas en Búsqueda, Gemini y Chrome gestionan ya más de un millón de solicitudes al día.
+
+Es útil, pero con un límite claro: solo identifica contenido hecho con las IA de Google o de sus socios. Un deepfake generado con un modelo que no marque sus creaciones no aparecerá como sintético, de modo que una respuesta negativa no demuestra que algo sea real. Es la misma lógica que la etiqueta obligatoria del AI Act: ayuda cuando existe, y no sustituye a la verificación de la fuente.
 
 ## Aprender a dudar, sin dejar de confiar en nada
 

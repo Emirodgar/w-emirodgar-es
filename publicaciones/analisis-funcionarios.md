@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-09-02
-date_modified: 2026-10-21
+date_modified: 2026-10-28
 folder: analisis
 permalink: analisis-funcionarios
 ---
@@ -199,6 +199,14 @@ La consejera Ivana Maletic resume el problema: los países priorizaron lo fácil
 A falta de unos dos meses y medio para cerrar el Mecanismo de Recuperación y Resiliencia, según los datos del Gobierno se ha resuelto el 75% de las convocatorias, el 70% de los fondos ha llegado "al sector empresarial" (cerca de 1,5 millones de sociedades receptoras, sobre todo por el Kit Digital) y quedarían unos 25.000 millones por recibir y adjudicar.
 
 *Fuente: Tribunal de Cuentas Europeo, con datos de abril de 2026 de la Comisión Europea, según El Mundo.*
+
+## El empleo público en la EPA del tercer trimestre de 2026
+
+Los datos más recientes llegan con la EPA del tercer trimestre de 2026, que el INE publicó el 27 de octubre. El empleo total creció en **73.600 personas** (+0,3%), el menor aumento en un tercer trimestre desde 2019, y marcó un máximo histórico de **22.852.600 ocupados**. El paro subió en **95.900 personas**, hasta 2.591.200, y la tasa quedó en el **10,18%**, tres décimas más que en el trimestre anterior. El Ministerio de Economía recuerda, según [la información de The Objective](https://theobjective.com/economia/2026-10-27/paro-subio-95-900-personas-verano/), que es la tasa más baja en un tercer trimestre desde 2007.
+
+Lo que interesa aquí es de dónde salió el empleo nuevo: el **sector público sumó 89.900 ocupados** y el privado **restó 16.300**. Dicho de otro modo, sin el empleo público el trimestre habría cerrado en negativo. Es coherente con las ofertas de empleo público récord que hemos visto más arriba, aunque un solo trimestre no marca tendencia y la EPA cuenta ocupados, no funcionarios de carrera.
+
+El contraste con otros países es llamativo. Mientras España engorda su plantilla pública, Países Bajos ha anunciado que quiere reducir la suya apoyándose en la IA, un plan que contamos en [la IA en la administración pública](https://emirodgar.es/ia-en-la-administracion-publica).
 
 ## Conclusiones
 
