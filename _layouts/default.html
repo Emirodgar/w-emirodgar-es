@@ -5,61 +5,58 @@
 <html lang="es">
 {% include head.html %}
 
-<body>
+<body class="sg-site">
   <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
   {% include analytics.html %}
   {% include site-header.html %}
-  <div class="wrapper wrapper--single{% if page.schema == 'CollectionPage' or page.hub %} wrapper--hub{% endif %}">
 
-    <main class="main-wrapper" id="main-content">
-      {% assign category = nil %}
+  {% assign is_hub = false %}
+  {% if page.schema == 'CollectionPage' or page.hub %}{% assign is_hub = true %}{% endif %}
+  {% assign category = nil %}
+  {% if page.folder %}
+    {% for cat in site.data.publication_categories %}
+      {% if cat.folder == page.folder %}{% assign category = cat %}{% endif %}
+    {% endfor %}
+  {% endif %}
+
+  <main class="sg-main" id="main-content">
+    <div class="sg-container {% if is_hub %}sg-hub{% else %}sg-narrow{% endif %}">
+
       {% if page.folder %}
-        {% for cat in site.data.publication_categories %}
-          {% if cat.folder == page.folder %}{% assign category = cat %}{% endif %}
-        {% endfor %}
+      <div class="sg-post-head">
+        <div class="sg-post-meta">
+          {% if category %}<a class="sg-tag" href="{{ site.url }}{{ category.url }}">{{ category.label }}</a>{% endif %}
+          {% if page.date %}
+          <span class="sep" aria-hidden="true">•</span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%d/%m/%Y' }}</time>
+          {% endif %}
+          {% if page.date_modified %}
+          <span class="sep" aria-hidden="true">•</span>
+          <span class="sg-post-meta__item">Actualizado el {{ page.date_modified | date: '%d/%m/%Y' }}</span>
+          {% endif %}
+          {% assign words = content | number_of_words %}
+          <span class="sep" aria-hidden="true">•</span>
+          <span class="sg-post-meta__item">{% if words < 360 %}1 minuto de lectura{% else %}{{ words | divided_by: 180 }} minutos de lectura{% endif %}</span>
+        </div>
+      </div>
+      {% else %}
+      <nav class="sg-crumbs" aria-label="Ruta de navegación">
+        <a href="/">Inicio</a>
+        <span aria-hidden="true">/</span>
+        <a href="/mapa">Todas las publicaciones</a>
+      </nav>
       {% endif %}
 
-      <nav class="meta mb-3" aria-label="Ruta de navegación">
-        <a href="https://emirodgar.es">Inicio</a>
-        <span class="separator" aria-hidden="true"> / </span>
-        {% if category %}
-        <a href="{{ site.url }}{{ category.url }}">{{ category.label }}</a>
-        <span class="separator" aria-hidden="true"> / </span>
-        {% endif %}
-        <a href="https://emirodgar.es/mapa">todas las publicaciones</a>
-      </nav>
-
-      {{ content }}
+      <div class="{% if is_hub %}sg-content{% else %}sg-post{% if page.folder == nil or page.folder == '' %} sg-page{% endif %}{% endif %}">
+        {{ content }}
+      </div>
 
       {% if page.folder %}
-        <hr>
-        <div class="meta mb-3">
-          <span class="date">
-            Publicado el {{ page.date | date: '%d/%m/%Y' }}
-            {% if page.date_modified %}
-              / Actualizado el {{ page.date_modified | date: '%d/%m/%Y' }}
-            {% endif %}
-          </span>
-
-          <span class="timereading">
-            {% assign words = content | number_of_words %}
-            {% if words < 360 %}
-              / 1 minuto de lectura /
-            {% else %}
-              / {{ words | divided_by: 180 }} minutos de lectura /
-            {% endif %}
-          </span>
-
-          {% if category %}
-          <span><a href="{{ site.url }}{{ category.url }}">{{ category.label }}</a></span>
-          {% endif %}
-        </div>
-
         {% include author-box.html %}
         {% include related.html %}
       {% endif %}
-    </main>
-  </div>
+    </div>
+  </main>
 
   {% include footer.html %}
 

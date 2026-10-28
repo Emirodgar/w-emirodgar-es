@@ -23,774 +23,211 @@
       {"@type":"Person","@id":"https://emirodgar.es/#person","name":"Emilio Rodríguez García","url":"https://emirodgar.es/emilio","image":"https://emirodgar.es/assets/images/emirodgar.jpg","jobTitle":"Estratega de datos e inteligencia artificial","sameAs":["https://www.linkedin.com/in/emirodgar/"]}
     ]}
     </script>
-    <link rel="stylesheet" href="styles.css?v=20261026">
-	<link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
-<link rel="stylesheet" href="/assets/css/site-nav.css">
+    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}catch(e){}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
+    <link rel="stylesheet" href="/assets/css/site.css?v=20261028">
 </head>
-<body>
+<body class="sg-site">
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header class="sg-header" role="banner">
   <div class="sg-header__inner">
-    <a class="sg-brand" href="https://emirodgar.es/">Emirodgar</a>
-    <button class="sg-toggle" type="button" aria-expanded="false" aria-controls="sg-nav" onclick="var n=document.getElementById('sg-nav'),o=n.classList.toggle('is-open');this.setAttribute('aria-expanded',o)">Menú</button>
+    <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+    <button class="sg-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sg-nav"><span></span></button>
     <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
-      <a href="https://emirodgar.es/datos/">Dashboards</a>
-      <a href="https://emirodgar.es/elecciones/">Elecciones</a>
-      <a href="https://emirodgar.es/castilla-y-leon/">Castilla y León</a>
-      <a href="https://emirodgar.es/publicaciones-inteligencia-artificial">IA</a>
-      <a href="https://emirodgar.es/publicaciones-analisis">Análisis</a>
-      <a href="https://emirodgar.es/actualidad/">Actualidad</a>
-      <a href="https://emirodgar.es/servicios/">Servicios</a>
-      <a href="https://emirodgar.es/emilio">Sobre mí</a>
-      <a class="sg-search" href="https://emirodgar.es/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+      <ul class="sg-nav__list">
+        <li><a class="sg-nav__link" href="/datos/">Dashboards</a></li>
+        <li><a class="sg-nav__link" href="/elecciones/">Elecciones</a></li>
+        <li><a class="sg-nav__link" href="/castilla-y-leon/">Castilla y León</a></li>
+        <li><a class="sg-nav__link" href="/actualidad/">Actualidad</a></li>
+        <li class="sg-dropdown">
+          <button class="sg-nav__link sg-dropdown__toggle" type="button" aria-expanded="false">Publicaciones</button>
+          <div class="sg-dropdown__menu">
+            <a href="/publicaciones-inteligencia-artificial">Inteligencia artificial</a>
+            <a href="/publicaciones-analisis">Análisis</a>
+            <a href="/mapa">Todas las publicaciones</a>
+          </div>
+        </li>
+        <li><a class="sg-nav__link" href="/servicios/">Servicios</a></li>
+        <li><a class="sg-nav__link" href="/emilio">Sobre mí</a></li>
+      </ul>
+      <div class="sg-nav__tools">
+        <a class="sg-icon-btn sg-search" href="/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+        <button class="sg-icon-btn sg-theme" type="button" aria-label="Activar modo oscuro">
+          <span class="sg-moon" aria-hidden="true"><svg viewBox="0 0 1472 1536"><path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/></svg>Oscuro</span>
+          <span class="sg-sun" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/><path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/><path stroke-linecap="round" d="M24 45v-3.15"/></g></svg>Claro</span>
+        </button>
+        <a class="sg-btn" href="mailto:hola@emirodgar.com?subject=Consulta%20desde%20emirodgar.es">Contacto</a>
+      </div>
     </nav>
   </div>
 </header>
-    <section class="hero">
-        <h1>Transformando la gestión pública a través de la IA responsable</h1>
-        <h3>Estrategia, ética y eficiencia para los líderes del mañana</h3>
-        <div class="entry-grid">
-            <div class="entry">
-                <h2>Busco datos y herramientas</h2>
-                <p>Paneles gratuitos con datos oficiales para entender España y decidir mejor.</p>
-                <ul class="entry-list">
-                    <li><a href="https://emirodgar.es/elecciones/">Elecciones del 29N: encuestas, programas y test de afinidad</a></li>
-                    <li><a href="https://emirodgar.es/proyectos/catalogo-ayudas-espana/">Ayudas sociales: ¿a cuáles puedo optar?</a></li>
-                    <li><a href="https://emirodgar.es/proyectos/simulador-hipotecas-espana/">Simulador de hipotecas</a></li>
-                    <li><a href="https://emirodgar.es/proyectos/macrodata-espana/">Economía: indicadores y riesgo de recesión</a></li>
-                    <li><a href="https://emirodgar.es/castilla-y-leon/">Castilla y León: empleo público, ayudas y gobierno</a></li>
-                </ul>
-                <a class="entry-btn" href="https://emirodgar.es/datos/">Ver todos los dashboards →</a>
-            </div>
-            <div class="entry entry--pro">
-                <h2>Soy una organización</h2>
-                <p>IA responsable, datos y estrategia digital para administraciones y empresas.</p>
-                <ul class="entry-list">
-                    <li><a href="https://emirodgar.es/servicios/">Qué puedo hacer por tu organización</a></li>
-                    <li><a href="https://emirodgar.es/guia-ia-administracion-publica">Guía de IA en la administración pública</a></li>
-                    <li><a href="https://emirodgar.es/reglamento-europeo-ia-act">Qué cambia con el AI Act</a></li>
-                    <li><a href="https://emirodgar.es/emilio">Quién soy y cómo trabajo</a></li>
-                </ul>
-                <a class="entry-btn" href="https://emirodgar.es/servicios/">Ver servicios →</a>
-            </div>
+
+<main id="main-content" class="sg-main">
+
+  <section class="sg-hero">
+    <div class="sg-container">
+      <div class="sg-hero__inner">
+        <div class="sg-hero__avatar"><img src="/assets/images/emirodgar.jpg" alt="Emilio Rodríguez García" width="48" height="48"></div>
+        <a class="sg-hero__author" href="/emilio">Emilio Rodríguez</a>
+        <h1 class="sg-hero__title">Datos e IA responsable para entender España y decidir mejor</h1>
+        <p class="sg-hero__desc">Paneles gratuitos con datos oficiales, análisis y guías. Y, si eres una organización, estrategia con datos e inteligencia artificial para la gestión pública.</p>
+        <div class="sg-hero__actions">
+          <a class="sg-btn" href="/datos/">Ver dashboards</a>
+          <a class="sg-btn sg-btn--ghost" href="/servicios/">Servicios para organizaciones</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <section id="proyectos" class="section bg-light proyectos-section">
-        <h2>Proyectos</h2>
-        <p>Prototipos y pruebas de concepto que aplican datos e IA a problemas reales.</p>
-        <p><a href="https://emirodgar.es/datos/" class="link">Ver todos los dashboards →</a> <a href="https://emirodgar.es/elecciones/" class="link">Hub de elecciones →</a> <a href="https://emirodgar.es/castilla-y-leon/" class="link">Castilla y León →</a></p>
-        <div class="proyectos-grid">
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Elecciones en España</h3>
-                <p>Guía y seguimiento de cada convocatoria electoral: calendario, partidos y candidatos, media de encuestas, test de afinidad con fuentes e histórico. Empieza con las generales del 29 de noviembre.</p>
-                <div class="proyecto-chart-wrapper" id="eleccionesSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch" style="border-top-color:#0A5EB0"></i> PP</span>
-                    <span><i class="legend-swatch" style="border-top-color:#E2231A"></i> PSOE</span>
-                    <span><i class="legend-swatch" style="border-top-color:#5FA52A"></i> Vox</span>
-                </div>
-                <p id="eleccionesResumen" class="proyecto-resumen">Cargando resumen…</p>
-                <a href="https://emirodgar.es/proyectos/elecciones-espana/" class="link proyecto-cta">Explorar el panel completo →</a>
-                <a href="https://emirodgar.es/a-quien-votar/" class="link proyecto-cta" style="margin-top:0">Test: ¿a quién votar? →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>MacroData España</h3>
-                <p>Indicadores macroeconómicos de España: inflación, prima de riesgo, tipos del BCE, Euríbor y Fed, PIB y paro, con un termómetro propio de riesgo de recesión.</p>
-                <div class="proyecto-chart-wrapper" id="macrodataSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch"></i> IPC General</span>
-                    <span><i class="legend-swatch legend-swatch--dashed"></i> IPC Subyacente</span>
-                </div>
-                <p id="macrodataResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/macrodata-espana" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Panel Económico CyL</h3>
-                <p>Presupuesto autonómico, subvenciones concedidas y catálogo de ayudas públicas de la Junta de Castilla y León.</p>
-                <div class="proyecto-chart-wrapper" id="panelCylSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--violet"></i> Líneas de ayuda publicadas/año</span>
-                </div>
-                <p id="panelCylResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/panel-economico-cyl" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Radar de Empleo Público CyL</h3>
-                <p>Convocatorias, plazas ofertadas y bolsas de empleo público de la Junta de Castilla y León.</p>
-                <div class="proyecto-chart-wrapper" id="radarEmpleoSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--blue"></i> Plazas ofertadas/año</span>
-                </div>
-                <p id="radarEmpleoResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/radar-empleo-publico-cyl" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>¿Quién Gobierna CyL?</h3>
-                <p>El presidente, los vicepresidentes y los consejeros de la Junta de Castilla y León: sus competencias, su partido, desde cuándo y quién fue su predecesor.</p>
-                <div class="proyecto-chart-wrapper" id="quienGobiernaSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--blue"></i> PP</span>
-                    <span><i class="legend-swatch legend-swatch--emerald"></i> Vox</span>
-                </div>
-                <p id="quienGobiernaResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/quien-gobierna-cyl" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Simulador de Hipotecas en España</h3>
-                <p>Mercado hipotecario, comparativa de bancos y una calculadora de cuota con predicción de escenarios de tipos según el riesgo de recesión.</p>
-                <div class="proyecto-chart-wrapper" id="hipotecasSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--emerald"></i> Tipo medio hipotecario</span>
-                </div>
-                <p id="hipotecasResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/simulador-hipotecas-espana" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Catálogo de Ayudas Sociales en España</h3>
-                <p>Directorio filtrable de las principales ayudas y prestaciones estatales, con cuantías, requisitos y el enlace oficial para solicitarlas.</p>
-                <div class="proyecto-chart-wrapper" id="ayudasSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--blue"></i> Solicitables ahora</span>
-                    <span><i class="legend-swatch"></i> Resto del catálogo</span>
-                </div>
-                <p id="ayudasResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/catalogo-ayudas-espana" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Ayudas de Castilla y León y Salamanca</h3>
-                <p>Ayudas autonómicas de la Junta de Castilla y León y ayudas municipales o provinciales del Ayuntamiento y la Diputación de Salamanca, con cuantías, requisitos y enlace oficial de solicitud.</p>
-                <div class="proyecto-chart-wrapper" id="ayudasCylSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--amber"></i> Solicitables ahora</span>
-                    <span><i class="legend-swatch"></i> Resto del catálogo</span>
-                </div>
-                <p id="ayudasCylResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/ayudas-castilla-leon-salamanca" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
-            <div class="proyecto-card proyecto-card--featured">
-                <span class="proyecto-badge">Panel en vivo</span>
-                <h3>Lo Más Leído en Wikipedia</h3>
-                <p>Cada semana, un resumen en español de los 25 artículos más leídos de Wikipedia (Top 25 Report): qué temas generan más interés y por qué.</p>
-                <div class="proyecto-chart-wrapper" id="wikipediaTopSparkline" aria-hidden="true"></div>
-                <div class="proyecto-chart-legend">
-                    <span><i class="legend-swatch legend-swatch--violet"></i> Visitas de los artículos más leídos</span>
-                </div>
-                <p id="wikipediaTopResumen" class="proyecto-resumen">Cargando resumen ejecutivo…</p>
-                <a href="https://emirodgar.es/lo-mas-leido-wikipedia" class="link proyecto-cta">Explorar el panel completo →</a>
-            </div>
-
+  <section class="sg-section" id="explorar">
+    <div class="sg-container">
+      <div class="sg-section__head">
+        <div>
+          <span class="sg-section__intro">Explora</span>
+          <h2 class="sg-section__title">Por dónde empezar</h2>
         </div>
-    </section>
+        <a class="sg-pill" href="/mapa">Todas las publicaciones →</a>
+      </div>
+      <div class="sg-grid">
+        <a class="sg-card" href="/datos/">
+          <div class="sg-card__media sg-tone-0"><span class="sg-card__num">01</span><span class="sg-card__tag">11 paneles</span></div>
+          <div class="sg-card__info"><p class="sg-card__label">Datos oficiales</p><h3 class="sg-card__title">Dashboards</h3><p class="sg-card__desc">Economía, hipotecas, ayudas sociales, empleo público y más, con la fuente de cada cifra.</p></div>
+        </a>
+        <a class="sg-card" href="/elecciones/">
+          <div class="sg-card__media sg-tone-1"><span class="sg-card__num">02</span><span class="sg-card__tag">29N</span></div>
+          <div class="sg-card__info"><p class="sg-card__label">Generales 2026</p><h3 class="sg-card__title">Elecciones</h3><p class="sg-card__desc">Encuestas, programas, test de afinidad y cómo votar por correo.</p></div>
+        </a>
+        <a class="sg-card" href="/castilla-y-leon/">
+          <div class="sg-card__media sg-tone-2"><span class="sg-card__num">03</span><span class="sg-card__tag">Territorio</span></div>
+          <div class="sg-card__info"><p class="sg-card__label">Comunidad</p><h3 class="sg-card__title">Castilla y León</h3><p class="sg-card__desc">Empleo público, presupuesto, ayudas y quién gobierna la Junta.</p></div>
+        </a>
+        <a class="sg-card" href="/publicaciones-inteligencia-artificial">
+          <div class="sg-card__media sg-tone-3"><span class="sg-card__num">04</span><span class="sg-card__tag">Publicaciones</span></div>
+          <div class="sg-card__info"><p class="sg-card__label">Tecnología</p><h3 class="sg-card__title">Inteligencia artificial</h3><p class="sg-card__desc">Guías y análisis sobre IA, regulación y administración pública.</p></div>
+        </a>
+        <a class="sg-card" href="/publicaciones-analisis">
+          <div class="sg-card__media sg-tone-4"><span class="sg-card__num">05</span><span class="sg-card__tag">Publicaciones</span></div>
+          <div class="sg-card__info"><p class="sg-card__label">Datos</p><h3 class="sg-card__title">Análisis</h3><p class="sg-card__desc">Vivienda, empleo, sanidad, energía y otros temas explicados con datos.</p></div>
+        </a>
+        <a class="sg-card" href="/actualidad/">
+          <div class="sg-card__media sg-tone-5"><span class="sg-card__num">06</span><span class="sg-card__tag">Cada día</span></div>
+          <div class="sg-card__info"><p class="sg-card__label">Hemeroteca</p><h3 class="sg-card__title">Actualidad</h3><p class="sg-card__desc">Resumen diario de las portadas y archivo de días anteriores.</p></div>
+        </a>
+      </div>
+    </div>
+  </section>
 
-    <section id="actualidad-home" class="section actualidad-home-section" hidden>
-        <h2>Qué ha pasado en las últimas 24 horas</h2>
-        <p>Resumen automático de las portadas de El Mundo y The Objective, con archivo de todos los días anteriores.</p>
-        <div class="actualidad-home-card">
-            <p class="actualidad-home-fecha" id="actualidadHomeFecha"></p>
-            <h3 class="actualidad-home-titular" id="actualidadHomeTitular"></h3>
-            <ul class="actualidad-home-temas" id="actualidadHomeTemas"></ul>
-            <p class="actualidad-home-links">
-                <a href="/actualidad/" class="link">Leer el resumen completo y la hemeroteca →</a>
-                <a href="/timeline/" class="link">Ver la línea de tiempo →</a>
-            </p>
+  <section class="sg-section" id="hoy" hidden>
+    <div class="sg-container">
+      <div class="sg-today">
+        <div>
+          <p class="sg-today__date" id="hoyFecha"></p>
+          <h2 class="sg-today__title" id="hoyTitular"></h2>
+          <ul class="sg-today__topics" id="hoyTemas"></ul>
         </div>
-    </section>
-
-    <section id="riesgo-recesion" class="section thermo-section">
-        <h2>Termómetro de Riesgo de Recesión</h2>
-        <p>Un vistazo rápido al riesgo de recesión en España, calculado en vivo a partir de los indicadores de MacroData España.</p>
-        <div class="thermo-card">
-            <div class="thermo-visual" id="homeThermoSvg" aria-hidden="true"></div>
-            <div class="thermo-info">
-                <div class="thermo-score-row">
-                    <span class="thermo-score" id="homeThermoScore">--</span>
-                    <span class="thermo-score-max">/ 100</span>
-                    <span class="thermo-band" id="homeThermoBand">Cargando…</span>
-                </div>
-                <div class="thermo-components" id="homeThermoComponents"></div>
-                <p class="thermo-disclaimer">Índice propio y simplificado con fines divulgativos (no es una predicción oficial ni de ninguna institución). No incorpora el tipo de la Fed.</p>
-                <a href="https://emirodgar.es/proyectos/macrodata-espana/" class="link thermo-cta">Ver análisis de parámetros económicos →</a>
-            </div>
+        <div class="sg-today__actions">
+          <a class="sg-btn" href="/actualidad/">Leer el resumen</a>
+          <a class="sg-btn sg-btn--ghost" href="/timeline/">Línea de tiempo</a>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- Para organizaciones -->
-    <section id="servicios-home" class="section">
-        <h2>Cómo puedo ayudar a tu organización</h2>
-        <p>Del diagnóstico a la puesta en marcha, con foco en el uso responsable de los datos y la IA.</p>
-        <div class="cards">
-            <div class="card">
-                <h3>Consultoría en IA</h3>
-                <p>Dónde aporta valor la IA en tu organización, con gobernanza, ética y cumplimiento normativo.</p>
-            </div>
-            <div class="card">
-                <h3>Datos y dashboards</h3>
-                <p>Paneles a medida con fuentes oficiales, como los que ves en este sitio.</p>
-            </div>
-            <div class="card">
-                <h3>Formación y ponencias</h3>
-                <p>Sesiones para equipos directivos y técnicos sobre IA, datos y transformación digital.</p>
-            </div>
-            <div class="card">
-                <h3>Visibilidad en buscadores e IA</h3>
-                <p>SEO y GEO: cómo aparecer en Google y en las respuestas de ChatGPT, Gemini o Perplexity.</p>
-            </div>
+  <section class="sg-section" id="publicaciones">
+    <div class="sg-container">
+      <div class="sg-section__head">
+        <div>
+          <span class="sg-section__intro">Publicaciones</span>
+          <h2 class="sg-section__title">Lo último</h2>
         </div>
-        <p><a class="link" href="https://emirodgar.es/servicios/">Ver servicios en detalle →</a></p>
-    </section>
+        <a class="sg-pill" href="/mapa">Ver todas →</a>
+      </div>
+      <div class="sg-grid" id="ultimosArticulos">
+        <p>Cargando últimas publicaciones…</p>
+      </div>
+    </div>
+  </section>
 
-	<section class="about-me section">
-	    <div class="about-container">
-	        <div class="about-image">
-	            <img src="https://emirodgar.es/assets/images/emirodgar.jpg" alt="Emirodgar - Estrategia y IA" width="130" height="130" loading="lazy">
-	        </div>
-	        <div class="about-text">
-	            <h2>Emilio Rodríguez García</h2>
-	            <p>Ayudo a organizaciones y líderes a navegar la complejidad de la <strong>IA y los datos</strong>, transformando la gestión pública en un modelo más humano, ético y eficiente.</p>
-	        </div>
-	    </div>
-	</section>
-
-    <section id="services" class="section">
-        <h2>Retos</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>Actualización institucional</h3>
-                <p>La IA no espera. Existe riesgo de obsolescencia legislativa y operativa.</p>
-            </div>
-            <div class="card">
-                <h3>Gobernanza y ética</h3>
-                <p>Un sesgo en la IA puede destruir años de reputación política en segundos.</p>
-            </div>
-            <div class="card">
-                <h3>Innovacción inclusiva y humana</h3>
-                <p>La burocracia digital puede ser excluyente y generar rechazo social.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="articulos" class="section bg-light">
-        <h2>Últimos Artículos</h2>
-        <p>Explora tendencias en IA, datos y transformación digital.</p>
-        <br>
-        <p><a href='https://emirodgar.es/mapa'>Ver publicaciones</a></p>
-    </section>
-
-    <section class="section publicaciones">
-        <!--<h2>Publicaciones destacadas</h2>-->
-        <div class="tabla-publicaciones">
-          <div class="fila" id="ultimosArticulosContainer">
-            <p>Cargando últimas publicaciones…</p>
+  <section class="sg-section">
+    <div class="sg-container">
+      <div class="sg-cta">
+        <div class="sg-cta__content">
+          <h2 class="sg-cta__title">¿Tienes una organización y quieres sacar partido a los datos y la IA?</h2>
+          <p class="sg-cta__desc">Consultoría, dashboards a medida, formación y visibilidad en buscadores e IA para administraciones y empresas.</p>
+          <div class="sg-cta__actions">
+            <a class="sg-btn sg-btn--primary" href="/servicios/">Ver servicios</a>
+            <a class="sg-btn sg-btn--ghost" href="mailto:hola@emirodgar.com?subject=Consulta%20desde%20emirodgar.es">Cuéntame tu caso</a>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </section>
 
-	<section class="quote-container">
-	  <div class="quote-wrapper">
-	    <blockquote class="strategic-quote">
-	      <span class="quote-icon">“</span>
-	      <p>
-	        Mi objetivo es que la tecnología deje de ser una fuente de <strong>incertidumbre</strong> y se convierta en una <strong>herramienta poderosa</strong> para generar bienestar público.
-	      </p>
-	      <cite>— Emilio Rodríguez</cite>
-	    </blockquote>
-	  </div>
-	</section>
+</main>
 
-    <section id="contacto" class="section">
-        <h2>¿Hablamos?</h2>
-        <p>Si quieres impulsar tu estrategia con datos e inteligencia artificial, cuéntame tu caso.</p><br>
-        <a href="mailto:hola@emirodgar.com">Email</a>  <a href="https://www.linkedin.com/in/emirodgar/">LinkedIn</a>  <a href="https://emirodgar.es/servicios/">Servicios</a>
-    </section>
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div>
+      <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+      <p class="sg-footer__about">Datos e inteligencia artificial responsable para la gestión pública, las organizaciones y los ciudadanos.</p>
+    </div>
+    <nav class="sg-footer__nav" aria-label="Pie de página">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+      <a href="/buscar/">Buscar</a>
+      <a href="/mapa">Mapa web</a>
+    </nav>
+    <div class="sg-footer__social">
+      <a href="https://www.linkedin.com/in/emirodgar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      <a href="mailto:hola@emirodgar.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="sg-copyright">© 2026 <a href="/">Emirodgar</a> · Emilio Rodríguez García</div>
+</footer>
 
-    <!--<script src="script.js"></script>-->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const articlesContainer = document.getElementById('ultimosArticulosContainer');
-            if (articlesContainer) {
-                fetch('ultimos-articulos.json', { cache: 'no-store' })
-                    .then(res => {
-                        if (!res.ok) throw new Error('No se pudo cargar ultimos-articulos.json');
-                        return res.json();
-                    })
-                    .then(articles => {
-                        if (!articles.length) throw new Error('Sin artículos');
-                        articlesContainer.innerHTML = articles.map(a => `
-                            <div class="columna">
-                              <h3>${a.title}</h3>
-                              ${a.description ? `<p>${a.description}</p><br>` : ''}
-                              <p><a href="${a.url}">Leer más →</a></p>
-                            </div>
-                        `).join('');
-                    })
-                    .catch(() => {
-                        articlesContainer.innerHTML = '<p><a href="https://emirodgar.es/mapa">Ver publicaciones</a></p>';
-                    });
-            }
-        });
+<script src="/assets/js/theme.js?v=20261028" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    var esc = function (s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]; }); };
+    var meses = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+    var fmt = function (iso) { var d = new Date(iso); return isNaN(d) ? '' : d.getDate() + ' ' + meses[d.getMonth()] + ' ' + d.getFullYear(); };
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('macrodataSparkline');
-            const resumenEl = document.getElementById('macrodataResumen');
-            if (!sparklineEl) return;
+    var box = document.getElementById('ultimosArticulos');
+    fetch('/ultimos-articulos.json', { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+        .then(function (list) {
+            if (!list.length) throw 0;
+            box.innerHTML = list.slice(0, 3).map(function (a) {
+                return '<a class="sg-article" href="' + esc(a.url) + '">' +
+                    '<div class="sg-article__meta">' + esc(fmt(a.date)) + '</div>' +
+                    '<h3 class="sg-article__title">' + esc(a.title) + '</h3>' +
+                    (a.description ? '<p class="sg-article__excerpt">' + esc(a.description) + '</p>' : '') +
+                    '<span class="sg-article__more">Leer más →</span></a>';
+            }).join('');
+        })
+        .catch(function () { box.innerHTML = '<p><a href="/mapa">Ver todas las publicaciones →</a></p>'; });
 
-            fetch('proyectos/macrodata-espana/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    if (dataset.sparklineSvg) {
-                        sparklineEl.innerHTML = dataset.sparklineSvg;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('panelCylSparkline');
-            const resumenEl = document.getElementById('panelCylResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/panel-economico-cyl/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    if (dataset.sparklineSvg) {
-                        sparklineEl.innerHTML = dataset.sparklineSvg;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('radarEmpleoSparkline');
-            const resumenEl = document.getElementById('radarEmpleoResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/radar-empleo-publico-cyl/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    if (dataset.sparklineSvg) {
-                        sparklineEl.innerHTML = dataset.sparklineSvg;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('eleccionesSparkline');
-            const resumenEl = document.getElementById('eleccionesResumen');
-            if (!sparklineEl) return;
-
-            const DAY = 86400000;
-            const toDate = iso => { const [y, m, d] = iso.split('-').map(Number); return new Date(y, m - 1, d); };
-            const fmtPct = n => n.toFixed(1).replace('.', ',') + ' %';
-            const getJSON = url => fetch(url, { cache: 'no-store' }).then(r => { if (!r.ok) throw new Error(url); return r.json(); });
-            // Media ponderada: antigüedad (vida media 14 días) x raíz de la muestra, sondeos de los 30 días previos
-            const average = (ref, polls, id) => {
-                let num = 0, den = 0;
-                polls.forEach(s => {
-                    const age = (ref - toDate(s.fecha)) / DAY;
-                    if (age < 0 || age > 30 || s.voto[id] == null) return;
-                    const w = Math.pow(0.5, age / 14) * Math.sqrt(s.muestra);
-                    num += w * s.voto[id]; den += w;
-                });
-                return den ? num / den : null;
-            };
-
-            getJSON('proyectos/elecciones-espana/data/elecciones.json')
-                .then(idx => {
-                    const e = idx.elecciones.find(x => x.estado !== 'historica') || idx.elecciones[0];
-                    const base = 'proyectos/elecciones-espana/data/' + e.id + '/';
-                    return Promise.all([getJSON(base + 'convocatoria.json'), getJSON(base + 'encuestas.json'), getJSON(base + 'resultados.json').catch(() => ({ disponible: false })), e]);
-                })
-                .then(([conv, enc, res, e]) => {
-                    const t = new Date(); const today = new Date(t.getFullYear(), t.getMonth(), t.getDate());
-                    const days = Math.round((toDate(e.fecha) - today) / DAY);
-                    const v = conv.vedaEncuestas;
-                    const veda = enc.ocultas || (v && today >= toDate(v.desde) && today <= toDate(v.hasta));
-                    let head = days > 1 ? 'Faltan ' + days + ' días para las ' + conv.nombre.toLowerCase() + '.' : days === 1 ? 'Mañana se vota en las ' + conv.nombre.toLowerCase() + '.' : days === 0 ? 'Hoy se vota en las ' + conv.nombre.toLowerCase() + '.' : conv.nombre + ': ya se ha votado.';
-                    if (res.disponible || veda || !enc.sondeos.length) {
-                        resumenEl.textContent = head + (veda ? ' Las encuestas no se pueden publicar en los cinco días previos a la votación.' : '');
-                        return;
-                    }
-                    const polls = enc.sondeos.filter(s => s.tipo !== 'oficial');
-                    const dates = [...new Set(polls.map(s => s.fecha))].sort();
-                    const last = toDate(dates[dates.length - 1]);
-                    const series = [['PP', '#0A5EB0'], ['PSOE', '#E2231A'], ['VOX', '#5FA52A']].map(([id, color]) => ({
-                        id, color, pts: dates.slice(-16).map(d => average(toDate(d), polls, id))
-                    }));
-                    const all = series.flatMap(s => s.pts).filter(x => x != null);
-                    const min = Math.floor(Math.min(...all)) - 1, max = Math.ceil(Math.max(...all)) + 1;
-                    const W = 320, H = 110, px = 12, py = 10;
-                    const n = series[0].pts.length;
-                    const x = i => px + i * (W - 2 * px) / Math.max(n - 1, 1);
-                    const y = val => H - py - (val - min) / (max - min) * (H - 2 * py);
-                    const paths = series.map(s => '<polyline fill="none" stroke="' + s.color + '" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="' + s.pts.map((p, i) => p == null ? '' : x(i).toFixed(1) + ',' + y(p).toFixed(1)).filter(Boolean).join(' ') + '"/>').join('');
-                    sparklineEl.innerHTML = '<svg viewBox="0 0 ' + W + ' ' + H + '" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Evolución de la media de encuestas de PP, PSOE y Vox" style="width:100%;height:100%">' + paths + '</svg>';
-                    const cur = series.map(s => s.id.replace('VOX', 'Vox') + ' ' + fmtPct(s.pts[s.pts.length - 1]));
-                    resumenEl.textContent = head + ' Media de encuestas: ' + cur.join(', ') + '.';
-                })
-                .catch(() => {
-                    resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('quienGobiernaSparkline');
-            const resumenEl = document.getElementById('quienGobiernaResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/quien-gobierna-cyl/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    if (dataset.sparklineSvg) {
-                        sparklineEl.innerHTML = dataset.sparklineSvg;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('hipotecasSparkline');
-            const resumenEl = document.getElementById('hipotecasResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/simulador-hipotecas-espana/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    if (dataset.sparklineSvg) {
-                        sparklineEl.innerHTML = dataset.sparklineSvg;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('ayudasSparkline');
-            const resumenEl = document.getElementById('ayudasResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/catalogo-ayudas-espana/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    const ayudas = dataset.ayudas || [];
-                    const total = ayudas.length;
-                    const abiertas = ayudas.filter(a => a.estado === 'abierto' || a.estado === 'permanente').length;
-                    if (total > 0) {
-                        const wAbiertas = Math.round((abiertas / total) * 296);
-                        const wResto = 296 - wAbiertas;
-                        sparklineEl.innerHTML = `
-                            <svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ayudas solicitables ahora sobre el total del catalogo" style="width:100%;height:100%">
-                                <text x="12" y="18" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Ayudas solicitables ahora mismo</text>
-                                <rect x="12" y="34" width="${Math.max(wAbiertas, 2)}" height="34" rx="8" fill="#2563eb"/>
-                                <rect x="${12 + Math.max(wAbiertas, 2)}" y="34" width="${Math.max(wResto, 2)}" height="34" rx="8" fill="#e2e8f0"/>
-                                <text x="12" y="90" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1e293b">${abiertas} de ${total} ayudas</text>
-                            </svg>
-                        `;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('ayudasCylSparkline');
-            const resumenEl = document.getElementById('ayudasCylResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/catalogo-ayudas-cyl-salamanca/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    const ayudas = dataset.ayudas || [];
-                    const total = ayudas.length;
-                    const abiertas = ayudas.filter(a => a.estado === 'abierto' || a.estado === 'permanente' || a.estado === 'automatico').length;
-                    if (total > 0) {
-                        const wAbiertas = Math.round((abiertas / total) * 296);
-                        const wResto = 296 - wAbiertas;
-                        sparklineEl.innerHTML = `
-                            <svg viewBox="0 0 320 110" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ayudas solicitables ahora sobre el total del catalogo" style="width:100%;height:100%">
-                                <text x="12" y="18" font-family="Inter, sans-serif" font-size="11" fill="#64748b">Ayudas solicitables ahora mismo</text>
-                                <rect x="12" y="34" width="${Math.max(wAbiertas, 2)}" height="34" rx="8" fill="#d97706"/>
-                                <rect x="${12 + Math.max(wAbiertas, 2)}" y="34" width="${Math.max(wResto, 2)}" height="34" rx="8" fill="#e2e8f0"/>
-                                <text x="12" y="90" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#1e293b">${abiertas} de ${total} ayudas</text>
-                            </svg>
-                        `;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const seccion = document.getElementById('actualidad-home');
-            if (!seccion) return;
-            fetch('actualidad/datos/latest.json', { cache: 'no-cache' })
-                .then(res => { if (!res.ok) throw new Error('sin datos'); return res.json(); })
-                .then(d => {
-                    document.getElementById('actualidadHomeFecha').textContent =
-                        new Date(d.fecha + 'T12:00:00').toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
-                    document.getElementById('actualidadHomeTitular').textContent = d.titular;
-                    const lista = document.getElementById('actualidadHomeTemas');
-                    (d.temas || []).forEach(t => {
-                        const li = document.createElement('li');
-                        const b = document.createElement('strong');
-                        b.textContent = t.tema;
-                        li.appendChild(b);
-                        li.appendChild(document.createTextNode(' · ' + t.descripcion));
-                        lista.appendChild(li);
-                    });
-                    seccion.hidden = false;
-                })
-                .catch(() => { /* sin resumen todavía: el bloque se queda oculto */ });
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const sparklineEl = document.getElementById('wikipediaTopSparkline');
-            const resumenEl = document.getElementById('wikipediaTopResumen');
-            if (!sparklineEl) return;
-
-            fetch('proyectos/lo-mas-leido-wikipedia/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    if (resumenEl) {
-                        resumenEl.textContent = dataset.resumenEjecutivo || '';
-                    }
-                    if (dataset.sparklineSvg) {
-                        sparklineEl.innerHTML = dataset.sparklineSvg;
-                    }
-                })
-                .catch(() => {
-                    if (resumenEl) {
-                        resumenEl.textContent = 'No se ha podido cargar el resumen en este momento. Consulta el panel completo para ver los datos.';
-                    }
-                });
-        });
-
-        // Termómetro de Riesgo de Recesión: mismo cálculo que en el panel MacroData España,
-        // reproducido aquí a partir de su data.json para que la home muestre siempre el
-        // mismo resultado en vivo, sin duplicar el dato en ningún sitio.
-        document.addEventListener('DOMContentLoaded', function () {
-            const svgEl = document.getElementById('homeThermoSvg');
-            const scoreEl = document.getElementById('homeThermoScore');
-            const bandEl = document.getElementById('homeThermoBand');
-            const componentsEl = document.getElementById('homeThermoComponents');
-            if (!svgEl) return;
-
-            const RISK_BANDS = [
-                { max: 30, label: 'Riesgo Bajo', color: '#10b981' },
-                { max: 55, label: 'Riesgo Moderado', color: '#f59e0b' },
-                { max: 75, label: 'Riesgo Elevado', color: '#f97316' },
-                { max: 100, label: 'Riesgo Alto', color: '#e11d48' }
-            ];
-
-            function clampRisk(v, min, max) { return Math.max(min, Math.min(max, v)); }
-
-            function riskLerp(v, good, bad) {
-                if (typeof v !== 'number' || isNaN(v)) return null;
-                return clampRisk((v - good) / (bad - good) * 100, 0, 100);
-            }
-
-            function getIndicator(indicators, id) {
-                return (indicators || []).find(i => i.id === id) || null;
-            }
-
-            function formatNumber(n) {
-                if (typeof n !== 'number') return n;
-                const isNeg = n < 0;
-                const abs = Math.abs(n);
-                const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
-                const [intPart, decPart] = str.split('.');
-                const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-                const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
-                return isNeg ? `-${result}` : result;
-            }
-
-            function computeRecessionRisk(indicators) {
-                const pib = getIndicator(indicators, 'pib');
-                const paro = getIndicator(indicators, 'paro');
-                const ipc = getIndicator(indicators, 'ipc');
-                const prima = getIndicator(indicators, 'prima');
-                const bce = getIndicator(indicators, 'bce');
-                if (!pib || !paro || !ipc || !prima || !bce) return null;
-
-                const riskCrecimiento = riskLerp(pib.currentValue, 2.5, -1);
-                const riskEmpleo = riskLerp(paro.change, 0, 2);
-                const riskInflacion = riskLerp(Math.abs(ipc.currentValue - 2), 0.5, 4.5);
-                const riskTipos = riskLerp(bce.currentValue, 0, 5);
-                const riskPrima = riskLerp(prima.currentValue, 0, 300);
-                if ([riskCrecimiento, riskEmpleo, riskInflacion, riskTipos, riskPrima].some(v => v === null)) return null;
-                const riskFinanciero = (riskTipos + riskPrima) / 2;
-
-                const total = 0.35 * riskCrecimiento + 0.25 * riskEmpleo + 0.15 * riskInflacion + 0.25 * riskFinanciero;
-                const band = RISK_BANDS.find(b => total <= b.max) || RISK_BANDS[RISK_BANDS.length - 1];
-
-                return {
-                    score: Math.round(total * 10) / 10,
-                    band,
-                    components: [
-                        { label: 'Crecimiento (PIB)', value: Math.round(riskCrecimiento) },
-                        { label: 'Empleo (variación del paro)', value: Math.round(riskEmpleo) },
-                        { label: 'Inflación', value: Math.round(riskInflacion) },
-                        { label: 'Condiciones financieras', value: Math.round(riskFinanciero) }
-                    ]
-                };
-            }
-
-            function renderThermoSvg(score, color) {
-                const tubeTop = 20, tubeBottom = 250, bulbCy = 272, bulbR = 34;
-                const fillY = tubeTop + (1 - clampRisk(score, 0, 100) / 100) * (tubeBottom - tubeTop);
-                const ticks = [30, 55, 75].map(t => tubeTop + (1 - t / 100) * (tubeBottom - tubeTop));
-                return `
-                    <svg viewBox="0 0 140 320" role="img" aria-label="Termómetro de riesgo de recesión: ${score} sobre 100" style="width:100%;height:100%">
-                        <defs>
-                            <clipPath id="homeThermoClip">
-                                <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20"></rect>
-                                <circle cx="70" cy="${bulbCy}" r="${bulbR}"></circle>
-                            </clipPath>
-                        </defs>
-                        <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="#f1f5f9"></rect>
-                        <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="#f1f5f9"></circle>
-                        <g clip-path="url(#homeThermoClip)">
-                            <rect x="46" y="${fillY}" width="48" height="${320 - fillY}" fill="${color}"></rect>
-                        </g>
-                        <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="none" stroke="#cbd5e1" stroke-width="3"></rect>
-                        <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="none" stroke="#cbd5e1" stroke-width="3"></circle>
-                        ${ticks.map(y => `<line x1="94" y1="${y.toFixed(1)}" x2="106" y2="${y.toFixed(1)}" stroke="#94a3b8" stroke-width="2"></line>`).join('')}
-                    </svg>
-                `;
-            }
-
-            fetch('proyectos/macrodata-espana/data.json', { cache: 'no-store' })
-                .then(res => {
-                    if (!res.ok) throw new Error('No se pudo cargar data.json');
-                    return res.json();
-                })
-                .then(dataset => {
-                    const risk = computeRecessionRisk(dataset.indicators);
-                    if (!risk) throw new Error('Datos insuficientes para el termómetro');
-
-                    svgEl.innerHTML = renderThermoSvg(risk.score, risk.band.color);
-                    scoreEl.textContent = formatNumber(risk.score);
-                    scoreEl.style.color = risk.band.color;
-                    bandEl.textContent = risk.band.label;
-                    bandEl.style.backgroundColor = risk.band.color + '1a';
-                    bandEl.style.color = risk.band.color;
-
-                    componentsEl.innerHTML = risk.components.map(c => `
-                        <div>
-                            <div class="thermo-component-label">
-                                <span>${c.label}</span>
-                                <span class="thermo-component-value">${c.value}/100</span>
-                            </div>
-                            <div class="thermo-bar-track">
-                                <div class="thermo-bar-fill" style="width:${c.value}%;background-color:${risk.band.color}"></div>
-                            </div>
-                        </div>
-                    `).join('');
-                })
-                .catch(() => {
-                    scoreEl.textContent = '—';
-                    bandEl.textContent = 'No disponible ahora mismo';
-                });
-        });
-    </script>
+    fetch('/actualidad/datos/latest.json', { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw 0; return r.json(); })
+        .then(function (d) {
+            if (!d || !d.titular) return;
+            document.getElementById('hoyFecha').textContent = 'Actualidad · ' + fmt(d.fecha);
+            document.getElementById('hoyTitular').textContent = d.titular;
+            document.getElementById('hoyTemas').innerHTML = (d.temas || []).slice(0, 4).map(function (t) { return '<li>' + esc(t.categoria || t.tema) + '</li>'; }).join('');
+            document.getElementById('hoy').hidden = false;
+        })
+        .catch(function () {});
+});
+</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

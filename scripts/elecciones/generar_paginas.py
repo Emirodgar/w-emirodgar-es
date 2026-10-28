@@ -88,6 +88,12 @@ def site_header():
     return (ROOT / "_includes" / "site-header.html").read_text(encoding="utf-8").strip()
 
 
+def site_footer():
+    """Pie global del sitio (_includes/footer.html) + script del tema claro/oscuro."""
+    pie = (ROOT / "_includes" / "footer.html").read_text(encoding="utf-8").strip()
+    return pie + '\n<script src="/assets/js/theme.js?v=20261028" defer></script>'
+
+
 def head(title, desc, path, jsonld, extra_css=""):
     ld = "\n".join(f'    <script type="application/ld+json">{json.dumps(j, ensure_ascii=False)}</script>' for j in jsonld)
     return f"""<!DOCTYPE html>
@@ -125,7 +131,8 @@ def head(title, desc, path, jsonld, extra_css=""):
         .prose-x h2 {{ margin-top: 2rem; }}
 {extra_css}
     </style>
-    <link rel="stylesheet" href="/assets/css/site-nav.css">
+    <script>try{{if(localStorage.getItem("theme")==="dark"){{document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}}}catch(e){{}}</script>
+    <link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
 </head>"""
 
 
@@ -172,7 +179,8 @@ def footer():
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-2">
             <p>Proyecto educativo y experimental de <a class="text-slate-200 underline" href="https://emirodgar.es/">Emilio Rodríguez (Emirodgar)</a>, sin vinculación con ningún partido ni administración. Actualizado el {e(modified_txt)}.</p>
             <p>Datos oficiales: <a class="underline" href="https://www.juntaelectoralcentral.es" target="_blank" rel="noopener">Junta Electoral Central</a> · <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a> · <a class="underline" href="https://29neleccionesgenerales.es" target="_blank" rel="noopener">29neleccionesgenerales.es</a>. <a class="underline" href="https://emirodgar.es/proyectos/elecciones-espana/">Panel de Elecciones en España</a>.</p>
-        </div></footer>"""
+        </div></footer>
+{site_footer()}"""
 
 
 def byline():
