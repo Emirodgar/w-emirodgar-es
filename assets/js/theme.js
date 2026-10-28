@@ -15,7 +15,35 @@
     if (btn) btn.setAttribute('aria-label', dark ? 'Activar modo claro' : 'Activar modo oscuro');
   }
 
+  // Preguntas frecuentes: los párrafos «**¿Pregunta?** respuesta» bajo un h2 "Preguntas frecuentes" pasan a acordeón
+  function buildFaq() {
+    document.querySelectorAll('.sg-post h2, .sg-content h2').forEach(function (h) {
+      if (!/^preguntas frecuentes/i.test(h.textContent.trim())) return;
+      var box = null, node = h.nextElementSibling;
+      while (node && node.tagName !== 'H2') {
+        var next = node.nextElementSibling;
+        var q = node.tagName === 'P' && node.firstElementChild && node.firstElementChild.tagName === 'STRONG' ? node.firstElementChild : null;
+        if (q && /\?\s*$/.test(q.textContent) && node.firstChild === q) {
+          if (!box) { box = document.createElement('div'); box.className = 'sg-faq'; node.parentNode.insertBefore(box, node); }
+          var d = document.createElement('details'), sm = document.createElement('summary'), body = document.createElement('div');
+          d.className = 'sg-faq__item'; body.className = 'sg-faq__body';
+          sm.textContent = q.textContent.trim();
+          q.remove();
+          while (node.firstChild && (node.firstChild.nodeName === 'BR' || (node.firstChild.nodeType === 3 && !node.firstChild.textContent.trim()))) node.removeChild(node.firstChild);
+          body.appendChild(node);
+          d.appendChild(sm); d.appendChild(body); box.appendChild(d);
+        } else if (box && node.tagName === 'HR') {
+          node.remove();
+        } else if (box) {
+          box = null;
+        }
+        node = next;
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
+    buildFaq();
     var theme = document.querySelector('.sg-theme');
     if (theme) {
       theme.setAttribute('aria-label', root.hasAttribute('dark') ? 'Activar modo claro' : 'Activar modo oscuro');

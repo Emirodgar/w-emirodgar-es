@@ -1,7 +1,7 @@
 /* Cabecera, pie y modo claro/oscuro compartidos por TODAS las páginas (Jekyll y dashboards estáticos).
    Basado en el template Gerous. Todas las clases llevan el prefijo sg- y las variables --sg- para
    no chocar con Tailwind ni con el CSS propio de cada dashboard. */
-:root{--sg-primary:#96ff65;--sg-on-primary:#030711;--sg-bg:#fff;--sg-bg-alt:#eaecef;--sg-bg-alt-2:#e4e6eb;--sg-text:#030711;--sg-text-alt:#6b7280;--sg-heading:#030711;--sg-btn-bg:#030711;--sg-btn-color:#fff;--sg-btn-hover-bg:#96ff65;--sg-btn-hover-color:#030711;--sg-border:#e4e6eb;--sg-dark:#030711;--sg-shadow:0 8px 40px -8px rgba(0,0,0,.22)}
+:root{--sg-primary:#d14984;--sg-on-primary:#fff;--sg-bg:#fff;--sg-bg-alt:#eaecef;--sg-bg-alt-2:#e4e6eb;--sg-text:#030711;--sg-text-alt:#6b7280;--sg-heading:#030711;--sg-btn-bg:#030711;--sg-btn-color:#fff;--sg-btn-hover-bg:#ea4890;--sg-btn-hover-color:#fff;--sg-border:#e4e6eb;--sg-dark:#030711;--sg-shadow:0 8px 40px -8px rgba(0,0,0,.22)}
 :root[dark]{--sg-primary:#d14984;--sg-on-primary:#fff;--sg-bg:#1a1b1e;--sg-bg-alt:#2b2d31;--sg-bg-alt-2:#34363a;--sg-text:#9a9a9a;--sg-text-alt:#9a9a9a;--sg-heading:#f5f5f5;--sg-btn-bg:#d14984;--sg-btn-color:#fff;--sg-btn-hover-bg:#ea4890;--sg-btn-hover-color:#fff;--sg-border:#333;--sg-dark:#2b2d31}
 
 .skip-link{position:absolute;left:-9999px;top:8px;z-index:200;padding:8px 16px;border-radius:60px;background:var(--sg-btn-bg);color:var(--sg-btn-color)}

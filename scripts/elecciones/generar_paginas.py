@@ -112,7 +112,9 @@ def head(title, desc, path, jsonld, extra_css=""):
     <meta property="og:url" content="{SITE}{path}">
     <meta property="og:image" content="https://emirodgar.com/cdn/images/og/estrategia-seo.png">
     <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="https://emirodgar.com/cdn/images/hash.png" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 {ld}
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
