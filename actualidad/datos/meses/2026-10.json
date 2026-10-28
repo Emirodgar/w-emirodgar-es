@@ -825,7 +825,7 @@
         "titulo": "Lula logra una victoria inédita en Brasil y derrota al bolsonarismo",
         "url": "https://www.elmundo.es/internacional/2026/10/26/6ade9b3be4d4d8d04c8b458a.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-26",
@@ -894,6 +894,48 @@
         "medio": "El Mundo",
         "titulo": "Israel vota bajo la sombra del 7-O: la participación es la más alta desde 1981",
         "url": "https://www.elmundo.es/internacional/2026/10/27/6adfb67ae4d4d8bf5d8b45b9.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-27",
+      "edicion": "2026-10-28",
+      "titulo": "Prohibición del burka en escuelas de la Comunidad Valenciana",
+      "categoria": "Sociedad",
+      "descripcion": "La Comunidad Valenciana se convierte en la primera región en España en prohibir el velo islámico integral en los centros educativos para garantizar la interacción y la seguridad.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El veto al burka entra en las escuelas: \"Es un problema no solo para las musulmanas\"",
+        "url": "https://www.elmundo.es/espana/2026/10/27/6adb7636e85ece24568b45a8.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-28",
+      "edicion": "2026-10-28",
+      "titulo": "Accidente ferroviario en Urda (Toledo)",
+      "categoria": "Sucesos",
+      "descripcion": "Colisión de dos trenes de alta velocidad, un AVE y un Iryo, en la estación de Urda, Toledo, resultando en al menos 30 muertos y decenas de heridos, según El Mundo, y hasta 50 muertos según The Objective.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Óscar Puente, en Atocha \"tratando de obtener toda la información\" sobre el choque",
+        "url": "https://www.elmundo.es/economia/2026/10/28/6ae1d3163e9f6f8c52af782f-directo.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-28",
+      "edicion": "2026-10-28",
+      "titulo": "Apertura de expediente de la Comisión Europea a España por inmigración",
+      "categoria": "Política",
+      "descripcion": "La Comisión Europea inicia un expediente a España para investigar si la regularización de inmigrantes respetó las normas europeas, a raíz de una queja de Junts.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Comisión Europea abre expediente a España por la regularización de inmigrantes",
+        "url": "https://www.elmundo.es/espana/2026/10/28/6ae104e8e4d4d859798b45a2.html"
       },
       "destacado": false
     }

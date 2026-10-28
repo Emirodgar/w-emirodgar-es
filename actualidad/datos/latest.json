@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-27",
-  "generado_en": "2026-10-27T10:18:47+00:00",
-  "titular": "Elecciones en Israel con alta participación y acuerdo PP-Vox para el Senado marcan la jornada",
+  "fecha": "2026-10-28",
+  "generado_en": "2026-10-28T11:10:55+00:00",
+  "titular": "Trágico accidente ferroviario en Toledo con al menos 30 muertos y la UE expresa su consternación",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 184
+    "El Mundo": 25,
+    "The Objective": 224
   },
   "temas": [
     {
-      "tema": "Elecciones en Israel y situación en Oriente Medio",
-      "categoria": "Internacional",
-      "descripcion": "Israel celebra elecciones legislativas con una alta participación, la mayor desde 1981, en un contexto post-7 de octubre. Se reportan detenciones por presunta compra de votos."
+      "tema": "Accidente ferroviario en Toledo",
+      "categoria": "Sucesos",
+      "descripcion": "Colisión de dos trenes de alta velocidad en Urda (Toledo) con un elevado número de víctimas mortales y heridos, generando consternación a nivel nacional e internacional."
     },
     {
-      "tema": "Acuerdo PP-Vox para el Senado y panorama político español",
+      "tema": "Denuncia de Begoña Gómez y adelanto electoral",
       "categoria": "Política",
-      "descripcion": "El PP y Vox han pactado una coordinación electoral para el Senado que podría dar a la derecha el control de la Cámara Alta, con el objetivo de renovar el Tribunal Constitucional sin el PSOE. Este acuerdo ha generado críticas de Frente Amplio."
+      "descripcion": "Begoña Gómez denuncia al PP por un vídeo con IA, y Pedro Sánchez revela que la decisión de adelantar las elecciones se tomó en un ámbito familiar."
     },
     {
-      "tema": "Financiación ilegal y dimisión de cargos en España",
+      "tema": "Expediente de la Comisión Europea a España por inmigración",
       "categoria": "Política",
-      "descripcion": "La UCO ha acreditado 300.000 euros vinculados a la financiación ilegal del PSOE. El exdelegado del Gobierno en Madrid dimitió tras una amenaza de demanda y será denunciado por el Ayuntamiento por \"inacción\" en la acampada de Sol."
+      "descripcion": "La Comisión Europea ha abierto un expediente a España para examinar si el Gobierno respetó las normas europeas en la regularización de inmigrantes."
     },
     {
-      "tema": "Disturbios y seguridad en España",
-      "categoria": "Sociedad",
-      "descripcion": "El Gobierno Vasco atribuye los altercados de Bilbao a \"grupos organizados vascos\". En Cataluña, los Mossos alertan de un posible saqueo masivo. Se reporta un choque entre Policía y Guardia Civil en Ceuta por falta de indicaciones."
+      "tema": "Resultados económicos de grandes empresas",
+      "categoria": "Economía",
+      "descripcion": "Endesa, Mapfre y Santander anuncian importantes aumentos en sus beneficios hasta septiembre, destacando la fortaleza de sus negocios."
     }
   ]
 }
