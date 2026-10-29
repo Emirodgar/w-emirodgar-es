@@ -9,7 +9,7 @@ Proyecto público con una **plantilla fija** (`index.html`) que no se toca entre
 ficheros JSON por convocatoria; la página los lee con `fetch`.
 
 ```
-proyectos/elecciones-espana/
+elecciones-espana/
   index.html                       # plantilla única, NO editar para actualizar datos
   data/
     elecciones.json                # índice de convocatorias + lastUpdated
@@ -22,7 +22,7 @@ proyectos/elecciones-espana/
       resultados.json              # {"disponible": false} hasta el escrutinio
 ```
 
-Panel: [proyectos/elecciones-espana/index.html](../../../proyectos/elecciones-espana/index.html) (incluye las FAQ con la documentación del proyecto: `buildFaq()`)
+Panel: [elecciones-espana/index.html](../../../elecciones-espana/index.html) (incluye las FAQ con la documentación del proyecto: `buildFaq()`)
 La antigua ficha `/elecciones-espana` ya no existe: es solo una redirección a la URL del panel.
 
 Tras cualquier cambio, actualiza `lastUpdated` (formato «12 de Octubre, 2026») **y `lastUpdatedISO`** (AAAA-MM-DD) en `data/elecciones.json`.
@@ -115,7 +115,7 @@ constituyan las Cortes, cambia el `estado` de la convocatoria a `historica` en `
 4. La página elige sola la convocatoria no histórica más próxima; `?e=<id>` fuerza una concreta.
 
 ## Checklist de verificación
-- [ ] `preview_start` con `static-site` y abrir `/proyectos/elecciones-espana/` sin errores en consola.
+- [ ] `preview_start` con `static-site` y abrir `/elecciones-espana/` sin errores en consola.
 - [ ] Todos los `partidoId` y claves de `voto`/`posiciones` existen en `partidos.json`.
 - [ ] La suma de escaños del hemiciclo es el total del Congreso (`escanosActuales` + `escanosOtros`).
 - [ ] Ninguna URL de `fuente` o `programaUrl` está inventada.

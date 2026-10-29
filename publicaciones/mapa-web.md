@@ -140,15 +140,7 @@ Toda página web que se precie debe tener un **mapa web** para poder organizar l
 
 ## Proyectos
 
-<ul>
-{% for page in sorted_pages %}
-{% if page.title != null  %}
-	{% if page.folder== "proyectos" %}
-	  <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-	{% endif %}
-{% endif %}
-{% endfor %}
-</ul>
+{% include project-list.html %}
 
 ---
 

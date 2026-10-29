@@ -7,9 +7,9 @@ description: Actualiza el catálogo "Ayudas de Castilla y León y Salamanca" con
 
 Panel público con un directorio filtrable de ayudas de **ámbito autonómico** (Junta de Castilla y León) y de **ámbito municipal o provincial de Salamanca** (Ayuntamiento de Salamanca y Diputación de Salamanca). No incluye ayudas de ámbito estatal (esas viven en el proyecto separado `catalogo-ayudas-espana`) ni ayudas de otros ayuntamientos de la provincia distintos de la capital.
 
-- Dataset: [proyectos/catalogo-ayudas-cyl-salamanca/data.json](../../../proyectos/catalogo-ayudas-cyl-salamanca/data.json)
-- Panel completo: [proyectos/catalogo-ayudas-cyl-salamanca/index.html](../../../proyectos/catalogo-ayudas-cyl-salamanca/index.html)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-catalogo-ayudas-cyl-salamanca.md](../../../publicaciones/proyecto-catalogo-ayudas-cyl-salamanca.md)
+- Dataset: [ayudas-castilla-leon-salamanca/data.json](../../../ayudas-castilla-leon-salamanca/data.json)
+- Panel completo: [ayudas-castilla-leon-salamanca/index.html](../../../ayudas-castilla-leon-salamanca/index.html)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [ayudas-castilla-leon-salamanca/index.html](../../../ayudas-castilla-leon-salamanca/index.html)
 
 ## Esquema de `data.json`
 

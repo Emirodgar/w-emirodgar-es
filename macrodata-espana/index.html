@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacroData España | Panel de Indicadores Económicos</title>
+    <meta name="description" content="Panel público con la evolución de los principales indicadores macroeconómicos de España: IPC, prima de riesgo, tipos del BCE, Euríbor, Fed, PIB y paro, con un termómetro propio de riesgo de recesión.">
+        <link rel="canonical" href="https://emirodgar.es/macrodata-espana/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Emirodgar">
+    <meta property="og:title" content="MacroData España | Panel de Indicadores Económicos">
+    <meta property="og:description" content="Panel público con la evolución de los principales indicadores macroeconómicos de España: IPC, prima de riesgo, tipos del BCE, Euríbor, Fed, PIB y paro, con un termómetro propio de riesgo de recesión.">
+    <meta property="og:url" content="https://emirodgar.es/macrodata-espana/">
+    <meta property="og:image" content="https://emirodgar.es/assets/images/emirodgar.jpg">
+    <meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- FAQPage structured data, filled in dynamically once data.json loads (see renderFAQ) -->
+    <script type="application/ld+json" id="faqStructuredData"></script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            500: '#0284c7',
+                            600: '#0369a1',
+                            700: '#075985',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        /* Custom scrollbar for modal JSON editor */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+        textarea::-webkit-scrollbar-track {
+            background: #1f2937;
+        }
+        textarea::-webkit-scrollbar-thumb {
+            background: #4b5563;
+            border-radius: 4px;
+        }
+    </style>
+<script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
+<link rel="stylesheet" href="/assets/css/project-doc.css?v=20261029">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+<header class="sg-header" role="banner">
+  <div class="sg-header__inner">
+    <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+    <button class="sg-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sg-nav"><span></span></button>
+    <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
+      <ul class="sg-nav__list">
+        <li><a class="sg-nav__link" href="/datos/">Dashboards</a></li>
+        <li><a class="sg-nav__link" href="/elecciones/">Elecciones</a></li>
+        <li><a class="sg-nav__link" href="/castilla-y-leon/">Castilla y León</a></li>
+        <li><a class="sg-nav__link" href="/actualidad/">Actualidad</a></li>
+        <li class="sg-dropdown">
+          <button class="sg-nav__link sg-dropdown__toggle" type="button" aria-expanded="false">Publicaciones</button>
+          <div class="sg-dropdown__menu">
+            <a href="/publicaciones-inteligencia-artificial">Inteligencia artificial</a>
+            <a href="/publicaciones-analisis">Análisis</a>
+            <a href="/mapa">Todas las publicaciones</a>
+          </div>
+        </li>
+      </ul>
+      <div class="sg-nav__tools">
+        <a class="sg-icon-btn sg-search" href="/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+        <button class="sg-icon-btn sg-theme" type="button" aria-label="Activar modo oscuro">
+          <span class="sg-moon" aria-hidden="true"><svg viewBox="0 0 1472 1536"><path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/></svg>Oscuro</span>
+          <span class="sg-sun" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/><path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/><path stroke-linecap="round" d="M24 45v-3.15"/></g></svg>Claro</span>
+        </button>
+        <a class="sg-btn" href="/emilio">Sobre mí</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="bg-slate-950 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2 flex-wrap">
+            <a href="/proyectos" class="hover:text-white transition">Proyectos</a>
+            <span>/</span>
+            <span class="text-slate-300">MacroData España</span>
+            <a href="#documentacion" class="ml-auto hover:text-white transition">Cómo está hecho</a>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="bg-slate-900 text-white shadow-md border-b border-slate-800 sticky top-0 z-30">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            <div class="flex items-center space-x-3">
+                <div class="p-2.5 bg-brand-600 rounded-xl shadow-lg">
+                    <i class="fa-solid me-1 fa-chart-line text-xl text-white"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl font-bold tracking-tight text-white">MacroData España</h1>
+                    <p class="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                        <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Última actualización: <span id="lastUpdatedLabel" class="font-medium text-slate-300">--</span>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Header Action Controls -->
+            <div class="flex items-center gap-2 self-end sm:self-auto w-full sm:w-auto">
+                <button id="openJsonBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg border border-slate-700 transition">
+                    <i class="fa-solid fa-code text-brand-500"></i>
+                    <span>Editar / Importar JSON</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+        <!-- Filter and Info Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <div>
+                <h2 class="text-lg font-semibold text-slate-900">Cuadro de Mando Macroeconómico</h2>
+                <p class="text-xs text-slate-500 mt-0.5">Evolución de los principales indicadores de la economía española y la Eurozona.</p>
+            </div>
+
+            <!-- Timeframe selector buttons -->
+            <div class="flex items-center bg-slate-100 p-1 rounded-lg self-stretch md:self-auto justify-center">
+                <button class="time-filter px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:text-slate-900 transition" data-range="6">6 Meses</button>
+                <button class="time-filter px-3 py-1.5 text-xs font-semibold rounded-md bg-white text-slate-900 shadow-sm transition" data-range="12">12 Meses</button>
+                <button class="time-filter px-3 py-1.5 text-xs font-semibold rounded-md text-slate-600 hover:text-slate-900 transition" data-range="all">Todo</button>
+            </div>
+        </div>
+
+        <!-- Executive summary -->
+        <section id="resumenEjecutivoSection" class="bg-brand-900 text-white rounded-xl shadow-sm hidden overflow-hidden">
+            <button type="button" id="resumenEjecutivoToggle" class="w-full flex items-center justify-between gap-3 p-4 text-left hover:bg-white/5 transition">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-white/10 rounded-lg">
+                        <i class="fa-solid fa-lightbulb text-brand-100"></i>
+                    </div>
+                    <h3 class="font-bold text-white">Resumen ejecutivo</h3>
+                </div>
+                <span class="flex-shrink-0 inline-flex items-center gap-2 text-xs font-semibold bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded-lg transition">
+                    <span id="resumenEjecutivoToggleLabel">Ver resumen</span>
+                    <i id="resumenEjecutivoToggleIcon" class="fa-solid fa-chevron-down text-[10px] transition-transform"></i>
+                </span>
+            </button>
+            <div id="resumenEjecutivoBody" class="hidden px-4 pb-4">
+                <p id="resumenEjecutivoText" class="text-sm text-slate-200 leading-relaxed"></p>
+            </div>
+        </section>
+
+        <!-- Termómetro de Riesgo de Recesión -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-temperature-three-quarters text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Termómetro de Riesgo de Recesión</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Índice propio y simplificado (0-100) calculado a partir del crecimiento, el empleo, la inflación y las condiciones financieras de este mismo panel. No es una predicción oficial.</p>
+
+        <section class="bg-white p-6 rounded-xl shadow-sm border border-slate-200">
+            <div id="riesgoRecesionContainer"></div>
+        </section>
+
+        <section class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+            <div class="flex justify-between items-start mb-4">
+                <div>
+                    <div class="flex items-center gap-2">
+                        <span class="w-3 h-3 rounded-full bg-violet-500"></span>
+                        <h3 class="font-bold text-slate-800">Evolución del Termómetro de Riesgo</h3>
+                    </div>
+                    <p class="text-xs text-slate-500 mt-1">Puntuación del índice (0-100) en los últimos 6 meses, recalculada mes a mes con los mismos datos históricos de este panel</p>
+                </div>
+                <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Puntos / mes</span>
+            </div>
+            <div class="relative h-64 w-full">
+                <canvas id="riesgoHistoricoChart"></canvas>
+            </div>
+            <p class="mt-3 text-[11px] text-slate-400 leading-relaxed">
+                El punto más reciente puede diferir levemente del valor mostrado arriba si ha habido una decisión de tipos (BCE/Fed) muy
+                reciente que el histórico mensual aún no refleja. El componente de empleo de esta serie usa la variación frente al último
+                dato trimestral distinto disponible (no siempre interanual, por la limitación de historial almacenado).
+            </p>
+        </section>
+
+        <!-- Sección: España vs. Zona Euro -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-scale-balanced text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">¿Cómo Avanza España Frente a la Eurozona?</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Comparativa de los últimos datos publicados por Eurostat para España y el conjunto de la eurozona.</p>
+
+        <section id="comparativaContainer" class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+            <!-- Dynamic comparison cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Key Metrics Cards Container -->
+        <section id="metricsContainer" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Dynamic KPI Cards will be injected here via JavaScript -->
+        </section>
+
+        <!-- Historical Charts Grid -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+
+            <!-- Chart 1: Inflación (IPC) -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-rose-500"></span>
+                            <h3 class="font-bold text-slate-800">Inflación: IPC General vs Subyacente</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Variación interanual expresada en porcentaje (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Mensual</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="ipcChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 2: Prima de Riesgo -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-amber-500"></span>
+                            <h3 class="font-bold text-slate-800">Prima de Riesgo España</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Diferencial con respecto al bono alemán a 10 años (puntos básicos)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Puntos Básicos</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="primaChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 3: Tipos de Interés BCE vs Euríbor vs Fed -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-blue-600"></span>
+                            <h3 class="font-bold text-slate-800">Tipos BCE vs Euríbor vs Fed</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tipos oficiales (BCE, Fed) frente a tipo de mercado (Euríbor), en % </p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Porcentaje</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="ratesChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 4: Crecimiento PIB -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-emerald-500"></span>
+                            <h3 class="font-bold text-slate-800">Crecimiento del PIB</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tasa de variación trimestral/interanual del PIB (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Trimestral</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="pibChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Chart 5: Tasa de Paro EPA -->
+            <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 flex flex-col justify-between lg:col-span-2">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-orange-500"></span>
+                            <h3 class="font-bold text-slate-800">Tasa de Paro (EPA)</h3>
+                        </div>
+                        <p class="text-xs text-slate-500 mt-1">Tasa de paro trimestral de la Encuesta de Población Activa (%)</p>
+                    </div>
+                    <span class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200">Trimestral</span>
+                </div>
+                <div class="relative h-64 w-full">
+                    <canvas id="paroChart"></canvas>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Summary Data Table -->
+        <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div class="px-6 py-4 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2">
+                    <i class="fa-solid fa-table text-slate-400"></i>
+                    <span>Histórico Reciente de Datos</span>
+                </h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm text-left text-slate-600">
+                    <thead class="text-xs text-slate-500 uppercase bg-slate-100/70 border-b border-slate-200">
+                        <tr>
+                            <th scope="col" class="px-6 py-3 font-semibold">Mes/Años</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">IPC General (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">IPC Subyacente (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Prima Riesgo (pb)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Tipo BCE (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Euríbor 12M (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Tipo Fed (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">PIB Trim. (%)</th>
+                            <th scope="col" class="px-6 py-3 font-semibold text-right">Paro EPA (%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataTableBody" class="divide-y divide-slate-100">
+                        <!-- Dynamic table rows will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section id="sourcesSection" class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hidden">
+            <h3 class="font-bold text-slate-800 flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-book text-slate-400"></i>
+                <span>Fuentes de los datos</span>
+            </h3>
+            <ul id="sourcesList" class="text-xs text-slate-500 space-y-1.5"></ul>
+        </section>
+
+        <!-- FAQ -->
+        <div class="flex items-center gap-2 pt-2">
+            <i class="fa-solid fa-circle-question text-brand-600"></i>
+            <h2 class="text-base font-bold text-slate-800">Preguntas Frecuentes</h2>
+        </div>
+        <p class="text-xs text-slate-500 -mt-4">Qué significan los términos de este panel y cómo interpretar los datos, con respuestas que se actualizan junto con las cifras.</p>
+
+        <section id="faqSection" class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <div id="faqContainer" class="divide-y divide-slate-100"></div>
+        </section>
+
+
+        <!-- Documentación del proyecto (antes en una página aparte) -->
+        <section id="documentacion" class="pdoc" aria-labelledby="documentacion-titulo">
+            <h2 id="documentacion-titulo" class="pdoc__title">Sobre este proyecto: cómo está hecho</h2>
+            <div class="pdoc__body">
+<p>Seguir el pulso de la economía española debería ser tan sencillo como mirar un cuadro de mando, pero los datos relevantes están repartidos entre el INE, el Banco de España, el Banco Central Europeo y la Reserva Federal, cada uno con su propio formato y calendario de publicación. <strong>MacroData España</strong> es una prueba de concepto que reúne en un único panel los indicadores que mejor explican la coyuntura económica del país: inflación, prima de riesgo, tipos de interés, PIB y paro, además de un termómetro propio que traduce todo ello en un único indicador de riesgo de recesión.</p>
+<h3>¿Qué es MacroData España?</h3>
+<p>Es un dashboard web, pensado como proyecto educativo y experimental, que centraliza en una sola vista:</p>
+<ul>
+<li><strong>Termómetro de riesgo de recesión</strong>: un índice propio (0-100), visualizado como un termómetro, que combina el crecimiento, el empleo, la inflación y las condiciones financieras del propio panel en una sola lectura de riesgo.</li>
+<li><strong>¿Cómo avanza España frente a la eurozona?</strong>: un termómetro comparativo que compara inflación, crecimiento del PIB y tasa de paro con la media de la eurozona, para saber de un vistazo si España va mejor o peor.</li>
+<li><strong>Inflación (IPC)</strong>: variación interanual del índice general y del subyacente.</li>
+<li><strong>Prima de riesgo</strong>: diferencial entre el bono español y el bono alemán a 10 años.</li>
+<li><strong>Tipos de interés</strong>: el tipo oficial del BCE y el de la Reserva Federal de EE. UU., frente al Euríbor a 12 meses.</li>
+<li><strong>Crecimiento del PIB</strong>: tasa de variación interanual de la economía española.</li>
+<li><strong>Tasa de paro (EPA)</strong>: tasa de paro trimestral de la Encuesta de Población Activa, con su variación interanual.</li>
+<li><strong>Preguntas frecuentes</strong>: qué significan los términos del panel (IPC, prima de riesgo, Euríbor, PIB, EPA...) y cómo interpretar sus datos, con respuestas que se generan a partir de las cifras vigentes —nunca quedan desactualizadas— y llevan marcado de datos estructurados (FAQPage) para buscadores.</li>
+</ul>
+<p>Cada indicador se muestra con su valor actual, su variación respecto al periodo anterior y su evolución histórica en gráficas interactivas, además de una tabla con el detalle mes a mes.</p>
+<h3>España, más fuerte y más inflacionaria que la eurozona</h3>
+<p>El termómetro con el que abre el panel deja un patrón claro: España crece muy por encima de la media europea (2,7% interanual frente al 1,2% de la eurozona en el 2º trimestre), pero paga esa fortaleza con más inflación (4,5% frente al 3,3% de agosto, en términos armonizados) y, sobre todo, con una tasa de paro que casi triplica la media de la eurozona (10% frente al 6,4% en julio). Es la fotografía habitual de la economía española de los últimos años: crecimiento fuerte, pero con un mercado laboral que sigue sin converger con el resto de la eurozona.</p>
+<h3>Lo que el panel no ve: el mercado de deuda y la escala regional</h3>
+<p>La prima de riesgo mide la confianza en España frente a Alemania, pero no recoge la tensión en el conjunto del mercado de deuda. La rentabilidad del bono de EEUU a diez años ronda el 5,25%, máximos desde 2002; la del francés se acerca al 4,9%; y la española supera el 4%. Según la EBA, la banca española es la segunda más expuesta de la eurozona a deuda soberana, con más de 650.000 millones de euros. Lo detallo en el <a href="https://emirodgar.es/macrodata-espana-primer-balance">primer balance de MacroData España</a> y en el análisis de <a href="https://emirodgar.es/crisis-economica-ia">la crisis económica que se avecina</a>.</p>
+<p>El panel tampoco baja a la escala autonómica. Para eso está el <a href="https://emirodgar.es/panel-economico-cyl/">Panel Económico CyL</a>, que recoge, por ejemplo, el proyecto de presupuestos de Castilla y León para 2027: 16.472 millones de euros, un 13,11% más que las últimas cuentas aprobadas, las de 2024, según <a href="https://www.tribunasalamanca.com/noticias/462460/el-presupuesto-de-castilla-y-leon-para-2027-ascendera-a-16-472-millones-de-euros" target="_blank" rel="noopener">Tribuna de Salamanca</a>. Sigue pendiente de las Cortes.</p>
+<h3>¿Por qué estos indicadores?</h3>
+<p>Son las variables que más habitualmente aparecen en la conversación pública sobre la economía española porque, combinadas, cuentan una misma historia desde ángulos distintos:</p>
+<ul>
+<li>El <strong>IPC</strong> mide el coste de la vida y condiciona el poder adquisitivo de los hogares.</li>
+<li>La <strong>prima de riesgo</strong> resume la confianza de los mercados en la solvencia del país.</li>
+<li>Los <strong>tipos de interés</strong> (BCE, Fed y Euríbor) determinan el coste de la financiación, desde las hipotecas hasta la deuda pública, y permiten comparar el ciclo monetario europeo con el estadounidense.</li>
+<li>El <strong>PIB</strong> es la medida de referencia del crecimiento económico agregado.</li>
+<li>La <strong>tasa de paro</strong> mide la salud del mercado laboral, uno de los puntos más débiles de la economía española frente a sus vecinos europeos.</li>
+</ul>
+<h3>Un termómetro para resumirlo todo en un solo número</h3>
+<p>Tener siete indicadores no siempre facilita responder a la pregunta que de verdad importa: ¿hay riesgo de que la economía se frene en seco? Por eso el panel incorpora un <strong>termómetro de riesgo de recesión</strong>, un índice propio de 0 a 100 que combina cuatro señales con distinto peso: el crecimiento del PIB (35%), la variación interanual del paro (25%, como proxy del momentum del mercado laboral), la distancia de la inflación respecto al objetivo del 2% del BCE (15%) y las condiciones financieras —tipo del BCE y prima de riesgo— (25%). El resultado se traduce en cuatro bandas (bajo, moderado, elevado, alto) y se representa, literalmente, como un termómetro.</p>
+<p>Es importante ser claro sobre sus límites: es un índice propio y simplificado con fines divulgativos, no una predicción ni un modelo econométrico validado, y no lo publica ni respalda ninguna institución. No incorpora el tipo de la Fed, ya que se centra en las condiciones domésticas de España. Su metodología completa —pesos y umbrales exactos— está siempre visible en el propio panel.</p>
+<h3>Fuentes de los datos</h3>
+<p>El panel está diseñado para nutrirse de fuentes oficiales:</p>
+<ul>
+<li><strong>IPC general y subyacente</strong>: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176802" target="_blank" rel="noopener">INE, Índice de Precios de Consumo</a>.</li>
+<li><strong>Prima de riesgo</strong>: diferencial de rentabilidad entre el bono español y el bono alemán a 10 años, calculado a partir de los datos de mercado del <a href="https://www.bde.es/" target="_blank" rel="noopener">Banco de España</a> y el Tesoro Público.</li>
+<li><strong>Tipos del BCE</strong>: decisiones de política monetaria publicadas por el <a href="https://www.ecb.europa.eu/" target="_blank" rel="noopener">Banco Central Europeo</a>.</li>
+<li><strong>Euríbor a 12 meses</strong>: media mensual publicada por el Banco de España, calculada según la metodología de EMMI.</li>
+<li><strong>Tipo de la Fed</strong>: rango objetivo del tipo de los fondos federales fijado por el FOMC de la <a href="https://www.federalreserve.gov/" target="_blank" rel="noopener">Reserva Federal de EE. UU.</a>, mostrado como referencia comparativa internacional.</li>
+<li><strong>PIB</strong>: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736164439" target="_blank" rel="noopener">INE, Contabilidad Nacional Trimestral de España</a>.</li>
+<li><strong>Tasa de paro (EPA)</strong>: <a href="https://www.ine.es/dyngs/INEbase/es/operacion.htm?c=Estadistica_C&amp;cid=1254736176918" target="_blank" rel="noopener">INE, Encuesta de Población Activa</a>, tasa de paro trimestral.</li>
+<li><strong>Comparativa con la eurozona</strong>: <a href="https://ec.europa.eu/eurostat" target="_blank" rel="noopener">Eurostat</a>, para el IPC armonizado (IPCA), el PIB y la tasa de paro armonizada de España y del conjunto de la eurozona — magnitudes metodológicamente distintas a las del IPC del INE o la tasa de paro EPA, por lo que pueden no coincidir exactamente con los otros indicadores del panel.</li>
+<li><strong>Termómetro de riesgo de recesión</strong>: índice propio de este panel calculado a partir de los indicadores anteriores (PIB, paro, IPC, prima de riesgo y tipo del BCE); no procede de ninguna fuente externa.</li>
+</ul>
+<p>Los datos se sustituyen por cifras reales cada vez que se ejecuta la skill de mantenimiento del proyecto (ver más abajo), que deja constancia de la fecha de la última actualización en el propio panel. La única excepción es la prima de riesgo: al no disponer de un feed de mercado diario integrado en el panel, su serie histórica mensual combina lecturas puntuales publicadas en prensa económica con una interpolación entre ellas, por lo que debe tomarse como una aproximación y no como una cifra oficial cerrada.</p>
+<h3>Cómo se mantiene actualizado</h3>
+<p>El panel se actualiza mediante una skill de Claude Code creada para este proyecto. Al ejecutarla, busca la última cifra publicada de cada indicador en sus fuentes oficiales, añade el nuevo dato al histórico y actualiza el resumen ejecutivo que aparece tanto en el panel como en la portada de Emirodgar.es.</p>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Modal for JSON Configuration / Weekly Update -->
+    <div id="jsonModal" class="fixed inset-0 z-50 bg-slate-900/60 backdrop-blur-sm flex items-center justify-center p-4 hidden">
+        <div class="bg-slate-900 text-slate-100 rounded-2xl shadow-2xl max-w-3xl w-full border border-slate-700 flex flex-col max-h-[90vh] overflow-hidden">
+
+            <!-- Modal Header -->
+            <div class="px-6 py-4 border-b border-slate-800 flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="p-2 bg-brand-500/10 text-brand-400 rounded-lg">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white">Gestor de Datos JSON</h3>
+                        <p class="text-xs text-slate-400">Modifica la estructura o carga un nuevo JSON semanal</p>
+                    </div>
+                </div>
+                <button id="closeJsonBtn" class="text-slate-400 hover:text-white transition p-2">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+
+            <!-- Modal Content (JSON Editor) -->
+            <div class="p-6 flex-grow overflow-y-auto space-y-4">
+                <div class="flex justify-between items-center">
+                    <label for="jsonTextarea" class="text-xs font-semibold text-slate-300 uppercase tracking-wider">Estructura del Dataset:</label>
+                    <div class="flex gap-2">
+                        <button id="resetJsonBtn" class="text-xs text-slate-400 hover:text-amber-400 flex items-center gap-1 transition">
+                            <i class="fa-solid fa-rotate-left"></i> Restablecer Ejemplo
+                        </button>
+                    </div>
+                </div>
+
+                <textarea id="jsonTextarea" class="w-full h-80 font-mono text-xs bg-slate-950 text-emerald-400 p-4 rounded-xl border border-slate-800 focus:outline-none focus:border-brand-500 shadow-inner resize-none" spellcheck="false"></textarea>
+
+                <div id="jsonError" class="hidden p-3 rounded-lg bg-rose-500/10 border border-rose-500/30 text-rose-400 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+                    <span id="jsonErrorMessage">JSON no válido</span>
+                </div>
+
+                <p class="text-[11px] text-slate-500">
+                    Nota: los cambios aplicados aquí sólo afectan a tu navegador durante esta visita.
+                    Los datos persistentes del panel viven en <code class="text-slate-400">data.json</code>,
+                    que se actualiza mediante la skill de mantenimiento del proyecto.
+                </p>
+            </div>
+
+            <!-- Modal Footer -->
+            <div class="px-6 py-4 border-t border-slate-800 bg-slate-900/50 flex flex-wrap justify-between items-center gap-3">
+                <div class="flex gap-2">
+                    <button id="exportJsonBtn" class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-download text-slate-400"></i> Exportar
+                    </button>
+                    <label class="px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition flex items-center gap-1.5 cursor-pointer">
+                        <i class="fa-solid fa-upload text-slate-400"></i> Importar
+                        <input type="file" id="importJsonInput" accept=".json" class="hidden">
+                    </label>
+                </div>
+
+                <div class="flex gap-2">
+                    <button id="cancelJsonBtn" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-medium rounded-lg transition">Cancelar</button>
+                    <button id="saveJsonBtn" class="px-4 py-2 bg-brand-600 hover:bg-brand-500 text-white text-xs font-semibold rounded-lg shadow-md transition flex items-center gap-1.5">
+                        <i class="fa-solid fa-check"></i> Aplicar Cambios
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        /**
+         * FALLBACK DATASET
+         * Used only if data.json cannot be loaded (e.g. opening the file directly
+         * from disk, where the browser blocks fetch() for local files).
+         * The canonical, up-to-date dataset lives in ./data.json and is refreshed
+         * by the project's maintenance skill — do not treat this as current data.
+         */
+        const defaultEconomicData = {
+            "lastUpdated": "05 de Septiembre, 2026",
+            "resumenEjecutivo": "",
+            "indicators": [
+                {
+                    "id": "ipc",
+                    "title": "Inflación (IPC)",
+                    "currentValue": 2.3,
+                    "unit": "%",
+                    "change": -0.2,
+                    "changeLabel": "vs mes anterior",
+                    "description": "IPC Interanual estimado",
+                    "target": 2.0,
+                    "icon": "fa-fire-flame-curved",
+                    "color": "rose"
+                },
+                {
+                    "id": "prima",
+                    "title": "Prima de Riesgo",
+                    "currentValue": 82,
+                    "unit": "pb",
+                    "change": -3,
+                    "changeLabel": "vs mes anterior",
+                    "description": "Diferencial España - Alemania",
+                    "target": 100,
+                    "icon": "fa-shield-halved",
+                    "color": "amber"
+                },
+                {
+                    "id": "bce",
+                    "title": "Tipo de Interés BCE",
+                    "currentValue": 3.25,
+                    "unit": "%",
+                    "change": -0.25,
+                    "changeLabel": "Última decisión",
+                    "description": "Facilidad principal de financiación",
+                    "target": null,
+                    "icon": "fa-building-columns",
+                    "color": "blue"
+                },
+                {
+                    "id": "euribor",
+                    "title": "Euríbor 12 Meses",
+                    "currentValue": 3.10,
+                    "unit": "%",
+                    "change": -0.08,
+                    "changeLabel": "vs mes anterior",
+                    "description": "Media mensual",
+                    "target": null,
+                    "icon": "fa-percent",
+                    "color": "sky"
+                },
+                {
+                    "id": "fed",
+                    "title": "Tipo de Interés Fed (EE. UU.)",
+                    "currentValue": 3.875,
+                    "unit": "%",
+                    "change": 0.25,
+                    "changeLabel": "Última decisión",
+                    "description": "Rango objetivo de la Reserva Federal",
+                    "target": null,
+                    "icon": "fa-flag-usa",
+                    "color": "violet"
+                },
+                {
+                    "id": "pib",
+                    "title": "Crecimiento PIB",
+                    "currentValue": 2.5,
+                    "unit": "%",
+                    "change": 0.4,
+                    "changeLabel": "Tasa interanual",
+                    "description": "Crecimiento anual acumulado",
+                    "target": 2.0,
+                    "icon": "fa-chart-pie",
+                    "color": "emerald"
+                },
+                {
+                    "id": "paro",
+                    "title": "Tasa de Paro (EPA)",
+                    "currentValue": 10.0,
+                    "unit": "%",
+                    "change": -0.3,
+                    "changeLabel": "vs hace un año",
+                    "description": "Encuesta de Población Activa",
+                    "target": null,
+                    "icon": "fa-user-slash",
+                    "color": "orange"
+                }
+            ],
+            "historicalData": [
+                { "month": "Jul 2026", "ipc": 2.4, "ipcSubyacente": 2.5, "primaRiesgo": 84,  "tiposBCE": 3.25, "euribor": 3.18, "fed": 3.625, "pib": 2.5, "paro": 10.1 },
+                { "month": "Ago 2026", "ipc": 2.3, "ipcSubyacente": 2.4, "primaRiesgo": 82,  "tiposBCE": 3.25, "euribor": 3.10, "fed": 3.875, "pib": 2.5, "paro": 10.0 }
+            ],
+            "comparativaZonaEuro": []
+        };
+
+        // Current Dataset in Memory
+        let currentDataset = JSON.parse(JSON.stringify(defaultEconomicData));
+
+        // Active Chart Instances
+        let chartInstances = {};
+        let activeRange = '12'; // Default to 12 months
+
+        window.addEventListener('DOMContentLoaded', () => {
+            loadDataset();
+            setupEventListeners();
+        });
+
+        async function loadDataset() {
+            try {
+                const response = await fetch('data.json', { cache: 'no-store' });
+                if (!response.ok) throw new Error('No se pudo cargar data.json');
+                currentDataset = await response.json();
+            } catch (e) {
+                console.warn('Usando dataset de respaldo embebido:', e.message);
+                currentDataset = JSON.parse(JSON.stringify(defaultEconomicData));
+            }
+            initApp();
+        }
+
+        function initApp() {
+            renderHeader();
+            renderResumenEjecutivo();
+            renderRiesgoRecesion();
+            renderComparativa();
+            renderMetricCards();
+            renderCharts();
+            renderTable();
+            renderSources();
+            renderFAQ();
+        }
+
+        function formatNumber(n) {
+            if (typeof n !== 'number') return n;
+            const isNeg = n < 0;
+            const abs = Math.abs(n);
+            const str = (abs % 1 === 0) ? String(abs) : abs.toFixed(2).replace(/0+$/, '').replace(/\.$/, '');
+            const [intPart, decPart] = str.split('.');
+            const groupedInt = intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+            const result = decPart ? `${groupedInt},${decPart}` : groupedInt;
+            return isNeg ? `-${result}` : result;
+        }
+
+        function renderComparativa() {
+            const container = document.getElementById('comparativaContainer');
+            if (!container) return;
+            container.innerHTML = '';
+
+            (currentDataset.comparativaZonaEuro || []).forEach(item => {
+                const esMejor = item.mejorSiMayor ? (item.valorEspana > item.valorZonaEuro) : (item.valorEspana < item.valorZonaEuro);
+                const esIgual = item.valorEspana === item.valorZonaEuro;
+                const diff = item.valorEspana - item.valorZonaEuro;
+
+                let badgeClass = 'bg-slate-100 text-slate-700 border border-slate-200';
+                let badgeIcon = 'fa-minus';
+                let badgeText = 'Igual que la eurozona';
+                if (!esIgual) {
+                    badgeClass = esMejor ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-rose-50 text-rose-700 border border-rose-200';
+                    badgeIcon = esMejor ? 'fa-check' : 'fa-triangle-exclamation';
+                    badgeText = esMejor ? 'Mejor que la eurozona' : 'Peor que la eurozona';
+                }
+
+                const cardHTML = `
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition flex flex-col gap-3">
+                        <div>
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${item.title}</span>
+                            <p class="text-[11px] text-slate-400">${item.periodo}</p>
+                        </div>
+
+                        <div class="flex items-end justify-between">
+                            <div>
+                                <p class="text-[11px] text-slate-400 font-medium">España</p>
+                                <p class="text-2xl font-extrabold text-slate-900 tracking-tight">${formatNumber(item.valorEspana)}${item.unidad}</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-[11px] text-slate-400 font-medium">Eurozona</p>
+                                <p class="text-lg font-semibold text-slate-500">${formatNumber(item.valorZonaEuro)}${item.unidad}</p>
+                            </div>
+                        </div>
+
+                        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold w-fit ${badgeClass}">
+                            <i class="fa-solid ${badgeIcon} text-[10px]"></i>
+                            ${badgeText}${esIgual ? '' : ` (${diff > 0 ? '+' : ''}${formatNumber(diff)} p.p.)`}
+                        </span>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // --- Termómetro de Riesgo de Recesión ---
+        // Índice propio y simplificado (0-100): NO es una predicción oficial ni de ninguna
+        // institución, solo una combinación transparente de los indicadores que ya muestra
+        // este panel. Pesos y umbrales están documentados aquí y en sources.riesgoRecesion.
+        const RISK_BANDS = [
+            { max: 30, label: 'Riesgo Bajo', color: '#10b981' },
+            { max: 55, label: 'Riesgo Moderado', color: '#f59e0b' },
+            { max: 75, label: 'Riesgo Elevado', color: '#f97316' },
+            { max: 100, label: 'Riesgo Alto', color: '#e11d48' }
+        ];
+
+        function getIndicator(id) {
+            return (currentDataset.indicators || []).find(i => i.id === id) || null;
+        }
+
+        function clampRisk(v, min, max) {
+            return Math.max(min, Math.min(max, v));
+        }
+
+        // Interpola linealmente v entre "good" (0 de riesgo) y "bad" (100 de riesgo);
+        // funciona igual si good > bad o good < bad.
+        function riskLerp(v, good, bad) {
+            if (typeof v !== 'number' || isNaN(v)) return null;
+            return clampRisk((v - good) / (bad - good) * 100, 0, 100);
+        }
+
+        function computeRecessionRisk() {
+            const pib = getIndicator('pib');
+            const paro = getIndicator('paro');
+            const ipc = getIndicator('ipc');
+            const prima = getIndicator('prima');
+            const bce = getIndicator('bce');
+            if (!pib || !paro || !ipc || !prima || !bce) return null;
+
+            const riskCrecimiento = riskLerp(pib.currentValue, 2.5, -1);       // PIB >=2.5% -> 0 riesgo; <=-1% -> 100
+            const riskEmpleo = riskLerp(paro.change, 0, 2);                    // paro estable/baja -> 0; sube 2pp o más -> 100
+            const riskInflacion = riskLerp(Math.abs(ipc.currentValue - 2), 0.5, 4.5); // distancia al objetivo 2% BCE
+            const riskTipos = riskLerp(bce.currentValue, 0, 5);
+            const riskPrima = riskLerp(prima.currentValue, 0, 300);
+            if ([riskCrecimiento, riskEmpleo, riskInflacion, riskTipos, riskPrima].some(v => v === null)) return null;
+            const riskFinanciero = (riskTipos + riskPrima) / 2;
+
+            const total = 0.35 * riskCrecimiento + 0.25 * riskEmpleo + 0.15 * riskInflacion + 0.25 * riskFinanciero;
+            const band = RISK_BANDS.find(b => total <= b.max) || RISK_BANDS[RISK_BANDS.length - 1];
+
+            return {
+                score: Math.round(total * 10) / 10,
+                band,
+                components: [
+                    { label: 'Crecimiento (PIB)', value: Math.round(riskCrecimiento), weight: 35 },
+                    { label: 'Empleo (variación del paro)', value: Math.round(riskEmpleo), weight: 25 },
+                    { label: 'Inflación (distancia al objetivo)', value: Math.round(riskInflacion), weight: 15 },
+                    { label: 'Condiciones financieras (tipos + prima)', value: Math.round(riskFinanciero), weight: 25 }
+                ]
+            };
+        }
+
+        // Recalcula el mismo índice mes a mes a partir de "historicalData", para el gráfico de
+        // evolución. Usa las mismas fórmulas y umbrales que computeRecessionRisk(), con una única
+        // diferencia obligada: como solo se almacenan ~12 meses de histórico, el componente de
+        // empleo no puede comparar siempre contra "hace un año" (no hay dato); en su lugar compara
+        // contra el último valor de "paro" distinto disponible en la propia serie (variación
+        // intertrimestral, ya que el paro EPA es trimestral y se repite dentro de cada trimestre).
+        function computeHistoricalRiskSeries() {
+            const hist = currentDataset.historicalData || [];
+            const results = [];
+
+            hist.forEach((row, idx) => {
+                const pib = row.pib, ipc = row.ipc, prima = row.primaRiesgo, bce = row.tiposBCE, paro = row.paro;
+                if ([pib, ipc, prima, bce, paro].some(v => typeof v !== 'number')) return;
+
+                let paroChange = 0;
+                for (let i = idx - 1; i >= 0; i--) {
+                    if (typeof hist[i].paro === 'number' && hist[i].paro !== paro) {
+                        paroChange = paro - hist[i].paro;
+                        break;
+                    }
+                }
+
+                const riskCrecimiento = riskLerp(pib, 2.5, -1);
+                const riskEmpleo = riskLerp(paroChange, 0, 2);
+                const riskInflacion = riskLerp(Math.abs(ipc - 2), 0.5, 4.5);
+                const riskTipos = riskLerp(bce, 0, 5);
+                const riskPrima = riskLerp(prima, 0, 300);
+                if ([riskCrecimiento, riskEmpleo, riskInflacion, riskTipos, riskPrima].some(v => v === null)) return;
+                const riskFinanciero = (riskTipos + riskPrima) / 2;
+
+                const total = 0.35 * riskCrecimiento + 0.25 * riskEmpleo + 0.15 * riskInflacion + 0.25 * riskFinanciero;
+                const band = RISK_BANDS.find(b => total <= b.max) || RISK_BANDS[RISK_BANDS.length - 1];
+
+                results.push({ month: row.month, score: Math.round(total * 10) / 10, color: band.color });
+            });
+
+            return results;
+        }
+
+        function renderRiesgoRecesion() {
+            const container = document.getElementById('riesgoRecesionContainer');
+            if (!container) return;
+
+            const risk = computeRecessionRisk();
+            if (!risk) {
+                container.innerHTML = '<p class="text-sm text-slate-400">No hay datos suficientes en el JSON actual (PIB, paro, IPC, prima de riesgo y tipo BCE) para calcular el termómetro.</p>';
+                return;
+            }
+
+            const { score, band, components } = risk;
+
+            // Geometría del termómetro (SVG, viewBox 0 0 140 320)
+            const tubeTop = 20, tubeBottom = 250, bulbCy = 272, bulbR = 34;
+            const fillY = tubeTop + (1 - clampRisk(score, 0, 100) / 100) * (tubeBottom - tubeTop);
+            const ticks = [30, 55, 75].map(t => tubeTop + (1 - t / 100) * (tubeBottom - tubeTop));
+
+            const thermoSvg = `
+                <svg viewBox="0 0 140 320" role="img" aria-label="Termómetro de riesgo de recesión: ${score} sobre 100, ${band.label}" style="width:100%;height:100%">
+                    <defs>
+                        <clipPath id="thermoClip">
+                            <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20"></rect>
+                            <circle cx="70" cy="${bulbCy}" r="${bulbR}"></circle>
+                        </clipPath>
+                    </defs>
+                    <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="#f1f5f9"></rect>
+                    <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="#f1f5f9"></circle>
+                    <g clip-path="url(#thermoClip)">
+                        <rect x="46" y="${fillY}" width="48" height="${320 - fillY}" fill="${band.color}"></rect>
+                    </g>
+                    <rect x="50" y="${tubeTop}" width="40" height="${tubeBottom - tubeTop}" rx="20" fill="none" stroke="#cbd5e1" stroke-width="3"></rect>
+                    <circle cx="70" cy="${bulbCy}" r="${bulbR}" fill="none" stroke="#cbd5e1" stroke-width="3"></circle>
+                    ${ticks.map(y => `<line x1="94" y1="${y.toFixed(1)}" x2="106" y2="${y.toFixed(1)}" stroke="#94a3b8" stroke-width="2"></line>`).join('')}
+                </svg>
+            `;
+
+            container.innerHTML = `
+                <div class="flex flex-col sm:flex-row items-center gap-8">
+                    <div class="w-24 sm:w-28 flex-shrink-0" style="height:220px">${thermoSvg}</div>
+                    <div class="flex-grow w-full">
+                        <div class="flex items-baseline gap-3 flex-wrap">
+                            <span class="text-4xl font-extrabold tracking-tight" style="color:${band.color}">${formatNumber(score)}</span>
+                            <span class="text-slate-400 font-semibold text-sm">/ 100</span>
+                            <span class="ml-auto px-3 py-1 rounded-full text-xs font-bold" style="background-color:${band.color}1a; color:${band.color}">${band.label}</span>
+                        </div>
+                        <div class="mt-5 space-y-3">
+                            ${components.map(c => `
+                                <div>
+                                    <div class="flex justify-between text-xs text-slate-500 mb-1">
+                                        <span>${c.label} <span class="text-slate-300">· peso ${c.weight}%</span></span>
+                                        <span class="font-mono font-medium text-slate-600">${c.value}/100</span>
+                                    </div>
+                                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                                        <div class="h-full rounded-full" style="width:${c.value}%; background-color:${band.color}"></div>
+                                    </div>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <p class="mt-4 text-[11px] text-slate-400 leading-relaxed">
+                            Índice propio y simplificado con fines divulgativos (no es una predicción oficial ni de ninguna institución),
+                            calculado a partir del PIB, la variación del paro, la inflación y las condiciones financieras (tipo del BCE y
+                            prima de riesgo) de este mismo panel. No incorpora el tipo de la Fed. Metodología completa en «Fuentes de los datos».
+                        </p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // --- Preguntas Frecuentes (FAQ) ---
+        // Las respuestas se generan aquí, no en data.json, para que siempre reflejen
+        // los valores vigentes de "indicators"/"comparativaZonaEuro"/el termómetro de riesgo.
+        function getFAQs() {
+            const ipc = getIndicator('ipc');
+            const prima = getIndicator('prima');
+            const bce = getIndicator('bce');
+            const euribor = getIndicator('euribor');
+            const fed = getIndicator('fed');
+            const pib = getIndicator('pib');
+            const paro = getIndicator('paro');
+            const hist = currentDataset.historicalData || [];
+            const last = hist[hist.length - 1] || {};
+            const risk = computeRecessionRisk();
+            const comp = {};
+            (currentDataset.comparativaZonaEuro || []).forEach(c => { comp[c.id] = c; });
+
+            const faqs = [];
+
+            if (ipc) {
+                faqs.push({
+                    question: '¿Qué es el IPC y qué diferencia hay entre el general y el subyacente?',
+                    answer: `El IPC (Índice de Precios de Consumo) mide cuánto suben o bajan los precios de la cesta de la compra de un año a otro. El IPC general incluye todos los productos; el subyacente excluye la energía y los alimentos frescos, sus componentes más volátiles, para mostrar la tendencia de fondo de los precios. Ahora mismo el IPC general está en el ${formatNumber(ipc.currentValue)}%${typeof last.ipcSubyacente === 'number' ? ` y el subyacente en el ${formatNumber(last.ipcSubyacente)}%` : ''}.`
+                });
+            }
+
+            if (prima) {
+                faqs.push({
+                    question: '¿Qué es la prima de riesgo?',
+                    answer: `Es el diferencial, en puntos básicos, entre lo que paga España y lo que paga Alemania por financiarse a 10 años en los mercados de deuda. Cuanto más alta, más desconfianza relativa de los inversores en la solvencia española frente a la alemana, que se toma como referencia por ser la más solvente de la eurozona. Ahora mismo está en ${formatNumber(prima.currentValue)} puntos básicos.`
+                });
+            }
+
+            if (bce && euribor) {
+                faqs.push({
+                    question: '¿Qué es el tipo de interés del BCE y cómo afecta al Euríbor?',
+                    answer: `Es el tipo al que el Banco Central Europeo presta dinero a los bancos (la "facilidad principal de financiación"), la principal herramienta de política monetaria de la eurozona. El Euríbor, el tipo de referencia de la mayoría de las hipotecas variables en España, tiende a moverse en la misma dirección que el tipo del BCE, aunque no es idéntico: ahora mismo el BCE está en el ${formatNumber(bce.currentValue)}% y el Euríbor a 12 meses en el ${formatNumber(euribor.currentValue)}%.`
+                });
+            }
+
+            if (fed) {
+                faqs.push({
+                    question: '¿Por qué aparece el tipo de interés de la Fed si este panel es de España?',
+                    answer: `El tipo de la Reserva Federal de Estados Unidos (Fed) no forma parte de la política monetaria de España ni de la eurozona, pero se incluye como referencia comparativa: permite ver si el ciclo de tipos en EE. UU. va en la misma dirección que el del BCE o se está desacoplando. Ahora mismo el tipo de la Fed está en el ${formatNumber(fed.currentValue)}%.`
+                });
+            }
+
+            if (pib) {
+                faqs.push({
+                    question: '¿Qué significa que el PIB crezca un determinado porcentaje?',
+                    answer: `El PIB (Producto Interior Bruto) mide el valor de todo lo que produce la economía española en un periodo. Que crezca un ${formatNumber(pib.currentValue)}% interanual significa que la economía es un ${formatNumber(pib.currentValue)}% más grande que en el mismo trimestre del año anterior. Es la medida de referencia del crecimiento económico agregado.`
+                });
+            }
+
+            if (paro) {
+                faqs.push({
+                    question: '¿Qué es la tasa de paro EPA y en qué se diferencia de la tasa armonizada de Eurostat?',
+                    answer: `La tasa de paro EPA, publicada cada trimestre por el INE, es la referencia oficial en España: ahora mismo está en el ${formatNumber(paro.currentValue)}%. Eurostat calcula además su propia tasa armonizada, con una metodología distinta que permite comparar países dentro de la UE${comp.paro ? ` — la última lectura sitúa a España en el ${formatNumber(comp.paro.valorEspana)}% frente al ${formatNumber(comp.paro.valorZonaEuro)}% de la eurozona` : ''}. Ambas conviven en este panel porque miden cosas ligeramente distintas: no busques que "cuadren" entre sí.`
+                });
+            }
+
+            if (risk) {
+                faqs.push({
+                    question: '¿Qué es el termómetro de riesgo de recesión y cómo se calcula?',
+                    answer: `Es un índice propio de este panel (0-100, no de ninguna institución oficial) que combina el crecimiento del PIB (35% del peso), la variación interanual del paro (25%), la distancia de la inflación al objetivo del 2% del BCE (15%) y las condiciones financieras —tipo del BCE y prima de riesgo— (25%). Ahora mismo marca ${formatNumber(risk.score)} sobre 100 (${risk.band.label.toLowerCase()}). No es una predicción, sino una forma simplificada y transparente de resumir varias señales en un solo número.`
+                });
+                faqs.push({
+                    question: '¿Qué significan las bandas de riesgo bajo, moderado, elevado y alto?',
+                    answer: 'Son los cuatro tramos en los que se divide el termómetro: de 0 a 30 puntos, riesgo bajo; de 30 a 55, moderado; de 55 a 75, elevado; y de 75 a 100, alto. Son umbrales propios de este panel, fijados de forma orientativa para facilitar la lectura del índice, no un estándar oficial de ningún organismo.'
+                });
+            }
+
+            if (Object.keys(comp).length) {
+                const mejor = [];
+                const peor = [];
+                Object.values(comp).forEach(c => {
+                    const esMejor = c.mejorSiMayor ? c.valorEspana > c.valorZonaEuro : c.valorEspana < c.valorZonaEuro;
+                    (esMejor ? mejor : peor).push(c.title.toLowerCase());
+                });
+                faqs.push({
+                    question: '¿España va mejor o peor que la eurozona ahora mismo?',
+                    answer: `Depende del indicador: España está mejor que la eurozona en ${mejor.length ? mejor.join(', ') : 'ninguno de los indicadores comparados'}, y peor en ${peor.length ? peor.join(', ') : 'ninguno'}. Puedes ver el detalle exacto en la sección "¿Cómo Avanza España Frente a la Eurozona?" de este mismo panel.`
+                });
+            }
+
+            faqs.push({
+                question: '¿Con qué frecuencia se actualizan estos datos?',
+                answer: 'Cada indicador tiene su propio calendario: el IPC y el Euríbor se publican cada mes, el PIB y la tasa de paro EPA cada trimestre, y los tipos del BCE y de la Fed solo cambian cuando sus respectivos bancos centrales celebran una reunión de política monetaria (no son mensuales). Este panel se revisa periódicamente para incorporar los datos más recientes ya publicados por cada fuente.'
+            });
+
+            faqs.push({
+                question: '¿De dónde proceden los datos de este panel?',
+                answer: 'De fuentes oficiales: el INE (IPC, PIB y tasa de paro EPA), el Banco Central Europeo (tipo de interés), la Reserva Federal de EE. UU. (tipo de interés), el Banco de España (Euríbor) y Eurostat (comparativa con la eurozona). El detalle completo, indicador por indicador, está en la sección "Fuentes de los datos" de este mismo panel.'
+            });
+
+            return faqs;
+        }
+
+        function renderFAQ() {
+            const container = document.getElementById('faqContainer');
+            const schemaScript = document.getElementById('faqStructuredData');
+            if (!container) return;
+
+            const faqs = getFAQs();
+
+            container.innerHTML = faqs.map((faq, i) => `
+                <div>
+                    <button type="button" class="faq-toggle w-full flex items-center justify-between gap-3 px-6 py-4 text-left hover:bg-slate-50 transition" data-faq-index="${i}">
+                        <span class="font-medium text-slate-800 text-sm pr-4">${faq.question}</span>
+                        <i class="faq-icon fa-solid fa-chevron-down text-slate-400 text-xs flex-shrink-0 transition-transform"></i>
+                    </button>
+                    <div class="faq-answer hidden px-6 pb-4">
+                        <p class="text-sm text-slate-600 leading-relaxed">${faq.answer}</p>
+                    </div>
+                </div>
+            `).join('');
+
+            if (schemaScript) {
+                const schema = {
+                    "@context": "https://schema.org",
+                    "@type": "FAQPage",
+                    "mainEntity": faqs.map(faq => ({
+                        "@type": "Question",
+                        "name": faq.question,
+                        "acceptedAnswer": {
+                            "@type": "Answer",
+                            "text": faq.answer
+                        }
+                    }))
+                };
+                schemaScript.textContent = JSON.stringify(schema);
+            }
+        }
+
+        function setupEventListeners() {
+            // Modal Open / Close
+            document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
+            document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('cancelJsonBtn').addEventListener('click', closeJsonModal);
+            document.getElementById('saveJsonBtn').addEventListener('click', saveJsonFromEditor);
+            document.getElementById('resetJsonBtn').addEventListener('click', resetDefaultData);
+
+            // Import / Export
+            document.getElementById('exportJsonBtn').addEventListener('click', exportJsonFile);
+            document.getElementById('importJsonInput').addEventListener('change', importJsonFile);
+
+            // Timeframe filters
+            document.querySelectorAll('.time-filter').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    document.querySelectorAll('.time-filter').forEach(b => {
+                        b.classList.remove('bg-white', 'text-slate-900', 'shadow-sm');
+                        b.classList.add('text-slate-600');
+                    });
+                    e.target.classList.add('bg-white', 'text-slate-900', 'shadow-sm');
+                    e.target.classList.remove('text-slate-600');
+
+                    activeRange = e.target.getAttribute('data-range');
+                    renderCharts();
+                });
+            });
+
+            const resumenToggle = document.getElementById('resumenEjecutivoToggle');
+            if (resumenToggle) {
+                resumenToggle.addEventListener('click', () => {
+                    const body = document.getElementById('resumenEjecutivoBody');
+                    setResumenEjecutivoExpanded(body.classList.contains('hidden'));
+                });
+            }
+
+            const faqContainer = document.getElementById('faqContainer');
+            if (faqContainer) {
+                faqContainer.addEventListener('click', (e) => {
+                    const btn = e.target.closest('.faq-toggle');
+                    if (!btn) return;
+                    const answer = btn.nextElementSibling;
+                    const icon = btn.querySelector('.faq-icon');
+                    answer.classList.toggle('hidden');
+                    if (icon) icon.classList.toggle('rotate-180');
+                });
+            }
+        }
+
+        function renderHeader() {
+            document.getElementById('lastUpdatedLabel').innerText = currentDataset.lastUpdated || 'No especificado';
+        }
+
+        function renderResumenEjecutivo() {
+            const section = document.getElementById('resumenEjecutivoSection');
+            const text = document.getElementById('resumenEjecutivoText');
+            if (currentDataset.resumenEjecutivo) {
+                text.innerText = currentDataset.resumenEjecutivo;
+                section.classList.remove('hidden');
+            } else {
+                section.classList.add('hidden');
+            }
+            setResumenEjecutivoExpanded(false);
+        }
+
+        function setResumenEjecutivoExpanded(expanded) {
+            const body = document.getElementById('resumenEjecutivoBody');
+            const label = document.getElementById('resumenEjecutivoToggleLabel');
+            const icon = document.getElementById('resumenEjecutivoToggleIcon');
+            if (!body) return;
+            body.classList.toggle('hidden', !expanded);
+            if (label) label.textContent = expanded ? 'Ocultar resumen' : 'Ver resumen';
+            if (icon) icon.classList.toggle('rotate-180', expanded);
+        }
+
+        function renderSources() {
+            const section = document.getElementById('sourcesSection');
+            const list = document.getElementById('sourcesList');
+            list.innerHTML = '';
+            if (!currentDataset.sources) {
+                section.classList.add('hidden');
+                return;
+            }
+            Object.values(currentDataset.sources)
+                .filter((value, index, all) => all.indexOf(value) === index)
+                .forEach(source => {
+                    list.insertAdjacentHTML('beforeend', `<li class="flex items-start gap-2"><i class="fa-solid fa-circle-dot text-[6px] mt-1.5 text-slate-300"></i><span>${source}</span></li>`);
+                });
+            section.classList.remove('hidden');
+        }
+
+        function renderMetricCards() {
+            const container = document.getElementById('metricsContainer');
+            container.innerHTML = '';
+
+            currentDataset.indicators.forEach(item => {
+                const isPositiveChange = item.change > 0;
+                // For Inflation/Prima, lower is usually preferred. Let's handle color logic dynamically.
+                let changeBadgeClass = "bg-slate-100 text-slate-700";
+                let changeIcon = "fa-minus";
+
+                if (item.change > 0) {
+                    changeBadgeClass = "bg-rose-50 text-rose-700 border border-rose-200";
+                    changeIcon = "fa-arrow-up";
+                } else if (item.change < 0) {
+                    changeBadgeClass = "bg-emerald-50 text-emerald-700 border border-emerald-200";
+                    changeIcon = "fa-arrow-down";
+                }
+
+                // Invert colors for PIB (growth is good)
+                if (item.id === 'pib') {
+                    if (item.change > 0) {
+                        changeBadgeClass = "bg-emerald-50 text-emerald-700 border border-emerald-200";
+                        changeIcon = "fa-arrow-up";
+                    } else if (item.change < 0) {
+                        changeBadgeClass = "bg-rose-50 text-rose-700 border border-rose-200";
+                        changeIcon = "fa-arrow-down";
+                    }
+                }
+
+                const cardHTML = `
+                    <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200 hover:shadow-md transition">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-bold uppercase tracking-wider text-slate-400">${item.title}</span>
+                            <div class="p-2 rounded-lg bg-slate-100 text-slate-600">
+                                <i class="fa-solid ${item.icon}"></i>
+                            </div>
+                        </div>
+
+                        <div class="mt-3 flex items-baseline gap-2">
+                            <span class="text-3xl font-extrabold text-slate-900 tracking-tight">${item.currentValue}</span>
+                            <span class="text-slate-500 font-semibold text-sm">${item.unit}</span>
+                        </div>
+
+                        <div class="mt-3 flex items-center justify-between">
+                            <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-semibold ${changeBadgeClass}">
+                                <i class="fa-solid ${changeIcon} text-[10px]"></i>
+                                ${Math.abs(item.change)}${item.unit}
+                            </span>
+                            <span class="text-xs text-slate-400 font-medium">${item.changeLabel}</span>
+                        </div>
+                    </div>
+                `;
+                container.insertAdjacentHTML('beforeend', cardHTML);
+            });
+        }
+
+        // Filter helper for historical array
+        function getFilteredHistory() {
+            const data = currentDataset.historicalData || [];
+            if (activeRange === '6') {
+                return data.slice(-6);
+            } else if (activeRange === '12') {
+                return data.slice(-12);
+            }
+            return data;
+        }
+
+        function renderCharts() {
+            const filteredData = getFilteredHistory();
+            const labels = filteredData.map(d => d.month);
+
+            // Chart Configuration Common Options
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            usePointStyle: true,
+                            boxWidth: 8,
+                            font: { family: 'Inter', size: 11 }
+                        }
+                    },
+                    tooltip: {
+                        backgroundColor: '#0f172a',
+                        padding: 10,
+                        cornerRadius: 8,
+                        titleFont: { family: 'Inter', size: 12, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' }
+                    },
+                    y: {
+                        grid: { color: '#f1f5f9' },
+                        ticks: { font: { family: 'Inter', size: 10 }, color: '#64748b' }
+                    }
+                }
+            };
+
+            // Destroy previous charts before recreating
+            Object.values(chartInstances).forEach(chart => chart.destroy());
+            chartInstances = {};
+
+            // Chart 1: IPC
+            const ctxIpc = document.getElementById('ipcChart').getContext('2d');
+            chartInstances.ipc = new Chart(ctxIpc, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'IPC General (%)',
+                            data: filteredData.map(d => d.ipc),
+                            borderColor: '#f43f5e',
+                            backgroundColor: 'rgba(244, 63, 94, 0.05)',
+                            tension: 0.3,
+                            borderWidth: 2.5,
+                            fill: true,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'IPC Subyacente (%)',
+                            data: filteredData.map(d => d.ipcSubyacente),
+                            borderColor: '#fb7185',
+                            borderDash: [4, 4],
+                            tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 2
+                        }
+                    ]
+                },
+                options: commonOptions
+            });
+
+            // Chart 2: Prima de Riesgo
+            const ctxPrima = document.getElementById('primaChart').getContext('2d');
+            chartInstances.prima = new Chart(ctxPrima, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Prima de Riesgo (pb)',
+                        data: filteredData.map(d => d.primaRiesgo),
+                        borderColor: '#f59e0b',
+                        backgroundColor: 'rgba(245, 158, 11, 0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 3
+                    }]
+                },
+                options: commonOptions
+            });
+
+            // Chart 3: Tipos BCE vs Euribor vs Fed
+            const ctxRates = document.getElementById('ratesChart').getContext('2d');
+            chartInstances.rates = new Chart(ctxRates, {
+                type: 'line',
+                data: {
+                    labels: labels,
+                    datasets: [
+                        {
+                            label: 'Tipo Interés BCE (%)',
+                            data: filteredData.map(d => d.tiposBCE),
+                            borderColor: '#2563eb',
+                            tension: 0,
+                            borderWidth: 2.5,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Euríbor 12 Meses (%)',
+                            data: filteredData.map(d => d.euribor),
+                            borderColor: '#38bdf8',
+                            tension: 0.3,
+                            borderWidth: 2,
+                            pointRadius: 3
+                        },
+                        {
+                            label: 'Tipo Interés Fed (%)',
+                            data: filteredData.map(d => d.fed),
+                            borderColor: '#7c3aed',
+                            borderDash: [4, 4],
+                            tension: 0,
+                            borderWidth: 2,
+                            pointRadius: 3
+                        }
+                    ]
+                },
+                options: commonOptions
+            });
+
+            // Chart 4: PIB
+            const ctxPib = document.getElementById('pibChart').getContext('2d');
+            chartInstances.pib = new Chart(ctxPib, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Crecimiento PIB (%)',
+                        data: filteredData.map(d => d.pib),
+                        backgroundColor: '#10b981',
+                        borderRadius: 6
+                    }]
+                },
+                options: commonOptions
+            });
+
+            // Chart 5: Tasa de Paro EPA
+            const ctxParo = document.getElementById('paroChart').getContext('2d');
+            chartInstances.paro = new Chart(ctxParo, {
+                type: 'bar',
+                data: {
+                    labels: labels,
+                    datasets: [{
+                        label: 'Tasa de Paro EPA (%)',
+                        data: filteredData.map(d => d.paro),
+                        backgroundColor: '#f97316',
+                        borderRadius: 6
+                    }]
+                },
+                options: { ...commonOptions, plugins: { ...commonOptions.plugins, legend: { display: false } } }
+            });
+
+            // Chart 6: Evolución del Termómetro de Riesgo (siempre los últimos 6 meses,
+            // con independencia del selector de rango de arriba)
+            const riesgoSerie = computeHistoricalRiskSeries().slice(-6);
+            const ctxRiesgo = document.getElementById('riesgoHistoricoChart').getContext('2d');
+            chartInstances.riesgo = new Chart(ctxRiesgo, {
+                type: 'line',
+                data: {
+                    labels: riesgoSerie.map(r => r.month),
+                    datasets: [{
+                        label: 'Riesgo de recesión (0-100)',
+                        data: riesgoSerie.map(r => r.score),
+                        borderColor: '#7c3aed',
+                        backgroundColor: 'rgba(124, 58, 237, 0.08)',
+                        tension: 0.3,
+                        borderWidth: 2.5,
+                        fill: true,
+                        pointRadius: 5,
+                        pointBackgroundColor: riesgoSerie.map(r => r.color),
+                        pointBorderColor: '#ffffff',
+                        pointBorderWidth: 1.5
+                    }]
+                },
+                options: {
+                    ...commonOptions,
+                    plugins: { ...commonOptions.plugins, legend: { display: false } },
+                    scales: {
+                        ...commonOptions.scales,
+                        y: { ...commonOptions.scales.y, min: 0, max: 100 }
+                    }
+                }
+            });
+        }
+
+        function renderTable() {
+            const tbody = document.getElementById('dataTableBody');
+            tbody.innerHTML = '';
+
+            // Render history in reverse chronological order for table
+            const history = [...currentDataset.historicalData].reverse();
+
+            history.forEach(row => {
+                const tr = `
+                    <tr class="hover:bg-slate-50/80 transition">
+                        <td class="px-6 py-3.5 font-semibold text-slate-800">${row.month}</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs">${row.ipc}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-slate-500">${row.ipcSubyacente}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-amber-600">${row.primaRiesgo} pb</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-blue-600">${row.tiposBCE}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-sky-600">${row.euribor}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs text-violet-600">${row.fed}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-semibold text-emerald-600">${row.pib}%</td>
+                        <td class="px-6 py-3.5 text-right font-mono text-xs font-medium text-orange-600">${row.paro}%</td>
+                    </tr>
+                `;
+                tbody.insertAdjacentHTML('beforeend', tr);
+            });
+        }
+
+        function openJsonModal() {
+            const modal = document.getElementById('jsonModal');
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+
+            textarea.value = JSON.stringify(currentDataset, null, 2);
+            errorContainer.classList.add('hidden');
+            modal.classList.remove('hidden');
+        }
+
+        function closeJsonModal() {
+            document.getElementById('jsonModal').classList.add('hidden');
+        }
+
+        function saveJsonFromEditor() {
+            const textarea = document.getElementById('jsonTextarea');
+            const errorContainer = document.getElementById('jsonError');
+            const errorMessage = document.getElementById('jsonErrorMessage');
+
+            try {
+                const parsed = JSON.parse(textarea.value);
+
+                // Simple Structure Validation
+                if (!parsed.indicators || !parsed.historicalData) {
+                    throw new Error("El JSON debe contener las propiedades 'indicators' y 'historicalData'.");
+                }
+
+                currentDataset = parsed;
+                initApp();
+                closeJsonModal();
+            } catch (e) {
+                errorMessage.innerText = e.message;
+                errorContainer.classList.remove('hidden');
+            }
+        }
+
+        function resetDefaultData() {
+            currentDataset = JSON.parse(JSON.stringify(defaultEconomicData));
+            document.getElementById('jsonTextarea').value = JSON.stringify(currentDataset, null, 2);
+            document.getElementById('jsonError').classList.add('hidden');
+        }
+
+        function exportJsonFile() {
+            const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(currentDataset, null, 2));
+            const downloadAnchor = document.createElement('a');
+            downloadAnchor.setAttribute("href", dataStr);
+            downloadAnchor.setAttribute("download", `indicadores_economicos_${new Date().toISOString().slice(0,10)}.json`);
+            document.body.appendChild(downloadAnchor);
+            downloadAnchor.click();
+            downloadAnchor.remove();
+        }
+
+        function importJsonFile(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                try {
+                    const parsed = JSON.parse(evt.target.result);
+                    document.getElementById('jsonTextarea').value = JSON.stringify(parsed, null, 2);
+                    document.getElementById('jsonError').classList.add('hidden');
+                } catch (err) {
+                    alert("Error al leer el archivo JSON: formato no válido.");
+                }
+            };
+            reader.readAsText(file);
+        }
+    </script>
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div>
+      <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+      <p class="sg-footer__about">Datos e inteligencia artificial responsable para la gestión pública, las organizaciones y los ciudadanos.</p>
+    </div>
+    <nav class="sg-footer__nav" aria-label="Pie de página">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+      <a href="/buscar/">Buscar</a>
+      <a href="/mapa">Mapa web</a>
+    </nav>
+    <div class="sg-footer__social">
+      <a href="https://www.linkedin.com/in/emirodgar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      <a href="mailto:hola@emirodgar.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="sg-copyright">© 2026 <a href="/">Emirodgar</a> · Emilio Rodríguez García</div>
+</footer>
+<script src="/assets/js/theme.js?v=20261028" defer></script>
+</body>
+</html>

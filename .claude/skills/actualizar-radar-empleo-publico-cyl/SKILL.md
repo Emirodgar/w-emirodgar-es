@@ -10,10 +10,10 @@ empleo) y la plantilla real de la Junta de Castilla y León, con detalle por pro
 información vive en un único fichero de datos que consumen tanto el panel completo como el widget de la
 home:
 
-- Dataset: [proyectos/radar-empleo-publico-cyl/data.json](../../../proyectos/radar-empleo-publico-cyl/data.json)
-- Panel completo: [proyectos/radar-empleo-publico-cyl/index.html](../../../proyectos/radar-empleo-publico-cyl/index.html) (lee `data.json` vía `fetch`)
+- Dataset: [radar-empleo-publico-cyl/data.json](../../../radar-empleo-publico-cyl/data.json)
+- Panel completo: [radar-empleo-publico-cyl/index.html](../../../radar-empleo-publico-cyl/index.html) (lee `data.json` vía `fetch`)
 - Widget de la home: [index.html](../../../index.html) (busca `radarEmpleoSparkline`, también lee el mismo `data.json`)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-radar-empleo-publico-cyl.md](../../../publicaciones/proyecto-radar-empleo-publico-cyl.md)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [radar-empleo-publico-cyl/index.html](../../../radar-empleo-publico-cyl/index.html)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
 siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero.
@@ -258,7 +258,7 @@ serie de `plazas`, y copia el resultado tal cual al campo `sparklineSvg`:
 import json
 from collections import OrderedDict
 
-path = 'proyectos/radar-empleo-publico-cyl/data.json'
+path = 'radar-empleo-publico-cyl/data.json'
 with open(path, encoding='utf-8') as f:
     data = json.load(f, object_pairs_hook=OrderedDict)
 
@@ -323,7 +323,7 @@ azul claro) y la línea (sólida, azul), con puntos en cada año. El color (`#25
 para que combine con la leyenda estática de `index.html` (`.legend-swatch--blue`) — si cambia ese color en
 `styles.css`, cámbialo también aquí.
 
-El panel completo ([proyectos/radar-empleo-publico-cyl/index.html](../../../proyectos/radar-empleo-publico-cyl/index.html))
+El panel completo ([radar-empleo-publico-cyl/index.html](../../../radar-empleo-publico-cyl/index.html))
 sigue usando Chart.js con sus 6 gráficos interactivos — eso no cambia, solo se quitó Chart.js de la home.
 
 ## Preguntas Frecuentes (FAQ)

@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 """Genera las páginas SEO del proyecto Elecciones en España a partir de los JSON de la convocatoria vigente.
 
     python scripts/elecciones/generar_paginas.py
@@ -11,7 +12,7 @@ Escribe:
 
 El contenido (tablas, FAQ, JSON-LD) se escribe en el HTML para que los buscadores lo lean sin ejecutar
 JavaScript; el JS solo añade la interactividad. Hay que volver a ejecutarlo cada vez que cambien los
-JSON de proyectos/elecciones-espana/data/. La carpeta scripts/ no se publica (_config.yml: exclude).
+JSON de elecciones-espana/data/. La carpeta scripts/ no se publica (_config.yml: exclude).
 """
 import html
 import json
@@ -20,7 +21,7 @@ import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-DATA = ROOT / "proyectos" / "elecciones-espana" / "data"
+DATA = ROOT / "elecciones-espana" / "data"
 SITE = "https://emirodgar.es"
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
@@ -75,7 +76,7 @@ siglas_lista = ", ".join(p["siglas"] for p in partidos[:-1]) + " y " + partidos[
 
 # ---------------------------------------------------------------- bloques comunes
 GROUP_NAV = [
-    ("Panel", "/proyectos/elecciones-espana/", "chart"),
+    ("Panel", "/elecciones-espana/", "chart"),
     ("Encuestas", "/encuestas-elecciones-generales/", "enc"),
     ("A quién votar", "/a-quien-votar/", "test"),
     ("Programas electorales", "/programas-electorales/", "prog"),
@@ -162,12 +163,12 @@ def topbar(crumbs, active):
 
 def related(active):
     cards = {
-        "chart": ("Panel de las elecciones", "Cuenta atrás, calendario, candidatos, Congreso y cómo se vota.", "/proyectos/elecciones-espana/", "fa-chart-pie"),
+        "chart": ("Panel de las elecciones", "Cuenta atrás, calendario, candidatos, Congreso y cómo se vota.", "/elecciones-espana/", "fa-chart-pie"),
         "enc": ("Encuestas: media de sondeos", "Quién lidera las encuestas de las elecciones generales y cómo evolucionan.", "/encuestas-elecciones-generales/", "fa-chart-line"),
         "test": ("A quién votar: test de afinidad", f"{n_stm} preguntas para saber con qué partido coincides más, con sus fuentes.", "/a-quien-votar/", "fa-wand-magic-sparkles"),
         "prog": ("Programas electorales por temas", "Qué propone cada partido en vivienda, sanidad, pensiones, impuestos…", "/programas-electorales/", "fa-scale-balanced"),
         "correo": ("Cómo votar por correo", "Plazos oficiales, pasos y documentación para votar por correo el 29N.", "/como-votar-por-correo/", "fa-envelope"),
-        "votar": ("Cómo votar el 29N", "Voto por correo, papeletas, plazos y el simulador de la ley D'Hondt.", "/proyectos/elecciones-espana/#sec-votar", "fa-envelope-open-text"),
+        "votar": ("Cómo votar el 29N", "Voto por correo, papeletas, plazos y el simulador de la ley D'Hondt.", "/elecciones-espana/#sec-votar", "fa-envelope-open-text"),
     }
     items = "".join(
         f'<a href="{u}" class="block bg-white rounded-xl border border-slate-200 p-4 hover:border-brand-500 transition"><i class="fa-solid {ic} text-brand-600 mb-2"></i><h3 class="font-semibold text-sm text-slate-900">{e(t)}</h3><p class="text-xs text-slate-500 mt-1 leading-snug">{e(d)}</p></a>'
@@ -179,8 +180,8 @@ def related(active):
 def footer():
     return f"""<footer class="bg-slate-900 text-slate-400 text-xs mt-10">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 py-6 space-y-2">
-            <p>Proyecto educativo y experimental de <a class="text-slate-200 underline" href="https://emirodgar.es/">Emilio Rodríguez (Emirodgar)</a>, sin vinculación con ningún partido ni administración. Actualizado el {e(modified_txt)}.</p>
-            <p>Datos oficiales: <a class="underline" href="https://www.juntaelectoralcentral.es" target="_blank" rel="noopener">Junta Electoral Central</a> · <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a> · <a class="underline" href="https://29neleccionesgenerales.es" target="_blank" rel="noopener">29neleccionesgenerales.es</a>. <a class="underline" href="https://emirodgar.es/proyectos/elecciones-espana/">Panel de Elecciones en España</a>.</p>
+            <p>Sin vinculación con ningún partido ni administración. Actualizado el {e(modified_txt)}.</p>
+            <p>Datos oficiales: <a class="underline" href="https://www.juntaelectoralcentral.es" target="_blank" rel="noopener">Junta Electoral Central</a> · <a class="underline" href="https://www.infoelectoral.interior.gob.es" target="_blank" rel="noopener">Ministerio del Interior</a> · <a class="underline" href="https://29neleccionesgenerales.es" target="_blank" rel="noopener">29neleccionesgenerales.es</a>. <a class="underline" href="https://emirodgar.es/elecciones-espana/">Panel de Elecciones en España</a>.</p>
         </div></footer>
 {site_footer()}"""
 
@@ -386,7 +387,7 @@ def build_a_quien_votar():
         {"@context": "https://schema.org", "@type": "WebApplication", "name": "Test «¿A quién votar?» de las elecciones generales 2026",
          "url": SITE + path, "applicationCategory": "EducationalApplication", "operatingSystem": "Web", "inLanguage": "es-ES",
          "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}, "description": desc},
-        breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("A quién votar", path)]),
+        breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/elecciones-espana/"), ("A quién votar", path)]),
         faq_ld(faq),
     ]
     test_data = {
@@ -398,7 +399,7 @@ def build_a_quien_votar():
     }
     td = json.dumps(test_data, ensure_ascii=False).replace("</", "<\\/")
     h = head(title, desc, path, jsonld)
-    body = f"""{topbar([("Emirodgar.es", "/"), ("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("A quién votar", path)], "test")}
+    body = f"""{topbar([("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/elecciones-espana/"), ("A quién votar", path)], "test")}
     <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">
         <section class="space-y-3">
             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">¿A quién votar en las elecciones generales de 2026?</h1>
@@ -432,7 +433,7 @@ def build_a_quien_votar():
 
         <section aria-labelledby="quien" class="space-y-3">
             <h2 id="quien" class="text-xl font-bold">¿Quién encabeza las listas?</h2>
-            <p class="text-sm text-slate-600">Cabezas de lista anunciadas por los partidos de ámbito estatal. Las listas definitivas se proclaman el 2 de noviembre. Más datos en el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/#sec-partidos">panel de elecciones</a>.</p>
+            <p class="text-sm text-slate-600">Cabezas de lista anunciadas por los partidos de ámbito estatal. Las listas definitivas se proclaman el 2 de noviembre. Más datos en el <a class="text-brand-600 underline" href="/elecciones-espana/#sec-partidos">panel de elecciones</a>.</p>
             {candidates_list()}
         </section>
 
@@ -488,7 +489,7 @@ def build_programas():
          f"Los de ámbito estatal con presencia en el Congreso: {siglas_lista}. Los partidos autonómicos se presentan solo en su territorio."),
     ]
     jsonld = [webpage_ld(title, desc, path),
-              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Programas electorales", path)]),
+              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Programas electorales", path)]),
               faq_ld(faq)]
     tab_btns = '<button type="button" data-tema-btn="todos" aria-pressed="true" class="px-3 py-1.5 rounded-full border text-sm font-medium bg-brand-600 text-white border-brand-600">Todos los temas</button>' + "".join(
         f'<button type="button" data-tema-btn="{slug(t)}" aria-pressed="false" class="px-3 py-1.5 rounded-full border text-sm font-medium bg-white text-slate-700 border-slate-300">{e(t)}</button>' for t in temas)
@@ -515,7 +516,7 @@ def build_programas():
         prog_rows += (f'<tr class="border-t border-slate-100"><th scope="row" class="px-3 py-2 text-left"><span class="inline-block w-2.5 h-2.5 rounded-full mr-1.5" style="background:{p["color"]}"></span>{e(p["nombre"])}</th>'
                       f'<td class="px-3 py-2 text-sm">{prog}</td><td class="px-3 py-2 text-sm">{web}</td></tr>')
     h = head(title, desc, path, jsonld)
-    body = f"""{topbar([("Emirodgar.es", "/"), ("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Programas electorales", path)], "prog")}
+    body = f"""{topbar([("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Programas electorales", path)], "prog")}
     <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">
         <section class="space-y-3">
             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Programas electorales 2026: qué propone cada partido</h1>
@@ -615,17 +616,17 @@ def build_encuestas():
     veda = bool(enc.get("ocultas")) or bool(v and _d(v["desde"]) <= hoy <= _d(v["hasta"]))
     out_dir = ROOT / "encuestas-elecciones-generales"
     out_dir.mkdir(exist_ok=True)
-    crumbs = [("Emirodgar.es", "/"), ("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Encuestas", path)]
+    crumbs = [("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Encuestas", path)]
 
     if veda or not enc.get("sondeos"):
         title = "Encuestas elecciones generales 2026: prohibida su publicación"
         desc = f"La ley electoral prohíbe publicar encuestas en los cinco días previos a la votación del {fecha_elec}. Cuándo vuelven y dónde ver el resto de la guía electoral."
         nota = v["nota"] if v else "La ley electoral prohíbe publicar encuestas en los días previos a la votación."
         faq = [("¿Por qué no se muestran encuestas ahora?", nota + " Las encuestas volverán a mostrarse después de la jornada de votación.")]
-        jsonld = [webpage_ld(title, desc, path), breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Encuestas", path)]), faq_ld(faq)]
+        jsonld = [webpage_ld(title, desc, path), breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Encuestas", path)]), faq_ld(faq)]
         main = f"""<section class="space-y-3"><h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Encuestas de las elecciones generales: periodo de prohibición</h1>
             <p class="bg-amber-50 border border-amber-300 text-amber-900 rounded-lg p-4 text-sm">{e(faq[0][1])}</p>
-            <p class="text-slate-600">Mientras tanto, consulta el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/">panel de las elecciones</a>, los <a class="text-brand-600 underline" href="/programas-electorales/">programas electorales por temas</a> o el <a class="text-brand-600 underline" href="/a-quien-votar/">test «¿A quién votar?»</a>.</p></section>
+            <p class="text-slate-600">Mientras tanto, consulta el <a class="text-brand-600 underline" href="/elecciones-espana/">panel de las elecciones</a>, los <a class="text-brand-600 underline" href="/programas-electorales/">programas electorales por temas</a> o el <a class="text-brand-600 underline" href="/a-quien-votar/">test «¿A quién votar?»</a>.</p></section>
             {faq_block(faq)}{related("enc")}"""
         html_ = head(title, desc, path, jsonld) + "\n" + topbar(crumbs, "enc") + f'\n<main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">{main}</main>{footer()}</body></html>\n'
         (out_dir / "index.html").write_text(html_, encoding="utf-8")
@@ -673,7 +674,7 @@ def build_encuestas():
               {"@context": "https://schema.org", "@type": "Dataset", "name": "Encuestas de las elecciones generales de España 2026", "description": desc,
                "url": SITE + path, "inLanguage": "es-ES", "dateModified": latest_iso, "creator": {"@type": "Person", "name": "Emilio Rodríguez"},
                "isBasedOn": [f["url"] for f in enc.get("fuentes", [])], "variableMeasured": "Estimación de voto (%)"},
-              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Encuestas", path)]), faq_ld(faq)]
+              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Encuestas", path)]), faq_ld(faq)]
 
     rows = ""
     for i in ranked:
@@ -746,7 +747,7 @@ def build_encuestas():
 
         <section class="prose-x text-slate-700"><h2 class="text-xl font-bold text-slate-900">Cómo leer las encuestas electorales</h2>
             <p>Una encuesta no es una predicción: es una fotografía del momento, con un margen de error. Con 1.000 entrevistas el margen es de unos ±3 puntos; por eso diferencias pequeñas entre dos partidos no son concluyentes. Las empresas difieren en el método de entrevista y en el modelo con el que estiman el voto de los indecisos, lo que explica que unas encuestas den resultados distintos a otras. Fíjate en la <strong>tendencia de la media</strong> más que en un único sondeo.</p>
-            <p>Estas cifras son <strong>estimación de voto</strong>. En unas elecciones al Congreso los escaños se reparten por provincias con la ley D'Hondt, así que un porcentaje no se traduce linealmente en escaños. Puedes probar el reparto en el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/#sec-votar">simulador D'Hondt del panel</a> y ver el <a class="text-brand-600 underline" href="/proyectos/elecciones-espana/#sec-congreso">Congreso actual</a>.</p>
+            <p>Estas cifras son <strong>estimación de voto</strong>. En unas elecciones al Congreso los escaños se reparten por provincias con la ley D'Hondt, así que un porcentaje no se traduce linealmente en escaños. Puedes probar el reparto en el <a class="text-brand-600 underline" href="/elecciones-espana/#sec-votar">simulador D'Hondt del panel</a> y ver el <a class="text-brand-600 underline" href="/elecciones-espana/#sec-congreso">Congreso actual</a>.</p>
             <h2 class="text-xl font-bold text-slate-900">Metodología de la media</h2>
             <p>{e(enc["metodologia"])}</p>
             <p class="text-sm">Fuentes de los sondeos:</p><ul class="list-disc pl-6 text-sm">{fuentes}</ul>
@@ -820,7 +821,7 @@ def build_voto_correo():
          "Los residentes en el extranjero inscritos en el censo CERA tienen un procedimiento propio a través de los consulados. Consulta las instrucciones del Ministerio de Asuntos Exteriores o de tu consulado."),
     ]
     jsonld = [webpage_ld(title, desc, path),
-              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Cómo votar por correo", path)]),
+              breadcrumb_ld([("Inicio", "/"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Cómo votar por correo", path)]),
               faq_ld(faq)]
     fechas = json.dumps({"solDesde": vc["solicitudDesde"], "solHasta": vc["solicitudHasta"], "remHasta": vc["remisionHasta"],
                          "votacion": actual["fecha"], "horario": conv["horarioVotacion"]})
@@ -837,7 +838,7 @@ def build_voto_correo():
     ]
     pasos_html = "".join(f'<li class="flex gap-4"><span class="flex-shrink-0 w-9 h-9 rounded-full bg-brand-600 text-white font-extrabold flex items-center justify-center">{i}</span><div><h3 class="font-semibold text-slate-900">{e(t)}</h3><p class="text-sm text-slate-600 mt-1 leading-relaxed">{e(d_)}</p></div></li>' for i, (t, d_) in enumerate(pasos, 1))
     fuentes = "".join(f'<li><a class="text-brand-600 underline" href="{e(f["url"])}" target="_blank" rel="noopener">{e(f["titulo"])}</a></li>' for f in vc.get("fuentes", []))
-    body = f"""{topbar([("Emirodgar.es", "/"), ("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/proyectos/elecciones-espana/"), ("Cómo votar por correo", path)], "correo")}
+    body = f"""{topbar([("Proyectos", "/proyectos"), ("Elecciones generales 2026", "/elecciones-espana/"), ("Cómo votar por correo", path)], "correo")}
     <main class="flex-grow max-w-5xl w-full mx-auto px-4 sm:px-6 py-8 space-y-10">
         <section class="space-y-3">
             <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900">Cómo votar por correo en las elecciones generales del 29N</h1>

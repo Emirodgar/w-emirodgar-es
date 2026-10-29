@@ -15,21 +15,21 @@ Paneles públicos que reúnen en un solo sitio datos que normalmente están disp
 ## Economía y vivienda
 
 <ul class="hub-grid">
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/macrodata-espana/"><strong>MacroData España</strong><span>IPC, prima de riesgo, tipos del BCE, Euríbor, PIB y paro, con un termómetro propio de riesgo de recesión.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/macrodata-espana">Cómo está hecho →</a></p></li>
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/simulador-hipotecas-espana/"><strong>Simulador de hipotecas</strong><span>Calcula tu cuota, compara bancos y mira cómo cambiaría si suben o bajan los tipos.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/simulador-hipotecas-espana">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/macrodata-espana/"><strong>MacroData España</strong><span>IPC, prima de riesgo, tipos del BCE, Euríbor, PIB y paro, con un termómetro propio de riesgo de recesión.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/macrodata-espana/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/simulador-hipotecas-espana/"><strong>Simulador de hipotecas</strong><span>Calcula tu cuota, compara bancos y mira cómo cambiaría si suben o bajan los tipos.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/simulador-hipotecas-espana/">Cómo está hecho →</a></p></li>
 </ul>
 
 ## Ayudas sociales
 
 <ul class="hub-grid">
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/catalogo-ayudas-espana/"><strong>Catálogo de ayudas sociales en España</strong><span>Prestaciones estatales con cuantías, requisitos, estado de la convocatoria y enlace oficial.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/catalogo-ayudas-espana">Cómo está hecho →</a></p></li>
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/catalogo-ayudas-cyl-salamanca/"><strong>Ayudas de Castilla y León y Salamanca</strong><span>Ayudas de la Junta, el Ayuntamiento de Salamanca y la Diputación, con calculadora de elegibilidad.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/ayudas-castilla-leon-salamanca">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/catalogo-ayudas-espana/"><strong>Catálogo de ayudas sociales en España</strong><span>Prestaciones estatales con cuantías, requisitos, estado de la convocatoria y enlace oficial.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/catalogo-ayudas-espana/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/ayudas-castilla-leon-salamanca/"><strong>Ayudas de Castilla y León y Salamanca</strong><span>Ayudas de la Junta, el Ayuntamiento de Salamanca y la Diputación, con calculadora de elegibilidad.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/ayudas-castilla-leon-salamanca/">Cómo está hecho →</a></p></li>
 </ul>
 
 ## Elecciones
 
 <ul class="hub-grid">
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/elecciones-espana/"><strong>Elecciones en España</strong><span>Calendario, candidatos, media de encuestas, test de afinidad y cómo se vota en las generales del 29 de noviembre de 2026.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/elecciones-espana/"><strong>Elecciones en España</strong><span>Calendario, candidatos, media de encuestas, test de afinidad y cómo se vota en las generales del 29 de noviembre de 2026.</span></a></li>
 </ul>
 
 Todo el material electoral (guías, encuestas, programas y test de afinidad) está reunido en el [hub de elecciones](https://emirodgar.es/elecciones/).
@@ -37,9 +37,9 @@ Todo el material electoral (guías, encuestas, programas y test de afinidad) est
 ## Castilla y León
 
 <ul class="hub-grid">
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/panel-economico-cyl/"><strong>Panel económico CyL</strong><span>Presupuesto autonómico, subvenciones, ayudas y mercado laboral de la comunidad, con detalle por provincia.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/panel-economico-cyl">Cómo está hecho →</a></p></li>
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/radar-empleo-publico-cyl/"><strong>Radar de empleo público CyL</strong><span>Convocatorias, plazas ofertadas, oposiciones y plantilla de la Junta.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/radar-empleo-publico-cyl">Cómo está hecho →</a></p></li>
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/quien-gobierna-cyl/"><strong>¿Quién gobierna CyL?</strong><span>Presidente, vicepresidentes y consejeros: competencias, partido y trayectoria.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/quien-gobierna-cyl">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/panel-economico-cyl/"><strong>Panel económico CyL</strong><span>Presupuesto autonómico, subvenciones, ayudas y mercado laboral de la comunidad, con detalle por provincia.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/panel-economico-cyl/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/radar-empleo-publico-cyl/"><strong>Radar de empleo público CyL</strong><span>Convocatorias, plazas ofertadas, oposiciones y plantilla de la Junta.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/radar-empleo-publico-cyl/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/quien-gobierna-cyl/"><strong>¿Quién gobierna CyL?</strong><span>Presidente, vicepresidentes y consejeros: competencias, partido y trayectoria.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/quien-gobierna-cyl/">Cómo está hecho →</a></p></li>
 </ul>
 
 Estos paneles, junto con las ayudas de la comunidad y los análisis relacionados, están en el [hub de Castilla y León](https://emirodgar.es/castilla-y-leon/).
@@ -47,9 +47,9 @@ Estos paneles, junto con las ayudas de la comunidad y los análisis relacionados
 ## Sociedad y medios
 
 <ul class="hub-grid">
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/lo-mas-leido-wikipedia/"><strong>Lo más leído en Wikipedia</strong><span>Cada semana, un resumen en español de los 25 artículos más leídos y qué temas mueven el interés.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/lo-mas-leido-wikipedia">Cómo está hecho →</a></p></li>
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/faro/"><strong>FARO: salud mental en redes</strong><span>Sistema de monitorización de la conversación sobre salud mental en redes sociales.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/faro-monitorizacion-salud-mental">Cómo está hecho →</a></p></li>
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/medicion-audiencias-digitales/"><strong>Medición de audiencias digitales</strong><span>Dashboard de medición de audiencias digitales.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/medicion-audiencias-digitales">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/lo-mas-leido-wikipedia/"><strong>Lo más leído en Wikipedia</strong><span>Cada semana, un resumen en español de los 25 artículos más leídos y qué temas mueven el interés.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/lo-mas-leido-wikipedia/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/faro-monitorizacion-salud-mental/"><strong>FARO: salud mental en redes</strong><span>Sistema de monitorización de la conversación sobre salud mental en redes sociales.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/faro-monitorizacion-salud-mental/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/medicion-audiencias-digitales/"><strong>Medición de audiencias digitales</strong><span>Dashboard de medición de audiencias digitales.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/medicion-audiencias-digitales/">Cómo está hecho →</a></p></li>
 </ul>
 
 ## Qué está pasando ahora

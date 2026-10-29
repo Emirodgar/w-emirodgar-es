@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Medición de Audiencias Digitales</title>
+    <meta name="description" content="Dashboard de demostración de un sistema público de medición de audiencias digitales: métricas, calidad del tráfico y plan de implementación.">
+    <link rel="canonical" href="https://emirodgar.es/medicion-audiencias-digitales/">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1"></script>
+<script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
+<link rel="stylesheet" href="/assets/css/project-doc.css?v=20261029">
+</head>
+<body>
+<header class="sg-header" role="banner">
+  <div class="sg-header__inner">
+    <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+    <button class="sg-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sg-nav"><span></span></button>
+    <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
+      <ul class="sg-nav__list">
+        <li><a class="sg-nav__link" href="/datos/">Dashboards</a></li>
+        <li><a class="sg-nav__link" href="/elecciones/">Elecciones</a></li>
+        <li><a class="sg-nav__link" href="/castilla-y-leon/">Castilla y León</a></li>
+        <li><a class="sg-nav__link" href="/actualidad/">Actualidad</a></li>
+        <li class="sg-dropdown">
+          <button class="sg-nav__link sg-dropdown__toggle" type="button" aria-expanded="false">Publicaciones</button>
+          <div class="sg-dropdown__menu">
+            <a href="/publicaciones-inteligencia-artificial">Inteligencia artificial</a>
+            <a href="/publicaciones-analisis">Análisis</a>
+            <a href="/mapa">Todas las publicaciones</a>
+          </div>
+        </li>
+      </ul>
+      <div class="sg-nav__tools">
+        <a class="sg-icon-btn sg-search" href="/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+        <button class="sg-icon-btn sg-theme" type="button" aria-label="Activar modo oscuro">
+          <span class="sg-moon" aria-hidden="true"><svg viewBox="0 0 1472 1536"><path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/></svg>Oscuro</span>
+          <span class="sg-sun" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/><path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/><path stroke-linecap="round" d="M24 45v-3.15"/></g></svg>Claro</span>
+        </button>
+        <a class="sg-btn" href="/emilio">Sobre mí</a>
+      </div>
+    </nav>
+  </div>
+</header>
+    <div class="dashboard-container">
+        <!-- Header -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="header-title">
+                    <h1>Dashboard de Medición de Audiencias Digitales</h1>
+                    <p class="subtitle">Sistema Público de Análisis de Medios Digitales</p>
+                </div>
+                <div class="header-actions">
+                    <button class="btn btn-secondary" id="exportBtn">
+                        <i class="fas fa-download"></i>
+                        Exportar Datos
+                    </button>
+                    <button class="btn btn-primary" id="refreshBtn">
+                        <i class="fas fa-sync-alt"></i>
+                        Actualizar
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Metrics -->
+        <section class="main-metrics">
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="uniqueUsers">2.8M</h3>
+                    <p class="metric-label">Usuarios Únicos</p>
+                    <span class="metric-description">Total acumulado</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-eye"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="pageViews">12.8M</h3>
+                    <p class="metric-label">Páginas Vistas</p>
+                    <span class="metric-description">Total acumulado</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="avgDuration">4:05</h3>
+                    <p class="metric-label">Duración Promedio</p>
+                    <span class="metric-description">Por sesión</span>
+                </div>
+            </div>
+            
+            <div class="metric-card">
+                <div class="metric-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="metric-content">
+                    <h3 class="metric-value" id="trafficQuality">87%</h3>
+                    <p class="metric-label">Calidad del Tráfico</p>
+                    <span class="metric-description">Tráfico verificado</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation Tabs -->
+        <nav class="dashboard-tabs">
+            <button class="tab-button active" data-tab="resumen">
+                <i class="fas fa-chart-pie"></i>
+                Resumen
+            </button>
+            <button class="tab-button" data-tab="medios">
+                <i class="fas fa-newspaper"></i>
+                Medios
+            </button>
+            <button class="tab-button" data-tab="calidad">
+                <i class="fas fa-shield-alt"></i>
+                Calidad
+            </button>
+            <button class="tab-button" data-tab="campanas">
+                <i class="fas fa-bullhorn"></i>
+                Campañas
+            </button>
+        </nav>
+
+        <!-- Content Sections -->
+        <main class="dashboard-content">
+            <!-- Resumen Tab -->
+            <section id="resumen" class="tab-content active">
+                <div class="content-grid">
+                    <div class="chart-container">
+                        <h3>Tendencia de Audiencia (Últimos 30 días)</h3>
+                        <p class="chart-description">Evolución de usuarios únicos y sesiones</p>
+                        <div class="chart-wrapper">
+                            <canvas id="audienceChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-container">
+                        <div class="stat-section">
+                            <h4>Distribución por Dispositivos</h4>
+                            <div class="device-stats">
+                                <div class="device-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span class="device-name">Móvil</span>
+                                    <span class="device-percentage">58%</span>
+                                </div>
+                                <div class="device-item">
+                                    <i class="fas fa-desktop"></i>
+                                    <span class="device-name">Desktop</span>
+                                    <span class="device-percentage">32%</span>
+                                </div>
+                                <div class="device-item">
+                                    <i class="fas fa-tablet-alt"></i>
+                                    <span class="device-name">Tablet</span>
+                                    <span class="device-percentage">10%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="stat-section">
+                            <h4>Distribución Geográfica</h4>
+                            <div class="geo-stats">
+                                <div class="geo-item">
+                                    <span class="geo-name">Madrid</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 29.8%"></div>
+                                    </div>
+                                    <span class="geo-percentage">29.8%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">Cataluña</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 21.9%"></div>
+                                    </div>
+                                    <span class="geo-percentage">21.9%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">Andalucía</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 16%"></div>
+                                    </div>
+                                    <span class="geo-percentage">16%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">Valencia</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 10%"></div>
+                                    </div>
+                                    <span class="geo-percentage">10%</span>
+                                </div>
+                                <div class="geo-item">
+                                    <span class="geo-name">País Vasco</span>
+                                    <div class="geo-bar">
+                                        <div class="geo-fill" style="width: 7%"></div>
+                                    </div>
+                                    <span class="geo-percentage">7%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Medios Tab -->
+            <section id="medios" class="tab-content">
+                <div class="content-header">
+                    <h3>Top Medios Digitales</h3>
+                    <p>Ranking por audiencia y calidad</p>
+                </div>
+                <div class="media-ranking">
+                    <div class="ranking-item">
+                        <div class="ranking-position">1</div>
+                        <div class="media-info">
+                            <h4>El País Digital</h4>
+                            <span class="media-users">1.2M usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">92%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">2.2M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">2</div>
+                        <div class="media-info">
+                            <h4>El Mundo Online</h4>
+                            <span class="media-users">987.2K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">89%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.8M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">3</div>
+                        <div class="media-info">
+                            <h4>ABC Digital</h4>
+                            <span class="media-users">734.8K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">91%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.4M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">4</div>
+                        <div class="media-info">
+                            <h4>La Vanguardia</h4>
+                            <span class="media-users">623.8K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">88%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.2M sesiones</div>
+                    </div>
+                    
+                    <div class="ranking-item">
+                        <div class="ranking-position">5</div>
+                        <div class="media-info">
+                            <h4>El Confidencial</h4>
+                            <span class="media-users">584.7K usuarios únicos</span>
+                        </div>
+                        <div class="media-quality">
+                            <span class="quality-score">94%</span>
+                            <span class="quality-label">Calidad</span>
+                        </div>
+                        <div class="media-sessions">1.0M sesiones</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Calidad Tab -->
+            <section id="calidad" class="tab-content">
+                <div class="quality-grid">
+                    <div class="quality-section">
+                        <h3>Calidad del Tráfico</h3>
+                        <p>Análisis de tráfico humano vs automatizado</p>
+                        
+                        <div class="traffic-analysis">
+                            <div class="traffic-item">
+                                <div class="traffic-label">
+                                    <span class="traffic-indicator human"></span>
+                                    Tráfico Humano
+                                </div>
+                                <div class="traffic-bar">
+                                    <div class="traffic-fill human" style="width: 87%"></div>
+                                </div>
+                                <span class="traffic-percentage">87%</span>
+                            </div>
+                            
+                            <div class="traffic-item">
+                                <div class="traffic-label">
+                                    <span class="traffic-indicator bot"></span>
+                                    Tráfico de Bots
+                                </div>
+                                <div class="traffic-bar">
+                                    <div class="traffic-fill bot" style="width: 13%"></div>
+                                </div>
+                                <span class="traffic-percentage">13%</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="fraud-section">
+                        <h3>Detección de Fraude</h3>
+                        <p>Actividades bloqueadas y sospechosas</p>
+                        
+                        <div class="fraud-stats">
+                            <div class="fraud-item">
+                                <div class="fraud-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div class="fraud-content">
+                                    <span class="fraud-value">1.8M</span>
+                                    <span class="fraud-label">Bots Bloqueados</span>
+                                </div>
+                            </div>
+                            
+                            <div class="fraud-item">
+                                <div class="fraud-icon">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                </div>
+                                <div class="fraud-content">
+                                    <span class="fraud-value">23.8K</span>
+                                    <span class="fraud-label">IPs Sospechosas</span>
+                                </div>
+                            </div>
+                            
+                            <div class="fraud-item">
+                                <div class="fraud-icon">
+                                    <i class="fas fa-mouse-pointer"></i>
+                                </div>
+                                <div class="fraud-content">
+                                    <span class="fraud-value">8.5K</span>
+                                    <span class="fraud-label">Clics Inválidos</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Campañas Tab -->
+            <section id="campanas" class="tab-content">
+                <div class="campaigns-container">
+                    <div class="chart-container">
+                        <h3>ROI de Campañas Públicas</h3>
+                        <p>Retorno de inversión por campaña</p>
+                        <div class="chart-wrapper">
+                            <canvas id="roiChart"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="campaigns-details">
+                        <h4>Detalle de Campañas</h4>
+                        <div class="campaign-list">
+                            <div class="campaign-item">
+                                <div class="campaign-header">
+                                    <h5>Campaña Turismo España</h5>
+                                    <span class="roi-badge positive">ROI: 3.2x</span>
+                                </div>
+                                <div class="campaign-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Inversión:</span>
+                                        <span class="stat-value">€450,000</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Alcance:</span>
+                                        <span class="stat-value">2.1M usuarios</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Conversiones:</span>
+                                        <span class="stat-value">15,600</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="campaign-item">
+                                <div class="campaign-header">
+                                    <h5>Promoción Cultura</h5>
+                                    <span class="roi-badge positive">ROI: 2.8x</span>
+                                </div>
+                                <div class="campaign-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Inversión:</span>
+                                        <span class="stat-value">€320,000</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Alcance:</span>
+                                        <span class="stat-value">1.8M usuarios</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Conversiones:</span>
+                                        <span class="stat-value">12,400</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="campaign-item">
+                                <div class="campaign-header">
+                                    <h5>Educación Digital</h5>
+                                    <span class="roi-badge positive">ROI: 4.1x</span>
+                                </div>
+                                <div class="campaign-stats">
+                                    <div class="stat">
+                                        <span class="stat-label">Inversión:</span>
+                                        <span class="stat-value">€280,000</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Alcance:</span>
+                                        <span class="stat-value">1.5M usuarios</span>
+                                    </div>
+                                    <div class="stat">
+                                        <span class="stat-label">Conversiones:</span>
+                                        <span class="stat-value">18,200</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+
+        <!-- Documentación del proyecto (antes en una página aparte) -->
+        <section id="documentacion" class="pdoc pdoc--standalone" aria-labelledby="documentacion-titulo">
+            <h2 id="documentacion-titulo" class="pdoc__title">Sobre este proyecto: cómo está hecho</h2>
+            <div class="pdoc__body">
+<p>En el entorno digital actual, la medición del impacto publicitario y del tráfico en medios digitales se enfrenta a numerosos retos. La falta de estándares claros y la fragmentación de los sistemas existentes dificultan tanto la evaluación como la toma de decisiones. Por eso, se plantea la necesidad de un sistema público, transparente y fiable que permita medir con criterios unificados y accesibles para todos. Lo ideal sería que fuera público -para garantizar transparencia- y a nivel nacional, para que todos los medios estén analizados de la misma manera.</p>
+<h3>Problemática actual</h3>
+<ul>
+<li>Fragmentación de sistemas de medición con metodologías dispares  </li>
+<li>Falta de transparencia en los criterios de validación del tráfico  </li>
+<li>Dificultad para determinar el impacto real de la inversión publicitaria  </li>
+<li>Ausencia de estándares públicos normalizados para la industria  </li>
+<li>Dependencia de proveedores privados con intereses comerciales  </li>
+</ul>
+<h3>Objetivos del sistema</h3>
+<ul>
+<li>Establecer un estándar público y normalizado de medición  </li>
+<li>Garantizar la calidad y fiabilidad del tráfico medido  </li>
+<li>Proporcionar transparencia en la metodología y los datos  </li>
+<li>Facilitar la toma de decisiones basada en datos para funcionarios públicos  </li>
+<li>Optimizar la inversión publicitaria en medios digitales  </li>
+</ul>
+<hr />
+<h3>Definición del proceso</h3>
+<p>Para construir un sistema de medición fiable, transparente y útil para todos los actores del sector, es clave apoyarse en tres pilares fundamentales: la normalización de criterios, la garantía de calidad del tráfico y una medición rigurosa del impacto de la inversión. A continuación, se detallan los elementos clave de cada uno.</p>
+<p><img loading="lazy" width="465" class="img-responsive" alt="definción proceso de medición" src="https://github.com/user-attachments/assets/6d356b70-2cca-4f75-af1a-308705b866d0" /></p>
+<h4>Normalización y estandarización</h4>
+<ul>
+<li>Definiciones unívocas de métricas clave (usuario único, visita, página vista)  </li>
+<li>Clasificación estandarizada de contenidos por categorías  </li>
+<li>Segmentación demográfica y geográfica normalizada  </li>
+<li>Protocolos estandarizados de recolección de datos  </li>
+</ul>
+<h4>Garantía de calidad del tráfico</h4>
+<ul>
+<li>Detección de tráfico no humano mediante algoritmos avanzados  </li>
+<li>Filtrado pre-procesamiento con listas negras de IPs conocidas  </li>
+<li>Análisis post-procesamiento con machine learning  </li>
+<li>Auditorías continuas internas y externas  </li>
+</ul>
+<h4>Medición del impacto de inversión</h4>
+<ul>
+<li>Métricas específicas de rendimiento de campañas  </li>
+<li>Modelos de atribución para evaluar puntos de contacto  </li>
+<li>Análisis de audiencia segmentado por campaña  </li>
+<li>Benchmarking con datos agregados y anonimizados</li>
+</ul>
+<hr />
+<h3>Panel de control y supervisión</h3>
+<p>Además de ofrecer un marco sólido de medición y control, el sistema incorpora funcionalidades diseñadas para facilitar el análisis y la toma de decisiones en tiempo real. Estas herramientas permiten explorar los datos desde múltiples ángulos, adaptarse rápidamente a los cambios y comunicar resultados de forma clara y efectiva.</p>
+<p><img loading="lazy" width="1434" class="img-responsive" alt="definción proceso de medición" src="https://github.com/user-attachments/assets/75e50c84-9ec0-423d-b066-a1488f2a8276" /></p>
+<h4>Métricas en tiempo real</h4>
+<ul>
+<li>Visualización inmediata de usuarios únicos, páginas vistas, duración de sesiones y calidad del tráfico  </li>
+<li>Actualizaciones automáticas cada 5 minutos  </li>
+</ul>
+<h4>Análisis de tendencias</h4>
+<ul>
+<li>Gráficos interactivos que muestran la evolución temporal de las audiencias  </li>
+<li>Identificación de patrones estacionales y detección de anomalías en el comportamiento  </li>
+</ul>
+<h4>Segmentación avanzada</h4>
+<ul>
+<li>Filtros dinámicos por región geográfica, dispositivo, tipo de contenido y demografía  </li>
+<li>Análisis granular de audiencias específicas  </li>
+</ul>
+<h4>Exportación de datos</h4>
+<ul>
+<li>Informes personalizados exportables en múltiples formatos: CSV, Excel y PDF  </li>
+<li>Facilita el análisis offline y la presentación de resultados a stakeholders</li>
+</ul>
+<hr />
+<h3>Métricas y KPIs Clave</h3>
+<p>Para evaluar de forma precisa el rendimiento de una web o campaña, es fundamental contar con un conjunto claro de métricas y KPIs. Estas métricas se agrupan en distintas categorías según el tipo de información que ofrecen: audiencia, calidad del tráfico, engagement y retorno de la inversión.</p>
+<p><img loading="lazy" width="472" class="img-responsive" alt="kpis y métricas" src="https://github.com/user-attachments/assets/92cf4fbf-b52d-44b9-94ef-7fd74f9f0bfc" /></p>
+<blockquote>
+<p>El principal reto al que nos tenemos que enfrentar es poder <strong>discernir el tráfico humano del <a href="https://emirodgar.es/huellas-digitales-robots">tráfico de robots</a></strong> y más ahora que entramos en la era de la IA agéntica. Lo veremos más desarrollado en el siguiente punto.</p>
+</blockquote>
+<h4>Métricas de audiencia</h4>
+<ul>
+<li><strong>Usuarios Únicos</strong>: Individuos únicos identificados mediante algoritmos de deduplicación  </li>
+<li><strong>Sesiones</strong>: Períodos de actividad continua con un timeout de 30 minutos  </li>
+<li><strong>Páginas Vistas</strong>: Cargas completas de páginas en navegadores de usuarios  </li>
+</ul>
+<h4>Métricas de calidad</h4>
+<ul>
+<li><strong>Tráfico Humano</strong>: Porcentaje de tráfico verificado como humano  </li>
+<li><strong>Tasa de Rebote</strong>: Porcentaje de sesiones con una sola página vista  </li>
+</ul>
+<h4>Métricas de engagement</h4>
+<ul>
+<li><strong>Tiempo en Sitio</strong>: Duración promedio de las sesiones de usuario  </li>
+<li><strong>Páginas por Sesión</strong>: Promedio de páginas vistas en cada sesión  </li>
+</ul>
+<h4>Métricas de ROI</h4>
+<ul>
+<li><strong>Conversiones</strong>: Acciones específicas completadas por usuarios  </li>
+<li><strong>Costo por Adquisición</strong>: Inversión necesaria para obtener una conversión  </li>
+</ul>
+<hr />
+<h3>Garantía de calidad del tráfico</h3>
+<p>Garantizar la calidad del tráfico es clave para tomar decisiones basadas en datos fiables. Para ello, el sistema incorpora múltiples métodos de detección y control que permiten identificar fraudes y filtrar interacciones no humanas o manipuladas. A continuación se detallan los mecanismos aplicados y los tipos de fraude que se pueden detectar.</p>
+<p><img loading="lazy" width="456" class="img-responsive" alt="análisis calidad del tráfico" src="https://github.com/user-attachments/assets/fe9fa721-dc7c-4fc7-9841-cc34294a9a64" /></p>
+<h4>Métodos de detección</h4>
+<ul>
+<li>
+<p><strong>Filtrado Pre-Procesamiento</strong>:<br />
+  Listas negras de IPs conocidas y reglas heurísticas para identificar patrones anómalos</p>
+</li>
+<li>
+<p><strong>Análisis de comportamiento</strong>:<br />
+  Evaluación de patrones de navegación, velocidad de clics y secuencias de interacción</p>
+</li>
+<li>
+<p><strong><a href="https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial">Machine Learning</a></strong>:<br />
+  Algoritmos supervisados y no supervisados para detectar anomalías no evidentes</p>
+</li>
+<li>
+<p><strong>Verificación de dispositivos</strong>:<br />
+  Análisis de huellas digitales de dispositivos y características técnicas</p>
+</li>
+</ul>
+<h4>Tipos de fraude detectados</h4>
+<ul>
+<li>
+<p><strong>Tráfico de Bots</strong><br />
+  Visitas automatizadas generadas por scripts o <a href="https://emirodgar.es/scraping-ia">herramientas de scraping con IA</a> que simulan comportamiento humano</p>
+</li>
+<li>
+<p><strong>Granjas de clics</strong><br />
+  Operaciones organizadas para generar clics artificiales en anuncios o contenido</p>
+</li>
+<li>
+<p><strong>Suplantación de identidad</strong><br />
+  Falsificación de información de usuario o dispositivo para evadir sistemas de detección</p>
+</li>
+<li>
+<p><strong>Inyección de anuncios</strong><br />
+  Inserción no autorizada de anuncios o manipulación de la visibilidad</p>
+</li>
+</ul>
+<hr />
+<h3>Beneficios de este sistema</h3>
+<p>Un sistema de medición público, transparente y fiable no solo mejora los procesos internos, sino que también genera beneficios concretos para todos los actores implicados: administraciones públicas, medios digitales, anunciantes y la sociedad en general.</p>
+<p><img loading="lazy" width="464" class="img-responsive" alt="beneficios" src="https://github.com/user-attachments/assets/862f75b9-eabd-46b4-a690-b06e7b86af3b" /></p>
+<h4>Para el sector público</h4>
+<ul>
+<li>Toma de decisiones basada en datos verificados y normalizados  </li>
+<li>Optimización de la inversión publicitaria en medios digitales  </li>
+<li>Transparencia y rendición de cuentas en el gasto público  </li>
+</ul>
+<h4>Para los medios digitales</h4>
+<ul>
+<li>Certificación oficial de audiencias que aumenta la credibilidad  </li>
+<li>Métricas estandarizadas para comparación justa entre medios  </li>
+<li>Herramientas para conocer mejor a sus audiencias  </li>
+</ul>
+<h4>Para la industria publicitaria</h4>
+<ul>
+<li>Garantía de calidad del tráfico y reducción del fraude  </li>
+<li>Medición precisa del retorno de inversión (ROI)  </li>
+<li>Planificación de campañas basada en datos fiables  </li>
+</ul>
+<h4>Para la sociedad</h4>
+<ul>
+<li>Mayor transparencia en el ecosistema digital  </li>
+<li>Uso eficiente de recursos públicos en comunicación  </li>
+</ul>
+<hr />
+<h3>Plan de implementación</h3>
+<p>El éxito de un sistema como este depende de una implementación cuidadosa y progresiva. Por eso, el plan se estructura en varias fases que permiten validar, ajustar y ampliar el sistema de forma ordenada, garantizando que todos los actores implicados puedan adaptarse y sacar el máximo provecho.</p>
+<p><img loading="lazy" width="447" class="img-responsive" alt="plan de implementación" src="https://github.com/user-attachments/assets/1a31ceee-b98f-49ac-9a60-31b050033671" /></p>
+<h4>Fase 1: Prueba piloto</h4>
+<ul>
+<li><strong>Duración:</strong> 3 meses  </li>
+<li>Implementación inicial con un grupo reducido de medios digitales para validar la metodología, ajustar algoritmos y refinar procesos.  </li>
+<li>Incluye desarrollo de SDKs, configuración de infraestructura y pruebas de integración.  </li>
+</ul>
+<h4>Fase 2: Expansión controlada</h4>
+<ul>
+<li><strong>Duración:</strong> 6 meses  </li>
+<li>Incorporación gradual de más medios digitales, implementación de feedback de la fase piloto y desarrollo de la primera versión completa del dashboard.  </li>
+<li>Incluye formación a funcionarios públicos y medios participantes.  </li>
+</ul>
+<h4>Fase 3: Despliegue completo</h4>
+<ul>
+<li><strong>Duración:</strong> 9 meses  </li>
+<li>Apertura del sistema a todos los medios digitales interesados, implementación de certificaciones oficiales y lanzamiento público del dashboard.  </li>
+<li>Incluye campañas de comunicación y eventos de presentación.  </li>
+</ul>
+<h4>Fase 4: Mejora continua</h4>
+<ul>
+<li><strong>Duración:</strong> Permanente  </li>
+<li>Mantenimiento, actualizaciones y mejora continua del sistema para adaptarse a nuevas necesidades y tecnologías.  </li>
+</ul>
+            </div>
+        </section>
+
+    <script src="script.js"></script>
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div>
+      <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+      <p class="sg-footer__about">Datos e inteligencia artificial responsable para la gestión pública, las organizaciones y los ciudadanos.</p>
+    </div>
+    <nav class="sg-footer__nav" aria-label="Pie de página">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+      <a href="/buscar/">Buscar</a>
+      <a href="/mapa">Mapa web</a>
+    </nav>
+    <div class="sg-footer__social">
+      <a href="https://www.linkedin.com/in/emirodgar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      <a href="mailto:hola@emirodgar.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="sg-copyright">© 2026 <a href="/">Emirodgar</a> · Emilio Rodríguez García</div>
+</footer>
+<script src="/assets/js/theme.js?v=20261028" defer></script>
+</body>
+</html>
+

@@ -8,10 +8,10 @@ description: Actualiza el panel MacroData España con las últimas cifras oficia
 Este proyecto es un panel público de indicadores macroeconómicos de España. Toda su información
 vive en un único fichero de datos que consumen tanto el panel completo como el widget de la home:
 
-- Dataset: [proyectos/macrodata-espana/data.json](../../../proyectos/macrodata-espana/data.json)
-- Panel completo: [proyectos/macrodata-espana/index.html](../../../proyectos/macrodata-espana/index.html) (lee `data.json` vía `fetch`)
+- Dataset: [macrodata-espana/data.json](../../../macrodata-espana/data.json)
+- Panel completo: [macrodata-espana/index.html](../../../macrodata-espana/index.html) (lee `data.json` vía `fetch`)
 - Widget de la home: [index.html](../../../index.html) (busca `macrodataSparkline`, también lee el mismo `data.json`)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-macrodata-espana.md](../../../publicaciones/proyecto-macrodata-espana.md)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [macrodata-espana/index.html](../../../macrodata-espana/index.html)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
 siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero.
@@ -221,8 +221,8 @@ forzando que coincidan. No requiere ningún paso de mantenimiento adicional: bas
 ## Termómetro de riesgo de recesión también en la home
 
 La fórmula de `computeRecessionRisk()` está **duplicada intencionadamente** en dos sitios: en
-`proyectos/macrodata-espana/index.html` (el panel) y en el `index.html` de la raíz del sitio (sección
-`#riesgo-recesion` de la home, que lee el mismo `proyectos/macrodata-espana/data.json` vía `fetch` para
+`macrodata-espana/index.html` (el panel) y en el `index.html` de la raíz del sitio (sección
+`#riesgo-recesion` de la home, que lee el mismo `macrodata-espana/data.json` vía `fetch` para
 mostrar el mismo termómetro con un botón "Ver análisis de parámetros económicos" enlazando al panel). No
 hay forma de compartir código JS entre ambos ficheros en este sitio estático, así que **si algún día
 cambian los pesos o los umbrales de la fórmula, hay que actualizarlos en los dos sitios** (busca
@@ -244,7 +244,7 @@ No lo edites a mano: ejecuta este script (ajustando solo la ruta si hace falta) 
 import json
 from collections import OrderedDict
 
-path = 'proyectos/macrodata-espana/data.json'
+path = 'macrodata-espana/data.json'
 with open(path, encoding='utf-8') as f:
     data = json.load(f, object_pairs_hook=OrderedDict)
 
@@ -316,7 +316,7 @@ cada mes de la línea general. Los colores (`#e11d48` general, `#fb7185` subyace
 para que combinen con la leyenda estática de `index.html` (`.legend-swatch`) — si algún día cambian esos
 colores en el CSS, cámbialos también aquí.
 
-El panel completo ([proyectos/macrodata-espana/index.html](../../../proyectos/macrodata-espana/index.html))
+El panel completo ([macrodata-espana/index.html](../../../macrodata-espana/index.html))
 sigue usando Chart.js con sus 4 gráficos interactivos y el selector de rango — eso no cambia, solo se quitó
 Chart.js de la home.
 

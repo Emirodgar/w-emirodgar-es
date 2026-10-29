@@ -8,7 +8,7 @@
     "numHipotecas": "INE, Estadística de Hipotecas (H) — número de hipotecas constituidas sobre viviendas y su variación interanual",
     "pctFijo": "INE, Estadística de Hipotecas (H) — reparto de las hipotecas constituidas entre tipo fijo y variable; el INE no publica un tercer bucket de \"tipo mixto\" en su nota de prensa mensual, por lo que este panel solo distingue fijo/variable",
     "bancos": "Comparadores (HelpMyCash, octubre de 2026) para CaixaBank, Sabadell, BBVA y Bankinter, contrastados con los datos de las webs oficiales de las entidades de la revisión anterior (17 de septiembre de 2026); las webs de BBVA y Sabadell bloquean la consulta automática. Santander conserva los datos del 17 de septiembre de 2026 (no se ha podido reconfirmar su oferta fija). Perfil estándar con bonificaciones. Las TAE incluyen el coste de los productos vinculados exigidos para la bonificación, por eso pueden ser sensiblemente más altas que el TIN",
-    "euribor": "Euríbor 12 meses y termómetro de riesgo de recesión, leídos en vivo del panel MacroData España (emirodgar.es/proyectos/macrodata-espana/), no se guardan en este data.json"
+    "euribor": "Euríbor 12 meses y termómetro de riesgo de recesión, leídos en vivo del panel MacroData España (emirodgar.es/macrodata-espana/), no se guardan en este data.json"
   },
   "indicators": [
     {

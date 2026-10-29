@@ -9,9 +9,9 @@ Panel público con un directorio filtrable de las principales ayudas y prestacio
 (no autonómicas ni municipales) vigentes en España. Toda su información vive en un único fichero de
 datos:
 
-- Dataset: [proyectos/catalogo-ayudas-espana/data.json](../../../proyectos/catalogo-ayudas-espana/data.json)
-- Panel completo: [proyectos/catalogo-ayudas-espana/index.html](../../../proyectos/catalogo-ayudas-espana/index.html)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-catalogo-ayudas-espana.md](../../../publicaciones/proyecto-catalogo-ayudas-espana.md)
+- Dataset: [catalogo-ayudas-espana/data.json](../../../catalogo-ayudas-espana/data.json)
+- Panel completo: [catalogo-ayudas-espana/index.html](../../../catalogo-ayudas-espana/index.html)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [catalogo-ayudas-espana/index.html](../../../catalogo-ayudas-espana/index.html)
 
 No hace falta tocar el HTML ni el JavaScript: basta con editar `data.json` siguiendo el esquema de abajo.
 

@@ -111,7 +111,7 @@ No creo que la respuesta sea retirar el smartphone, igual que no retiramos el co
 - **Poner el móvil fuera de juego en los momentos que importan**: comidas, clases, noche.
 - **Priorizar el tiempo en persona**. Quedar con amigos ya no es algo que ocurre solo; hay que proponérselo y ponerlo en el calendario. Ayuda tener un [tercer espacio](https://emirodgar.es/tercer-espacio-mentidero-digital) fijo, un sitio al que ir siempre y encontrar a los mismos.
 - **Quitarle importancia a las redes**. No hace falta ser viral para tener amigos ni para ser alguien.
-- **Medir lo que pasa**. Proyectos como [FARO](https://emirodgar.es/faro-monitorizacion-salud-mental) apuntan a monitorizar la salud mental en redes con datos y no con intuiciones.
+- **Medir lo que pasa**. Proyectos como [FARO](https://emirodgar.es/faro-monitorizacion-salud-mental/) apuntan a monitorizar la salud mental en redes con datos y no con intuiciones.
 
 ---
 

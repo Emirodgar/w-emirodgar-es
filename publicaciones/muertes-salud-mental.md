@@ -223,5 +223,5 @@ Ambos estudios los conozco por un [resumen mensual de investigaciones de Steve S
 
 **Cada muerte por suicidio afecta directamente a unas 20 personas del entorno**, multiplicando el impacto social de esta problemática que requiere una respuesta inmediata y coordinada de toda la sociedad española.
 
-Tras el análisis y revisión de estos datos, he querido realizar una [prueba de concepto sobre un sistema de monitorización en redes sociales](https://emirodgar.es/proyectos/faro/).
-Así es como ha surgido el [Proyecto Faro](https://emirodgar.es/faro-monitorizacion-salud-mental), un sistema para monitorizar y actuar 
+Tras el análisis y revisión de estos datos, he querido realizar una [prueba de concepto sobre un sistema de monitorización en redes sociales](https://emirodgar.es/faro-monitorizacion-salud-mental/).
+Así es como ha surgido el [Proyecto Faro](https://emirodgar.es/faro-monitorizacion-salud-mental/), un sistema para monitorizar y actuar 

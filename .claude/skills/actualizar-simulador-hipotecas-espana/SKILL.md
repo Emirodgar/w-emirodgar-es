@@ -9,13 +9,13 @@ Panel público con el mercado hipotecario español, una comparativa de ofertas b
 calculadora de cuota con predicción de escenarios de tipos. Toda su información propia vive en un
 único fichero de datos:
 
-- Dataset: [proyectos/simulador-hipotecas-espana/data.json](../../../proyectos/simulador-hipotecas-espana/data.json)
-- Panel completo: [proyectos/simulador-hipotecas-espana/index.html](../../../proyectos/simulador-hipotecas-espana/index.html)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-simulador-hipotecas-espana.md](../../../publicaciones/proyecto-simulador-hipotecas-espana.md)
+- Dataset: [simulador-hipotecas-espana/data.json](../../../simulador-hipotecas-espana/data.json)
+- Panel completo: [simulador-hipotecas-espana/index.html](../../../simulador-hipotecas-espana/index.html)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [simulador-hipotecas-espana/index.html](../../../simulador-hipotecas-espana/index.html)
 
 **Importante**: este panel NO guarda el Euríbor ni el termómetro de riesgo de recesión en su propio
 `data.json` — los lee en vivo, vía `fetch('../macrodata-espana/data.json')`, del panel
-[MacroData España](../../../proyectos/macrodata-espana/data.json). Si necesitas actualizar el Euríbor o
+[MacroData España](../../../macrodata-espana/data.json). Si necesitas actualizar el Euríbor o
 el termómetro, hazlo en MacroData España (skill `actualizar-macrodata-espana`), no aquí; este panel se
 sincroniza solo.
 
@@ -115,7 +115,7 @@ edita el array que construye `getFAQs()` en `index.html`, no un campo de `data.j
 
 ## Notas
 
-- Este panel depende de que `proyectos/macrodata-espana/data.json` exista y tenga los campos
+- Este panel depende de que `macrodata-espana/data.json` exista y tenga los campos
   `indicators` (`euribor`, `pib`, `paro`, `ipc`) — si esa estructura cambia alguna vez, revisa también
   `getEuriborActual()` y `getRiskComponentsFromMacrodata()` en este `index.html`.
 - Este panel no es asesoramiento financiero ni una oferta vinculante — mantén ese aviso en el pie del

@@ -15,7 +15,7 @@ permalink: elecciones-29n-pais-al-reves
 
 Ya tenemos elecciones el **29 de noviembre**. Las llevábamos tiempo pidiendo porque sentimos que el país está peor que nunca, aunque según dónde leamos, vamos genial o vamos fatal.
 
-Eso es lo preocupante: hemos dejado de mirar los datos. Nos fiamos más de un señor con corbata que del IPC, del paro o de la deuda, indicadores básicos que cada vez entiende menos gente. Por eso mantengo [MacroData España](https://emirodgar.es/macrodata-espana), para tener las cifras oficiales a mano y poder juzgar con algo más que sensaciones.
+Eso es lo preocupante: hemos dejado de mirar los datos. Nos fiamos más de un señor con corbata que del IPC, del paro o de la deuda, indicadores básicos que cada vez entiende menos gente. Por eso mantengo [MacroData España](https://emirodgar.es/macrodata-espana/), para tener las cifras oficiales a mano y poder juzgar con algo más que sensaciones.
 
 ## Una huelga general contra quien no gobierna
 
@@ -46,6 +46,6 @@ Quien gane tendrá que convivir con todo esto, más la tensión internacional y 
 
 Empecé con una película de los Coen y termino con un libro. *Cien años de soledad* se queda corto al lado de los tejemanejes de estos 100 meses de Gobierno. Y ojo a lo que queda hasta el 29 de noviembre: espero equivocarme, pero creo que veremos una pelea más sucia que la de 1997, cuando Tyson le arrancó de un mordisco la oreja a Holyfield.
 
-En ese ruido, conviene separar el relato de los datos. Para seguir la convocatoria he montado [Elecciones en España](https://emirodgar.es/proyectos/elecciones-espana/), con calendario, candidatos, [media de encuestas](https://emirodgar.es/encuestas-intencion-voto) y un test de afinidad con cada posición citada con su fuente. Si queréis entender mejor los términos de estas semanas, tenéis el [glosario político](https://emirodgar.es/glosario-politico), y sobre cómo se fabrica el relato, [Hipnocracia](https://emirodgar.es/hipnocracia) y [la maquinaria mediática del PSOE](https://emirodgar.es/la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez).
+En ese ruido, conviene separar el relato de los datos. Para seguir la convocatoria he montado [Elecciones en España](https://emirodgar.es/elecciones-espana/), con calendario, candidatos, [media de encuestas](https://emirodgar.es/encuestas-intencion-voto) y un test de afinidad con cada posición citada con su fuente. Si queréis entender mejor los términos de estas semanas, tenéis el [glosario político](https://emirodgar.es/glosario-politico), y sobre cómo se fabrica el relato, [Hipnocracia](https://emirodgar.es/hipnocracia) y [la maquinaria mediática del PSOE](https://emirodgar.es/la-maquinaria-mediatica-del-psoe-bajo-pedro-sanchez).
 
 Último empujón, amigos. Promete ser un final de año interesante.

@@ -26,7 +26,7 @@ Ayudo a administraciones públicas y empresas a sacar partido a los **datos** y 
 ## Para quién
 
 - **Administraciones y organismos públicos** que quieren modernizarse con IA sin exponerse a riesgos legales o reputacionales. Si es tu caso, empieza por la [guía de IA en la administración pública](https://emirodgar.es/guia-ia-administracion-publica).
-- **Equipos políticos y de comunicación** que necesitan datos fiables para decidir, con ejemplos como el [panel de Elecciones en España](https://emirodgar.es/proyectos/elecciones-espana/).
+- **Equipos políticos y de comunicación** que necesitan datos fiables para decidir, con ejemplos como el [panel de Elecciones en España](https://emirodgar.es/elecciones-espana/).
 - **Empresas y consultoras** que buscan integrar IA y analítica en su estrategia digital.
 
 ## Lo que ya puedes ver funcionando

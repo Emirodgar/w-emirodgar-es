@@ -50,6 +50,27 @@
       theme.addEventListener('click', function () { setTheme(!root.hasAttribute('dark')); });
     }
 
+    // Botón flotante para volver arriba: aparece al bajar un par de pantallas
+    var top = document.createElement('button');
+    top.type = 'button';
+    top.className = 'sg-totop';
+    top.setAttribute('aria-label', 'Volver arriba');
+    top.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 15l6-6 6 6"/></svg>';
+    top.addEventListener('click', function () {
+      var smooth = !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+      window.scrollTo({ top: 0, behavior: smooth ? 'smooth' : 'auto' });
+    });
+    document.body.appendChild(top);
+    var ticking = false;
+    function toggleTop() {
+      ticking = false;
+      top.classList.toggle('is-visible', window.pageYOffset > 600);
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { ticking = true; window.requestAnimationFrame(toggleTop); }
+    }, { passive: true });
+    toggleTop();
+
     var burger = document.querySelector('.sg-hamburger');
     var nav = document.getElementById('sg-nav');
     if (burger && nav) {

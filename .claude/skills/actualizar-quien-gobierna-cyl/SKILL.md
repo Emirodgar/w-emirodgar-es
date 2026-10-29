@@ -10,10 +10,10 @@ León (presidente, vicepresidencias y consejerías), sus competencias, cuánto t
 cargo y quién fue su predecesor. Toda su información vive en un único fichero de datos que consumen tanto
 el panel completo como el widget de la home:
 
-- Dataset: [proyectos/quien-gobierna-cyl/data.json](../../../proyectos/quien-gobierna-cyl/data.json)
-- Panel completo: [proyectos/quien-gobierna-cyl/index.html](../../../proyectos/quien-gobierna-cyl/index.html) (lee `data.json` vía `fetch`)
+- Dataset: [quien-gobierna-cyl/data.json](../../../quien-gobierna-cyl/data.json)
+- Panel completo: [quien-gobierna-cyl/index.html](../../../quien-gobierna-cyl/index.html) (lee `data.json` vía `fetch`)
 - Widget de la home: [index.html](../../../index.html) (busca `quienGobiernaSparkline`, también lee el mismo `data.json`)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-quien-gobierna-cyl.md](../../../publicaciones/proyecto-quien-gobierna-cyl.md)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [quien-gobierna-cyl/index.html](../../../quien-gobierna-cyl/index.html)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
 siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero.

@@ -13,7 +13,7 @@ permalink: macrodata-espana-primer-balance
 
 # MacroData España, primer balance, qué indicador se ha movido más desde el lanzamiento
 
-Cuando presenté [MacroData España](https://emirodgar.es/macrodata-espana) hace unos días, el [panel](https://emirodgar.es/proyectos/macrodata-espana/) ya venía cargado con doce meses de historia de sus cuatro indicadores. Antes de esperar a que pasen meses para sacar conclusiones, merece la pena hacer una primera lectura de esa serie: de septiembre de 2025 a septiembre de 2026, no todos los indicadores se han movido igual, ni por el mismo motivo.
+Cuando presenté [MacroData España](https://emirodgar.es/macrodata-espana/) hace unos días, el [panel](https://emirodgar.es/macrodata-espana/) ya venía cargado con doce meses de historia de sus cuatro indicadores. Antes de esperar a que pasen meses para sacar conclusiones, merece la pena hacer una primera lectura de esa serie: de septiembre de 2025 a septiembre de 2026, no todos los indicadores se han movido igual, ni por el mismo motivo.
 
 ## El que ha subido todos los meses sin excepción: el Euríbor
 

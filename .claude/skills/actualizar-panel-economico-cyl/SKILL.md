@@ -9,10 +9,10 @@ Este proyecto es un panel público sobre la economía de Castilla y León: presu
 subvenciones/ayudas y mercado laboral (con detalle por provincia). Toda su información vive en un único
 fichero de datos que consumen tanto el panel completo como el widget de la home:
 
-- Dataset: [proyectos/panel-economico-cyl/data.json](../../../proyectos/panel-economico-cyl/data.json)
-- Panel completo: [proyectos/panel-economico-cyl/index.html](../../../proyectos/panel-economico-cyl/index.html) (lee `data.json` vía `fetch`)
+- Dataset: [panel-economico-cyl/data.json](../../../panel-economico-cyl/data.json)
+- Panel completo: [panel-economico-cyl/index.html](../../../panel-economico-cyl/index.html) (lee `data.json` vía `fetch`)
 - Widget de la home: [index.html](../../../index.html) (busca `panelCylSparkline`, también lee el mismo `data.json`)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-panel-economico-cyl.md](../../../publicaciones/proyecto-panel-economico-cyl.md)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [panel-economico-cyl/index.html](../../../panel-economico-cyl/index.html)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
 siguiendo el esquema descrito abajo. Todo lo demás se renderiza dinámicamente a partir de ese fichero. El
@@ -265,7 +265,7 @@ serie de `lineasAyudaPublicadas`, y copia el resultado tal cual al campo `sparkl
 import json
 from collections import OrderedDict
 
-path = 'proyectos/panel-economico-cyl/data.json'
+path = 'panel-economico-cyl/data.json'
 with open(path, encoding='utf-8') as f:
     data = json.load(f, object_pairs_hook=OrderedDict)
 
@@ -330,7 +330,7 @@ el máximo (con un 15% de margen visual), los reparte a lo largo de un `viewBox`
 (`#7c3aed`) está fijado a mano para que combine con la leyenda estática de `index.html`
 (`.legend-swatch--violet`) — si cambia ese color en `styles.css`, cámbialo también aquí.
 
-El panel completo ([proyectos/panel-economico-cyl/index.html](../../../proyectos/panel-economico-cyl/index.html))
+El panel completo ([panel-economico-cyl/index.html](../../../panel-economico-cyl/index.html))
 sigue usando Chart.js con sus 7 gráficos interactivos (3 de presupuesto/subvenciones + 4 de mercado
 laboral) — eso no cambia, solo se quitó Chart.js de la home.
 

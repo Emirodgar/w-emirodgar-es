@@ -12,12 +12,12 @@ permalink: /elecciones/
 
 Cuando se convocan elecciones, la información útil está repartida entre el BOE, las webs de los partidos, los medios y los agregadores de encuestas. Aquí está reunida: un panel para seguir la convocatoria, guías prácticas para votar y artículos para entender el sistema. Ahora mismo todo gira en torno a las **elecciones generales del 29 de noviembre de 2026**.
 
-<p class="hub-cta"><a href="https://emirodgar.es/proyectos/elecciones-espana/">Abrir el panel de Elecciones en España →</a></p>
+<p class="hub-cta"><a href="https://emirodgar.es/elecciones-espana/">Abrir el panel de Elecciones en España →</a></p>
 
 ## Herramientas y guías para estas elecciones
 
 <ul class="hub-grid">
-<li><a class="hub-card" href="https://emirodgar.es/proyectos/elecciones-espana/"><strong>Panel de las elecciones</strong><span>Cuenta atrás, calendario, quién se presenta, Congreso, simulador D’Hondt, preguntas frecuentes e histórico.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/elecciones-espana/"><strong>Panel de las elecciones</strong><span>Cuenta atrás, calendario, quién se presenta, Congreso, simulador D’Hondt, preguntas frecuentes e histórico.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/a-quien-votar/"><strong>¿A quién votar? Test de afinidad</strong><span>Contesta sobre políticas concretas y mira tu coincidencia con cada partido, con la fuente de cada posición.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/programas-electorales/"><strong>Comparador de programas electorales</strong><span>Posiciones de cada partido por temas, con su fuente.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/encuestas-elecciones-generales/"><strong>Encuestas de las elecciones generales</strong><span>Media ponderada de sondeos, evolución y tabla por empresa.</span></a></li>

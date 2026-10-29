@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARO Dashboard - Monitorización de Salud Mental en Redes Sociales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+	     <link rel="canonical" href="https://emirodgar.es/faro-monitorizacion-salud-mental/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Emirodgar">
+    <meta property="og:title" content="FARO Dashboard - Monitorización de Salud Mental en Redes Sociales">
+    <meta property="og:description" content="Prueba de concepto de un dashboard para detectar de forma temprana mensajes de riesgo en redes sociales y ayudar a profesionales de salud mental. Datos simulados.">
+    <meta name="description" content="Prueba de concepto de un dashboard para detectar de forma temprana mensajes de riesgo en redes sociales y ayudar a profesionales de salud mental. Datos simulados.">
+    <meta property="og:url" content="https://emirodgar.es/faro-monitorizacion-salud-mental/">
+    <meta property="og:image" content="https://emirodgar.es/assets/images/emirodgar.jpg">
+    <meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
+<link rel="stylesheet" href="/assets/css/project-doc.css?v=20261029">
+</head>
+<body>
+<header class="sg-header" role="banner">
+  <div class="sg-header__inner">
+    <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+    <button class="sg-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sg-nav"><span></span></button>
+    <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
+      <ul class="sg-nav__list">
+        <li><a class="sg-nav__link" href="/datos/">Dashboards</a></li>
+        <li><a class="sg-nav__link" href="/elecciones/">Elecciones</a></li>
+        <li><a class="sg-nav__link" href="/castilla-y-leon/">Castilla y León</a></li>
+        <li><a class="sg-nav__link" href="/actualidad/">Actualidad</a></li>
+        <li class="sg-dropdown">
+          <button class="sg-nav__link sg-dropdown__toggle" type="button" aria-expanded="false">Publicaciones</button>
+          <div class="sg-dropdown__menu">
+            <a href="/publicaciones-inteligencia-artificial">Inteligencia artificial</a>
+            <a href="/publicaciones-analisis">Análisis</a>
+            <a href="/mapa">Todas las publicaciones</a>
+          </div>
+        </li>
+      </ul>
+      <div class="sg-nav__tools">
+        <a class="sg-icon-btn sg-search" href="/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+        <button class="sg-icon-btn sg-theme" type="button" aria-label="Activar modo oscuro">
+          <span class="sg-moon" aria-hidden="true"><svg viewBox="0 0 1472 1536"><path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/></svg>Oscuro</span>
+          <span class="sg-sun" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/><path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/><path stroke-linecap="round" d="M24 45v-3.15"/></g></svg>Claro</span>
+        </button>
+        <a class="sg-btn" href="/emilio">Sobre mí</a>
+      </div>
+    </nav>
+  </div>
+</header>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-section">
+                <img src="faro-logo.png" alt="FARO Dashboard" class="logo">
+                <h1 class="logo-text">FARO</h1>
+            </div>
+            
+            <nav class="main-nav">
+                <a href="#dashboard" class="nav-item active">
+                    <i class="fas fa-chart-line"></i>
+                    Dashboard
+                </a>
+                <a href="#alerts" class="nav-item">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    Alertas
+                </a>
+                <a href="#analytics" class="nav-item">
+                    <i class="fas fa-chart-bar"></i>
+                    Análisis
+                </a>
+                <a href="#resources" class="nav-item">
+                    <i class="fas fa-heart"></i>
+                    Recursos
+                </a>
+            </nav>
+            
+            <div class="header-actions">
+                <div class="system-status">
+                    <span class="status-indicator online"></span>
+                    <span class="status-text">Sistema Activo</span>
+                </div>
+                <div class="user-profile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Dr. García</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="main-container">
+		
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Filtros Rápidos</h3>
+                <div class="filter-group">
+                    <label class="filter-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Riesgo Alto
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox" checked>
+                        <span class="checkmark"></span>
+                        Riesgo Medio
+                    </label>
+                    <label class="filter-checkbox">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Riesgo Bajo
+                    </label>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Plataformas</h3>
+                <div class="platform-filters">
+                    <button class="platform-btn active" data-platform="all">
+                        <i class="fas fa-globe"></i>
+                        Todas
+                    </button>
+                    <button class="platform-btn" data-platform="twitter">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </button>
+                    <button class="platform-btn" data-platform="facebook">
+                        <i class="fab fa-facebook"></i>
+                        Facebook
+                    </button>
+                    <button class="platform-btn" data-platform="instagram">
+                        <i class="fab fa-instagram"></i>
+                        Instagram
+                    </button>
+                </div>
+            </div>
+            
+            <div class="sidebar-section">
+                <h3>Recursos de Ayuda</h3>
+                <div class="help-resources">
+                    <a href="tel:988" class="resource-link emergency">
+                        <i class="fas fa-phone"></i>
+                        Línea de Crisis: 988
+                    </a>
+                    <a href="#protocols" class="resource-link">
+                        <i class="fas fa-file-medical"></i>
+                        Protocolos de Intervención
+                    </a>
+                    <a href="#contacts" class="resource-link">
+                        <i class="fas fa-address-book"></i>
+                        Contactos de Emergencia
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Summary Cards -->
+            <section class="summary-section">
+                <div class="summary-card critical">
+                    <div class="card-icon">
+                        <i class="fas fa-exclamation-circle"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Alertas Críticas</h3>
+                        <div class="card-number">3</div>
+                        <div class="card-subtitle">Requieren atención inmediata</div>
+                    </div>
+                </div>
+                
+                <div class="summary-card warning">
+                    <div class="card-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Riesgo Alto</h3>
+                        <div class="card-number">12</div>
+                        <div class="card-subtitle">Últimas 24 horas</div>
+                    </div>
+                </div>
+                
+                <div class="summary-card caution">
+                    <div class="card-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>En Monitorización</h3>
+                        <div class="card-number">47</div>
+                        <div class="card-subtitle">Casos activos</div>
+                    </div>
+                </div>
+                
+                <div class="summary-card safe">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Casos Resueltos</h3>
+                        <div class="card-number">156</div>
+                        <div class="card-subtitle">Esta semana</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Real-time Alerts -->
+            <section class="alerts-section">
+                <div class="section-header">
+                    <h2>Alertas en Tiempo Real</h2>
+                    <div class="section-actions">
+                        <button class="btn-secondary">
+                            <i class="fas fa-filter"></i>
+                            Filtrar
+                        </button>
+                        <button class="btn-primary">
+                            <i class="fas fa-download"></i>
+                            Exportar
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="alerts-container">
+                    <div class="alert-item critical">
+                        <div class="alert-priority">
+                            <div class="priority-indicator critical"></div>
+                            <span class="priority-text">CRÍTICO</span>
+                        </div>
+                        <div class="alert-content">
+                            <div class="alert-platform">
+                                <i class="fab fa-twitter"></i>
+                                Twitter
+                            </div>
+                            <div class="alert-text">
+                                "No encuentro salida a esto... creo que es mejor terminar con todo..."
+                            </div>
+                            <div class="alert-meta">
+                                <span class="alert-time">Hace 2 minutos</span>
+                                <span class="alert-user">@usuario_anonimo</span>
+                                <span class="alert-confidence">Confianza: 94%</span>
+                            </div>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-phone"></i>
+                                Contactar
+                            </button>
+                            <button class="action-btn secondary">
+                                <i class="fas fa-eye"></i>
+                                Revisar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-flag"></i>
+                                Escalar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-item warning">
+                        <div class="alert-priority">
+                            <div class="priority-indicator warning"></div>
+                            <span class="priority-text">ALTO</span>
+                        </div>
+                        <div class="alert-content">
+                            <div class="alert-platform">
+                                <i class="fab fa-facebook"></i>
+                                Facebook
+                            </div>
+                            <div class="alert-text">
+                                "Cada día es más difícil... no sé si podré seguir así mucho tiempo más"
+                            </div>
+                            <div class="alert-meta">
+                                <span class="alert-time">Hace 15 minutos</span>
+                                <span class="alert-user">María S.</span>
+                                <span class="alert-confidence">Confianza: 87%</span>
+                            </div>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="action-btn primary">
+                                <i class="fas fa-phone"></i>
+                                Contactar
+                            </button>
+                            <button class="action-btn secondary">
+                                <i class="fas fa-eye"></i>
+                                Revisar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-flag"></i>
+                                Escalar
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="alert-item caution">
+                        <div class="alert-priority">
+                            <div class="priority-indicator caution"></div>
+                            <span class="priority-text">MEDIO</span>
+                        </div>
+                        <div class="alert-content">
+                            <div class="alert-platform">
+                                <i class="fab fa-instagram"></i>
+                                Instagram
+                            </div>
+                            <div class="alert-text">
+                                "Me siento muy solo últimamente... nadie me entiende"
+                            </div>
+                            <div class="alert-meta">
+                                <span class="alert-time">Hace 1 hora</span>
+                                <span class="alert-user">@joven_triste</span>
+                                <span class="alert-confidence">Confianza: 72%</span>
+                            </div>
+                        </div>
+                        <div class="alert-actions">
+                            <button class="action-btn secondary">
+                                <i class="fas fa-eye"></i>
+                                Revisar
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-heart"></i>
+                                Recursos
+                            </button>
+                            <button class="action-btn">
+                                <i class="fas fa-times"></i>
+                                Descartar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Analytics Dashboard -->
+            <section class="analytics-section">
+                <div class="section-header">
+                    <h2>Análisis de Tendencias</h2>
+                </div>
+                
+                <div class="analytics-grid">
+                    <div class="chart-container">
+                        <h3>Detecciones por Hora</h3>
+                        <div class="chart-placeholder" id="hourly-chart">
+                            <canvas id="hourlyCanvas" width="400" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3>Distribución por Plataforma</h3>
+                        <div class="chart-placeholder" id="platform-chart">
+                            <canvas id="platformCanvas" width="300" height="200"></canvas>
+                        </div>
+                    </div>
+                    
+                    <div class="chart-container">
+                        <h3>Niveles de Riesgo</h3>
+                        <div class="risk-distribution">
+                            <div class="risk-item">
+                                <div class="risk-bar critical" style="width: 15%"></div>
+                                <span class="risk-label">Crítico (15%)</span>
+                            </div>
+                            <div class="risk-item">
+                                <div class="risk-bar warning" style="width: 25%"></div>
+                                <span class="risk-label">Alto (25%)</span>
+                            </div>
+                            <div class="risk-item">
+                                <div class="risk-bar caution" style="width: 35%"></div>
+                                <span class="risk-label">Medio (35%)</span>
+                            </div>
+                            <div class="risk-item">
+                                <div class="risk-bar safe" style="width: 25%"></div>
+                                <span class="risk-label">Bajo (25%)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+		<div class="notification-top-bar">
+		  <p>Este proyecto es una prueba de concepto dentro de un marco educativo. <small><a href="#documentacion">Saber más</a></small></p>
+		</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <p>&copy; 2025 FARO Dashboard. Sistema de Monitorización de Salud Mental. <a href="#documentacion">Cómo está hecho</a></p>
+            </div>
+            <div class="footer-section">
+                <a href="#privacy">Privacidad</a>
+                <a href="#terms">Términos</a>
+                <a href="#help">Ayuda</a>
+            </div>
+        </div>
+    </footer>
+
+
+        <!-- Documentación del proyecto (antes en una página aparte) -->
+        <section id="documentacion" class="pdoc pdoc--standalone" aria-labelledby="documentacion-titulo">
+            <h2 id="documentacion-titulo" class="pdoc__title">Sobre este proyecto: cómo está hecho</h2>
+            <div class="pdoc__body">
+<p>Una de las causas principales de fallecimiento en España son los problemas de salud mental. El auge de las redes sociales y la sensación de que estamos en una sociedad conectada -cuando la realidad demuestra que esa conexión de no es de calidad- ha generado múltiples problemas, hasta el punto de plantear medidas como la <a href="https://emirodgar.es/prohibir-redes-sociales-menores-16-anos">prohibición del acceso a redes sociales a menores de 16 años</a> que analizamos en otro artículo. 
+En nuestro análisis de <a href="https://emirodgar.es/muertes-salud-mental">Muertes por problemas de salud mental en España: Análisis estadístico y evolución temporal</a> se aprecia claramente la tendencia y evolución al alza, tal como podemos también constatar con la siguiente gráfica.</p>
+<p><img loading="lazy" width="2400" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/02f34088-e495-4e15-8b70-cb9eafd972ca" /></p>
+<p>Afortunadamente, una detección temprana de estos síntomas puede ayudar a prevenir las muertes. Con ello en mente he diseñado esta prueba de concepto de un sistema de que nos permita monitorizar y prevenir estas muertes.
+Es como la línea de la esperanza (teléfono gratuito al que las personas pueden llamar para recibir ayuda) pero sin que la persona afectada tenga que dar el paso. Analizando mensajes y conversaciones en la red, se podrían identificar casos concretos y ser los especialistas quienes contacten con la persona.</p>
+<h3>¿Qué es el proyecto FARO?</h3>
+<p>FARO es un dashboard web diseñado para <strong>identificar comentarios que puedan indicar riesgo suicida en redes sociales</strong>, permitiendo a profesionales de salud mental brindar ayuda temprana y oportuna. Se trata de un proyecto educativo y puramente informacional que ha sido desarrollado como demostración de un posible sistema de monitorización.</p>
+<p><img loading="lazy" width="216" height="223" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/1ab81207-fe2a-483f-8d24-11e558b1e39d" /></p>
+<h3>🎯 Objetivo</h3>
+<p>Detectar y clasificar mensajes en redes sociales que puedan indicar problemas de salud mental o ideas suicidas, facilitando la intervención temprana por parte de profesionales capacitados.</p>
+<h3>🚀 Características Principales</h3>
+<h4>Monitorización en tiempo real</h4>
+<ul>
+<li>Detección automática de contenido de riesgo</li>
+<li>Clasificación por niveles de urgencia (Crítico, Alto, Medio, Bajo)</li>
+<li>Alertas instantáneas para casos críticos</li>
+<li>Análisis de confianza basado en palabras clave (análisis de lenguaje natural)</li>
+</ul>
+<p><img loading="lazy" width="997" height="557" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/744a8c04-3d8c-4354-b64d-2c053dc2e3f0" /></p>
+<h4>Dashboard Intuitivo</h4>
+<ul>
+<li>Resumen ejecutivo con métricas clave</li>
+<li>Vista de alertas en tiempo real</li>
+<li>Gráficos de tendencias y análisis</li>
+<li>Filtros por plataforma y nivel de riesgo</li>
+</ul>
+<p><img loading="lazy" width="698" height="296" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/07651fe5-890e-4612-83c1-6b879f3683c8" /></p>
+<h4>Recursos de Ayuda</h4>
+<ul>
+<li>Acceso rápido a líneas de crisis</li>
+<li>Protocolos de intervención</li>
+<li>Contactos de emergencia</li>
+<li>Recursos para profesionales</li>
+</ul>
+<p><img loading="lazy" width="265" height="493" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/9e84a71f-ef05-4e25-b4d5-66be438ce8aa" /></p>
+<h4>Análisis Avanzado</h4>
+<ul>
+<li>Distribución por plataformas sociales</li>
+<li>Tendencias temporales</li>
+<li>Análisis de sentimientos</li>
+<li>Reportes exportables</li>
+</ul>
+<p><img loading="lazy" width="1006" height="375" class="img-responsive" alt="image" src="https://github.com/user-attachments/assets/f7e02088-8d48-4d5b-ad07-ea7e800d6e8a" /></p>
+<h3>🚦 Niveles de Riesgo</h3>
+<h4>Crítico (Rojo)</h4>
+<ul>
+<li>Requiere atención inmediata</li>
+<li>Palabras clave: "suicidio", "matarme", "terminar con todo"</li>
+<li>Confianza: 80-95%</li>
+<li>Acción: Contacto directo y escalación</li>
+</ul>
+<h4>Alto (Naranja)</h4>
+<ul>
+<li>Requiere atención prioritaria</li>
+<li>Palabras clave: "depresión", "sin esperanza", "no puedo más"</li>
+<li>Confianza: 70-90%</li>
+<li>Acción: Revisión y posible contacto</li>
+</ul>
+<h4>Medio (Amarillo)</h4>
+<ul>
+<li>Monitoreo activo recomendado</li>
+<li>Palabras clave: "triste", "solo", "cansado"</li>
+<li>Confianza: 60-85%</li>
+<li>Acción: Provisión de recursos</li>
+</ul>
+<h4>Bajo (Verde)</h4>
+<ul>
+<li>Seguimiento rutinario</li>
+<li>Palabras clave: "un poco triste", "día difícil"</li>
+<li>Confianza: 50-75%</li>
+<li>Acción: Monitoreo pasivo</li>
+</ul>
+<h3>🔍 Funcionalidades del Dashboard</h3>
+<h4>Panel de resumen</h4>
+<ul>
+<li><strong>Alertas Críticas</strong>: Casos que requieren atención inmediata</li>
+<li><strong>Riesgo Alto</strong>: Casos prioritarios de las últimas 24 horas</li>
+<li><strong>En Monitoreo</strong>: Casos activos bajo seguimiento</li>
+<li><strong>Casos Resueltos</strong>: Estadística de casos completados</li>
+</ul>
+<h4>Monitor de alertas</h4>
+<ul>
+<li>Lista en tiempo real de comentarios detectados</li>
+<li>Información de plataforma, usuario y timestamp</li>
+<li>Nivel de confianza del análisis</li>
+<li>Acciones rápidas por alerta</li>
+</ul>
+<h4>Análisis de Tendencias</h4>
+<ul>
+<li><strong>Gráfico por Horas</strong>: Detecciones en las últimas 24 horas</li>
+<li><strong>Distribución por Plataforma</strong>: Porcentaje por red social</li>
+<li><strong>Niveles de Riesgo</strong>: Distribución de casos por severidad</li>
+</ul>
+<h4>Filtros y Búsqueda</h4>
+<ul>
+<li>Filtro por nivel de riesgo</li>
+<li>Filtro por plataforma social</li>
+<li>Búsqueda por palabras clave</li>
+<li>Rango de fechas personalizable</li>
+</ul>
+<h3>⚠️ Consideraciones Importantes</h3>
+<h4>Privacidad y Ética</h4>
+<ul>
+<li>Este es un prototipo para demostración</li>
+<li>En implementación real, se requiere cumplimiento de GDPR/CCPA</li>
+<li>Anonimización de datos personales obligatoria</li>
+</ul>
+<h4>Limitaciones Técnicas</h4>
+<ul>
+<li>Los datos mostrados son simulados</li>
+<li>El análisis de sentimientos es básico (basado en palabras clave)</li>
+<li>No hay integración real con APIs de redes sociales</li>
+<li>Almacenamiento solo en memoria local</li>
+</ul>
+<h4>Recomendaciones de Implementación</h4>
+<ul>
+<li>Integrar con APIs oficiales de redes sociales</li>
+<li>Implementar <a href="https://emirodgar.es/guia-conceptos-basicos-inteligencia-artificial">machine learning e IA</a> para un análisis más sofisticado</li>
+<li>Agregar base de datos para persistencia</li>
+<li>Incluir sistema de autenticación y autorización</li>
+<li>Implementar cifrado de datos sensibles</li>
+</ul>
+<h3>🔒 Seguridad y Cumplimiento</h3>
+<h4>Medidas Recomendadas</h4>
+<ul>
+<li>Autenticación multifactor para usuarios</li>
+<li>Cifrado de datos en tránsito y reposo</li>
+<li>Auditoría de accesos y acciones</li>
+<li>Cumplimiento de regulaciones de salud mental</li>
+<li>Protocolos de manejo de datos sensibles</li>
+</ul>
+<h4>Aspectos Legales</h4>
+<ul>
+<li>Consultar con abogados especializados en privacidad</li>
+<li>Cumplir regulaciones locales de salud mental</li>
+<li>Establecer acuerdos de uso con plataformas sociales</li>
+<li>Implementar políticas de retención de datos</li>
+</ul>
+<h3>👥 Usuarios Objetivo</h3>
+<h4>Profesionales de salud mental</h4>
+<ul>
+<li>Psicólogos clínicos</li>
+<li>Trabajadores sociales</li>
+<li>Consejeros de crisis</li>
+<li>Coordinadores de prevención</li>
+</ul>
+<h4>Organizaciones</h4>
+<ul>
+<li>Centros de salud mental</li>
+<li>Líneas de crisis y prevención</li>
+<li>Instituciones educativas</li>
+<li>Organizaciones sin fines de lucro</li>
+</ul>
+<h3>📞 Recursos de Emergencia</h3>
+<h4>España</h4>
+<ul>
+<li><strong>Teléfono de la Esperanza</strong>: 717 003 717</li>
+<li><strong>Emergencias</strong>: 112</li>
+<li><strong>Salud Mental</strong>: 061</li>
+</ul>
+<h3>📄 Licencia</h3>
+<p>Este proyecto es una demostración educativa. Para uso comercial o en producción, se requiere desarrollo adicional y cumplimiento de regulaciones específicas.</p>
+            </div>
+        </section>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div>
+      <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+      <p class="sg-footer__about">Datos e inteligencia artificial responsable para la gestión pública, las organizaciones y los ciudadanos.</p>
+    </div>
+    <nav class="sg-footer__nav" aria-label="Pie de página">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+      <a href="/buscar/">Buscar</a>
+      <a href="/mapa">Mapa web</a>
+    </nav>
+    <div class="sg-footer__social">
+      <a href="https://www.linkedin.com/in/emirodgar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      <a href="mailto:hola@emirodgar.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="sg-copyright">© 2026 <a href="/">Emirodgar</a> · Emilio Rodríguez García</div>
+</footer>
+<script src="/assets/js/theme.js?v=20261028" defer></script>
+</body>
+</html>
+

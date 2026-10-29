@@ -11,10 +11,10 @@ clasificación temática propia y un resumen en español de por qué cada uno ge
 información vive en un único fichero de datos que consumen tanto el panel completo como el widget de la
 home:
 
-- Dataset: [proyectos/lo-mas-leido-wikipedia/data.json](../../../proyectos/lo-mas-leido-wikipedia/data.json)
-- Panel completo: [proyectos/lo-mas-leido-wikipedia/index.html](../../../proyectos/lo-mas-leido-wikipedia/index.html) (lee `data.json` vía `fetch`)
+- Dataset: [lo-mas-leido-wikipedia/data.json](../../../lo-mas-leido-wikipedia/data.json)
+- Panel completo: [lo-mas-leido-wikipedia/index.html](../../../lo-mas-leido-wikipedia/index.html) (lee `data.json` vía `fetch`)
 - Widget de la home: [index.html](../../../index.html) (busca `wikipediaTopSparkline`, también lee el mismo `data.json`)
-- Artículo/documentación del proyecto: [publicaciones/proyecto-lo-mas-leido-wikipedia.md](../../../publicaciones/proyecto-lo-mas-leido-wikipedia.md)
+- Documentación del proyecto (sección «Sobre este proyecto: cómo está hecho», `#documentacion`, al final de la misma página): [lo-mas-leido-wikipedia/index.html](../../../lo-mas-leido-wikipedia/index.html)
 
 No hace falta tocar el HTML ni el JavaScript de ninguna de esas páginas: basta con editar `data.json`
 siguiendo el esquema descrito abajo. Todo lo demás (tablas, gráficos, KPIs, FAQ) se renderiza
@@ -171,7 +171,7 @@ campo `sparklineSvg`:
 ```python
 import json
 
-path = 'proyectos/lo-mas-leido-wikipedia/data.json'
+path = 'lo-mas-leido-wikipedia/data.json'
 with open(path, encoding='utf-8') as f:
     data = json.load(f)
 
@@ -229,7 +229,7 @@ por una etiqueta corta en español antes de guardar (como se hizo con "1. Caso C
 9. Actualiza `notas` si procede (por ejemplo, retira `notas.primeraSemana` en cuanto haya una segunda
    semana registrada, y sustitúyela si hace falta por alguna aclaración nueva).
 10. Guarda el fichero validando que sigue siendo JSON válido (revisa comas y llaves; ejecutar
-    `python -c "import json; json.load(open('proyectos/lo-mas-leido-wikipedia/data.json', encoding='utf-8'))"`
+    `python -c "import json; json.load(open('lo-mas-leido-wikipedia/data.json', encoding='utf-8'))"`
     es una forma rápida de comprobarlo).
 11. Enseña al usuario un resumen de la semana (artículo más leído, categoría dominante, y cualquier cambio
     relevante frente a la semana anterior si ya hay histórico). No hagas commit ni push salvo que el

@@ -37,7 +37,7 @@ Este último punto ha provocado reacciones bastante airadas, incluyendo insultos
 
 El principal argumento es preventivo. **Proteger a los menores de los riesgos del entorno digital**: adicción, ciberacoso, presión social constante o exposición a contenidos inadecuados.
 
-Muchos expertos en psicología infantil señalan que el uso intensivo de redes sociales puede afectar al desarrollo emocional y a la **salud mental** de niños y adolescentes, un riesgo que proyectos como [FARO ya intentan monitorizar en redes sociales](https://emirodgar.es/faro-monitorizacion-salud-mental). Desde ese punto de vista, limitar el acceso parece una decisión lógica.
+Muchos expertos en psicología infantil señalan que el uso intensivo de redes sociales puede afectar al desarrollo emocional y a la **salud mental** de niños y adolescentes, un riesgo que proyectos como [FARO ya intentan monitorizar en redes sociales](https://emirodgar.es/faro-monitorizacion-salud-mental/). Desde ese punto de vista, limitar el acceso parece una decisión lógica.
 
 El mensaje político es claro: el Estado interviene para proteger a los más vulnerables frente a un entorno que va más rápido que la legislación. Vale, hasta aquí, todo tiene sentido y me parece una medida que puede aportar valor real a nuestra sociedad.
 

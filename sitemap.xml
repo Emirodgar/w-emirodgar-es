@@ -17,21 +17,21 @@
   <url><loc>https://emirodgar.es/sobre-mi.html</loc></url>
   <url><loc>https://emirodgar.es/actualidad/</loc></url>
   <url><loc>https://emirodgar.es/timeline/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/macrodata-espana/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/elecciones-espana/</loc></url>
+  <url><loc>https://emirodgar.es/macrodata-espana/</loc></url>
+  <url><loc>https://emirodgar.es/elecciones-espana/</loc></url>
   <url><loc>https://emirodgar.es/encuestas-elecciones-generales/</loc></url>
   <url><loc>https://emirodgar.es/como-votar-por-correo/</loc></url>
   <url><loc>https://emirodgar.es/a-quien-votar/</loc></url>
   <url><loc>https://emirodgar.es/programas-electorales/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/faro/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/medicion-audiencias-digitales/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/panel-economico-cyl/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/radar-empleo-publico-cyl/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/quien-gobierna-cyl/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/simulador-hipotecas-espana/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/catalogo-ayudas-espana/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/catalogo-ayudas-cyl-salamanca/</loc></url>
-  <url><loc>https://emirodgar.es/proyectos/lo-mas-leido-wikipedia/</loc></url>
+  <url><loc>https://emirodgar.es/faro-monitorizacion-salud-mental/</loc></url>
+  <url><loc>https://emirodgar.es/medicion-audiencias-digitales/</loc></url>
+  <url><loc>https://emirodgar.es/panel-economico-cyl/</loc></url>
+  <url><loc>https://emirodgar.es/radar-empleo-publico-cyl/</loc></url>
+  <url><loc>https://emirodgar.es/quien-gobierna-cyl/</loc></url>
+  <url><loc>https://emirodgar.es/simulador-hipotecas-espana/</loc></url>
+  <url><loc>https://emirodgar.es/catalogo-ayudas-espana/</loc></url>
+  <url><loc>https://emirodgar.es/ayudas-castilla-leon-salamanca/</loc></url>
+  <url><loc>https://emirodgar.es/lo-mas-leido-wikipedia/</loc></url>
 
   <!-- Publicaciones y proyectos (automático, vía site.pages) -->
   {% for page in site.pages %}
