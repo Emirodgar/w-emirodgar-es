@@ -117,6 +117,18 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
 .ib__chh h4{margin:0}.ib__ro{font-size:12px;color:var(--txt);font-variant-numeric:tabular-nums}
 .ib__ch svg{display:block;width:100%;height:auto;cursor:crosshair}
 .ib__ch text{fill:var(--mut);font-size:9px}
+.ib__tabs{display:flex;gap:6px;margin:0 0 18px;border-bottom:1px solid var(--line)}
+.ib__tabs button{background:none;border:0;border-bottom:2px solid transparent;color:var(--mut);font:inherit;font-weight:600;padding:10px 14px;cursor:pointer;margin-bottom:-1px}
+.ib__tabs button:hover{color:#fff}.ib__tabs button.on{color:var(--acc);border-bottom-color:var(--acc)}
+.ib__tabs b{display:inline-block;min-width:20px;padding:0 6px;margin-left:6px;border-radius:999px;background:#222d34;color:var(--txt);font-size:11px;text-align:center}
+.ib__buy{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:flex-end;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.ib__buy h4{margin:0 0 2px}.ib__buy label{display:flex;flex-direction:column;gap:4px;font-size:12px;color:var(--mut)}
+.ib__buy input{width:130px;background:var(--bg);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font:inherit}
+.ib__buy .ib__btn{background:var(--up);border-color:var(--up);color:#06210f;font-weight:700}.ib__buy .ib__btn:hover{filter:brightness(1.1)}
+.ib__msg{font-size:12px;color:var(--acc)}.ib__msg.err{color:var(--down)}
+.ib__card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px 8px;margin-bottom:14px}
+.ib td .del{background:none;border:0;color:var(--mut);cursor:pointer;font-size:16px;line-height:1}.ib td .del:hover{color:var(--down)}
+.ib tfoot td{font-weight:700;color:#fff;background:var(--panel2)}
 @media(max-width:820px){.ib__kpis{grid-template-columns:repeat(2,1fr)}.ib h1{font-size:22px}}
 </style>
 
@@ -126,6 +138,12 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
     <h1>IBEX 35 · Radar de oportunidades</h1>
     <p class="ib__sub">Cierre de la sesión del <b id="ibFecha">--</b>. Se actualiza solo cada día hábil tras el cierre de la bolsa.</p>
 
+    <div class="ib__tabs" role="tablist">
+      <button type="button" role="tab" id="tabM" class="on" aria-selected="true">Mercado</button>
+      <button type="button" role="tab" id="tabC" aria-selected="false">Mi cartera simulada<b id="tabCn">0</b></button>
+    </div>
+
+    <div id="vMercado">
     <div class="ib__kpis">
       <div class="ib__kpi"><small>IBEX 35</small><strong id="kIdx">--</strong><span id="kIdxS">--</span></div>
       <button type="button" class="ib__kpi ib__kpi--op" data-estado="oportunidad" aria-pressed="false"><small>Posible oportunidad</small><strong id="kOp">0</strong><span>caída larga + giro</span></button>
@@ -148,7 +166,20 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
       <tbody id="ibBody"></tbody>
     </table></div>
     <p class="ib__foot" id="ibFoot"></p>
-    <p class="ib__foot">Contenido informativo y educativo basado solo en precio y volumen. No constituye asesoramiento financiero ni una recomendación de compra o venta.</p>
+    </div>
+
+    <div id="vCartera" hidden>
+      <div class="ib__kpis" id="cKpis"></div>
+      <div class="ib__card"><div class="ib__chh"><h4>Evolución de la cartera frente a lo invertido</h4><span class="ib__ro" id="cRo"></span></div><div id="cChart"></div></div>
+      <div class="ib__tools">
+        <button type="button" class="ib__btn" id="cExp">Exportar</button>
+        <label class="ib__btn" style="margin:0">Importar<input type="file" id="cImp" accept=".json,application/json" hidden></label>
+        <button type="button" class="ib__btn" id="cClear">Vaciar cartera</button>
+        <span class="mu" style="font-size:12px">Las compras se guardan solo en este navegador. Exporta para llevarlas a otro dispositivo.</span>
+      </div>
+      <div class="ib__scroll"><table id="cTable" style="min-width:900px"></table></div>
+    </div>
+    <p class="ib__foot">Contenido informativo y educativo basado solo en precio y volumen. Las compras de la cartera son simuladas, sin dinero real. No constituye asesoramiento financiero ni una recomendación de compra o venta.</p>
   </div>
 </main>
 
@@ -226,7 +257,7 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
       li(s.sobreSma20,'Precio sobre la media de 20 y media de 50 sin caer')+
       li(s.rsi,'RSI '+fmt(e.rsi,0)+' sobre '+C.rsiGiro+', tras haber bajado de '+C.rsiSobreventa+' en 60 sesiones')+
       li(s.minimosCrecientes,'Mínimos crecientes: no ha vuelto a tocar el suelo')+'</ul></div></div>'+
-      '<div class="ib__charts">'+chart(e,'dias','Últimos 30 días (cierre diario)')+chart(e,'semanas','Últimas 26 semanas (cierre semanal)')+'</div>';
+      '<div class="ib__charts">'+chart(e,'dias','Últimos 30 días (cierre diario)')+chart(e,'semanas','Últimas 26 semanas (cierre semanal)')+'</div>'+buyBox(e);
   }
   function rows(){
     var q=filt.q.toLowerCase();
@@ -272,10 +303,140 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
     var i=d.indice;
     if(i){$('kIdx').textContent=fmt(i.precio,0);$('kIdxS').innerHTML=pct(i.d1)+' hoy · '+pct(i.ytd)+' en el año'}
     $('kOp').textContent=d.resumen.oportunidad;$('kVi').textContent=d.resumen.vigilancia;$('kNo').textContent=d.resumen.normal;
+    updTab();
     COLS.forEach(function(c){vis[c.k]=true});
     $('ibColMenu').innerHTML=COLS.map(function(c){return '<label><input type="checkbox" data-c="'+c.k+'" checked'+(c.k==='nombre'?' disabled':'')+'> '+c.t+'</label>'}).join('');
     render();
   }
+
+  var KEY='ibex35.cartera.v1',CART=load(),CC=null;
+  function load(){try{var a=JSON.parse(localStorage.getItem(KEY)||'[]');return Array.isArray(a)?a.filter(valida):[]}catch(e){return []}}
+  function save(){try{localStorage.setItem(KEY,JSON.stringify(CART));return true}catch(e){return false}}
+  function valida(p){return p&&typeof p.id==='string'&&typeof p.ticker==='string'&&p.importe>0&&p.precio>0&&p.acciones>0&&typeof p.fecha==='string'&&typeof p.fechaPrecio==='string'}
+  var eur=function(v){return fmt(v,2)+' €'};
+  var res=function(v,suf){return '<span class="'+(v>0?'up':v<0?'dn':'mu')+'">'+(v>0?'+':'')+fmt(v,suf==='%'?1:2)+(suf==='%'?' %':' €')+'</span>'};
+  var empresa=function(t){return D.empresas.filter(function(e){return e.ticker===t})[0]};
+  function buyBox(e){
+    return '<div class="ib__buy"><div><h4>Simular una compra</h4><span class="mu" style="font-size:12px">Precio de compra: último cierre ('+fd(D.fechaDatos)+') · '+eur(e.precio)+'</span></div>'+
+      '<label>Importe (€)<input type="number" inputmode="decimal" min="1" max="1000000" step="1" value="1000" id="buy-'+e.ticker+'"></label>'+
+      '<button type="button" class="ib__btn" data-buy="'+e.ticker+'">Comprar</button><span class="ib__msg" id="msg-'+e.ticker+'" role="status"></span></div>';
+  }
+  function updTab(){$('tabCn').textContent=CART.length}
+  function comprar(tk){
+    var e=empresa(tk),inp=$('buy-'+tk),msg=$('msg-'+tk),imp=parseFloat(String(inp.value).replace(',','.'));
+    msg.className='ib__msg';
+    if(!(imp>=1&&imp<=1000000)){msg.className='ib__msg err';msg.textContent='Introduce un importe entre 1 y 1.000.000 €.';return}
+    imp=Math.round(imp*100)/100;
+    CART.push({id:Date.now().toString(36)+Math.random().toString(36).slice(2,6),ticker:tk,nombre:e.nombre,fecha:new Date().toISOString(),fechaPrecio:D.fechaDatos,importe:imp,precio:e.precio,acciones:imp/e.precio});
+    var ok=save();updTab();
+    msg.className='ib__msg'+(ok?'':' err');
+    msg.textContent=ok?'Compra registrada: '+fmt(imp/e.precio,4)+' acciones a '+eur(e.precio)+'. Míralo en «Mi cartera simulada».':'Registrada, pero este navegador no permite guardarla.';
+  }
+  function posicion(p){
+    var e=empresa(p.ticker),px=e?e.precio:p.precio,val=p.acciones*px;
+    return {px:px,val:val,r:val-p.importe,pc:(val/p.importe-1)*100};
+  }
+  function serie(tk){
+    var e=empresa(tk);if(!e)return [];
+    var pri=e.dias[0][0];
+    return e.semanas.filter(function(x){return x[0]<pri}).concat(e.dias);
+  }
+  function cartChart(){
+    if(!CART.length)return '<p class="mu" style="padding:12px 0">Aún no hay compras. Despliega una empresa en «Mercado» e introduce un importe.</p>';
+    var desde=CART.reduce(function(a,p){return p.fechaPrecio<a?p.fechaPrecio:a},'9999');
+    var fechas={},mapas={};
+    CART.forEach(function(p){
+      fechas[p.fechaPrecio]=1;
+      if(!mapas[p.ticker]){var m={};serie(p.ticker).forEach(function(x){m[x[0]]=x[1]});mapas[p.ticker]=m}
+      Object.keys(mapas[p.ticker]).forEach(function(d){if(d>=desde)fechas[d]=1});
+    });
+    var ds=Object.keys(fechas).sort(),val=[],inv=[];
+    ds.forEach(function(d){
+      var v=0,i=0;
+      CART.forEach(function(p){
+        if(p.fechaPrecio>d)return;
+        var px=p.precio;
+        if(d!==p.fechaPrecio){
+          var m=mapas[p.ticker],cand=Object.keys(m).filter(function(x){return x<=d&&x>=p.fechaPrecio}).sort(),k=cand[cand.length-1];
+          if(k)px=m[k];
+        }
+        v+=p.acciones*px;i+=p.importe;
+      });
+      val.push(v);inv.push(i);
+    });
+    CC={ds:ds,val:val,inv:inv};
+    if(ds.length<2)return '<p class="mu" style="padding:12px 0">La gráfica aparecerá cuando haya al menos dos cierres desde tu primera compra (tras el cierre de la próxima sesión).</p>';
+    var W=700,H=190,L=6,R=56,T=10,B=20,n=ds.length,all=val.concat(inv),mn=Math.min.apply(null,all),mx=Math.max.apply(null,all),r=mx-mn||1;
+    var X=function(i){return L+i/(n-1)*(W-L-R)},Y=function(x){return T+(1-(x-mn)/r)*(H-T-B)};
+    var pv=val.map(function(x,i){return X(i).toFixed(1)+','+Y(x).toFixed(1)}).join(' ');
+    var pi=inv.map(function(x,i){return X(i).toFixed(1)+','+Y(x).toFixed(1)}).join(' ');
+    var c=val[n-1]>=inv[n-1]?'#22c55e':'#ef4444';
+    $('cRo').textContent=cartRo(n-1);
+    return '<div class="ib__ch" data-s="cartera"><svg viewBox="0 0 '+W+' '+H+'" role="img" aria-label="Evolución de la cartera simulada">'+
+      '<polyline points="'+pi+'" fill="none" stroke="#8a99a4" stroke-width="1.2" stroke-dasharray="4 3"/>'+
+      '<polygon points="'+X(0)+','+(H-B)+' '+pv+' '+X(n-1)+','+(H-B)+'" fill="'+c+'" opacity=".12"/><polyline points="'+pv+'" fill="none" stroke="'+c+'" stroke-width="1.8" stroke-linejoin="round"/>'+
+      '<text x="'+(W-R+4)+'" y="'+(Y(mx)+3)+'">'+fmt(mx,0)+' €</text><text x="'+(W-R+4)+'" y="'+(Y(mn)+3)+'">'+fmt(mn,0)+' €</text>'+
+      '<text x="'+L+'" y="'+(H-4)+'">'+fd(ds[0])+'</text><text x="'+(W-R)+'" y="'+(H-4)+'" text-anchor="end">'+fd(ds[n-1])+'</text>'+
+      '<g class="cur" style="display:none"><line y1="'+T+'" y2="'+(H-B)+'" stroke="#8a99a4"/><circle r="3.5" fill="'+c+'" stroke="#0f1418"/></g></svg>'+
+      '<div class="mu" style="font-size:11px;padding:2px 0 6px"><span style="color:'+c+'">━</span> valor de la cartera · <span>┅</span> importe invertido</div></div>';
+  }
+  function cartRo(i){return fd(CC.ds[i])+' · valor '+eur(CC.val[i])+' · invertido '+eur(CC.inv[i])+' · '+(CC.val[i]>=CC.inv[i]?'+':'')+fmt((CC.val[i]/CC.inv[i]-1)*100,1)+' %'}
+  function renderCart(){
+    var inv=0,val=0,tk={};
+    CART.forEach(function(p){inv+=p.importe;val+=posicion(p).val;tk[p.ticker]=1});
+    var r=val-inv,pc=inv?(r/inv)*100:0;
+    $('cKpis').innerHTML=
+      '<div class="ib__kpi"><small>Invertido</small><strong>'+eur(inv)+'</strong><span>'+CART.length+' compras simuladas</span></div>'+
+      '<div class="ib__kpi"><small>Valor actual</small><strong>'+eur(val)+'</strong><span>cierre del '+fd(D.fechaDatos)+'</span></div>'+
+      '<div class="ib__kpi"><small>Resultado</small><strong class="'+(r>0?'up':r<0?'dn':'')+'">'+(r>0?'+':'')+eur(r)+'</strong><span>'+res(pc,'%')+' frente a hoy</span></div>'+
+      '<div class="ib__kpi"><small>Empresas</small><strong>'+Object.keys(tk).length+'</strong><span>distintas en cartera</span></div>';
+    $('cChart').innerHTML=cartChart();
+    if(!CART.length)$('cRo').textContent='';
+    var h='<thead><tr><th>Fecha de compra</th><th>Empresa</th><th class="num">Importe</th><th class="num">Precio compra</th><th class="num">Acciones</th><th class="num">Precio actual</th><th class="num">Valor actual</th><th class="num">Resultado</th><th class="num">%</th><th></th></tr></thead><tbody>';
+    CART.slice().sort(function(a,b){return a.fecha<b.fecha?1:-1}).forEach(function(p){
+      var x=posicion(p);
+      h+='<tr><td>'+new Date(p.fecha).toLocaleString('es-ES',{dateStyle:'short',timeStyle:'short'})+'</td><td><div class="ib__name"><b>'+p.nombre+'</b><span>'+p.ticker+'</span></div></td>'+
+        '<td class="num">'+eur(p.importe)+'</td><td class="num">'+eur(p.precio)+'</td><td class="num">'+fmt(p.acciones,4)+'</td><td class="num">'+eur(x.px)+'</td><td class="num">'+eur(x.val)+'</td>'+
+        '<td class="num">'+res(x.r)+'</td><td class="num">'+res(x.pc,'%')+'</td><td><button type="button" class="del" data-del="'+p.id+'" aria-label="Eliminar compra" title="Eliminar compra">×</button></td></tr>';
+    });
+    if(!CART.length)h+='<tr><td class="ib__empty" colspan="10">Todavía no has simulado ninguna compra.</td></tr></tbody>';
+    else h+='</tbody><tfoot><tr><td colspan="2">Total</td><td class="num">'+eur(inv)+'</td><td colspan="3"></td><td class="num">'+eur(val)+'</td><td class="num">'+res(r)+'</td><td class="num">'+res(pc,'%')+'</td><td></td></tr></tfoot>';
+    $('cTable').innerHTML=h;
+  }
+  function tab(c){
+    $('vMercado').hidden=c;$('vCartera').hidden=!c;
+    $('tabM').classList.toggle('on',!c);$('tabC').classList.toggle('on',c);
+    $('tabM').setAttribute('aria-selected',!c);$('tabC').setAttribute('aria-selected',c);
+    if(c)renderCart();
+  }
+  document.addEventListener('click',function(ev){
+    var t=ev.target,b=t.closest&&t.closest('button,label');
+    if(!b)return;
+    if(b.id==='tabM'){tab(false);return}
+    if(b.id==='tabC'){if(D)tab(true);return}
+    if(b.dataset.buy){comprar(b.dataset.buy);return}
+    if(b.dataset.del){if(confirm('¿Eliminar esta compra simulada?')){CART=CART.filter(function(p){return p.id!==b.dataset.del});save();updTab();renderCart()}return}
+    if(b.id==='cClear'){if(CART.length&&confirm('¿Vaciar toda la cartera simulada?')){CART=[];save();updTab();renderCart()}return}
+    if(b.id==='cExp'){
+      var a=document.createElement('a');a.href=URL.createObjectURL(new Blob([JSON.stringify(CART,null,1)],{type:'application/json'}));
+      a.download='cartera-ibex35.json';document.body.appendChild(a);a.click();a.remove();
+    }
+  });
+  document.addEventListener('change',function(ev){
+    if(ev.target.id!=='cImp'||!ev.target.files[0])return;
+    var rd=new FileReader();
+    rd.onload=function(){
+      try{
+        var a=JSON.parse(rd.result);if(!Array.isArray(a))throw 0;
+        var ids={};CART.forEach(function(p){ids[p.id]=1});
+        var nuevas=a.filter(function(p){return valida(p)&&!ids[p.id]});
+        CART=CART.concat(nuevas);save();updTab();renderCart();
+        alert(nuevas.length+' compras importadas.');
+      }catch(e){alert('El archivo no es una cartera válida.')}
+      ev.target.value='';
+    };
+    rd.readAsText(ev.target.files[0]);
+  });
   document.addEventListener('click',function(ev){
     var t=ev.target;
     var th=t.closest&&t.closest('#ibHead th.s');
@@ -299,6 +460,13 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
   document.addEventListener('mousemove',function(ev){
     var svg=ev.target.closest&&ev.target.closest('.ib__ch svg');
     if(!svg)return;
+    if(svg.parentNode.dataset.s==='cartera'){
+      var b0=svg.getBoundingClientRect(),n0=CC.ds.length,i0=Math.max(0,Math.min(n0-1,Math.round(((ev.clientX-b0.left)/b0.width*700-6)/(700-6-56)*(n0-1))));
+      var all=CC.val.concat(CC.inv),m0=Math.min.apply(null,all),M0=Math.max.apply(null,all),g0=svg.querySelector('.cur'),c0=g0.querySelector('circle');
+      var x0=6+i0/(n0-1)*(700-6-56),y0=10+(1-(CC.val[i0]-m0)/((M0-m0)||1))*(190-10-20);
+      g0.style.display='';g0.querySelector('line').setAttribute('x1',x0);g0.querySelector('line').setAttribute('x2',x0);c0.setAttribute('cx',x0);c0.setAttribute('cy',y0);
+      $('cRo').textContent=cartRo(i0);return;
+    }
     var box=svg.parentNode,e=D.empresas.filter(function(x){return x.ticker===box.dataset.t})[0],p=e[box.dataset.s],n=p.length;
     var b=svg.getBoundingClientRect(),W=400,L=6,R=44,fx=(ev.clientX-b.left)/b.width*W;
     var i=Math.max(0,Math.min(n-1,Math.round((fx-L)/(W-L-R)*(n-1))));
@@ -311,7 +479,9 @@ button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=t
   document.addEventListener('mouseout',function(ev){
     var svg=ev.target.closest&&ev.target.closest('.ib__ch svg');
     if(!svg||(ev.relatedTarget&&svg.contains(ev.relatedTarget)))return;
-    svg.querySelector('.cur').style.display='none';var ro=svg.parentNode.querySelector('.ib__ro');ro.textContent=ro.dataset.def;
+    svg.querySelector('.cur').style.display='none';
+    if(svg.parentNode.dataset.s==='cartera'){$('cRo').textContent=cartRo(CC.ds.length-1);return}
+    var ro=svg.parentNode.querySelector('.ib__ro');ro.textContent=ro.dataset.def;
   });
   fetch('data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(init).catch(function(){
     $('ibBody').innerHTML='<tr><td class="ib__empty" colspan="14">No se han podido cargar los datos. Inténtalo de nuevo en unos minutos.</td></tr>';
