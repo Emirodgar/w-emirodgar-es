@@ -923,7 +923,7 @@
         "titulo": "Óscar Puente, en Atocha \"tratando de obtener toda la información\" sobre el choque",
         "url": "https://www.elmundo.es/economia/2026/10/28/6ae1d3163e9f6f8c52af782f-directo.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-10-28",
@@ -936,6 +936,48 @@
         "medio": "El Mundo",
         "titulo": "La Comisión Europea abre expediente a España por la regularización de inmigrantes",
         "url": "https://www.elmundo.es/espana/2026/10/28/6ae104e8e4d4d859798b45a2.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-29",
+      "edicion": "2026-10-29",
+      "titulo": "Accidente ferroviario en Urda con 69 fallecidos",
+      "categoria": "Sucesos",
+      "descripcion": "Un choque entre un AVE y un tren Iryo en Urda, Toledo, ha resultado en la muerte de 69 personas, convirtiéndose en una de las mayores tragedias ferroviarias recientes en España.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Sube a 69 la cifra de muertos en el accidente y Page confía en que no haya más víctimas en el vagón que queda por levantar",
+        "url": "https://www.elmundo.es/economia/2026/10/29/6ae2e2a9ddc80eae27434b11-directo.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-10-29",
+      "edicion": "2026-10-29",
+      "titulo": "Christine Lagarde anuncia su dimisión del BCE",
+      "categoria": "Economía",
+      "descripcion": "La presidenta del Banco Central Europeo, Christine Lagarde, ha comunicado que abandonará su cargo el 7 de febrero de 2027.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Lagarde abandonará la presidencia del BCE el próximo 7 de febrero",
+        "url": "https://www.elmundo.es/economia/dinero-inversion/2026/10/29/6ae31ae8e4d4d8a0548b459c.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-29",
+      "edicion": "2026-10-29",
+      "titulo": "Vox presenta querella contra Óscar Puente",
+      "categoria": "Política",
+      "descripcion": "El partido Vox ha presentado una querella ante el Tribunal Supremo contra el ministro de Transportes, Óscar Puente, por presuntos delitos de homicidio y lesiones por imprudencia grave tras el accidente de Urda.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Vox se querella contra Óscar Puente por presuntos delitos de homicidios y lesiones",
+        "url": "https://theobjective.com/espana/2026-10-29/vox-querella-oscar-puente-delitos-homicidios-lesiones/"
       },
       "destacado": false
     }
