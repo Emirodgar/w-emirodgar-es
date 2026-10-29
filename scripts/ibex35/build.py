@@ -162,6 +162,11 @@ def analizar(serie):
     if spark[-1] != round(precio, 2):
         spark.append(round(precio, 2))
 
+    dias = [[d.date().isoformat(), round(float(v), 2)] for d, v in s.iloc[-30:].items()]
+    semanas = [[d.date().isoformat(), round(float(v), 2)]
+               for d, v in s.resample("W-FRI").last().dropna().iloc[-26:].items()]
+    semanas[-1][0] = dias[-1][0]  # la semana en curso se fecha en su último cierre
+
     return {
         "precio": round(precio, 3),
         "d1": variacion(s, 1),
@@ -181,6 +186,8 @@ def analizar(serie):
         "puntos": puntos,
         "estado": estado,
         "spark": spark,
+        "dias": dias,
+        "semanas": semanas,
     }
 
 
