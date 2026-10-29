@@ -7,13 +7,16 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-01-21
+date_modified: 2026-10-29
 folder: analisis
 permalink: analisis-sector-ferroviario
 ---
 
 # Inversión, mantenimiento y estado de los trenes en España 
 
-Los últimos años han sido bastante convulso en el sector ferroviario, acumulando muchos avisos, retrasos e inclusos accidentes. Algunos muy graves, como el de alta velocidad de Córdoba a principios de 2026.
+Los últimos años han sido bastante convulso en el sector ferroviario, acumulando muchos avisos, retrasos e inclusos accidentes. Algunos muy graves, como el de alta velocidad de Adamuz (Córdoba) en enero de 2026 y, **el pasado 28 de octubre, el choque entre un AVE y un Iryo en Urda (Toledo)**, que con al menos 68 fallecidos según los últimos balances se perfila como el peor accidente ferroviario de España en décadas.
+
+> **Actualización (29 de octubre de 2026):** hemos añadido el [accidente de Urda](#accidente-de-urda-toledo-28-de-octubre-de-2026), nuevos gráficos de evolución y una sección de conclusiones. Las cifras de víctimas y las causas siguen en investigación y pueden cambiar.
 Hace unos meses realizamos un primer análisis sobre los [problemas ferroviarios en España](https://emirodgar.es/analisis-ferroviario), poniendo especial atención en las incidencias y compensaciones.
 
 En este artíuclo vamos a analizar y entender cómo ha sido la evolución de la inversión y mantenimiento de la red de trenes en España durante los últimos 20 años.
@@ -21,6 +24,66 @@ En este artíuclo vamos a analizar y entender cómo ha sido la evolución de la 
 Atendiendo a los datos que hemos recopilado en este análisis, la siguiente tabla resume y cualifica las acciones de cada uno de los gobiernos de los últimos 20 años. No obstante, esa información por sí misma no explica la situación, por lo que tendremos que avanzar para poner contexto a los datos y entender realmente la situación que estamos viviendo a día de hoy en España.
 
 <img width="824" class="img-responsive" alt="inversión en ferrocarril en España por gobierno" src="https://github.com/user-attachments/assets/fa719d3b-cd1b-48b5-876f-c76ce262be23" />
+
+A continuación, la inversión y el tráfico de viajeros de un vistazo:
+
+<figure class="grafico-ferroviario" style="margin:2rem 0">
+<svg viewBox="0 0 720 340" role="img" aria-label="Inversión ferroviaria anual media por gobierno en millones de euros" style="width:100%;height:auto;font-family:inherit">
+<text x="360.0" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="currentColor">Inversión ferroviaria anual por gobierno (M€)</text>
+<line x1="60" x2="700" y1="280.0" y2="280.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="284.0" text-anchor="end" font-size="12" fill="currentColor">0</text>
+<line x1="60" x2="700" y1="222.5" y2="222.5" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="226.5" text-anchor="end" font-size="12" fill="currentColor">1.500</text>
+<line x1="60" x2="700" y1="165.0" y2="165.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="169.0" text-anchor="end" font-size="12" fill="currentColor">3.000</text>
+<line x1="60" x2="700" y1="107.5" y2="107.5" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="111.5" text-anchor="end" font-size="12" fill="currentColor">4.500</text>
+<line x1="60" x2="700" y1="50.0" y2="50.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="54.0" text-anchor="end" font-size="12" fill="currentColor">6.000</text>
+<rect x="108.0" y="165.0" width="117.3" height="115.0" rx="3" fill="#64748b"/>
+<text x="166.7" y="159.0" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">3.000</text>
+<text x="166.7" y="300" text-anchor="middle" font-size="12" fill="currentColor">Zapatero</text>
+<text x="166.7" y="315" text-anchor="middle" font-size="12" fill="currentColor">2004-2011</text>
+<rect x="321.3" y="203.3" width="117.3" height="76.7" rx="3" fill="#64748b"/>
+<text x="380.0" y="197.3" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">2.000</text>
+<text x="380.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">Rajoy</text>
+<text x="380.0" y="315" text-anchor="middle" font-size="12" fill="currentColor">2011-2018</text>
+<rect x="534.7" y="64.2" width="117.3" height="215.8" rx="3" fill="#1d4ed8"/>
+<text x="593.3" y="58.2" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">5.629</text>
+<text x="593.3" y="300" text-anchor="middle" font-size="12" fill="currentColor">Sánchez</text>
+<text x="593.3" y="315" text-anchor="middle" font-size="12" fill="currentColor">2018-2024</text>
+</svg>
+<figcaption style="font-size:.9rem;opacity:.8">Cifras aproximadas de la tabla comparativa de este análisis. Sánchez: dato de 2024 (inversión récord).</figcaption>
+</figure>
+
+<figure class="grafico-ferroviario" style="margin:2rem 0">
+<svg viewBox="0 0 720 340" role="img" aria-label="Viajeros ferroviarios de larga distancia en millones por etapa" style="width:100%;height:auto;font-family:inherit">
+<text x="360.0" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="currentColor">Viajeros de larga distancia (millones)</text>
+<line x1="60" x2="700" y1="280.0" y2="280.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="284.0" text-anchor="end" font-size="12" fill="currentColor">0</text>
+<line x1="60" x2="700" y1="222.5" y2="222.5" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="226.5" text-anchor="end" font-size="12" fill="currentColor">10</text>
+<line x1="60" x2="700" y1="165.0" y2="165.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="169.0" text-anchor="end" font-size="12" fill="currentColor">20</text>
+<line x1="60" x2="700" y1="107.5" y2="107.5" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="111.5" text-anchor="end" font-size="12" fill="currentColor">30</text>
+<line x1="60" x2="700" y1="50.0" y2="50.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="54.0" text-anchor="end" font-size="12" fill="currentColor">40</text>
+<rect x="96.0" y="211.0" width="88.0" height="69.0" rx="3" fill="#64748b"/>
+<text x="140.0" y="205.0" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">12</text>
+<text x="140.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">2004</text>
+<rect x="256.0" y="199.5" width="88.0" height="80.5" rx="3" fill="#64748b"/>
+<text x="300.0" y="193.5" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">14</text>
+<text x="300.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">2011</text>
+<rect x="416.0" y="165.0" width="88.0" height="115.0" rx="3" fill="#64748b"/>
+<text x="460.0" y="159.0" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">20</text>
+<text x="460.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">2018</text>
+<rect x="576.0" y="67.2" width="88.0" height="212.8" rx="3" fill="#d6336c"/>
+<text x="620.0" y="61.2" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">37</text>
+<text x="620.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">2024</text>
+</svg>
+<figcaption style="font-size:.9rem;opacity:.8">El tráfico se ha triplicado en dos décadas. 2024: 34-37 millones según la fuente; se representa el valor alto.</figcaption>
+</figure>
 
 Comenzaremos analizando desde el 2004 hasta el 2025.
 
@@ -136,9 +199,9 @@ A pesar de la inversión récord, el período ha estado marcado por una crisis d
 
 #### Accidente de Adamuz (18 de enero de 2026)
 
-En la madrugada del 18 de enero de 2026, dos trenes descarrilaron en Adamuz (Córdoba) en un choque catastrófico entre un tren Iryo procedente de Málaga y uno Alvia de Renfe rumbo a Huelva. El balance alcanzó **41 muertos y 122 heridos**, con 39 aún hospitalizados. Constituyó el accidente ferroviario más grave en España desde el de Angrois en 2013.
+En la madrugada del 18 de enero de 2026, dos trenes descarrilaron en Adamuz (Córdoba) en un choque catastrófico entre un tren Iryo procedente de Málaga y uno Alvia de Renfe rumbo a Huelva. Los primeros balances hablaban de 41 muertos y 122 heridos; las últimas cifras elevan los fallecidos a **46**, con más de un centenar de heridos. Fue el accidente ferroviario más grave en España desde Angrois (2013), hasta el de Urda, nueve meses después.
 
-Las causas permanecen bajo investigación, pero la tragedia ocurrió en una línea (Madrid-Andalucía) que había sido completamente renovada apenas ocho meses antes (mayo 2025), con una inversión de 700 millones de euros, desafiando la narrativa oficial sobre suficiencia de inversión. Tres trenes pasaron sin incidencias 20 minutos antes del accidente.
+Las causas permanecen bajo investigación (se examina una posible rotura de carril o un defecto de soldadura), pero la tragedia ocurrió en una línea (Madrid-Andalucía) que había sido completamente renovada apenas ocho meses antes (mayo 2025), con una inversión de 700 millones de euros, desafiando la narrativa oficial sobre suficiencia de inversión. Tres trenes pasaron sin incidencias 20 minutos antes del accidente.
 
 #### Incidencias operacionales sistémicas (2024-2025)
 
@@ -148,11 +211,116 @@ Las causas permanecen bajo investigación, pero la tragedia ocurrió en una lín
 - **Problemas de material rodante**: Los trenes Talgo serie 106 (comprados bajo Rajoy en 2016) llegaron años tarde y con múltiples fisuras en bogies, requiriendo retirada temporal de servicio. Los nuevos trenes Avril de Renfe, introducidos en 2024, experimentaron "pecados de juventud" según oficialmente denominó el ministro Puente a las múltiples incidencias.
 - **Saturación de capacidad**: La liberalización del mercado trajo cuatro operadores (Renfe, Ouigo, Iryo, plus servicios low-cost) circulando por infraestructura diseñada para densidades menores de tráfico. Los Centros de Regulación y Control (CRC) operaban con plantillas insuficientes para gestionar la complejidad adicional.
 
+#### Accidente de Urda, Toledo (28 de octubre de 2026)
+
+Ayer, miércoles 28 de octubre, hacia las 8:54 h, un AVE de Renfe y un tren de Iryo chocaron entre Los Yébenes y Urda (Toledo), en torno al punto kilométrico 118 de la línea de alta velocidad Madrid-Sevilla, a unos 150 km de Madrid. Las dos composiciones llevaban 544 personas y hasta cuatro coches descarrilaron y cayeron por un terraplén.
+
+- **Víctimas:** al menos **68 fallecidos** según los últimos balances (algunos medios citan 64 y la cifra oficial definitiva aún no está confirmada). Entre los fallecidos figura el maquinista del AVE. Hay 107 heridos hospitalizados en Castilla-La Mancha, 15 de ellos en código rojo.
+- **Causa:** sin determinar. El ministro Óscar Puente habla de un fallo informático en el sistema de seguridad de un tramo de 63 km y de una "decisión errónea" del centro de control de Atocha; se han difundido audios en los que Adif indica al maquinista que reconecte el sistema LZB y reanude la marcha normal. Otras versiones apuntan a error humano o a una alcance por tren detenido. Un juez ha decretado el secreto de sumario, ha incautado las cajas negras y ha acotado dos kilómetros de vía.
+- **Servicio:** Renfe suspendió el jueves 29 toda la alta velocidad Madrid-Andalucía, con plan alternativo desde el viernes 30 y venta de billetes bloqueada hasta el 13 de diciembre; Iryo canceló sus servicios al sur y Ouigo los suspendió hasta al menos el 2 de noviembre.
+
+Es el tercer gran suceso del año en la misma línea troncal tras Adamuz, y encaja con la tesis de este análisis: **el problema ya no es solo cuánto se invierte, sino cómo se gestionan la señalización, los protocolos de control y la capacidad de una red cada vez más saturada**. Con todo, conviene la cautela: la investigación no ha concluido y varios accidentes de 2026 (Adamuz, Gelida, Talavera, Ricla) no tienen, por ahora, una causa común demostrada.
+
+<figure class="grafico-ferroviario" style="margin:2rem 0">
+<svg viewBox="0 0 720 340" role="img" aria-label="Fallecidos en los accidentes ferroviarios de Angrois, Adamuz y Urda" style="width:100%;height:auto;font-family:inherit">
+<text x="360.0" y="26" text-anchor="middle" font-size="17" font-weight="700" fill="currentColor">Víctimas mortales en los grandes accidentes recientes</text>
+<line x1="60" x2="700" y1="280.0" y2="280.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="284.0" text-anchor="end" font-size="12" fill="currentColor">0</text>
+<line x1="60" x2="700" y1="222.5" y2="222.5" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="226.5" text-anchor="end" font-size="12" fill="currentColor">25</text>
+<line x1="60" x2="700" y1="165.0" y2="165.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="169.0" text-anchor="end" font-size="12" fill="currentColor">50</text>
+<line x1="60" x2="700" y1="107.5" y2="107.5" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="111.5" text-anchor="end" font-size="12" fill="currentColor">75</text>
+<line x1="60" x2="700" y1="50.0" y2="50.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="52" y="54.0" text-anchor="end" font-size="12" fill="currentColor">100</text>
+<rect x="108.0" y="96.0" width="117.3" height="184.0" rx="3" fill="#64748b"/>
+<text x="166.7" y="90.0" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">80</text>
+<text x="166.7" y="300" text-anchor="middle" font-size="12" fill="currentColor">Angrois</text>
+<text x="166.7" y="315" text-anchor="middle" font-size="12" fill="currentColor">jul 2013</text>
+<rect x="321.3" y="174.2" width="117.3" height="105.8" rx="3" fill="#1d4ed8"/>
+<text x="380.0" y="168.2" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">46</text>
+<text x="380.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">Adamuz</text>
+<text x="380.0" y="315" text-anchor="middle" font-size="12" fill="currentColor">ene 2026</text>
+<rect x="534.7" y="123.6" width="117.3" height="156.4" rx="3" fill="#d6336c"/>
+<text x="593.3" y="117.6" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">68</text>
+<text x="593.3" y="300" text-anchor="middle" font-size="12" fill="currentColor">Urda (Toledo)</text>
+<text x="593.3" y="315" text-anchor="middle" font-size="12" fill="currentColor">oct 2026</text>
+</svg>
+<figcaption style="font-size:.9rem;opacity:.8">Urda: al menos 68 según los últimos balances, pendiente de confirmación oficial. Adamuz: 46 según las últimas cifras (41 en los primeros balances).</figcaption>
+</figure>
+
+#### Otros accidentes e incidentes de 2026
+
+| Fecha | Lugar | Qué ocurrió | Balance |
+| :-- | :-- | :-- | :-- |
+| 18 ene | Adamuz (Córdoba) | Descarrilamiento de un Iryo y choque con un Alvia | 46 muertos, más de 100 heridos |
+| 20 ene | Gelida (Barcelona) | Un Rodalies R4 impacta con un muro caído sobre la vía por la lluvia | 1 muerto, 41 heridos |
+| 22 ene | Cartagena-Los Nietos (Murcia) | Un camión con grúa golpea un tren de vía estrecha | 6 heridos leves |
+| 12 feb | Talavera de la Reina (Toledo) | Un Alvia arrolla un coche en un paso a nivel sin protección | 1 muerto (conductor del coche) |
+| 12 oct | Ricla (Zaragoza) | Incendio en la cabina trasera de un AVE Madrid-Figueres | 283 evacuados, sin heridos |
+| 28 oct | Urda (Toledo) | Choque entre un AVE y un Iryo | Al menos 68 muertos, 107 hospitalizados |
+
+<figure class="grafico-ferroviario" style="margin:2rem 0">
+<svg viewBox="0 0 720 360" role="img" aria-label="Incidentes y compensaciones económicas en el ferrocarril español 2015-2024" style="width:100%;height:auto;font-family:inherit">
+<text x="360.0" y="24" text-anchor="middle" font-size="17" font-weight="700" fill="currentColor">Incidentes ferroviarios y compensaciones (2015-2024)</text>
+<rect x="55" y="36" width="12" height="12" fill="#1d4ed8"/><text x="73" y="47" font-size="12" fill="currentColor">Incidentes (eje izq.)</text>
+<rect x="285" y="36" width="12" height="12" fill="#d6336c"/><text x="303" y="47" font-size="12" fill="currentColor">Compensaciones (M€) (eje dcha.)</text>
+<line x1="55" x2="665" y1="320.0" y2="320.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="47" y="324.0" text-anchor="end" font-size="11" fill="#1d4ed8">0</text>
+<text x="673" y="324.0" text-anchor="start" font-size="11" fill="#d6336c">0</text>
+<line x1="55" x2="665" y1="255.0" y2="255.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="47" y="259.0" text-anchor="end" font-size="11" fill="#1d4ed8">32</text>
+<text x="673" y="259.0" text-anchor="start" font-size="11" fill="#d6336c">12</text>
+<line x1="55" x2="665" y1="190.0" y2="190.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="47" y="194.0" text-anchor="end" font-size="11" fill="#1d4ed8">64</text>
+<text x="673" y="194.0" text-anchor="start" font-size="11" fill="#d6336c">24</text>
+<line x1="55" x2="665" y1="125.0" y2="125.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="47" y="129.0" text-anchor="end" font-size="11" fill="#1d4ed8">97</text>
+<text x="673" y="129.0" text-anchor="start" font-size="11" fill="#d6336c">36</text>
+<line x1="55" x2="665" y1="60.0" y2="60.0" stroke="#64748b" stroke-opacity=".3"/>
+<text x="47" y="64.0" text-anchor="end" font-size="11" fill="#1d4ed8">129</text>
+<text x="673" y="64.0" text-anchor="start" font-size="11" fill="#d6336c">48</text>
+<text x="55.0" y="338" text-anchor="middle" font-size="12" fill="currentColor">2015</text>
+<text x="122.8" y="338" text-anchor="middle" font-size="12" fill="currentColor">2016</text>
+<text x="190.6" y="338" text-anchor="middle" font-size="12" fill="currentColor">2017</text>
+<text x="258.3" y="338" text-anchor="middle" font-size="12" fill="currentColor">2018</text>
+<text x="326.1" y="338" text-anchor="middle" font-size="12" fill="currentColor">2019</text>
+<text x="393.9" y="338" text-anchor="middle" font-size="12" fill="currentColor">2020</text>
+<text x="461.7" y="338" text-anchor="middle" font-size="12" fill="currentColor">2021</text>
+<text x="529.4" y="338" text-anchor="middle" font-size="12" fill="currentColor">2022</text>
+<text x="597.2" y="338" text-anchor="middle" font-size="12" fill="currentColor">2023</text>
+<text x="665.0" y="338" text-anchor="middle" font-size="12" fill="currentColor">2024</text>
+<polyline points="55.0,198.9 122.8,188.8 190.6,178.7 258.3,215.0 326.1,168.6 393.9,229.2 461.7,148.4 529.4,93.9 597.2,128.2 665.0,104.0" fill="none" stroke="#1d4ed8" stroke-width="3"/>
+<circle cx="55.0" cy="198.9" r="4" fill="#1d4ed8"/>
+<circle cx="122.8" cy="188.8" r="4" fill="#1d4ed8"/>
+<circle cx="190.6" cy="178.7" r="4" fill="#1d4ed8"/>
+<circle cx="258.3" cy="215.0" r="4" fill="#1d4ed8"/>
+<circle cx="326.1" cy="168.6" r="4" fill="#1d4ed8"/>
+<circle cx="393.9" cy="229.2" r="4" fill="#1d4ed8"/>
+<circle cx="461.7" cy="148.4" r="4" fill="#1d4ed8"/>
+<circle cx="529.4" cy="93.9" r="4" fill="#1d4ed8"/>
+<circle cx="597.2" cy="128.2" r="4" fill="#1d4ed8"/>
+<circle cx="665.0" cy="104.0" r="4" fill="#1d4ed8"/>
+<polyline points="55.0,295.8 122.8,292.0 190.6,283.4 258.3,288.2 326.1,281.2 393.9,299.5 461.7,274.2 529.4,255.4 597.2,93.9 665.0,212.3" fill="none" stroke="#d6336c" stroke-width="3"/>
+<circle cx="55.0" cy="295.8" r="4" fill="#d6336c"/>
+<circle cx="122.8" cy="292.0" r="4" fill="#d6336c"/>
+<circle cx="190.6" cy="283.4" r="4" fill="#d6336c"/>
+<circle cx="258.3" cy="288.2" r="4" fill="#d6336c"/>
+<circle cx="326.1" cy="281.2" r="4" fill="#d6336c"/>
+<circle cx="393.9" cy="299.5" r="4" fill="#d6336c"/>
+<circle cx="461.7" cy="274.2" r="4" fill="#d6336c"/>
+<circle cx="529.4" cy="255.4" r="4" fill="#d6336c"/>
+<circle cx="597.2" cy="93.9" r="4" fill="#d6336c"/>
+<circle cx="665.0" cy="212.3" r="4" fill="#d6336c"/>
+</svg>
+<figcaption style="font-size:.9rem;opacity:.8">Datos del <a href="https://emirodgar.es/analisis-ferroviario">análisis de incidencias y compensaciones</a>. 2024: incidentes hasta octubre.</figcaption></figure>
+
 ***
 
 ## IV. Análisis comparativo entre Gobiernos
 
-COn todo el contexto anterior, ya podemos comparar la invertido en cada época y sacar nuestras propias conclusiones.
+Con todo el contexto anterior, ya podemos comparar la invertido en cada época y sacar nuestras propias conclusiones.
 
 | Métrica | Zapatero (2004-2011) | Rajoy (2011-2018) | Sánchez (2018-2024) |
 | :-- | :-- | :-- | :-- |
@@ -168,7 +336,7 @@ La caída de inversión bajo Rajoy (2011-2018) creó un déficit de mantenimient
 
 Un hallazgo crítico es que **la inversión por sí no garantiza seguridad**. Los períodos de inversión alta (Zapatero) y de recuperación inversora (Sánchez) han experimentado tanto accidentes catastróficos como incidentes sistémicos, sugiriendo que deficiencias de gobernanza institucional, supervisión técnica y mantenimiento de sistemas de seguridad redundantes son factores independientes de, aunque correlacionados con, inversión.
 
-> El accidente de Angrois (2013), bajo un gobierno de austeridad, fue consecuencia de desactivación deliberada de sistemas de seguridad (ERTMS) por presiones operacionales, no por falta de fondos. El reciente accidente de Adamuz (2026), bajo un gobierno de máxima inversión histórica, sugiere que aumentar circulaciones sin incremento proporcional de revisión de seguridad sistémica genera vulnerabilidades emergentes.
+> El accidente de Angrois (2013), bajo un gobierno de austeridad, fue consecuencia de desactivación deliberada de sistemas de seguridad (ERTMS) por presiones operacionales, no por falta de fondos. Los recientes accidentes de Adamuz y Urda (2026), bajo un gobierno de máxima inversión histórica, sugieren que aumentar circulaciones sin incremento proporcional de revisión de seguridad sistémica genera vulnerabilidades emergentes.
 
 ### Demanda de viajeros vs. Infraestructura: Desequilibrio creciente
 
@@ -195,6 +363,13 @@ Como señaló un analista del sector: "Esto es como una autovía por donde antes
 **Línea Jaén-Madrid (Proyecto estratégico)**: Símbolo de política ferroviaria divergente. Iniciado bajo Zapatero con dos tramos en construcción activa, prácticamente detenido bajo Rajoy (presupuestación a 0 euros algunos años), y retomado con cierta lentitud bajo Sánchez pero aún incompleto.
 
 
+## V. Conclusiones tras Urda
+
+1. **Invertir más no basta.** Con la mayor inversión en dos décadas, 2026 acumula los dos accidentes ferroviarios más mortíferos desde 2013, ambos en el corredor Madrid-Andalucía.
+2. **La demanda crece más rápido que la capacidad de gestión.** Los viajeros de larga distancia se han triplicado y cuatro operadores comparten una infraestructura y unos centros de control dimensionados para menos tráfico.
+3. **Se repite el patrón de fondo de Angrois:** sistemas de seguridad (ERTMS, LZB, ASFA) y protocolos de control que dependen de decisiones humanas y de la gobernanza, no solo del dinero.
+4. **Pendiente de investigación.** Hasta que la CIAF y la justicia concluyan, cualquier atribución de causa es provisional; actualizaremos este análisis cuando haya datos oficiales.
+
 ## Referencias Bibliográficas
 
 Para este análisis hemos utilizado las siguientes referencias:
@@ -217,5 +392,8 @@ Para este análisis hemos utilizado las siguientes referencias:
 * [Récord 537 millones viajeros 2024](https://www.renfe.com/es/es/grupo-renfe/comunicacion/renfe-al-dia/sala-de-prensa/renfe-cierra-2024-con-record-historico-al-contabilizar-mas-de-537-millones-de-viajeros)
 * [Inversión talleres y nuevos trenes](https://www.eldiario.es/madrid/somos/renfe-mira-trenes-cercanias-llegan-madrid-2026-inversion-millonaria-talleres-fuencarral_1_12520158.html)
 * [Accidente Adamuz: detalles y investigación](https://es.wikipedia.org/wiki/Accidente_ferroviario_de_Adamuz)
+* [Accidente de Urda (Toledo), cobertura en directo - Infobae](https://www.infobae.com/espana/2026/10/28/en-directo-accidente-ferroviario-en-toledo-numerosos-heridos-tras-el-choque-de-dos-trenes-en-la-linea-madrid-andalucia/)
+* [Dos graves accidentes mortales y un nuevo choque en menos de 10 meses - Artículo 14](https://www.articulo14.es/sociedad/en-menos-de-10-meses-espana-registra-dos-graves-accidentes-ferroviarios-mortales-y-un-nuevo-choque-entre-trenes-de-alta-velocidad-20261028.html)
+* [Accidente de trenes en España, última hora - CNN en Español](https://cnnespanol.cnn.com/2026/10/28/espana/live-news/accidente-trenes-pasajeros-espana-vivo-trax)
 * [Saturación infraestructura metáfora autovía](https://www.elmundo.es/economia/2025/11/06/68fbb60221efa091088b4596.html)
 
