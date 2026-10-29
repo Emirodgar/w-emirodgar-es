@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IBEX 35 | Radar de oportunidades en bolsa</title>
+<meta name="description" content="Panel diario con la evolución de las 35 empresas del IBEX 35 que marca en color las que llevan meses cayendo y empiezan a recuperarse: un cribado automático de posibles oportunidades de inversión.">
+<link rel="canonical" href="https://emirodgar.es/ibex35/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Emirodgar">
+<meta property="og:title" content="IBEX 35 | Radar de oportunidades en bolsa">
+<meta property="og:description" content="Panel diario con la evolución de las 35 empresas del IBEX 35 que marca en color las que llevan meses cayendo y empiezan a recuperarse: un cribado automático de posibles oportunidades de inversión.">
+<meta property="og:url" content="https://emirodgar.es/ibex35/">
+<meta property="og:image" content="https://emirodgar.es/assets/images/emirodgar.jpg">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
+<link rel="stylesheet" href="/assets/css/project-doc.css?v=20261029">
+</head>
+<body>
+<header class="sg-header" role="banner">
+  <div class="sg-header__inner">
+    <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+    <button class="sg-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sg-nav"><span></span></button>
+    <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
+      <ul class="sg-nav__list">
+        <li><a class="sg-nav__link" href="/datos/">Dashboards</a></li>
+        <li><a class="sg-nav__link" href="/elecciones/">Elecciones</a></li>
+        <li><a class="sg-nav__link" href="/castilla-y-leon/">Castilla y León</a></li>
+        <li><a class="sg-nav__link" href="/actualidad/">Actualidad</a></li>
+        <li class="sg-dropdown">
+          <button class="sg-nav__link sg-dropdown__toggle" type="button" aria-expanded="false">Publicaciones</button>
+          <div class="sg-dropdown__menu">
+            <a href="/publicaciones-inteligencia-artificial">Inteligencia artificial</a>
+            <a href="/publicaciones-analisis">Análisis</a>
+            <a href="/mapa">Todas las publicaciones</a>
+          </div>
+        </li>
+      </ul>
+      <div class="sg-nav__tools">
+        <a class="sg-icon-btn sg-search" href="/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+        <button class="sg-icon-btn sg-theme" type="button" aria-label="Activar modo oscuro">
+          <span class="sg-moon" aria-hidden="true"><svg viewBox="0 0 1472 1536"><path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/></svg>Oscuro</span>
+          <span class="sg-sun" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/><path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/><path stroke-linecap="round" d="M24 45v-3.15"/></g></svg>Claro</span>
+        </button>
+        <a class="sg-btn" href="/emilio">Sobre mí</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<style>
+.ib{--bg:#0f1418;--panel:#161d22;--panel2:#1b242a;--line:#27333b;--txt:#e4eaee;--mut:#8a99a4;--acc:#5eead4;--up:#22c55e;--down:#ef4444;--amb:#f59e0b;
+  background:var(--bg);color:var(--txt);font-family:"Inter","Helvetica Neue",Arial,system-ui,sans-serif;font-size:14px;line-height:1.5;padding:28px 0 8px}
+.ib *{box-sizing:border-box}
+.ib__wrap{width:calc(100% - 32px);max-width:1280px;margin:0 auto}
+.ib__crumb{font-size:12px;color:var(--mut);margin-bottom:10px}
+.ib__crumb a{color:var(--mut);text-decoration:none}.ib__crumb a:hover{color:#fff}
+.ib h1{margin:0;font-size:26px;font-weight:700;letter-spacing:-.3px;color:#fff}
+.ib__sub{margin:4px 0 20px;color:var(--mut);font-size:13px}
+.ib__sub b{color:var(--txt);font-weight:600}
+.ib__kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:18px}
+.ib__kpi{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 16px;text-align:left;color:inherit;font:inherit;cursor:default}
+button.ib__kpi{cursor:pointer}button.ib__kpi:hover,button.ib__kpi[aria-pressed=true]{border-color:var(--acc)}
+.ib__kpi small{display:block;color:var(--mut);font-size:11px;text-transform:uppercase;letter-spacing:.6px}
+.ib__kpi strong{display:block;font-size:24px;font-weight:700;margin-top:2px;color:#fff}
+.ib__kpi span{font-size:12px;color:var(--mut)}
+.ib__kpi--op strong{color:var(--up)}.ib__kpi--vi strong{color:var(--amb)}
+.ib__tools{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:12px}
+.ib__btn,.ib select,.ib input[type=search]{background:var(--panel);color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:8px 12px;font:inherit;font-size:13px}
+.ib__btn{cursor:pointer}.ib__btn:hover{border-color:var(--acc)}
+.ib select{padding:7px 8px}
+.ib__cols{position:relative}
+.ib__colmenu{position:absolute;z-index:20;top:calc(100% + 6px);left:0;min-width:210px;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:8px;box-shadow:0 12px 30px rgba(0,0,0,.45)}
+.ib__colmenu label{display:flex;gap:8px;align-items:center;padding:5px 6px;border-radius:6px;cursor:pointer;font-size:13px}
+.ib__colmenu label:hover{background:var(--panel)}
+.ib__colmenu[hidden]{display:none}
+.ib__scroll{overflow-x:auto;background:var(--panel);border:1px solid var(--line);border-radius:12px}
+.ib table{width:100%;border-collapse:collapse;min-width:1020px}
+.ib th{padding:12px 10px;text-align:left;font-size:12px;font-weight:600;color:var(--txt);white-space:nowrap;background:var(--panel);border-bottom:1px solid var(--line)}
+.ib th.s{cursor:pointer;user-select:none}.ib th.s:hover{color:var(--acc)}
+.ib th .ar{color:var(--mut);margin-left:4px;font-size:10px}
+.ib th.num,.ib td.num{text-align:right}
+.ib tr.f th{padding:8px 10px;font-weight:400;border-bottom:1px solid var(--line)}
+.ib tr.f input,.ib tr.f select{width:100%;max-width:150px;padding:6px 8px;font-size:12px}
+.ib td{padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap;font-variant-numeric:tabular-nums}
+.ib tbody tr.r{cursor:pointer}
+.ib tbody tr.r:hover td{background:rgba(255,255,255,.035)}
+.ib tr.r.op td{background:rgba(34,197,94,.14)}.ib tr.r.op td:first-child{box-shadow:inset 3px 0 0 var(--up)}
+.ib tr.r.vi td{background:rgba(245,158,11,.11)}.ib tr.r.vi td:first-child{box-shadow:inset 3px 0 0 var(--amb)}
+.ib tr.r.op:hover td{background:rgba(34,197,94,.2)}.ib tr.r.vi:hover td{background:rgba(245,158,11,.17)}
+.ib__name b{display:block;color:var(--acc);font-weight:600}.ib__name span{color:var(--mut);font-size:11px}
+.ib .up{color:var(--up)}.ib .dn{color:var(--down)}.ib .mu{color:var(--mut)}
+.ib svg.sp{display:block;width:104px;height:30px}
+.ib__dots{display:inline-flex;gap:3px;vertical-align:middle}
+.ib__dots i{width:9px;height:9px;border-radius:50%;background:#2c3942}.ib__dots i.on{background:var(--acc)}
+.ib__badge{display:inline-block;padding:2px 9px;border-radius:999px;font-size:11px;font-weight:600}
+.ib__badge.op{background:rgba(34,197,94,.2);color:#4ade80}.ib__badge.vi{background:rgba(245,158,11,.2);color:#fbbf24}.ib__badge.no{background:#222d34;color:var(--mut)}
+.ib tr.d td{background:var(--panel2);white-space:normal;padding:14px 18px}
+.ib__det{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.ib__det h4{margin:0 0 6px;font-size:12px;text-transform:uppercase;letter-spacing:.6px;color:var(--mut)}
+.ib__det ul{margin:0;padding:0;list-style:none}.ib__det li{padding:2px 0;font-size:13px}
+.ib__det li::before{content:"○ ";color:var(--mut)}.ib__det li.ok::before{content:"● ";color:var(--acc)}
+.ib__empty{padding:30px;text-align:center;color:var(--mut)}
+.ib__foot{margin:12px 2px 0;font-size:12px;color:var(--mut)}
+.ib__leg{display:flex;flex-wrap:wrap;gap:16px;margin:0 2px 12px;font-size:12px;color:var(--mut)}
+.ib__leg i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+@media(max-width:820px){.ib__kpis{grid-template-columns:repeat(2,1fr)}.ib h1{font-size:22px}}
+</style>
+
+<main class="ib" id="ibex">
+  <div class="ib__wrap">
+    <div class="ib__crumb"><a href="/proyectos">Proyectos</a> / IBEX 35 · Radar de oportunidades <a href="#documentacion" style="float:right">Cómo está hecho</a></div>
+    <h1>IBEX 35 · Radar de oportunidades</h1>
+    <p class="ib__sub">Cierre de la sesión del <b id="ibFecha">--</b>. Se actualiza solo cada día hábil tras el cierre de la bolsa, sin IA.</p>
+
+    <div class="ib__kpis">
+      <div class="ib__kpi"><small>IBEX 35</small><strong id="kIdx">--</strong><span id="kIdxS">--</span></div>
+      <button type="button" class="ib__kpi ib__kpi--op" data-estado="oportunidad" aria-pressed="false"><small>Posible oportunidad</small><strong id="kOp">0</strong><span>caída larga + giro</span></button>
+      <button type="button" class="ib__kpi ib__kpi--vi" data-estado="vigilancia" aria-pressed="false"><small>En vigilancia</small><strong id="kVi">0</strong><span>caída larga, sin giro aún</span></button>
+      <button type="button" class="ib__kpi" data-estado="normal" aria-pressed="false"><small>Resto</small><strong id="kNo">0</strong><span>sin patrón de caída</span></button>
+    </div>
+
+    <div class="ib__tools">
+      <label class="mu">Mostrar <select id="ibN"><option>10</option><option>25</option><option selected>50</option></select> filas</label>
+      <div class="ib__cols"><button type="button" class="ib__btn" id="ibColBtn" aria-expanded="false">Columnas</button><div class="ib__colmenu" id="ibColMenu" hidden></div></div>
+      <button type="button" class="ib__btn" id="ibClear">Limpiar filtros</button>
+    </div>
+    <div class="ib__leg"><span><i style="background:rgba(34,197,94,.6)"></i>Posible oportunidad</span><span><i style="background:rgba(245,158,11,.6)"></i>En vigilancia</span><span>Pulsa una fila para ver qué criterios cumple</span></div>
+
+    <div class="ib__scroll"><table>
+      <thead>
+        <tr id="ibHead"></tr>
+        <tr class="f" id="ibFilt"></tr>
+      </thead>
+      <tbody id="ibBody"></tbody>
+    </table></div>
+    <p class="ib__foot" id="ibFoot"></p>
+  </div>
+</main>
+
+<script>
+(function(){
+  var COLS=[
+    {k:'nombre',t:'Empresa',s:1},
+    {k:'spark',t:'Tendencia 12m'},
+    {k:'precio',t:'Precio (€)',n:1,s:1},
+    {k:'d1',t:'1 día',n:1,s:1,p:1},
+    {k:'m1',t:'1 mes',n:1,s:1,p:1},
+    {k:'m6',t:'6 meses',n:1,s:1,p:1},
+    {k:'ytd',t:'En el año',n:1,s:1,p:1},
+    {k:'a1',t:'12 meses',n:1,s:1,p:1},
+    {k:'caida',t:'Desde máx. 52s',n:1,s:1,p:1},
+    {k:'rebote',t:'Desde mín. 6m',n:1,s:1,p:1},
+    {k:'rsi',t:'RSI',n:1,s:1},
+    {k:'puntos',t:'Señales de giro',s:1},
+    {k:'estado',t:'Estado',s:1},
+    {k:'sector',t:'Sector',s:1}
+  ];
+  var ORD={oportunidad:0,vigilancia:1,normal:2},LAB={oportunidad:'Posible oportunidad',vigilancia:'En vigilancia',normal:'Normal'},CLS={oportunidad:'op',vigilancia:'vi',normal:'no'};
+  var D=null,vis={},filt={q:'',sector:'',estado:''},sort=null,open={};
+  var $=function(i){return document.getElementById(i)};
+  var fmt=function(v,d){return v==null?'–':v.toLocaleString('es-ES',{minimumFractionDigits:d,maximumFractionDigits:d})};
+  var pct=function(v){return v==null?'<span class="mu">–</span>':'<span class="'+(v>0?'up':v<0?'dn':'mu')+'">'+(v>0?'+':'')+fmt(v,1)+' %</span>'};
+  function spark(a){
+    var mn=Math.min.apply(null,a),mx=Math.max.apply(null,a),w=104,h=30,r=mx-mn||1;
+    var pts=a.map(function(v,i){return (i/(a.length-1)*w).toFixed(1)+','+(h-2-(v-mn)/r*(h-4)).toFixed(1)});
+    var c=a[a.length-1]>=a[0]?'#22c55e':'#ef4444';
+    return '<svg class="sp" viewBox="0 0 '+w+' '+h+'" aria-hidden="true"><polygon points="0,'+h+' '+pts.join(' ')+' '+w+','+h+'" fill="'+c+'" opacity=".12"/><polyline points="'+pts.join(' ')+'" fill="none" stroke="'+c+'" stroke-width="1.6" stroke-linejoin="round"/></svg>';
+  }
+  function dots(e){var s=e.senales,k=Object.keys(s);return '<span class="ib__dots" title="'+e.puntos+' de 5 señales de giro">'+k.map(function(x){return '<i class="'+(s[x]?'on':'')+'"></i>'}).join('')+'</span> <span class="mu">'+e.puntos+'/5</span>'}
+  function cell(c,e){
+    switch(c.k){
+      case 'nombre':return '<div class="ib__name"><b>'+e.nombre+'</b><span>'+e.ticker+'</span></div>';
+      case 'spark':return spark(e.spark);
+      case 'precio':return fmt(e.precio,2);
+      case 'rsi':return fmt(e.rsi,0);
+      case 'puntos':return dots(e);
+      case 'estado':return '<span class="ib__badge '+CLS[e.estado]+'">'+LAB[e.estado]+'</span>';
+      case 'sector':return '<span class="mu">'+e.sector+'</span>';
+      default:return c.p?pct(e[c.k]):e[c.k];
+    }
+  }
+  function detail(e){
+    var C=D.criterios,b=e.base,s=e.senales;
+    var li=function(ok,t){return '<li class="'+(ok?'ok':'')+'">'+t+'</li>'};
+    return '<div class="ib__det"><div><h4>1 · Caída larga y profunda (las 4)</h4><ul>'+
+      li(b.caida,'Cae '+fmt(e.caida,1)+' % desde máximos (umbral '+C.caidaMinima+' %)')+
+      li(b.duracion,'Máximo hace '+e.sesionesMax+' sesiones (umbral '+C.sesionesCaida+')')+
+      li(b.bajoSma200,'Precio bajo la media de 200 sesiones ('+fmt(e.sma200,2)+' €)')+
+      li(b.sma50BajoSma200,'Media de 50 bajo la de 200 ('+fmt(e.sma50,2)+' €)')+'</ul></div>'+
+      '<div><h4>2 · Señales de giro ('+e.puntos+' de 5, mín. '+C.puntosOportunidad+')</h4><ul>'+
+      li(s.minimoReciente,'Mínimo hace '+e.sesionesMin+' sesiones (entre '+C.minRecienteMin+' y '+C.minRecienteMax+')')+
+      li(s.rebote,'Rebote de '+fmt(e.rebote,1)+' % desde el mínimo (umbral '+C.reboteMinimo+' %)')+
+      li(s.sobreSma20,'Precio sobre la media de 20 y media de 50 sin caer')+
+      li(s.rsi,'RSI '+fmt(e.rsi,0)+' sobre '+C.rsiGiro+', tras haber bajado de '+C.rsiSobreventa+' en 60 sesiones')+
+      li(s.minimosCrecientes,'Mínimos crecientes: no ha vuelto a tocar el suelo')+'</ul></div></div>';
+  }
+  function rows(){
+    var q=filt.q.toLowerCase();
+    var r=D.empresas.filter(function(e){
+      return (!q||(e.nombre+' '+e.ticker).toLowerCase().indexOf(q)>-1)&&(!filt.sector||e.sector===filt.sector)&&(!filt.estado||e.estado===filt.estado);
+    });
+    if(sort){
+      var k=sort.k,d=sort.d;
+      r=r.slice().sort(function(a,b){
+        var x=k==='estado'?ORD[a.estado]:a[k],y=k==='estado'?ORD[b.estado]:b[k];
+        if(x==null)return 1;if(y==null)return -1;
+        return (typeof x==='string'?x.localeCompare(y,'es'):x-y)*d;
+      });
+    }
+    return r;
+  }
+  function render(){
+    var cs=COLS.filter(function(c){return vis[c.k]});
+    $('ibHead').innerHTML=cs.map(function(c){
+      var ar=sort&&sort.k===c.k?(sort.d>0?'▲':'▼'):(c.s?'↕':'');
+      return '<th class="'+(c.s?'s ':'')+(c.n?'num':'')+'" data-k="'+c.k+'" scope="col">'+c.t+(ar?'<span class="ar">'+ar+'</span>':'')+'</th>';
+    }).join('');
+    $('ibFilt').innerHTML=cs.map(function(c){
+      if(c.k==='nombre')return '<th><input type="search" id="fQ" placeholder="Buscar…" value="'+filt.q.replace(/"/g,'')+'" aria-label="Buscar empresa"></th>';
+      if(c.k==='sector')return '<th><select id="fS" aria-label="Filtrar por sector"><option value="">Sector</option>'+sectores().map(function(s){return '<option'+(s===filt.sector?' selected':'')+'>'+s+'</option>'}).join('')+'</select></th>';
+      if(c.k==='estado')return '<th><select id="fE" aria-label="Filtrar por estado"><option value="">Estado</option>'+['oportunidad','vigilancia','normal'].map(function(s){return '<option value="'+s+'"'+(s===filt.estado?' selected':'')+'>'+LAB[s]+'</option>'}).join('')+'</select></th>';
+      return '<th></th>';
+    }).join('');
+    var r=rows(),n=+$('ibN').value,html='';
+    r.slice(0,n).forEach(function(e){
+      html+='<tr class="r '+CLS[e.estado]+'" data-t="'+e.ticker+'">'+cs.map(function(c){return '<td class="'+(c.n?'num':'')+'">'+cell(c,e)+'</td>'}).join('')+'</tr>';
+      if(open[e.ticker])html+='<tr class="d"><td colspan="'+cs.length+'">'+detail(e)+'</td></tr>';
+    });
+    $('ibBody').innerHTML=html||'<tr><td class="ib__empty" colspan="'+cs.length+'">Ninguna empresa coincide con los filtros.</td></tr>';
+    $('ibFoot').textContent='Mostrando '+Math.min(n,r.length)+' de '+r.length+' empresas ('+D.empresas.length+' en total).';
+    $('ibColBtn').textContent='Columnas ('+cs.length+'/'+COLS.length+')';
+    document.querySelectorAll('.ib__kpi[data-estado]').forEach(function(b){b.setAttribute('aria-pressed',filt.estado===b.dataset.estado)});
+  }
+  function sectores(){var s={};D.empresas.forEach(function(e){s[e.sector]=1});return Object.keys(s).sort()}
+  function init(d){
+    D=d;
+    $('ibFecha').textContent=d.lastUpdated;
+    var i=d.indice;
+    if(i){$('kIdx').textContent=fmt(i.precio,0);$('kIdxS').innerHTML=pct(i.d1)+' hoy · '+pct(i.ytd)+' en el año'}
+    $('kOp').textContent=d.resumen.oportunidad;$('kVi').textContent=d.resumen.vigilancia;$('kNo').textContent=d.resumen.normal;
+    COLS.forEach(function(c){vis[c.k]=true});
+    $('ibColMenu').innerHTML=COLS.map(function(c){return '<label><input type="checkbox" data-c="'+c.k+'" checked'+(c.k==='nombre'?' disabled':'')+'> '+c.t+'</label>'}).join('');
+    render();
+  }
+  document.addEventListener('click',function(ev){
+    var t=ev.target;
+    var th=t.closest&&t.closest('#ibHead th.s');
+    if(th){var k=th.dataset.k;sort=sort&&sort.k===k?(sort.d>0?{k:k,d:-1}:null):{k:k,d:1};render();return}
+    var kp=t.closest&&t.closest('.ib__kpi[data-estado]');
+    if(kp){filt.estado=filt.estado===kp.dataset.estado?'':kp.dataset.estado;render();return}
+    var tr=t.closest&&t.closest('#ibBody tr.r');
+    if(tr){var k2=tr.dataset.t;open[k2]=!open[k2];render();return}
+    if(t.id==='ibColBtn'){var m=$('ibColMenu');m.hidden=!m.hidden;t.setAttribute('aria-expanded',!m.hidden);return}
+    if(t.id==='ibClear'){filt={q:'',sector:'',estado:''};sort=null;open={};COLS.forEach(function(c){vis[c.k]=true});document.querySelectorAll('#ibColMenu input').forEach(function(i){i.checked=true});render();return}
+    if(!t.closest||!t.closest('.ib__cols'))$('ibColMenu').hidden=true;
+  });
+  document.addEventListener('input',function(ev){
+    var t=ev.target;
+    if(t.id==='fQ'){filt.q=t.value;var p=t.selectionStart;render();var n=$('fQ');n.focus();n.setSelectionRange(p,p)}
+    else if(t.id==='fS'){filt.sector=t.value;render()}
+    else if(t.id==='fE'){filt.estado=t.value;render()}
+    else if(t.id==='ibN'){render()}
+    else if(t.dataset&&t.dataset.c){vis[t.dataset.c]=t.checked;render()}
+  });
+  fetch('data.json',{cache:'no-store'}).then(function(r){return r.json()}).then(init).catch(function(){
+    $('ibBody').innerHTML='<tr><td class="ib__empty" colspan="14">No se han podido cargar los datos. Inténtalo de nuevo en unos minutos.</td></tr>';
+  });
+})();
+</script>
+
+<section id="documentacion" class="pdoc pdoc--standalone" aria-labelledby="documentacion-titulo">
+  <h2 id="documentacion-titulo" class="pdoc__title">Sobre este proyecto: cómo está hecho</h2>
+  <div class="pdoc__body">
+    <p>El <strong>Radar de oportunidades del IBEX 35</strong> es un cribado automático de las 35 empresas del índice. No pretende decir qué comprar: busca las que han caído mucho y durante mucho tiempo y que empiezan a dar señales de dejar de caer, que es donde un inversor a medio plazo suele mirar con más atención.</p>
+    <h3>Cómo se actualiza</h3>
+    <p>Un flujo de trabajo de GitHub Actions se ejecuta cada día hábil tras el cierre de la bolsa de Madrid. Descarga los cierres de los dos últimos años (Yahoo Finance, ajustados por dividendos y splits), calcula los indicadores con un script en Python y guarda el resultado en un fichero <code>data.json</code>. No interviene ninguna IA y el panel se limita a leer ese fichero.</p>
+    <h3>Cuándo una empresa pasa a «en vigilancia»</h3>
+    <p>Tiene que cumplir las cuatro condiciones a la vez:</p>
+    <ul>
+      <li>Cotiza al menos un <strong>25 %</strong> por debajo de su máximo de 52 semanas.</li>
+      <li>Ese máximo se marcó hace al menos <strong>125 sesiones</strong> (unos seis meses), de modo que la caída no es un susto de un par de semanas.</li>
+      <li>El precio está por debajo de su media de 200 sesiones.</li>
+      <li>La media de 50 sesiones está por debajo de la de 200.</li>
+    </ul>
+    <h3>Cuándo se marca como «posible oportunidad»</h3>
+    <p>Estando en vigilancia, tiene que cumplir además al menos <strong>4 de estas 5 señales de giro</strong>, y la primera es obligatoria:</p>
+    <ol>
+      <li>El mínimo de las últimas 120 sesiones se produjo entre 15 y 90 sesiones atrás: ni sigue cayendo ni el rebote llega tarde.</li>
+      <li>Ha rebotado al menos un <strong>8 %</strong> desde ese mínimo.</li>
+      <li>El precio está sobre su media de 20 sesiones y la media de 50 ha dejado de caer.</li>
+      <li>El RSI (14) vuelve a estar por encima de 45 después de haber bajado de 35 en las últimas 60 sesiones.</li>
+      <li>Mínimos crecientes: en las últimas 15 sesiones no ha vuelto a tocar el suelo.</li>
+    </ol>
+    <p>Los umbrales viven en un bloque de configuración del script (<code>scripts/ibex35/build.py</code>) y se pueden ajustar sin tocar nada más. Cada fila se despliega para ver qué criterios cumple y cuáles no.</p>
+    <h3>Límites</h3>
+    <ul>
+      <li>Solo mira precio y volumen. Una empresa puede haber caído por un motivo de fondo (resultados, deuda, regulación) y seguir cayendo. Un buen cribado técnico no sustituye al análisis de la compañía.</li>
+      <li>Yahoo Finance es una fuente no oficial: puede retrasarse o fallar. Si faltan demasiadas empresas, el flujo no publica nada y se conserva el último dato bueno.</li>
+      <li>La composición del IBEX 35 cambia dos veces al año; la lista de empresas se revisa a mano.</li>
+      <li>Contenido informativo y educativo. No constituye asesoramiento financiero ni una recomendación de compra o venta.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div>
+      <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+      <p class="sg-footer__about">Datos e inteligencia artificial responsable para la gestión pública, las organizaciones y los ciudadanos.</p>
+    </div>
+    <nav class="sg-footer__nav" aria-label="Pie de página">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+      <a href="/buscar/">Buscar</a>
+      <a href="/mapa">Mapa web</a>
+    </nav>
+    <div class="sg-footer__social">
+      <a href="https://www.linkedin.com/in/emirodgar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      <a href="mailto:hola@emirodgar.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="sg-copyright">© 2026 <a href="/">Emirodgar</a> · Emilio Rodríguez García</div>
+</footer>
+<script src="/assets/js/theme.js?v=20261028" defer></script>
+</body>
+</html>

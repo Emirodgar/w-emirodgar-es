@@ -16,6 +16,7 @@ Paneles públicos que reúnen en un solo sitio datos que normalmente están disp
 
 <ul class="hub-grid">
 <li><a class="hub-card" href="https://emirodgar.es/macrodata-espana/"><strong>MacroData España</strong><span>IPC, prima de riesgo, tipos del BCE, Euríbor, PIB y paro, con un termómetro propio de riesgo de recesión.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/macrodata-espana/">Cómo está hecho →</a></p></li>
+<li><a class="hub-card" href="https://emirodgar.es/ibex35/"><strong>IBEX 35: radar de oportunidades</strong><span>Evolución diaria de las 35 empresas del índice, con aviso de las que llevan meses cayendo y empiezan a recuperarse.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/ibex35/">Cómo está hecho →</a></p></li>
 <li><a class="hub-card" href="https://emirodgar.es/simulador-hipotecas-espana/"><strong>Simulador de hipotecas</strong><span>Calcula tu cuota, compara bancos y mira cómo cambiaría si suben o bajan los tipos.</span></a><p class="hub-card__meta"><a href="https://emirodgar.es/simulador-hipotecas-espana/">Cómo está hecho →</a></p></li>
 </ul>
 

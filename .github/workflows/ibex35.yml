@@ -1,0 +1,59 @@
+name: IBEX 35 diario
+
+on:
+  schedule:
+    # La bolsa española cierra a las 17:30 (subasta hasta las 17:35) hora de
+    # Madrid. GitHub programa en UTC y descarta o retrasa disparos, así que hay
+    # varios entre las 17:20 y las 21:20 UTC de lunes a viernes: el primero que
+    # llegue tras el cierre genera la sesión y los demás terminan al instante
+    # porque el script no repite una sesión que ya existe. Minuto :20 (no en
+    # punto) para evitar la hora de mayor carga.
+    - cron: '20 17-21 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      forzar:
+        description: 'Regenerar la última sesión aunque ya exista'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ibex35
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias
+        run: pip install yfinance pandas
+
+      - name: Calcular cotizaciones e indicadores
+        id: build
+        env:
+          FORZAR: ${{ inputs.forzar && '1' || '' }}
+        run: python3 scripts/ibex35/build.py
+
+      - name: Commit y push de lo que haya cambiado
+        if: steps.build.outputs.ficheros != ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add ${{ steps.build.outputs.ficheros }}
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git commit -m "Actualiza IBEX 35 (${{ steps.build.outputs.periodo }})"
+          git pull --rebase
+          git push

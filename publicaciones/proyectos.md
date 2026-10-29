@@ -22,6 +22,7 @@ No son productos finales ni soluciones cerradas, sino pruebas de concepto que me
 |-----------------|--------------------------------------|----------|
 | Faro | Monitorizar [problemas de salud mental](https://emirodgar.es/muertes-salud-mental) | [Enlace](https://emirodgar.es/faro-monitorizacion-salud-mental/) |
 | Audiencias | Medición de audiencias digitales para medios | [Enlace](https://emirodgar.es/medicion-audiencias-digitales/) |
+| IBEX 35, radar de oportunidades | Panel diario de las empresas del IBEX 35 que marca las que caen desde hace meses y empiezan a recuperarse | [Enlace](https://emirodgar.es/ibex35/) |
 | MacroData España | Panel público de indicadores macroeconómicos (IPC, prima de riesgo, tipos BCE/Euríbor, PIB) | [Enlace](https://emirodgar.es/macrodata-espana/) |
 | Panel Económico CyL | Presupuesto, subvenciones, catálogo de ayudas y mercado laboral de Castilla y León, con detalle por provincia | [Enlace](https://emirodgar.es/panel-economico-cyl/) |
 | Radar de Empleo Público CyL | Convocatorias, plazas ofertadas y plantilla de la Junta de Castilla y León, con detalle por provincia | [Enlace](https://emirodgar.es/radar-empleo-publico-cyl/) |

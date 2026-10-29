@@ -16,6 +16,7 @@ layout: null
   {%- endif -%}
 {%- endfor %},
 {"t": "MacroData España", "u": "/macrodata-espana/", "d": "Panel de indicadores económicos: IPC, prima de riesgo, tipos del BCE, Euríbor, PIB, paro y riesgo de recesión.", "c": "Dashboard", "x": ""},
+{"t": "IBEX 35, radar de oportunidades", "u": "/ibex35/", "d": "Cotización diaria de las 35 empresas del IBEX y aviso de las que llevan meses cayendo y empiezan a recuperarse.", "c": "Dashboard", "x": ""},
 {"t": "Simulador de hipotecas en España", "u": "/simulador-hipotecas-espana/", "d": "Calculadora de cuota, comparativa de bancos y escenarios de tipos.", "c": "Dashboard", "x": ""},
 {"t": "Catálogo de ayudas sociales en España", "u": "/catalogo-ayudas-espana/", "d": "Ingreso Mínimo Vital, desempleo, vivienda, energía y más, con requisitos y enlaces oficiales.", "c": "Dashboard", "x": ""},
 {"t": "Ayudas de Castilla y León y Salamanca", "u": "/ayudas-castilla-leon-salamanca/", "d": "Renta Garantizada de Ciudadanía, natalidad, vivienda y ayudas municipales, con calculadora.", "c": "Dashboard", "x": ""},
