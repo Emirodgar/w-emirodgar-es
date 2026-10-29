@@ -12,8 +12,10 @@
     <meta property="og:title" content="Simulador de Hipotecas en España con Predicción | Calculadora y Comparativa Bancaria">
     <meta property="og:description" content="Calculadora de hipotecas con datos del mercado hipotecario español, comparativa de bancos y una predicción de cómo cambiaría tu cuota si suben o bajan los tipos, con probabilidad estimada a partir del termómetro de riesgo de recesión.">
     <meta property="og:url" content="https://emirodgar.es/simulador-hipotecas-espana/">
-    <meta property="og:image" content="https://emirodgar.es/assets/images/emirodgar.jpg">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://emirodgar.es/assets/images/og-simulador-hipotecas-espana.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -116,13 +118,6 @@
                 </div>
             </div>
 
-            <!-- Header Action Controls -->
-            <div class="flex items-center gap-2 self-end sm:self-auto w-full sm:w-auto">
-                <button id="openJsonBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg border border-slate-700 transition">
-                    <i class="fa-solid fa-code text-brand-500"></i>
-                    <span>Editar / Importar JSON</span>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -552,7 +547,7 @@
         }
 
         function setupEventListeners() {
-            document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
+            document.getElementById('openJsonBtn')?.addEventListener('click', openJsonModal);
             document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
             document.getElementById('cancelJsonBtn').addEventListener('click', closeJsonModal);
             document.getElementById('saveJsonBtn').addEventListener('click', saveJsonFromEditor);

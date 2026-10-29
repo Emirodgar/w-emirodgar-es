@@ -12,8 +12,10 @@
     <meta property="og:title" content="Lo Más Leído en Wikipedia | Resumen Semanal del Top 25 Report">
     <meta property="og:description" content="Cada semana, un resumen en español de los 25 artículos más leídos de Wikipedia (Top 25 Report): qué temas generan más interés, por qué, y cómo se reparten por categoría.">
     <meta property="og:url" content="https://emirodgar.es/lo-mas-leido-wikipedia/">
-    <meta property="og:image" content="https://emirodgar.es/assets/images/emirodgar.jpg">
-    <meta name="twitter:card" content="summary">
+    <meta property="og:image" content="https://emirodgar.es/assets/images/og-lo-mas-leido-wikipedia.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -116,13 +118,6 @@
                 </div>
             </div>
 
-            <!-- Header Action Controls -->
-            <div class="flex items-center gap-2 self-end sm:self-auto w-full sm:w-auto">
-                <button id="openJsonBtn" class="w-full sm:w-auto flex items-center justify-center gap-2 px-3.5 py-2 bg-slate-800 hover:bg-slate-700 text-slate-200 text-sm font-medium rounded-lg border border-slate-700 transition">
-                    <i class="fa-solid fa-code text-brand-500"></i>
-                    <span>Editar / Importar JSON</span>
-                </button>
-            </div>
         </div>
     </header>
 
@@ -550,7 +545,7 @@
         }
 
         function setupEventListeners() {
-            document.getElementById('openJsonBtn').addEventListener('click', openJsonModal);
+            document.getElementById('openJsonBtn')?.addEventListener('click', openJsonModal);
             document.getElementById('closeJsonBtn').addEventListener('click', closeJsonModal);
             document.getElementById('cancelJsonBtn').addEventListener('click', closeJsonModal);
             document.getElementById('saveJsonBtn').addEventListener('click', saveJsonFromEditor);
