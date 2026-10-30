@@ -980,6 +980,48 @@
         "url": "https://theobjective.com/espana/2026-10-29/vox-querella-oscar-puente-delitos-homicidios-lesiones/"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-30",
+      "edicion": "2026-10-30",
+      "titulo": "Adif consintió prorrogar el viejo sistema LZB por un ahorro de 37 millones",
+      "categoria": "Economía",
+      "descripcion": "El gestor de las vías contrató en 2021 con un gran descuento la migración a ERTMS del 'antiguo' sistema de seguridad LZB, pero decidió seguir con el sistema antiguo con los plazos de entrega vencidos un mes después del accidente de Adamuz.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Adif consintió prorrogar el viejo sistema LZB por un ahorro de 37 millones",
+        "url": "https://www.elmundo.es/economia/2026/10/29/6ae3b9b721efa0a84e8b45da.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-30",
+      "edicion": "2026-10-30",
+      "titulo": "La inflación se mantiene en el 4,9% en octubre",
+      "categoria": "Economía",
+      "descripcion": "El Índice de Precios de Consumo (IPC) mantuvo en octubre su crecimiento interanual en el 4,9%, encadenando tres meses por encima del 4%, pese a la caída del precio de los carburantes.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La inflación no se mueve del 4,9% en octubre pese a la caída del precio de los carburantes",
+        "url": "https://www.elmundo.es/economia/2026/10/30/6ae44e87fc6c8392178b4587.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-30",
+      "edicion": "2026-10-30",
+      "titulo": "Binance sufre un robo de 6.300 millones de dólares",
+      "categoria": "Ciencia y Tecnología",
+      "descripcion": "La mayor plataforma de criptomonedas del mundo, Binance, ha sido víctima de un ciberataque con un impacto estimado de 6.300 millones de dólares.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Binance, la mayor plataforma de criptomonedas del mundo, sufre un robo de 6.300 millones de dólares",
+        "url": "https://www.elmundo.es/economia/2026/10/30/6ae43e2221efa0123f8b4573.html"
+      },
+      "destacado": false
     }
   ]
 }

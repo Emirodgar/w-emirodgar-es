@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-29",
-  "generado_en": "2026-10-29T11:23:55+00:00",
-  "titular": "Tragedia ferroviaria en Urda: 69 muertos, huelga de maquinistas y críticas al Gobierno por la seguridad",
+  "fecha": "2026-10-30",
+  "generado_en": "2026-10-30T11:16:16+00:00",
+  "titular": "La tragedia ferroviaria de Urda domina la agenda, con el ministro Puente bajo escrutinio y nuevas revelaciones sobre la seguridad de Adif",
   "por_medio": {
-    "El Mundo": 34,
-    "The Objective": 192
+    "El Mundo": 28,
+    "The Objective": 178
   },
   "temas": [
     {
-      "tema": "Accidente ferroviario en Urda y seguridad",
+      "tema": "Tragedia ferroviaria de Urda y responsabilidades",
+      "categoria": "Sociedad",
+      "descripcion": "El accidente de tren en Urda sigue siendo el tema central, con el ministro Óscar Puente bajo presión y el señalamiento a un trabajador de Adif, mientras se investigan fallos en el sistema de seguridad y la inversión en infraestructuras."
+    },
+    {
+      "tema": "Situación económica de España",
+      "categoria": "Economía",
+      "descripcion": "La inflación se mantiene en el 4,9% en octubre, el PIB crece un 0,6% en el tercer trimestre y los bancos del Ibex 35 registran importantes beneficios."
+    },
+    {
+      "tema": "Ciberataque a Binance",
+      "categoria": "Ciencia y Tecnología",
+      "descripcion": "La plataforma de criptomonedas Binance ha sido víctima de un robo de 6.300 millones de dólares, con investigaciones preliminares que apuntan a un compromiso de un ordenador portátil de un ingeniero."
+    },
+    {
+      "tema": "Disturbios y saqueos en Barcelona",
       "categoria": "Sucesos",
-      "descripcion": "Un choque entre un AVE y un Iryo en Urda, Toledo, ha dejado 69 muertos y ha puesto en cuestión la seguridad ferroviaria, con alertas previas sobre fallos y críticas a la gestión gubernamental."
-    },
-    {
-      "tema": "Impacto político y social del accidente",
-      "categoria": "Política",
-      "descripcion": "La tragedia de Urda ha afectado la precampaña electoral, con el ministro de Transportes, Óscar Puente, bajo escrutinio y una querella de Vox. También ha generado protestas y críticas al Gobierno."
-    },
-    {
-      "tema": "Huelga de maquinistas y afectaciones en el transporte",
-      "categoria": "Economía",
-      "descripcion": "Los maquinistas mantienen una huelga en defensa de la seguridad ferroviaria, causando la suspensión de líneas de Cercanías Madrid y retrasos, mientras el accidente de Urda impacta en la confianza de los pasajeros."
-    },
-    {
-      "tema": "Renuncia de Christine Lagarde del BCE",
-      "categoria": "Economía",
-      "descripcion": "Christine Lagarde ha anunciado su dimisión como presidenta del Banco Central Europeo, efectiva el 7 de febrero de 2027."
+      "descripcion": "Los Mossos d'Esquadra han detenido a un menor de 17 años por su presunta vinculación con la difusión y el aliento de los disturbios y saqueos de Blocus en Barcelona."
     }
   ]
 }
