@@ -1,69 +1,126 @@
 {
-  "lastUpdated": "08 de Octubre, 2026",
-  "resumenEjecutivo": "El tipo de interés medio de las hipotecas constituidas sobre viviendas sube al 3,01% en julio de 2026 (último dato publicado por el INE), por encima del 3% por primera vez en lo que va de año, con las hipotecas a tipo fijo (3,03%) algo más caras de media que las variables (2,97%). El 62,3% de las hipotecas se firman a tipo fijo, aunque la variable se mantiene en torno al 38% tras haber ganado peso durante 2026. El importe medio concedido es de 180.785 €, un 10,9% más que hace un año, mientras que en julio se constituyeron 43.372 hipotecas sobre viviendas, un 3,5% menos que en el mismo mes de 2025: menos operaciones, pero más grandes y más caras. Entre los bancos comparados, Sabadell (2,75%) y BBVA (2,95%) ofrecen hoy el TIN fijo bonificado más bajo, y en variable el diferencial más bajo es Euríbor + 0,50% (CaixaBank, Sabadell, Bankinter). El Euríbor 12 meses, que marca el tipo real de toda hipoteca variable, cerró septiembre con una media del 3,25%; y según el termómetro de riesgo de recesión de MacroData España, la inflación —no el crecimiento ni el empleo— es hoy el principal factor que empuja hacia una subida o un mantenimiento de los tipos, más que hacia una bajada.",
-  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion del tipo medio hipotecario, febrero-julio 2026\" style=\"width:100%;height:100%\"><polygon points=\"12,73.3 71.2,89.6 130.4,65.2 189.6,32.6 248.8,40.7 308,20.4 308,100 12,100\" fill=\"rgba(5,150,105,0.08)\"/><polyline points=\"12,73.3 71.2,89.6 130.4,65.2 189.6,32.6 248.8,40.7 308,20.4\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"73.3\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"71.2\" cy=\"89.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"130.4\" cy=\"65.2\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"189.6\" cy=\"32.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"248.8\" cy=\"40.7\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"308\" cy=\"20.4\" r=\"3\" fill=\"#059669\"/></svg>",
+  "lastUpdated": "31 de Octubre, 2026",
+  "resumenEjecutivo": "El tipo de interés medio de las hipotecas constituidas sobre viviendas sube al 3,08% en agosto de 2026 (último dato publicado por el INE), el valor más alto de lo que va de año, con las hipotecas a tipo fijo (3,16%) más caras de media que las variables (2,95%). El 64,1% de las hipotecas se firmó a tipo fijo, frente a un 35,9% a variable, de modo que el fijo recupera peso tras el mínimo de mayo (60,9%). El importe medio concedido es de 181.285 €, un 7,7% más que hace un año, mientras que en agosto se constituyeron 33.841 hipotecas sobre viviendas, un 2,3% más que en el mismo mes de 2025 pese a la caída estacional del 22,0% respecto a julio. Entre los bancos comparados, Sabadell (2,75%) y BBVA (2,95%) ofrecen el TIN fijo bonificado más bajo, y en variable el diferencial más bajo es Euríbor + 0,50% (CaixaBank, Sabadell, Bankinter). El Euríbor 12 meses, que marca el tipo real de toda hipoteca variable, cerró septiembre con una media del 3,25%; y según el termómetro de riesgo de recesión de MacroData España, la inflación —no el crecimiento ni el empleo— es hoy el principal factor que empuja hacia una subida o un mantenimiento de los tipos, más que hacia una bajada.",
+  "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion del tipo medio hipotecario, marzo-agosto 2026\" style=\"width:100%;height:100%\"><polygon points=\"12,89.6 71.2,72.3 130.4,49.2 189.6,55.0 248.8,40.6 308,20.4 308,100 12,100\" fill=\"rgba(5,150,105,0.08)\"/><polyline points=\"12,89.6 71.2,72.3 130.4,49.2 189.6,55.0 248.8,40.6 308,20.4\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"89.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"71.2\" cy=\"72.3\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"130.4\" cy=\"49.2\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"189.6\" cy=\"55.0\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"248.8\" cy=\"40.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"308\" cy=\"20.4\" r=\"3\" fill=\"#059669\"/></svg>",
   "sources": {
     "tipoMedio": "INE, Estadística de Hipotecas (H) — tipo de interés medio de las hipotecas constituidas sobre viviendas. Nota de prensa mensual (ine.es/dyngs/Prensa/H[MMAA].htm), con ~2 meses de desfase respecto al mes en curso",
     "importeMedio": "INE, Estadística de Hipotecas (H) — importe medio de las hipotecas constituidas sobre viviendas",
     "numHipotecas": "INE, Estadística de Hipotecas (H) — número de hipotecas constituidas sobre viviendas y su variación interanual",
     "pctFijo": "INE, Estadística de Hipotecas (H) — reparto de las hipotecas constituidas entre tipo fijo y variable; el INE no publica un tercer bucket de \"tipo mixto\" en su nota de prensa mensual, por lo que este panel solo distingue fijo/variable",
-    "bancos": "Comparadores (HelpMyCash, octubre de 2026) para CaixaBank, Sabadell, BBVA y Bankinter, contrastados con los datos de las webs oficiales de las entidades de la revisión anterior (17 de septiembre de 2026); las webs de BBVA y Sabadell bloquean la consulta automática. Santander conserva los datos del 17 de septiembre de 2026 (no se ha podido reconfirmar su oferta fija). Perfil estándar con bonificaciones. Las TAE incluyen el coste de los productos vinculados exigidos para la bonificación, por eso pueden ser sensiblemente más altas que el TIN",
+    "bancos": "Comparadores (HelpMyCash y OCU, octubre de 2026); el TIN fijo de Sabadell (2,75%) se reconfirmó el 31 de octubre de 2026. CaixaBank, BBVA y Bankinter, contrastados con los datos de las webs oficiales de las entidades de la revisión anterior (17 de septiembre de 2026); las webs de BBVA y Sabadell bloquean la consulta automática. Santander conserva los datos del 17 de septiembre de 2026 (no se ha podido reconfirmar su oferta fija). Perfil estándar con bonificaciones. Las TAE incluyen el coste de los productos vinculados exigidos para la bonificación, por eso pueden ser sensiblemente más altas que el TIN",
     "euribor": "Euríbor 12 meses y termómetro de riesgo de recesión, leídos en vivo del panel MacroData España (emirodgar.es/macrodata-espana/), no se guardan en este data.json"
   },
   "indicators": [
     {
       "id": "tipoMedio",
       "title": "Tipo Medio Hipotecario",
-      "currentValue": 3.01,
+      "currentValue": 3.08,
       "unit": "%",
-      "change": 0.05,
-      "changeLabel": "vs junio 2026 (2,96%)",
-      "description": "Tipo de interés medio de las hipotecas constituidas sobre viviendas (INE, julio 2026)",
+      "change": 0.07,
+      "changeLabel": "vs julio 2026 (3,01%)",
+      "description": "Tipo de interés medio de las hipotecas constituidas sobre viviendas (INE, agosto 2026)",
       "icon": "fa-percent",
       "color": "emerald"
     },
     {
       "id": "importeMedio",
       "title": "Importe Medio Concedido",
-      "currentValue": 180785,
+      "currentValue": 181285,
       "unit": "€",
-      "change": 2420,
-      "changeLabel": "vs junio 2026 (178.365 €); +10,9% interanual",
-      "description": "Importe medio de las hipotecas constituidas sobre viviendas (INE, julio 2026)",
+      "change": 500,
+      "changeLabel": "vs julio 2026 (180.785 €); +7,7% interanual",
+      "description": "Importe medio de las hipotecas constituidas sobre viviendas (INE, agosto 2026)",
       "icon": "fa-sack-dollar",
       "color": "blue"
     },
     {
       "id": "numHipotecas",
       "title": "Hipotecas Constituidas",
-      "currentValue": 43372,
+      "currentValue": 33841,
       "unit": "hipotecas/mes",
-      "change": -3.5,
-      "changeLabel": "-3,5% interanual (julio 2025)",
-      "description": "Número de hipotecas constituidas sobre viviendas en julio de 2026 (INE)",
+      "change": 2.3,
+      "changeLabel": "+2,3% interanual (agosto 2025); -22,0% vs julio",
+      "description": "Número de hipotecas constituidas sobre viviendas en agosto de 2026 (INE)",
       "icon": "fa-file-signature",
       "color": "violet"
     },
     {
       "id": "pctFijo",
       "title": "% a Tipo Fijo",
-      "currentValue": 62.3,
+      "currentValue": 64.1,
       "unit": "%",
-      "change": 0.6,
-      "changeLabel": "vs junio 2026 (61,7%)",
-      "description": "Porcentaje de hipotecas constituidas a tipo fijo sobre el total (INE, julio 2026); tipo medio fijo 3,03% vs. variable 2,97%",
+      "change": 1.8,
+      "changeLabel": "vs julio 2026 (62,3%)",
+      "description": "Porcentaje de hipotecas constituidas a tipo fijo sobre el total (INE, agosto 2026); tipo medio fijo 3,16% vs. variable 2,95%",
       "icon": "fa-lock",
       "color": "amber"
     }
   ],
   "historicalData": [
-    { "month": "Ene 2026", "tipoMedio": 2.87, "importeMedio": 165677, "numHipotecas": 40273, "pctFijo": 66.7, "pctVariable": 33.3 },
-    { "month": "Feb 2026", "tipoMedio": 2.88, "importeMedio": 173280, "numHipotecas": 45563, "pctFijo": 64.8, "pctVariable": 35.2 },
-    { "month": "Mar 2026", "tipoMedio": 2.84, "importeMedio": 174132, "numHipotecas": 46661, "pctFijo": 63.8, "pctVariable": 36.2 },
-    { "month": "Abr 2026", "tipoMedio": 2.9, "importeMedio": 173331, "numHipotecas": 40010, "pctFijo": 62.9, "pctVariable": 37.1 },
-    { "month": "May 2026", "tipoMedio": 2.98, "importeMedio": 174866, "numHipotecas": 42213, "pctFijo": 60.9, "pctVariable": 39.1 },
-    { "month": "Jun 2026", "tipoMedio": 2.96, "importeMedio": 178365, "numHipotecas": 45907, "pctFijo": 61.7, "pctVariable": 38.3 },
-    { "month": "Jul 2026", "tipoMedio": 3.01, "importeMedio": 180785, "numHipotecas": 43372, "pctFijo": 62.3, "pctVariable": 37.7 }
+    {
+      "month": "Ene 2026",
+      "tipoMedio": 2.87,
+      "importeMedio": 165677,
+      "numHipotecas": 40273,
+      "pctFijo": 66.7,
+      "pctVariable": 33.3
+    },
+    {
+      "month": "Feb 2026",
+      "tipoMedio": 2.88,
+      "importeMedio": 173280,
+      "numHipotecas": 45563,
+      "pctFijo": 64.8,
+      "pctVariable": 35.2
+    },
+    {
+      "month": "Mar 2026",
+      "tipoMedio": 2.84,
+      "importeMedio": 174132,
+      "numHipotecas": 46661,
+      "pctFijo": 63.8,
+      "pctVariable": 36.2
+    },
+    {
+      "month": "Abr 2026",
+      "tipoMedio": 2.9,
+      "importeMedio": 173331,
+      "numHipotecas": 40010,
+      "pctFijo": 62.9,
+      "pctVariable": 37.1
+    },
+    {
+      "month": "May 2026",
+      "tipoMedio": 2.98,
+      "importeMedio": 174866,
+      "numHipotecas": 42213,
+      "pctFijo": 60.9,
+      "pctVariable": 39.1
+    },
+    {
+      "month": "Jun 2026",
+      "tipoMedio": 2.96,
+      "importeMedio": 178365,
+      "numHipotecas": 45907,
+      "pctFijo": 61.7,
+      "pctVariable": 38.3
+    },
+    {
+      "month": "Jul 2026",
+      "tipoMedio": 3.01,
+      "importeMedio": 180785,
+      "numHipotecas": 43372,
+      "pctFijo": 62.3,
+      "pctVariable": 37.7
+    },
+    {
+      "month": "Ago 2026",
+      "tipoMedio": 3.08,
+      "importeMedio": 181285,
+      "numHipotecas": 33841,
+      "pctFijo": 64.1,
+      "pctVariable": 35.9
+    }
   ],
   "bancos": [
     {
@@ -104,7 +161,7 @@
       "taeVariableAprox": 4.12,
       "condiciones": "Con domiciliación de nómina/pensión + seguros de vida, hogar y protección total de pagos con Sabadell. Variable: Euríbor + 0,50% (1,50% TIN el primer año según la última oferta confirmada). Condiciones de la oferta de septiembre; no se ha podido verificar en bancsabadell.com la nueva fecha de validez",
       "fuente": "bancsabadell.com",
-      "fechaConsulta": "2026-10-08"
+      "fechaConsulta": "2026-10-31"
     },
     {
       "nombre": "Bankinter",
@@ -117,5 +174,9 @@
       "fechaConsulta": "2026-10-08"
     }
   ],
-  "calculadoraDefaults": { "importe": 150000, "plazo": 25, "diferencialVariable": 0.65 }
+  "calculadoraDefaults": {
+    "importe": 150000,
+    "plazo": 25,
+    "diferencialVariable": 0.65
+  }
 }
