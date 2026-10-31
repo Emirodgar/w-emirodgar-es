@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-30",
-  "generado_en": "2026-10-30T11:16:16+00:00",
-  "titular": "La tragedia ferroviaria de Urda domina la agenda, con el ministro Puente bajo escrutinio y nuevas revelaciones sobre la seguridad de Adif",
+  "fecha": "2026-10-31",
+  "generado_en": "2026-10-31T10:48:46+00:00",
+  "titular": "La tragedia ferroviaria de Urda y la gestión de Óscar Puente marcan la agenda política y mediática",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 178
+    "El Mundo": 21,
+    "The Objective": 134
   },
   "temas": [
     {
-      "tema": "Tragedia ferroviaria de Urda y responsabilidades",
+      "tema": "Accidente ferroviario de Urda y seguridad en Adif",
       "categoria": "Sociedad",
-      "descripcion": "El accidente de tren en Urda sigue siendo el tema central, con el ministro Óscar Puente bajo presión y el señalamiento a un trabajador de Adif, mientras se investigan fallos en el sistema de seguridad y la inversión en infraestructuras."
+      "descripcion": "Continúa la identificación de víctimas del accidente de tren en Urda, mientras se cuestiona la seguridad ferroviaria y la gestión de Adif, con operadores y maquinistas pidiendo bajar la velocidad."
     },
     {
-      "tema": "Situación económica de España",
-      "categoria": "Economía",
-      "descripcion": "La inflación se mantiene en el 4,9% en octubre, el PIB crece un 0,6% en el tercer trimestre y los bancos del Ibex 35 registran importantes beneficios."
+      "tema": "Gestión del ministro Óscar Puente y sus consecuencias políticas",
+      "categoria": "Política",
+      "descripcion": "El ministro de Transportes, Óscar Puente, es criticado por su gestión y declaraciones tras el accidente, aunque cuenta con el respaldo de Pedro Sánchez, mientras el PSOE y la oposición aumentan la presión."
     },
     {
-      "tema": "Ciberataque a Binance",
-      "categoria": "Ciencia y Tecnología",
-      "descripcion": "La plataforma de criptomonedas Binance ha sido víctima de un robo de 6.300 millones de dólares, con investigaciones preliminares que apuntan a un compromiso de un ordenador portátil de un ingeniero."
-    },
-    {
-      "tema": "Disturbios y saqueos en Barcelona",
+      "tema": "Ascenso de los grupos violentos 'Blocus' en España",
       "categoria": "Sucesos",
-      "descripcion": "Los Mossos d'Esquadra han detenido a un menor de 17 años por su presunta vinculación con la difusión y el aliento de los disturbios y saqueos de Blocus en Barcelona."
+      "descripcion": "La Policía Nacional y el Ministerio del Interior realizan una operación para frenar a los 'Blocus', un grupo violento que ha instigado disturbios y saqueos, liderado por un joven hispanopakistaní."
+    },
+    {
+      "tema": "Crisis institucional en Polonia",
+      "categoria": "Internacional",
+      "descripcion": "Escala la crisis en Polonia con el despliegue policial en torno a la Corte Constitucional y la intervención del presidente en un contexto de tensión institucional."
     }
   ]
 }

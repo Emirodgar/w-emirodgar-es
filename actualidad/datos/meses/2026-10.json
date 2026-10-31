@@ -1022,6 +1022,48 @@
         "url": "https://www.elmundo.es/economia/2026/10/30/6ae43e2221efa0123f8b4573.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-10-30",
+      "edicion": "2026-10-31",
+      "titulo": "Escalada de la crisis institucional en Polonia",
+      "categoria": "Internacional",
+      "descripcion": "La crisis en Polonia escala con el despliegue policial en la Corte Constitucional y la entrada forzada del presidente, marcando un punto álgido en la tensión política del país.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Escala la crisis en Polonia: la Policía se despliega en torno a la Corte Constitucional",
+        "url": "https://www.elmundo.es/internacional/2026/10/30/6ae4f89c21efa0d3758b45a7.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-31",
+      "edicion": "2026-10-31",
+      "titulo": "Identificación de víctimas del accidente ferroviario de Urda",
+      "categoria": "Sucesos",
+      "descripcion": "Se identifican nuevas víctimas del accidente ferroviario de Urda, incluyendo a la compositora Marisa Manchado, lo que eleva el impacto humano de la tragedia.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Las últimas víctimas del accidente identificadas: la compositora Marisa Manchado, el ingeniero David, el tripulante Nelson, Andrea, escaparatista de Mango...",
+        "url": "https://www.elmundo.es/espana/2026/10/31/6ae4fedffc6c836b7a8b4593.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-10-31",
+      "edicion": "2026-10-31",
+      "titulo": "Operación contrarreloj de Interior contra los 'Blocus'",
+      "categoria": "Sucesos",
+      "descripcion": "El Ministerio del Interior ejecuta una operación para frenar la expansión de los 'Blocus', un grupo violento que ha instigado disturbios y saqueos en España.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Operación contrarreloj de Interior para frenar a Blocus: «Había que pillarlos antes del sábado»",
+        "url": "https://theobjective.com/espana/2026-10-31/operacion-contrarreloj-interior-blocus-sabado/"
+      },
+      "destacado": false
     }
   ]
 }
