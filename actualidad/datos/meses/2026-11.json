@@ -1,0 +1,49 @@
+{
+  "mes": "2026-11",
+  "titulo_mes": "Noviembre 2026",
+  "resumen_mes": "",
+  "hitos": [
+    {
+      "fecha": "2026-11-01",
+      "edicion": "2026-11-01",
+      "titulo": "El Gobierno aprobará ayudas por el accidente de Urda y recibirá un informe de Puente",
+      "categoria": "Política",
+      "descripcion": "El Consejo de Ministros aprobará ayudas para los afectados por el accidente ferroviario de Urda y el ministro de Transportes, Óscar Puente, presentará un informe sobre lo ocurrido.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno aprobará el martes ayudas por el accidente y recibirá un informe de Puente",
+        "url": "https://www.elmundo.es/espana/2026/11/01/6ae71de1e4d4d83d0b8b456f.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-01",
+      "edicion": "2026-11-01",
+      "titulo": "Marc Márquez gana en Malasia y se acerca a su octavo título mundial",
+      "categoria": "Deportes",
+      "descripcion": "El piloto español Marc Márquez ha logrado la victoria en el Gran Premio de Malasia, dejándolo a las puertas de conseguir su octavo título mundial.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Marc Márquez gana en Malasia y se queda a las puertas de su octavo título mundial",
+        "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/01/6ae6fb6721efa052738b4573.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-01",
+      "edicion": "2026-11-01",
+      "titulo": "Irán designa a la Marina y Fuerza Aérea británicas como grupos terroristas",
+      "categoria": "Internacional",
+      "descripcion": "Irán ha declarado oficialmente a la Marina Real y la Real Fuerza Aérea británicas como organizaciones terroristas, lo que podría tener implicaciones diplomáticas y de seguridad.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Irán declara grupo terrorista a la Marina y la Fuerza Aérea británicas",
+        "url": "https://theobjective.com/internacional/2026-11-01/iran-terrorista-marina-fuerza-aerea-britanicas/"
+      },
+      "destacado": false
+    }
+  ]
+}

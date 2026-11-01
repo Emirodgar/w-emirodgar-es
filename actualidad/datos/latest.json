@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-10-31",
-  "generado_en": "2026-10-31T10:48:46+00:00",
-  "titular": "La tragedia ferroviaria de Urda y la gestión de Óscar Puente marcan la agenda política y mediática",
+  "fecha": "2026-11-01",
+  "generado_en": "2026-11-01T11:45:37+00:00",
+  "titular": "El Gobierno afronta la tragedia de Urda con ayudas y un informe de Transportes, mientras la oposición pide explicaciones",
   "por_medio": {
-    "El Mundo": 21,
-    "The Objective": 134
+    "El Mundo": 24,
+    "The Objective": 91
   },
   "temas": [
     {
-      "tema": "Accidente ferroviario de Urda y seguridad en Adif",
-      "categoria": "Sociedad",
-      "descripcion": "Continúa la identificación de víctimas del accidente de tren en Urda, mientras se cuestiona la seguridad ferroviaria y la gestión de Adif, con operadores y maquinistas pidiendo bajar la velocidad."
-    },
-    {
-      "tema": "Gestión del ministro Óscar Puente y sus consecuencias políticas",
-      "categoria": "Política",
-      "descripcion": "El ministro de Transportes, Óscar Puente, es criticado por su gestión y declaraciones tras el accidente, aunque cuenta con el respaldo de Pedro Sánchez, mientras el PSOE y la oposición aumentan la presión."
-    },
-    {
-      "tema": "Ascenso de los grupos violentos 'Blocus' en España",
+      "tema": "Tragedia ferroviaria de Urda",
       "categoria": "Sucesos",
-      "descripcion": "La Policía Nacional y el Ministerio del Interior realizan una operación para frenar a los 'Blocus', un grupo violento que ha instigado disturbios y saqueos, liderado por un joven hispanopakistaní."
+      "descripcion": "El accidente de tren en Urda continúa siendo el tema central, con el Gobierno preparando ayudas y un informe de Transportes, mientras se avanza en la identificación de las víctimas y surgen críticas a la gestión de Adif."
     },
     {
-      "tema": "Crisis institucional en Polonia",
+      "tema": "Operativo policial contra Blocus en Cataluña",
+      "categoria": "Sociedad",
+      "descripcion": "El Govern niega motivos étnicos en el operativo de los Mossos d'Esquadra contra Blocus, que ha generado detenciones e identificaciones, y la CUP pide explicaciones por el perfil racial de las actuaciones."
+    },
+    {
+      "tema": "Carrera armamentística de Corea del Norte y diplomacia con EE. UU.",
       "categoria": "Internacional",
-      "descripcion": "Escala la crisis en Polonia con el despliegue policial en torno a la Corte Constitucional y la intervención del presidente en un contexto de tensión institucional."
+      "descripcion": "Kim Jong-un intensifica su carrera armamentística con el disparo de bombas de racimo, mientras Donald Trump explora la posibilidad de un nuevo encuentro con el líder norcoreano."
+    },
+    {
+      "tema": "Estrategia electoral del PP",
+      "categoria": "Política",
+      "descripcion": "El Partido Popular retoma la \"política para adultos\" como estrategia electoral, posicionándose como \"Gobierno a la espera\" y combinando este enfoque con críticas a Sánchez."
     }
   ]
 }
