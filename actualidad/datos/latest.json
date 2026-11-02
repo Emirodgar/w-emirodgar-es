@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-01",
-  "generado_en": "2026-11-01T11:45:37+00:00",
-  "titular": "El Gobierno afronta la tragedia de Urda con ayudas y un informe de Transportes, mientras la oposición pide explicaciones",
+  "fecha": "2026-11-02",
+  "generado_en": "2026-11-02T13:18:04+00:00",
+  "titular": "Feijóo pide \"reconstrucción nacional\" mientras el PSOE cae en encuestas tras la tragedia de Urda",
   "por_medio": {
-    "El Mundo": 24,
-    "The Objective": 91
+    "El Mundo": 31,
+    "The Objective": 95
   },
   "temas": [
     {
-      "tema": "Tragedia ferroviaria de Urda",
-      "categoria": "Sucesos",
-      "descripcion": "El accidente de tren en Urda continúa siendo el tema central, con el Gobierno preparando ayudas y un informe de Transportes, mientras se avanza en la identificación de las víctimas y surgen críticas a la gestión de Adif."
-    },
-    {
-      "tema": "Operativo policial contra Blocus en Cataluña",
-      "categoria": "Sociedad",
-      "descripcion": "El Govern niega motivos étnicos en el operativo de los Mossos d'Esquadra contra Blocus, que ha generado detenciones e identificaciones, y la CUP pide explicaciones por el perfil racial de las actuaciones."
-    },
-    {
-      "tema": "Carrera armamentística de Corea del Norte y diplomacia con EE. UU.",
-      "categoria": "Internacional",
-      "descripcion": "Kim Jong-un intensifica su carrera armamentística con el disparo de bombas de racimo, mientras Donald Trump explora la posibilidad de un nuevo encuentro con el líder norcoreano."
-    },
-    {
-      "tema": "Estrategia electoral del PP",
+      "tema": "Repercusiones políticas del accidente ferroviario de Urda",
       "categoria": "Política",
-      "descripcion": "El Partido Popular retoma la \"política para adultos\" como estrategia electoral, posicionándose como \"Gobierno a la espera\" y combinando este enfoque con críticas a Sánchez."
+      "descripcion": "El accidente de Urda genera un fuerte debate político, con Feijóo pidiendo \"reconstrucción nacional\" y el PSOE sufriendo una caída en las encuestas. Podemos exige la renacionalización del ferrocarril y la dimisión de Óscar Puente."
+    },
+    {
+      "tema": "Dimisión del primer ministro de Bélgica",
+      "categoria": "Internacional",
+      "descripcion": "El primer ministro belga, Bart De Wever, ha presentado su dimisión al rey tras el fracaso en las negociaciones presupuestarias, aunque la renuncia ha sido dejada en suspenso."
+    },
+    {
+      "tema": "Ciberataques internacionales",
+      "categoria": "Internacional",
+      "descripcion": "Se han registrado ciberataques que han afectado a sistemas de refrigeración de supermercados en varios países europeos y a aplicaciones de emergencias en Rusia y Ucrania con informaciones falsas."
+    },
+    {
+      "tema": "Apagón general en La Palma",
+      "categoria": "Sociedad",
+      "descripcion": "La isla de La Palma ha sufrido un apagón general que ha dejado sin suministro eléctrico a toda la isla durante casi cuatro horas, ya restablecido."
     }
   ]
 }

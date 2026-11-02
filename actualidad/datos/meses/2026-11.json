@@ -29,7 +29,7 @@
         "titulo": "Marc Márquez gana en Malasia y se queda a las puertas de su octavo título mundial",
         "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/01/6ae6fb6721efa052738b4573.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-01",
@@ -42,6 +42,48 @@
         "medio": "The Objective",
         "titulo": "Irán declara grupo terrorista a la Marina y la Fuerza Aérea británicas",
         "url": "https://theobjective.com/internacional/2026-11-01/iran-terrorista-marina-fuerza-aerea-britanicas/"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-02",
+      "edicion": "2026-11-02",
+      "titulo": "El PSOE cae por debajo de 100 escaños en la primera encuesta tras la tragedia de Urda",
+      "categoria": "Política",
+      "descripcion": "El Partido Socialista Obrero Español pierde 450.000 votos y desciende a menos de 100 escaños en la primera encuesta realizada tras el accidente ferroviario de Urda, mientras que el PP recupera terreno y podría formar mayoría con Vox.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El PSOE pierde 450.000 votos y cae por debajo de 100 escaños en la primera encuesta tras la tragedia de Urda",
+        "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-02",
+      "edicion": "2026-11-02",
+      "titulo": "Dimisión del primer ministro de Bélgica por fracaso presupuestario",
+      "categoria": "Internacional",
+      "descripcion": "El primer ministro de Bélgica, Bart De Wever, ha presentado su dimisión al rey tras el fracaso en las negociaciones para aprobar los presupuestos, aunque el monarca ha dejado la renuncia en suspenso hasta el viernes.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El primer ministro de Bélgica presenta su dimisión tras \"el fracaso en la negociación de los presupuestos\" y el Rey la deja en suspenso hasta el viernes",
+        "url": "https://www.elmundo.es/internacional/2026/11/02/6ae85b41e9cf4abb738b4583.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-02",
+      "edicion": "2026-11-02",
+      "titulo": "Apagón general en La Palma deja la isla sin suministro eléctrico durante casi cuatro horas",
+      "categoria": "Sociedad",
+      "descripcion": "La isla de La Palma ha sufrido un \"cero energético\" que ha provocado la pérdida total del suministro eléctrico durante casi cuatro horas, afectando a todo el territorio insular.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Palma sufre un apagón general que deja a la isla sin suministro eléctrico durante casi cuatro horas",
+        "url": "https://www.elmundo.es/espana/2026/11/02/6ae84c15e85ece0f5a8b4582.html"
       },
       "destacado": false
     }
