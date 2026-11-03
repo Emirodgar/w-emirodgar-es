@@ -1,6 +1,6 @@
 ---
 title: Chief Growth Officer (CGO)
-description: 
+description: "Qué es un Chief Growth Officer (CGO): responsabilidades, perfil y cómo este directivo impulsa el crecimiento de ingresos, usuarios y KPIs de una empresa."
 image: 
 author: Emirodgar
 lang: es_ES

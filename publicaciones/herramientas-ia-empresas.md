@@ -1,6 +1,6 @@
 ---
 title: Herramientas de IA para empresas
-description: 
+description: "Herramientas de IA para empresas: por qué la mayor parte del dinero está en automatizaciones inteligentes y no en agentes complejos, y cómo aplicarlo con resultados."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Bluesky y la pérdida de usuarios
-description: 
+description: "Por qué Bluesky pierde usuarios tras su auge como alternativa a X. La ley de Metcalfe y el efecto de la masa crítica explican el valor de una red social."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

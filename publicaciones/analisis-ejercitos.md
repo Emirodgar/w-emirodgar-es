@@ -1,6 +1,6 @@
 ---
 title: Análisis comparativo de las Fuerzas Armadas Españolas en la Unión Europea
-description: 
+description: "España es sexta en efectivos militares de la UE con 125.579 soldados. Comparativa de ejércitos europeos, presupuesto de 33.123 millones en 2025 y objetivo OTAN del 2 %."
 image:
 author: Emirodgar
 lang: es_ES

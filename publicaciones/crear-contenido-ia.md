@@ -1,6 +1,6 @@
 ---
 title: Cómo crear contenido con la IA sin que parezca artificial
-description: 
+description: "Cómo crear contenido con IA sin que parezca artificial: define objetivos, conoce a tu audiencia y personaliza el mensaje para evitar textos genéricos y predecibles."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

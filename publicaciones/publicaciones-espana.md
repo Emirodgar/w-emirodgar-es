@@ -1,6 +1,6 @@
 ---
 title: Publicaciones sobre la transformación digital en España
-description: 
+description: "Publicaciones sobre la transformación digital en España: datos, análisis y casos de administración, empresa y sociedad, de la más reciente."
 lang: es_ES
 author: Emirodgar
 image: 

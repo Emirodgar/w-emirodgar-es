@@ -1,6 +1,6 @@
 ---
 title: Análisis del gran apagón de España
-description: 
+description: "Análisis del apagón del 28 de abril de 2025 en España y Portugal: posturas de los partidos, hipótesis sobre las causas y tratamiento en los medios."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

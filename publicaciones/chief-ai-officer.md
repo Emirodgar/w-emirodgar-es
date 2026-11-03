@@ -1,6 +1,6 @@
 ---
 title: Chief AI Officer (CAIO)
-description: 
+description: "Qué es un Chief AI Officer (CAIO): funciones, responsabilidades y perfil del directivo que lidera la estrategia de inteligencia artificial en una organización."
 image: 
 author: Emirodgar
 lang: es_ES

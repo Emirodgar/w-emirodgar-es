@@ -1,6 +1,6 @@
 ---
 title: Partidos políticos europeos
-description: 
+description: "Qué grupos políticos hay en el Parlamento Europeo y en cuál se integra cada partido español, según su afinidad ideológica, y cómo influye en alianzas y decisiones."
 image: 
 author: Emirodgar
 lang: es_ES

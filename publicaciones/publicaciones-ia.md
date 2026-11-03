@@ -1,6 +1,6 @@
 ---
 title: Publicaciones sobre Inteligencia Artificial
-description: 
+description: "Publicaciones sobre inteligencia artificial: agentes, LLM, riesgos, empleo y aplicaciones en empresa y administración pública, ordenadas de la más reciente."
 lang: es_ES
 author: Emirodgar
 image: 

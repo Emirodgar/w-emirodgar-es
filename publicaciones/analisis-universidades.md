@@ -1,6 +1,6 @@
 ---
 title: Análisis de la Universidad Pública vs la Privada en España
-description: 
+description: "Análisis de 25 años de universidad pública y privada en España: matrícula, másteres y número de centros (de 66 a 92) y por qué la privada gana terreno."
 image: 
 author: Emirodgar
 lang: es_ES

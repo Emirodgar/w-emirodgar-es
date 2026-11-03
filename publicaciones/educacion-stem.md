@@ -1,6 +1,6 @@
 ---
 title: El enfoque educativo STEM y su impacto en la educación española
-description: 
+description: "Cómo está la educación STEM en España: caída del 28 % en ingeniería, LOMLOE, Alianza STEAM y metodologías como el aprendizaje basado en proyectos."
 image: 
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Hipnocracia, el arte de manipular a la gente
-description: 
+description: "La hipnocracia explicada: la teoría del libro de Jianwei Xun, el autor creado con IA por Andrea Colamedici, y el debate sobre algoritmos y manipulación."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

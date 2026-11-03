@@ -1,6 +1,6 @@
 ---
 title: El saqueo digital y la cara oscura de la Inteligencia Artificial Española
-description: 
+description: "Polémica por el entrenamiento de las IA públicas españolas MarIA y ALIA con Common Crawl y contenido de Dialnet sin permiso: derechos de autor y dilemas éticos."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

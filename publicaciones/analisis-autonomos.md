@@ -1,6 +1,6 @@
 ---
 title: Análisis y evolución de los autónomos en España
-description: 
+description: "Evolución de los autónomos en España entre 2005 y 2025: máximo de 3,41 millones en 2008, crisis, tarifa plana y subida de las cuotas."
 image: 
 author: Emirodgar
 lang: es_ES

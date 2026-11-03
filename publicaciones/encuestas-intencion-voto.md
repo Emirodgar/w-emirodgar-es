@@ -1,6 +1,6 @@
 ---
 title: Encuestas de intención de voto en España (2025)
-description: 
+description: "Encuestas de intención de voto en España en 2025: evolución del CIS, máximo del PSOE en junio y caída en julio tras el caso Cerdán, frente a la media de sondeos."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Cómo adaptar la IA en un entorno profesional
-description: 
+description: "Cómo adaptar la IA en tu trabajo: mejorar tus habilidades con ayuda de la IA (upskilling), soltar tareas que ya hace mejor y qué están haciendo Meta o Microsoft."
 image: 
 author: Emirodgar
 lang: es_ES

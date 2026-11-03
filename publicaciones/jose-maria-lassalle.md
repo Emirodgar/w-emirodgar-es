@@ -1,6 +1,6 @@
 ---
 title: José María Lassalle Ruiz - IA y geopolítica
-description: 
+description: "José María Lassalle sobre IA y geopolítica en el Foro Valores Mataró-Europa 2025: retos éticos, políticos y culturales y el papel de Europa."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

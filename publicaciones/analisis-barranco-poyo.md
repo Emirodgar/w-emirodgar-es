@@ -1,6 +1,6 @@
 ---
 title: Análisis del desastre del Barranco del Poyo en medios
-description: 
+description: "Análisis de la cobertura mediática del desastre del Barranco del Poyo en la DANA del 29 de octubre: hechos, cronología, 228 víctimas en Valencia y relatos políticos."
 lang: es_ES
 author: emirodgar
 sitemap: 1

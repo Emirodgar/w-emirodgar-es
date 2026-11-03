@@ -1,6 +1,6 @@
 ---
 title: Análisis de la neutralidad política en los LLM
-description: 
+description: "Sesgo político de ChatGPT, Claude, Gemini, Perplexity y Llama: qué dicen los estudios, de dónde viene el sesgo en el entrenamiento y qué implica."
 image: 
 author: Emirodgar
 lang: es_ES

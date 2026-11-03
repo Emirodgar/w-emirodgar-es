@@ -1,6 +1,6 @@
 ---
 title: El camino hacia la AGI
-description: 
+description: "Qué es la inteligencia artificial general (AGI) y sus cuatro grandes riesgos según Google DeepMind: mal uso, desalineación, accidentes y riesgos estructurales."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

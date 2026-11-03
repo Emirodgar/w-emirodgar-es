@@ -1,6 +1,6 @@
 ---
 title: Posibles trabajos afectados por la IA
-description: 
+description: "Qué trabajos pueden verse afectados por la IA según el Foro Económico Mundial (Future of Jobs 2025): empleos que desaparecen, los que se crean y cómo adaptarse."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

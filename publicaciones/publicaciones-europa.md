@@ -1,6 +1,6 @@
 ---
 title: Publicaciones sobre la transformación digital en Europa
-description: 
+description: "Publicaciones sobre la transformación digital en Europa: regulación, estrategia de IA y comparativas con España y otros países, de la más reciente a la más antigua."
 lang: es_ES
 author: Emirodgar
 image: 

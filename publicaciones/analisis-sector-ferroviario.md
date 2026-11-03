@@ -1,6 +1,6 @@
 ---
 title: Análisis de la inversión y mantenimiento del sector ferroviario (trenes) en España
-description: 
+description: "Inversión y mantenimiento ferroviario en España: accidentes de Adamuz y Urda en 2026, retrasos, evolución de las cifras y conclusiones sobre el estado de la red."
 image: 
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Ley de Martec
-description: 
+description: "La Ley de Martec de Scott Brinker: la tecnología crece exponencialmente y las organizaciones logarítmicamente. Qué implica para la IA, las empresas y Europa."
 image: 
 author: Emirodgar
 lang: es_ES

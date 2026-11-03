@@ -1,6 +1,6 @@
 ---
 title: Glosario político
-description: 
+description: "Glosario político con las ideologías y términos más habituales del debate público, explicados de forma sencilla y con ejemplos de partidos españoles."
 lang: es_ES
 author: emirodgar
 sitemap: 1

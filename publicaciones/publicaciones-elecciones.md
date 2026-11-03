@@ -1,6 +1,6 @@
 ---
 title: Publicaciones sobre Elecciones en España
-description: 
+description: "Todas las publicaciones sobre elecciones en España: resultados, encuestas, CIS, sistema electoral, programas y análisis de datos, ordenadas de la más reciente."
 lang: es_ES
 author: Emirodgar
 image: 

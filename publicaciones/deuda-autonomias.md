@@ -1,6 +1,6 @@
 ---
 title: Evolución de la deuda de las Comunidades Autónomas en España
-description: 
+description: "Deuda autonómica (2009-2024): del 8,2 % del PIB en 2009 al repunte del 27,2 % en 2020, y las comunidades autónomas más endeudadas en 2024."
 image: 
 author: Emirodgar
 lang: es_ES

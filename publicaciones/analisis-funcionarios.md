@@ -1,6 +1,6 @@
 ---
 title: Análisis de los funcionarios en España
-description: 
+description: "Cuántos funcionarios hay en España y cómo han evolucionado entre 2015 y 2024: carrera, interinos, total de empleados públicos y coste de las nóminas."
 image: 
 author: Emirodgar
 lang: es_ES

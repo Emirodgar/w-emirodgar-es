@@ -1,6 +1,6 @@
 ---
 title: Muertes por problemas de salud mental en España
-description: 
+description: "Muertes por salud mental en España: 3.846 suicidios en 2024 según el INE, un 6,6 % menos que en 2023, y evolución de las cifras en las dos últimas décadas."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

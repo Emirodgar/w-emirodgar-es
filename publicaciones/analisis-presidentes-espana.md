@@ -1,6 +1,6 @@
 ---
 title: Análisis de la presencia digital de los últimos tres presidentes de España
-description: 
+description: "Presencia digital de Zapatero, Rajoy y Sánchez: cómo ha evolucionado la comunicación política en redes sociales y cómo interactúa cada presidente."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

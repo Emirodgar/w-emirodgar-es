@@ -1,6 +1,6 @@
 ---
 title: Análisis de muertes por cáncer en España
-description: 
+description: "El cáncer es la primera causa de muerte en España desde 2023 y el 26,6 % de las defunciones en 2024. Evolución 2019-2024 y comparativa con otras causas."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

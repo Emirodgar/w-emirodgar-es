@@ -1,6 +1,6 @@
 ---
 title: Análisis comparativo del “Presidential AI Challenge” de EE. UU. vs. iniciativas europeas
-description: 
+description: "Comparamos el Presidential AI Challenge de Trump, lanzado en abril de 2025, con las iniciativas europeas de educación en IA: fortalezas, debilidades y diferencias."
 image: 
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Evolución y análisis de los incencios forestales en España
-description: 
+description: "Evolución de los incendios forestales en España en la última década: número de incendios, superficie quemada, repuntes de 2022 y 2025 y regiones más afectadas."
 image: 
 author: Emirodgar
 lang: es_ES

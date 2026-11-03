@@ -1,6 +1,6 @@
 ---
 title: ¿Qué es la Ley D’Hondt y cómo afecta a los resultados electorales?
-description: 
+description: "Qué es la Ley D’Hondt, cómo reparte los escaños del Congreso paso a paso con un ejemplo y por qué favorece a los partidos más votados."
 lang: es_ES
 author: emirodgar
 sitemap: 1

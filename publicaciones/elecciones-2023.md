@@ -1,6 +1,6 @@
 ---
 title: Elecciones 2023 - España
-description: 
+description: "Resultados de las elecciones generales del 23 de julio de 2023 en España: votos emitidos, participación, escaños por partido y análisis con gráficos de datos."
 lang: es_ES
 author: emirodgar
 sitemap: 1

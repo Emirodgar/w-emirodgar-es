@@ -1,6 +1,6 @@
 ---
 title: Análisis del impacto económico del salario mínimo en España
-description: 
+description: "Impacto del salario mínimo en España: subida del 60,9 % entre 2018 y 2025, efecto en PIB y empleo según la AIReF y perfil de los beneficiarios."
 image: 
 author: Emirodgar
 lang: es_ES

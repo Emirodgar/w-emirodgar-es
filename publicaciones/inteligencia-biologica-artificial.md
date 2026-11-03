@@ -1,6 +1,6 @@
 ---
 title: De la inteligencia biológica a la artificial
-description: 
+description: "Qué puede aprender la IA de la inteligencia biológica: circuitos neuronales comunes de aves y mamíferos y su relevancia para el desarrollo de la IA."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

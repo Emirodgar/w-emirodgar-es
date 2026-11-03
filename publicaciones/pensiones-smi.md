@@ -1,6 +1,6 @@
 ---
 title: Análisis de las pensiones frente al salario mínimo interprofesional
-description: 
+description: "Pensiones frente al salario mínimo en España: pensión media de 1.508 euros, SMI de 1.184, gasto del 12 % del PIB y el reto demográfico hasta 2050."
 image: 
 author: Emirodgar
 lang: es_ES

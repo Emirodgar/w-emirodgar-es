@@ -1,6 +1,6 @@
 ---
 title: Asesores políticos en España
-description: 
+description: "Los asesores del Gobierno de España superan los 1.000 en 2026. Evolución desde 2010, comparativa entre presidentes y coste del personal eventual."
 image: 
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Ventajas de integrar la inteligencia artificial en ayuntamientos
-description: 
+description: "Ventajas de la IA en los ayuntamientos: automatización de trámites, mejores servicios al ciudadano y casos de éxito en la administración local."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

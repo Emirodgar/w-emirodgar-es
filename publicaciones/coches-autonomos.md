@@ -1,6 +1,6 @@
 ---
 title: Coches autónomos en España
-description: 
+description: "Retos para introducir coches autónomos en las ciudades españolas: normativa de la DGT, nivel SAE 2, homologación, responsabilidad civil y conectividad 5G."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

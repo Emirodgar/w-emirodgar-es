@@ -1,6 +1,6 @@
 ---
 title: Guerra moderna con IA y la transformación digital
-description: 
+description: "Cómo la inteligencia artificial transforma la guerra moderna: drones FPV baratos y autónomos, lecciones de Ucrania y el impacto de la tecnología en la defensa."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

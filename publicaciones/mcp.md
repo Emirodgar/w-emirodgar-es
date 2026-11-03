@@ -1,6 +1,6 @@
 ---
 title: Qué es el MCP (Model Context Protocol)
-description: 
+description: "Qué es el Model Context Protocol (MCP), el estándar abierto que conecta la IA con datos y herramientas externas, y qué aplicaciones tiene en marketing."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

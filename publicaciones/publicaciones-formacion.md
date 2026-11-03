@@ -1,6 +1,6 @@
 ---
 title: Publicaciones sobre formaciones de inteligencia Aritificial
-description: 
+description: "Publicaciones sobre formación en inteligencia artificial: cursos, competencias y recursos para aprender IA y adaptarte al mercado laboral, de la más reciente."
 lang: es_ES
 author: Emirodgar
 image: 

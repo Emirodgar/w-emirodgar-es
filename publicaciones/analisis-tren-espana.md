@@ -1,6 +1,6 @@
 ---
 title: Análisis de los problemas ferroviarios en España. Incidencias y compensaciones
-description: 
+description: "Una década crítica del tren en España (2015-2025): incidencias, compensaciones económicas, inversión insuficiente y los accidentes graves de Adamuz y Urda en 2026."
 image:
 author: Emirodgar
 lang: es_ES

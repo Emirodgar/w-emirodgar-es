@@ -1,6 +1,6 @@
 ---
 title: Empresas IA first
-description: 
+description: "Qué significa que una empresa sea IA first: poner la inteligencia artificial en el centro de la estrategia, más allá del copiloto, y el papel del Chief AI Officer."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

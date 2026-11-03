@@ -1,6 +1,6 @@
 ---
 title: Índice de Incertidumbre Mundial
-description: 
+description: "El Índice de Incertidumbre Mundial roza en 2025 niveles de la pandemia. Qué mide el WUI, el índice IESE en España y su efecto en inversión y empleo."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

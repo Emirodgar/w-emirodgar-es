@@ -1,6 +1,6 @@
 ---
 title: Análisis cambio climático de España
-description: 
+description: "Datos de AEMET sobre el cambio climático en España (2005-2025): temperatura media, precipitaciones, eventos extremos y cobertura en los medios."
 image: 
 author: Emirodgar
 lang: es_ES

@@ -1,6 +1,6 @@
 ---
 title: Publicaciones sobre política
-description: 
+description: "Publicaciones sobre política en España: análisis con datos de gobierno, partidos, elecciones, economía y sociedad, ordenadas de la más reciente a la más antigua."
 lang: es_ES
 author: Emirodgar
 image: 

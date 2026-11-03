@@ -1,6 +1,6 @@
 ---
 title: CIS - Centro de Investigaciones Sociológicas
-description: 
+description: "Qué es el CIS, cómo funciona y cuánto acertó en las elecciones generales de 2023: estimaciones frente a resultados reales de PP, PSOE, Sumar y VOX."
 lang: es_ES
 author: emirodgar
 sitemap: 1

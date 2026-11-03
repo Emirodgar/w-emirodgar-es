@@ -1,6 +1,6 @@
 ---
 title: Listado de proyectos para un mundo mejor
-description: 
+description: "Proyectos de datos, IA y política de Emilio Rodríguez: paneles y pruebas de concepto para aprender haciendo, explorar temas de interés y ayudar a otros."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

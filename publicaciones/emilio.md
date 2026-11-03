@@ -1,6 +1,6 @@
 ---
 title: Emilio Rodríguez - IA & Data
-description: 
+description: "Emilio Rodríguez García, ingeniero informático y especialista en estrategia digital desde 2009. Trayectoria en IA, datos, marketing digital y docencia universitaria."
 image: 
 author: Emirodgar
 lang: es_ES

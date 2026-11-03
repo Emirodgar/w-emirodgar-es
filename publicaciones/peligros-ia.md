@@ -1,6 +1,6 @@
 ---
 title: Peligros de la IA
-description: 
+description: "Los principales peligros de la IA: uniformidad cultural, fraude con asistentes como Cluely, doxxing por análisis de imágenes y pérdida de empleos."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

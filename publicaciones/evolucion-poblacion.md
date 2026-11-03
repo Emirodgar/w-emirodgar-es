@@ -1,6 +1,6 @@
 ---
 title: Análisis de la evolución de la población en el mundo
-description: 
+description: "Evolución de la población mundial desde 1950 hasta 2100: de 2.500 millones a la actualidad, los diez países más poblados y la desaceleración del crecimiento."
 image: 
 author: Emirodgar
 lang: es_ES

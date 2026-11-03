@@ -1,6 +1,6 @@
 ---
 title: Huellas digitales de robots de rastreo
-description: 
+description: "Cómo evitar que tu CDN o tu firewall bloqueen a los bots buenos de Google y de la IA: huellas digitales de los rastreadores y su impacto en tu visibilidad online."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

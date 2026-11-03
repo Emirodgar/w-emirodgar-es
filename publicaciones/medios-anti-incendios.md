@@ -1,6 +1,6 @@
 ---
 title: Medios estatales para combatir incendios forestales en España. Evolución y financiación (2015-2025)
-description: 
+description: "Medios estatales contra incendios forestales en España (2015-2025): bomberos forestales, UME, MITECO, flota aérea y evolución de la financiación pública."
 image: 
 author: Emirodgar
 lang: es_ES

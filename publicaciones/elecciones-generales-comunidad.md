@@ -1,6 +1,6 @@
 ---
 title: Elecciones 2023 por Comunidad Autónoma - España
-description: 
+description: "Resultados de las elecciones generales de 2023 por comunidad autónoma: votos, participación y escaños por partido en cada territorio, con gráficos interactivos."
 lang: es_ES
 author: emirodgar
 sitemap: 1

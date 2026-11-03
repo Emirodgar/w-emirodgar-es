@@ -1,6 +1,6 @@
 ---
 title: El impacto de la inteligencia artificial en los trabajos
-description: 
+description: "Estudio de Stanford: desde 2022 los jóvenes de 22 a 25 años en profesiones expuestas a la IA pierden más empleo. Por qué son los más afectados."
 image:
 author: Emirodgar
 lang: es_ES

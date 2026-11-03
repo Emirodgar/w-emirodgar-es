@@ -1,6 +1,6 @@
 ---
 title: Análisis de los resultados de Se Acabó La Fiesta en Aragón
-description: En solo cinco años, el porcentaje de artículos creados por inteligencia artificial ha pasado del 5 % al 50 %. ¿Estamos ante una revolución o ante el inicio del colapso informativo?
+description: "Se Acabó La Fiesta se quedó sin escaños en las elecciones de Aragón de 2026: 18.000 votos (2,74 %), por debajo del 3 %, y comparación con las europeas de 2024."
 image: 
 author: Emirodgar
 lang: es_ES

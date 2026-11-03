@@ -1,6 +1,6 @@
 ---
 title: Mapa web
-description: 
+description: "Mapa web de emirodgar.es: todas las publicaciones organizadas por categorías, de política a inteligencia artificial, ordenadas de la más reciente a la más antigua."
 lang: es_ES
 image: https://emirodgar.com/cdn/images/og/marketing-digital.png
 schema: CollectionPage

@@ -1,6 +1,6 @@
 ---
 title: Servicio militar obligatorio en España
-description: 
+description: "España no tiene servicio militar obligatorio desde 2001. Qué opinan los españoles de la mili y qué países europeos mantienen o reinstauran la conscripción."
 image:
 author: Emirodgar
 lang: es_ES

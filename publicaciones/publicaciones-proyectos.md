@@ -1,6 +1,6 @@
 ---
 title: Proyectos e ideas de transformación digital
-description: 
+description: "Proyectos e ideas de transformación digital: paneles de datos, herramientas y pruebas de concepto sobre IA, política y economía, con acceso a cada proyecto."
 lang: es_ES
 author: Emirodgar
 image: 

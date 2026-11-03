@@ -1,6 +1,6 @@
 ---
 title: Scraping con IA
-description: 
+description: "Los mejores servidores MCP para scraping con IA, como Firecrawl: renderizado de JavaScript, procesamiento por lotes y cómo elegir el más adecuado para tu flujo."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES

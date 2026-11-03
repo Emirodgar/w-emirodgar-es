@@ -1,6 +1,6 @@
 ---
 title: El Cuarteto de Anscombe - Por qué visualizar los datos es esencial
-description: 
+description: "El Cuarteto de Anscombe: cuatro conjuntos de datos con las mismas estadísticas pero gráficos muy distintos. Por qué visualizar los datos es esencial."
 image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
 author: Emirodgar
 lang: es_ES
