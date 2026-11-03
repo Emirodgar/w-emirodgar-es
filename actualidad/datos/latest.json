@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-02",
-  "generado_en": "2026-11-02T13:18:04+00:00",
-  "titular": "Feijóo pide \"reconstrucción nacional\" mientras el PSOE cae en encuestas tras la tragedia de Urda",
+  "fecha": "2026-11-03",
+  "generado_en": "2026-11-03T12:42:05+00:00",
+  "titular": "El Gobierno aprueba ayudas para Urda mientras se investiga el accidente y se reduce la frecuencia Madrid-Sevilla",
   "por_medio": {
-    "El Mundo": 31,
-    "The Objective": 95
+    "El Mundo": 28,
+    "The Objective": 136
   },
   "temas": [
     {
-      "tema": "Repercusiones políticas del accidente ferroviario de Urda",
+      "tema": "Ayudas y consecuencias del accidente de Urda",
       "categoria": "Política",
-      "descripcion": "El accidente de Urda genera un fuerte debate político, con Feijóo pidiendo \"reconstrucción nacional\" y el PSOE sufriendo una caída en las encuestas. Podemos exige la renacionalización del ferrocarril y la dimisión de Óscar Puente."
+      "descripcion": "El Gobierno aprueba un paquete de 30 millones de euros en ayudas para las víctimas del accidente ferroviario de Urda, que ya cuenta con 69 identificados, mientras se mantienen 26 heridos hospitalizados y se exige la dimisión del ministro de Transportes."
     },
     {
-      "tema": "Dimisión del primer ministro de Bélgica",
-      "categoria": "Internacional",
-      "descripcion": "El primer ministro belga, Bart De Wever, ha presentado su dimisión al rey tras el fracaso en las negociaciones presupuestarias, aunque la renuncia ha sido dejada en suspenso."
+      "tema": "Reducción de frecuencias ferroviarias Madrid-Sevilla",
+      "categoria": "Economía",
+      "descripcion": "El ministro Óscar Puente anuncia la reducción de frecuencias en la línea Madrid-Sevilla por la implantación del sistema ERMTS, generando críticas y peticiones de dimisión."
     },
     {
-      "tema": "Ciberataques internacionales",
-      "categoria": "Internacional",
-      "descripcion": "Se han registrado ciberataques que han afectado a sistemas de refrigeración de supermercados en varios países europeos y a aplicaciones de emergencias en Rusia y Ucrania con informaciones falsas."
+      "tema": "Fallecimiento de Jesús de Miguel",
+      "categoria": "Deportes",
+      "descripcion": "El delantero del Tenerife Jesús de Miguel fallece tras un choque en un partido, lo que lleva a la suspensión de encuentros de Copa y al pésame de clubes."
     },
     {
-      "tema": "Apagón general en La Palma",
+      "tema": "Desalojo de la acampada de Sol",
       "categoria": "Sociedad",
-      "descripcion": "La isla de La Palma ha sufrido un apagón general que ha dejado sin suministro eléctrico a toda la isla durante casi cuatro horas, ya restablecido."
+      "descripcion": "La Policía desaloja la acampada de Sol en Madrid, resultando en dos detenidos y 334 expulsados, y generando pérdidas millonarias para el comercio local."
     }
   ]
 }

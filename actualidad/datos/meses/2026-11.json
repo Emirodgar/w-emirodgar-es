@@ -57,7 +57,7 @@
         "titulo": "El PSOE pierde 450.000 votos y cae por debajo de 100 escaños en la primera encuesta tras la tragedia de Urda",
         "url": "https://www.elmundo.es/espana/encuestas/2026/11/01/6ae77446e4d4d8f3698b458a.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-02",
@@ -84,6 +84,48 @@
         "medio": "El Mundo",
         "titulo": "La Palma sufre un apagón general que deja a la isla sin suministro eléctrico durante casi cuatro horas",
         "url": "https://www.elmundo.es/espana/2026/11/02/6ae84c15e85ece0f5a8b4582.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-03",
+      "edicion": "2026-11-03",
+      "titulo": "Aprobación de ayudas para las víctimas del accidente de Urda",
+      "categoria": "Política",
+      "descripcion": "El Consejo de Ministros aprueba un escudo de ayudas económicas de 30 millones de euros para las víctimas del accidente ferroviario de Urda.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Consejo de Ministros aprueba un escudo de ayudas económicas de 30 millones de euros para las víctimas del accidente de Urda",
+        "url": "https://www.elmundo.es/economia/empresas/2026/11/03/6ae9a3ade9cf4a88748b457b.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-03",
+      "edicion": "2026-11-03",
+      "titulo": "Fallecimiento del futbolista Jesús de Miguel",
+      "categoria": "Deportes",
+      "descripcion": "El delantero del Tenerife Jesús de Miguel fallece tras un brutal choque con el portero del Andorra durante un partido, lo que lleva a la suspensión de encuentros de Copa.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Muere el delantero del Tenerife Jesús de Miguel tras el brutal choque con el portero del Andorra",
+        "url": "https://www.elmundo.es/deportes/futbol/segunda-division/2026/11/03/6ae97d60e4d4d8e9038b459e.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-03",
+      "edicion": "2026-11-03",
+      "titulo": "Declaración de Pedro Sánchez como 'persona non grata' en Murcia",
+      "categoria": "Política",
+      "descripcion": "La Asamblea de la Región de Murcia declara \"persona non grata\" al presidente del Gobierno, Pedro Sánchez, con los votos del PP y Vox.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "La Asamblea de Murcia declara a Sánchez «persona ‘non grata’» con los votos de PP y Vox",
+        "url": "https://theobjective.com/espana/politica/2026-11-03/asamblea-murcia-sanchez-non-grata-pp-vox/"
       },
       "destacado": false
     }
