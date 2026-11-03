@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-15
+date_modified: 2026-11-03
 folder: ia
 permalink: navegadores-ia
 ---
@@ -29,6 +30,16 @@ El mercado, en conjunto, se proyecta pasando de **4.500 millones de dólares en 
 
 El caso que mejor resume la tensión de fondo es el de Amazon contra Perplexity. En noviembre de 2025, Amazon demandó a Perplexity alegando que su agente Comet se hacía pasar por un navegador Google Chrome normal y ocultaba que era un bot al operar dentro de la Amazon Store, comprando en nombre de usuarios sin autorización explícita de la plataforma. Perplexity respondió que el problema real de Amazon es no poder venderle publicidad a un usuario humano si quien navega es un agente. Un juez federal falló a favor de Amazon en marzo de 2026, concediendo una orden preliminar que bloquea a Comet para comprar en Amazon, en lo que es el primer pulso legal serio sobre quién controla el acceso de un agente de IA a una tienda online, según recoge [CNBC](https://www.cnbc.com/2026/03/10/amazon-wins-court-order-to-block-perplexitys-ai-shopping-agent.html). El caso ha llegado a fase de apelación.
 
+## La respuesta contraria: Walmart abre la puerta, pero con condiciones
+
+Frente al bloqueo de Amazon, Walmart ha elegido regular en lugar de prohibir. El 21 de octubre de 2026 presentó tres piezas para que los clientes compren en Walmart y Sam's Club a través de los agentes que prefieran (la compañía ya vende mediante integraciones con Muse, ChatGPT y Gemini, entre otros): los **Agent Profiles**, la **Walmart Agent Gateway** y unos **términos de uso para agentes de IA**, según [la propia Walmart](https://corporate.walmart.com/news/2026/10/Making-It-Possible-for-Agents-to-Shop-on-Behalf-of-Customers).
+
+- **Un perfil por agente dentro de la cuenta del cliente**, para que sus compras aparezcan separadas de las propias. El cliente elige si aprueba cada compra o si deja comprar al agente dentro de un límite de gasto (la empresa pone como ejemplo 50, 100 o 200 dólares), y puede cambiarlo, revisar lo comprado o borrar el perfil cuando quiera. Walmart prevé lanzarlo en torno a un mes después del anuncio, es decir, hacia noviembre.
+- **Una pasarela basada en MCP**, en beta para empresas y desarrolladores, de modo que el agente compre a través de una conexión estructurada en vez de recorrer la web como lo haría una persona, algo que según Walmart es más rápido y fiable. Es el mismo estándar del que hablamos en [nuestra explicación del MCP](https://emirodgar.es/mcp).
+- **Reglas para los agentes**: la compra requiere aprobación del cliente por defecto, el agente no recibe nunca los datos de la tarjeta ni puede añadir o cambiar métodos de pago, solo accede a la información que necesita la tarea y el cliente permite, y no puede actuar más allá de lo que el comprador pretendía. Los agentes que incumplan los términos serán bloqueados. Los precios son los mismos que ve una persona, con ofertas y tarifas visibles antes de pagar, y el proceso de devoluciones sigue aplicándose aunque el agente se equivoque.
+
+El contraste con Amazon-Perplexity es útil: en lugar de pelear por si un agente puede entrar, Walmart define **bajo qué condiciones** puede hacerlo y qué responsabilidad queda en cada parte. Es una apuesta distinta a la de bloquear, y se entiende mejor si se piensa que cada vez más compras se deciden en el chat, como contamos al hablar del [impacto de los agentes en los modelos de negocio](https://emirodgar.es/agentes-de-ia).
+
 ## El problema de seguridad que nadie ha resuelto del todo
 
 Delegar la navegación a un agente también delega el riesgo. Un equipo de la Universidad de Washington analizó siete navegadores agénticos populares y descubrió que cuatro de ellos permiten saltarse la "política del mismo origen" (same-origin policy), la protección básica que impide que dos webs abiertas en un navegador puedan leer la información de la otra; los investigadores ejecutaron un ataque de prueba de concepto real contra ChatGPT Atlas, según [UW News](https://www.washington.edu/news/2026/06/30/some-agentic-ai-browsers-come-with-major-cybersecurity-risks-uw-study-finds/). Un ingeniero de seguridad de Brave llegó a una conclusión parecida: todos los navegadores que analizó, incluidos Comet, Atlas y el navegador de IA de Opera, resultaron vulnerables a la inyección de instrucciones ocultas (prompt injection). Y no es un riesgo teórico: la proporción de páginas rastreadas con instrucciones maliciosas ocultas para agentes creció un **32% entre noviembre de 2025 y febrero de 2026**, con blogs, foros y secciones de comentarios como los vectores favoritos de los atacantes.
@@ -41,4 +52,4 @@ Si una parte creciente de las visitas a tu web ya no las hace una persona, sino 
 
 ## Todavía en fase beta, pero con el reloj corriendo
 
-Ningún navegador agéntico es hoy una solución madura y sin fricciones: Atlas se ha caído, Comet ha acabado en los tribunales y los estudios de seguridad encuentran agujeros en casi todos. Pero el dinero, el crecimiento de uso y el interés de OpenAI, Google, Anthropic y Perplexity apuntan en la misma dirección: la navegación por defecto va a dejar de ser manual. La pregunta ya no es si va a pasar, sino cuánto va a tardar tu negocio en estar preparado para que quien "visite" tu web no sea una persona.
+Ningún navegador agéntico es hoy una solución madura y sin fricciones: Atlas se ha caído, Comet ha acabado en los tribunales y los estudios de seguridad encuentran agujeros en casi todos. Pero el dinero, el crecimiento de uso y el interés de OpenAI, Google, Anthropic y Perplexity apuntan en la misma dirección: la navegación por defecto va a dejar de ser manual. La pregunta ya no es si va a pasar, sino cuánto va a tardar tu negocio en estar preparado para que quien "visite" tu web no sea una persona. Por dónde empezar lo explicamos en [cómo preparar tu web para agentes de IA](https://emirodgar.es/web-para-agentes-ia).

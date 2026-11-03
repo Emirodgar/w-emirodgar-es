@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-15
+date_modified: 2026-11-03
 folder: ia
 permalink: ai-overviews-google-trafico-organico
 ---
@@ -38,6 +39,14 @@ Los números por cabecera dan una idea más clara de lo que significa esto en la
 Cuando la caída de tráfico empieza a poner en riesgo el modelo de negocio, la respuesta deja de ser solo técnica. **Penske Media Corporation** (editora de Rolling Stone o Variety, entre otras) presentó en febrero de 2026 un escrito judicial detallado que acusa a Google de "canibalizar" el tráfico de los editores a través de los AI Overviews, dentro de una demanda antimonopolio que sigue en tribunales. El **European Publishers Council** ha presentado además una queja formal ante la Comisión Europea por el mismo motivo, según recoge [eMarketer](https://www.emarketer.com/content/google-faces-first-major-publisher-lawsuit-over-ai-overviews).
 
 Google, por su parte, ha calificado los AI Overviews como una simple "mejora de producto" y ha restado importancia al acuerdo implícito que llevaba años sosteniendo la web abierta: dejar que Google rastree tu contenido a cambio de recibir tráfico a cambio. La compañía sostiene que cualquier editor puede optar por no ser indexado si no está de acuerdo con cómo se usa su contenido, una opción que en la práctica equivale a desaparecer del buscador dominante. Aun así, y en paralelo al litigio, Google anunció en 2026 **cinco actualizaciones a AI Overviews y AI Mode** diseñadas explícitamente para devolver más tráfico a las webs que alimentan sus respuestas, según [TheNextWeb](https://thenextweb.com/news/google-ai-overviews-publisher-links-search-traffic).
+
+## El otro lado de la cuenta: cómo monetiza Google la búsqueda con IA
+
+La caída de clics tiene un reverso en el balance de Google. En los resultados del tercer trimestre de 2026, Alphabet registró un crecimiento del **12% interanual en consultas de búsqueda**, el más rápido en cinco años, pero los ingresos de Search y publicidad (unos **63.300 millones de dólares**, también un 12% más) se quedaron unos **1.600 millones por debajo** de lo que esperaban los analistas, que anticipaban cerca de 65.000 millones. La acción cayó alrededor de un 10%, según [Gadget Review](https://www.gadgetreview.com/google-searches-are-up-12-stock-crashed-10-ai-mode-is-to-blame), que recoge datos de CNBC. El ritmo de crecimiento de Search se ha ido enfriando: del 19% del primer trimestre al 17% del segundo y al 12% del tercero (Alphabet también citó el tipo de cambio como factor relevante en esa desaceleración).
+
+La explicación que dio la compañía es que las consultas de **AI Mode son unas tres veces más largas** que las tradicionales, pero monetizan menos, según su director comercial, Philipp Schindler. Alphabet no ha dicho cuánto menos ingresa cada consulta, y sostiene que la mayoría de las de AI Mode son adicionales y no sustituyen a búsquedas que ya existían. Para cerrar esa brecha, Google prepara **anuncios conversacionales de varios turnos** que se adaptan a lo largo de la conversación con la IA (llegarán primero a Estados Unidos), llevará los anuncios de AI Mode a más mercados internacionales y ampliará la publicidad dentro de AI Overviews y AI Mode. Según una investigación de Google citada por 9to5Google, los primeros datos muestran un CTR similar entre fichas de producto patrocinadas y orgánicas.
+
+Para una web, la lectura es doble. Por un lado, el modelo de ingresos de Google se está rehaciendo alrededor de la conversación, con anuncios que compartirán espacio con las respuestas, algo parecido a lo que ya ocurre con [ChatGPT Ads](https://emirodgar.es/geo). Por otro, la bolsa ha castigado que esa monetización vaya por detrás del uso, lo que es una señal de que Google tiene motivos para acelerarla; qué significará eso para el tráfico que recibe cada web es, por ahora, una incógnita.
 
 ## Qué puede hacer una web frente a esto
 
