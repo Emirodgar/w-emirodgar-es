@@ -39,6 +39,7 @@ Cuando se convocan elecciones, la información útil está repartida entre el BO
 
 <ul class="hub-grid">
 <li><a class="hub-card" href="https://emirodgar.es/elecciones-29n-pais-al-reves"><strong>Elecciones del 29N</strong><span>Un país al revés y un polvorín por heredar.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/candidatos-salamanca-elecciones-29n"><strong>Candidatos de Salamanca</strong><span>Listas al Congreso y al Senado por Salamanca el 29N.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/analisis-salf-elecciones"><strong>Se Acabó La Fiesta en Aragón</strong><span>Análisis de sus resultados.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/financiacion-partidos-politicos-espana"><strong>Cómo se financian los partidos</strong><span>De dónde sale el dinero de la política.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/asesores-politicos"><strong>Asesores políticos</strong><span>Quiénes son y cuántos hay.</span></a></li>

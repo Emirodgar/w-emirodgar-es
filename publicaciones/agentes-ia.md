@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
-date_modified: 2026-11-03
+date_modified: 2026-11-04
 folder: ia
 permalink: agentes-de-ia
 ---
@@ -21,6 +21,20 @@ Durante un par de años, "usar IA" significó básicamente escribirle a un chatb
 Un chatbot recibe una pregunta y devuelve una respuesta. Un **agente de IA** recibe un objetivo, y decide por sí solo los pasos necesarios para cumplirlo: buscar información, consultar una base de datos, ejecutar código, rellenar un formulario o encadenar varias de esas acciones seguidas, sin que un humano tenga que ir dando la instrucción paso a paso. Si necesitas repasar antes los términos básicos, tienes las definiciones en nuestro [glosario de inteligencia artificial](https://emirodgar.es/glosario-ia).
 
 Ejemplo sencillo: en vez de pedirle a una IA "resume estas facturas", un agente puede recibir la instrucción "concilia las facturas del mes y avísame si hay alguna discrepancia", y encargarse él solo de abrir los archivos, cruzarlos con el sistema contable y generar el informe. Ese salto —de responder a actuar— es lo que está detrás de buena parte del entusiasmo (y también de la preocupación) alrededor de la IA en 2026.
+
+## La diferencia entre bot y agente según Bill Gates
+
+Una de las explicaciones más claras de esta diferencia sigue siendo la de Bill Gates en [su texto sobre agentes](https://www.gatesnotes.com/AI-agents), de finales de 2023. Entonces vaticinó que en cinco años dejaríamos de usar una aplicación distinta para cada tarea y bastaría con decirle al dispositivo, en lenguaje cotidiano, lo que queremos.
+
+Para Gates, la mayoría de las herramientas de IA son **bots**: viven dentro de una aplicación, solo intervienen cuando se lo pides y no recuerdan cómo las usas de una vez a otra. Un **agente**, en cambio:
+
+- **Es proactivo:** hace sugerencias antes de que se las pidas.
+- **Trabaja entre aplicaciones**, no solo en una.
+- **Aprende de ti:** recuerda tu actividad y reconoce patrones, aunque la decisión final sea siempre tuya.
+
+Su ejemplo es un viaje: un bot de viajes te enseña hoteles dentro de tu presupuesto, mientras que un agente sabe cuándo viajas, si sueles repetir destino o probar uno nuevo, y te propone lugares y restaurantes acordes. Y sostiene que su mayor efecto será abaratar servicios hoy caros, como la salud, la educación, la productividad o el entretenimiento y las compras. Clippy, el asistente de Microsoft Office, era un bot, no un agente.
+
+Conviene leerlo con perspectiva: es un texto de hace casi tres años y una visión de futuro. La parte del agente que "lo sabe todo de ti" es justo la que choca con los riesgos de privacidad que vienen más abajo.
 
 ## Un mercado que ya es real, no una promesa
 

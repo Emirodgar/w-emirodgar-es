@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
+date_modified: 2026-11-04
 folder: analisis
 permalink: analisis-natalidad-envejecimiento-espana
 ---
@@ -26,6 +27,20 @@ El dato que mejor explica por qué esta natalidad ya no se parece a la de genera
 La cifra que de verdad marca el problema estructural es la tasa de fecundidad: **1,12 hijos por mujer en 2023**, uno de los valores más bajos de toda Europa, según recoge [FIFTIERS](https://fiftiers.com/informe-fiftiers-piramide-poblacional-de-espana-en-2025-y-crisis-de-natalidad/) a partir de datos del INE. Para que una población se mantenga estable sin recurrir a la inmigración, hace falta una tasa cercana a 2,1 hijos por mujer. España lleva más de una década muy por debajo de ese umbral.
 
 La consecuencia ya es visible en la pirámide de población: en 2025, las personas de **65 años o más representan casi el 21%** de la población española, mientras que los menores de 15 años apenas llegan al **13%**. Es una base cada vez más estrecha sosteniendo una cúspide cada vez más ancha.
+
+## Ya hay más de 10 millones de mayores de 65 años
+
+Un informe del Departamento de Población del CSIC (IEGD), recogido por [El Mundo](https://www.elmundo.es/economia/2026/11/04/6aea1c33e9cf4aba1e8b459e.html), pone cifras exactas al envejecimiento. A 1 de enero de 2025 había **10.178.625 personas de 65 años o más**, el **20,7%** de la población (49.128.297 personas) y 250.257 más que el año anterior. Es la primera vez que se supera el 20%, y la proporción se ha duplicado desde 1975, cuando era del 10,2%.
+
+Hay tres datos más que conviene tener a mano:
+
+- **El envejecimiento se acelera por arriba.** El peso de los mayores de 80 años se cuadruplica desde 1975 y el de los mayores de 90 se multiplica por más de nueve. El CSIC lo llama sobreenvejecimiento.
+- **La edad media** ha pasado de 33 años en 1975 a 44,55 en 2025.
+- **La proyección para 2046** es de 16,1 millones de mayores de 65, el 29,6% de una población de más de 54,6 millones: casi una de cada tres personas.
+
+La inmigración modera el aumento de la proporción de mayores, pero no lo frena. Francisco Rodríguez, de Funcas, lo plantea como un reto económico más que demográfico: el problema no es que haya demasiados pensionistas, sino pocos cotizantes para el gasto que hay que sostener, y además las pensiones nuevas entran más altas que las que salen. Su receta pasa por más productividad, más empleo y mejores salarios reales, y reconoce que el empleo y la inmigración ayudan pero no resuelven solos el desequilibrio a largo plazo.
+
+Una nota sobre las cifras: este 20,7% es del CSIC con el censo anual a 1 de enero de 2025, y no coincide exactamente con el "casi 21%" que cito arriba ni con el 21,1% de la proyección del INE, porque cada fuente usa su propia base y fecha.
 
 ## Lo que dice el INE sobre las próximas cinco décadas
 
