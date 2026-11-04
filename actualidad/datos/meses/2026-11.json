@@ -113,7 +113,7 @@
         "titulo": "Muere el delantero del Tenerife Jesús de Miguel tras el brutal choque con el portero del Andorra",
         "url": "https://www.elmundo.es/deportes/futbol/segunda-division/2026/11/03/6ae97d60e4d4d8e9038b459e.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-03",
@@ -126,6 +126,48 @@
         "medio": "The Objective",
         "titulo": "La Asamblea de Murcia declara a Sánchez «persona ‘non grata’» con los votos de PP y Vox",
         "url": "https://theobjective.com/espana/politica/2026-11-03/asamblea-murcia-sanchez-non-grata-pp-vox/"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-04",
+      "edicion": "2026-11-04",
+      "titulo": "Dimisión de Óscar Puente como ministro de Transportes",
+      "categoria": "Política",
+      "descripcion": "Óscar Puente renuncia a su cargo como ministro de Transportes, asumiendo Carlos Cuerpo la cartera. Esta dimisión se produce tras dos accidentes ferroviarios y en medio de un debate sobre la gestión y la situación de Adif.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Sánchez delega en Cuerpo la gestión de Transportes tras la dimisión de Puente: \"Su renuncia ayuda a recuperar la confianza en la dignidad política\"",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/04/6aeaef26fdddff3b558b4571.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-04",
+      "edicion": "2026-11-04",
+      "titulo": "Victoria demócrata en las Midterms de EE.UU.",
+      "categoria": "Internacional",
+      "descripcion": "Los demócratas logran una \"ola azul\" en las elecciones de medio término, recuperando el control del Senado y la Cámara de Representantes, lo que representa un castigo al trumpismo.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "'Ola azul': los demócratas arrasan en las Midterms y recuperan el control del Senado y la Cámara de Representantes triunfando en Texas o Kansas",
+        "url": "https://www.elmundo.es/internacional/2026/11/04/6aea9432e4d4d8701a8b45be.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-04",
+      "edicion": "2026-11-04",
+      "titulo": "Aumento del 75% en casos de violencia filioparental",
+      "categoria": "Sociedad",
+      "descripcion": "La Fundación Anar denuncia un incremento significativo en los casos de violencia de padres contra hijos, con relatos de agresiones físicas y verbales que dejan lesiones importantes.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Aumentan un 75% los casos de violencia de padres contra hijos: \"Les dicen a los niños que no valen para nada y que se arrepienten de haberlos tenido\"",
+        "url": "https://www.elmundo.es/espana/2026/11/04/6aeb0e39e4d4d8945f8b4587.html"
       },
       "destacado": false
     }

@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-03",
-  "generado_en": "2026-11-03T12:42:05+00:00",
-  "titular": "El Gobierno aprueba ayudas para Urda mientras se investiga el accidente y se reduce la frecuencia Madrid-Sevilla",
+  "fecha": "2026-11-04",
+  "generado_en": "2026-11-04T12:51:59+00:00",
+  "titular": "Dimisión de Óscar Puente, victoria demócrata en EE.UU. y aumento de violencia filioparental marcan la jornada",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 136
+    "El Mundo": 26,
+    "The Objective": 209
   },
   "temas": [
     {
-      "tema": "Ayudas y consecuencias del accidente de Urda",
+      "tema": "Dimisión de Óscar Puente y crisis ferroviaria",
       "categoria": "Política",
-      "descripcion": "El Gobierno aprueba un paquete de 30 millones de euros en ayudas para las víctimas del accidente ferroviario de Urda, que ya cuenta con 69 identificados, mientras se mantienen 26 heridos hospitalizados y se exige la dimisión del ministro de Transportes."
+      "descripcion": "Óscar Puente dimite como ministro de Transportes, siendo sustituido por Carlos Cuerpo, en medio de la polémica por los accidentes ferroviarios y las denuncias sobre la situación de Adif. La UE interviene en la investigación del accidente de Urda."
     },
     {
-      "tema": "Reducción de frecuencias ferroviarias Madrid-Sevilla",
-      "categoria": "Economía",
-      "descripcion": "El ministro Óscar Puente anuncia la reducción de frecuencias en la línea Madrid-Sevilla por la implantación del sistema ERMTS, generando críticas y peticiones de dimisión."
+      "tema": "Victoria demócrata en las Midterms de EE.UU.",
+      "categoria": "Internacional",
+      "descripcion": "Los demócratas logran una victoria contundente en las elecciones de medio término en Estados Unidos, recuperando el control del Senado y la Cámara de Representantes, lo que ha sido celebrado por el Gobierno español y Podemos."
     },
     {
-      "tema": "Fallecimiento de Jesús de Miguel",
-      "categoria": "Deportes",
-      "descripcion": "El delantero del Tenerife Jesús de Miguel fallece tras un choque en un partido, lo que lleva a la suspensión de encuentros de Copa y al pésame de clubes."
-    },
-    {
-      "tema": "Desalojo de la acampada de Sol",
+      "tema": "Aumento de la violencia filioparental",
       "categoria": "Sociedad",
-      "descripcion": "La Policía desaloja la acampada de Sol en Madrid, resultando en dos detenidos y 334 expulsados, y generando pérdidas millonarias para el comercio local."
+      "descripcion": "La Fundación Anar alerta de un incremento del 75% en los casos de violencia de padres contra hijos, con relatos de agresiones físicas y verbales."
+    },
+    {
+      "tema": "Ciberataque a Crédit Mutuel Arkéa",
+      "categoria": "Economía",
+      "descripcion": "El banco francés Crédit Mutuel Arkéa sufre un ciberataque que resulta en la conversión de 118 millones de euros en criptomonedas, aunque sin afectar a los clientes."
     }
   ]
 }

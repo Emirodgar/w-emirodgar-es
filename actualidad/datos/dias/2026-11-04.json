@@ -1,0 +1,1995 @@
+{
+  "fecha": "2026-11-04",
+  "generado_en": "2026-11-04T12:51:59+00:00",
+  "modelo": "gemini-2.5-flash",
+  "titular": "Dimisión de Óscar Puente, victoria demócrata en EE.UU. y aumento de violencia filioparental marcan la jornada",
+  "resumen": "La jornada política ha estado marcada por la dimisión de Óscar Puente como ministro de Transportes, asumiendo Carlos Cuerpo su cartera. Esta renuncia, que el Gobierno de Castilla-La Mancha y Por Andalucía han calificado como \"dignidad política\", ha generado diversas reacciones, desde el elogio del presidente de Renfe hasta las críticas del PP, que la considera un \"teatrillo en prime time\" y la atribuye a un \"interés electoral\". La dimisión se produce tras dos accidentes ferroviarios, y se ha conocido que Puente recibió 12 avisos sobre un sistema \"al límite\" en Adif, donde cargos denuncian una \"caza de brujas\" interna. La UE ha intervenido en la investigación del accidente de Urda, y el funeral por las víctimas se celebrará el 12 de noviembre en Toledo.\n\nEn el ámbito internacional, los demócratas han logrado una \"ola azul\" en las Midterms de EE.UU., recuperando el control del Senado y la Cámara de Representantes, con victorias significativas en Texas y Kansas. Este resultado ha sido celebrado por el Gobierno español y Podemos, que lo ven como un augurio de cambios en España. Por otro lado, China ha confirmado contactos con EE.UU. y Rusia para una posible cumbre trilateral de presidentes. En Nepal, dos helicópteros colisionaron cerca del Everest, causando la muerte de un turista.\n\nEn el plano social, la Fundación Anar ha denunciado un aumento del 75% en los casos de violencia de padres contra hijos, con relatos de agresiones físicas y verbales. En Cataluña, una joven de 18 años ha sido detenida por su \"participación activa\" en la \"coordinación\" de los saqueos de Blocus en Barcelona, mientras que los Mossos han arrestado a los ladrones que robaron a la madre de Albiol. En el ámbito económico, Crédit Mutuel Arkéa sufrió un ciberataque que convirtió 118 millones en criptomonedas, aunque sin consecuencias para los clientes. La AIReF ha instado a medidas de ajuste tras las elecciones, advirtiendo que España incumple el plan con la UE. Finalmente, en deportes, Rafa Nadal entrará en la Junta Directiva del Real Madrid, y se han aplazado partidos de fútbol tras la muerte del jugador Jesús de Miguel.",
+  "temas": [
+    {
+      "tema": "Dimisión de Óscar Puente y crisis ferroviaria",
+      "categoria": "Política",
+      "descripcion": "Óscar Puente dimite como ministro de Transportes, siendo sustituido por Carlos Cuerpo, en medio de la polémica por los accidentes ferroviarios y las denuncias sobre la situación de Adif. La UE interviene en la investigación del accidente de Urda.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Carlos Cuerpo, el ministro más moderado que no milita en el PSOE, acumula ya tres carteras en la recta final de campaña",
+          "url": "https://www.elmundo.es/economia/2026/11/04/6aeb050ce9cf4ace0d8b4581.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Sánchez delega en Cuerpo la gestión de Transportes tras la dimisión de Puente: \"Su renuncia ayuda a recuperar la confianza en la dignidad política\"",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/04/6aeaef26fdddff3b558b4571.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "\"Puente estaba amortizado\": la presión interna en el PSOE y los trackings fulminan al escudero clave de Sánchez",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/04/6aea22ccfdddfffe538b45a9.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Óscar Puente se deja caer",
+          "url": "https://www.elmundo.es/espana/2026/11/04/6aea5cf9fdddffbb3e8b45d0.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Cargos de Adif denuncian una \"caza de brujas\" interna: \"Nos quieren silenciar a todos los que no hemos sido nombrados a dedo\"",
+          "url": "https://www.elmundo.es/espana/2026/11/04/6aea2328fdddff9d618b45a7.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Puente recibió 12 avisos de un sistema \"al límite\" entre la tragedia de Adamuz y la de Urda: \"Propician el error humano\"",
+          "url": "https://www.elmundo.es/economia/2026/11/03/6ae9b47ce85eceb5658b4572.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Todas las víctimas identificadas del accidente de trenes de Urda: la joven ingeniera, el guardia recién casado, el artista mexicano...",
+          "url": "https://www.elmundo.es/espana/2026/11/03/6aea39c721efa02d2f8b4581.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Gobierno de Page ve en la dimisión de Puente «la única decisión que podía tomar»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/page-dimision-puente/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El PP acusa al PSOE de forzar la dimisión de Puente por «interés electoral»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/pp-psoe-dimision-puente-interes-electoral/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "La UE interviene en la investigación del accidente de Urda que dejó 69 muertos",
+          "url": "https://theobjective.com/economia/transporte/2026-11-04/ue-investigacion-accidente-urda/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "VÍDEO | Óscar López sobre la dimisión de Óscar Puente: «Ha demostrado lo que es la buena política»",
+          "url": "https://theobjective.com/videos/espana/2026-11-04/lopez-dimision-puente-buena-politica/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El presidente de Renfe elogia a Puente pese a la crisis ferroviaria: «Uno de los mejores ministros»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/renfe-elogia-puente-ferroviaria-mejores-ministros/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Por Andalucía califica de «dignidad política» la dimisión de Puente tras el accidente de Urda",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/por-andalucia-politica-dimision-puente-urda/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Óscar Puente, sobre su padre: «Fue un niño de posguerra que nació en Galicia, su camino no fue fácil; se lo debo todo, no podría haber sido nada sin él»",
+          "url": "https://theobjective.com/gente/2026-11-04/oscar-puente-padre-nino-posguerra-galicia-camino-nada-sin-el/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Las agencias de viajes exigen una reunión urgente a Transportes por la crisis de los trenes",
+          "url": "https://theobjective.com/economia/2026-11-04/agencias-viajes-reunion-urgente-transportes-crisis-trenes/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "VÍDEO | Cayetana Álvarez de Toledo responde a Sánchez: «Efectivamente, no todos somos iguales»",
+          "url": "https://theobjective.com/videos/espana/2026-11-04/cayetana-sanchez-no-somos-iguales/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El funeral por las víctimas de Urda será en la Catedral de Toledo el próximo 12 de noviembre",
+          "url": "https://theobjective.com/espana/2026-11-04/funeral-victimas-catedral-toledo-12-noviembre/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Para las víctimas de Urda… in memoriam",
+          "url": "https://theobjective.com/videos/espana/2026-11-04/victimas-urda-in-memoriam/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Patxi López dice que Puente demuestra que «no todos somos iguales» y lo compara con Mazón",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/patxi-lopez-puente-no-todos-iguales/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Feijóo considera un «teatrillo en prime time» la dimisión de Puente y una «forma indigna»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/feijoo-puente-teatrillo-dimision/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Carlos Cuerpo, más allá de su nueva cartera como ministro de Transportes: habla cinco idiomas, «duerme poco», su novia es funcionaria y tiene una hija",
+          "url": "https://theobjective.com/gente/2026-11-04/carlos-cuerpo-ministro-transportes-cinco-idiomas-duerme-poco-novia-hija/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Podcast | Dos accidentes graves, el nuevo listón para las dimisiones políticas",
+          "url": "https://theobjective.com/podcasts/podcast-objetivo-al-dia/podcast-dos-accidentes-graves-el-nuevo-liston-para-las-dimisiones-politicas/"
+        }
+      ]
+    },
+    {
+      "tema": "Victoria demócrata en las Midterms de EE.UU.",
+      "categoria": "Internacional",
+      "descripcion": "Los demócratas logran una victoria contundente en las elecciones de medio término en Estados Unidos, recuperando el control del Senado y la Cámara de Representantes, lo que ha sido celebrado por el Gobierno español y Podemos.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "'Ola azul': los demócratas arrasan en las Midterms y recuperan el control del Senado y la Cámara de Representantes triunfando en Texas o Kansas",
+          "url": "https://www.elmundo.es/internacional/2026/11/04/6aea9432e4d4d8701a8b45be.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Talarico hace historia para los demócratas en Texas en las midterms de EEUU: \"Le ganamos a Goliat\"",
+          "url": "https://www.elmundo.es/internacional/2026/11/04/6aeb0223e85eceed5b8b4591.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "JD Vance y Rubio, los favoritos para heredar el 'trono' MAGA",
+          "url": "https://www.elmundo.es/internacional/2026/11/04/6aea0add21efa02d2f8b456f.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Podemos celebra la victoria demócrata en Estados Unidos y alienta a «forzar los cambios»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/podemos-democrata-estados-unidos/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Illa, a Abascal: «Espero que no se vaya del país cuando pierda, como hizo Bolsonaro»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/illa-abascal-bolsonaro/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El triunfo arrollador de los demócratas en las elecciones de EEUU, en imágenes",
+          "url": "https://theobjective.com/galerias/internacional/2026-11-04/triunfo-democratas-elecciones-eeuu-imagenes/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez celebra el triunfo demócrata en EEUU y augura que «ocurrirá pronto en España»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/sanchez-triunfo-democrata-eeuu/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Albares augura que la «ola de cambio» seguirá en España tras la victoria demócrata en EEUU",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/albares-cambio-seguira-espana-victoria-democrata-eeuu/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Frente Amplio celebra la derrota de Trump y avisa: «El 29-N les toca a Feijóo y Abascal»",
+          "url": "https://theobjective.com/espana/politica/2026-11-04/frente-amplio-celebra-derrota-trump/"
+        }
+      ]
+    },
+    {
+      "tema": "Aumento de la violencia filioparental",
+      "categoria": "Sociedad",
+      "descripcion": "La Fundación Anar alerta de un incremento del 75% en los casos de violencia de padres contra hijos, con relatos de agresiones físicas y verbales.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Aumentan un 75% los casos de violencia de padres contra hijos: \"Les dicen a los niños que no valen para nada y que se arrepienten de haberlos tenido\"",
+          "url": "https://www.elmundo.es/espana/2026/11/04/6aeb0e39e4d4d8945f8b4587.html"
+        }
+      ]
+    },
+    {
+      "tema": "Ciberataque a Crédit Mutuel Arkéa",
+      "categoria": "Economía",
+      "descripcion": "El banco francés Crédit Mutuel Arkéa sufre un ciberataque que resulta en la conversión de 118 millones de euros en criptomonedas, aunque sin afectar a los clientes.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "El banco francés Crédit Mutuel Arkéa sufre un ciberataque en el que piratean y convierten en criptomonedas 118 millones",
+          "url": "https://www.elmundo.es/economia/2026/11/04/6aeb1bc8fc6c83be3b8b456e.html"
+        }
+      ]
+    },
+    {
+      "tema": "Detenciones por saqueos de Blocus y robo a la madre de Albiol",
+      "categoria": "Sucesos",
+      "descripcion": "Una joven es detenida por su implicación en la coordinación de los saqueos de Blocus en Barcelona, y los Mossos detienen a los ladrones que robaron a la madre de Xavier García Albiol.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Detenida una joven de 18 años por su \"participación activa\" en la \"coordinación\" de los saqueos de Blocus en Barcelona",
+          "url": "https://www.elmundo.es/cataluna/2026/11/04/6aeb2515e9cf4a00548b45b5.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Los Mossos detienen a los ladrones que robaron a la madre de Albiol: \"Hay que ser muy miserable para atracar a una mujer de 89 años\"",
+          "url": "https://www.elmundo.es/cataluna/2026/11/04/6aeaf5fcfdddff630b8b4578.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El País Vasco dice que Blocus no está en sus calles y el sábado no se detectaron «hordas»",
+          "url": "https://theobjective.com/espana/pais-vasco/2026-11-04/pais-vasco-blocus/"
+        }
+      ]
+    },
+    {
+      "tema": "Rafa Nadal en la Junta Directiva del Real Madrid",
+      "categoria": "Deportes",
+      "descripcion": "Rafa Nadal será propuesto para formar parte de la Junta Directiva del Real Madrid, lo que se votará en la Asamblea del 21 de noviembre.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Rafa Nadal entrará en la Junta Directiva del Real Madrid",
+          "url": "https://www.elmundo.es/deportes/futbol/2026/11/04/6aeb1c38e85ecea52b8b456e.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Real Madrid propone a Rafa Nadal como nuevo miembro de su junta directiva",
+          "url": "https://theobjective.com/deportes/futbol/2026-11-04/real-madrid-rafa-nadal-junta-directiva/"
+        }
+      ]
+    },
+    {
+      "tema": "Muerte del futbolista Jesús de Miguel",
+      "categoria": "Deportes",
+      "descripcion": "El fallecimiento del jugador Jesús de Miguel tras un impacto en un partido ha provocado el aplazamiento de encuentros y ha generado debate sobre los límites del Derecho penal en estos casos.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "La cadena de despropósitos que terminó en la muerte de Jesús de Miguel: \"Sabíamos que más temprano que tarde pasaría algo así\"",
+          "url": "https://www.elmundo.es/cronica/2026/11/03/6aea5371e9cf4ab16b8b458e.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Los límites del Derecho penal en la muerte de Jesús de Miguel",
+          "url": "https://www.elmundo.es/deportes/futbol/segunda-division/2026/11/03/6aea3589e85ece5f1c8b4596.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Aplazado el FC Andorra-Mallorca por la muerte del jugador Jesús de Miguel",
+          "url": "https://theobjective.com/deportes/futbol/2026-11-04/aplazado-fc-andorra-mallorca/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Aplazado el Granada-Tenerife tras la muerte del futbolista Jesús de Miguel",
+          "url": "https://theobjective.com/deportes/futbol/2026-11-04/aplazado-tenerife-granada-muerte-jesus-de-miguel/"
+        }
+      ]
+    }
+  ],
+  "enfoques": "Ambos medios coinciden en destacar la dimisión de Óscar Puente y la victoria demócrata en las Midterms de EE.UU., así como la noticia de Rafa Nadal en la Junta Directiva del Real Madrid y la muerte del futbolista Jesús de Miguel. El Mundo pone un foco más amplio en temas sociales como el aumento de la violencia filioparental y el caso del hombre que lleva diez años en la calle por un error en su nombre, además de abordar el ciberataque a Crédit Mutuel Arkéa y la alerta de la AIReF sobre el incumplimiento del plan con la UE. The Objective, por su parte, profundiza en las reacciones políticas a la dimisión de Puente y en aspectos económicos como la compra de acciones de Santander por Ana Botín y la inversión de Google en Malasia, y también cubre la huelga del 11-N y la situación de la vivienda.",
+  "por_medio": {
+    "El Mundo": 26,
+    "The Objective": 209
+  },
+  "por_categoria": {
+    "Deportes": 2,
+    "Política": 1,
+    "Economía": 1,
+    "Internacional": 1,
+    "Sociedad": 1,
+    "Sucesos": 1
+  },
+  "hitos": [
+    {
+      "fecha": "2026-11-04",
+      "edicion": "2026-11-04",
+      "titulo": "Dimisión de Óscar Puente como ministro de Transportes",
+      "categoria": "Política",
+      "descripcion": "Óscar Puente renuncia a su cargo como ministro de Transportes, asumiendo Carlos Cuerpo la cartera. Esta dimisión se produce tras dos accidentes ferroviarios y en medio de un debate sobre la gestión y la situación de Adif.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Sánchez delega en Cuerpo la gestión de Transportes tras la dimisión de Puente: \"Su renuncia ayuda a recuperar la confianza en la dignidad política\"",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/04/6aeaef26fdddff3b558b4571.html"
+      }
+    },
+    {
+      "fecha": "2026-11-04",
+      "edicion": "2026-11-04",
+      "titulo": "Victoria demócrata en las Midterms de EE.UU.",
+      "categoria": "Internacional",
+      "descripcion": "Los demócratas logran una \"ola azul\" en las elecciones de medio término, recuperando el control del Senado y la Cámara de Representantes, lo que representa un castigo al trumpismo.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "'Ola azul': los demócratas arrasan en las Midterms y recuperan el control del Senado y la Cámara de Representantes triunfando en Texas o Kansas",
+        "url": "https://www.elmundo.es/internacional/2026/11/04/6aea9432e4d4d8701a8b45be.html"
+      }
+    },
+    {
+      "fecha": "2026-11-04",
+      "edicion": "2026-11-04",
+      "titulo": "Aumento del 75% en casos de violencia filioparental",
+      "categoria": "Sociedad",
+      "descripcion": "La Fundación Anar denuncia un incremento significativo en los casos de violencia de padres contra hijos, con relatos de agresiones físicas y verbales que dejan lesiones importantes.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Aumentan un 75% los casos de violencia de padres contra hijos: \"Les dicen a los niños que no valen para nada y que se arrepienten de haberlos tenido\"",
+        "url": "https://www.elmundo.es/espana/2026/11/04/6aeb0e39e4d4d8945f8b4587.html"
+      }
+    }
+  ],
+  "noticias": [
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Ana Botín compra 200.000 acciones más de Santander por 2 millones a través de Bafimar",
+      "url": "https://theobjective.com/economia/2026-11-04/ana-botin-acciones-bafimar/",
+      "fecha": "2026-11-04T12:49:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Aplazado el FC Andorra-Mallorca por la muerte del jugador Jesús de Miguel",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-04/aplazado-fc-andorra-mallorca/",
+      "fecha": "2026-11-04T12:45:41+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "Detenida una joven de 18 años por su \"participación activa\" en la \"coordinación\" de los saqueos de Blocus en Barcelona",
+      "url": "https://www.elmundo.es/cataluna/2026/11/04/6aeb2515e9cf4a00548b45b5.html",
+      "fecha": "2026-11-04T12:41:36+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La instalación del árbol de Navidad de la Puerta del Sol comenzará el lunes",
+      "url": "https://theobjective.com/espana/madrid/2026-11-04/arbol-navidad-sol/",
+      "fecha": "2026-11-04T12:40:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Más de 3.600 comités y secciones sindicales de CCOO y UGT apoyan la huelga del 11-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/3-600-comites-ccoo-ugt-huelga-11-n/",
+      "fecha": "2026-11-04T12:35:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Podemos celebra la victoria demócrata en Estados Unidos y alienta a «forzar los cambios»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/podemos-democrata-estados-unidos/",
+      "fecha": "2026-11-04T12:32:23+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Rodri Hernández no jugará contra el Atlético de Madrid por una lesión muscular",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-04/rodri-no-jugara-atletico-madrid-lesion-muscular/",
+      "fecha": "2026-11-04T12:25:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "La Asamblea Nacional Catalana llama a acudir con esteladas a la huelga del 11-N",
+      "url": "https://theobjective.com/sociedad/2026-11-04/asamblea-nacional-catalana-esteladas-huelga-11-n/",
+      "fecha": "2026-11-04T12:24:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno de Page ve en la dimisión de Puente «la única decisión que podía tomar»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/page-dimision-puente/",
+      "fecha": "2026-11-04T12:15:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La justicia andaluza absuelve a un hombre condenado a seis años por una pelea en Cádiz",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-04/justicia-andaluza-absuelve-hombre-pelea-cadiz/",
+      "fecha": "2026-11-04T12:12:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Real Madrid propone a Rafa Nadal como nuevo miembro de su junta directiva",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-04/real-madrid-rafa-nadal-junta-directiva/",
+      "fecha": "2026-11-04T12:10:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La madre de la bebé muerta por quemaduras cambia su versión por «miedo» al padre",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-04/bebe-muerta-quemaduras-miedo-padre/",
+      "fecha": "2026-11-04T12:08:52+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El precio de la vivienda en las grandes ciudades es un 25% superior al de la media de España",
+      "url": "https://theobjective.com/economia/2026-11-04/precio-vivienda-grandes-ciudades/",
+      "fecha": "2026-11-04T12:04:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Quién es quién en la familia materna de María Pombo: de su madre, Teresa Ribó, a sus hermanas y la abuela que acaba de perder",
+      "url": "https://theobjective.com/gente/2026-11-04/familia-materna-maria-pombo-madre-hermanas-abuela-perder/",
+      "fecha": "2026-11-04T12:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP acusa al PSOE de forzar la dimisión de Puente por «interés electoral»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/pp-psoe-dimision-puente-interes-electoral/",
+      "fecha": "2026-11-04T11:59:25+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Rafa Nadal entrará en la Junta Directiva del Real Madrid",
+      "url": "https://www.elmundo.es/deportes/futbol/2026/11/04/6aeb1c38e85ecea52b8b456e.html",
+      "fecha": "2026-11-04T11:58:54+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Aumentan un 75% los casos de violencia de padres contra hijos: \"Les dicen a los niños que no valen para nada y que se arrepienten de haberlos tenido\"",
+      "url": "https://www.elmundo.es/espana/2026/11/04/6aeb0e39e4d4d8945f8b4587.html",
+      "fecha": "2026-11-04T11:58:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La UE interviene en la investigación del accidente de Urda que dejó 69 muertos",
+      "url": "https://theobjective.com/economia/transporte/2026-11-04/ue-investigacion-accidente-urda/",
+      "fecha": "2026-11-04T11:57:40+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Le encarcelan siendo inocente, le corresponden 109.000 euros de indemnización, pero lleva diez años viviendo en la calle por un error en su nombre",
+      "url": "https://www.elmundo.es/internacional/2026/11/04/6aeb1d4e21efa066668b457e.html",
+      "fecha": "2026-11-04T11:56:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Iberdrola pulveriza sus máximos en Bolsa y supera los 150.000 millones de capitalización",
+      "url": "https://theobjective.com/economia/2026-11-04/iberdrola-maximos-bolsa-capitalizacion/",
+      "fecha": "2026-11-04T11:53:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Comunidad de Madrid reclama al Gobierno 750.00 euros por la acampada en Sol",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/comunidad-madrid-gobierno-750-00-euros-acampada-sol/",
+      "fecha": "2026-11-04T11:51:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Google invierte más de 13.000 millones en expandir sus centros de datos en Malasia",
+      "url": "https://theobjective.com/economia/2026-11-04/google-centros-datos-malasia/",
+      "fecha": "2026-11-04T11:50:09+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "El banco francés Crédit Mutuel Arkéa sufre un ciberataque en el que piratean y convierten en criptomonedas 118 millones",
+      "url": "https://www.elmundo.es/economia/2026/11/04/6aeb1bc8fc6c83be3b8b456e.html",
+      "fecha": "2026-11-04T11:49:50+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "CCOO mantiene el optimismo sobre la huelga pese al «’shock’» por el accidente de Urda",
+      "url": "https://theobjective.com/sociedad/2026-11-04/sordo-huelga-accidente-urda/",
+      "fecha": "2026-11-04T11:45:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Aplazado el Granada-Tenerife tras la muerte del futbolista Jesús de Miguel",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-04/aplazado-tenerife-granada-muerte-jesus-de-miguel/",
+      "fecha": "2026-11-04T11:45:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Óscar López sobre la dimisión de Óscar Puente: «Ha demostrado lo que es la buena política»",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/lopez-dimision-puente-buena-politica/",
+      "fecha": "2026-11-04T11:44:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Zelenski condecora a Melania Trump por su papel en el alto el fuego en Oleshki, Ucrania",
+      "url": "https://theobjective.com/internacional/2026-11-04/zelenski-melania-alto-fuego-oleshki-ucrania/",
+      "fecha": "2026-11-04T11:40:24+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox propone bajar el IVA al 18% y recortar las transferencias a las comunidades autónomas",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/vox-iva-18-transferencias-comunidades-autonomas/",
+      "fecha": "2026-11-04T11:36:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox lanza una plataforma para movilizar el voto de los españoles en el extranjero",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/vox-plataforma-voto-espanoles/",
+      "fecha": "2026-11-04T11:35:21+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El presidente de Renfe elogia a Puente pese a la crisis ferroviaria: «Uno de los mejores ministros»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/renfe-elogia-puente-ferroviaria-mejores-ministros/",
+      "fecha": "2026-11-04T11:33:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Por Andalucía califica de «dignidad política» la dimisión de Puente tras el accidente de Urda",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/por-andalucia-politica-dimision-puente-urda/",
+      "fecha": "2026-11-04T11:29:27+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "La Autoridad Fiscal insta a medidas de ajuste tras las elecciones, porque \"España incumple el plan con la UE desde este año\"",
+      "url": "https://www.elmundo.es/economia/2026/11/04/6aeb0f6afdddff8f088b458a.html",
+      "fecha": "2026-11-04T11:21:43+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "'Ola azul': los demócratas arrasan en las Midterms y recuperan el control del Senado y la Cámara de Representantes triunfando en Texas o Kansas",
+      "url": "https://www.elmundo.es/internacional/2026/11/04/6aea9432e4d4d8701a8b45be.html",
+      "fecha": "2026-11-04T11:13:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Óscar Puente, sobre su padre: «Fue un niño de posguerra que nació en Galicia, su camino no fue fácil; se lo debo todo, no podría haber sido nada sin él»",
+      "url": "https://theobjective.com/gente/2026-11-04/oscar-puente-padre-nino-posguerra-galicia-camino-nada-sin-el/",
+      "fecha": "2026-11-04T11:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Un apagón parcial afecta a 13.740 suministros de La Palma durante 22 minutos",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-04/apagon-la-palma/",
+      "fecha": "2026-11-04T10:57:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El País Vasco dice que Blocus no está en sus calles y el sábado no se detectaron «hordas»",
+      "url": "https://theobjective.com/espana/pais-vasco/2026-11-04/pais-vasco-blocus/",
+      "fecha": "2026-11-04T10:46:23+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Las agencias de viajes exigen una reunión urgente a Transportes por la crisis de los trenes",
+      "url": "https://theobjective.com/economia/2026-11-04/agencias-viajes-reunion-urgente-transportes-crisis-trenes/",
+      "fecha": "2026-11-04T10:43:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Carlos Cuerpo, el ministro más moderado que no milita en el PSOE, acumula ya tres carteras en la recta final de campaña",
+      "url": "https://www.elmundo.es/economia/2026/11/04/6aeb050ce9cf4ace0d8b4581.html",
+      "fecha": "2026-11-04T10:37:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Illa, a Abascal: «Espero que no se vaya del país cuando pierda, como hizo Bolsonaro»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/illa-abascal-bolsonaro/",
+      "fecha": "2026-11-04T10:35:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "China confirma contactos con EEUU y Rusia para una cumbre trilateral de presidentes",
+      "url": "https://theobjective.com/internacional/2026-11-04/china-contactos-eeuu-rusia-cumbre/",
+      "fecha": "2026-11-04T10:32:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "galerias",
+      "titulo": "El triunfo arrollador de los demócratas en las elecciones de EEUU, en imágenes",
+      "url": "https://theobjective.com/galerias/internacional/2026-11-04/triunfo-democratas-elecciones-eeuu-imagenes/",
+      "fecha": "2026-11-04T10:27:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Cayetana Álvarez de Toledo responde a Sánchez: «Efectivamente, no todos somos iguales»",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/cayetana-sanchez-no-somos-iguales/",
+      "fecha": "2026-11-04T10:22:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El 80,8% de los parados percibe una prestación por desempleo, en niveles máximos",
+      "url": "https://theobjective.com/economia/empleo/2026-11-04/808-parados-prestacion-desempleo-niveles-maximos/",
+      "fecha": "2026-11-04T10:20:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Valle de la Serena, el refugio de paz en Badajoz donde se crio Carlos Cuerpo: «Vengo de una familia humilde»",
+      "url": "https://theobjective.com/gente/2026-11-04/valle-serena-refugio-paz-badajoz-crio-carlos-cuerpo/",
+      "fecha": "2026-11-04T10:15:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Observatorio Económico de la UFV actualiza su análisis sobre el mercado de la vivienda",
+      "url": "https://theobjective.com/economia/2026-11-04/observatorio-economico-ufv-actualiza-analisis-vivienda/",
+      "fecha": "2026-11-04T10:11:03+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "album",
+      "titulo": "De Isabel Díaz Ayuso, con un vestido-capa de su firma favorita, a la reina Máxima, con la falda vaquera perfecta para este otoño, estos son los looks del día",
+      "url": "https://www.elmundo.es/album/yodona/moda/2026/11/04/6aeae300fdddff8f6e8b457c.html",
+      "fecha": "2026-11-04T10:10:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El funeral por las víctimas de Urda será en la Catedral de Toledo el próximo 12 de noviembre",
+      "url": "https://theobjective.com/espana/2026-11-04/funeral-victimas-catedral-toledo-12-noviembre/",
+      "fecha": "2026-11-04T10:05:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "El partido árabe-israelí denuncia el «secuestro» de uno de sus miembros en Tel Aviv",
+      "url": "https://theobjective.com/internacional/2026-11-04/arabe-israeli-secuestro-tel-aviv/",
+      "fecha": "2026-11-04T10:04:56+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Talarico hace historia para los demócratas en Texas en las midterms de EEUU: \"Le ganamos a Goliat\"",
+      "url": "https://www.elmundo.es/internacional/2026/11/04/6aeb0223e85eceed5b8b4591.html",
+      "fecha": "2026-11-04T10:04:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez celebra el triunfo demócrata en EEUU y augura que «ocurrirá pronto en España»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/sanchez-triunfo-democrata-eeuu/",
+      "fecha": "2026-11-04T09:58:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Para las víctimas de Urda… in memoriam",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/victimas-urda-in-memoriam/",
+      "fecha": "2026-11-04T09:46:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Ana Peleteiro: «No soy una madre loca, en mi casa nunca hubo porquerías y solo comíamos fuera de vez en cuando; procuro que la dieta de mi hija sea saludable»",
+      "url": "https://theobjective.com/gente/2026-11-04/ana-peleteiro-madre-loca-casa-porquerias-dieta-hija-saludable/",
+      "fecha": "2026-11-04T09:45:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Patxi López dice que Puente demuestra que «no todos somos iguales» y lo compara con Mazón",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/patxi-lopez-puente-no-todos-iguales/",
+      "fecha": "2026-11-04T09:39:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Abascal afirma que no se subiría ahora al AVE por «prudencia», al contrario que Feijóo",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/abascal-no-se-subiria-ave/",
+      "fecha": "2026-11-04T09:30:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo considera un «teatrillo en prime time» la dimisión de Puente y una «forma indigna»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/feijoo-puente-teatrillo-dimision/",
+      "fecha": "2026-11-04T09:25:36+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "Los Mossos detienen a los ladrones que robaron a la madre de Albiol: \"Hay que ser muy miserable para atracar a una mujer de 89 años\"",
+      "url": "https://www.elmundo.es/cataluna/2026/11/04/6aeaf5fcfdddff630b8b4578.html",
+      "fecha": "2026-11-04T09:20:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Carlos Cuerpo, más allá de su nueva cartera como ministro de Transportes: habla cinco idiomas, «duerme poco», su novia es funcionaria y tiene una hija",
+      "url": "https://theobjective.com/gente/2026-11-04/carlos-cuerpo-ministro-transportes-cinco-idiomas-duerme-poco-novia-hija/",
+      "fecha": "2026-11-04T09:19:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | Dos accidentes graves, el nuevo listón para las dimisiones políticas",
+      "url": "https://theobjective.com/podcasts/podcast-objetivo-al-dia/podcast-dos-accidentes-graves-el-nuevo-liston-para-las-dimisiones-politicas/",
+      "fecha": "2026-11-04T09:17:37+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "ciencia",
+      "titulo": "El vórtice polar se debilita y amenaza con adelantar la llegada del frío a Europa a partir del 10 de noviembre",
+      "url": "https://www.elmundo.es/ciencia/2026/11/04/6aeaf80be4d4d8d80a8b4586.html",
+      "fecha": "2026-11-04T09:17:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Llegan dos cayucos con 236 inmigrantes a El Hierro y otros dos están en rescate",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-04/cayucos-236-inmigrantes-el-hierro-rescate/",
+      "fecha": "2026-11-04T09:13:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Albares augura que la «ola de cambio» seguirá en España tras la victoria demócrata en EEUU",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/albares-cambio-seguira-espana-victoria-democrata-eeuu/",
+      "fecha": "2026-11-04T09:08:21+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Frente Amplio celebra la derrota de Trump y avisa: «El 29-N les toca a Feijóo y Abascal»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/frente-amplio-celebra-derrota-trump/",
+      "fecha": "2026-11-04T09:07:13+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Sánchez delega en Cuerpo la gestión de Transportes tras la dimisión de Puente: \"Su renuncia ayuda a recuperar la confianza en la dignidad política\"",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/04/6aeaef26fdddff3b558b4571.html",
+      "fecha": "2026-11-04T09:06:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez encarga a Carlos Cuerpo la gestión de Transportes tras la dimisión de Puente",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/sanchez-cuerpo-puente-transportes/",
+      "fecha": "2026-11-04T09:04:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Denuncian ante la Audiencia el escándalo de la ‘ley de nietos’ en México destapado por TO",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-04/denuncian-audiencia-ley-nietos-mexico-to/",
+      "fecha": "2026-11-04T09:00:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VIDEO | Para las víctimas de Urda… in memoriam",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/video-victimas-urda-accidente/",
+      "fecha": "2026-11-04T08:54:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Abascal se reunirá esta noche con Milei durante su visita a España",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/abascal-noche-milei-visita-espana/",
+      "fecha": "2026-11-04T08:51:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Sánchez comparece tras la dimisión de Puente",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-04/sanchez-comparece-tras-la-dimision-de-puente/",
+      "fecha": "2026-11-04T08:51:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El paro subió en 43.128 personas y registró su mayor alza en octubre desde 2020",
+      "url": "https://theobjective.com/economia/2026-11-04/paro-subio-43-128-personas/",
+      "fecha": "2026-11-04T08:40:54+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "\"Puente estaba amortizado\": la presión interna en el PSOE y los trackings fulminan al escudero clave de Sánchez",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/04/6aea22ccfdddfffe538b45a9.html",
+      "fecha": "2026-11-04T08:36:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La Seguridad Social sumó 186.612 afiliados en octubre y marcó un nuevo récord",
+      "url": "https://theobjective.com/economia/2026-11-04/seguridad-social-sumo-186-612-afiliados-octubre/",
+      "fecha": "2026-11-04T08:31:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "El entorno que acompaña a Óscar Puente tras su dimisión: unos padres que siguen viviendo en Valladolid, una hija que participó en ‘La voz’ y su novia Yasmina",
+      "url": "https://theobjective.com/gente/2026-11-04/entorno-oscar-puente-dimision-padres-valladolid-hija-yasmina/",
+      "fecha": "2026-11-04T08:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "OBJETIVO AL DÍA | Dos accidentes graves, el nuevo listón para las dimisiones políticas",
+      "url": "https://theobjective.com/opinion/2026-11-04/objetivo-al-dia-dos-accidentes-liston-dimisiones/",
+      "fecha": "2026-11-04T08:27:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Junts celebra la dimisión de Puente y exige el traspaso integral de los trenes a Cataluña",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/junts-dimision-puente-traspaso-trenes-cataluna/",
+      "fecha": "2026-11-04T08:22:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "«Piensan que éramos ricos, pero no teníamos ni un céntimo. Pedí un préstamo para un casco nuevo y un mono de carreras»: la infancia de Andrea Kimi Antonelli, campeón de F1",
+      "url": "https://theobjective.com/deportes/2026-11-04/piensan-que-eramos-ricos-pero-no-teniamos-ni-un-centimo-pedi-un-prestamo-para-un-casco-nuevo-y-un-mono-de-carreras-la-infancia-de-andrea-kimi-antonelli-campeon-de-f1/",
+      "fecha": "2026-11-04T08:20:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "María del Mar Jiménez, pensionista, sobre las elecciones del 29-N: «Yo he cotizado durante 30 años para poder cobrar una pensión. Voy a votar al que me dé más dinero»",
+      "url": "https://theobjective.com/economia/2026-11-04/maria-del-mar-jimenez-pensionista-sobre-las-elecciones-del-29-n-yo-he-cotizado-durante-30-anos-para-poder-cobrar-una-pension-voy-a-votar-al-que-me-de-mas-dinero/",
+      "fecha": "2026-11-04T08:19:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Aruca Fernández-Vega, mujer de Emilio Aragón: «Nos fuimos un año a Boston huyendo de la prensa; se corrió la voz de que teníamos problemas»",
+      "url": "https://theobjective.com/gente/2026-11-04/ano-emilio-aragon-aruca-boston-huir-voz-problemas/",
+      "fecha": "2026-11-04T08:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Las seis universidades públicas de Madrid van a la huelga contra la «asfixia económica»",
+      "url": "https://theobjective.com/sociedad/2026-11-04/seis-universidades-publicas-madrid-huelga/",
+      "fecha": "2026-11-04T07:21:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "JD Vance y Rubio, los favoritos para heredar el 'trono' MAGA",
+      "url": "https://www.elmundo.es/internacional/2026/11/04/6aea0add21efa02d2f8b456f.html",
+      "fecha": "2026-11-04T07:14:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Las raíces separadas de Jesús Calleja y su hijo: Ganesh se crio en un pobre orfanato de Nepal y él, en un pequeño pueblo de León",
+      "url": "https://theobjective.com/gente/2026-11-04/raices-separadas-jesus-calleja-hijo-leon-ganesh-orfanato-nepal/",
+      "fecha": "2026-11-04T07:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo pide a Sánchez que siga los pasos de Puente y dimita: «Aplícatelo»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/feijoo-sanchez-pasos-puente-dimita/",
+      "fecha": "2026-11-04T06:55:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "El patrimonio de Albares, el político discreto que habla tres idiomas: sin casa declarada, con un sueldo de 7.000 euros al mes y una ayuda por familia numerosa",
+      "url": "https://theobjective.com/gente/2026-11-04/patrimonio-albares-politico-discreto-casa-sueldo-familia-numerosa/",
+      "fecha": "2026-11-04T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Intentar dormir ocho horas y controlar tu descanso puede estar provocándote insomnio: la alerta de los neurólogos",
+      "url": "https://theobjective.com/lifestyle/2026-11-04/intentar-dormir-ocho-horas-y-controlar-tu-descanso-puede-estar-provocandote-insomnio-la-alerta-de-los-neurologos/",
+      "fecha": "2026-11-04T06:30:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Óscar Puente se deja caer",
+      "url": "https://www.elmundo.es/espana/2026/11/04/6aea5cf9fdddffbb3e8b45d0.html",
+      "fecha": "2026-11-04T06:18:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Victoria arrolladora de los demócratas en las elecciones de mitad de mandato en EEUU",
+      "url": "https://theobjective.com/internacional/2026-11-04/victoria-democratas-elecciones-mitad-mandato-eeuu/",
+      "fecha": "2026-11-04T06:05:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Amazon rebaja 340 euros este robot aspirador de 689 euros y trae otros cuatro chollos que no puedes perderte",
+      "url": "https://theobjective.com/lifestyle/2026-11-04/amazon-pone-de-oferta-un-robot-aspirador-de-689-euros-por-solo-349-y-otros-cuatro-productos/",
+      "fecha": "2026-11-04T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Juan Carlos Tous",
+      "url": "https://theobjective.com/podcasts/asi-empece/podcast-asi-empece-juan-carlos-tous/",
+      "fecha": "2026-11-04T04:25:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | Politizar las tragedias",
+      "url": "https://theobjective.com/podcasts/el-tablero-inclinado-podcast/podcast-tablero-inclinado-politizar-tragedias/",
+      "fecha": "2026-11-04T04:25:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Una realidad que ya no puede ser optimista",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/realidad-optimista-articulo-daniel-capo/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Carta a Óscar Puente",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/oscar-puente-articulo-arias-maldonado/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "‘Gravitas’",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/gravitas-articulo-cesar-calderon/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Empresa pública es un oxímoron",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/empresa-publica-oximoron-articulo-aguirre/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Regeneración o descomposición, no hay otra",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/regeneracion-descomposicion-articulo-francisco-sierra/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Alimentarse de carroña",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/alimentarse-carrona-articulo-santi-gonzalez/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Las patrias pequeñas",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-04/patrias-pequenas-articulo-nicolas-redondo/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Moncloa anula un contrato para protegerse de la IA ofensiva a las puertas de las elecciones",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/moncloa-suspende-contrato-ciberseguridad-ia-ofensiva/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La anomalía del voto CERA en Argentina: el 70% no va al consulado y lo manda por correo",
+      "url": "https://theobjective.com/espana/2026-11-04/anomalia-voto-argentino-censo-correo/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Raquel González, experta en cosmética: «Si quieres que tus sérums y cremas sean más eficaces, hay un paso que no debes saltarte en tu rutina facial»",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-11-04/raquel-gonzalez-experta-en-cosmetica-si-quieres-que-tus-serums-y-cremas-sean-mas-eficaces-hay-un-paso-que-no-debes-saltarte-en-tu-rutina-facial/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "motor",
+      "titulo": "BYD duplica sus ventas y se cuela en el podio de los más vendidos en octubre",
+      "url": "https://theobjective.com/motor/2026-11-04/byd-duplica-ventas-podio-mas-vendidos-octubre/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Algo tan sencillo como coger de la mano",
+      "url": "https://theobjective.com/economia/2026-11-04/sencillo-coger-mano-otra-cara-dinero/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Marruecos estrena un megapuerto de 5.000 millones que amenaza los muelles andaluces",
+      "url": "https://theobjective.com/espana/2026-11-04/marruecos-megapuerto-millones-muelles-andaluces/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Del terrorismo a la inmigración: así penetra la dictadura cubana en la democracia occidental",
+      "url": "https://theobjective.com/internacional/2026-11-04/terrorismo-inmigracion-dictadura-cubana-democracia/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Una ‘madame’ denuncia a la Fiscalía que menores están siendo prostituidas en Ceuta",
+      "url": "https://theobjective.com/espana/2026-11-04/madame-denuncia-fiscalia-prostituidas-ceuta/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "motor",
+      "titulo": "Iván Cabanas, mecánico: «Para conservar los faros del coche como nuevos no basta con pulirlos: hay que lijarlos y aplicar un polímero»",
+      "url": "https://theobjective.com/motor/2026-11-04/ivan-cabanas-mecanico-para-conservar-los-faros-del-coche-como-nuevos-no-basta-con-pulirlos-hay-que-lijarlos-y-aplicar-un-polimero/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El examen de ingreso a controlador de ADIF: tres preguntas sobre igualdad, ninguna del LZB",
+      "url": "https://theobjective.com/economia/transporte/2026-11-04/examen-controlador-adif-preguntas-igualdad-lzb/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La industria del calzado pierde fuelle: su producción cae el 8,7% en un año por China",
+      "url": "https://theobjective.com/economia/2026-11-04/industria-calzado-pierde-fuelle-produccion-hasta-ano/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El órgano independiente que investiga Urda busca con urgencia expertos en accidentes",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/autoridad-urda-accidentes-vacantes-urgencia/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El bluf del movimiento Blocus en España: «Solo son jóvenes robando móviles y zapatillas caras»",
+      "url": "https://theobjective.com/espana/2026-11-04/bluf-movimiento-blocus-espana-jovenes-robando-moviles-zapatillas/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Vida y milagros (literarios) de Álvaro Pombo",
+      "url": "https://theobjective.com/cultura/literatura/2026-11-04/vida-milagros-literarios-alvaro-pombo/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "De la aguja a la pastilla: Lilly y Novo pugnan por 23 millones de españoles con exceso de peso",
+      "url": "https://theobjective.com/economia/2026-11-04/aguja-pastilla-lilly-novo-adultos-sobrepeso/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP subraya la división de los sindicatos sobre la idoneidad de la huelga general",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/pp-huelga-general/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Quevedo, escritor español, sobre la felicidad: «Muchos se equivocan: creen que serán más felices cambiando de casa o trabajo, pero la buena vida sólo llega al modificar costumbres»",
+      "url": "https://theobjective.com/lifestyle/2026-11-04/quevedo-escritor-espanol-sobre-la-felicidad-muchos-se-equivocan-creen-que-cambiando-de-casa-o-trabajo-seran-mas-felices-pero-la-buena-vida-solo-llega-al-variar-las-costumbres/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Ana Segarra, entrenadora: «Para mantenerte fuerte e independiente a partir de los 50 años, lo más aconsejable son estos cinco ejercicios que todas las mujeres deberían hacer»",
+      "url": "https://theobjective.com/lifestyle/fitness/2026-11-04/ana-segarra-entrenadora-para-mantenerte-fuerte-e-independiente-a-partir-de-los-50-anos-lo-mas-aconsejable-son-estos-cinco-ejercicios-que-todas-las-mujeres-deberian-hacer/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Samantha Vallejo-Nágera (57 años), chef: «La mejor crema para cenar y entrar en calor se hace con calabaza asada, leche de coco, curry amarillo y un toque de jengibre»",
+      "url": "https://theobjective.com/gastronomia/2026-11-04/samantha-vallejo-nagera-57-anos-chef-la-mejor-crema-para-cenar-y-entrar-en-calor-se-hace-con-calabaza-asada-leche-de-coco-curry-amarillo-y-un-toque-de-jengibre/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Es oficial: aterrizan en Zara y Primark los 7 botines más elegantes y versátiles del otoño-invierno 2026-2027 para ir a la oficina y salir con amigas con estilo",
+      "url": "https://theobjective.com/lifestyle/moda/2026-11-04/es-oficial-aterrizan-en-zara-y-primark-los-7-botines-mas-elegantes-y-versatiles-del-otono-invierno-2026-2027-para-ir-a-la-oficina-y-salir-con-amigas-con-estilo/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Puente contrata una empresa externa para investigar a fondo el Iryo siniestrado en Adamuz",
+      "url": "https://theobjective.com/economia/transporte/2026-11-04/puente-contrata-empresa-alemana-investigar-iryo-adamuz/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Los bancos recrudecen la guerra por las hipotecas: bajan el precio pese al alza de tipos",
+      "url": "https://theobjective.com/economia/banca/2026-11-04/bancos-recrudecen-hipotecas-bajada-precio/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Ignacio de la Calzada, abogado laboralista: «Si vas a la huelga general del 11-N te pueden restar nómina y parte de las pagas, pero vacaciones no y no tienes que avisar; el despido sería nulo»",
+      "url": "https://theobjective.com/economia/2026-11-04/ignacio-de-la-calzada-abogado-laboralista-si-vas-a-la-huelga-general-del-11-n-te-pueden-restar-nomina-y-parte-de-las-pagas-pero-vacaciones-no-y-no-tienes-que-avisar-el-despido-seria-nulo/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Es oficial en el BOE: si un empleado deja su trabajo, tiene derecho a cobrar el paro, según el artículo 50, en estos casos",
+      "url": "https://theobjective.com/economia/empleo/2026-11-04/es-oficial-en-el-boe-si-un-empleado-deja-su-trabajo-tiene-derecho-a-cobrar-el-paro-segun-el-articulo-50-en-estos-casos/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Ada Colau copia ahora a Podemos con la crítica a la liberalización del sector ferroviario",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/ada-colau-copia-podemos-liberalizacion-ferroviario/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Los economistas prevén que España deje de crecer más que Portugal y Francia en dos años",
+      "url": "https://theobjective.com/economia/macroeconomia/2026-11-04/economistas-preven-espana-deje-crecer-mas-que-portugal-francia-dos-anos/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Puente avanza una IA sin precedentes para mejorar la seguridad pero oculta el fabricante",
+      "url": "https://theobjective.com/economia/transporte/2026-11-04/puente-ia-precedentes-seguridad-fabricante/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Es oficial: con menos de 120 minutos de duración, la nueva película de Luis Zahera y Laia Acosta llega a Netflix y ya es número 1 tan solo tres días después",
+      "url": "https://theobjective.com/cultura/cine/2026-11-04/es-oficial-con-menos-de-120-minutos-de-duracion-la-nueva-pelicula-de-luis-zahera-y-laia-acosta-llega-a-netflix-y-ya-es-numero-1-tan-solo-tres-dias-despues/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Una funcionaria denuncia que Antifraude la dejó tres años en paro pese a acreditar represalias",
+      "url": "https://theobjective.com/espana/2026-11-04/funcionaria-denuncia-antifraude-tres-anos-paro-pese-acreditar-represalias/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Azorín, escritor español del 98: «Las personas felices son aquellas que, en lugar de sobrepensar y condicionar su alegría a metas, valoran la sencillez y la naturaleza»",
+      "url": "https://theobjective.com/lifestyle/2026-11-04/azorin-escritor-espanol-del-98-las-personas-felices-son-aquellas-que-en-lugar-de-sobrepensar-y-condicionar-su-alegria-a-metas-valoran-la-sencillez-y-la-naturaleza/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Hermann Hesse, premio Nobel, sobre la felicidad: «No es la suerte la que te lleva a conseguir el éxito, sino tus propias decisiones, deseos y necesidades en tu camino»",
+      "url": "https://theobjective.com/lifestyle/2026-11-04/hermann-hesse-premio-nobel-sobre-la-felicidad-no-es-la-suerte-la-que-te-lleva-a-conseguir-el-exito-sino-tus-propias-decisiones-deseos-y-necesidades-en-tu-camino/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "El Siglo de Oro de la pintura neerlandesa llega al Museo Thyssen de Madrid",
+      "url": "https://theobjective.com/cultura/arte/2026-11-04/siglo-de-oro-pintura-neerlandesa-thyssen/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Tragedia y fracaso en Urda: la incapacidad de un Gobierno que recauda más que nunca",
+      "url": "https://theobjective.com/opinion/2026-11-04/tragedia-fracaso-urda-incapacidad-gobierno-impuestos/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Piden a ADIF que informe de cuándo tuvo acceso Puente a las grabaciones del accidente",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-04/denuncia-adif-puente-grabaciones-accidente/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El consulado en México falsificó con típex decenas de expedientes de la ‘ley de nietos’",
+      "url": "https://theobjective.com/espana/2026-11-04/consulado-falsifico-tipex-expedientes-ley-nietos/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "No hay poema de Ana Belén por las tragedias ferroviarias",
+      "url": "https://theobjective.com/opinion/2026-11-04/poema-ana-belen-articulo-manu-glavez/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Politizar las tragedias",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/tablero-inclinado-politizar-tragedias/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Juan Carlos Tous, fundador de Filmin: «Sé lo que es ir a dormir y no poder pagar las nóminas»",
+      "url": "https://theobjective.com/economia/2026-11-04/juan-carlos-tous-filmin-asi-empece/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Moncloa da 37 millones de euros al cine y otros 26 para mantener a los inmigrantes de Ceuta",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/moncloa-37-millones-euros-cine-ceuta/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Alivio en el PSOE por la dimisión de Puente: «Despeja la campaña del 29-N»",
+      "url": "https://theobjective.com/espana/politica/2026-11-04/alivio-psoe-dimision-puente-campana/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Cristina Fernández Cubas, un Cervantes a la obstinación de la narrativa breve",
+      "url": "https://theobjective.com/cultura/literatura/2026-11-04/cristina-fernandez-cubas-cervantes-narrativa-breve/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Politizar las tragedias",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/politizar-tragedias/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Puente contrata una empresa externa para investigar a fondo el Iryo siniestrado en Adamuz",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/puente-contrata-empresa-externa-investigar-fondo-iryo-siniestrado-adamuz/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Del terrorismo a la inmigración: así penetra la dictadura cubana en la democracia occidental",
+      "url": "https://theobjective.com/videos/internacional/2026-11-04/terrorismo-inmigracion-asi-penetra-dictadura-cubana-democracia-occidental/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | El consulado en México falsificó con típex la fecha de decenas de expedientes de la ley de nietos",
+      "url": "https://theobjective.com/videos/espana/2026-11-04/consulado-mexico-falsifico-tipex-fecha-decenas-expedientes-ley-nietos/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "La viñeta sobre… las encuestas",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-04/la-vineta-sobre-las-encuestas/",
+      "fecha": "2026-11-04T04:25:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Cargos de Adif denuncian una \"caza de brujas\" interna: \"Nos quieren silenciar a todos los que no hemos sido nombrados a dedo\"",
+      "url": "https://www.elmundo.es/espana/2026/11/04/6aea2328fdddff9d618b45a7.html",
+      "fecha": "2026-11-04T00:57:35+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Estos son los productos que más hurtos sufren en los supermercados: ocho millones de euros al día",
+      "url": "https://www.elmundo.es/economia/empresas/2026/11/04/6aea0aa5e4d4d87f2e8b4581.html",
+      "fecha": "2026-11-04T00:16:03+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "album",
+      "titulo": "El de Uniqlo con cuello de polo o multicolor de Celine, estos 15 jerséis cumplen un requisito esencial para repetir todo el invierno: no pican",
+      "url": "https://www.elmundo.es/album/yodona/moda/shopping/2026/11/04/6ae9e95b21efa056218b458a.html",
+      "fecha": "2026-11-03T23:13:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Óscar Puente dimite tras la tragedia Urda: «Un ministro no puede continuar en su puesto con un accidente de este tipo»",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-03/dimision-oscar-puente/",
+      "fecha": "2026-11-03T22:40:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Bayern exhibe su candidatura en Champions con un golpe de autoridad ante el Atlético",
+      "url": "https://theobjective.com/deportes/futbol/champions-league/2026-11-03/bayern-victoria-atletico-de-madrid-champions/",
+      "fecha": "2026-11-03T22:18:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Óscar Puente, el alcalde que llegó a ministro de Transportes gracias a las redes sociales",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/oscar-puente-ministro-redes-sociales/",
+      "fecha": "2026-11-03T22:02:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez ensalza la dimisión de Puente «por las víctimas» de Urda: «Dignifica nuestro país»",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/sanchez-dimision-puente/",
+      "fecha": "2026-11-03T22:02:07+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "La primera esquela del sanchismo",
+      "url": "https://www.elmundo.es/espana/2026/11/03/6aea576221efa0f0538b4572.html",
+      "fecha": "2026-11-03T22:01:09+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Puente recibió 12 avisos de un sistema \"al límite\" entre la tragedia de Adamuz y la de Urda: \"Propician el error humano\"",
+      "url": "https://www.elmundo.es/economia/2026/11/03/6ae9b47ce85eceb5658b4572.html",
+      "fecha": "2026-11-03T21:55:26+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Todas las víctimas identificadas del accidente de trenes de Urda: la joven ingeniera, el guardia recién casado, el artista mexicano...",
+      "url": "https://www.elmundo.es/espana/2026/11/03/6aea39c721efa02d2f8b4581.html",
+      "fecha": "2026-11-03T21:55:09+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cronica",
+      "titulo": "La cadena de despropósitos que terminó en la muerte de Jesús de Miguel: \"Sabíamos que más temprano que tarde pasaría algo así\"",
+      "url": "https://www.elmundo.es/cronica/2026/11/03/6aea5371e9cf4ab16b8b458e.html",
+      "fecha": "2026-11-03T21:54:49+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Los límites del Derecho penal en la muerte de Jesús de Miguel",
+      "url": "https://www.elmundo.es/deportes/futbol/segunda-division/2026/11/03/6aea3589e85ece5f1c8b4596.html",
+      "fecha": "2026-11-03T21:54:39+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "salud",
+      "titulo": "¿Envejecimiento prematuro? Una nueva hipótesis tras el aumento de cáncer de colon en jóvenes",
+      "url": "https://www.elmundo.es/salud/2026/11/03/6ae9fba3e4d4d8b1678b459a.html",
+      "fecha": "2026-11-03T21:54:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Encuesta | ¿Le parece bien la dimisión de Óscar Puente?",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/encuesta-dimision-oscar-puente/",
+      "fecha": "2026-11-03T21:31:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP advierte de que a Óscar Puente «le ha dimitido Tezanos» y no se va «por las víctimas»",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/pp-oscar-puente/",
+      "fecha": "2026-11-03T21:26:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Puente, tercer ministro socialista que dimite con Sánchez tras Huerta y Montón",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/puente-tercer-ministro-dimision-sanchez/",
+      "fecha": "2026-11-03T20:55:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La antología tuitera de Óscar Puente: «Qué asco de ser», «saco de mierda», «imbécil»…",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/oscar-puente-saco-mierda-imbecil/",
+      "fecha": "2026-11-03T20:48:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Reacciones a la dimisión de Óscar Puente, en directo | Sánchez: «Óscar Puente ha dado la cara, ha dado soluciones y, después, ha dado un paso al lado»",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/reacciones-a-la-dimision-de-oscar-puente-en-directo-el-ministro-de-transportes-anuncia-su-renuncia-al-cargo-tras-el-accidente-de-urda/directo/",
+      "fecha": "2026-11-03T20:26:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Fallece desangrado un hombre tras sufrir un accidente con una motosierra en La Coruña",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-03/fallece-desangrado-accidente-motosierra-coruna/",
+      "fecha": "2026-11-03T20:20:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Dimite Óscar Puente por el accidente de Urda tras su comparecencia en el Congreso",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/oscar-puente-crisis-ferroviaria/",
+      "fecha": "2026-11-03T20:10:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Marlaska agradece a Mauritania haber evitado la llegada de 4.300 inmigrantes a Canarias",
+      "url": "https://theobjective.com/espana/2026-11-03/mauritania-migrantes-canarias-llegada-2026/",
+      "fecha": "2026-11-03T20:04:54+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Tres vagones chocan contra una locomotora de Renfe Mercancías en Martorell (Barcelona)",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-03/tres-vagones-chocan-contra-locomotora-renfe-mercancias-martorell/",
+      "fecha": "2026-11-03T20:03:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP acusa al Gobierno de robar el derecho a Educación Especial que ofrece oportunidades",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/pp-gobierno-robar-derecho-educacion-especial/",
+      "fecha": "2026-11-03T19:59:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Milei se reunirá este miércoles con Abascal por la cumbre iberoamericana en Madrid",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/milei-reunion-abascal-cumbre-iberoamericana/",
+      "fecha": "2026-11-03T19:59:05+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Tsunami demócrata en EEUU: Trump pierde el Congreso",
+      "url": "https://theobjective.com/internacional/2026-11-03/directo-elecciones-medio-mandato-eeuu/directo/",
+      "fecha": "2026-11-03T19:49:36+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Binance revela que el ciberataque millonario se preparó durante meses con falsas entrevistas",
+      "url": "https://theobjective.com/economia/2026-11-03/binance-ciberataque-millonario-falsas-entrevistas/",
+      "fecha": "2026-11-03T19:40:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Podemos acusa a Transportes de filtrar los audios de los maquinistas para eximir a Puente",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/podemos-filtrar-audios-eximir-puente/",
+      "fecha": "2026-11-03T19:35:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox pide al PP que «cierre el grifo» a los sindicatos en las comunidades donde gobierna",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/vox-pide-pp-cierre-grifo-sindicatos-comunidades-donde-gobierna/",
+      "fecha": "2026-11-03T19:33:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Garamendi valora «muy positivamente» la petición de Feijóo de desconvocar la huelga",
+      "url": "https://theobjective.com/economia/2026-11-03/garamendi-feijoo-desconvocar-huelga-vivienda/",
+      "fecha": "2026-11-03T19:27:36+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Antiviolencia propone multar con 60.000 euros a un ‘youtuber’ por sus insultos contra Bellerín",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-03/antiviolencia-multa-youtuber-insultos-bellerin/",
+      "fecha": "2026-11-03T19:09:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Las noticias del 3 de noviembre de 2026",
+      "url": "https://theobjective.com/podcasts/sumario-de-tarde-podcast/sumario-tarde-noticias-3-noviembre-2026/",
+      "fecha": "2026-11-03T19:09:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Puente usa la sesión sobre Urda para atacar a la oposición: «Las víctimas no les importan nada»",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/puente-comision-oposicion-victimas/",
+      "fecha": "2026-11-03T18:57:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "En Sumario de tarde: de la comparecencia de Puente en el Congreso a las ‘midterms’ en EEUU",
+      "url": "https://theobjective.com/espana/2026-11-03/sumario-tarde-comparecencia-puente-congreso-midterms/",
+      "fecha": "2026-11-03T18:54:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Los economistas nombran colegiado de honor a Ignacio Galán, apadrinado por De Cos",
+      "url": "https://theobjective.com/economia/2026-11-03/economistas-nombran-colegiado-honor-ignacio-galan-apadrinado-de-cos/",
+      "fecha": "2026-11-03T18:53:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Nueva York registra su primera muerte por sarampión en tres décadas",
+      "url": "https://theobjective.com/internacional/2026-11-03/nueva-york-registra-primera-muerte-sarampion-tres-decadas/",
+      "fecha": "2026-11-03T18:41:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "La Eurocámara pide un canal único para denunciar fraudes con fondos europeos",
+      "url": "https://theobjective.com/internacional/2026-11-03/eurocamara-denuncias-fraudes-fondos-europeos/",
+      "fecha": "2026-11-03T18:25:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sanidad",
+      "titulo": "El Gobierno mejora el decreto de los residentes: guardias de 17 horas y alza retributiva",
+      "url": "https://theobjective.com/sanidad/2026-11-03/gobierno-mejora-decreto-esidentes-guardias-17-horas-alza-retributiva/",
+      "fecha": "2026-11-03T18:24:03+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Cristina Fernández Cubas gana el premio Cervantes 2026",
+      "url": "https://theobjective.com/cultura/literatura/2026-11-03/cristina-fernandez-cubas-premio-cervantes-2026/",
+      "fecha": "2026-11-03T18:22:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Interior registra 106.992 casos de violencia de género activos, 1.046 de riesgo alto o extremo",
+      "url": "https://theobjective.com/espana/2026-11-03/interior-casos-activos-violencia-genero-2/",
+      "fecha": "2026-11-03T18:11:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Rufián: «Si gobernasen PP y Vox, los trenes serían de plástico y las vías de madera»",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-03/rufian-puente-pp-vox/",
+      "fecha": "2026-11-03T18:08:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "Activistas irrumpen en Telemadrid y obligan a cortar la emisión: «Este no es vuestro espacio»",
+      "url": "https://theobjective.com/medios/television/2026-11-03/activistas-profesores-huelga-telemadrid/",
+      "fecha": "2026-11-03T18:05:05+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox se marcha de la Diputación Permanente para no escuchar a Puente hablando de Urda",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/vox-marcha-diputacion-permanente-puente-urda/",
+      "fecha": "2026-11-03T18:05:03+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez blinda a Puente pese a la presión: «Tiene que evitar accidentes, no explicarlos»",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/sanchez-blinda-puente-presion-accidentes/",
+      "fecha": "2026-11-03T18:02:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Acusada de traición una exportavoz de Zelenski tras afirmar que el presidente consume cocaína",
+      "url": "https://theobjective.com/internacional/2026-11-03/ucrania-acusacion-traicion-exportavoz-zelenski/",
+      "fecha": "2026-11-03T17:47:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El Rey recibe a los presidentes de Chile, Honduras, Guatemala y Costa Rica",
+      "url": "https://theobjective.com/sociedad/2026-11-03/rey-recibe-presidentes-chile-honduras-guatemala-costa-rica/",
+      "fecha": "2026-11-03T17:47:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Pepa Millán (Vox) pide «juzgar» a Óscar Puente",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-03/vox-pide-juicio-oscar-puente/",
+      "fecha": "2026-11-03T17:45:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Los astronautas de EEUU en la Estación Espacial votan desde el espacio",
+      "url": "https://theobjective.com/internacional/2026-11-03/astronautas-eeuu-estacion-espacial-votan/",
+      "fecha": "2026-11-03T17:42:26+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Indra lidera proyectos de más de 40 millones para automatizar el control aéreo europeo",
+      "url": "https://theobjective.com/economia/2026-11-03/indra-proyectos-control-aereo/",
+      "fecha": "2026-11-03T17:33:30+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Policía Nacional contará con la colaboración de los gestores administrativos para investigar el fraude y las falsedades documentales",
+      "url": "https://theobjective.com/espana/2026-11-03/policia-nacional-convenio-fraude-falsedades/",
+      "fecha": "2026-11-03T17:32:23+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Ester Muñoz, a Puente: «Usted no ha pedido perdón porque no se arrepiente»",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-03/ester-munoz-pp-oscar-puente-perdon/",
+      "fecha": "2026-11-03T17:26:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Ayuso concede la Medalla Internacional de la Comunidad al presidente de Honduras",
+      "url": "https://theobjective.com/espana/madrid/2026-11-03/ayuso-concede-medalla-internacional-comunidad-presidente-honduras/",
+      "fecha": "2026-11-03T17:23:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Tenerife despedirá este sábado en el Heliodoro a Jesús de Miguel con una misa",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-11-03/tenerife-despedira-jesus-de-miguel-misa/",
+      "fecha": "2026-11-03T17:16:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "CSIF llama a los trabajadores a secundar las huelgas y movilizaciones en Renfe y Adif",
+      "url": "https://theobjective.com/economia/transporte/2026-11-03/csif-secundar-huelgas-renfe-adif/",
+      "fecha": "2026-11-03T17:07:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "El PP, a Óscar Puente: «Su responsabilidad no es explicar accidentes mortales, es evitarlos»",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-03/oscar-puente-responsabilidad-pp/",
+      "fecha": "2026-11-03T17:04:15+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "España se suma a una alianza militar que garantizará la paz en Ucrania tras la guerra",
+      "url": "https://theobjective.com/internacional/2026-11-03/espana-alianza-paz-ucrania/",
+      "fecha": "2026-11-03T17:01:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Junts celebra el cierre de la causa contra Puigdemont: «Victoria del independentismo»",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/junts-celebra-cierre-causa-contra-puigdemont-victoria-independentismo/",
+      "fecha": "2026-11-03T16:56:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Puerta del Sol vuelve a «ser lo que era» tras el fin de la acampada y la limpieza de la plaza",
+      "url": "https://theobjective.com/espana/madrid/2026-11-03/sol-desalojo-acampada-limpieza-plaza/",
+      "fecha": "2026-11-03T16:54:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Frente Amplio insiste en la dimisión de Puente «desde la lealtad» por la tragedia de Urda",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/frente-amplio-dimision-puente-urda/",
+      "fecha": "2026-11-03T16:44:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Encuesta | ¿Cogerá usted el tren si reducen la velocidad y la frecuencia durante las mejoras?",
+      "url": "https://theobjective.com/economia/transporte/2026-11-03/encuesta-cogera-tren-velocidad-frecuencia-mejoras/",
+      "fecha": "2026-11-03T16:43:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Un sindicato ferroviario presenta la primera denuncia contra Puente por revelar secretos",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/sindicato-ferroviario-denuncia-puente-secretos/",
+      "fecha": "2026-11-03T16:34:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Siete vuelos europeos registran avisos de bomba falsos",
+      "url": "https://theobjective.com/economia/transporte/2026-11-03/siete-vuelos-europeos-registran-avisos-bomba-falsos/",
+      "fecha": "2026-11-03T16:32:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "Carlos Alsina, Rosalía, Leiva y Berto Romero, premios Ondas 2026",
+      "url": "https://theobjective.com/medios/2026-11-03/alsina-rosalia-leiva-berto-premios-ondas/",
+      "fecha": "2026-11-03T16:25:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP exige igualdad de acceso a información del voto por correo de cara a las elecciones",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/pp-informes-voto-correo-interior/",
+      "fecha": "2026-11-03T16:23:03+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Muere Marta Gastón, exconsejera del Gobierno de Aragón, a los 53 años",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/muere-marta-gaston-exconsejera-gobierno-aragon/",
+      "fecha": "2026-11-03T16:14:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Supremo ratifica que García Ortiz pague los 39.000 euros de la defensa del novio de Ayuso",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/supremo-pago-honorarios-garcia-ortiz-amador/",
+      "fecha": "2026-11-03T16:07:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Blanca Romero presume de la buena relación que tiene con su suegra, Carmen Flores: «Lo más puro y bello que tienes; la amo»",
+      "url": "https://theobjective.com/gente/2026-11-03/blanca-romero-presume-relacion-suegra-carmen-flores/",
+      "fecha": "2026-11-03T16:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Directo | Óscar Puente comparece en el Congreso por el accidente de Urda",
+      "url": "https://theobjective.com/videos/espana/2026-11-03/directo-oscar-puente-comparece-en-el-congreso-por-el-accidente-de-urda/",
+      "fecha": "2026-11-03T15:57:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "branded-content",
+      "titulo": "Comparativa de Hosting en España: cómo elegir el mejor para tu negocio",
+      "url": "https://theobjective.com/branded-content/2026-11-03/comparativa-hosting-espana-elegir-negocio/",
+      "fecha": "2026-11-03T15:53:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Ceuta cuantifica en un millón al día las pérdidas económicas por la crisis migratoria",
+      "url": "https://theobjective.com/economia/2026-11-03/ceuta-cuantifica-millon-dia-perdidas-economicas-crisis-migratoria/",
+      "fecha": "2026-11-03T15:52:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Más Madrid denuncia la recalificación de los terrenos del Real Madrid en Valdebebas",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/mas-madrid-denuncia-recalificacion-valdebebas/",
+      "fecha": "2026-11-03T15:36:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "El FMI instalará en Valencia su primera sede tecnológica fuera de Estados Unidos",
+      "url": "https://theobjective.com/internacional/2026-11-03/fmi-sede-valencia-fuera-estados-unidos/",
+      "fecha": "2026-11-03T15:34:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Los sindicatos de ADIF anuncian huelga para el 17 de noviembre por la seguridad ferroviaria",
+      "url": "https://theobjective.com/economia/transporte/2026-11-03/sindicatos-adif-huelga-17-noviembre/",
+      "fecha": "2026-11-03T15:31:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Puente: «La liberalización ferroviaria no causó el accidente»",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-03/puente-rechaza-liberalizacion-causa-accidente-urda/",
+      "fecha": "2026-11-03T15:30:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Trump anuncia el fin de una ayuda militar a Israel por valor de 3.575 millones",
+      "url": "https://theobjective.com/internacional/2026-11-03/trump-anuncia-fin-ayuda-militar-israel-3575-millones-euros/",
+      "fecha": "2026-11-03T14:56:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Llarena cierra la causa contra Puigdemont y la envía al Supremo para que aplique la amnistía",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/juez-cierra-causa-puigdemont-supremo-amnistia/",
+      "fecha": "2026-11-03T14:32:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Moncloa asegura que Puente no dimitirá ni será cesado y seguirá de candidato al 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/moncloa-asegura-puente-no-dimitira-ni-sera-cesado-candidato-29-n/",
+      "fecha": "2026-11-03T14:31:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "actualidad",
+      "titulo": "Saberes humanistas y liderazgo ético en tiempos de IA",
+      "url": "https://theobjective.com/actualidad/2026-11-03/saberes-humanistas-liderazgo-etico-ia/",
+      "fecha": "2026-11-03T14:31:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La sede del PSOE de Ciudad Real amanece con cristales rotos y pintadas de «asesinos»",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/psoe-ciudad-real-pintadas/",
+      "fecha": "2026-11-03T14:01:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Amaia Montero rompe su silencio tras las críticas con un mensaje que revela el difícil momento que atraviesa: «Estoy sufriendo mucho»",
+      "url": "https://theobjective.com/gente/2026-11-03/amaia-montero-rompe-silencio-criticas-estoy-sufriendo-mucho/",
+      "fecha": "2026-11-03T14:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Instituto Coordenadas nombra a Andreu Cruañas presidente ejecutivo",
+      "url": "https://theobjective.com/economia/2026-11-03/el-instituto-coordenadas-nombra-a-andreu-cruanas-presidente-ejecutivo/",
+      "fecha": "2026-11-03T13:46:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sanidad",
+      "titulo": "La Fundación Jiménez Díaz logra la excelencia europea en investigación oncológica",
+      "url": "https://theobjective.com/sanidad/2026-11-03/fundacion-jimenez-diaz-excelencia-europea-oncologica/",
+      "fecha": "2026-11-03T13:45:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Secuoya Content Group alcanza los 156 millones de facturación",
+      "url": "https://theobjective.com/economia/2026-11-03/secuoya-content-grou-156-millones/",
+      "fecha": "2026-11-03T13:42:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El 58% de los españoles echa de menos comer fuera sin prisas, según 100 Montaditos",
+      "url": "https://theobjective.com/sociedad/2026-11-03/58-espanoles-comer-fuera-100-montaditos/",
+      "fecha": "2026-11-03T13:38:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "La oposición israelí negocia un gobierno alternativo para desbancar a Netanyahu",
+      "url": "https://theobjective.com/internacional/2026-11-03/oposicion-israeli-gobierno-alternativo-netanyahu/",
+      "fecha": "2026-11-03T13:36:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El juez del ‘caso Plus Ultra’ pide a la Policía que investigue quién fabricó las joyas de Zapatero",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/juez-caso-plus-ultra-policia-joyas-zapatero/",
+      "fecha": "2026-11-03T13:31:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Puente cambia protocolos y recurre a la IA mientras descarta dimitir por la tragedia de Urda",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/puente-protocolos-frecuencias-dimitir-urda/",
+      "fecha": "2026-11-03T13:20:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Los hurtos cuestan casi 3.000 millones a los comercios que denuncian más agresividad",
+      "url": "https://theobjective.com/economia/2026-11-03/hurtos-3-000-millones-comercios-agresividad/",
+      "fecha": "2026-11-03T13:17:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La juez Biedma vuelve a pedir que declare Cintia Rocho, la mujer a la que contactó la trama",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-03/juez-biedma-pedraz-cintia-rocho/",
+      "fecha": "2026-11-03T13:16:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Ceuta acusa al Gobierno de falta de voluntad política para devolver a los 15.000 inmigrantes",
+      "url": "https://theobjective.com/espana/politica/2026-11-03/ceuta-gobierno-voluntad-politica-15-000-inmigrantes/",
+      "fecha": "2026-11-03T13:14:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Guardia Civil concluye la búsqueda de restos biológicos en el accidente de Urda (Toledo)",
+      "url": "https://theobjective.com/espana/2026-11-03/guardia-civil-restos-urda/",
+      "fecha": "2026-11-03T13:13:33+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Momento del brutal choque entre dos helicópteros en el Everest",
+      "url": "https://www.elmundo.es/internacional/2026/11/03/6ae9da2a21efa0ab0f8b4590-video.html",
+      "fecha": "2026-11-03T12:58:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "La Policía investiga al portero del Andorra por el presunto homicidio imprudente de De Miguel",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-03/policia-portero-andorra-homicio-imprudente-de-miguel/",
+      "fecha": "2026-11-03T12:55:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Toledo acogerá en un plazo de diez días el funeral religioso por las víctimas de Urda",
+      "url": "https://theobjective.com/sociedad/2026-11-03/toledo-funeral-urda/",
+      "fecha": "2026-11-03T12:54:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Los demócratas aventajan a los republicanos en los sondeos para controlar el Congreso",
+      "url": "https://theobjective.com/internacional/2026-11-03/democratas-republicanos-congreso/",
+      "fecha": "2026-11-03T12:45:09+00:00"
+    }
+  ]
+}
