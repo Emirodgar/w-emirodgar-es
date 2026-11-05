@@ -155,7 +155,7 @@
         "titulo": "'Ola azul': los demócratas arrasan en las Midterms y recuperan el control del Senado y la Cámara de Representantes triunfando en Texas o Kansas",
         "url": "https://www.elmundo.es/internacional/2026/11/04/6aea9432e4d4d8701a8b45be.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-04",
@@ -168,6 +168,48 @@
         "medio": "El Mundo",
         "titulo": "Aumentan un 75% los casos de violencia de padres contra hijos: \"Les dicen a los niños que no valen para nada y que se arrepienten de haberlos tenido\"",
         "url": "https://www.elmundo.es/espana/2026/11/04/6aeb0e39e4d4d8945f8b4587.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-05",
+      "edicion": "2026-11-05",
+      "titulo": "Nueva operación de la UCO en el caso Koldo",
+      "categoria": "Política",
+      "descripcion": "La Unidad Central Operativa (UCO) de la Guardia Civil se persona en casa de Ábalos, detiene al ex chófer de Sánchez y reclama información a Adif en una nueva pieza separada del caso Koldo.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La UCO lanza una nueva operación: se persona en casa de Ábalos, detiene al ex chófer de Sánchez y reclama información a Adif",
+        "url": "https://www.elmundo.es/espana/2026/11/05/6aec4851e9cf4ac94c8b459e.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-05",
+      "edicion": "2026-11-05",
+      "titulo": "Dimisión de Óscar Puente tras el accidente de Urda",
+      "categoria": "Política",
+      "descripcion": "Óscar Puente dimite de su cargo tras la tragedia ferroviaria de Urda, un hecho que ha sacudido la precampaña electoral.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Última hora sobre el accidente de Urda",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/05/6aec212addc80eae27e4aba4-directo.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-05",
+      "edicion": "2026-11-05",
+      "titulo": "Cristiano Ronaldo anuncia su retirada de la selección de Portugal",
+      "categoria": "Deportes",
+      "descripcion": "El futbolista Cristiano Ronaldo anuncia su retirada de la selección de Portugal después de 23 años defendiendo la camiseta de su país.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Cristiano Ronaldo anuncia su retirada de la Selección de Portugal: \"Llegó el día de devolver la camiseta del 7\"",
+        "url": "https://www.elmundo.es/deportes/futbol/2026/11/05/6aec5d26e85ececb778b459a.html"
       },
       "destacado": false
     }

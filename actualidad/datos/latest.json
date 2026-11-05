@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-04",
-  "generado_en": "2026-11-04T12:51:59+00:00",
-  "titular": "Dimisión de Óscar Puente, victoria demócrata en EE.UU. y aumento de violencia filioparental marcan la jornada",
+  "fecha": "2026-11-05",
+  "generado_en": "2026-11-05T13:00:47+00:00",
+  "titular": "Nueva operación de la UCO por el caso Koldo y tensiones en la Cumbre Iberoamericana marcan la jornada",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 209
+    "El Mundo": 32,
+    "The Objective": 193
   },
   "temas": [
     {
-      "tema": "Dimisión de Óscar Puente y crisis ferroviaria",
+      "tema": "Operación UCO y caso Koldo",
       "categoria": "Política",
-      "descripcion": "Óscar Puente dimite como ministro de Transportes, siendo sustituido por Carlos Cuerpo, en medio de la polémica por los accidentes ferroviarios y las denuncias sobre la situación de Adif. La UE interviene en la investigación del accidente de Urda."
+      "descripcion": "La UCO ha realizado registros en el domicilio de Ábalos y ha detenido al ex chófer de Sánchez en una nueva fase del caso Koldo, generando fuertes críticas de la oposición."
     },
     {
-      "tema": "Victoria demócrata en las Midterms de EE.UU.",
+      "tema": "Tensión en la Cumbre Iberoamericana",
       "categoria": "Internacional",
-      "descripcion": "Los demócratas logran una victoria contundente en las elecciones de medio término en Estados Unidos, recuperando el control del Senado y la Cámara de Representantes, lo que ha sido celebrado por el Gobierno español y Podemos."
+      "descripcion": "La Cumbre Iberoamericana ha sido escenario de un tenso encuentro entre Sánchez y Milei, quien ha equiparado socialismo y fascismo, mientras Venezuela busca su reinserción internacional."
     },
     {
-      "tema": "Aumento de la violencia filioparental",
-      "categoria": "Sociedad",
-      "descripcion": "La Fundación Anar alerta de un incremento del 75% en los casos de violencia de padres contra hijos, con relatos de agresiones físicas y verbales."
+      "tema": "Accidente ferroviario de Urda y dimisión de Óscar Puente",
+      "categoria": "Política",
+      "descripcion": "La dimisión de Óscar Puente tras el accidente de Urda ha impactado en la precampaña electoral, mientras se investigan las causas y se reclaman mejoras en la seguridad ferroviaria."
     },
     {
-      "tema": "Ciberataque a Crédit Mutuel Arkéa",
-      "categoria": "Economía",
-      "descripcion": "El banco francés Crédit Mutuel Arkéa sufre un ciberataque que resulta en la conversión de 118 millones de euros en criptomonedas, aunque sin afectar a los clientes."
+      "tema": "Falsas amenazas de bomba en vuelos europeos",
+      "categoria": "Sucesos",
+      "descripcion": "Una nueva oleada de falsas amenazas de bomba ha afectado a numerosos vuelos en Europa, incluyendo tres en Madrid, generando interrupciones y dispositivos de seguridad."
     }
   ]
 }
