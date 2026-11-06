@@ -3,3 +3,6 @@ _site/
 .sass-cache/
 .jekyll-metadata
 .jekyll-cache
+
+# Atalaya: base de datos local (no publicar)
+data-private/

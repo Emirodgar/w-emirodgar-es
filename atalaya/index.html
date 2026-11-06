@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Atalaya | Panel de inteligencia electoral (prototipo)</title>
+<meta name="description" content="Prototipo de panel de inteligencia electoral por territorio: mapa de ganadores, volatilidad histórica y riesgo de cambio por municipio, prensa geolocalizada y agentes de IA. Cobertura: toda España, de provincia a municipio.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#07090d; --panel:#0e1219; --panel2:#131a24; --line:#1f2937; --txt:#e5e9f0; --mut:#8b97a8;
+  --acc:#22d3ee; --ok:#34d399; --warn:#fbbf24; --bad:#f87171;
+  --pp:#3b9cff; --psoe:#ef4444; --vox:#7ac943; --cs:#fb923c; --otros:#94a3b8;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.logo{font-size:inherit;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600;letter-spacing:.18em;color:var(--acc)}
+.logo i{width:9px;height:9px;border-radius:50%;background:var(--acc)}
+.logo small{color:var(--mut);letter-spacing:.05em;font-weight:400;font-size:12px}
+.badge{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:4px;border:1px solid var(--warn);color:var(--warn);background:rgba(251,191,36,.08)}
+.filter{position:relative;display:flex;gap:8px;align-items:center;margin-left:auto}
+.filter input{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;width:230px}
+.filter input:focus,.seg button:focus-visible,.tabs button:focus-visible,.row:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 12px;cursor:pointer}
+.btn:hover{border-color:var(--acc)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.kpi b{display:block;font-family:var(--mono);font-size:24px;font-weight:600}
+.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,1fr);gap:10px;padding:10px 16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.card h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
+.card h2 em{font-style:normal;color:var(--acc)}
+.body{padding:12px 14px}
+.mapwrap{position:relative}
+#map{height:660px;background:#0a0d12}
+.seg{position:absolute;z-index:500;top:10px;left:10px;display:flex;background:rgba(7,9,13,.92);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.seg button{background:none;border:0;padding:7px 11px;cursor:pointer;color:var(--mut);font-size:12px;border-right:1px solid var(--line)}
+.seg button:last-child{border:0}
+.seg button.on{background:var(--acc);color:#04222a;font-weight:600}
+.nav{position:absolute;z-index:500;top:10px;right:10px;display:flex;gap:6px}
+.nav .btn{background:rgba(7,9,13,.92);font-size:12px;padding:6px 10px}
+.sres{position:absolute;top:100%;left:0;margin-top:4px;width:280px;max-height:340px;overflow:auto;background:var(--panel);border:1px solid var(--line);border-radius:8px;z-index:1100}
+.sres button{display:flex;justify-content:space-between;gap:8px;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:8px 12px;cursor:pointer}
+.sres button:hover,.sres button:focus-visible{background:var(--panel2)}
+.sres span{color:var(--mut);font-size:12px}
+.wide{margin:0 16px 10px}
+.scen{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:16px}
+.ctl label{display:block;font-size:12px;color:var(--mut);margin:10px 0 3px;text-transform:uppercase;letter-spacing:.05em}
+.ctl select,.ctl input[type=text]{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 9px}
+.ctl input[type=range]{width:100%;accent-color:var(--acc)}
+.ctl .rl{display:flex;justify-content:space-between;align-items:baseline}
+.ctl .rl output{font-family:var(--mono);font-size:12px;color:var(--txt)}
+.scen-head{font-size:15px;margin-bottom:10px}
+.kp3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.kp3 .m span:last-child{display:block;font-size:12px;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{background:var(--panel2);border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:12px;cursor:pointer}
+.chips button span{color:var(--warn);font-family:var(--mono);font-size:12px}
+.pols{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;padding:12px 14px}
+.pol{background:var(--panel2);border-radius:8px;padding:12px}
+.pol b{display:block;font-weight:600}
+.face{width:52px;height:52px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--mut);background:#0b0f15;flex:none;overflow:hidden}
+.face img{width:100%;height:100%;object-fit:cover}
+.disc{color:var(--mut);font-size:12px;margin-top:8px}
+@media (max-width:900px){.scen{grid-template-columns:1fr}.kp3{grid-template-columns:1fr}}
+.legend{position:absolute;z-index:500;bottom:12px;left:10px;background:rgba(7,9,13,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;color:var(--mut);max-width:260px}
+.legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.legend .ramp{height:8px;border-radius:4px;margin:4px 0 2px}
+.legend .ends{display:flex;justify-content:space-between}
+.leaflet-container{font-family:Inter,sans-serif}
+.leaflet-tooltip{background:#05070a;color:var(--txt);border:1px solid var(--line);box-shadow:none}
+.leaflet-tooltip:before{display:none}
+.title{font-size:20px;font-weight:700}
+.sub{color:var(--mut);font-size:12px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;margin:6px 6px 0 0}
+.p-bad{background:rgba(248,113,113,.15);color:var(--bad)} .p-warn{background:rgba(251,191,36,.15);color:var(--warn)}
+.p-ok{background:rgba(52,211,153,.15);color:var(--ok)} .p-mut{background:rgba(148,163,184,.15);color:var(--mut)}
+.metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:12px 0}
+.m{background:var(--panel2);border-radius:6px;padding:8px 10px}
+.m span{display:block;font-size:12px;color:var(--mut)}
+.m b{font-family:var(--mono);font-size:18px}
+.bar{height:5px;background:#1b2330;border-radius:3px;margin-top:5px}
+.bar i{display:block;height:100%;border-radius:3px}
+.chartbox{height:170px;position:relative}
+.brief{background:var(--panel2);border-left:3px solid var(--acc);border-radius:4px;padding:10px 12px;font-size:13px;margin-top:12px}
+.brief small{display:block;color:var(--mut);font-family:var(--mono);font-size:12px;letter-spacing:.1em;margin-bottom:4px}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;padding:0 16px 10px}
+.list{max-height:420px;overflow:auto}
+.item{padding:9px 14px;border-bottom:1px solid var(--line)}
+.item:last-child{border:0}
+.item a{text-decoration:none;font-weight:500}
+.item a:hover{color:var(--acc)}
+.meta{font-size:12px;color:var(--mut);margin-top:3px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.tag{font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:3px;background:#1b2330;color:var(--txt)}
+.tag.risk{background:rgba(248,113,113,.18);color:var(--bad)}
+.tag.PP{color:var(--pp)}.tag.PSOE{color:var(--psoe)}.tag.Vox{color:var(--vox)}.tag.Cs{color:var(--cs)}
+.tabs{display:flex;gap:4px}
+.tabs button{background:none;border:1px solid var(--line);border-radius:5px;padding:2px 8px;font-size:12px;cursor:pointer;color:var(--mut);text-transform:none;letter-spacing:0;font-family:Inter}
+.tabs button.on{border-color:var(--acc);color:var(--acc)}
+.row{display:flex;align-items:center;gap:10px;padding:8px 14px;border-bottom:1px solid var(--line);cursor:pointer}
+.row:hover{background:var(--panel2)}
+.row .n{flex:1;min-width:0}
+.row .n b{display:block;font-weight:600}
+.row .n span{font-size:12px;color:var(--mut)}
+.score{font-family:var(--mono);font-weight:600;width:42px;text-align:right}
+.agents{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;padding:0 16px 10px}
+.agent{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:12px}
+.agent h3{font-size:13px;display:flex;justify-content:space-between;gap:6px;align-items:center;margin-bottom:6px}
+.agent p{font-size:12px;color:var(--mut)}
+.agent .st{font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:3px}
+.st.live{background:rgba(52,211,153,.15);color:var(--ok)} .st.plan{background:rgba(148,163,184,.15);color:var(--mut)}
+.agent b{color:var(--txt)}
+.road{padding:0 16px 24px}
+.road .body{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.road h4{font-size:12px;margin-bottom:4px;color:var(--acc);font-family:var(--mono)}
+.road p{font-size:12px;color:var(--mut)}
+.foot{padding:0 16px 24px;color:var(--mut);font-size:12px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.empty{padding:16px 14px;color:var(--mut)}
+@media (max-width:1100px){.grid{grid-template-columns:1fr}.cols{grid-template-columns:1fr}.agents{grid-template-columns:repeat(2,1fr)}.road .body{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.kpis{grid-template-columns:repeat(2,1fr)}.filter{margin-left:0;width:100%}.filter input{flex:1;width:auto}#map{height:440px}.agents,.road .body{grid-template-columns:1fr}.seg{flex-wrap:wrap;max-width:calc(100% - 20px)}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <h1 class="logo"><i></i>ATALAYA <small>inteligencia electoral</small></h1>
+  <span class="badge" title="Los resultados, la volatilidad y el sentimiento son datos generados para la demo. Los límites municipales y los titulares son reales.">PROTOTIPO · RESULTADOS Y SENTIMIENTO SIMULADOS</span>
+  <div class="filter">
+    <input id="q" placeholder="Buscar provincia o municipio…" aria-label="Buscar provincia o municipio" autocomplete="off">
+    <div id="sres" class="sres" hidden></div>
+    <button class="btn" id="reset">Toda España</button>
+  </div>
+</header>
+
+<section class="kpis" aria-label="Resumen del territorio">
+  <div class="kpi"><b id="k1">–</b><span id="k1l">Provincias</span></div>
+  <div class="kpi"><b id="k2" style="color:var(--bad)">–</b><span>En alarma (riesgo ≥ 60)</span></div>
+  <div class="kpi"><b id="k3" style="color:var(--warn)">–</b><span>Volátiles</span></div>
+  <div class="kpi"><b id="k4">–</b><span>Titulares con territorio (real)</span></div>
+</section>
+
+<main class="grid">
+  <section class="card">
+    <h2>Mapa electoral · <em id="mapTitle">España</em></h2>
+    <div class="mapwrap">
+      <div class="seg" role="group" aria-label="Capa del mapa">
+        <button data-mode="winner" class="on">Ganador</button>
+        <button data-mode="vol">Volatilidad</button>
+        <button data-mode="risk">Riesgo de cambio</button>
+        <button data-mode="sent">Sentimiento</button>
+        <button data-mode="scen">Escenario</button>
+      </div>
+      <div id="map" aria-label="Mapa electoral de España"></div>
+      <div class="nav"><button class="btn" id="back" hidden>← Atrás</button><button class="btn" id="canarias">Canarias</button></div>
+      <div class="legend" id="legend"></div>
+    </div>
+  </section>
+
+  <aside class="card">
+    <h2>Ficha del territorio <em id="fichaTag"></em></h2>
+    <div class="body" id="ficha"></div>
+  </aside>
+</main>
+
+<section class="cols">
+  <div class="card">
+    <h2>Prensa <span class="tabs" id="newsTabs"><button data-t="all" class="on">Todo</button><button data-t="local">Local</button><button data-t="nacional">Nacional</button></span></h2>
+    <div class="list" id="news"></div>
+  </div>
+  <div class="card">
+    <h2>Peligros · eventos que pueden afectar a la campaña</h2>
+    <div class="list" id="risks"></div>
+  </div>
+  <div class="card">
+    <h2><span id="rankT">Provincias en alarma</span> <em>riesgo de cambio</em></h2>
+    <div class="list" id="rank"></div>
+  </div>
+</section>
+
+<section class="card wide" id="escenarios">
+  <h2>Escenarios · ¿y si…? <em>impacto en voto e indecisos</em></h2>
+  <div class="body scen">
+    <div class="ctl">
+      <label for="spre">Tipo de evento</label><select id="spre"></select>
+      <label for="sactor">Protagonista (texto libre)</label><input type="text" id="sactor" maxlength="60">
+      <label for="sp">Partido afectado</label>
+      <select id="sp"><option>PP</option><option>PSOE</option><option>Vox</option><option>Cs</option><option>Sumar</option><option>Podemos</option></select>
+      <label for="sd">Efecto</label><select id="sd"><option value="-1">Negativo para el partido</option><option value="1">Positivo para el partido</option></select>
+      <label for="sg"><span class="rl"><span>Gravedad del hecho</span><output id="sgo"></output></span></label><input type="range" id="sg" min="0" max="100">
+      <label for="sa"><span class="rl"><span>Alcance mediático</span><output id="sao"></output></span></label><input type="range" id="sa" min="0" max="100">
+      <label for="sf"><span class="rl"><span>Fidelidad de la base</span><output id="sfo"></output></span></label><input type="range" id="sf" min="0" max="100">
+      <label for="sr"><span class="rl"><span>Capacidad de recuperar indecisos</span><output id="sro"></output></span></label><input type="range" id="sr" min="0" max="100">
+      <label for="su"><span class="rl"><span>Indecisos de partida</span><output id="suo"></output></span></label><input type="range" id="su" min="3" max="35">
+      <p class="disc">Escenario hipotético: no afirma ningún hecho real. El modelo y sus supuestos son simples y editables; los intervalos reflejan solo la incertidumbre de estos parámetros. Se aplica al ámbito que estés viendo (provincias o municipios) y puedes pintarlo en el mapa con la capa «Escenario».</p>
+    </div>
+    <div id="sout"></div>
+  </div>
+</section>
+
+<section class="card wide" id="politicos">
+  <h2>Políticos · estado según prensa <em>neutro si no hay información</em></h2>
+  <div class="pols" id="pols"></div>
+  <p class="disc" style="padding:0 14px 12px">Estado calculado con los titulares recogidos: <b>Neutro</b> (sin menciones), <b>En foco</b> (menciones sin eventos de riesgo), <b>Bajo presión</b> (2–5 titulares con palabras de riesgo), <b>Crisis</b> (6 o más). Es una heurística de palabras clave, no un análisis de sentimiento todavía. Redes sociales aún no conectadas (Fase 3). Candidaturas de fuente propia (<a href="/elecciones-espana/">Elecciones en España</a>); las listas provinciales se añadirán al proclamarse. Fotos: Wikipedia / Wikimedia Commons.</p>
+</section>
+
+<h2 class="sr">Agentes de IA</h2>
+<section class="agents" id="agents"></section>
+
+<section class="road card" style="margin:0 16px 10px">
+  <h2>Hoja de ruta</h2>
+  <div class="body">
+    <div><h4>FASE 1 · ESTE PROTOTIPO</h4><p>Mapa de toda España (52 provincias y ~8.100 municipios), volatilidad, riesgo de cambio, prensa por RSS etiquetada por territorio, escenarios «¿y si…?», fichas de políticos y buscador.</p></div>
+    <div><h4>FASE 2</h4><p>Resultados oficiales por municipio y mesa, encuestas, sentimiento de prensa y opinión con NLP, segundo cerebro (programas y declaraciones).</p></div>
+    <div><h4>FASE 3</h4><p>Redes, YouTube y foros agregados por territorio, estimación local con MRP y detector de campañas coordinadas.</p></div>
+    <div><h4>FASE 4</h4><p>Agentes de acción con aprobación humana: respuesta, agenda y grupos de WhatsApp de campaña con consentimiento.</p></div>
+  </div>
+</section>
+
+<p class="foot">Real: límites (Opendatasoft/IGN), titulares (RSS nacionales y Google Noticias por provincia, etiquetados por coincidencia de nombre; puede haber ruido), candidatos y media nacional de encuestas (de /elecciones-espana). Simulado: resultados 2011–2023 por provincia y municipio (se simulan por separado), volatilidad, sentimiento, indecisos y las salidas de los agentes. El caso de Salamanca capital es ilustrativo. No tomar ninguna cifra como dato electoral. Datos agregados por territorio, sin perfilado de personas.</p>
+
+<script>
+(function(){
+'use strict';
+const PARTIES=[['PP','#3b9cff'],['PSOE','#ef4444'],['Vox','#7ac943'],['Cs','#fb923c'],['Sumar','#d6246e'],['Podemos','#9b59d0'],['Otros','#94a3b8']];
+const COL=Object.fromEntries(PARTIES);
+const POS={Vox:9,PP:7,Cs:5.5,Otros:5,PSOE:3.5,Sumar:2,Podemos:1.5};   // eje ideológico 0-10 (supuesto del modelo)
+const ID2P={PP:'PP',PSOE:'PSOE',VOX:'Vox',SUMAR:'Sumar',PODEMOS:'Podemos'};
+const YEARS=[2011,2015,2019,2023];
+const CAPITAL='37274';
+
+/* ---------- datos simulados deterministas ---------- */
+function rng(seed){let a=seed>>>0;return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function simulate(code,scale){
+  const r=rng(parseInt(code,10)*2654435761);
+  const lean=r(), trait=(0.6+r()*2.4)*(scale||1), hist=[];
+  const base={PP:28+lean*30,PSOE:22+(1-lean)*22};
+  const target=[[1,1,0,0],[.85,.95,0,1],[.8,.9,.45,.55],[.95,.85,1,.1]];
+  const noise=7*(scale||1);
+  YEARS.forEach((y,i)=>{
+    const s={};let tot=0;
+    s.PP=base.PP*target[i][0]*(.55+.45*target[i][0])+(r()-.5)*noise*trait;
+    s.PSOE=base.PSOE*target[i][1]+(r()-.5)*noise*trait;
+    s.Vox=(4+r()*9)*target[i][2];
+    s.Cs=(5+r()*9)*target[i][3];
+    for(const k of ['PP','PSOE','Vox','Cs']){s[k]=Math.max(0,s[k]);tot+=s[k]}
+    s.Otros=Math.max(2,6+r()*12);tot+=s.Otros;
+    for(const k in s)s[k]=+(s[k]/tot*100).toFixed(1);
+    hist.push(s);
+  });
+  let sent=Math.round((r()-.5)*24*(scale?1.6:1));
+  if(code===CAPITAL){
+    [[44.8,29.1,6.2,12.1],[41.2,28.4,7.5,17.0],[43.3,31.0,8.8,10.2],[45.9,27.5,10.4,2.5]].forEach((v,i)=>{
+      const s={PP:v[0],PSOE:v[1],Vox:v[2],Cs:v[3]};s.Otros=+(100-v[0]-v[1]-v[2]-v[3]).toFixed(1);hist[i]=s});
+    sent=-38;
+  }
+  return {hist,sent};
+}
+function analyse(sim){
+  const h=sim.hist, K=['PP','PSOE','Vox','Cs'];
+  const win=h.map(s=>K.slice().sort((a,b)=>s[b]-s[a])[0]);
+  const last=h[h.length-1], ord=K.slice().sort((a,b)=>last[b]-last[a]);
+  const margin=+(last[ord[0]]-last[ord[1]]).toFixed(1);
+  let ped=0;for(let i=1;i<h.length;i++){let d=0;for(const k in h[i])d+=Math.abs(h[i][k]-h[i-1][k]);ped+=d/2}
+  ped/=h.length-1;
+  const switches=win.reduce((n,w,i)=>n+(i&&w!==win[i-1]?1:0),0);
+  const vol=Math.min(100,Math.round(ped*4.2+switches*14));
+  const distinct=new Set(win).size;
+  const fragile=Math.max(0,30-margin)/30*100;
+  let risk=0.34*vol+0.30*fragile+0.36*Math.min(100,Math.max(0,-sim.sent)*2.2);
+  if(distinct===1&&sim.sent<-20)risk+=14;
+  risk=Math.max(0,Math.min(100,Math.round(risk)));
+  const type=distinct===1?'Bastión':(distinct>=3||vol>=85)?'Volátil':'Cambiante';
+  return {winner:win[win.length-1],margin,vol,risk,sent:sim.sent,type,last,hist:h,distinct,switches};
+}
+
+/* ---------- utilidades ---------- */
+const $=id=>document.getElementById(id);
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
+function lerp(a,b,t){return a.map((v,i)=>Math.round(v+(b[i]-v)*t))}
+function ramp(stops,t){t=Math.max(0,Math.min(1,t));const n=stops.length-1,i=Math.min(n-1,Math.floor(t*n));const c=lerp(stops[i],stops[i+1],t*n-i);return `rgb(${c[0]},${c[1]},${c[2]})`}
+const RISKR=[[31,60,52],[210,170,50],[230,70,60]], VOLR=[[22,38,60],[34,140,200],[240,210,90]], SENTR=[[235,70,70],[70,80,95],[50,200,140]], SCENR=[[40,48,60],[230,150,60],[235,60,60]];
+function timeAgo(iso){const m=Math.max(1,Math.round((Date.now()-new Date(iso))/60000));if(m<60)return m+' min';if(m<1440)return Math.round(m/60)+' h';return Math.round(m/1440)+' d'}
+function cleanTitle(t){return t.replace(/\s+-\s+[^-]{3,60}$/,'')}
+function riskPill(r){return r>=60?['p-bad','Alarma']:r>=40?['p-warn','Vigilar']:['p-ok','Estable']}
+const rcol=r=>r>=60?'var(--bad)':r>=40?'var(--warn)':'var(--ok)';
+const f1=x=>(Math.round(x*10)/10).toFixed(1);
+const sgn=x=>(x>0?'+':x<0?'−':'')+f1(Math.abs(x));
+
+/* ---------- estado ---------- */
+let provGJ,news=[],idx,pols=[],natBase=null,provNames={},munNames={};
+const PA={},MA={},SC={};
+let nPv={},nMun={};
+let curProv=null,selMun=null,mode='winner',newsTab='all';
+let map,provLayer,munLayer,chart,scenChart;
+const cache={};
+
+Promise.all([
+  fetch('data/provincias.geojson').then(r=>r.json()),
+  fetch('data/noticias.json').then(r=>r.json()).catch(()=>({noticias:[]})),
+  fetch('data/indice.json').then(r=>r.json()),
+  fetch('data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
+  fetch('../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>null)
+]).then(([pg,nw,ix,pl,enc])=>{
+  provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];natBase=nationalFromPolls(enc);
+  provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
+  idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
+  news.forEach(n=>{n.pv.forEach(c=>nPv[c]=(nPv[c]||0)+1);n.mun.forEach(c=>nMun[c]=(nMun[c]||0)+1)});
+  initMap();showSpain();
+});
+
+/* media de encuestas real (misma idea que /elecciones-espana: sondeos de los últimos 30 días, sin CIS) */
+function nationalFromPolls(enc){
+  if(!enc||!enc.sondeos)return null;
+  const s=enc.sondeos.filter(x=>!/cis/i.test(x.empresa)),last=new Date(s[0].fecha);
+  const recent=s.filter(x=>(last-new Date(x.fecha))/864e5<=30),sum={},cnt={};
+  recent.forEach(x=>{const w=Math.sqrt(x.muestra||1000);for(const k in x.voto){const p=ID2P[k];if(!p)continue;sum[p]=(sum[p]||0)+x.voto[k]*w;cnt[p]=(cnt[p]||0)+w}});
+  const shares={};let tot=0;for(const p in sum){shares[p]=sum[p]/cnt[p];tot+=shares[p]}
+  shares.Cs=0;shares.Otros=Math.max(0,100-tot);
+  return {shares,n:recent.length,fecha:s[0].fecha};
+}
+
+/* ---------- mapa ---------- */
+const PENINSULA=[[35.9,-9.6],[43.9,4.6]];
+function initMap(){
+  map=L.map('map',{zoomControl:false,attributionControl:true,minZoom:4,zoomSnap:.25});
+  L.control.zoom({position:'bottomright'}).addTo(map);
+  map.attributionControl.addAttribution('Límites: IGN / Opendatasoft');
+  provLayer=L.geoJSON(provGJ,{style:f=>styleFor(f.properties.c,PA),onEachFeature:(f,l)=>{
+    const c=f.properties.c;
+    l.on({click:()=>openProvince(c),mouseover:e=>{e.target.setStyle({weight:2,color:'#fff'});l.bringToFront()},mouseout:e=>provLayer.resetStyle(e.target)});
+    l.bindTooltip(()=>tip(c,PA,f.properties.n),{sticky:true});
+  }}).addTo(map);
+}
+function tip(c,tbl,n){const a=tbl[c];let s=`<b>${esc(n)}</b><br>${a.winner} · riesgo ${a.risk} · volatilidad ${a.vol}`;
+  if(mode==='scen'&&SC[c])s+=`<br>Escenario: ${SC[c].party} ${sgn(SC[c].dx)} pts${SC[c].flip?' · <b>cambia de ganador → '+SC[c].after+'</b>':''}`;return s}
+function colorFor(a,c){
+  if(mode==='winner')return {fill:COL[a.winner],op:.35+.55*Math.min(1,a.margin/30)};
+  if(mode==='vol')return {fill:ramp(VOLR,a.vol/100),op:.85};
+  if(mode==='risk')return {fill:ramp(RISKR,a.risk/100),op:.85};
+  if(mode==='scen'){const s=SC[c];return s?{fill:ramp(SCENR,Math.min(1,Math.abs(s.dx)/6)),op:.9}:{fill:'#222a36',op:.7}}
+  return {fill:ramp(SENTR,(a.sent+50)/100),op:.85};
+}
+function styleFor(c,tbl){
+  const k=colorFor(tbl[c],c),on=(tbl===MA&&selMun===c),dim=tbl===MA&&selMun&&!on;
+  const flip=mode==='scen'&&SC[c]&&SC[c].flip;
+  return {fillColor:k.fill,fillOpacity:dim?k.op*.35:k.op,color:on||flip?'#fff':'#0b0f15',weight:on?2.5:flip?2:tbl===PA?.8:.5,dashArray:flip&&!on?'4 3':null};
+}
+function restyle(){
+  provLayer&&provLayer.setStyle(f=>styleFor(f.properties.c,PA));
+  munLayer&&munLayer.setStyle(f=>styleFor(f.properties.c,MA));
+  legend();
+}
+function legend(){
+  let h='';
+  if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox','Cs'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
+  else if(mode==='scen')h=`<div class="ramp" style="background:linear-gradient(90deg,rgb(${SCENR[0]}),rgb(${SCENR[1]}),rgb(${SCENR[2]}))"></div><div class="ends"><span>Sin efecto</span><span>±6 pts o más</span></div><div style="margin-top:4px">Cambio del partido afectado. Borde discontinuo = cambia de ganador.</div>`;
+  else{
+    const s=mode==='vol'?VOLR:mode==='risk'?RISKR:SENTR;
+    const e=mode==='vol'?['Estable','Muy volátil']:mode==='risk'?['Seguro','Alarma']:['Negativo','Positivo'];
+    h=`<div class="ramp" style="background:linear-gradient(90deg,rgb(${s[0]}),rgb(${s[1]}),rgb(${s[2]}))"></div><div class="ends"><span>${e[0]}</span><span>${e[1]}</span></div>`;
+    if(mode==='sent')h+='<div style="margin-top:4px">Tendencia de sentimiento (simulada).</div>';
+  }
+  $('legend').innerHTML=h;
+}
+
+/* ---------- navegación ---------- */
+function showSpain(){
+  curProv=null;selMun=null;
+  if(munLayer){map.removeLayer(munLayer);munLayer=null}
+  if(!map.hasLayer(provLayer))provLayer.addTo(map);
+  map.fitBounds(PENINSULA,{padding:[10,10]});
+  $('q').value='';$('back').hidden=true;
+  runScenario();restyle();renderAll();
+}
+async function loadProv(pc){
+  if(!cache[pc])cache[pc]=await fetch(`data/prov/${pc}.geojson`).then(r=>r.json());
+  cache[pc].features.forEach(f=>{const c=f.properties.c;if(!MA[c])MA[c]=analyse(simulate(c))});
+  return cache[pc];
+}
+async function openProvince(pc,mun){
+  const gj=await loadProv(pc);
+  curProv=pc;selMun=mun||null;
+  if(munLayer)map.removeLayer(munLayer);
+  map.removeLayer(provLayer);
+  munLayer=L.geoJSON(gj,{style:f=>styleFor(f.properties.c,MA),onEachFeature:(f,l)=>{
+    const c=f.properties.c;
+    l.on({click:()=>selectMun(c),mouseover:e=>{e.target.setStyle({weight:2,color:'#fff'});l.bringToFront()},mouseout:e=>munLayer.resetStyle(e.target)});
+    l.bindTooltip(()=>tip(c,MA,f.properties.n),{sticky:true});
+  }}).addTo(map);
+  map.fitBounds(munLayer.getBounds(),{padding:[10,10]});
+  if(mun)zoomMun(mun);
+  $('back').hidden=false;$('q').value=mun?munNames[mun]:'';
+  runScenario();restyle();renderAll();
+}
+function zoomMun(c){munLayer.eachLayer(l=>{if(l.feature.properties.c===c)map.fitBounds(l.getBounds(),{maxZoom:11,padding:[30,30]})})}
+function selectMun(c){selMun=c;$('q').value=munNames[c];munLayer.setStyle(f=>styleFor(f.properties.c,MA));zoomMun(c);renderAll()}
+
+/* ---------- vistas ---------- */
+function scope(){
+  if(!curProv)return {tbl:PA,codes:Object.keys(PA).sort(),names:provNames};
+  return {tbl:MA,codes:cache[curProv].features.map(f=>f.properties.c),names:munNames};
+}
+function newsFor(){
+  if(selMun)return news.filter(n=>n.mun.includes(selMun));
+  if(curProv)return news.filter(n=>n.pv.includes(curProv));
+  return news;
+}
+function renderAll(){
+  const S=scope(),ar=S.codes.map(c=>S.tbl[c]);
+  $('mapTitle').textContent=selMun?`${munNames[selMun]} · ${provNames[curProv]}`:curProv?provNames[curProv]:'España';
+  $('k1').textContent=selMun?1:ar.length;$('k1l').textContent=selMun?'Municipio':curProv?'Municipios':'Provincias';
+  $('k2').textContent=selMun?(MA[selMun].risk>=60?1:0):ar.filter(a=>a.risk>=60).length;
+  $('k3').textContent=selMun?(MA[selMun].type==='Volátil'?1:0):ar.filter(a=>a.type==='Volátil').length;
+  $('k4').textContent=newsFor().length;
+  ficha();renderNews();renderRisks();renderRank();renderAgents();renderPols();renderScenario();
+}
+function bar(v,col){return `<div class="bar"><i style="width:${Math.max(0,Math.min(100,v))}%;background:${col}"></i></div>`}
+function ficha(){
+  let c,a,name,sub,nc;
+  if(selMun){c=selMun;a=MA[c];name=munNames[c];nc=nMun[c]||0;sub=`${provNames[curProv]} · INE ${c}`}
+  else if(curProv){c=curProv;a=PA[c];name=provNames[c];nc=nPv[c]||0;sub=`Provincia · ${cache[c].features.length} municipios`}
+  else{
+    const ar=Object.values(PA),K=['PP','PSOE','Vox','Cs','Otros'];
+    const hist=YEARS.map((y,i)=>Object.fromEntries(K.map(k=>[k,+(ar.reduce((s,x)=>s+x.hist[i][k],0)/ar.length).toFixed(1)])));
+    const top=Object.keys(PA).sort((x,y)=>PA[y].risk-PA[x].risk).slice(0,3).map(x=>provNames[x]).join(', ');
+    const cnt={};ar.forEach(x=>cnt[x.winner]=(cnt[x.winner]||0)+1);
+    $('fichaTag').textContent='';
+    $('ficha').innerHTML=`<div class="title">España</div><div class="sub">52 provincias · pulsa una para ver sus municipios</div>
+      <span class="pill p-mut">${Object.entries(cnt).sort((x,y)=>y[1]-x[1]).map(([k,v])=>`${k}: ${v}`).join(' · ')} provincias</span>
+      <div class="metrics">
+        <div class="m"><span>Riesgo medio</span><b>${Math.round(ar.reduce((s,x)=>s+x.risk,0)/ar.length)}</b></div>
+        <div class="m"><span>Volatilidad media</span><b>${Math.round(ar.reduce((s,x)=>s+x.vol,0)/ar.length)}</b></div>
+        <div class="m"><span>Provincias en alarma</span><b style="color:var(--bad)">${ar.filter(x=>x.risk>=60).length}</b></div>
+        <div class="m"><span>Titulares (real)</span><b>${news.length}</b></div>
+      </div>
+      <div class="chartbox"><canvas id="ch" aria-label="Evolución media del voto por partido"></canvas></div>
+      <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>Las provincias con más riesgo de cambio ahora mismo son <b>${esc(top)}</b>. Entra en cualquiera para ver qué municipios explican el riesgo y dónde conviene concentrar esfuerzos.</div>`;
+    drawChart({hist});return;
+  }
+  const [pc,pt]=riskPill(a.risk);
+  $('fichaTag').textContent='';
+  $('ficha').innerHTML=`
+    <div class="title">${esc(name)}</div>
+    <div class="sub">${esc(sub)} · gana <b style="color:${COL[a.winner]}">${a.winner}</b> con ${a.last[a.winner]}% (ventaja ${a.margin} pts)</div>
+    <span class="pill ${pc}">${pt}</span><span class="pill p-mut">${a.type} · ${a.distinct} ganador${a.distinct>1?'es':''} en 4 elecciones</span>${c===CAPITAL?'<span class="pill p-warn">Caso ilustrativo</span>':''}
+    <div class="metrics">
+      <div class="m"><span>Riesgo de cambio</span><b style="color:${rcol(a.risk)}">${a.risk}</b>${bar(a.risk,rcol(a.risk))}</div>
+      <div class="m"><span>Volatilidad histórica</span><b>${a.vol}</b>${bar(a.vol,'var(--acc)')}</div>
+      <div class="m"><span>Tendencia sentimiento 90 d</span><b style="color:${a.sent<0?'var(--bad)':'var(--ok)'}">${a.sent>0?'+':''}${a.sent}</b>${bar(Math.abs(a.sent)*2,a.sent<0?'var(--bad)':'var(--ok)')}</div>
+      <div class="m"><span>Titulares detectados (real)</span><b>${nc}</b>${bar(nc*(selMun?12:2),'var(--mut)')}</div>
+    </div>
+    <div class="chartbox"><canvas id="ch" aria-label="Evolución del voto por partido"></canvas></div>
+    <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>${briefing(a,name,nc)}</div>`;
+  drawChart(a);
+}
+function drawChart(a){
+  if(chart)chart.destroy();
+  chart=new Chart($('ch'),{type:'line',data:{labels:YEARS,datasets:['PP','PSOE','Vox','Cs'].map(k=>({label:k,data:a.hist.map(h=>h[k]),borderColor:COL[k],backgroundColor:COL[k],tension:.3,pointRadius:3,borderWidth:2}))},
+    options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10,font:{size:11}}}},scales:{x:{ticks:{color:'#8b97a8'},grid:{color:'#1a2230'}},y:{ticks:{color:'#8b97a8',callback:v=>v+'%'},grid:{color:'#1a2230'}}}}});
+}
+function briefing(a,n,k){
+  const K=['PP','PSOE','Vox','Cs'],ord=K.slice().sort((x,y)=>a.last[y]-a.last[x]),sec=ord[1];let t='';
+  if(a.type==='Bastión'&&a.sent<-20)t=`<b>${esc(n)} ha votado ${a.winner} en las cuatro elecciones</b>, pero la tendencia de sentimiento de los últimos 90 días es ${a.sent}. Es el patrón de bastión que se agrieta: histórico estable, ánimo en caída. Recomendación: priorizar agenda local, revisar la respuesta a los temas que concentran las críticas y vigilar a ${sec}, que está a ${a.margin} puntos.`;
+  else if(a.risk>=60)t=`${esc(n)} combina ${a.type==='Volátil'?'alta volatilidad histórica':'una ventaja corta'} (${a.margin} pts sobre ${sec}) con sentimiento ${a.sent<0?'a la baja':'poco favorable'}. Plaza decisiva: concentrar esfuerzos aquí antes que en plazas con ventaja holgada.`;
+  else if(a.type==='Bastión')t=`${esc(n)} es una plaza estable de ${a.winner} (ventaja ${a.margin} pts, volatilidad ${a.vol}). Mantener presencia sin sobreinvertir y revisar solo si el sentimiento cae por debajo de −20.`;
+  else t=`${esc(n)} ha cambiado de ganador ${a.switches} vez/veces. La ventaja actual de ${a.winner} es de ${a.margin} pts: seguirla cada semana y comparar con la media de encuestas cuando esté integrada.`;
+  return t+(k?` Hay ${k} titular${k>1?'es':''} reciente${k>1?'s':''} etiquetado${k>1?'s':''} en este territorio.`:'');
+}
+function tags(n){const ids=n.mun.length?n.mun.slice(0,2).map(c=>munNames[c]):n.pv.slice(0,2).map(c=>provNames[c]);return ids.filter(Boolean).map(x=>`<span class="tag">${esc(x)}</span>`).join('')}
+function renderNews(){
+  let list=newsFor(),note='';
+  if(newsTab!=='all')list=list.filter(n=>n.a===newsTab);
+  if((curProv||selMun)&&!list.length){list=(selMun?news.filter(n=>n.pv.includes(curProv)):news).filter(n=>newsTab==='all'||n.a===newsTab).slice(0,12);note=`<div class="empty">Sin titulares etiquetados para este territorio. Mostrando prensa más cercana.</div>`}
+  $('news').innerHTML=note+(list.slice(0,40).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}${n.p.map(p=>`<span class="tag ${p}">${p}</span>`).join('')}</div></div>`).join('')||'<div class="empty">Sin titulares.</div>');
+}
+function renderRisks(){
+  let list=newsFor().filter(n=>n.r);
+  if((curProv||selMun)&&!list.length)list=news.filter(n=>n.r&&n.pv.includes(curProv)).slice(0,8);
+  $('risks').innerHTML=list.slice(0,30).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span class="tag risk">EVENTO</span><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}</div></div>`).join('')||'<div class="empty">Sin eventos de riesgo detectados.</div>';
+}
+function renderRank(){
+  const S=scope(),r=S.codes.slice().sort((a,b)=>S.tbl[b].risk-S.tbl[a].risk).slice(0,25);
+  $('rankT').textContent=curProv?'Municipios en alarma · '+provNames[curProv]:'Provincias en alarma';
+  $('rank').innerHTML=r.map((c,i)=>{const a=S.tbl[c];
+    return `<div class="row" tabindex="0" data-c="${c}"><span class="sub">${i+1}</span><div class="n"><b>${esc(S.names[c])}</b><span>${a.type} · ${a.winner} +${a.margin} · sent. ${a.sent>0?'+':''}${a.sent}</span></div><span class="score" style="color:${rcol(a.risk)}">${a.risk}</span></div>`}).join('');
+  $('rank').querySelectorAll('.row').forEach(el=>{const go=()=>curProv?selectMun(el.dataset.c):openProvince(el.dataset.c);el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter')go()}});
+}
+function renderAgents(){
+  const sc=newsFor(),ev=sc.filter(n=>n.r).length,S=scope(),al=selMun?(MA[selMun].risk>=60?1:0):S.codes.filter(c=>S.tbl[c].risk>=60).length;
+  const ag=[
+    ['Vigía','live','Lee prensa nacional y local de las 52 provincias por RSS, la etiqueta por territorio, partido y político y marca eventos de riesgo.',`<b>${sc.length}</b> titulares y <b>${ev}</b> eventos en el filtro actual.`],
+    ['Analista','live','Calcula volatilidad y riesgo de cambio y redacta el informe del territorio.',`<b>${al}</b> ${curProv?'municipio':'provincia'}${al===1?'':'s'} en alarma en el filtro actual.`],
+    ['Estratega','live','Simula escenarios («¿y si…?») sobre el voto y los indecisos, con intervalo de incertidumbre.','Ver bloque de escenarios.'],
+    ['Archivista','plan','Segundo cerebro: programas, notas de prensa y entrevistas con cita y fecha (RAG).','Fase 2. Esquema de datos ya definido.'],
+    ['WhatsApp','plan','Resúmenes y avisos en grupos propios de campaña, con consentimiento y bot declarado. Sin leer grupos ajenos.','Fase 4 · requiere API oficial de WhatsApp Business o canal alternativo.']];
+  $('agents').innerHTML=ag.map(a=>`<div class="agent"><h3>${a[0]}<span class="st ${a[1]}">${a[1]==='live'?'ACTIVO':'PLANIFICADO'}</span></h3><p>${a[2]}</p><p style="margin-top:6px">${a[3]}</p></div>`).join('');
+}
+
+/* ---------- políticos: estado a partir de titulares ---------- */
+const photoCache={};
+function polStatus(p){
+  if(!p.alias||!p.alias.length)return {k:'none',label:'Sin definir',n:0,risk:0};
+  const rx=p.alias.map(a=>new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)'));
+  const hits=news.filter(n=>{const t=norm(n.t);return rx.some(r=>r.test(t))});
+  const risk=hits.filter(n=>n.r);
+  const k=risk.length>=6?'crisis':risk.length>=2?'press':hits.length?'focus':'none';
+  return {k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],n:hits.length,risk:risk.length,last:(risk[0]||hits[0])};
+}
+function initials(n){return n?n.split(' ').filter(w=>/^[A-ZÁÉÍÓÚÑ]/.test(w)).slice(0,2).map(w=>w[0]).join(''):'?'}
+async function photo(p,el){
+  if(!p.wiki)return;
+  if(photoCache[p.id]===undefined){
+    let v=null;try{v=sessionStorage.getItem('atl-ph-'+p.id)}catch(e){}
+    if(v===null){
+      try{const r=await fetch('https://es.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(p.wiki));const j=await r.json();v=(j.type==='standard'&&j.thumbnail)?j.thumbnail.source:'';}catch(e){v=''}
+      try{sessionStorage.setItem('atl-ph-'+p.id,v)}catch(e){}
+    }
+    photoCache[p.id]=v;
+  }
+  if(photoCache[p.id])el.innerHTML=`<img src="${esc(photoCache[p.id])}" alt="${esc(p.nombre)}" loading="lazy">`;
+}
+function renderPols(){
+  const box=$('pols');if(!pols.length){box.innerHTML='<div class="empty">Sin datos.</div>';return}
+  const stCol={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'};
+  box.innerHTML=pols.map(p=>{const s=polStatus(p),pk=ID2P[p.partidoId]||p.partidoId,c=COL[pk]||'#94a3b8';
+    const ph=p.nombre?`<div class="face" id="f-${p.id}" style="border-color:${c}">${esc(initials(p.nombre))}</div>`:`<div class="face" style="border-color:${c}">?</div>`;
+    return `<div class="pol"><div style="display:flex;gap:10px;align-items:center">${ph}<div style="min-width:0"><b>${esc(p.nombre||'Por definir')}</b><div class="sub">${esc(p.cargo||p.nota||'')}</div></div></div>
+      <div class="meta" style="margin-top:8px"><span class="tag" style="color:${c}">${esc(p.partidoId)}</span><span class="tag" style="color:${stCol[s.k]};border:1px solid ${stCol[s.k]}">${s.label}</span><span>${s.n?`${s.n} titular${s.n>1?'es':''}${s.risk?` · ${s.risk} de riesgo`:''}`:'sin información'}</span></div>
+      ${s.last?`<div class="sub" style="margin-top:6px"><a href="${esc(s.last.u)}" target="_blank" rel="noopener">${esc(cleanTitle(s.last.t).slice(0,110))}</a></div>`:''}</div>`}).join('');
+  pols.forEach(p=>{const el=$('f-'+p.id);if(el)photo(p,el)});
+}
+
+/* ---------- escenarios ---------- */
+const PRESETS={
+  imput:{label:'Imputación de una figura política',party:'PSOE',dir:-1,grav:55,alc:80,fid:60,rec:30},
+  condena:{label:'Condena de una figura política',party:'PSOE',dir:-1,grav:80,alc:90,fid:55,rec:25},
+  dimision:{label:'Dimisión inesperada de un líder',party:'PP',dir:-1,grav:45,alc:75,fid:65,rec:40},
+  corrup:{label:'Caso de corrupción local',party:'PP',dir:-1,grav:50,alc:40,fid:55,rec:35},
+  pacto:{label:'Pacto de gobierno controvertido',party:'PSOE',dir:-1,grav:40,alc:70,fid:70,rec:45},
+  entrev:{label:'Entrevista / acto de gran audiencia',party:'PP',dir:1,grav:35,alc:70,fid:60,rec:0},
+  crisis:{label:'Mala gestión de una crisis (DANA, apagón…)',party:'PSOE',dir:-1,grav:60,alc:85,fid:55,rec:30}
+};
+function scenParams(){return {party:$('sp').value,dir:+$('sd').value,grav:+$('sg').value,alc:+$('sa').value,fid:+$('sf').value,rec:+$('sr').value,und:+$('su').value,actor:$('sactor').value.trim()}}
+function proxW(from,keys){const w={};let t=0;keys.forEach(k=>{if(k===from)return;w[k]=Math.exp(-Math.abs((POS[k]??5)-(POS[from]??5))/2.2);t+=w[k]});for(const k in w)w[k]/=t;return w}
+/* Modelo transparente: puntos sobre el electorado. Evento negativo: el partido pierde L=cuota*0,30*I;
+   40 % de L pasa a indecisos, 20 % a abstención y 40 % a otros partidos según cercanía ideológica.
+   Evento positivo: gana G=cuota*0,12*I; 50 % de G viene de indecisos y 50 % de otros partidos según cercanía.
+   Recuperación: el partido recupera rec % × 0,7 de lo que se fue a indecisos. */
+function engine(shares,und,p,sens){
+  const keys=Object.keys(shares),dec=100-und,pts={};keys.forEach(k=>pts[k]=shares[k]*dec/100);
+  const before=Object.assign({},pts);let u=und,abst=0;
+  const I=Math.min(1,(p.grav/100)*(p.alc/100)*(1-0.6*p.fid/100)*sens),X=p.party;
+  if(pts[X]===undefined)return null;
+  if(p.dir<0){
+    const L=pts[X]*0.30*I;pts[X]-=L;u+=0.4*L;abst+=0.2*L;
+    const w=proxW(X,keys);keys.forEach(k=>{if(k!==X)pts[k]+=0.4*L*w[k]});
+    const back=(p.rec/100)*0.7*0.4*L;pts[X]+=back;u-=back;
+    var moved=0.4*L;
+  }else{
+    const G=pts[X]*0.12*I,fromU=Math.min(u,0.5*G);u-=fromU;pts[X]+=G;
+    const w=proxW(X,keys),rest=G-fromU;keys.forEach(k=>{if(k!==X)pts[k]-=rest*w[k]});moved=-fromU;
+  }
+  const sum=keys.reduce((s,k)=>s+pts[k],0),sh={};keys.forEach(k=>sh[k]=pts[k]/sum*100);
+  const top=o=>keys.filter(k=>k!=='Otros').sort((a,b)=>o[b]-o[a])[0];
+  return {before:shares,after:sh,und0:und,und1:u,abst,moved,I,winB:top(shares),winA:top(sh)};
+}
+function terrShares(a){const s=a.last,o=s.Otros;return {PP:s.PP,PSOE:s.PSOE,Vox:s.Vox,Cs:s.Cs,Sumar:o*.45,Podemos:o*.15,Otros:o*.40}}
+function runScenario(){
+  for(const k in SC)delete SC[k];
+  if(!$('sp'))return;
+  const p=scenParams(),S=scope();
+  S.codes.forEach(c=>{
+    const a=S.tbl[c],rr=rng(parseInt(c,10)*977+13),u=Math.max(3,p.und*(0.6+rr()*0.8));
+    const e=engine(terrShares(a),u,p,Math.max(.7,Math.min(1.5,1+(p.dir<0?-a.sent:a.sent)/100)));
+    if(e)SC[c]={dx:0,party:p.party,flip:e.winA!==e.winB,after:e.winA,e};
+  });
+  // dx relativo a la cuota inicial entre decididos
+  S.codes.forEach(c=>{const s=SC[c];if(s)s.dx=s.e.after[p.party]-s.e.before[p.party]});
+}
+function renderScenario(){
+  const box=$('sout');if(!box)return;
+  const p=scenParams(),S=scope(),codes=S.codes.filter(c=>SC[c]);
+  if(!codes.length){box.innerHTML='<div class="empty">Sin datos.</div>';return}
+  const ar=codes.map(c=>SC[c]);
+  // Monte Carlo: ±25 % en gravedad, alcance, fidelidad y recuperación
+  const R=rng(42),runs=[];
+  for(let i=0;i<150;i++){
+    const q=Object.assign({},p),j=()=>0.75+R()*0.5;q.grav=Math.min(100,p.grav*j());q.alc=Math.min(100,p.alc*j());q.fid=Math.min(100,p.fid*j());q.rec=Math.min(100,p.rec*j());
+    let fl=0,dxs=0,und=0;codes.forEach(c=>{const a=S.tbl[c],rr=rng(parseInt(c,10)*977+13),u=Math.max(3,p.und*(0.6+rr()*0.8)),e=engine(terrShares(a),u,q,Math.max(.7,Math.min(1.5,1+(p.dir<0?-a.sent:a.sent)/100)));if(e){if(e.winA!==e.winB)fl++;dxs+=e.after[p.party]-e.before[p.party];und+=e.und1-e.und0}});
+    runs.push({fl,dx:dxs/codes.length,und:und/codes.length});
+  }
+  const q=(k,pc)=>runs.map(r=>r[k]).sort((a,b)=>a-b)[Math.floor(pc*(runs.length-1))];
+  const mean=(f)=>ar.reduce((s,x)=>s+f(x.e),0)/ar.length;
+  const keys=['PP','PSOE','Vox','Cs','Sumar','Podemos','Otros'];
+  const rows=keys.map(k=>{const b=mean(e=>e.before[k]),a=mean(e=>e.after[k]);return {k,b,a,d:a-b}});
+  const flips=codes.filter(c=>SC[c].flip).sort((a,b)=>Math.abs(SC[b].dx)-Math.abs(SC[a].dx));
+  const u0=mean(e=>e.und0),u1=mean(e=>e.und1);
+  const verb=p.dir<0?'pierde':'gana';
+  const unit=curProv?'municipios':'provincias';
+  let nat='';
+  if(natBase&&!curProv){
+    const e=engine(natBase.shares,p.und,p,1);
+    if(e)nat=`<div class="brief"><small>MEDIA NACIONAL REAL DE ENCUESTAS (${natBase.n} sondeos, hasta ${natBase.fecha}) + EVENTO</small>${p.party}: <b>${f1(e.before[p.party])}%</b> → <b>${f1(e.after[p.party])}%</b> (${sgn(e.after[p.party]-e.before[p.party])} pts). Indecisos: ${f1(e.und0)}% → ${f1(e.und1)}%. Ganador: ${e.winB} → ${e.winA}.</div>`;
+  }
+  box.innerHTML=`
+    <div class="scen-head">«${esc(p.actor||'Evento')}» · ${esc(PRESETS[$('spre').value]?.label||'Evento')}: <b style="color:${COL[p.party]}">${p.party}</b> ${verb} una media de <b>${sgn(rows.find(r=>r.k===p.party).d)} pts</b> en ${codes.length} ${unit}
+      <span class="sub">(intervalo 10–90 %: ${sgn(q('dx',.1))} a ${sgn(q('dx',.9))})</span></div>
+    <div class="kp3">
+      <div class="m"><span>Cambian de ganador</span><b>${flips.length}</b><span>intervalo ${q('fl',.1)}–${q('fl',.9)} de ${codes.length}</span></div>
+      <div class="m"><span>Indecisos (media)</span><b>${f1(u0)}% → ${f1(u1)}%</b><span>${sgn(u1-u0)} pts</span></div>
+      <div class="m"><span>Abstención añadida</span><b>${p.dir<0?'+'+f1(mean(e=>e.abst)):'0.0'} pts</b><span>votantes que no repiten</span></div>
+    </div>
+    <div class="chartbox" style="height:190px"><canvas id="sch" aria-label="Voto por partido antes y después del evento"></canvas></div>
+    ${nat}
+    <div class="brief"><small>AGENTE ESTRATEGA · lectura</small>${strategy(p,rows,flips,u0,u1,S,unit)}</div>
+    ${flips.length?`<div class="sub" style="margin:10px 0 4px">Mayor cambio de ganador (pulsa para abrir):</div><div class="chips">${flips.slice(0,10).map(c=>`<button data-c="${c}">${esc(S.names[c])} <span>${SC[c].e.winB}→${SC[c].after}</span></button>`).join('')}</div>`:''}`;
+  box.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>curProv?selectMun(b.dataset.c):openProvince(b.dataset.c));
+  if(scenChart)scenChart.destroy();
+  scenChart=new Chart($('sch'),{type:'bar',data:{labels:rows.map(r=>r.k),datasets:[{label:'Antes',data:rows.map(r=>+f1(r.b)),backgroundColor:'#475569'},{label:'Tras el evento',data:rows.map(r=>+f1(r.a)),backgroundColor:rows.map(r=>COL[r.k])}]},
+    options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10,font:{size:11}}}},scales:{x:{ticks:{color:'#8b97a8'},grid:{display:false}},y:{ticks:{color:'#8b97a8',callback:v=>v+'%'},grid:{color:'#1a2230'}}}}});
+  if(mode==='scen')restyle();
+}
+function strategy(p,rows,flips,u0,u1,S,unit){
+  const r=rows.find(x=>x.k===p.party),big=rows.filter(x=>x.k!==p.party).sort((a,b)=>b.d-a.d)[0];
+  if(p.dir<0){
+    const pool=u1-u0;
+    return `El golpe real para ${p.party} es ${sgn(r.d)} pts, pero lo estratégico es el reparto: ${f1(pool)} pts se quedan como <b>indecisos recuperables</b> y ${big.k} es quien más captura (${sgn(big.d)} pts). `+
+      (flips.length?`${flips.length} ${unit} cambiarían de ganador: ahí está el riesgo inmediato. `:`Ningún territorio cambia de ganador con estos supuestos. `)+
+      `Con una capacidad de recuperación del ${p.rec}% el partido ya recupera parte de esos indecisos; subirla (respuesta rápida, mensajes de contraste, movilizar a la base) es la palanca más barata. Para el rival, el objetivo es convertir los indecisos antes de que vuelvan.`;
+  }
+  return `El evento favorable suma ${sgn(r.d)} pts a ${p.party}, en parte captando indecisos (${sgn(u1-u0)} pts). ${flips.length?`${flips.length} ${unit} cambiarían de ganador. `:''}Conviene capitalizarlo pronto: el efecto de un acto puntual suele diluirse en semanas.`;
+}
+
+/* ---------- búsqueda ---------- */
+let searchIdx=null;
+function search(v){
+  if(!searchIdx)searchIdx=[...Object.entries(provNames).map(([c,n])=>({c,n,k:norm(n),t:'p'})),...Object.entries(munNames).map(([c,n])=>({c,n,k:norm(n),t:'m'}))];
+  const k=norm(v.trim()),box=$('sres');
+  if(k.length<2){box.hidden=true;return}
+  const hits=searchIdx.filter(x=>x.k.startsWith(k)).concat(searchIdx.filter(x=>!x.k.startsWith(k)&&x.k.includes(k))).slice(0,9);
+  box.innerHTML=hits.map(x=>`<button data-t="${x.t}" data-c="${x.c}">${esc(x.n)}<span>${x.t==='p'?'Provincia':esc(provNames[x.c.slice(0,2)])}</span></button>`).join('')||'<div class="empty">Sin resultados</div>';
+  box.hidden=false;
+  box.querySelectorAll('button').forEach(b=>b.onclick=()=>{box.hidden=true;b.dataset.t==='p'?openProvince(b.dataset.c):openProvince(b.dataset.c.slice(0,2),b.dataset.c)});
+}
+
+/* ---------- eventos ---------- */
+document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));restyle()});
+document.querySelectorAll('#newsTabs button').forEach(b=>b.onclick=()=>{newsTab=b.dataset.t;document.querySelectorAll('#newsTabs button').forEach(x=>x.classList.toggle('on',x===b));renderNews()});
+$('reset').onclick=showSpain;
+$('back').onclick=()=>{if(selMun){selMun=null;$('q').value='';munLayer.setStyle(f=>styleFor(f.properties.c,MA));map.fitBounds(munLayer.getBounds(),{padding:[10,10]});renderAll()}else showSpain()};
+$('canarias').onclick=()=>{if(curProv)showSpain();map.setView([28.3,-15.9],7)};
+$('q').addEventListener('input',e=>search(e.target.value));
+document.addEventListener('click',e=>{if(!e.target.closest('.filter'))$('sres').hidden=true});
+// escenarios
+$('spre').innerHTML=Object.entries(PRESETS).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
+function loadPreset(k){const v=PRESETS[k];$('sp').value=v.party;$('sd').value=v.dir;['g','a','f','r'].forEach((x,i)=>{$('s'+x).value=v[['grav','alc','fid','rec'][i]]});syncOut()}
+function syncOut(){['sg','sa','sf','sr','su'].forEach(id=>$(id+'o').textContent=$(id).value+(id==='su'?' %':''))}
+function again(){syncOut();runScenario();restyle();renderScenario()}
+$('spre').onchange=e=>{loadPreset(e.target.value);again()};
+['sp','sd','sg','sa','sf','sr','su','sactor'].forEach(id=>$(id).addEventListener('input',again));
+loadPreset('imput');$('su').value=15;$('sactor').value='Expresidente (hipotético)';syncOut();
+})();
+</script>
+</body>
+</html>

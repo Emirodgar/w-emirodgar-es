@@ -1,0 +1,235 @@
+{
+ "fuente": "elecciones-espana/data/2026-11-29/candidatos.json",
+ "politicos": [
+  {
+   "id": "alberto-nez-feijo",
+   "nombre": "Alberto Núñez Feijóo",
+   "partidoId": "PP",
+   "cargo": "Presidente del PP",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Alberto_Núñez_Feijóo",
+   "alias": [
+    "Feijóo",
+    "Núñez Feijóo"
+   ]
+  },
+  {
+   "id": "pedro-snchez",
+   "nombre": "Pedro Sánchez",
+   "partidoId": "PSOE",
+   "cargo": "Presidente del Gobierno y secretario general del PSOE",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Pedro_Sánchez",
+   "alias": [
+    "Pedro Sánchez"
+   ]
+  },
+  {
+   "id": "santiago-abascal",
+   "nombre": "Santiago Abascal",
+   "partidoId": "VOX",
+   "cargo": "Presidente de Vox",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Santiago_Abascal",
+   "alias": [
+    "Abascal"
+   ]
+  },
+  {
+   "id": "slot-sumar",
+   "nombre": null,
+   "partidoId": "SUMAR",
+   "cargo": null,
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "por_definir",
+   "nota": "Se presentará el 17 de octubre junto con el proyecto de alianza «Frente Amplio».",
+   "wiki": null,
+   "alias": []
+  },
+  {
+   "id": "slot-podemos",
+   "nombre": null,
+   "partidoId": "PODEMOS",
+   "cargo": null,
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "por_definir",
+   "nota": "Sin decidir si concurre en solitario o en coalición; Irene Montero ha expresado su intención de encabezar la lista.",
+   "wiki": null,
+   "alias": []
+  },
+  {
+   "id": "gabriel-rufin",
+   "nombre": "Gabriel Rufián",
+   "partidoId": "ERC",
+   "cargo": "Portavoz de ERC en el Congreso",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Gabriel_Rufián",
+   "alias": [
+    "Rufián"
+   ]
+  },
+  {
+   "id": "mriam-nogueras",
+   "nombre": "Míriam Nogueras",
+   "partidoId": "JUNTS",
+   "cargo": "Portavoz de Junts en el Congreso",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Míriam_Nogueras",
+   "alias": [
+    "Nogueras"
+   ]
+  },
+  {
+   "id": "slot-bildu",
+   "nombre": null,
+   "partidoId": "BILDU",
+   "cargo": null,
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "por_definir",
+   "nota": "",
+   "wiki": null,
+   "alias": []
+  },
+  {
+   "id": "maribel-vaquero",
+   "nombre": "Maribel Vaquero",
+   "partidoId": "PNV",
+   "cargo": null,
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Maribel_Vaquero",
+   "alias": [
+    "Maribel Vaquero"
+   ]
+  },
+  {
+   "id": "slot-compromis",
+   "nombre": null,
+   "partidoId": "COMPROMIS",
+   "cargo": null,
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "por_definir",
+   "nota": "",
+   "wiki": null,
+   "alias": []
+  },
+  {
+   "id": "nstor-rego",
+   "nombre": "Néstor Rego",
+   "partidoId": "BNG",
+   "cargo": "Portavoz del BNG en el Congreso",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Néstor_Rego",
+   "alias": [
+    "Néstor Rego"
+   ]
+  },
+  {
+   "id": "cristina-valido",
+   "nombre": "Cristina Valido",
+   "partidoId": "CC",
+   "cargo": "Diputada de Coalición Canaria",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Cristina_Valido",
+   "alias": [
+    "Cristina Valido"
+   ]
+  },
+  {
+   "id": "alberto-cataln",
+   "nombre": "Alberto Catalán",
+   "partidoId": "UPN",
+   "cargo": "Diputado de UPN",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "candidato",
+   "wiki": "Alberto_Catalán",
+   "alias": [
+    "Alberto Catalán"
+   ]
+  },
+  {
+   "id": "slot-salf",
+   "nombre": null,
+   "partidoId": "SALF",
+   "cargo": null,
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "por_definir",
+   "nota": "",
+   "wiki": null,
+   "alias": []
+  },
+  {
+   "id": "jos-luis-rodrguez-zapatero",
+   "nombre": "José Luis Rodríguez Zapatero",
+   "partidoId": "PSOE",
+   "cargo": "Expresidente del Gobierno",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "seguimiento",
+   "wiki": "José_Luis_Rodríguez_Zapatero",
+   "alias": [
+    "Zapatero"
+   ]
+  },
+  {
+   "id": "isabel-daz-ayuso",
+   "nombre": "Isabel Díaz Ayuso",
+   "partidoId": "PP",
+   "cargo": "Presidenta de la Comunidad de Madrid",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "seguimiento",
+   "wiki": "Isabel_Díaz_Ayuso",
+   "alias": [
+    "Ayuso"
+   ]
+  },
+  {
+   "id": "alfonso-fernndez-maueco",
+   "nombre": "Alfonso Fernández Mañueco",
+   "partidoId": "PP",
+   "cargo": "Presidente de la Junta de Castilla y León",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "seguimiento",
+   "wiki": "Alfonso_Fernández_Mañueco",
+   "alias": [
+    "Mañueco"
+   ]
+  },
+  {
+   "id": "irene-montero",
+   "nombre": "Irene Montero",
+   "partidoId": "PODEMOS",
+   "cargo": "Aspira a encabezar la lista de Podemos",
+   "ambito": "nacional",
+   "prov": null,
+   "estado": "seguimiento",
+   "wiki": "Irene_Montero",
+   "alias": [
+    "Irene Montero"
+   ]
+  }
+ ]
+}
