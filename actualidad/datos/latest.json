@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-05",
-  "generado_en": "2026-11-05T13:00:47+00:00",
-  "titular": "Nueva operación de la UCO por el caso Koldo y tensiones en la Cumbre Iberoamericana marcan la jornada",
+  "fecha": "2026-11-06",
+  "generado_en": "2026-11-06T12:48:53+00:00",
+  "titular": "La Fiscalía Europea investiga fraudes en obras de Adif y la UCO detiene al ex chófer de Sánchez por presuntas mordidas",
   "por_medio": {
-    "El Mundo": 32,
-    "The Objective": 193
+    "El Mundo": 25,
+    "The Objective": 198
   },
   "temas": [
     {
-      "tema": "Operación UCO y caso Koldo",
+      "tema": "Investigación de corrupción en Adif y detenciones",
       "categoria": "Política",
-      "descripcion": "La UCO ha realizado registros en el domicilio de Ábalos y ha detenido al ex chófer de Sánchez en una nueva fase del caso Koldo, generando fuertes críticas de la oposición."
+      "descripcion": "La Fiscalía Europea y la UCO investigan presuntos fraudes en obras de Adif, lo que ha llevado a la detención del ex chófer de Pedro Sánchez por supuestas mordidas en contratos. El PP ha reaccionado criticando al Gobierno."
     },
     {
-      "tema": "Tensión en la Cumbre Iberoamericana",
-      "categoria": "Internacional",
-      "descripcion": "La Cumbre Iberoamericana ha sido escenario de un tenso encuentro entre Sánchez y Milei, quien ha equiparado socialismo y fascismo, mientras Venezuela busca su reinserción internacional."
-    },
-    {
-      "tema": "Accidente ferroviario de Urda y dimisión de Óscar Puente",
+      "tema": "Rechazo a la imputación de Zapatero",
       "categoria": "Política",
-      "descripcion": "La dimisión de Óscar Puente tras el accidente de Urda ha impactado en la precampaña electoral, mientras se investigan las causas y se reclaman mejoras en la seguridad ferroviaria."
+      "descripcion": "El juez José Luis Calama ha desestimado la petición de la Fiscalía Anticorrupción de investigar al expresidente José Luis Rodríguez Zapatero por un delito de malversación de caudales públicos."
     },
     {
-      "tema": "Falsas amenazas de bomba en vuelos europeos",
-      "categoria": "Sucesos",
-      "descripcion": "Una nueva oleada de falsas amenazas de bomba ha afectado a numerosos vuelos en Europa, incluyendo tres en Madrid, generando interrupciones y dispositivos de seguridad."
+      "tema": "Propuestas electorales y debates políticos",
+      "categoria": "Política",
+      "descripcion": "Irene Montero ha desvelado sus condiciones para una investidura de Sánchez, proponiendo nacionalizaciones y expropiaciones, y destinar gasto militar a medidas sociales. Ada Colau promete expropiar viviendas, y el PP presenta su lema de campaña."
+    },
+    {
+      "tema": "Crisis migratoria en Canarias",
+      "categoria": "Sociedad",
+      "descripcion": "Más de mil inmigrantes han desembarcado en las islas Canarias, con un fallecido, lo que ha llevado a las autoridades a calificar la situación en El Hierro de 'insostenible'."
     }
   ]
 }

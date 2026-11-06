@@ -183,7 +183,7 @@
         "titulo": "La UCO lanza una nueva operación: se persona en casa de Ábalos, detiene al ex chófer de Sánchez y reclama información a Adif",
         "url": "https://www.elmundo.es/espana/2026/11/05/6aec4851e9cf4ac94c8b459e.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-05",
@@ -210,6 +210,48 @@
         "medio": "El Mundo",
         "titulo": "Cristiano Ronaldo anuncia su retirada de la Selección de Portugal: \"Llegó el día de devolver la camiseta del 7\"",
         "url": "https://www.elmundo.es/deportes/futbol/2026/11/05/6aec5d26e85ececb778b459a.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-06",
+      "edicion": "2026-11-06",
+      "titulo": "Fiscalía Europea investiga fraude en obras de alta velocidad y UCO detiene a ex chófer de Sánchez",
+      "categoria": "Política",
+      "descripcion": "La Fiscalía Europea ha iniciado una operación con la UCO por la tragedia ferroviaria de Urda, investigando un posible fraude en fondos europeos para la alta velocidad. La UCO ha detenido al ex chófer de Pedro Sánchez por presuntas mordidas en contratos de Adif.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Fiscalía Europea pone en marcha una operación con la UCO por la tragedia de Urda y pide documentación a Adif",
+        "url": "https://www.elmundo.es/espana/2026/11/06/6aed98e121efa0477c8b457d.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-06",
+      "edicion": "2026-11-06",
+      "titulo": "Juez rechaza investigar a Zapatero por malversación",
+      "categoria": "Política",
+      "descripcion": "El juez de la Audiencia Nacional José Luis Calama ha rechazado la petición de la Fiscalía Anticorrupción de investigar al expresidente José Luis Rodríguez Zapatero por un delito de malversación de caudales públicos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Calama libra a Zapatero de la imputación por malversación",
+        "url": "https://www.elmundo.es/espana/2026/11/06/6aedbe35e4d4d8ac478b45a8.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-06",
+      "edicion": "2026-11-06",
+      "titulo": "Gobierno ordena retirada del 12% de la producción de aceite de oliva",
+      "categoria": "Economía",
+      "descripcion": "El Boletín Oficial del Estado ha publicado la orden sobre una retirada obligatoria del 12% de la producción de aceite de oliva para prevenir distorsiones en el mercado y garantizar su estabilidad.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno ordena la retirada del mercado del 12% de la producción de aceite de oliva",
+        "url": "https://www.elmundo.es/economia/2026/11/06/6aed8762e9cf4a994c8b45a5.html"
       },
       "destacado": false
     }
