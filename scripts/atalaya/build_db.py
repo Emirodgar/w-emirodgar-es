@@ -27,6 +27,10 @@ def main():
     db.executemany("INSERT OR IGNORE INTO territorio(codigo,nivel,nombre,padre) VALUES (?, 'municipio', ?, ?)",
                    [(c, n, c[:2]) for c, n in ind["mun"] if c[:2] in provs])
 
+    # población oficial (INE)
+    pad = J(D / "padron.json")
+    db.executemany("UPDATE territorio SET poblacion=? WHERE codigo=?", [(v[0], c) for c, v in {**pad["prov"], **pad["mun"]}.items()])
+
     # fuentes, partidos, elecciones
     fuentes = {}
     def fuente(nombre, tipo):

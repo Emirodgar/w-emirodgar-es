@@ -320,17 +320,22 @@
   },
   {
    "id": "padron",
-   "nombre": "INE · padrón municipal y censo",
+   "nombre": "INE · Cifras oficiales del padrón por municipio",
    "cat": "demografia",
    "url": "https://www.ine.es/",
-   "acceso": "API JSON del INE",
-   "estado": "planificada",
+   "acceso": "Descarga CSV oficial (tabla 29005)",
+   "estado": "activa",
    "prioridad": "alta",
    "fiab": 5,
-   "cobertura": "Municipio",
-   "frecuencia": "—",
-   "usada": [],
-   "nota": "Población, edad y nacionalidad para ponderar y para estimación local (MRP)."
+   "cobertura": "8.136 municipios (padrón a 1 de enero de 2025)",
+   "frecuencia": "Anual (build_padron.py, cuando el INE publica)",
+   "usada": [
+    "Panel",
+    "Fichas",
+    "Mapa de cobertura"
+   ],
+   "nota": "Población oficial por municipio y año (2011, 2015, 2019, 2023 y último). Falta edad, sexo y renta para ponderar y estimar (MRP).",
+   "contar": "padron"
   },
   {
    "id": "macrodata",

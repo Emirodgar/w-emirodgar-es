@@ -319,7 +319,7 @@ const f1=x=>(Math.round(x*10)/10).toFixed(1);
 const sgn=x=>(x>0?'+':x<0?'−':'')+f1(Math.abs(x));
 
 /* ---------- estado ---------- */
-let PP_={prov:{}},lastDCode=null,DPEOPLE={},curPerson=null,p2Open=false,p2Token=0,bioCache={},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
+let PAD=null,PP_={prov:{}},lastDCode=null,DPEOPLE={},curPerson=null,p2Open=false,p2Token=0,bioCache={},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
 const PA={},MA={};
 let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
@@ -331,9 +331,10 @@ Promise.all([
   fetch('data/noticias.json').then(r=>r.json()).catch(()=>({noticias:[]})),
   fetch('data/indice.json').then(r=>r.json()),
   fetch('data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
-  fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}}))
-]).then(([pg,nw,ix,pl,pp])=>{
-  PP_=pp;
+  fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}})),
+  fetch('data/padron.json').then(r=>r.json()).catch(()=>null)
+]).then(([pg,nw,ix,pl,pp,pd])=>{
+  PP_=pp;PAD=pd;
   provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];
   provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
   idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
@@ -444,6 +445,7 @@ function ficha(){
     const hist=YEARS.map((y,i)=>Object.fromEntries(K.map(k=>[k,+(ar.reduce((s,x)=>s+x.hist[i][k],0)/ar.length).toFixed(1)])));
     const top=Object.keys(PA).sort((x,y)=>PA[y].risk-PA[x].risk).slice(0,3).map(x=>provNames[x]).join(', ');
     const cnt={};ar.forEach(x=>cnt[x.winner]=(cnt[x.winner]||0)+1);
+    const pa=popAlarm();
     $('fichaTag').textContent='';
     $('ficha').innerHTML=`<div class="title">España</div><div class="sub">52 provincias · pulsa una para ver sus municipios</div>
       <span class="pill p-mut">${Object.entries(cnt).sort((x,y)=>y[1]-x[1]).map(([k,v])=>`${k}: ${v}`).join(' · ')} provincias</span>
@@ -451,6 +453,8 @@ function ficha(){
         <div class="m"><span>Riesgo medio</span><b>${Math.round(ar.reduce((s,x)=>s+x.risk,0)/ar.length)}</b></div>
         <div class="m"><span>Volatilidad media</span><b>${Math.round(ar.reduce((s,x)=>s+x.vol,0)/ar.length)}</b></div>
         <div class="m"><span>Provincias en alarma</span><b style="color:var(--bad)">${ar.filter(x=>x.risk>=60).length}</b></div>
+        <div class="m"><span>Habitantes (INE ${PAD?PAD.anios[0]:''})</span><b>${fmtN(pa.t)}</b></div>
+        <div class="m"><span>Población en alarma</span><b style="color:var(--bad)">${pctTxt(pa.t?pa.a/pa.t*100:null)}</b></div>
         <div class="m"><span>Titulares (real)</span><b>${news.length}</b></div>
       </div>
       <div class="chartbox"><canvas id="ch" aria-label="Evolución media del voto por partido"></canvas></div>
@@ -458,6 +462,8 @@ function ficha(){
     drawChart({hist});return;
   }
   const [pc,pt]=riskPill(a.risk);
+  const pop=popOf(c),totP=PAD?(selMun?(PAD.prov[curProv]||[])[0]:Object.values(PAD.prov).reduce((s,v)=>s+v[0],0)):null,share=pop&&totP?pop/totP*100:null;
+  const alarmTxt=(curProv&&!selMun&&PAD)?(()=>{const q=popAlarm();return ` Los municipios en alarma suman ${fmtN(q.a)} habitantes (${pctTxt(q.t?q.a/q.t*100:null)} de la provincia).`})():'';
   $('fichaTag').textContent='';
   $('ficha').innerHTML=`
     <div class="title">${esc(name)}</div>
@@ -467,11 +473,13 @@ function ficha(){
       <div class="m"><span>Riesgo de cambio</span><b style="color:${rcol(a.risk)}">${a.risk}</b>${bar(a.risk,rcol(a.risk))}</div>
       <div class="m"><span>Volatilidad histórica</span><b>${a.vol}</b>${bar(a.vol,'var(--acc)')}</div>
       <div class="m"><span>Tendencia sentimiento 90 d</span><b style="color:${a.sent<0?'var(--bad)':'var(--ok)'}">${a.sent>0?'+':''}${a.sent}</b>${bar(Math.abs(a.sent)*2,a.sent<0?'var(--bad)':'var(--ok)')}</div>
+      <div class="m"><span>Habitantes (INE ${PAD?PAD.anios[0]:''})</span><b>${fmtN(pop)}</b></div>
+      <div class="m"><span>${selMun?'Peso en la provincia':'Peso en España'}</span><b>${pctTxt(share)}</b></div>
       <div class="m"><span>Titulares detectados (real)</span><b>${nc}</b>${bar(nc*(selMun?12:2),'var(--mut)')}</div>
     </div>
     <p style="margin:10px 0 0"><button class="btn pri" id="fichaPol">Ver políticos de la provincia</button></p>
     <div class="chartbox"><canvas id="ch" aria-label="Evolución del voto por partido"></canvas></div>
-    <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>${briefing(a,name,nc)}</div>`;
+    <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>${briefing(a,name,nc)}${alarmTxt}</div>`;
   drawChart(a);
   const fp=$('fichaPol');if(fp)fp.onclick=()=>openDrawer('gob');
 }
@@ -500,11 +508,15 @@ function renderRisks(){
   if((curProv||selMun)&&!list.length)list=news.filter(n=>n.r&&n.pv.includes(curProv)).slice(0,8);
   $('risks').innerHTML=list.slice(0,30).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span class="tag risk">EVENTO</span><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}</div></div>`).join('')||'<div class="empty">Sin eventos de riesgo detectados.</div>';
 }
+const fmtN=n=>n==null?'—':Math.round(n).toLocaleString('es');
+function popOf(c){return PAD?(c.length===2?(PAD.prov[c]||[])[0]:(PAD.mun[c]||[])[0]):null}
+function popAlarm(){const S=scope();let a=0,t=0;S.codes.forEach(c=>{const p=popOf(c)||0;t+=p;if(S.tbl[c].risk>=60)a+=p});return {a,t}}
+const pctTxt=x=>x==null?'—':x<0.1?'<0,1 %':(Math.round(x*10)/10).toLocaleString('es')+' %';
 function renderRank(){
   const S=scope(),r=S.codes.slice().sort((a,b)=>S.tbl[b].risk-S.tbl[a].risk).slice(0,25);
   $('rankT').textContent=curProv?'Municipios en alarma · '+provNames[curProv]:'Provincias en alarma';
   $('rank').innerHTML=r.map((c,i)=>{const a=S.tbl[c];
-    return `<div class="row" tabindex="0" data-c="${c}"><span class="sub">${i+1}</span><div class="n"><b>${esc(S.names[c])}</b><span>${a.type} · ${a.winner} +${a.margin} · sent. ${a.sent>0?'+':''}${a.sent}</span></div><span class="score" style="color:${rcol(a.risk)}">${a.risk}</span></div>`}).join('');
+    return `<div class="row" tabindex="0" data-c="${c}"><span class="sub">${i+1}</span><div class="n"><b>${esc(S.names[c])}</b><span>${a.type} · ${a.winner} +${a.margin} · sent. ${a.sent>0?'+':''}${a.sent}${PAD?' · '+fmtN(popOf(c))+' hab.':''}</span></div><span class="score" style="color:${rcol(a.risk)}">${a.risk}</span></div>`}).join('');
   $('rank').querySelectorAll('.row').forEach(el=>{const go=()=>curProv?selectMun(el.dataset.c):openProvince(el.dataset.c);el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter')go()}});
 }
 function renderAgents(){

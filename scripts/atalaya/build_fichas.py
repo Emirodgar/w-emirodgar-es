@@ -105,6 +105,9 @@ def analisis_provincia(v, nacional):
     lider_enc = max(nacional, key=nacional.get) if nacional else None
     return L, ls, tot, empate, otros, wins, len(labs), lider_enc
 
+def nes(x):
+    return f"{x:,}".replace(",", ".")
+
 def de(ls, tot):
     return f"{ls} de {tot}" if tot else f"{ls} escaños"
 
@@ -140,6 +143,7 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     global PROV
     ind = J(D / "indice.json"); prov = ind["prov"]; PROV = prov; esc = J(D / "escanos.json")
+    pad = J(D / "padron.json"); anio_pad = pad["anios"][0]
     nacional, nsond, fsond = poll_avg()
     orden = sorted(nacional.items(), key=lambda x: -x[1]); lider = orden[0][0]
     conv = J(RAIZ / "elecciones-espana/data/2026-11-29/convocatoria.json")
@@ -149,13 +153,14 @@ def main():
     for pc, nom in prov.items():
         nombre = ES.get(nom, nom); sl = slug(nombre); ruta = f"{sl}/"
         v = esc.get(pc); tit = titulares(pc, nombre)
+        pob = (pad["prov"].get(pc) or [None])[0]
         q = f"¿Quién ganará las elecciones generales en {nombre}?"
         if v:
             resp, L, nivel = respuesta(nombre, v, nacional)
             tot = (v.get("total") or [None])[-1]
             cab = f"<p class='ans'>{E(resp)}</p>"
             ev = (f"<h2>1. Qué ha votado {E(nombre)} en las últimas elecciones generales</h2><p>Escaños al Congreso por partido en las últimas convocatorias generales (fuente: <a href='{v['url']}'>Wikipedia, «{E(v['titulo'])}»</a>, que recoge datos oficiales; la serie completa llega hasta 1977):</p>{tabla_escanos(v)}"
-                  f"<p>{E(nombre)} elige {tot} diputados al Congreso. Con pocos escaños en juego, unos pocos votos pueden mover el último escaño entre partidos.</p>" if tot else "")
+                  f"<p>{E(nombre)} elige {tot} diputados al Congreso. Con pocos escaños en juego, unos pocos votos pueden mover el último escaño entre partidos." + (f" Tiene {nes(pob)} habitantes (INE, 1 de enero de {anio_pad}), unos {nes(round(pob / tot))} por diputado." if pob else "") + "</p>" if tot else "")
             faq_hist = f"En 2023, {art(L)} fue el partido con más escaños en {nombre}." if L else ""
             desc = resp.split(". ")[0].rstrip(".") + ". Escaños en el Congreso, encuestas y noticias recientes."
         else:
@@ -183,6 +188,7 @@ def main():
         if faq_hist: faqs.append((f"¿Quién ganó en {nombre} en las elecciones generales de 2023?", faq_hist + (f" Obtuvo {v['partidos'][L][-1]} de {tot} escaños." if tot else "")))
         faqs.append((f"¿Cuándo son las próximas elecciones generales?", f"Las elecciones generales se celebran el 29 de noviembre de 2026."))
         if tot: faqs.append((f"¿Cuántos diputados elige {nombre} al Congreso?", f"{nombre} elige {tot} diputados al Congreso de los Diputados."))
+        if pob: faqs.append((f"¿Cuántos habitantes tiene {nombre}?", f"{nombre} tiene {nes(pob)} habitantes según el padrón del INE a 1 de enero de {anio_pad}."))
         faq_html = "<h2>Preguntas frecuentes</h2>" + "".join(f"<details><summary>{E(a)}</summary><p>{E(b)}</p></details>" for a, b in faqs)
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": desc, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
                "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"},

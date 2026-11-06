@@ -137,11 +137,12 @@ Promise.all([
   fetch('../data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
   fetch('../data/indice.json').then(r=>r.json()),
   fetch('../data/provincias.geojson').then(r=>r.json()),
+  fetch('../data/padron.json').then(r=>r.json()).then(d=>{window.__pad=d}).catch(()=>{}),
   fetch('../data/programas.json').then(r=>r.json()).then(d=>{window.__prog=d.afirmaciones.reduce((n,a)=>n+Object.keys(a.posiciones).length,0)}).catch(()=>{}),
   fetch('../data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}})),
   fetch('../data/fuentes-propias.json').then(r=>r.ok?r.json():{fuentes:[]}).catch(()=>({fuentes:[]})),
   fetch('../../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>({sondeos:[]}))
-]).then(([f,n,e,p,ix,pg,_prog,pprov,sh,enc])=>{
+]).then(([f,n,e,p,ix,pg,_pad,_prog,pprov,sh,enc])=>{
   window.__pp=pprov.prov||{};
   CAT=f.categorias;SRC=f.fuentes;NEWS=n.noticias;ESC=e;POLS=p.politicos;PROV=ix.prov;PGJ=pg;SHARED=(sh.fuentes||[]).map(x=>Object.assign({},x,{compartida:true}));
   MUN=ix.mun.filter(m=>PROV[m[0].slice(0,2)]).length;
@@ -156,6 +157,7 @@ function counts(s){
   if(s.contar==='escanos')return Object.keys(ESC).length;
   if(s.contar==='politicos')return POLS.filter(x=>x.nombre).length;
   if(s.contar==='municipios')return MUN;
+  if(s.contar==='padron')return window.__pad?Object.keys(window.__pad.mun).length:null;
   if(s.contar==='programas')return window.__prog||null;
   if(s.contar==='candidatos_prov')return Object.values(window.__pp).reduce((a,v)=>a+v.candidatos.length,0);
   if(s.contar==='gobierno_prov')return Object.values(window.__pp).reduce((a,v)=>a+v.gobierno.length,0);
@@ -211,7 +213,7 @@ function ownDims(pc){
 function coverage(){
   return Object.keys(PROV).sort().map(pc=>{
     const od=ownDims(pc),loc=NEWS.filter(x=>x.a==='local'&&x.pv.includes(pc)).length;
-    const v={res:ESC[pc]?1:0,prensa:Math.min(1,(loc+(od.prensa||0)*5)/10),enc:od.enc?1:0,socio:(CYL.includes(pc)||od.socio)?1:0,padron:od.padron?1:0,redes:od.redes?1:0,
+    const v={res:ESC[pc]?1:0,prensa:Math.min(1,(loc+(od.prensa||0)*5)/10),enc:od.enc?1:0,socio:(CYL.includes(pc)||od.socio)?1:0,padron:(od.padron||(window.__pad&&window.__pad.prov[pc]))?1:0,redes:od.redes?1:0,
              politicos:Math.min(1,(((window.__pp[pc]||{}).gobierno||[]).length+((window.__pp[pc]||{}).candidatos||[]).length+(od.politicos||0))/6),contexto:Math.min(1,(od.contexto||0)/3)};
     if(od.res)v.res=1;
     const score=Math.round(DIMS.reduce((s,[k,,w])=>s+v[k]*w,0)*100);
