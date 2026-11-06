@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fuentes de datos | Atalaya</title>
+<meta name="description" content="Catálogo de las fuentes de datos de Atalaya, clasificadas y con su estado, y mapa de cobertura de información por territorio.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/fuentes/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit}button,select,input,textarea{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.logo{font-size:inherit;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600;letter-spacing:.18em;color:var(--acc)}
+.logo i{width:9px;height:9px;border-radius:50%;background:var(--acc)}
+.nav a{text-decoration:none;color:var(--mut);padding:6px 10px;border-radius:6px}.nav a:hover{color:var(--txt)}.nav a[aria-current=page]{color:#04222a;background:var(--acc);font-weight:600}
+.wrap{padding:12px 16px;max-width:1400px;margin:0 auto}
+.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}
+.kpi,.card{background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.kpi{padding:10px 14px}.kpi b{display:block;font-family:var(--mono);font-size:24px}.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.card{margin-bottom:12px;overflow:hidden}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.card>h2 em{font-style:normal;color:var(--acc)}
+.body{padding:12px 14px}
+.hint{color:var(--mut);font-size:13px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.tools select,.tools input,.f input,.f select,.f textarea{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 9px}
+.tools input{min-width:220px}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 12px;cursor:pointer}.btn:hover{border-color:var(--acc)}.btn.pri{background:var(--acc);color:#04222a;font-weight:600;border-color:var(--acc)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.grp{margin:14px 0 6px}.grp h3{font-size:15px}.grp p{color:var(--mut);font-size:13px}
+.src{display:grid;grid-template-columns:minmax(0,2.2fr) 110px 120px minmax(0,1fr) 90px;gap:10px;padding:9px 0;border-bottom:1px solid var(--line);align-items:start}
+.src:last-child{border:0}
+.src .n b{display:block;font-weight:600}.src .n a{text-decoration:none}.src .n a:hover{color:var(--acc)}
+.src .sub{color:var(--mut);font-size:12px}
+.pill{display:inline-block;font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px}
+.activa{background:rgba(52,211,153,.15);color:var(--ok)}.parcial{background:rgba(251,191,36,.15);color:var(--warn)}.error{background:rgba(248,113,113,.15);color:var(--bad)}.planificada{background:rgba(148,163,184,.15);color:var(--mut)}.propia{background:rgba(34,211,238,.15);color:var(--acc)}
+.tag{font-family:var(--mono);font-size:12px;padding:1px 6px;border-radius:3px;background:#1b2330;margin-right:4px;display:inline-block;margin-top:3px}
+.stars{color:var(--warn);letter-spacing:1px}
+.cols{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:16px}
+.f label{display:block;font-size:12px;color:var(--mut);margin:9px 0 3px;text-transform:uppercase;letter-spacing:.05em}
+.f input,.f select,.f textarea{width:100%}.f textarea{min-height:70px;resize:vertical}
+.own{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
+.map{height:520px;background:#0a0d12}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-bottom:8px}.leg span i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+table{border-collapse:collapse;width:100%;font-size:13px}th,td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line)}th{color:var(--mut);font-weight:500;font-size:12px;position:sticky;top:0;background:var(--panel)}
+td.c{text-align:center}.dot{display:inline-block;width:14px;height:14px;border-radius:3px;background:#1b2330}
+.sc{font-family:var(--mono);font-weight:600}
+.tw{max-height:520px;overflow:auto}
+.lbl{font-size:12px;padding:1px 8px;border-radius:99px;font-weight:600}
+.l-rico{background:rgba(52,211,153,.15);color:var(--ok)}.l-sufi{background:rgba(251,191,36,.15);color:var(--warn)}.l-pobre{background:rgba(248,113,113,.15);color:var(--bad)}
+.leaflet-tooltip{background:#05070a;color:var(--txt);border:1px solid var(--line);box-shadow:none}.leaflet-tooltip:before{display:none}
+@media (max-width:900px){.kpis{grid-template-columns:repeat(2,1fr)}.cols{grid-template-columns:1fr}.src{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header class="top">
+  <h1 class="logo"><i></i>ATALAYA <span style="color:var(--mut);letter-spacing:.05em;font-weight:400;font-size:12px">fuentes de datos</span></h1>
+  <nav class="nav" aria-label="Principal"><a href="/atalaya/">Panel</a><a href="/atalaya/fuentes/" aria-current="page">Fuentes</a><a href="/atalaya/fichas/">Fichas</a></nav>
+</header>
+
+<div class="wrap">
+  <section class="kpis" id="kpis" aria-label="Resumen"></section>
+
+  <section class="card">
+    <h2>Catálogo de fuentes <em id="cnt"></em></h2>
+    <div class="body">
+      <div class="tools">
+        <input id="fq" type="search" placeholder="Buscar fuente…" aria-label="Buscar fuente">
+        <select id="fc" aria-label="Categoría"><option value="">Todas las categorías</option></select>
+        <select id="fs" aria-label="Estado"><option value="">Todos los estados</option><option value="activa">Activas</option><option value="parcial">Parciales</option><option value="error">Con error</option><option value="planificada">Planificadas</option><option value="propia">Propias</option></select>
+      </div>
+      <div id="cat"></div>
+    </div>
+  </section>
+
+  <section class="card" id="anadir">
+    <h2>Añadir fuente o contexto</h2>
+    <div class="body cols">
+      <form class="f" id="form" autocomplete="off">
+        <label for="n">Nombre</label><input id="n" required maxlength="120" placeholder="p. ej. Encuesta provincial de La Gaceta">
+        <label for="t">Tipo</label><select id="t"><option value="fuente">Fuente de datos</option><option value="contexto">Contexto / nota propia</option></select>
+        <label for="c">Categoría</label><select id="c"></select>
+        <label for="u">URL (opcional)</label><input id="u" type="url" placeholder="https://…">
+        <label for="a">Acceso</label><select id="a"><option>Manual</option><option>RSS</option><option>API</option><option>Descarga</option><option>Scraping</option></select>
+        <label for="te">Territorio</label><select id="te"><option value="ES">España (general)</option></select>
+        <label for="fi">Fiabilidad (1–5)</label><select id="fi"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select>
+        <label for="no">Notas o contexto</label><textarea id="no" maxlength="600" placeholder="Qué aporta, qué hay que saber, quién lo ha dicho…"></textarea>
+        <p style="margin-top:10px"><button class="btn pri" type="submit">Añadir</button></p>
+      </form>
+      <div>
+        <p class="hint">Lo que añadas se guarda <b>en este navegador</b> y suma a la cobertura del territorio elegido. Para que persista en el repositorio y lo lea el resto del sistema, exporta el JSON y guárdalo como <code>atalaya/data/fuentes-propias.json</code>.</p>
+        <p style="margin:10px 0"><button class="btn" id="exp">Exportar JSON</button> <label class="btn" style="display:inline-block">Importar JSON<input id="imp" type="file" accept="application/json" hidden></label></p>
+        <div id="own"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>Cobertura de información por territorio <em>¿dónde falta base?</em></h2>
+    <div class="body">
+      <p class="hint" style="margin-bottom:8px">Puntuación de 0 a 100 según qué dimensiones tienen datos en cada provincia. Pesos: resultados históricos 25 · prensa local 20 · encuestas territoriales 15 · socioeconomía 10 · demografía 10 · redes y foros 10 · políticos locales 5 · contexto propio 5. Los nodos pobres son los que conviene completar primero.</p>
+      <div class="leg"><span><i style="background:#f87171"></i>Pobre (&lt;30)</span><span><i style="background:#fbbf24"></i>Suficiente (30–54)</span><span><i style="background:#34d399"></i>Bien cualificado (≥55)</span></div>
+      <div class="cols" style="grid-template-columns:minmax(0,1fr) minmax(0,1.2fr)">
+        <div id="map" class="map" aria-label="Mapa de cobertura por provincia"></div>
+        <div class="tw"><table><thead><tr><th>Provincia</th><th>Nivel</th><th class="c" title="Resultados históricos">Res</th><th class="c" title="Prensa local">Pre</th><th class="c" title="Encuestas territoriales">Enc</th><th class="c" title="Socioeconomía">Soc</th><th class="c" title="Demografía">Dem</th><th class="c" title="Redes y foros">Red</th><th class="c" title="Políticos locales">Pol</th><th class="c" title="Contexto propio">Ctx</th><th>Pts</th></tr></thead><tbody id="rows"></tbody></table></div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function(){
+'use strict';
+const $=id=>document.getElementById(id);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const KEY='atalaya-fuentes-propias-v1';
+const DIMS=[['res','Res',.25],['prensa','Pre',.20],['enc','Enc',.15],['socio','Soc',.10],['padron','Dem',.10],['redes','Red',.10],['politicos','Pol',.05],['contexto','Ctx',.05]];
+const CYL=['05','09','24','34','37','40','42','47','49'];
+let CAT,SRC,NEWS,ESC,POLS,PROV,MUN,PGJ,OWN=[],SHARED=[],map,layer;
+
+function loadOwn(){try{return JSON.parse(localStorage.getItem(KEY)||'[]')}catch(e){return[]}}
+function saveOwn(){try{localStorage.setItem(KEY,JSON.stringify(OWN))}catch(e){alert('No se pudo guardar en este navegador. Exporta el JSON para no perder lo añadido.')}}
+
+Promise.all([
+  fetch('../data/fuentes.json').then(r=>r.json()),
+  fetch('../data/noticias.json').then(r=>r.json()),
+  fetch('../data/escanos.json').then(r=>r.json()).catch(()=>({})),
+  fetch('../data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
+  fetch('../data/indice.json').then(r=>r.json()),
+  fetch('../data/provincias.geojson').then(r=>r.json()),
+  fetch('../data/fuentes-propias.json').then(r=>r.ok?r.json():{fuentes:[]}).catch(()=>({fuentes:[]})),
+  fetch('../../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>({sondeos:[]}))
+]).then(([f,n,e,p,ix,pg,sh,enc])=>{
+  CAT=f.categorias;SRC=f.fuentes;NEWS=n.noticias;ESC=e;POLS=p.politicos;PROV=ix.prov;PGJ=pg;SHARED=(sh.fuentes||[]).map(x=>Object.assign({},x,{compartida:true}));
+  MUN=ix.mun.filter(m=>PROV[m[0].slice(0,2)]).length;
+  window.__enc=(enc.sondeos||[]).length;
+  OWN=loadOwn();
+  initForm();renderAll();initMap();
+});
+
+function allOwn(){return SHARED.concat(OWN)}
+function counts(s){
+  if(s.contar==='encuestas')return window.__enc;
+  if(s.contar==='escanos')return Object.keys(ESC).length;
+  if(s.contar==='politicos')return POLS.filter(x=>x.nombre).length;
+  if(s.contar==='municipios')return MUN;
+  if(s.match)return NEWS.filter(x=>s.match.includes(x.m)).length;
+  if(s.matchAmbito)return NEWS.filter(x=>x.a===s.matchAmbito).length;
+  return null;
+}
+function stars(n){return '★'.repeat(n)+'<span style="opacity:.25">'+'★'.repeat(5-n)+'</span>'}
+
+function renderAll(){renderKpis();renderCat();renderOwn();renderCoverage()}
+
+function renderKpis(){
+  const all=SRC.concat(allOwn().map(o=>Object.assign({estado:'propia'},o)));
+  const act=SRC.filter(s=>s.estado==='activa'||s.estado==='parcial').length,pl=SRC.filter(s=>s.estado==='planificada').length;
+  const cov=coverage(),avg=Math.round(cov.reduce((s,x)=>s+x.score,0)/cov.length);
+  $('kpis').innerHTML=[[all.length,'Fuentes y contextos'],[act,'Activas o parciales'],[pl,'Planificadas'],[NEWS.length,'Titulares capturados'],[avg+'/100','Cobertura media provincial']].map(k=>`<div class="kpi"><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
+}
+
+function renderCat(){
+  const q=$('fq').value.trim().toLowerCase(),fc=$('fc').value,fs=$('fs').value;
+  const own=allOwn().map(o=>({id:o.id,nombre:o.nombre,cat:o.cat,url:o.url,acceso:o.acceso,estado:'propia',fiab:+o.fiab||3,cobertura:o.territorio==='ES'?'España':(PROV[o.territorio]||o.territorio),frecuencia:o.fecha||'',usada:[],nota:o.nota,propia:true,tipo:o.tipo}));
+  const list=SRC.concat(own).filter(s=>(!q||(s.nombre+' '+(s.nota||'')).toLowerCase().includes(q))&&(!fc||s.cat===fc)&&(!fs||s.estado===fs));
+  $('cnt').textContent=list.length+' resultados';
+  let h='';
+  CAT.forEach(c=>{
+    const ls=list.filter(s=>s.cat===c.id);if(!ls.length)return;
+    h+=`<div class="grp"><h3>${esc(c.nombre)} <span class="hint">· ${ls.length}</span></h3><p>${esc(c.desc)}</p></div>`;
+    h+=ls.map(s=>{
+      const k=counts(s);
+      let det='';
+      if(s.id==='gnews'){
+        const m={};NEWS.filter(x=>x.a==='local').forEach(x=>m[x.m]=(m[x.m]||0)+1);
+        det=`<details style="margin-top:6px"><summary class="hint" style="cursor:pointer">Medios locales detectados (${Object.keys(m).length})</summary><div style="margin-top:4px">${Object.entries(m).sort((a,b)=>b[1]-a[1]).slice(0,30).map(([a,b])=>`<span class="tag">${esc(a)} · ${b}</span>`).join('')}</div></details>`;
+      }
+      return `<div class="src"><div class="n"><b>${s.url?`<a href="${esc(s.url)}" ${/^https?:/.test(s.url)?'target="_blank" rel="noopener"':''}>${esc(s.nombre)}</a>`:esc(s.nombre)}</b><span class="sub">${esc(s.nota||'')}</span>${s.prioridad?`<span class="tag">prioridad ${esc(s.prioridad)}</span>`:''}${(s.usada||[]).map(u=>`<span class="tag">${esc(u)}</span>`).join('')}${det}</div>
+        <div><span class="pill ${s.estado}">${{activa:'Activa',parcial:'Parcial',error:'Error',planificada:'Planificada',propia:s.tipo==='contexto'?'Contexto':'Propia'}[s.estado]}</span></div>
+        <div class="sub">${esc(s.acceso||'')}<br>${esc(s.frecuencia||'')}</div>
+        <div class="sub">${esc(s.cobertura||'')}${k!=null?`<br><b style="color:var(--txt)">${k.toLocaleString('es')} registros</b>`:''}</div>
+        <div class="stars" title="Fiabilidad">${stars(s.fiab||0)}</div></div>`}).join('');
+  });
+  $('cat').innerHTML=h||'<p class="hint">Sin resultados.</p>';
+}
+
+/* ---------- cobertura ---------- */
+function ownDims(pc){
+  const d={};
+  allOwn().filter(o=>o.territorio===pc).forEach(o=>{
+    const c=CAT.find(x=>x.id===o.cat),dim=o.tipo==='contexto'?'contexto':(c&&c.dimension)||'contexto';
+    d[dim]=(d[dim]||0)+1;
+  });
+  return d;
+}
+function coverage(){
+  return Object.keys(PROV).sort().map(pc=>{
+    const od=ownDims(pc),loc=NEWS.filter(x=>x.a==='local'&&x.pv.includes(pc)).length;
+    const v={res:ESC[pc]?1:0,prensa:Math.min(1,(loc+(od.prensa||0)*5)/10),enc:od.enc?1:0,socio:(CYL.includes(pc)||od.socio)?1:0,padron:od.padron?1:0,redes:od.redes?1:0,
+             politicos:Math.min(1,(POLS.filter(p=>p.prov===pc).length+(od.politicos||0))/3),contexto:Math.min(1,(od.contexto||0)/3)};
+    if(od.res)v.res=1;
+    const score=Math.round(DIMS.reduce((s,[k,,w])=>s+v[k]*w,0)*100);
+    return {pc,nombre:PROV[pc],v,score,loc};
+  });
+}
+const lvl=s=>s>=55?['rico','Bien cualificado','l-rico','#34d399']:s>=30?['sufi','Suficiente','l-sufi','#fbbf24']:['pobre','Pobre','l-pobre','#f87171'];
+function renderCoverage(){
+  const cov=coverage();
+  $('rows').innerHTML=cov.slice().sort((a,b)=>a.score-b.score).map(x=>{const l=lvl(x.score);
+    return `<tr><td><a href="/atalaya/#${x.pc}" style="text-decoration:none">${esc(x.nombre)}</a></td><td><span class="lbl ${l[2]}">${l[1]}</span></td>`+
+      DIMS.map(([k])=>{const f=x.v[k];return `<td class="c"><span class="dot" title="${Math.round(f*100)}%" style="background:${f>=1?'#34d399':f>0?'#fbbf24':'#1b2330'}"></span></td>`}).join('')+`<td class="sc">${x.score}</td></tr>`}).join('');
+  if(layer){const byc=Object.fromEntries(cov.map(x=>[x.pc,x]));layer.eachLayer(l=>{const x=byc[l.feature.properties.c];if(x){l.setStyle({fillColor:lvl(x.score)[3]});l.setTooltipContent(`<b>${esc(x.nombre)}</b><br>Cobertura ${x.score}/100 · ${lvl(x.score)[1]}`)}})}
+}
+function initMap(){
+  map=L.map('map',{zoomControl:false,minZoom:4,zoomSnap:.25});L.control.zoom({position:'bottomright'}).addTo(map);
+  const cov=Object.fromEntries(coverage().map(x=>[x.pc,x]));
+  layer=L.geoJSON(PGJ,{style:f=>({fillColor:lvl(cov[f.properties.c].score)[3],fillOpacity:.75,color:'#0b0f15',weight:.8}),
+    onEachFeature:(f,l)=>{const x=cov[f.properties.c];l.bindTooltip(`<b>${esc(x.nombre)}</b><br>Cobertura ${x.score}/100 · ${lvl(x.score)[1]}`,{sticky:true});l.on('click',()=>{location.href='/atalaya/#'+f.properties.c})}}).addTo(map);
+  map.fitBounds([[35.9,-9.6],[43.9,4.6]]);
+}
+
+/* ---------- formulario y fuentes propias ---------- */
+function initForm(){
+  $('c').innerHTML=CAT.filter(c=>c.id!=='geo').map(c=>`<option value="${c.id}">${esc(c.nombre)}</option>`).join('');
+  $('fc').innerHTML+=CAT.map(c=>`<option value="${c.id}">${esc(c.nombre)}</option>`).join('');
+  $('te').innerHTML+=Object.entries(PROV).sort((a,b)=>a[1].localeCompare(b[1],'es')).map(([c,n])=>`<option value="${c}">${esc(n)}</option>`).join('');
+  $('form').onsubmit=e=>{
+    e.preventDefault();
+    OWN.push({id:'own-'+Date.now(),nombre:$('n').value.trim(),tipo:$('t').value,cat:$('c').value,url:$('u').value.trim(),acceso:$('a').value,territorio:$('te').value,fiab:+$('fi').value,nota:$('no').value.trim(),fecha:new Date().toISOString().slice(0,10)});
+    saveOwn();e.target.reset();$('fi').value='4';renderAll();
+  };
+  ['fq','fc','fs'].forEach(id=>$(id).addEventListener('input',renderCat));
+  $('exp').onclick=()=>{
+    const blob=new Blob([JSON.stringify({fuentes:OWN.concat(SHARED.map(({compartida,...r})=>r).filter(r=>!OWN.some(o=>o.id===r.id)))},null,1)],{type:'application/json'});
+    const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='fuentes-propias.json';a.click();URL.revokeObjectURL(a.href);
+  };
+  $('imp').onchange=e=>{
+    const f=e.target.files[0];if(!f)return;
+    f.text().then(t=>{const d=JSON.parse(t),ls=Array.isArray(d)?d:d.fuentes||[];const ids=new Set(OWN.map(o=>o.id));
+      ls.filter(x=>x&&x.nombre&&!ids.has(x.id)).forEach(x=>OWN.push({id:x.id||'own-'+Math.random().toString(36).slice(2),nombre:String(x.nombre).slice(0,120),tipo:x.tipo==='contexto'?'contexto':'fuente',cat:x.cat,url:x.url||'',acceso:x.acceso||'Manual',territorio:x.territorio||'ES',fiab:+x.fiab||3,nota:String(x.nota||'').slice(0,600),fecha:x.fecha||''}));
+      saveOwn();renderAll()}).catch(()=>alert('El archivo no es un JSON válido.'));e.target.value='';
+  };
+}
+function renderOwn(){
+  const ls=allOwn();
+  $('own').innerHTML=ls.length?ls.map(o=>`<div class="own"><div><b>${esc(o.nombre)}</b> ${o.compartida?'<span class="pill planificada">repositorio</span>':''}<br><span class="sub hint">${esc((CAT.find(c=>c.id===o.cat)||{}).nombre||'')} · ${o.territorio==='ES'?'España':esc(PROV[o.territorio]||o.territorio)}${o.nota?' · '+esc(o.nota.slice(0,90)):''}</span></div>${o.compartida?'':`<button class="btn" data-id="${esc(o.id)}" aria-label="Eliminar ${esc(o.nombre)}">Eliminar</button>`}</div>`).join(''):'<p class="hint">Todavía no has añadido nada.</p>';
+  $('own').querySelectorAll('button[data-id]').forEach(b=>b.onclick=()=>{OWN=OWN.filter(o=>o.id!==b.dataset.id);saveOwn();renderAll()});
+}
+})();
+</script>
+</body>
+</html>
