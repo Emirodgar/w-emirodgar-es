@@ -23,3 +23,11 @@ html.sb-c .lb,html.sb-c .sb-brand span{display:none}
   html,html.sb-c{--sbp:64px}
   html:not(.sb-c) .sb{box-shadow:8px 0 24px rgba(0,0,0,.5)}
 }
+
+/* Barras de scroll con la identidad de Atalaya: finas, oscuras y con acento cian al pasar el ratón */
+@supports not selector(::-webkit-scrollbar){*{scrollbar-width:thin;scrollbar-color:#2b3647 transparent}}   /* Firefox; en Chromium manda ::-webkit-scrollbar, que permite el hover */
+*::-webkit-scrollbar{width:10px;height:10px}
+*::-webkit-scrollbar-track{background:transparent}
+*::-webkit-scrollbar-thumb{background:#2b3647;border-radius:8px;border:2px solid transparent;background-clip:content-box}
+*::-webkit-scrollbar-thumb:hover{background:#22d3ee;background-clip:content-box;border:2px solid transparent}
+*::-webkit-scrollbar-corner{background:transparent}
