@@ -198,21 +198,27 @@
     "Fichas"
    ],
    "matchAmbito": "local",
-   "nota": "Agrega prensa local por provincia, pero mete ruido (otros países, otras provincias). Sustituir poco a poco por RSS directos de cada medio local."
+   "nota": "Agrega prensa local de las 52 provincias, pero mete ruido (otras provincias y países). Ahora complementa a los RSS directos, que ganan en los duplicados."
   },
   {
    "id": "rss_local",
-   "nombre": "RSS directos de medios locales (La Gaceta, Salamanca24horas, Diario de León…)",
+   "nombre": "RSS directos de medios locales (La Gaceta, Tribuna de Salamanca, Diario de León, El Norte de Castilla…)",
    "cat": "prensa_local",
    "url": "",
-   "acceso": "RSS / scraping",
-   "estado": "planificada",
+   "acceso": "RSS / Atom",
+   "estado": "parcial",
    "prioridad": "alta",
    "fiab": 4,
-   "cobertura": "Por definir",
-   "frecuencia": "—",
-   "usada": [],
-   "nota": "Mejora la calidad frente a Google Noticias. Varios medios no publican RSS abierto: valorar scraping respetuoso."
+   "cobertura": "40 feeds · 35 provincias con 5+ titulares",
+   "frecuencia": "Cada ejecución del script",
+   "usada": [
+    "Prensa",
+    "Peligros",
+    "Estado de políticos",
+    "Fichas"
+   ],
+   "nota": "Descubiertos y validados con descubrir_rss.py (medios_locales.json). 30 de 70 medios probados no publican RSS abierto (La Voz de Galicia, Faro de Vigo, La Nueva España, Levante-EMV, Información…): son el siguiente hueco, que cubre hoy Google Noticias.",
+   "contar": "rss_local"
   },
   {
    "id": "prensa_int",

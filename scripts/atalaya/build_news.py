@@ -31,13 +31,38 @@ RIESGO = r"detenid|detención|imputad|investigad|corrupci|dimisi|accidente|incen
 
 def norm(s): return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
 def get(url):
-    with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=25) as r: return r.read()
+    try:
+        with urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=25) as r: return r.read()
+    except Exception:   # certificados caducados en el almacén de algunos Python de Windows: reintento con curl
+        import subprocess
+        r = subprocess.run(["curl", "-s", "-L", "-m", "25", "-A", UA, url], capture_output=True)
+        if not r.stdout: raise
+        return r.stdout
 def items(xml):
     for it in ET.fromstring(xml).iter("item"):
         d = it.findtext("pubDate")
         try: dt = parsedate_to_datetime(d).astimezone(timezone.utc)
         except Exception: dt = datetime.now(timezone.utc)
         yield unescape((it.findtext("title") or "").strip()), (it.findtext("link") or "").strip(), dt, it.findtext("source")
+POLITICA = re.compile(r"alcald|ayuntamient|diputaci|pleno|concejal|\bPP\b|PSOE|\bVox\b|Sumar|Podemos|elecciones|candidat|\bJunta\b|Gobierno|consejer|partido|municip|oposici|presupuest|subvenci|cortes|congreso|senado|socialist|popular", re.I)
+LOCALES = RAIZ / "scripts/atalaya/medios_locales.json"
+
+def items_cualquiera(xml):
+    """RSS 2.0 o Atom: (titulo, enlace, fecha)."""
+    raiz = ET.fromstring(xml)
+    for it in raiz.iter("item"):
+        d = it.findtext("pubDate")
+        try: dt = parsedate_to_datetime(d).astimezone(timezone.utc)
+        except Exception: dt = datetime.now(timezone.utc)
+        yield unescape((it.findtext("title") or "").strip()), (it.findtext("link") or "").strip(), dt
+    A = "{http://www.w3.org/2005/Atom}"
+    for e in raiz.iter(A + "entry"):
+        lk = next((l.get("href") for l in e.findall(A + "link") if l.get("rel") in (None, "alternate")), "")
+        d = e.findtext(A + "updated") or e.findtext(A + "published") or ""
+        try: dt = datetime.fromisoformat(d.replace("Z", "+00:00")).astimezone(timezone.utc)
+        except Exception: dt = datetime.now(timezone.utc)
+        yield unescape((e.findtext(A + "title") or "").strip()), lk, dt
+
 def wb(n): return re.compile(r"(?<!\w)" + re.escape(norm(n)) + r"(?!\w)")
 
 def main():
@@ -61,21 +86,32 @@ def main():
         try: return [(None, *x, f[0]) for x in items(get(f[1]))]
         except Exception as e: print("FALLO", f[0], e); return []
 
+    def directo(m):
+        try: xml = get(m["url"])
+        except Exception as e: print("FALLO", m["medio"], e); return []
+        try: lst = list(items_cualquiera(xml))
+        except Exception as e: print("FEED ILEGIBLE", m["medio"], e); return []
+        return [(m["prov"], t, l, dt, None, m["medio"]) for t, l, dt in lst if POLITICA.search(t)][:40]
+    medios = json.load(open(LOCALES, encoding="utf8"))["medios"] if LOCALES.exists() else []
+
     with ThreadPoolExecutor(8) as ex:
-        loc = list(ex.map(local, provs)); nac = list(ex.map(nacional, NACIONAL))
+        loc = list(ex.map(local, provs)); nac = list(ex.map(nacional, NACIONAL)); dire = list(ex.map(directo, medios))
     out, vistos = [], set()
-    def add(pc, t, l, dt, src, medio, ambito):
+    def add(pc, t, l, dt, src, medio, ambito, d=False):
         key = norm(t)[:80]
         if key in vistos or not l: return
         vistos.add(key); nt = norm(t)
         pv = {pc} if pc else set()
         for p, pats in pat_prov:
             if any(x.search(nt) for x in pats): pv.add(p)
-        mun = {c for c, rx in pat_unico if rx.search(nt)}
+        # con provincia conocida (prensa local) solo se buscan municipios de esa provincia: evita falsos positivos como «Montserrat»
+        mun = set() if (pc and ambito == "local") else {c for c, rx in pat_unico if rx.search(nt)}
         for p in pv: mun |= {c for c, rx in pat_mun.get(p, []) if rx.search(nt)}
         pv |= {c[:2] for c in mun}
-        out.append({"t": t, "u": l, "f": dt.isoformat(), "m": medio, "a": ambito, "pv": sorted(pv), "mun": sorted(mun),
+        out.append({"t": t, "u": l, "f": dt.isoformat(), "m": medio, "a": ambito, "pv": sorted(pv), "mun": sorted(mun), **({"d": 1} if d else {}),
                     "p": [k for k, rx in PARTIDOS.items() if re.search(rx, t, re.I)], "r": bool(re.search(RIESGO, nt))})
+    for lst in dire:   # primero los feeds propios de cada medio: son los más fiables y ganan en los duplicados
+        for pc, t, l, dt, src, medio in lst: add(pc, t, l, dt, src, medio, "local", True)
     for lst in nac:
         for pc, t, l, dt, src, medio in lst: add(pc, t, l, dt, src, medio, "nacional")
     for lst in loc:

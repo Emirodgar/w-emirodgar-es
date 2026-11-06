@@ -1,0 +1,244 @@
+{
+ "medios": [
+  {
+   "prov": "37",
+   "medio": "La Gaceta de Salamanca",
+   "url": "https://www.lagacetadesalamanca.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "37",
+   "medio": "Salamanca24horas",
+   "url": "https://www.salamanca24horas.com/rss.xml",
+   "items": 30
+  },
+  {
+   "prov": "37",
+   "medio": "Tribuna de Salamanca",
+   "url": "https://www.tribunasalamanca.com/rss.xml",
+   "items": 200
+  },
+  {
+   "prov": "37",
+   "medio": "Salamancahoy",
+   "url": "https://www.salamancahoy.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "49",
+   "medio": "Zamora News",
+   "url": "https://www.zamoranews.com/rss/",
+   "items": 20
+  },
+  {
+   "prov": "24",
+   "medio": "Diario de León",
+   "url": "https://www.diariodeleon.es/rss/home.xml",
+   "items": 128
+  },
+  {
+   "prov": "34",
+   "medio": "El Norte de Castilla Palencia",
+   "url": "https://www.elnortedecastilla.es/rss/2.0/?section=palencia",
+   "items": 100
+  },
+  {
+   "prov": "40",
+   "medio": "El Adelantado de Segovia",
+   "url": "https://eladelantado.com/feed/",
+   "items": 21
+  },
+  {
+   "prov": "42",
+   "medio": "Heraldo-Diario de Soria",
+   "url": "https://www.heraldodiariodesoria.es/rss/home.xml",
+   "items": 112
+  },
+  {
+   "prov": "47",
+   "medio": "El Norte de Castilla",
+   "url": "https://www.elnortedecastilla.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "28",
+   "medio": "Telemadrid",
+   "url": "https://www.telemadrid.es/rss",
+   "items": 28
+  },
+  {
+   "prov": "28",
+   "medio": "Madridiario",
+   "url": "https://www.madridiario.es/rss/ultimasNoticias/",
+   "items": 17
+  },
+  {
+   "prov": "08",
+   "medio": "La Vanguardia",
+   "url": "https://www.lavanguardia.com/rss/home.xml",
+   "items": 153
+  },
+  {
+   "prov": "08",
+   "medio": "Ara",
+   "url": "https://www.ara.cat/rss",
+   "items": 132
+  },
+  {
+   "prov": "41",
+   "medio": "Diario de Sevilla",
+   "url": "https://www.diariodesevilla.es/rss",
+   "items": 144
+  },
+  {
+   "prov": "29",
+   "medio": "Diario Sur",
+   "url": "https://www.diariosur.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "18",
+   "medio": "Ideal Granada",
+   "url": "https://www.ideal.es/rss/2.0/?section=granada",
+   "items": 100
+  },
+  {
+   "prov": "18",
+   "medio": "Granada Hoy",
+   "url": "https://www.granadahoy.com/rss",
+   "items": 167
+  },
+  {
+   "prov": "23",
+   "medio": "Diario Jaén",
+   "url": "https://www.diariojaen.es/rss/portada",
+   "items": 7
+  },
+  {
+   "prov": "21",
+   "medio": "Huelva Información",
+   "url": "https://www.huelvainformacion.es/rss",
+   "items": 120
+  },
+  {
+   "prov": "11",
+   "medio": "Diario de Cádiz",
+   "url": "https://www.diariodecadiz.es/rss",
+   "items": 145
+  },
+  {
+   "prov": "04",
+   "medio": "Diario de Almería",
+   "url": "https://www.diariodealmeria.es/rss",
+   "items": 120
+  },
+  {
+   "prov": "46",
+   "medio": "Las Provincias",
+   "url": "https://www.lasprovincias.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "50",
+   "medio": "Heraldo de Aragón",
+   "url": "https://www.heraldo.es/rss",
+   "items": 194
+  },
+  {
+   "prov": "36",
+   "medio": "Diario de Pontevedra",
+   "url": "https://www.diariodepontevedra.es/rss/",
+   "items": 36
+  },
+  {
+   "prov": "32",
+   "medio": "La Región",
+   "url": "https://www.laregion.es/rss",
+   "items": 171
+  },
+  {
+   "prov": "27",
+   "medio": "El Progreso",
+   "url": "https://www.elprogreso.es/rss/",
+   "items": 37
+  },
+  {
+   "prov": "33",
+   "medio": "El Comercio",
+   "url": "https://www.elcomercio.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "39",
+   "medio": "El Diario Montañés",
+   "url": "https://www.eldiariomontanes.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "48",
+   "medio": "El Correo",
+   "url": "https://www.elcorreo.com/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "20",
+   "medio": "Diario Vasco",
+   "url": "https://www.diariovasco.com/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "01",
+   "medio": "El Correo Álava",
+   "url": "https://www.elcorreo.com/rss/2.0/?section=alava",
+   "items": 100
+  },
+  {
+   "prov": "31",
+   "medio": "Diario de Navarra",
+   "url": "https://www.diariodenavarra.es/rss/contenidos.xml",
+   "items": 108
+  },
+  {
+   "prov": "26",
+   "medio": "La Rioja",
+   "url": "https://www.larioja.com/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "30",
+   "medio": "La Verdad",
+   "url": "https://www.laverdad.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "06",
+   "medio": "Diario Hoy",
+   "url": "https://www.hoy.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "25",
+   "medio": "Segre",
+   "url": "https://www.segre.com/ca/rss/home.xml",
+   "items": 94
+  },
+  {
+   "prov": "43",
+   "medio": "Diari de Tarragona",
+   "url": "https://www.diaridetarragona.com/rss/home.xml",
+   "items": 60
+  },
+  {
+   "prov": "51",
+   "medio": "El Faro de Ceuta",
+   "url": "https://elfarodeceuta.es/feed/",
+   "items": 10
+  },
+  {
+   "prov": "52",
+   "medio": "El Faro de Melilla",
+   "url": "https://elfarodemelilla.es/feed/",
+   "items": 10
+  }
+ ]
+}

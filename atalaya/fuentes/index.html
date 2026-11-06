@@ -157,6 +157,7 @@ function counts(s){
   if(s.contar==='escanos')return Object.keys(ESC).length;
   if(s.contar==='politicos')return POLS.filter(x=>x.nombre).length;
   if(s.contar==='municipios')return MUN;
+  if(s.contar==='rss_local')return NEWS.filter(x=>x.d).length||null;
   if(s.contar==='padron')return window.__pad?Object.keys(window.__pad.mun).length:null;
   if(s.contar==='programas')return window.__prog||null;
   if(s.contar==='candidatos_prov')return Object.values(window.__pp).reduce((a,v)=>a+v.candidatos.length,0);
