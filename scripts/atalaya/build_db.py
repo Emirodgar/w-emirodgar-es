@@ -64,8 +64,14 @@ def main():
         t = n(a["t"])
         db.executemany("INSERT OR IGNORE INTO articulo_politico VALUES (?,?)", [(aid, pid) for pid, r in rx if any(x.search(t) for x in r)])
         db.execute("INSERT INTO analisis VALUES (?,?,?,?,?,?,?,?)", (aid, "palabras-clave", "0.1", ahora, None, None, int(a["r"]), None))
+    # propuestas / posiciones de los partidos (módulo Programas)
+    prog = J(D / "programas.json")
+    for af in prog["afirmaciones"]:
+        for pid, x in af["posiciones"].items():
+            db.execute("INSERT INTO propuesta(partido_id,tema,area,enunciado,cita,fecha) VALUES (?,?,?,?,?,?)",
+                       (pid, af["tema"], af["area"], f'{af["texto"]} [{x["posicion"]}]', x.get("cita"), (x.get("fecha") or "")))
     db.commit()
-    for t in ["territorio", "partido", "politico", "encuesta", "encuesta_voto", "articulo", "articulo_territorio", "articulo_politico", "analisis"]:
+    for t in ["territorio", "partido", "politico", "encuesta", "encuesta_voto", "articulo", "articulo_territorio", "articulo_politico", "analisis", "propuesta"]:
         print(f"{t:22}", db.execute(f"SELECT COUNT(*) FROM {t}").fetchone()[0])
     db.close()
 main()

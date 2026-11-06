@@ -433,17 +433,21 @@
   },
   {
    "id": "programas",
-   "nombre": "Programas electorales y propuestas",
+   "nombre": "Posiciones y programas de los partidos (cita, fuente y fecha)",
    "cat": "documentos",
-   "url": "/programas-electorales/",
-   "acceso": "Documentos propios",
-   "estado": "planificada",
+   "url": "/atalaya/programas/",
+   "acceso": "Fichero propio (JSON)",
+   "estado": "parcial",
    "prioridad": "alta",
    "fiab": 5,
-   "cobertura": "Nacional",
-   "frecuencia": "—",
-   "usada": [],
-   "nota": "Base del segundo cerebro: quién ha dicho qué y cuándo."
+   "cobertura": "5 partidos · 23 afirmaciones · 14 temas",
+   "frecuencia": "Manual con la skill de Elecciones en España (build_programas.py)",
+   "usada": [
+    "Programas",
+    "Seguimiento de promesas"
+   ],
+   "nota": "115 posiciones, 99 documentadas con fuente. Faltan los PDFs completos de los programas de 2023 y 2026 y las propuestas de partidos regionales.",
+   "contar": "programas"
   },
   {
    "id": "wiki_foto",

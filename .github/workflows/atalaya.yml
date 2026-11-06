@@ -49,6 +49,7 @@ jobs:
         run: |
           python3 scripts/atalaya/build_resultados.py
           python3 scripts/atalaya/build_politicos_prov.py
+          python3 scripts/atalaya/build_programas.py
 
       - name: Fichas indexables
         run: python3 scripts/atalaya/build_fichas.py

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programas | Atalaya</title>
+<meta name="description" content="Qué ha dicho y prometido cada partido, con cita, fuente y fecha, y seguimiento manual de su cumplimiento.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/programas/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit}button,select,input,textarea{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.wrap{padding:12px 16px;max-width:1500px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}.kpi b{display:block;font-family:var(--mono);font-size:24px}.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.tools input,.tools select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}.tools input{min-width:240px}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer}.btn:hover{border-color:var(--acc)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.note{background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.28);border-radius:6px;padding:10px 12px;color:var(--mut);font-size:13px;margin-bottom:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.ch{padding:12px 14px;border-bottom:1px solid var(--line)}
+.ch .tema{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+.ch h2{font-size:16px;font-weight:600;margin-top:2px}
+.ch .sum{color:var(--mut);font-size:13px;margin-top:6px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.pcol{padding:12px 14px;border-right:1px solid var(--line);border-top:3px solid var(--c,#475569);min-width:0}
+.pcol:last-child{border-right:0}
+.pcol h3{font-size:13px;font-weight:700;display:flex;justify-content:space-between;align-items:center;gap:6px;margin-bottom:6px}
+.pill{font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;white-space:nowrap}
+.favor{background:rgba(52,211,153,.15);color:var(--ok)}.contra{background:rgba(248,113,113,.15);color:var(--bad)}.matizada{background:rgba(251,191,36,.15);color:var(--warn)}.sin_posicion{background:rgba(148,163,184,.15);color:var(--mut)}
+.cita{font-size:13px;color:var(--txt);display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden}
+.cita.open{display:block}
+.mas{background:none;border:0;color:var(--acc);cursor:pointer;font-size:12px;padding:2px 0}
+.fte{font-size:12px;color:var(--mut);margin-top:4px}.fte a{color:var(--acc);text-decoration:none}.fte a:hover{text-decoration:underline}
+.seg{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;font-size:12px}
+.seg label{display:block;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.seg select,.seg input,.seg textarea{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:5px 7px;margin-bottom:5px}
+.seg textarea{min-height:46px;resize:vertical}
+.est{display:inline-block;font-weight:600;padding:1px 8px;border-radius:99px;font-size:12px}
+.e-sin_evidencia{background:rgba(148,163,184,.15);color:var(--mut)}.e-en_curso{background:rgba(34,211,238,.15);color:var(--acc)}.e-cumplida{background:rgba(52,211,153,.15);color:var(--ok)}.e-parcial{background:rgba(251,191,36,.15);color:var(--warn)}.e-incumplida{background:rgba(248,113,113,.15);color:var(--bad)}
+.empty{padding:24px;color:var(--mut)}
+@media (max-width:800px){.kp{grid-template-columns:repeat(2,1fr)}.pcol{border-right:0;border-bottom:1px solid var(--line)}.tools input{min-width:0;flex:1}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js"></script>
+<header class="top">
+  <h1 class="pt">Programas <small>qué ha dicho cada partido y qué se ha cumplido</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<main class="wrap">
+  <div class="kp" id="kp"></div>
+  <p class="note" id="aviso"></p>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Buscar en las propuestas…" aria-label="Buscar en las propuestas">
+    <select id="ft" aria-label="Tema"><option value="">Todos los temas</option></select>
+    <select id="fp" aria-label="Partido"><option value="">Todos los partidos</option></select>
+    <select id="fs" aria-label="Posición"><option value="">Cualquier posición</option><option value="favor">A favor</option><option value="contra">En contra</option><option value="matizada">Matizada</option><option value="sin_posicion">Sin posición</option></select>
+    <span style="margin-left:auto;display:flex;gap:8px"><button class="btn" id="exp">Exportar seguimiento</button><label class="btn">Importar<input id="imp" type="file" accept="application/json" hidden></label></span>
+  </div>
+  <div id="out"></div>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var norm=function(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+var KEY='atalaya-seguimiento-v1';
+var POS={favor:'A favor',contra:'En contra',matizada:'Matizada',sin_posicion:'Sin posición'};
+var EST={sin_evidencia:'Sin evidencia',en_curso:'En curso',cumplida:'Cumplida',parcial:'Parcial',incumplida:'Incumplida'};
+var D,SEG={},SHARED={};
+function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return{}}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(SEG))}catch(e){alert('No se pudo guardar en este navegador. Exporta el seguimiento para no perderlo.')}}
+function get(k){return SEG[k]||SHARED[k]||{estado:'sin_evidencia',url:'',nota:''}}
+function fecha(f){if(!f)return '';var m=f.split('-'),M=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];return (m[1]?M[+m[1]-1]+' ':'')+m[0]}
+
+Promise.all([
+  fetch('../data/programas.json').then(function(r){return r.json()}),
+  fetch('../data/seguimiento.json').then(function(r){return r.ok?r.json():{}}).catch(function(){return {}})
+]).then(function(a){
+  D=a[0];SHARED=(a[1]&&a[1].seguimiento)||{};SEG=load();
+  $('aviso').innerHTML='<b>Cómo leerlo.</b> Las posiciones salen de programas anteriores, votaciones y declaraciones recientes, con la fuente enlazada; los programas de 2026 aún no se han publicado y pueden cambiarlas. El <b>seguimiento de cumplimiento es manual</b>: Atalaya no lo calcula ni lo da por bueno sin una evidencia enlazada (BOE, ley aprobada, dato oficial). Datos actualizados el '+esc(D.actualizado)+'. Aún faltan los PDFs completos de los programas de 2023 y 2026.';
+  $('ft').innerHTML+=D.temas.map(function(t){return '<option>'+esc(t)+'</option>'}).join('');
+  $('fp').innerHTML+=D.partidos.map(function(p){return '<option value="'+p.id+'">'+esc(p.siglas)+'</option>'}).join('');
+  render();
+});
+
+function render(){
+  var q=norm($('q').value.trim()),ft=$('ft').value,fp=$('fp').value,fs=$('fs').value;
+  var parts=D.partidos.filter(function(p){return !fp||p.id===fp});
+  var ls=D.afirmaciones.filter(function(a){
+    if(ft&&a.tema!==ft)return false;
+    if(q){var t=norm(a.texto+' '+a.tema+' '+Object.keys(a.posiciones).map(function(k){return a.posiciones[k].cita||''}).join(' '));if(t.indexOf(q)<0)return false}
+    if(fs&&!parts.some(function(p){return a.posiciones[p.id]&&a.posiciones[p.id].posicion===fs}))return false;
+    return true;
+  });
+  var all=D.afirmaciones.reduce(function(n,a){return n+Object.keys(a.posiciones).length},0);
+  var doc=D.afirmaciones.reduce(function(n,a){return n+Object.keys(a.posiciones).filter(function(k){return a.posiciones[k].posicion!=='sin_posicion'}).length},0);
+  var keys=Object.keys(Object.assign({},SHARED,SEG)),marc=keys.filter(function(k){return get(k).estado!=='sin_evidencia'}).length,ev=keys.filter(function(k){return get(k).url}).length;
+  $('kp').innerHTML=[[D.afirmaciones.length,'Afirmaciones por tema'],[doc+' / '+all,'Posiciones documentadas'],[marc,'Con seguimiento marcado'],[ev,'Con evidencia enlazada']].map(function(k){return '<div class="kpi"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
+  $('out').innerHTML=ls.map(function(a){return card(a,parts)}).join('')||'<div class="empty">Sin resultados con estos filtros.</div>';
+  document.querySelectorAll('.mas').forEach(function(b){b.onclick=function(){var c=b.previousElementSibling;c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Ver menos':'Ver más'}});
+  document.querySelectorAll('.seg [data-k]').forEach(function(el){el.addEventListener('change',function(){
+    var k=el.dataset.k,f=el.dataset.f,cur=Object.assign({},get(k));cur[f]=el.value;SEG[k]=cur;save();
+    if(f==='estado'){var tag=el.closest('.pcol').querySelector('.est');tag.className='est e-'+el.value;tag.textContent=EST[el.value]}
+    var keys=Object.keys(Object.assign({},SHARED,SEG));
+    document.querySelectorAll('.kpi b')[2].textContent=keys.filter(function(x){return get(x).estado!=='sin_evidencia'}).length;
+    document.querySelectorAll('.kpi b')[3].textContent=keys.filter(function(x){return get(x).url}).length;
+  })});
+}
+function summary(a,parts){
+  var g={};parts.forEach(function(p){var x=a.posiciones[p.id];if(x)(g[x.posicion]=g[x.posicion]||[]).push(p.siglas)});
+  return ['favor','contra','matizada','sin_posicion'].filter(function(k){return g[k]}).map(function(k){return POS[k]+': '+g[k].join(', ')}).join(' · ');
+}
+function card(a,parts){
+  return '<article class="card"><div class="ch"><div class="tema">'+esc(a.tema)+'</div><h2>'+esc(a.texto)+'</h2><div class="sum">'+esc(summary(a,parts))+'</div></div><div class="cols">'+
+    parts.map(function(p){
+      var x=a.posiciones[p.id];if(!x)return '';
+      var k=a.id+'|'+p.id,s=get(k);
+      return '<div class="pcol" style="--c:'+esc(p.color)+'"><h3><span>'+esc(p.siglas)+'</span><span class="pill '+x.posicion+'">'+POS[x.posicion]+'</span></h3>'+
+        '<div class="cita">'+esc(x.cita||'Sin evidencia clara de posición.')+'</div>'+((x.cita||'').length>170?'<button class="mas" type="button">Ver más</button>':'')+
+        '<div class="fte">'+(x.fuente?'<a href="'+esc(x.fuente)+'" target="_blank" rel="noopener">Fuente</a>':'Sin fuente')+(x.fecha?' · '+esc(fecha(x.fecha)):'')+'</div>'+
+        '<div class="seg"><label>Seguimiento <span class="est e-'+s.estado+'">'+EST[s.estado]+'</span></label>'+
+        '<select data-k="'+esc(k)+'" data-f="estado" aria-label="Estado de cumplimiento de '+esc(p.siglas)+'">'+Object.keys(EST).map(function(e){return '<option value="'+e+'"'+(e===s.estado?' selected':'')+'>'+EST[e]+'</option>'}).join('')+'</select>'+
+        '<input data-k="'+esc(k)+'" data-f="url" type="url" placeholder="Enlace a la evidencia (BOE, ley, dato oficial)" value="'+esc(s.url)+'" aria-label="Enlace a la evidencia">'+
+        '<textarea data-k="'+esc(k)+'" data-f="nota" placeholder="Nota" aria-label="Nota de seguimiento">'+esc(s.nota)+'</textarea></div></div>';
+    }).join('')+'</div></article>';
+}
+['q','ft','fp','fs'].forEach(function(id){$(id).addEventListener('input',render)});
+$('exp').onclick=function(){
+  var m=Object.assign({},SHARED,SEG),o={};Object.keys(m).forEach(function(k){if(m[k].estado!=='sin_evidencia'||m[k].url||m[k].nota)o[k]=m[k]});
+  var blob=new Blob([JSON.stringify({seguimiento:o},null,1)],{type:'application/json'}),a=document.createElement('a');
+  a.href=URL.createObjectURL(blob);a.download='seguimiento.json';a.click();URL.revokeObjectURL(a.href);
+};
+$('imp').onchange=function(e){
+  var f=e.target.files[0];if(!f)return;
+  f.text().then(function(t){var d=JSON.parse(t),s=d.seguimiento||d;Object.keys(s).forEach(function(k){var x=s[k];if(x&&EST[x.estado])SEG[k]={estado:x.estado,url:String(x.url||'').slice(0,500),nota:String(x.nota||'').slice(0,600)}});save();render()}).catch(function(){alert('El archivo no es un JSON válido.')});
+  e.target.value='';
+};
+})();
+</script>
+</body>
+</html>
