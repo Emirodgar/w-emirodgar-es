@@ -9,6 +9,7 @@
 <link rel="canonical" href="https://emirodgar.es/atalaya/fuentes/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <style>
@@ -17,9 +18,9 @@
 html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
 a{color:inherit}button,select,input,textarea{font:inherit;color:inherit}
 .top{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
-.logo{font-size:inherit;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600;letter-spacing:.18em;color:var(--acc)}
-.logo i{width:9px;height:9px;border-radius:50%;background:var(--acc)}
-.nav a{text-decoration:none;color:var(--mut);padding:6px 10px;border-radius:6px}.nav a:hover{color:var(--txt)}.nav a[aria-current=page]{color:#04222a;background:var(--acc);font-weight:600}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.top{min-height:56px}
 .wrap{padding:12px 16px;max-width:1400px;margin:0 auto}
 .kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}
 .kpi,.card{background:var(--panel);border:1px solid var(--line);border-radius:8px}
@@ -60,9 +61,10 @@ td.c{text-align:center}.dot{display:inline-block;width:14px;height:14px;border-r
 </style>
 </head>
 <body>
+<script src="/atalaya/assets/shell.js"></script>
 <header class="top">
-  <h1 class="logo"><i></i>ATALAYA <span style="color:var(--mut);letter-spacing:.05em;font-weight:400;font-size:12px">fuentes de datos</span></h1>
-  <nav class="nav" aria-label="Principal"><a href="/atalaya/">Panel</a><a href="/atalaya/fuentes/" aria-current="page">Fuentes</a><a href="/atalaya/fichas/">Fichas</a></nav>
+  <h1 class="pt">Fuentes de datos <small>base de conocimiento y cobertura</small></h1>
+  <span class="tagline">Análisis políticos en España</span>
 </header>
 
 <div class="wrap">

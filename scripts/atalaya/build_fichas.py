@@ -50,8 +50,11 @@ table{border-collapse:collapse;width:100%;font-size:14px;margin:.6em 0}th,td{bor
 li{margin:.3em 0}details{margin:.5em 0}summary{cursor:pointer;font-weight:600}
 @media (prefers-color-scheme:dark){body{background:#0e1219;color:#e5e9f0}h2{border-color:#243044}.ans{background:#0f2036}th{background:#151d29}th,td{border-color:#273449}.meta,.src,nav.bc{color:#98a5b8}a{color:#7cb0ff}.warn{background:#2a2310}}"""
 
-def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc):
+def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False):
     url = f"{BASE}/atalaya/fichas/{ruta}"
+    css_extra = '<link rel="stylesheet" href="/atalaya/assets/shell.css">' if shell else ""
+    js_extra = '<script src="/atalaya/assets/shell.js"></script>' if shell else ""
+    pad = "body{max-width:none;padding-left:calc(var(--sbp) + 24px)}main{max-width:820px}" if shell else ""
     html = f"""<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -64,10 +67,12 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc):
 <meta property="og:type" content="article"><meta property="og:locale" content="es_ES"><meta property="og:site_name" content="Emirodgar">
 <meta property="og:title" content="{E(titulo)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+{css_extra}
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
-<style>{CSS}</style>
+<style>{CSS}{pad}</style>
 </head>
 <body>
+{js_extra}
 <nav class="bc" aria-label="Migas de pan">{bc}</nav>
 <main>
 <h1>{E(h1)}</h1>
@@ -211,7 +216,7 @@ def main():
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
               f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganará las elecciones generales de 2026?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
-    pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas")
+    pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' + "".join(f"<url><loc>{u}</loc><lastmod>{FECHA}</lastmod></url>\n" for u in urls) + "</urlset>\n", encoding="utf8")
     print(len(urls), "páginas;", sum(1 for _, _, n, _ in items if n != "sin datos"), "provincias con histórico")

@@ -3,12 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Atalaya | Panel de inteligencia electoral (prototipo)</title>
-<meta name="description" content="Prototipo de panel de inteligencia electoral por territorio: mapa de ganadores, volatilidad histórica y riesgo de cambio por municipio, prensa geolocalizada y agentes de IA. Cobertura: toda España, de provincia a municipio.">
+<title>Atalaya | Análisis políticos en España</title>
+<meta name="description" content="Análisis políticos en España: mapa de ganadores, volatilidad y riesgo de cambio por provincia y municipio, prensa geolocalizada y políticos de cada territorio.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://emirodgar.es/atalaya/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
@@ -24,11 +25,6 @@ html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans
 a{color:inherit}
 button,select,input{font:inherit;color:inherit}
 .top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
-.logo{font-size:inherit;display:flex;align-items:center;gap:8px;font-family:var(--mono);font-weight:600;letter-spacing:.18em;color:var(--acc)}
-.logo i{width:9px;height:9px;border-radius:50%;background:var(--acc)}
-.logo small{color:var(--mut);letter-spacing:.05em;font-weight:400;font-size:12px}
-.menu{display:flex;gap:4px}.menu a{text-decoration:none;color:var(--mut);padding:6px 10px;border-radius:6px}.menu a:hover{color:var(--txt)}.menu a[aria-current=page]{color:#04222a;background:var(--acc);font-weight:600}
-.badge{font-family:var(--mono);font-size:12px;padding:3px 8px;border-radius:4px;border:1px solid var(--warn);color:var(--warn);background:rgba(251,191,36,.08)}
 .filter{position:relative;display:flex;gap:8px;align-items:center;margin-left:auto}
 .filter input{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;width:230px}
 .filter input:focus,.seg button:focus-visible,.tabs button:focus-visible,.row:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
@@ -56,25 +52,13 @@ button,select,input{font:inherit;color:inherit}
 .sres button:hover,.sres button:focus-visible{background:var(--panel2)}
 .sres span{color:var(--mut);font-size:12px}
 .wide{margin:0 16px 10px}
-.scen{display:grid;grid-template-columns:minmax(260px,340px) minmax(0,1fr);gap:16px}
-.ctl label{display:block;font-size:12px;color:var(--mut);margin:10px 0 3px;text-transform:uppercase;letter-spacing:.05em}
-.ctl select,.ctl input[type=text]{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 9px}
-.ctl input[type=range]{width:100%;accent-color:var(--acc)}
-.ctl .rl{display:flex;justify-content:space-between;align-items:baseline}
-.ctl .rl output{font-family:var(--mono);font-size:12px;color:var(--txt)}
-.scen-head{font-size:15px;margin-bottom:10px}
-.kp3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-.kp3 .m span:last-child{display:block;font-size:12px;color:var(--mut)}
-.chips{display:flex;flex-wrap:wrap;gap:6px}
-.chips button{background:var(--panel2);border:1px solid var(--line);border-radius:99px;padding:3px 10px;font-size:12px;cursor:pointer}
-.chips button span{color:var(--warn);font-family:var(--mono);font-size:12px}
 .pols{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;padding:12px 14px}
 .pol{background:var(--panel2);border-radius:8px;padding:12px}
 .pol b{display:block;font-weight:600}
 .face{width:52px;height:52px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--mut);background:#0b0f15;flex:none;overflow:hidden}
 .face img{width:100%;height:100%;object-fit:cover}
 .disc{color:var(--mut);font-size:12px;margin-top:8px}
-@media (max-width:900px){.scen{grid-template-columns:1fr}.kp3{grid-template-columns:1fr}}
+@media (max-width:900px){}
 
 .drawer{position:fixed;top:0;right:0;height:100vh;height:100dvh;width:min(440px,100vw);z-index:2000;background:var(--panel);border-left:1px solid var(--line);box-shadow:-10px 0 28px rgba(0,0,0,.45);display:flex;flex-direction:column;transform:translateX(100%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
 .drawer.open{transform:none;visibility:visible;transition:transform .25s ease}
@@ -97,6 +81,9 @@ button,select,input{font:inherit;color:inherit}
 .dfoot{padding:10px 16px;border-top:1px solid var(--line);color:var(--mut);font-size:12px}
 .dfoot a{color:var(--acc)}
 .btn.pri{background:var(--acc);color:#04222a;font-weight:600;border-color:var(--acc)}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.simnote{color:var(--mut);font-size:12px;font-weight:400;letter-spacing:0;text-transform:none}
 .legend{position:absolute;z-index:500;bottom:12px;left:10px;background:rgba(7,9,13,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;color:var(--mut);max-width:260px}
 .legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
 .legend .ramp{height:8px;border-radius:4px;margin:4px 0 2px}
@@ -156,11 +143,11 @@ button,select,input{font:inherit;color:inherit}
 </style>
 </head>
 <body>
+<script src="/atalaya/assets/shell.js"></script>
 
 <header class="top">
-  <h1 class="logo"><i></i>ATALAYA <small>inteligencia electoral</small></h1>
-  <nav class="menu" aria-label="Principal"><a href="/atalaya/" aria-current="page">Panel</a><a href="/atalaya/fuentes/">Fuentes</a><a href="/atalaya/fichas/">Fichas</a></nav>
-  <span class="badge" title="Los resultados, la volatilidad y el sentimiento son datos generados para la demo. Los límites municipales y los titulares son reales.">PROTOTIPO · RESULTADOS Y SENTIMIENTO SIMULADOS</span>
+  <h1 class="pt">Panel <small>mapa electoral por territorio</small></h1>
+  <span class="tagline">Análisis políticos en España</span>
   <div class="filter">
     <input id="q" placeholder="Buscar provincia o municipio…" aria-label="Buscar provincia o municipio" autocomplete="off">
     <div id="sres" class="sres" hidden></div>
@@ -177,14 +164,13 @@ button,select,input{font:inherit;color:inherit}
 
 <main class="grid">
   <section class="card">
-    <h2>Mapa electoral · <em id="mapTitle">España</em></h2>
+    <h2><span>Mapa electoral · <em id="mapTitle">España</em></span><span class="simnote">resultados y sentimiento: datos de ejemplo</span></h2>
     <div class="mapwrap">
       <div class="seg" role="group" aria-label="Capa del mapa">
         <button data-mode="winner" class="on">Ganador</button>
         <button data-mode="vol">Volatilidad</button>
         <button data-mode="risk">Riesgo de cambio</button>
         <button data-mode="sent">Sentimiento</button>
-        <button data-mode="scen">Escenario</button>
       </div>
       <div id="map" aria-label="Mapa electoral de España"></div>
       <div class="nav"><button class="btn pri" id="polBtn">Analizar políticos</button><button class="btn" id="back" hidden>← Atrás</button><button class="btn" id="canarias">Canarias</button></div>
@@ -211,32 +197,6 @@ button,select,input{font:inherit;color:inherit}
     <h2><span id="rankT">Provincias en alarma</span> <em>riesgo de cambio</em></h2>
     <div class="list" id="rank"></div>
   </div>
-</section>
-
-<section class="card wide" id="escenarios">
-  <h2>Escenarios · ¿y si…? <em>impacto en voto e indecisos</em></h2>
-  <div class="body scen">
-    <div class="ctl">
-      <label for="spre">Tipo de evento</label><select id="spre"></select>
-      <label for="sactor">Protagonista (texto libre)</label><input type="text" id="sactor" maxlength="60">
-      <label for="sp">Partido afectado</label>
-      <select id="sp"><option>PP</option><option>PSOE</option><option>Vox</option><option>Cs</option><option>Sumar</option><option>Podemos</option></select>
-      <label for="sd">Efecto</label><select id="sd"><option value="-1">Negativo para el partido</option><option value="1">Positivo para el partido</option></select>
-      <label for="sg"><span class="rl"><span>Gravedad del hecho</span><output id="sgo"></output></span></label><input type="range" id="sg" min="0" max="100">
-      <label for="sa"><span class="rl"><span>Alcance mediático</span><output id="sao"></output></span></label><input type="range" id="sa" min="0" max="100">
-      <label for="sf"><span class="rl"><span>Fidelidad de la base</span><output id="sfo"></output></span></label><input type="range" id="sf" min="0" max="100">
-      <label for="sr"><span class="rl"><span>Capacidad de recuperar indecisos</span><output id="sro"></output></span></label><input type="range" id="sr" min="0" max="100">
-      <label for="su"><span class="rl"><span>Indecisos de partida</span><output id="suo"></output></span></label><input type="range" id="su" min="3" max="35">
-      <p class="disc">Escenario hipotético: no afirma ningún hecho real. El modelo y sus supuestos son simples y editables; los intervalos reflejan solo la incertidumbre de estos parámetros. Se aplica al ámbito que estés viendo (provincias o municipios) y puedes pintarlo en el mapa con la capa «Escenario».</p>
-    </div>
-    <div id="sout"></div>
-  </div>
-</section>
-
-<section class="card wide" id="politicos">
-  <h2>Políticos · estado según prensa <em>neutro si no hay información</em></h2>
-  <div class="pols" id="pols"></div>
-  <p class="disc" style="padding:0 14px 12px">Estado calculado con los titulares recogidos: <b>Neutro</b> (sin menciones), <b>En foco</b> (menciones sin eventos de riesgo), <b>Bajo presión</b> (2–5 titulares con palabras de riesgo), <b>Crisis</b> (6 o más). Es una heurística de palabras clave, no un análisis de sentimiento todavía. Redes sociales aún no conectadas (Fase 3). Candidaturas de fuente propia (<a href="/elecciones-espana/">Elecciones en España</a>); las listas provinciales se añadirán al proclamarse. Fotos: Wikipedia / Wikimedia Commons.</p>
 </section>
 
 <h2 class="sr">Agentes de IA</h2>
@@ -322,7 +282,7 @@ const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',
 const norm=s=>s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 function lerp(a,b,t){return a.map((v,i)=>Math.round(v+(b[i]-v)*t))}
 function ramp(stops,t){t=Math.max(0,Math.min(1,t));const n=stops.length-1,i=Math.min(n-1,Math.floor(t*n));const c=lerp(stops[i],stops[i+1],t*n-i);return `rgb(${c[0]},${c[1]},${c[2]})`}
-const RISKR=[[31,60,52],[210,170,50],[230,70,60]], VOLR=[[22,38,60],[34,140,200],[240,210,90]], SENTR=[[235,70,70],[70,80,95],[50,200,140]], SCENR=[[40,48,60],[230,150,60],[235,60,60]];
+const RISKR=[[31,60,52],[210,170,50],[230,70,60]], VOLR=[[22,38,60],[34,140,200],[240,210,90]], SENTR=[[235,70,70],[70,80,95],[50,200,140]];
 function timeAgo(iso){const m=Math.max(1,Math.round((Date.now()-new Date(iso))/60000));if(m<60)return m+' min';if(m<1440)return Math.round(m/60)+' h';return Math.round(m/1440)+' d'}
 function cleanTitle(t){return t.replace(/\s+-\s+[^-]{3,60}$/,'')}
 function riskPill(r){return r>=60?['p-bad','Alarma']:r>=40?['p-warn','Vigilar']:['p-ok','Estable']}
@@ -331,11 +291,11 @@ const f1=x=>(Math.round(x*10)/10).toFixed(1);
 const sgn=x=>(x>0?'+':x<0?'−':'')+f1(Math.abs(x));
 
 /* ---------- estado ---------- */
-let PP_={prov:{}},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],natBase=null,provNames={},munNames={};
-const PA={},MA={},SC={};
+let PP_={prov:{}},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
+const PA={},MA={};
 let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
-let map,provLayer,munLayer,chart,scenChart;
+let map,provLayer,munLayer,chart;
 const cache={};
 
 Promise.all([
@@ -343,28 +303,16 @@ Promise.all([
   fetch('data/noticias.json').then(r=>r.json()).catch(()=>({noticias:[]})),
   fetch('data/indice.json').then(r=>r.json()),
   fetch('data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
-  fetch('../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>null),
   fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}}))
-]).then(([pg,nw,ix,pl,enc,pp])=>{
+]).then(([pg,nw,ix,pl,pp])=>{
   PP_=pp;
-  provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];natBase=nationalFromPolls(enc);
+  provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];
   provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
   idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
   news.forEach(n=>{n.pv.forEach(c=>nPv[c]=(nPv[c]||0)+1);n.mun.forEach(c=>nMun[c]=(nMun[c]||0)+1)});
   initMap();showSpain();
   const h=location.hash.slice(1);if(/^\d{2}$/.test(h)&&PA[h])openProvince(h);
 });
-
-/* media de encuestas real (misma idea que /elecciones-espana: sondeos de los últimos 30 días, sin CIS) */
-function nationalFromPolls(enc){
-  if(!enc||!enc.sondeos)return null;
-  const s=enc.sondeos.filter(x=>!/cis/i.test(x.empresa)),last=new Date(s[0].fecha);
-  const recent=s.filter(x=>(last-new Date(x.fecha))/864e5<=30),sum={},cnt={};
-  recent.forEach(x=>{const w=Math.sqrt(x.muestra||1000);for(const k in x.voto){const p=ID2P[k];if(!p)continue;sum[p]=(sum[p]||0)+x.voto[k]*w;cnt[p]=(cnt[p]||0)+w}});
-  const shares={};let tot=0;for(const p in sum){shares[p]=sum[p]/cnt[p];tot+=shares[p]}
-  shares.Cs=0;shares.Otros=Math.max(0,100-tot);
-  return {shares,n:recent.length,fecha:s[0].fecha};
-}
 
 /* ---------- mapa ---------- */
 const PENINSULA=[[35.9,-9.6],[43.9,4.6]];
@@ -379,18 +327,16 @@ function initMap(){
   }}).addTo(map);
 }
 function tip(c,tbl,n){const a=tbl[c];let s=`<b>${esc(n)}</b><br>${a.winner} · riesgo ${a.risk} · volatilidad ${a.vol}`;
-  if(mode==='scen'&&SC[c])s+=`<br>Escenario: ${SC[c].party} ${sgn(SC[c].dx)} pts${SC[c].flip?' · <b>cambia de ganador → '+SC[c].after+'</b>':''}`;return s}
+  return s}
 function colorFor(a,c){
   if(mode==='winner')return {fill:COL[a.winner],op:.35+.55*Math.min(1,a.margin/30)};
   if(mode==='vol')return {fill:ramp(VOLR,a.vol/100),op:.85};
   if(mode==='risk')return {fill:ramp(RISKR,a.risk/100),op:.85};
-  if(mode==='scen'){const s=SC[c];return s?{fill:ramp(SCENR,Math.min(1,Math.abs(s.dx)/6)),op:.9}:{fill:'#222a36',op:.7}}
   return {fill:ramp(SENTR,(a.sent+50)/100),op:.85};
 }
 function styleFor(c,tbl){
   const k=colorFor(tbl[c],c),on=(tbl===MA&&selMun===c),dim=tbl===MA&&selMun&&!on;
-  const flip=mode==='scen'&&SC[c]&&SC[c].flip;
-  return {fillColor:k.fill,fillOpacity:dim?k.op*.35:k.op,color:on||flip?'#fff':'#0b0f15',weight:on?2.5:flip?2:tbl===PA?.8:.5,dashArray:flip&&!on?'4 3':null};
+  return {fillColor:k.fill,fillOpacity:dim?k.op*.35:k.op,color:on?'#fff':'#0b0f15',weight:on?2.5:tbl===PA?.8:.5};
 }
 function restyle(){
   provLayer&&provLayer.setStyle(f=>styleFor(f.properties.c,PA));
@@ -400,7 +346,6 @@ function restyle(){
 function legend(){
   let h='';
   if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox','Cs'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
-  else if(mode==='scen')h=`<div class="ramp" style="background:linear-gradient(90deg,rgb(${SCENR[0]}),rgb(${SCENR[1]}),rgb(${SCENR[2]}))"></div><div class="ends"><span>Sin efecto</span><span>±6 pts o más</span></div><div style="margin-top:4px">Cambio del partido afectado. Borde discontinuo = cambia de ganador.</div>`;
   else{
     const s=mode==='vol'?VOLR:mode==='risk'?RISKR:SENTR;
     const e=mode==='vol'?['Estable','Muy volátil']:mode==='risk'?['Seguro','Alarma']:['Negativo','Positivo'];
@@ -417,7 +362,7 @@ function showSpain(){
   if(!map.hasLayer(provLayer))provLayer.addTo(map);
   map.fitBounds(PENINSULA,{padding:[10,10]});
   $('q').value='';$('back').hidden=true;
-  runScenario();restyle();renderAll();
+  restyle();renderAll();
 }
 async function loadProv(pc){
   if(!cache[pc])cache[pc]=await fetch(`data/prov/${pc}.geojson`).then(r=>r.json());
@@ -437,7 +382,7 @@ async function openProvince(pc,mun){
   map.fitBounds(munLayer.getBounds(),{padding:[10,10]});
   if(mun)zoomMun(mun);
   $('back').hidden=false;$('q').value=mun?munNames[mun]:'';
-  runScenario();restyle();renderAll();
+  restyle();renderAll();
 }
 function zoomMun(c){munLayer.eachLayer(l=>{if(l.feature.properties.c===c)map.fitBounds(l.getBounds(),{maxZoom:11,padding:[30,30]})})}
 function selectMun(c){selMun=c;$('q').value=munNames[c];munLayer.setStyle(f=>styleFor(f.properties.c,MA));zoomMun(c);renderAll()}
@@ -459,7 +404,7 @@ function renderAll(){
   $('k2').textContent=selMun?(MA[selMun].risk>=60?1:0):ar.filter(a=>a.risk>=60).length;
   $('k3').textContent=selMun?(MA[selMun].type==='Volátil'?1:0):ar.filter(a=>a.type==='Volátil').length;
   $('k4').textContent=newsFor().length;
-  ficha();renderNews();renderRisks();renderRank();renderAgents();renderPols();renderScenario();if(drawerOpen)renderDrawer();
+  ficha();renderNews();renderRisks();renderRank();renderAgents();if(drawerOpen)renderDrawer();
 }
 function bar(v,col){return `<div class="bar"><i style="width:${Math.max(0,Math.min(100,v))}%;background:${col}"></i></div>`}
 function ficha(){
@@ -539,7 +484,7 @@ function renderAgents(){
   const ag=[
     ['Vigía','live','Lee prensa nacional y local de las 52 provincias por RSS, la etiqueta por territorio, partido y político y marca eventos de riesgo.',`<b>${sc.length}</b> titulares y <b>${ev}</b> eventos en el filtro actual.`],
     ['Analista','live','Calcula volatilidad y riesgo de cambio y redacta el informe del territorio.',`<b>${al}</b> ${curProv?'municipio':'provincia'}${al===1?'':'s'} en alarma en el filtro actual.`],
-    ['Estratega','live','Simula escenarios («¿y si…?») sobre el voto y los indecisos, con intervalo de incertidumbre.','Ver bloque de escenarios.'],
+    ['Estratega','live','Simula escenarios («¿y si…?») sobre el voto y los indecisos, con intervalo de incertidumbre.','Ver la pestaña Escenarios.'],
     ['Archivista','plan','Segundo cerebro: programas, notas de prensa y entrevistas con cita y fecha (RAG).','Fase 2. Esquema de datos ya definido.'],
     ['WhatsApp','plan','Resúmenes y avisos en grupos propios de campaña, con consentimiento y bot declarado. Sin leer grupos ajenos.','Fase 4 · requiere API oficial de WhatsApp Business o canal alternativo.']];
   $('agents').innerHTML=ag.map(a=>`<div class="agent"><h3>${a[0]}<span class="st ${a[1]}">${a[1]==='live'?'ACTIVO':'PLANIFICADO'}</span></h3><p>${a[2]}</p><p style="margin-top:6px">${a[3]}</p></div>`).join('');
@@ -547,14 +492,6 @@ function renderAgents(){
 
 /* ---------- políticos: estado a partir de titulares ---------- */
 const photoCache={};
-function polStatus(p){
-  if(!p.alias||!p.alias.length)return {k:'none',label:'Sin definir',n:0,risk:0};
-  const rx=p.alias.map(a=>new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)'));
-  const hits=news.filter(n=>{const t=norm(n.t);return rx.some(r=>r.test(t))});
-  const risk=hits.filter(n=>n.r);
-  const k=risk.length>=6?'crisis':risk.length>=2?'press':hits.length?'focus':'none';
-  return {k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],n:hits.length,risk:risk.length,last:(risk[0]||hits[0])};
-}
 function initials(n){return n?n.split(' ').filter(w=>/^[A-ZÁÉÍÓÚÑ]/.test(w)).slice(0,2).map(w=>w[0]).join(''):'?'}
 async function photo(p,el){
   if(!p.wiki)return;
@@ -568,118 +505,6 @@ async function photo(p,el){
   }
   if(photoCache[p.id])el.innerHTML=`<img src="${esc(photoCache[p.id])}" alt="${esc(p.nombre)}" loading="lazy">`;
 }
-function renderPols(){
-  const box=$('pols');if(!pols.length){box.innerHTML='<div class="empty">Sin datos.</div>';return}
-  const stCol={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'};
-  box.innerHTML=pols.map(p=>{const s=polStatus(p),pk=ID2P[p.partidoId]||p.partidoId,c=COL[pk]||'#94a3b8';
-    const ph=p.nombre?`<div class="face" id="f-${p.id}" style="border-color:${c}">${esc(initials(p.nombre))}</div>`:`<div class="face" style="border-color:${c}">?</div>`;
-    return `<div class="pol"><div style="display:flex;gap:10px;align-items:center">${ph}<div style="min-width:0"><b>${esc(p.nombre||'Por definir')}</b><div class="sub">${esc(p.cargo||p.nota||'')}</div></div></div>
-      <div class="meta" style="margin-top:8px"><span class="tag" style="color:${c}">${esc(p.partidoId)}</span><span class="tag" style="color:${stCol[s.k]};border:1px solid ${stCol[s.k]}">${s.label}</span><span>${s.n?`${s.n} titular${s.n>1?'es':''}${s.risk?` · ${s.risk} de riesgo`:''}`:'sin información'}</span></div>
-      ${s.last?`<div class="sub" style="margin-top:6px"><a href="${esc(s.last.u)}" target="_blank" rel="noopener">${esc(cleanTitle(s.last.t).slice(0,110))}</a></div>`:''}</div>`}).join('');
-  pols.forEach(p=>{const el=$('f-'+p.id);if(el)photo(p,el)});
-}
-
-/* ---------- escenarios ---------- */
-const PRESETS={
-  imput:{label:'Imputación de una figura política',party:'PSOE',dir:-1,grav:55,alc:80,fid:60,rec:30},
-  condena:{label:'Condena de una figura política',party:'PSOE',dir:-1,grav:80,alc:90,fid:55,rec:25},
-  dimision:{label:'Dimisión inesperada de un líder',party:'PP',dir:-1,grav:45,alc:75,fid:65,rec:40},
-  corrup:{label:'Caso de corrupción local',party:'PP',dir:-1,grav:50,alc:40,fid:55,rec:35},
-  pacto:{label:'Pacto de gobierno controvertido',party:'PSOE',dir:-1,grav:40,alc:70,fid:70,rec:45},
-  entrev:{label:'Entrevista / acto de gran audiencia',party:'PP',dir:1,grav:35,alc:70,fid:60,rec:0},
-  crisis:{label:'Mala gestión de una crisis (DANA, apagón…)',party:'PSOE',dir:-1,grav:60,alc:85,fid:55,rec:30}
-};
-function scenParams(){return {party:$('sp').value,dir:+$('sd').value,grav:+$('sg').value,alc:+$('sa').value,fid:+$('sf').value,rec:+$('sr').value,und:+$('su').value,actor:$('sactor').value.trim()}}
-function proxW(from,keys){const w={};let t=0;keys.forEach(k=>{if(k===from)return;w[k]=Math.exp(-Math.abs((POS[k]??5)-(POS[from]??5))/2.2);t+=w[k]});for(const k in w)w[k]/=t;return w}
-/* Modelo transparente: puntos sobre el electorado. Evento negativo: el partido pierde L=cuota*0,30*I;
-   40 % de L pasa a indecisos, 20 % a abstención y 40 % a otros partidos según cercanía ideológica.
-   Evento positivo: gana G=cuota*0,12*I; 50 % de G viene de indecisos y 50 % de otros partidos según cercanía.
-   Recuperación: el partido recupera rec % × 0,7 de lo que se fue a indecisos. */
-function engine(shares,und,p,sens){
-  const keys=Object.keys(shares),dec=100-und,pts={};keys.forEach(k=>pts[k]=shares[k]*dec/100);
-  const before=Object.assign({},pts);let u=und,abst=0;
-  const I=Math.min(1,(p.grav/100)*(p.alc/100)*(1-0.6*p.fid/100)*sens),X=p.party;
-  if(pts[X]===undefined)return null;
-  if(p.dir<0){
-    const L=pts[X]*0.30*I;pts[X]-=L;u+=0.4*L;abst+=0.2*L;
-    const w=proxW(X,keys);keys.forEach(k=>{if(k!==X)pts[k]+=0.4*L*w[k]});
-    const back=(p.rec/100)*0.7*0.4*L;pts[X]+=back;u-=back;
-    var moved=0.4*L;
-  }else{
-    const G=pts[X]*0.12*I,fromU=Math.min(u,0.5*G);u-=fromU;pts[X]+=G;
-    const w=proxW(X,keys),rest=G-fromU;keys.forEach(k=>{if(k!==X)pts[k]-=rest*w[k]});moved=-fromU;
-  }
-  const sum=keys.reduce((s,k)=>s+pts[k],0),sh={};keys.forEach(k=>sh[k]=pts[k]/sum*100);
-  const top=o=>keys.filter(k=>k!=='Otros').sort((a,b)=>o[b]-o[a])[0];
-  return {before:shares,after:sh,und0:und,und1:u,abst,moved,I,winB:top(shares),winA:top(sh)};
-}
-function terrShares(a){const s=a.last,o=s.Otros;return {PP:s.PP,PSOE:s.PSOE,Vox:s.Vox,Cs:s.Cs,Sumar:o*.45,Podemos:o*.15,Otros:o*.40}}
-function runScenario(){
-  for(const k in SC)delete SC[k];
-  if(!$('sp'))return;
-  const p=scenParams(),S=scope();
-  S.codes.forEach(c=>{
-    const a=S.tbl[c],rr=rng(parseInt(c,10)*977+13),u=Math.max(3,p.und*(0.6+rr()*0.8));
-    const e=engine(terrShares(a),u,p,Math.max(.7,Math.min(1.5,1+(p.dir<0?-a.sent:a.sent)/100)));
-    if(e)SC[c]={dx:0,party:p.party,flip:e.winA!==e.winB,after:e.winA,e};
-  });
-  // dx relativo a la cuota inicial entre decididos
-  S.codes.forEach(c=>{const s=SC[c];if(s)s.dx=s.e.after[p.party]-s.e.before[p.party]});
-}
-function renderScenario(){
-  const box=$('sout');if(!box)return;
-  const p=scenParams(),S=scope(),codes=S.codes.filter(c=>SC[c]);
-  if(!codes.length){box.innerHTML='<div class="empty">Sin datos.</div>';return}
-  const ar=codes.map(c=>SC[c]);
-  // Monte Carlo: ±25 % en gravedad, alcance, fidelidad y recuperación
-  const R=rng(42),runs=[];
-  for(let i=0;i<150;i++){
-    const q=Object.assign({},p),j=()=>0.75+R()*0.5;q.grav=Math.min(100,p.grav*j());q.alc=Math.min(100,p.alc*j());q.fid=Math.min(100,p.fid*j());q.rec=Math.min(100,p.rec*j());
-    let fl=0,dxs=0,und=0;codes.forEach(c=>{const a=S.tbl[c],rr=rng(parseInt(c,10)*977+13),u=Math.max(3,p.und*(0.6+rr()*0.8)),e=engine(terrShares(a),u,q,Math.max(.7,Math.min(1.5,1+(p.dir<0?-a.sent:a.sent)/100)));if(e){if(e.winA!==e.winB)fl++;dxs+=e.after[p.party]-e.before[p.party];und+=e.und1-e.und0}});
-    runs.push({fl,dx:dxs/codes.length,und:und/codes.length});
-  }
-  const q=(k,pc)=>runs.map(r=>r[k]).sort((a,b)=>a-b)[Math.floor(pc*(runs.length-1))];
-  const mean=(f)=>ar.reduce((s,x)=>s+f(x.e),0)/ar.length;
-  const keys=['PP','PSOE','Vox','Cs','Sumar','Podemos','Otros'];
-  const rows=keys.map(k=>{const b=mean(e=>e.before[k]),a=mean(e=>e.after[k]);return {k,b,a,d:a-b}});
-  const flips=codes.filter(c=>SC[c].flip).sort((a,b)=>Math.abs(SC[b].dx)-Math.abs(SC[a].dx));
-  const u0=mean(e=>e.und0),u1=mean(e=>e.und1);
-  const verb=p.dir<0?'pierde':'gana';
-  const unit=curProv?'municipios':'provincias';
-  let nat='';
-  if(natBase&&!curProv){
-    const e=engine(natBase.shares,p.und,p,1);
-    if(e)nat=`<div class="brief"><small>MEDIA NACIONAL REAL DE ENCUESTAS (${natBase.n} sondeos, hasta ${natBase.fecha}) + EVENTO</small>${p.party}: <b>${f1(e.before[p.party])}%</b> → <b>${f1(e.after[p.party])}%</b> (${sgn(e.after[p.party]-e.before[p.party])} pts). Indecisos: ${f1(e.und0)}% → ${f1(e.und1)}%. Ganador: ${e.winB} → ${e.winA}.</div>`;
-  }
-  box.innerHTML=`
-    <div class="scen-head">«${esc(p.actor||'Evento')}» · ${esc(PRESETS[$('spre').value]?.label||'Evento')}: <b style="color:${COL[p.party]}">${p.party}</b> ${verb} una media de <b>${sgn(rows.find(r=>r.k===p.party).d)} pts</b> en ${codes.length} ${unit}
-      <span class="sub">(intervalo 10–90 %: ${sgn(q('dx',.1))} a ${sgn(q('dx',.9))})</span></div>
-    <div class="kp3">
-      <div class="m"><span>Cambian de ganador</span><b>${flips.length}</b><span>intervalo ${q('fl',.1)}–${q('fl',.9)} de ${codes.length}</span></div>
-      <div class="m"><span>Indecisos (media)</span><b>${f1(u0)}% → ${f1(u1)}%</b><span>${sgn(u1-u0)} pts</span></div>
-      <div class="m"><span>Abstención añadida</span><b>${p.dir<0?'+'+f1(mean(e=>e.abst)):'0.0'} pts</b><span>votantes que no repiten</span></div>
-    </div>
-    <div class="chartbox" style="height:190px"><canvas id="sch" aria-label="Voto por partido antes y después del evento"></canvas></div>
-    ${nat}
-    <div class="brief"><small>AGENTE ESTRATEGA · lectura</small>${strategy(p,rows,flips,u0,u1,S,unit)}</div>
-    ${flips.length?`<div class="sub" style="margin:10px 0 4px">Mayor cambio de ganador (pulsa para abrir):</div><div class="chips">${flips.slice(0,10).map(c=>`<button data-c="${c}">${esc(S.names[c])} <span>${SC[c].e.winB}→${SC[c].after}</span></button>`).join('')}</div>`:''}`;
-  box.querySelectorAll('.chips button').forEach(b=>b.onclick=()=>curProv?selectMun(b.dataset.c):openProvince(b.dataset.c));
-  if(scenChart)scenChart.destroy();
-  scenChart=new Chart($('sch'),{type:'bar',data:{labels:rows.map(r=>r.k),datasets:[{label:'Antes',data:rows.map(r=>+f1(r.b)),backgroundColor:'#475569'},{label:'Tras el evento',data:rows.map(r=>+f1(r.a)),backgroundColor:rows.map(r=>COL[r.k])}]},
-    options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10,font:{size:11}}}},scales:{x:{ticks:{color:'#8b97a8'},grid:{display:false}},y:{ticks:{color:'#8b97a8',callback:v=>v+'%'},grid:{color:'#1a2230'}}}}});
-  if(mode==='scen')restyle();
-}
-function strategy(p,rows,flips,u0,u1,S,unit){
-  const r=rows.find(x=>x.k===p.party),big=rows.filter(x=>x.k!==p.party).sort((a,b)=>b.d-a.d)[0];
-  if(p.dir<0){
-    const pool=u1-u0;
-    return `El golpe real para ${p.party} es ${sgn(r.d)} pts, pero lo estratégico es el reparto: ${f1(pool)} pts se quedan como <b>indecisos recuperables</b> y ${big.k} es quien más captura (${sgn(big.d)} pts). `+
-      (flips.length?`${flips.length} ${unit} cambiarían de ganador: ahí está el riesgo inmediato. `:`Ningún territorio cambia de ganador con estos supuestos. `)+
-      `Con una capacidad de recuperación del ${p.rec}% el partido ya recupera parte de esos indecisos; subirla (respuesta rápida, mensajes de contraste, movilizar a la base) es la palanca más barata. Para el rival, el objetivo es convertir los indecisos antes de que vuelvan.`;
-  }
-  return `El evento favorable suma ${sgn(r.d)} pts a ${p.party}, en parte captando indecisos (${sgn(u1-u0)} pts). ${flips.length?`${flips.length} ${unit} cambiarían de ganador. `:''}Conviene capitalizarlo pronto: el efecto de un acto puntual suele diluirse en semanas.`;
-}
-
 /* ---------- búsqueda ---------- */
 let searchIdx=null;
 function search(v){
@@ -756,7 +581,7 @@ function renderDrawer(){
     h+=ls.length?`<div class="dg">Cabezas de lista · elecciones del 29 de noviembre</div>`+ls.map(x=>dPerson(x,x.rol,x.pk)).join(''):'<p class="hint" style="margin-top:14px">Sin candidaturas cargadas para este territorio todavía.</p>';
   }
   $('dBody').innerHTML=h;
-  $('dFoot').innerHTML=`Riesgo = titulares recientes que mencionan a la persona (más peso si traen palabras de riesgo). <b>Neutro</b> si no hay información. Tuits y redes aún no conectados. Datos: ${esc((PP_.fuentes&&PP_.fuentes.gobierno)||'Wikidata')}; candidatos de <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a> (${esc(PP_.actualizado||'')}). Verifica antes de usar.`;
+  $('dFoot').innerHTML=`Riesgo = titulares recientes que mencionan a la persona (más peso si traen palabras de riesgo). <b>Neutro</b> si no hay información. Tuits y redes aún no conectados. Datos: ${esc((PP_.fuentes&&PP_.fuentes.gobierno)||'Wikidata')}; candidatos de <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a> (${esc(PP_.actualizado||'')}). Verifica antes de usar.<br><a href="/atalaya/politicos/${code?'#'+code:''}">Ver todos en la pestaña Políticos →</a>`;
 }
 function openDrawer(tab){
   if(tab)dTab=tab;lastFocus=document.activeElement;drawerOpen=true;renderDrawer();
@@ -776,14 +601,6 @@ $('back').onclick=()=>{if(selMun){selMun=null;$('q').value='';munLayer.setStyle(
 $('canarias').onclick=()=>{if(curProv)showSpain();map.setView([28.3,-15.9],7)};
 $('q').addEventListener('input',e=>search(e.target.value));
 document.addEventListener('click',e=>{if(!e.target.closest('.filter'))$('sres').hidden=true});
-// escenarios
-$('spre').innerHTML=Object.entries(PRESETS).map(([k,v])=>`<option value="${k}">${v.label}</option>`).join('');
-function loadPreset(k){const v=PRESETS[k];$('sp').value=v.party;$('sd').value=v.dir;['g','a','f','r'].forEach((x,i)=>{$('s'+x).value=v[['grav','alc','fid','rec'][i]]});syncOut()}
-function syncOut(){['sg','sa','sf','sr','su'].forEach(id=>$(id+'o').textContent=$(id).value+(id==='su'?' %':''))}
-function again(){syncOut();runScenario();restyle();renderScenario()}
-$('spre').onchange=e=>{loadPreset(e.target.value);again()};
-['sp','sd','sg','sa','sf','sr','su','sactor'].forEach(id=>$(id).addEventListener('input',again));
-loadPreset('imput');$('su').value=15;$('sactor').value='Expresidente (hipotético)';syncOut();
 })();
 </script>
 </body>

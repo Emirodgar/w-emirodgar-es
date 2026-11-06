@@ -1,0 +1,25 @@
+/* Menú lateral compartido de Atalaya. Estados: abierto (nombres) y plegado (solo iconos). */
+html{--sbw:232px;--sbp:232px}
+html.sb-c{--sbw:64px;--sbp:64px}
+body{padding-left:var(--sbp);transition:padding-left .2s ease}
+.sb{position:fixed;left:0;top:0;bottom:0;width:var(--sbw);z-index:1500;background:#05070a;border-right:1px solid #1f2937;display:flex;flex-direction:column;transition:width .2s ease;overflow:hidden}
+.sb *{box-sizing:border-box}
+.sb-brand{display:flex;align-items:center;gap:10px;height:56px;padding:0 21px;border-bottom:1px solid #1f2937;font-family:'JetBrains Mono',ui-monospace,monospace;font-weight:600;letter-spacing:.18em;color:#22d3ee;text-decoration:none;white-space:nowrap}
+.sb-brand i{width:10px;height:10px;border-radius:50%;background:#22d3ee;flex:none}
+.sb-list{list-style:none;margin:0;padding:10px 8px;display:flex;flex-direction:column;gap:2px;flex:1;overflow-y:auto}
+.sb-list a{display:flex;align-items:center;gap:12px;height:42px;padding:0 13px;border-radius:8px;color:#8b97a8;text-decoration:none;font:500 14px/1 Inter,system-ui,sans-serif;white-space:nowrap}
+.sb-list a:hover{background:#131a24;color:#e5e9f0}
+.sb-list a[aria-current=page]{background:#22d3ee;color:#04222a;font-weight:600}
+.sb svg{width:20px;height:20px;flex:none;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.sb-foot{padding:8px;border-top:1px solid #1f2937}
+.sb-tog{display:flex;align-items:center;gap:12px;width:100%;height:42px;padding:0 13px;border:0;border-radius:8px;background:none;color:#8b97a8;cursor:pointer;font:500 14px/1 Inter,system-ui,sans-serif;white-space:nowrap}
+.sb-tog:hover{background:#131a24;color:#e5e9f0}
+.sb-tog svg{transition:transform .2s}
+html.sb-c .sb-tog svg{transform:rotate(180deg)}
+.sb :focus-visible{outline:2px solid #22d3ee;outline-offset:-2px}
+html.sb-c .lb,html.sb-c .sb-brand span{display:none}
+@media (prefers-reduced-motion:reduce){body,.sb,.sb-tog svg{transition:none}}
+@media (max-width:700px){
+  html,html.sb-c{--sbp:64px}
+  html:not(.sb-c) .sb{box-shadow:8px 0 24px rgba(0,0,0,.5)}
+}

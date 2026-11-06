@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Políticos | Atalaya</title>
+<meta name="description" content="Quién gobierna hoy y quién se presenta el 29N en cada provincia, con foto, estado y riesgo según la prensa.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/politicos/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit}button,select,input{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.wrap{padding:12px 16px;max-width:1500px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
+.tools input,.tools select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
+.tools input{min-width:240px}
+.seg{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.seg button{background:var(--panel2);border:0;border-right:1px solid var(--line);padding:8px 12px;cursor:pointer;color:var(--mut)}.seg button:last-child{border:0}.seg button.on{background:var(--acc);color:#04222a;font-weight:600}
+:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:12px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}.kpi b{display:block;font-family:var(--mono);font-size:24px}.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.dg{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:18px 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:10px}
+.pc{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:12px;background:var(--panel);border:1px solid var(--line);border-radius:8px}
+.pc .big{width:64px;height:64px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:var(--mut);background:#0b0f15;overflow:hidden}
+.pc .big img{width:100%;height:100%;object-fit:cover}
+.pc b{display:block;font-weight:600;line-height:1.25}.pc .rol{color:var(--mut);font-size:13px}
+.pc .terr{font-size:12px;color:var(--mut);margin-top:2px}
+.risk{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px}.risk .st{font-weight:600;white-space:nowrap}
+.bar{flex:1;height:5px;background:#1b2330;border-radius:3px}.bar i{display:block;height:100%;border-radius:3px}
+.hl{font-size:12px;margin-top:6px;color:var(--mut)}.hl a{text-decoration:none}.hl a:hover{color:var(--acc)}
+.foot{color:var(--mut);font-size:12px;margin-top:20px;max-width:900px}
+.empty{padding:20px;color:var(--mut)}
+@media (max-width:800px){.kp{grid-template-columns:repeat(2,1fr)}.tools input{min-width:0;flex:1}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js"></script>
+<header class="top">
+  <h1 class="pt">Políticos <small>quién gobierna y quién se presenta</small></h1>
+  <span class="tagline">Análisis políticos en España</span>
+</header>
+
+<main class="wrap">
+  <div class="kp" id="kp"></div>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Buscar por nombre…" aria-label="Buscar por nombre">
+    <select id="ft" aria-label="Territorio"><option value="">Todo el país</option></select>
+    <select id="fp" aria-label="Partido"><option value="">Todos los partidos</option></select>
+    <div class="seg" role="group" aria-label="Tipo"><button data-k="" class="on">Todos</button><button data-k="gob">Gobiernan hoy</button><button data-k="cand">Candidatos 29N</button></div>
+    <select id="fo" aria-label="Orden"><option value="risk">Ordenar por riesgo</option><option value="name">Ordenar por nombre</option><option value="party">Ordenar por partido</option></select>
+  </div>
+  <div id="out"></div>
+  <p class="foot" id="foot"></p>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var norm=function(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+var cleanTitle=function(t){return t.replace(/\s+-\s+[^-]{3,60}$/,'')};
+var PCOL={PP:'#3b9cff',PSOE:'#ef4444',VOX:'#7ac943',FA:'#d6246e','FA/PODEMOS':'#d6246e',SUMAR:'#d6246e',PODEMOS:'#9b59d0',ERC:'#f95838',JUNTS:'#00c3b2',EHB:'#03cfb5',BILDU:'#03cfb5',PNV:'#046e44',BNG:'#76b2e1',CC:'#ffd74f'};
+var PNAME={PP:'PP',PSOE:'PSOE',VOX:'Vox',FA:'Frente Amplio','FA/PODEMOS':'Frente Amplio / Podemos',SUMAR:'Sumar',PODEMOS:'Podemos',ERC:'ERC',JUNTS:'Junts',EHB:'EH Bildu',BILDU:'EH Bildu',PNV:'PNV',BNG:'BNG',CC:'CC'};
+var PORDER=['PP','PSOE','VOX','FA','FA/PODEMOS','SUMAR','PODEMOS','ERC','JUNTS','EHB','BILDU','PNV','BNG','CC'];
+function partyKey(txt){
+  if(!txt)return '';var t=norm(txt);
+  if(t.indexOf('popular')>=0)return 'PP';if(t.indexOf('socialista')>=0||t.indexOf('psoe')>=0||t.indexOf('psc')>=0)return 'PSOE';if(t.indexOf('vox')>=0)return 'VOX';
+  if(t.indexOf('podemos')>=0)return 'PODEMOS';if(t.indexOf('nacionalista vasco')>=0)return 'PNV';if(t.indexOf('esquerra')>=0)return 'ERC';
+  return txt.slice(0,14);
+}
+function initials(n){return n?n.split(' ').filter(function(w){return /^[A-ZÁÉÍÓÚÑ]/.test(w)}).slice(0,2).map(function(w){return w[0]}).join(''):'?'}
+
+var P=[],news=[],prov={},photoCache={};
+
+Promise.all([
+  fetch('../data/politicos.json').then(function(r){return r.json()}),
+  fetch('../data/politicos_prov.json').then(function(r){return r.json()}),
+  fetch('../data/noticias.json').then(function(r){return r.json()}),
+  fetch('../data/indice.json').then(function(r){return r.json()}),
+  fetch('../data/fuentes-propias.json').then(function(r){return r.json()}).catch(function(){return {}})
+]).then(function(a){
+  var nat=a[0].politicos,pp=a[1],ix=a[3];news=a[2].noticias;prov=ix.prov;
+  var map={};
+  function add(p){
+    var k=p.tipo+'|'+(p.nombre||p.slot)+'|'+p.pk,e=map[k];
+    if(e){if(p.prov&&e.provs.indexOf(p.prov)<0)e.provs.push(p.prov);return}
+    p.provs=p.prov?[p.prov]:[];map[k]=p;P.push(p);
+  }
+  nat.forEach(function(x){
+    if(x.id==='pedro-sanchez')add({tipo:'gob',nombre:x.nombre,wiki:x.wiki,rol:'Presidente del Gobierno de España',pk:'PSOE',nacional:true});
+    if(x.estado==='candidato')add({tipo:'cand',nombre:x.nombre,wiki:x.wiki,rol:x.cargo||'Candidato a la presidencia',pk:x.partidoId,nacional:true});
+    else if(x.estado==='seguimiento')add({tipo:'seg',nombre:x.nombre,wiki:x.wiki,rol:x.cargo,pk:x.partidoId,nacional:true});
+    else if(x.estado==='por_definir')add({tipo:'cand',nombre:null,slot:x.partidoId,rol:x.nota||'Candidatura por definir',pk:x.partidoId,nacional:true});
+  });
+  Object.keys(pp.prov).forEach(function(pc){
+    var d=pp.prov[pc];
+    d.gobierno.forEach(function(g){add({tipo:'gob',nombre:g.nombre,wiki:g.wiki,rol:g.rol,pk:partyKey(g.partido),prov:pc,amb:g.ambito})});
+    d.candidatos.forEach(function(c){add({tipo:'cand',nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?' ('+c.nota+')':''),pk:c.partido,prov:pc})});
+  });
+  P.forEach(function(p){p.risk=riskOf(p);p.id='p'+Math.random().toString(36).slice(2,9)});
+  $('ft').innerHTML+=Object.keys(prov).sort(function(x,y){return prov[x].localeCompare(prov[y],'es')}).map(function(c){return '<option value="'+c+'">'+esc(prov[c])+'</option>'}).join('');
+  var pk={};P.forEach(function(p){if(p.pk)pk[p.pk]=1});
+  $('fp').innerHTML+=Object.keys(pk).sort(function(x,y){return (PORDER.indexOf(x)+99)%99-(PORDER.indexOf(y)+99)%99}).map(function(k){return '<option value="'+esc(k)+'">'+esc(PNAME[k]||k)+'</option>'}).join('');
+  var h=location.hash.slice(1);if(/^\d\d$/.test(h)&&prov[h])$('ft').value=h;
+  $('foot').innerHTML='Estado calculado con los titulares recogidos: <b>Neutro</b> si no hay menciones, <b>En foco</b>, <b>Bajo presión</b> (2–5 con palabras de riesgo) y <b>Crisis</b> (6 o más). Es una heurística de palabras clave, no un análisis de sentimiento; tuits y redes aún no están conectados. Cargos: Wikidata ('+esc(pp.actualizado||'')+'). Candidatos: <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a>. Fotos: Wikipedia / Wikimedia Commons. Verifica antes de usar.';
+  render();
+});
+
+function aliasesOf(p){
+  var out={};if(p.nombre)out[p.nombre]=1;
+  if(p.wiki){var w=decodeURIComponent(p.wiki).replace(/_/g,' ').replace(/\s*\(.*\)$/,'');if(w.split(' ').length>=2)out[w]=1}
+  var t=(p.nombre||'').split(' ');if(t.length>=3)out[t.slice(-2).join(' ')]=1;
+  return Object.keys(out).filter(function(a){return a.split(' ').length>=2});
+}
+function riskOf(p){
+  var al=aliasesOf(p);if(!al.length)return {k:'none',label:'Neutro',score:0,n:0,r:0};
+  var rx=al.map(function(a){return new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)')});
+  var hits=news.filter(function(n){var t=norm(n.t);return rx.some(function(r){return r.test(t)})}),rk=hits.filter(function(n){return n.r});
+  var k=rk.length>=6?'crisis':rk.length>=2?'press':hits.length?'focus':'none';
+  return {k:k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4):0,n:hits.length,r:rk.length,last:rk[0]||hits[0]};
+}
+
+/* fotos: Wikipedia REST, solo cuando la tarjeta entra en pantalla */
+var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);photo(e.target)}})},{rootMargin:'200px'}):null;
+function photo(el){
+  var w=el.dataset.wiki;if(!w)return;
+  function put(u){if(u)el.innerHTML='<img src="'+esc(u)+'" alt="'+esc(el.dataset.n)+'" loading="lazy">'}
+  if(photoCache[w]!==undefined){put(photoCache[w]);return}
+  var v=null;try{v=sessionStorage.getItem('atl-ph-'+w)}catch(e){}
+  if(v!==null){photoCache[w]=v;put(v);return}
+  fetch('https://es.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(w)).then(function(r){return r.json()}).then(function(j){
+    var u=(j.type==='standard'&&j.thumbnail)?j.thumbnail.source:'';photoCache[w]=u;try{sessionStorage.setItem('atl-ph-'+w,u)}catch(e){}put(u);
+  }).catch(function(){photoCache[w]=''});
+}
+
+function terr(p){
+  if(p.nacional)return 'Ámbito nacional';
+  if(p.amb==='autonómico'&&p.provs.length)return 'Comunidad · '+p.provs.map(function(c){return prov[c]}).slice(0,3).join(', ')+(p.provs.length>3?'…':'');
+  return p.provs.map(function(c){return prov[c]}).slice(0,3).join(', ')+(p.provs.length>3?'…':'');
+}
+var kind='';
+function render(){
+  var q=norm($('q').value.trim()),ft=$('ft').value,fp=$('fp').value,fo=$('fo').value;
+  var ls=P.filter(function(p){
+    if(kind&&p.tipo!==kind&&!(kind==='cand'&&p.tipo==='seg'))return false;
+    if(fp&&p.pk!==fp&&!(fp==='FA'&&p.pk==='FA/PODEMOS'))return false;
+    if(ft&&!(p.provs.indexOf(ft)>=0||(p.nacional&&p.tipo==='gob')))return false;
+    if(q&&!norm(p.nombre||'').includes(q))return false;
+    return true;
+  });
+  ls.sort(function(a,b){
+    if(fo==='name')return (a.nombre||'~').localeCompare(b.nombre||'~','es');
+    if(fo==='party')return (PORDER.indexOf(a.pk)+99)%99-(PORDER.indexOf(b.pk)+99)%99||(a.nombre||'').localeCompare(b.nombre||'','es');
+    return b.risk.score-a.risk.score||(a.nombre||'~').localeCompare(b.nombre||'~','es');
+  });
+  var withInfo=ls.filter(function(p){return p.risk.n}).length;
+  $('kp').innerHTML=[[ls.length,'Políticos en el filtro'],[ls.filter(function(p){return p.tipo==='gob'}).length,'Gobiernan hoy'],[ls.filter(function(p){return p.tipo==='cand'}).length,'Candidatos 29N'],[withInfo,'Con titulares (resto: Neutro)']].map(function(k){return '<div class="kpi"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
+  var groups=[['gob','Gobiernan hoy'],['cand','Candidatos a las elecciones del 29 de noviembre'],['seg','En seguimiento']],h='';
+  groups.forEach(function(g){
+    var gl=ls.filter(function(p){return p.tipo===g[0]});if(!gl.length)return;
+    h+='<div class="dg">'+g[1]+' · '+gl.length+'</div><div class="grid">'+gl.map(card).join('')+'</div>';
+  });
+  $('out').innerHTML=h||'<div class="empty">Sin resultados con estos filtros.</div>';
+  document.querySelectorAll('.big[data-wiki]').forEach(function(el){if(io)io.observe(el);else photo(el)});
+}
+var STC={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'};
+function card(p){
+  var r=p.risk,col=PCOL[p.pk]||'#94a3b8',c=STC[r.k];
+  return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
+    '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+
+    '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>':'<span style="color:var(--mut)">sin información</span>')+'</div>'+
+    (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
+    (p.wiki?'<div class="hl"><a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a></div>':'')+'</div></div>';
+}
+['q','ft','fp','fo'].forEach(function(id){$(id).addEventListener('input',render)});
+document.querySelectorAll('.seg button').forEach(function(b){b.onclick=function(){kind=b.dataset.k;document.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
+})();
+</script>
+</body>
+</html>
