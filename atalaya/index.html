@@ -75,6 +75,28 @@ button,select,input{font:inherit;color:inherit}
 .face img{width:100%;height:100%;object-fit:cover}
 .disc{color:var(--mut);font-size:12px;margin-top:8px}
 @media (max-width:900px){.scen{grid-template-columns:1fr}.kp3{grid-template-columns:1fr}}
+
+.drawer{position:fixed;top:0;right:0;height:100vh;height:100dvh;width:min(440px,100vw);z-index:2000;background:var(--panel);border-left:1px solid var(--line);box-shadow:-10px 0 28px rgba(0,0,0,.45);display:flex;flex-direction:column;transform:translateX(100%);visibility:hidden;transition:transform .25s ease,visibility 0s linear .25s}
+.drawer.open{transform:none;visibility:visible;transition:transform .25s ease}
+@media (prefers-reduced-motion:reduce){.drawer,.drawer.open{transition:none}}
+.dh{display:flex;justify-content:space-between;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+.dh h2{font-size:20px;font-weight:700;line-height:1.2}.dh p{color:var(--mut);font-size:13px;margin-top:2px}
+.dx{background:var(--panel2);border:1px solid var(--line);border-radius:6px;width:34px;height:34px;cursor:pointer;flex:none}.dx:hover{border-color:var(--acc)}
+.dt{display:flex;border-bottom:1px solid var(--line)}
+.dt button{flex:1;background:none;border:0;border-bottom:2px solid transparent;padding:10px 8px;cursor:pointer;color:var(--mut);font-weight:600}
+.dt button.on{color:var(--acc);border-bottom-color:var(--acc)}
+.dbody{flex:1;overflow:auto;padding:4px 16px 16px}
+.dg{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:16px 0 6px}
+.pc{display:grid;grid-template-columns:64px 1fr;gap:12px;padding:12px;background:var(--panel2);border-radius:8px;margin-bottom:8px}
+.pc .big{width:64px;height:64px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:var(--mut);background:#0b0f15;overflow:hidden}
+.pc .big img{width:100%;height:100%;object-fit:cover}
+.pc b{display:block;font-weight:600;line-height:1.25}.pc .rol{color:var(--mut);font-size:13px}
+.pc .risk{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px}
+.pc .risk .bar{flex:1;margin:0}.pc .risk .st{font-weight:600;white-space:nowrap}
+.pc .hl{font-size:12px;margin-top:6px;color:var(--mut)}.pc .hl a{text-decoration:none}.pc .hl a:hover{color:var(--acc)}
+.dfoot{padding:10px 16px;border-top:1px solid var(--line);color:var(--mut);font-size:12px}
+.dfoot a{color:var(--acc)}
+.btn.pri{background:var(--acc);color:#04222a;font-weight:600;border-color:var(--acc)}
 .legend{position:absolute;z-index:500;bottom:12px;left:10px;background:rgba(7,9,13,.92);border:1px solid var(--line);border-radius:8px;padding:8px 10px;font-size:12px;color:var(--mut);max-width:260px}
 .legend .sw{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px;vertical-align:-1px}
 .legend .ramp{height:8px;border-radius:4px;margin:4px 0 2px}
@@ -165,7 +187,7 @@ button,select,input{font:inherit;color:inherit}
         <button data-mode="scen">Escenario</button>
       </div>
       <div id="map" aria-label="Mapa electoral de España"></div>
-      <div class="nav"><button class="btn" id="back" hidden>← Atrás</button><button class="btn" id="canarias">Canarias</button></div>
+      <div class="nav"><button class="btn pri" id="polBtn">Analizar políticos</button><button class="btn" id="back" hidden>← Atrás</button><button class="btn" id="canarias">Canarias</button></div>
       <div class="legend" id="legend"></div>
     </div>
   </section>
@@ -232,6 +254,13 @@ button,select,input{font:inherit;color:inherit}
 
 <p class="foot">Real: límites (Opendatasoft/IGN), titulares (RSS nacionales y Google Noticias por provincia, etiquetados por coincidencia de nombre; puede haber ruido), candidatos y media nacional de encuestas (de /elecciones-espana). Simulado: resultados 2011–2023 por provincia y municipio (se simulan por separado), volatilidad, sentimiento, indecisos y las salidas de los agentes. El caso de Salamanca capital es ilustrativo. No tomar ninguna cifra como dato electoral. Datos agregados por territorio, sin perfilado de personas.</p>
 
+
+<aside class="drawer" id="drawer" role="dialog" aria-modal="false" aria-labelledby="dTitle" tabindex="-1">
+  <div class="dh"><div><h2 id="dTitle">Políticos</h2><p id="dSub"></p></div><button class="dx" id="dClose" aria-label="Cerrar panel de políticos">✕</button></div>
+  <div class="dt" role="tablist"><button role="tab" data-t="gob" class="on">Gobiernan hoy</button><button role="tab" data-t="cand">Candidatos 29N</button></div>
+  <div class="dbody" id="dBody"></div>
+  <div class="dfoot" id="dFoot"></div>
+</aside>
 <script>
 (function(){
 'use strict';
@@ -302,7 +331,7 @@ const f1=x=>(Math.round(x*10)/10).toFixed(1);
 const sgn=x=>(x>0?'+':x<0?'−':'')+f1(Math.abs(x));
 
 /* ---------- estado ---------- */
-let provGJ,news=[],idx,pols=[],natBase=null,provNames={},munNames={};
+let PP_={prov:{}},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],natBase=null,provNames={},munNames={};
 const PA={},MA={},SC={};
 let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
@@ -314,8 +343,10 @@ Promise.all([
   fetch('data/noticias.json').then(r=>r.json()).catch(()=>({noticias:[]})),
   fetch('data/indice.json').then(r=>r.json()),
   fetch('data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
-  fetch('../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>null)
-]).then(([pg,nw,ix,pl,enc])=>{
+  fetch('../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>null),
+  fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}}))
+]).then(([pg,nw,ix,pl,enc,pp])=>{
+  PP_=pp;
   provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];natBase=nationalFromPolls(enc);
   provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
   idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
@@ -428,7 +459,7 @@ function renderAll(){
   $('k2').textContent=selMun?(MA[selMun].risk>=60?1:0):ar.filter(a=>a.risk>=60).length;
   $('k3').textContent=selMun?(MA[selMun].type==='Volátil'?1:0):ar.filter(a=>a.type==='Volátil').length;
   $('k4').textContent=newsFor().length;
-  ficha();renderNews();renderRisks();renderRank();renderAgents();renderPols();renderScenario();
+  ficha();renderNews();renderRisks();renderRank();renderAgents();renderPols();renderScenario();if(drawerOpen)renderDrawer();
 }
 function bar(v,col){return `<div class="bar"><i style="width:${Math.max(0,Math.min(100,v))}%;background:${col}"></i></div>`}
 function ficha(){
@@ -465,9 +496,11 @@ function ficha(){
       <div class="m"><span>Tendencia sentimiento 90 d</span><b style="color:${a.sent<0?'var(--bad)':'var(--ok)'}">${a.sent>0?'+':''}${a.sent}</b>${bar(Math.abs(a.sent)*2,a.sent<0?'var(--bad)':'var(--ok)')}</div>
       <div class="m"><span>Titulares detectados (real)</span><b>${nc}</b>${bar(nc*(selMun?12:2),'var(--mut)')}</div>
     </div>
+    <p style="margin:10px 0 0"><button class="btn pri" id="fichaPol">Ver políticos de la provincia</button></p>
     <div class="chartbox"><canvas id="ch" aria-label="Evolución del voto por partido"></canvas></div>
     <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>${briefing(a,name,nc)}</div>`;
   drawChart(a);
+  const fp=$('fichaPol');if(fp)fp.onclick=()=>openDrawer('gob');
 }
 function drawChart(a){
   if(chart)chart.destroy();
@@ -658,6 +691,82 @@ function search(v){
   box.hidden=false;
   box.querySelectorAll('button').forEach(b=>b.onclick=()=>{box.hidden=true;b.dataset.t==='p'?openProvince(b.dataset.c):openProvince(b.dataset.c.slice(0,2),b.dataset.c)});
 }
+
+
+/* ---------- panel lateral de políticos ---------- */
+const PCOL={PP:'#3b9cff',PSOE:'#ef4444',VOX:'#7ac943',FA:'#d6246e','FA/PODEMOS':'#d6246e',SUMAR:'#d6246e',PODEMOS:'#9b59d0',ERC:'#f95838',JUNTS:'#00c3b2',EHB:'#03cfb5',BILDU:'#03cfb5',PNV:'#046e44',BNG:'#76b2e1',CC:'#ffd74f'};
+const PNAME={PP:'PP',PSOE:'PSOE',VOX:'Vox',FA:'Frente Amplio','FA/PODEMOS':'Frente Amplio / Podemos',SUMAR:'Sumar',PODEMOS:'Podemos',ERC:'ERC',JUNTS:'Junts',EHB:'EH Bildu',BILDU:'EH Bildu',PNV:'PNV',BNG:'BNG',CC:'CC'};
+const PORDER=['PP','PSOE','VOX','FA','FA/PODEMOS','SUMAR','PODEMOS','ERC','JUNTS','EHB','BILDU','PNV','BNG','CC'];
+function partyKey(txt){
+  if(!txt)return '';const t=norm(txt);
+  if(t.includes('popular'))return 'PP';if(t.includes('socialista')||t.includes('psoe')||t.includes('psc'))return 'PSOE';if(t.includes('vox'))return 'VOX';
+  if(t.includes('podemos'))return 'PODEMOS';if(t.includes('nacionalista vasco'))return 'PNV';if(t.includes('esquerra'))return 'ERC';
+  return txt.slice(0,14);
+}
+function aliasesOf(p){
+  const out=new Set();if(p.nombre)out.add(p.nombre);
+  if(p.wiki){const w=decodeURIComponent(p.wiki).replace(/_/g,' ').replace(/\s*\(.*\)$/,'');if(w.split(' ').length>=2)out.add(w)}
+  const t=(p.nombre||'').split(' ');
+  if(t.length>=3){out.add(t.slice(-2).join(' '))}
+  return [...out].filter(a=>a.split(' ').length>=2);
+}
+function riskOf(p){
+  const al=aliasesOf(p);
+  if(!al.length)return {k:'none',label:'Neutro',score:0,n:0,r:0};
+  const rx=al.map(a=>new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)'));
+  const hits=news.filter(n=>{const t=norm(n.t);return rx.some(r=>r.test(t))}),rk=hits.filter(n=>n.r);
+  const k=rk.length>=6?'crisis':rk.length>=2?'press':hits.length?'focus':'none';
+  return {k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4):0,n:hits.length,r:rk.length,last:rk[0]||hits[0]};
+}
+function dPerson(p,rolTxt,pk){
+  const r=riskOf(p),col=PCOL[pk]||'#94a3b8',stc={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'}[r.k];
+  const id='df-'+Math.random().toString(36).slice(2,9);
+  setTimeout(()=>{const el=$(id);if(el&&p.wiki)photo({id:p.wiki,wiki:p.wiki,nombre:p.nombre},el)},0);
+  return `<div class="pc"><div class="big" id="${id}" style="border-color:${col}">${esc(initials(p.nombre))}</div><div style="min-width:0">
+    <b>${esc(p.nombre)}</b><div class="rol">${esc(rolTxt||'')}${pk?` · <span style="color:${col}">${esc(PNAME[pk]||pk)}</span>`:''}</div>
+    <div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}</span>`:'<span style="color:var(--mut)">sin información</span>'}</div>
+    ${r.n?`<div class="hl">${r.n} titular${r.n>1?'es':''}${r.r?` · ${r.r} de riesgo`:''} · <a href="${esc(r.last.u)}" target="_blank" rel="noopener">${esc(cleanTitle(r.last.t).slice(0,90))}</a></div>`:''}
+    ${p.wiki?`<div class="hl"><a href="https://es.wikipedia.org/wiki/${encodeURIComponent(p.wiki)}" target="_blank" rel="noopener">Wikipedia</a></div>`:''}</div></div>`;
+}
+function nationalGov(){
+  const s=pols.find(x=>x.id==='pedro-sanchez');
+  return s?{nombre:s.nombre,wiki:s.wiki,rol:'Presidente del Gobierno de España',partido:'PSOE'}:null;
+}
+function renderDrawer(){
+  const code=selMun?selMun.slice(0,2):curProv,d=code?PP_.prov[code]:null;
+  $('dTitle').textContent=code?provNames[code]:'España';
+  $('dSub').textContent=code?'Políticos de la provincia':'Políticos nacionales';
+  document.querySelectorAll('.dt button').forEach(b=>b.classList.toggle('on',b.dataset.t===dTab));
+  let h='';
+  if(dTab==='gob'){
+    const ng=nationalGov();
+    h+='<div class="dg">Gobierno de España</div>'+(ng?dPerson(ng,ng.rol,'PSOE'):'<p class="hint">Sin dato.</p>');
+    if(code){
+      const g=(d&&d.gobierno)||[];
+      [['autonómico','Gobierno autonómico'],['municipal','Capital de provincia']].forEach(([amb,tit])=>{
+        const ls=g.filter(x=>x.ambito===amb);
+        h+=`<div class="dg">${tit}</div>`+(ls.length?ls.map(x=>dPerson(x,x.rol,partyKey(x.partido))).join(''):'<p class="hint" style="margin:6px 0">Sin dato en Wikidata para este cargo. Añádelo como contexto en Fuentes.</p>');
+      });
+      h+='<div class="dg">Diputación provincial</div><p class="hint" style="margin:6px 0">Pendiente: no hay una fuente abierta fiable para los presidentes de diputación.</p>';
+    }
+  }else{
+    let ls=code?((d&&d.candidatos)||[]).map(c=>({nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?` (${c.nota})`:''),pk:c.partido})):
+      pols.filter(x=>x.nombre&&x.estado==='candidato').map(x=>({nombre:x.nombre,wiki:x.wiki,rol:x.cargo,pk:x.partidoId}));
+    ls=ls.slice().sort((a,b)=>(PORDER.indexOf(a.pk)+99)%99-(PORDER.indexOf(b.pk)+99)%99);
+    h+=ls.length?`<div class="dg">Cabezas de lista · elecciones del 29 de noviembre</div>`+ls.map(x=>dPerson(x,x.rol,x.pk)).join(''):'<p class="hint" style="margin-top:14px">Sin candidaturas cargadas para este territorio todavía.</p>';
+  }
+  $('dBody').innerHTML=h;
+  $('dFoot').innerHTML=`Riesgo = titulares recientes que mencionan a la persona (más peso si traen palabras de riesgo). <b>Neutro</b> si no hay información. Tuits y redes aún no conectados. Datos: ${esc((PP_.fuentes&&PP_.fuentes.gobierno)||'Wikidata')}; candidatos de <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a> (${esc(PP_.actualizado||'')}). Verifica antes de usar.`;
+}
+function openDrawer(tab){
+  if(tab)dTab=tab;lastFocus=document.activeElement;drawerOpen=true;renderDrawer();
+  const d=$('drawer');d.classList.add('open');$('dClose').focus();
+}
+function closeDrawer(){drawerOpen=false;$('drawer').classList.remove('open');if(lastFocus&&lastFocus.focus)lastFocus.focus()}
+$('polBtn').onclick=()=>openDrawer('gob');
+$('dClose').onclick=closeDrawer;
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawerOpen)closeDrawer()});
+document.querySelectorAll('.dt button').forEach(b=>b.onclick=()=>{dTab=b.dataset.t;renderDrawer()});
 
 /* ---------- eventos ---------- */
 document.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;document.querySelectorAll('.seg button').forEach(x=>x.classList.toggle('on',x===b));restyle()});
