@@ -293,16 +293,16 @@
    "cat": "resultados",
    "url": "https://es.wikipedia.org/wiki/Circunscripci%C3%B3n_electoral_de_Espa%C3%B1a",
    "acceso": "API de Wikipedia",
-   "estado": "parcial",
+   "estado": "activa",
    "fiab": 3,
-   "cobertura": "47 de 52 provincias",
+   "cobertura": "52 de 52 provincias",
    "frecuencia": "Bajo demanda",
    "usada": [
     "Fichas",
     "Mapa de cobertura"
    ],
    "contar": "escanos",
-   "nota": "Fuente secundaria. Faltan Madrid, Navarra, Santa Cruz de Tenerife, Ávila y Valladolid (tablas con otro formato)."
+   "nota": "Fuente secundaria (Wikipedia, que recoge datos oficiales). Madrid, Navarra, Tenerife, Ávila y Valladolid ya cargan; Tenerife no trae el total de escaños. Sustituir por Interior cuando se descargue."
   },
   {
    "id": "interior",
@@ -482,15 +482,15 @@
    "cat": "politicos",
    "url": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026",
    "acceso": "API de Wikipedia",
-   "estado": "parcial",
+   "estado": "activa",
    "fiab": 3,
-   "cobertura": "51 de 52 provincias",
+   "cobertura": "52 de 52 provincias",
    "frecuencia": "Bajo demanda (build_politicos_prov.py)",
    "usada": [
     "Panel lateral de políticos"
    ],
    "contar": "candidatos_prov",
-   "nota": "Fuente secundaria; se actualiza al proclamarse las listas. Falta A Coruña."
+   "nota": "Fuente secundaria; se actualiza al proclamarse las listas definitivas."
   },
   {
    "id": "wikidata_gob",
@@ -500,13 +500,13 @@
    "acceso": "SPARQL",
    "estado": "parcial",
    "fiab": 3,
-   "cobertura": "49 provincias",
+   "cobertura": "50 provincias con gobierno; 46 de 52 alcaldes de capital",
    "frecuencia": "Bajo demanda (build_politicos_prov.py)",
    "usada": [
     "Panel lateral de políticos"
    ],
    "contar": "gobierno_prov",
-   "nota": "Hay alcaldes sin cargo vigente en Wikidata (p. ej. Burgos, Albacete, Zaragoza) y no hay presidentes de diputación: se pueden completar como contexto propio."
+   "nota": "Faltan alcaldes en Albacete, Palma, Santa Cruz de Tenerife, Segovia, Ceuta y Melilla, y presidente autonómico de Navarra, Ceuta y Melilla. Se pueden completar como contexto propio. No hay presidentes de diputación."
   },
   {
    "id": "candidatos",

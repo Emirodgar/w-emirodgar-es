@@ -105,6 +105,9 @@ def analisis_provincia(v, nacional):
     lider_enc = max(nacional, key=nacional.get) if nacional else None
     return L, ls, tot, empate, otros, wins, len(labs), lider_enc
 
+def de(ls, tot):
+    return f"{ls} de {tot}" if tot else f"{ls} escaños"
+
 def art(p, cap=False):
     t = ("el " + p) if p in ("PP", "PSOE") else {"Cs": "Ciudadanos"}.get(p, p)
     return t[0].upper() + t[1:] if cap else t
@@ -114,16 +117,16 @@ def respuesta(nombre, v, nacional):
     aL, aLc = art(L), art(L, True)
     anos = f"{v['elecciones'][-N].split()[0]}–{v['elecciones'][-1].split()[0]}"
     if empate or (tot and otros >= ls):
-        return (f"En {nombre} el resultado está abierto: en 2023 hubo empate a escaños en la cabeza o el peso de otras fuerzas es comparable al del primer partido ({aL}, {ls} de {tot}), "
+        return (f"En {nombre} el resultado está abierto: en 2023 hubo empate a escaños en la cabeza o el peso de otras fuerzas es comparable al del primer partido ({aL}, {de(ls, tot)}), "
                 f"así que con los datos públicos disponibles no se puede señalar un favorito claro."), L, "abierto"
-    base = f"{aLc} fue el partido con más escaños en {nombre} en 2023 ({ls} de {tot}) y lo ha sido en {wins} de las últimas {N} convocatorias generales ({anos})."
+    base = f"{aLc} fue el partido con más escaños en {nombre} en 2023 ({de(ls, tot)}) y lo ha sido en {wins} de las últimas {N} convocatorias generales ({anos})."
     if wins >= N - 1 and (enc is None or L == enc or L not in ("PP", "PSOE")):
         return (f"Lo más probable es que {aL} vuelva a ser la fuerza con más escaños en {nombre}. {base} La media nacional de encuestas no apunta a un cambio de tendencia.", L, "probable")
     if wins >= N - 1:
         return (f"{aLc} parte como favorito en {nombre}, aunque con riesgo: {base} Sin embargo, la media nacional de encuestas favorece ahora a {art(enc)}, lo que podría reducir su ventaja.", L, "favorito con riesgo")
     if wins >= N // 2:
         return (f"El resultado en {nombre} está abierto, con ligera ventaja para {aL}. {base}", L, "abierto")
-    return (f"Muy abierto: en {nombre} ningún partido domina de forma estable. {aLc} fue primero en 2023 ({ls} de {tot}) pero solo en {wins} de las últimas {N} convocatorias.", L, "muy abierto")
+    return (f"Muy abierto: en {nombre} ningún partido domina de forma estable. {aLc} fue primero en 2023 ({de(ls, tot)}) pero solo en {wins} de las últimas {N} convocatorias.", L, "muy abierto")
 
 def nrm(t): return unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode().lower()
 

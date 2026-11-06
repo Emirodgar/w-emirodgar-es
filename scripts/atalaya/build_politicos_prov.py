@@ -30,7 +30,7 @@ CAP = {"01": ["Vitoria-Gasteiz", "Vitoria"], "03": ["Alicante"], "07": ["Palma"]
        "38": ["Santa Cruz de Tenerife"], "39": ["Santander"], "46": ["Valencia", "València"], "48": ["Bilbao"], "51": ["Ceuta"], "52": ["Melilla"], "32": ["Ourense", "Orense"],
        "17": ["Girona", "Gerona"], "25": ["Lleida", "Lérida"], "21": ["Huelva"], "36": ["Pontevedra"]}
 COLS = ["PP", "PSOE", "VOX", "FA", "PODEMOS", "ERC", "JUNTS", "EHB", "PNV", "BNG", "CC"]
-SPECIAL = {"baleares, islas": "07", "coruña, a": "15", "palmas, las": "35", "rioja, la": "26", "alicante": "03", "castellón": "12", "valencia": "46",
+SPECIAL = {"baleares, islas": "07", "coruña, a": "15", "coruña, la": "15", "palmas, las": "35", "rioja, la": "26", "alicante": "03", "castellón": "12", "valencia": "46",
            "guipúzcoa": "20", "vizcaya": "48", "álava": "01", "orense": "32", "gerona": "17", "lérida": "25", "asturias": "33", "cantabria": "39", "navarra": "31"}
 
 def nrm(s): return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower().strip()
@@ -69,16 +69,43 @@ def gobierno():
     caps = {}
     for r in sparql(q_cap): caps.setdefault(nrm(v(r, "capLabel")), r)
     prov = json.loads((D / "indice.json").read_text(encoding="utf8"))["prov"]
+    pend = {}
     for pc, nom in prov.items():
         g = []
         c = P2C.get(pc)
         if c and c in ccaa: g.append(wd_persona(ccaa[c], f"Presidente/a de {c}", "autonómico", "Wikidata"))
+        hallado = False
         for n in CAP.get(pc, [ES.get(nom, nom)]):
             r = caps.get(nrm(n)) or next((x for k, x in caps.items() if k.startswith(nrm(n)) or nrm(n) in k.split(" de ")), None)
             if r:
-                g.append(wd_persona(r, f"Alcalde/sa de {v(r, 'capLabel')}", "municipal", "Wikidata")); break
+                g.append(wd_persona(r, f"Alcalde/sa de {v(r, 'capLabel')}", "municipal", "Wikidata")); hallado = True; break
+        if not hallado: pend[pc] = CAP.get(pc, [ES.get(nom, nom)])
         out[pc] = g
+    if pend: alcaldes_por_municipio(pend, out)
     return out
+
+def alcaldes_por_municipio(pend, out):
+    """Segunda pasada para capitales sin «cargo vigente» en la provincia: se acepta el mandato con fecha de inicio
+    cuyo fin no ha llegado (o no existe) y se queda con el más reciente. Sin fecha de inicio no se usa (puede estar obsoleto)."""
+    nombres = sorted({n for ns in pend.values() for n in ns})
+    vals = " ".join('"%s"@es' % n for n in nombres)
+    q = """SELECT ?l ?presLabel ?partyLabel ?art ?st ?en WHERE { VALUES ?l { %s } ?m rdfs:label ?l . ?m wdt:P31/wdt:P279* wd:Q2074737 .
+      ?m p:P6 ?s . ?s ps:P6 ?pres . ?s pq:P580 ?st . OPTIONAL { ?s pq:P582 ?en }
+      OPTIONAL { ?pres wdt:P102 ?party } OPTIONAL { ?art schema:about ?pres ; schema:isPartOf <https://es.wikipedia.org/> }
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "es,en". } }""" % vals
+    hoy = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    mejor = {}
+    for r in sparql(q):
+        fin = (v(r, "en") or "9999")[:10]
+        if fin <= hoy: continue
+        k = nrm(v(r, "l"))
+        if k not in mejor or v(r, "st") > v(mejor[k], "st"): mejor[k] = r
+    for pc, ns in pend.items():
+        for n in ns:
+            r = mejor.get(nrm(n))
+            if r:
+                out[pc].append({"rol": f"Alcalde/sa de {n}", "ambito": "municipal", "nombre": v(r, "presLabel"), "partido": v(r, "partyLabel"),
+                                "wiki": art_title(v(r, "art")), "fuente": "Wikidata (mandato con fechas)"}); break
 
 def diputaciones(prov):
     def uno(item):
