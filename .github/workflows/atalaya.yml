@@ -1,0 +1,76 @@
+name: Atalaya · actualización de datos
+
+on:
+  schedule:
+    # Cada día a las 06:23 UTC (07:23 o 08:23 en Madrid, antes de que haya público).
+    # Los lunes se regeneran además los datos "lentos" (cargos y escaños). Minuto :23
+    # para evitar la hora punta de GitHub Actions.
+    - cron: '23 6 * * *'
+  workflow_dispatch:
+    inputs:
+      semanal:
+        description: 'Regenerar también cargos, candidatos y escaños (Wikipedia/Wikidata)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atalaya
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: ¿Toca la actualización semanal?
+        id: sem
+        run: |
+          if [ "${{ inputs.semanal }}" = "true" ] || [ "$(date -u +%u)" = "1" ]; then
+            echo "semanal=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "semanal=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Prensa por RSS (diario)
+        run: python3 scripts/atalaya/build_news.py
+
+      - name: Cargos, candidatos y escaños (semanal)
+        if: steps.sem.outputs.semanal == 'true'
+        run: |
+          python3 scripts/atalaya/build_resultados.py
+          python3 scripts/atalaya/build_politicos_prov.py
+
+      - name: Fichas indexables
+        run: python3 scripts/atalaya/build_fichas.py
+
+      - name: Comprobar que los datos son razonables
+        # Si falla, NO se hace commit: mejor datos de ayer que datos rotos.
+        run: python3 scripts/atalaya/check_data.py ${{ steps.sem.outputs.semanal == 'true' && '--semanal' || '' }}
+
+      - name: Commit y push de lo que haya cambiado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # Solo las carpetas de datos y fichas de Atalaya (nunca add -A).
+          git add atalaya/data atalaya/fichas
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git commit -m "Actualiza datos de Atalaya ($(date -u +%F))"
+          # La hemeroteca también empuja a master: reintentar con rebase si hay carrera.
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1
