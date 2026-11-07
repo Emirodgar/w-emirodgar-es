@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-06",
-  "generado_en": "2026-11-06T12:48:53+00:00",
-  "titular": "La Fiscalía Europea investiga fraudes en obras de Adif y la UCO detiene al ex chófer de Sánchez por presuntas mordidas",
+  "fecha": "2026-11-07",
+  "generado_en": "2026-11-07T11:37:03+00:00",
+  "titular": "Emergencia migratoria en El Hierro y debate sobre la gestión del accidente de Urda marcan la jornada",
   "por_medio": {
-    "El Mundo": 25,
-    "The Objective": 198
+    "El Mundo": 29,
+    "The Objective": 142
   },
   "temas": [
     {
-      "tema": "Investigación de corrupción en Adif y detenciones",
-      "categoria": "Política",
-      "descripcion": "La Fiscalía Europea y la UCO investigan presuntos fraudes en obras de Adif, lo que ha llevado a la detención del ex chófer de Pedro Sánchez por supuestas mordidas en contratos. El PP ha reaccionado criticando al Gobierno."
-    },
-    {
-      "tema": "Rechazo a la imputación de Zapatero",
-      "categoria": "Política",
-      "descripcion": "El juez José Luis Calama ha desestimado la petición de la Fiscalía Anticorrupción de investigar al expresidente José Luis Rodríguez Zapatero por un delito de malversación de caudales públicos."
-    },
-    {
-      "tema": "Propuestas electorales y debates políticos",
-      "categoria": "Política",
-      "descripcion": "Irene Montero ha desvelado sus condiciones para una investidura de Sánchez, proponiendo nacionalizaciones y expropiaciones, y destinar gasto militar a medidas sociales. Ada Colau promete expropiar viviendas, y el PP presenta su lema de campaña."
-    },
-    {
-      "tema": "Crisis migratoria en Canarias",
+      "tema": "Crisis migratoria en Canarias y Ceuta",
       "categoria": "Sociedad",
-      "descripcion": "Más de mil inmigrantes han desembarcado en las islas Canarias, con un fallecido, lo que ha llevado a las autoridades a calificar la situación en El Hierro de 'insostenible'."
+      "descripcion": "El Hierro declara emergencia migratoria por la llegada masiva de cayucos, mientras que Ceuta experimentó una entrada de más de 100.000 personas desde Marruecos en 24 horas."
+    },
+    {
+      "tema": "Consecuencias y debate sobre el accidente de Urda",
+      "categoria": "Política",
+      "descripcion": "El accidente ferroviario de Urda sigue generando polémica, con peticiones de los ferroviarios para extender controles de seguridad y el PP proponiendo medidas de regeneración democrática. La tragedia impacta en las encuestas y provoca una investigación de Bruselas."
+    },
+    {
+      "tema": "Intervención del Gobierno en el mercado del aceite",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno ha decidido almacenar 188.000 toneladas de aceite de oliva debido al excedente, una medida aplaudida por olivareros pero criticada por la industria envasadora."
+    },
+    {
+      "tema": "Declaraciones políticas y precampaña",
+      "categoria": "Política",
+      "descripcion": "Diversas declaraciones de líderes políticos marcan la precampaña, con críticas de Ayuso a Sánchez, Illa a Feijóo, y la estrategia de Sánchez de contraprogramar en medios."
     }
   ]
 }

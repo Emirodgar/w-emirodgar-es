@@ -225,7 +225,7 @@
         "titulo": "La Fiscalía Europea pone en marcha una operación con la UCO por la tragedia de Urda y pide documentación a Adif",
         "url": "https://www.elmundo.es/espana/2026/11/06/6aed98e121efa0477c8b457d.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-06",
@@ -252,6 +252,48 @@
         "medio": "El Mundo",
         "titulo": "El Gobierno ordena la retirada del mercado del 12% de la producción de aceite de oliva",
         "url": "https://www.elmundo.es/economia/2026/11/06/6aed8762e9cf4a994c8b45a5.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-07",
+      "edicion": "2026-11-07",
+      "titulo": "Declaración de emergencia migratoria en El Hierro",
+      "categoria": "Sociedad",
+      "descripcion": "El Cabildo de El Hierro ha declarado la emergencia migratoria tras la llegada de más de 8.000 personas en cayucos en cinco semanas, con más de 3.000 en los últimos cinco días.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Cabildo de El Hierro declara la emergencia migratoria tras la llegada de cayucos con más de 8.000 personas en cinco semanas",
+        "url": "https://www.elmundo.es/espana/2026/11/07/6aeefc79fdddff540c8b4583.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-07",
+      "edicion": "2026-11-07",
+      "titulo": "Intervención del Gobierno en el mercado del aceite con almacenamiento de 188.000 toneladas",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno ha decidido guardar bajo llave 188.000 toneladas de aceite de oliva debido al excedente, una medida calificada de \"histórica\" por las organizaciones agrarias.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno guarda bajo llave 188.000 toneladas de aceite por el excedente: alivio entre olivareros y temor a que suba el precio",
+        "url": "https://www.elmundo.es/economia/2026/11/07/6aedff3ce4d4d8c9738b4582.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-07",
+      "edicion": "2026-11-07",
+      "titulo": "Bruselas investiga a directivos de Adif por obras de Urda con fondos europeos",
+      "categoria": "Política",
+      "descripcion": "La Fiscalía Europea, a través de la UCO, ha iniciado una investigación sobre los directivos de Adif que firmaron obras relacionadas con el accidente de Urda, implicando fondos europeos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Bruselas investiga a los directivos de ADIF que firmaron obras de Urda con fondos europeos",
+        "url": "https://theobjective.com/espana/2026-11-07/bruselas-directivos-adif-urda-fondos-europeos/"
       },
       "destacado": false
     }
