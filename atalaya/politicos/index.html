@@ -34,7 +34,7 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 .pc .big img{width:100%;height:100%;object-fit:cover}
 .pc b{display:block;font-weight:600;line-height:1.25}.pc .rol{color:var(--mut);font-size:13px}
 .pc .terr{font-size:12px;color:var(--mut);margin-top:2px}
-.risk{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px}.risk .st{font-weight:600;white-space:nowrap}
+.risk{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:6px;font-size:12px}.risk .st{font-weight:600}
 .bar{flex:1;height:5px;background:#1b2330;border-radius:3px}.bar i{display:block;height:100%;border-radius:3px}
 .hl{font-size:12px;margin-top:6px;color:var(--mut)}.hl a{text-decoration:none}.hl a:hover{color:var(--acc)}
 .foot{color:var(--mut);font-size:12px;margin-top:20px;max-width:900px}
@@ -106,7 +106,7 @@ Promise.all([
   var pk={};P.forEach(function(p){if(p.pk)pk[p.pk]=1});
   $('fp').innerHTML+=Object.keys(pk).sort(function(x,y){return (PORDER.indexOf(x)+99)%99-(PORDER.indexOf(y)+99)%99}).map(function(k){return '<option value="'+esc(k)+'">'+esc(PNAME[k]||k)+'</option>'}).join('');
   var h=location.hash.slice(1);if(/^\d\d$/.test(h)&&prov[h])$('ft').value=h;
-  $('foot').innerHTML='Estado calculado con los titulares recogidos: <b>Neutro</b> si no hay menciones, <b>En foco</b>, <b>Bajo presión</b> (2–5 con palabras de riesgo) y <b>Crisis</b> (6 o más). Es una heurística de palabras clave, no un análisis de sentimiento; tuits y redes aún no están conectados. Cargos: Wikidata ('+esc(pp.actualizado||'')+'). Candidatos: <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a>. Fotos: Wikipedia / Wikimedia Commons. Verifica antes de usar.';
+  $('foot').innerHTML='Esta etiqueta <b>no valora a la persona</b>: describe cuánta cobertura de prensa recibe en los titulares recogidos. <b>Neutro</b> si no hay menciones; <b>Con cobertura</b> si aparece en titulares; <b>Cobertura de riesgo</b> si 2 a 5 titulares traen hechos de riesgo (por ejemplo detenciones, imputaciones o accidentes, según palabras clave o la clasificación automática); <b>Alta cobertura de riesgo</b> a partir de 6. Un titular de riesgo no implica responsabilidad de la persona citada. Tuits y redes aún no están conectados. Cargos: Wikidata ('+esc(pp.actualizado||'')+'). Candidatos: <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a>. Fotos: Wikipedia / Wikimedia Commons. Verifica antes de usar.';
   render();
 });
 

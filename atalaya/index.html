@@ -75,8 +75,8 @@ button,select,input{font:inherit;color:inherit}
 .pc .big{width:64px;height:64px;border-radius:50%;border:2px solid;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px;color:var(--mut);background:#0b0f15;overflow:hidden}
 .pc .big img{width:100%;height:100%;object-fit:cover}
 .pc b{display:block;font-weight:600;line-height:1.25}.pc .rol{color:var(--mut);font-size:13px}
-.pc .risk{display:flex;align-items:center;gap:8px;margin-top:6px;font-size:12px}
-.pc .risk .bar{flex:1;margin:0}.pc .risk .st{font-weight:600;white-space:nowrap}
+.pc .risk{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:6px;font-size:12px}
+.pc .risk .bar{flex:1;margin:0}.pc .risk .st{font-weight:600}
 .pc .hl{font-size:12px;margin-top:6px;color:var(--mut)}.pc .hl a{text-decoration:none}.pc .hl a:hover{color:var(--acc)}
 .dfoot{padding:10px 16px;border-top:1px solid var(--line);color:var(--mut);font-size:12px}
 .dfoot a{color:var(--acc)}
@@ -551,7 +551,7 @@ function renderDrawer(){
   }
   $('dBody').innerHTML=h;
   markSel();
-  $('dFoot').innerHTML=`Riesgo = titulares recientes que mencionan a la persona (más peso si traen palabras de riesgo). <b>Neutro</b> si no hay información. Tuits y redes aún no conectados. Datos: ${esc((PP_.fuentes&&PP_.fuentes.gobierno)||'Wikidata')}; candidatos de <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a> (${esc(PP_.actualizado||'')}). Verifica antes de usar.<br><a href="/atalaya/politicos/${code?'#'+code:''}">Ver todos en la pestaña Políticos →</a>`;
+  $('dFoot').innerHTML=`La etiqueta no valora a la persona: mide la cobertura de prensa y cuántos titulares recientes que la mencionan traen hechos de riesgo (un titular de riesgo no implica responsabilidad). <b>Neutro</b> si no hay información. Tuits y redes aún no conectados. Datos: ${esc((PP_.fuentes&&PP_.fuentes.gobierno)||'Wikidata')}; candidatos de <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a> (${esc(PP_.actualizado||'')}). Verifica antes de usar.<br><a href="/atalaya/politicos/${code?'#'+code:''}">Ver todos en la pestaña Políticos →</a>`;
 }
 
 /* ---------- segundo panel: ficha completa del político ---------- */

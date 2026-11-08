@@ -35,7 +35,7 @@
     var rk = hits.filter(isRisk), tn = hits.filter(function (n) { return n.s; }).map(function (n) { return n.s.tono; });
     var neg = tn.filter(function (t) { return t < 0; }).length;
     var k = rk.length >= 6 ? 'crisis' : rk.length >= 2 ? 'press' : hits.length ? 'focus' : 'none';
-    return { k: k, label: { crisis: 'Crisis', press: 'Bajo presión', focus: 'En foco', none: 'Neutro' }[k],
+    return { k: k, label: { crisis: 'Alta cobertura de riesgo', press: 'Cobertura de riesgo', focus: 'Con cobertura', none: 'Neutro' }[k],
              score: hits.length ? Math.min(100, rk.length * 18 + hits.length * 4 + neg * 6) : 0, n: hits.length, r: rk.length, nt: tn.length,
              tono: tn.length ? tn.reduce(function (s, x) { return s + x; }, 0) / tn.length : null, last: rk[0] || hits[0] };
   }
