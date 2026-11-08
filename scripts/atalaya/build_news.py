@@ -79,12 +79,11 @@ def main():
     def local(pc):
         a = ALIAS.get(provs[pc], provs[pc])
         q = f'"{a}" (alcalde OR ayuntamiento OR elecciones OR PP OR PSOE OR Vox OR pleno) when:3d'
-        try: xml = get(GN + quote(q))
-        except Exception as e: print("FALLO", a, e); return []
-        return [(pc, *x) for x in list(items(xml))[:22]]
+        try: return [(pc, *x) for x in list(items(get(GN + quote(q))))[:22]]
+        except Exception as e: print("FALLO", a, repr(e)[:120]); return []   # incluye respuestas que no son XML (límite de Google)
     def nacional(f):
         try: return [(None, *x, f[0]) for x in items(get(f[1]))]
-        except Exception as e: print("FALLO", f[0], e); return []
+        except Exception as e: print("FALLO", f[0], repr(e)[:120]); return []
 
     def directo(m):
         try: xml = get(m["url"])
