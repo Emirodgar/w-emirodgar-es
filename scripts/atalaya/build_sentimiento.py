@@ -22,6 +22,7 @@ MODELO = os.environ.get("GEMINI_MODEL") or "gemini-2.5-flash"
 MAX_NUEVOS = int(os.environ.get("MAX_NUEVOS") or 400)
 LOTE = int(os.environ.get("LOTE") or 100)              # lotes grandes: la cuota gratuita de Gemini limita las PETICIONES, no los tokens
 PAUSA = float(os.environ.get("PAUSA") or 7)            # segundos entre peticiones (≈ 8 por minuto)
+MAX_LLAMADAS = int(os.environ.get("MAX_LLAMADAS") or 10)    # la cuota gratuita diaria es pequeña y se comparte con la hemeroteca: no gastarla toda
 MAX_FALLOS_SEGUIDOS = 2                                # con cuota agotada (429) no tiene sentido seguir insistiendo
 TEMAS = ["vivienda", "sanidad", "educación", "economía", "empleo", "corrupción y justicia", "seguridad", "inmigración", "infraestructuras",
          "medio ambiente", "cultura", "modelo territorial", "elecciones y partidos", "gestión municipal", "sucesos", "otros"]
@@ -89,6 +90,7 @@ def main():
     log(f"{len(actuales)} titulares; {len(items)} ya clasificados; {len(pendientes)} nuevos a clasificar con {MODELO}")
     nuevos = fallos = seguidos = 0
     for k in range(0, len(pendientes), LOTE):
+        if k // LOTE >= MAX_LLAMADAS: log(f"Límite de {MAX_LLAMADAS} peticiones diarias alcanzado: el resto se clasifica mañana."); break
         lote = pendientes[k:k + LOTE]
         prompt = "Clasifica estos titulares (formato id | medio | titular):\n" + "\n".join(f"{i} | {n['m']} | {n['t']}" for i, n in lote)
         try: res = gemini(prompt)
