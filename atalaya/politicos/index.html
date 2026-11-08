@@ -87,9 +87,11 @@ Promise.all([
   fetch('../data/politicos_prov.json').then(function(r){return r.json()}),
   fetch('../data/noticias.json').then(function(r){return r.json()}),
   fetch('../data/indice.json').then(function(r){return r.json()}),
-  fetch('../data/fuentes-propias.json').then(function(r){return r.json()}).catch(function(){return {}})
+  fetch('../data/fuentes-propias.json').then(function(r){return r.json()}).catch(function(){return {}}),
+  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null})
 ]).then(function(a){
   var nat=a[0].politicos,pp=a[1],ix=a[3];news=a[2].noticias;prov=ix.prov;
+  if(a[5]&&a[5].items)news.forEach(function(n){var s=a[5].items[n.i];if(s)n.s=s});
   var map={};
   function add(p){
     var k=p.tipo+'|'+(p.nombre||p.slot)+'|'+p.pk,e=map[k];
@@ -125,9 +127,9 @@ function aliasesOf(p){
 function riskOf(p){
   var al=aliasesOf(p);if(!al.length)return {k:'none',label:'Neutro',score:0,n:0,r:0};
   var rx=al.map(function(a){return new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)')});
-  var hits=news.filter(function(n){var t=norm(n.t);return rx.some(function(r){return r.test(t)})}),rk=hits.filter(function(n){return n.r});
+  var hits=news.filter(function(n){var t=norm(n.t);return rx.some(function(r){return r.test(t)})}),rk=hits.filter(function(n){return n.s?n.s.riesgo>=2:n.r}),tn=hits.filter(function(n){return n.s}).map(function(n){return n.s.tono}),neg=tn.filter(function(t){return t<0}).length;
   var k=rk.length>=6?'crisis':rk.length>=2?'press':hits.length?'focus':'none';
-  return {k:k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4):0,n:hits.length,r:rk.length,last:rk[0]||hits[0]};
+  return {k:k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4+neg*6):0,n:hits.length,r:rk.length,nt:tn.length,tono:tn.length?tn.reduce(function(s,x){return s+x},0)/tn.length:null,last:rk[0]||hits[0]};
 }
 
 /* fotos: Wikipedia REST, solo cuando la tarjeta entra en pantalla */
@@ -178,7 +180,7 @@ function card(p){
   var r=p.risk,col=PCOL[p.pk]||'#94a3b8',c=STC[r.k];
   return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
     '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+
-    '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>':'<span style="color:var(--mut)">sin información</span>')+'</div>'+
+    '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares clasificados">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
     (p.wiki?'<div class="hl"><a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a></div>':'')+'</div></div>';
 }

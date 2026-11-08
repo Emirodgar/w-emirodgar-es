@@ -4,7 +4,7 @@ Prototipo. Solo librería estándar. Salida: atalaya/data/noticias.json
 Requiere haber ejecutado build_geo.py (usa atalaya/data/indice.json).
 Uso (raíz del repo): python3 scripts/atalaya/build_news.py
 """
-import json, re, unicodedata, urllib.request, xml.etree.ElementTree as ET
+import hashlib, json, re, unicodedata, urllib.request, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
@@ -108,7 +108,7 @@ def main():
         mun = set() if (pc and ambito == "local") else {c for c, rx in pat_unico if rx.search(nt)}
         for p in pv: mun |= {c for c, rx in pat_mun.get(p, []) if rx.search(nt)}
         pv |= {c[:2] for c in mun}
-        out.append({"t": t, "u": l, "f": dt.isoformat(), "m": medio, "a": ambito, "pv": sorted(pv), "mun": sorted(mun), **({"d": 1} if d else {}),
+        out.append({"i": hashlib.sha1(l.encode("utf8")).hexdigest()[:12], "t": t, "u": l, "f": dt.isoformat(), "m": medio, "a": ambito, "pv": sorted(pv), "mun": sorted(mun), **({"d": 1} if d else {}),
                     "p": [k for k, rx in PARTIDOS.items() if re.search(rx, t, re.I)], "r": bool(re.search(RIESGO, nt))})
     for lst in dire:   # primero los feeds propios de cada medio: son los más fiables y ganan en los duplicados
         for pc, t, l, dt, src, medio in lst: add(pc, t, l, dt, src, medio, "local", True)

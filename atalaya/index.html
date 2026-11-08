@@ -319,7 +319,7 @@ const f1=x=>(Math.round(x*10)/10).toFixed(1);
 const sgn=x=>(x>0?'+':x<0?'−':'')+f1(Math.abs(x));
 
 /* ---------- estado ---------- */
-let PAD=null,PP_={prov:{}},lastDCode=null,DPEOPLE={},curPerson=null,p2Open=false,p2Token=0,bioCache={},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
+let SENT=null,RS={},PAD=null,PP_={prov:{}},lastDCode=null,DPEOPLE={},curPerson=null,p2Open=false,p2Token=0,bioCache={},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
 const PA={},MA={};
 let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
@@ -332,13 +332,15 @@ Promise.all([
   fetch('data/indice.json').then(r=>r.json()),
   fetch('data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
   fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}})),
-  fetch('data/padron.json').then(r=>r.json()).catch(()=>null)
-]).then(([pg,nw,ix,pl,pp,pd])=>{
-  PP_=pp;PAD=pd;
+  fetch('data/padron.json').then(r=>r.json()).catch(()=>null),
+  fetch('data/sentimiento.json').then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([pg,nw,ix,pl,pp,pd,sj])=>{
+  PP_=pp;PAD=pd;SENT=sj;
   provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];
   provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
   idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
   news.forEach(n=>{n.pv.forEach(c=>nPv[c]=(nPv[c]||0)+1);n.mun.forEach(c=>nMun[c]=(nMun[c]||0)+1)});
+  mergeSent();
   initMap();showSpain();
   const h=location.hash.slice(1);if(/^\d{2}$/.test(h)&&PA[h])openProvince(h);
 });
@@ -361,7 +363,7 @@ function colorFor(a,c){
   if(mode==='winner')return {fill:COL[a.winner],op:.35+.55*Math.min(1,a.margin/30)};
   if(mode==='vol')return {fill:ramp(VOLR,a.vol/100),op:.85};
   if(mode==='risk')return {fill:ramp(RISKR,a.risk/100),op:.85};
-  return {fill:ramp(SENTR,(a.sent+50)/100),op:.85};
+  const rs=realSent(c);return rs?{fill:ramp(SENTR,(rs.v+50)/100),op:.9}:{fill:ramp(SENTR,(a.sent+50)/100),op:SENT?.3:.85};
 }
 function styleFor(c,tbl){
   const k=colorFor(tbl[c],c),on=(tbl===MA&&selMun===c),dim=tbl===MA&&selMun&&!on;
@@ -379,7 +381,7 @@ function legend(){
     const s=mode==='vol'?VOLR:mode==='risk'?RISKR:SENTR;
     const e=mode==='vol'?['Estable','Muy volátil']:mode==='risk'?['Seguro','Alarma']:['Negativo','Positivo'];
     h=`<div class="ramp" style="background:linear-gradient(90deg,rgb(${s[0]}),rgb(${s[1]}),rgb(${s[2]}))"></div><div class="ends"><span>${e[0]}</span><span>${e[1]}</span></div>`;
-    if(mode==='sent')h+='<div style="margin-top:4px">Tendencia de sentimiento (simulada).</div>';
+    if(mode==='sent')h+=SENT?'<div style="margin-top:4px">Opaco: tono real de la prensa (clasificación automática de titulares). Tenue: dato de ejemplo.</div>':'<div style="margin-top:4px">Tendencia de sentimiento (simulada).</div>';
   }
   $('legend').innerHTML=h;
 }
@@ -462,6 +464,7 @@ function ficha(){
     drawChart({hist});return;
   }
   const [pc,pt]=riskPill(a.risk);
+  const rs=realSent(c),sv=rs?rs.v:a.sent;
   const pop=popOf(c),totP=PAD?(selMun?(PAD.prov[curProv]||[])[0]:Object.values(PAD.prov).reduce((s,v)=>s+v[0],0)):null,share=pop&&totP?pop/totP*100:null;
   const alarmTxt=(curProv&&!selMun&&PAD)?(()=>{const q=popAlarm();return ` Los municipios en alarma suman ${fmtN(q.a)} habitantes (${pctTxt(q.t?q.a/q.t*100:null)} de la provincia).`})():'';
   $('fichaTag').textContent='';
@@ -472,7 +475,7 @@ function ficha(){
     <div class="metrics">
       <div class="m"><span>Riesgo de cambio</span><b style="color:${rcol(a.risk)}">${a.risk}</b>${bar(a.risk,rcol(a.risk))}</div>
       <div class="m"><span>Volatilidad histórica</span><b>${a.vol}</b>${bar(a.vol,'var(--acc)')}</div>
-      <div class="m"><span>Tendencia sentimiento 90 d</span><b style="color:${a.sent<0?'var(--bad)':'var(--ok)'}">${a.sent>0?'+':''}${a.sent}</b>${bar(Math.abs(a.sent)*2,a.sent<0?'var(--bad)':'var(--ok)')}</div>
+      <div class="m"><span>${rs?`Tono de la prensa (real · ${rs.n} noticias)`:'Tendencia sentimiento (ejemplo)'}</span><b style="color:${sv<0?'var(--bad)':'var(--ok)'}">${sv>0?'+':''}${sv}</b>${bar(Math.abs(sv)*2,sv<0?'var(--bad)':'var(--ok)')}</div>
       <div class="m"><span>Habitantes (INE ${PAD?PAD.anios[0]:''})</span><b>${fmtN(pop)}</b></div>
       <div class="m"><span>${selMun?'Peso en la provincia':'Peso en España'}</span><b>${pctTxt(share)}</b></div>
       <div class="m"><span>Titulares detectados (real)</span><b>${nc}</b>${bar(nc*(selMun?12:2),'var(--mut)')}</div>
@@ -504,10 +507,14 @@ function renderNews(){
   $('news').innerHTML=note+(list.slice(0,40).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}${n.p.map(p=>`<span class="tag ${p}">${p}</span>`).join('')}</div></div>`).join('')||'<div class="empty">Sin titulares.</div>');
 }
 function renderRisks(){
-  let list=newsFor().filter(n=>n.r);
-  if((curProv||selMun)&&!list.length)list=news.filter(n=>n.r&&n.pv.includes(curProv)).slice(0,8);
+  let list=newsFor().filter(isRisk);
+  if((curProv||selMun)&&!list.length)list=news.filter(n=>isRisk(n)&&n.pv.includes(curProv)).slice(0,8);
   $('risks').innerHTML=list.slice(0,30).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span class="tag risk">EVENTO</span><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}</div></div>`).join('')||'<div class="empty">Sin eventos de riesgo detectados.</div>';
 }
+/* clasificación automática de titulares (Gemini): tono -2..2, tema, partido y riesgo 0..3; si falta, se usa la heurística de palabras clave */
+const isRisk=n=>n.s?n.s.riesgo>=2:n.r;
+function mergeSent(){RS={};if(!SENT||!SENT.items)return;news.forEach(n=>{const s=SENT.items[n.i];if(!s)return;n.s=s;[...n.pv,...n.mun].forEach(c=>{const r=RS[c]||(RS[c]={sum:0,n:0});r.sum+=s.tono;r.n++})})}
+function realSent(c){const r=RS[c];return r&&r.n>=(c.length===2?5:3)?{v:Math.round(r.sum/r.n*50),n:r.n}:null}
 const fmtN=n=>n==null?'—':Math.round(n).toLocaleString('es');
 function popOf(c){return PAD?(c.length===2?(PAD.prov[c]||[])[0]:(PAD.mun[c]||[])[0]):null}
 function popAlarm(){const S=scope();let a=0,t=0;S.codes.forEach(c=>{const p=popOf(c)||0;t+=p;if(S.tbl[c].risk>=60)a+=p});return {a,t}}
@@ -520,7 +527,7 @@ function renderRank(){
   $('rank').querySelectorAll('.row').forEach(el=>{const go=()=>curProv?selectMun(el.dataset.c):openProvince(el.dataset.c);el.onclick=go;el.onkeydown=e=>{if(e.key==='Enter')go()}});
 }
 function renderAgents(){
-  const sc=newsFor(),ev=sc.filter(n=>n.r).length,S=scope(),al=selMun?(MA[selMun].risk>=60?1:0):S.codes.filter(c=>S.tbl[c].risk>=60).length;
+  const sc=newsFor(),ev=sc.filter(isRisk).length,S=scope(),al=selMun?(MA[selMun].risk>=60?1:0):S.codes.filter(c=>S.tbl[c].risk>=60).length;
   const ag=[
     ['Vigía','live','Lee prensa nacional y local de las 52 provincias por RSS, la etiqueta por territorio, partido y político y marca eventos de riesgo.',`<b>${sc.length}</b> titulares y <b>${ev}</b> eventos en el filtro actual.`],
     ['Analista','live','Calcula volatilidad y riesgo de cambio y redacta el informe del territorio.',`<b>${al}</b> ${curProv?'municipio':'provincia'}${al===1?'':'s'} en alarma en el filtro actual.`],
@@ -579,9 +586,9 @@ function riskOf(p){
   const al=aliasesOf(p);
   if(!al.length)return {k:'none',label:'Neutro',score:0,n:0,r:0};
   const rx=al.map(a=>new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)'));
-  const hits=news.filter(n=>{const t=norm(n.t);return rx.some(r=>r.test(t))}),rk=hits.filter(n=>n.r);
+  const hits=news.filter(n=>{const t=norm(n.t);return rx.some(r=>r.test(t))}),rk=hits.filter(isRisk),tn=hits.filter(n=>n.s).map(n=>n.s.tono),neg=tn.filter(t=>t<0).length;
   const k=rk.length>=6?'crisis':rk.length>=2?'press':hits.length?'focus':'none';
-  return {k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4):0,n:hits.length,r:rk.length,last:rk[0]||hits[0]};
+  return {k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4+neg*6):0,n:hits.length,r:rk.length,nt:tn.length,tono:tn.length?tn.reduce((s,x)=>s+x,0)/tn.length:null,last:rk[0]||hits[0]};
 }
 function dPerson(p,rolTxt,pk){
   const r=riskOf(p),col=PCOL[pk]||'#94a3b8',stc={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'}[r.k];
@@ -590,7 +597,7 @@ function dPerson(p,rolTxt,pk){
   DPEOPLE[id]={p,rolTxt,pk};
   return `<div class="pc" role="button" tabindex="0" data-pid="${id}" aria-label="Ver ficha completa de ${esc(p.nombre)}"><div class="big" id="${id}" style="border-color:${col}">${esc(initials(p.nombre))}</div><div style="min-width:0">
     <b>${esc(p.nombre)}</b><div class="rol">${esc(rolTxt||'')}${pk?` · <span style="color:${col}">${esc(PNAME[pk]||pk)}</span>`:''}</div>
-    <div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}</span>`:'<span style="color:var(--mut)">sin información</span>'}</div>
+    <div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}</span>${r.nt?`<span title="Tono medio de ${r.nt} titulares clasificados">· tono ${r.tono>0?'+':''}${r.tono.toFixed(1)}</span>`:''}`:'<span style="color:var(--mut)">sin información</span>'}</div>
     ${r.n?`<div class="hl">${r.n} titular${r.n>1?'es':''}${r.r?` · ${r.r} de riesgo`:''} · <a href="${esc(r.last.u)}" target="_blank" rel="noopener">${esc(cleanTitle(r.last.t).slice(0,90))}</a></div>`:''}
     ${p.wiki?`<div class="hl"><a href="https://es.wikipedia.org/wiki/${encodeURIComponent(p.wiki)}" target="_blank" rel="noopener">Wikipedia</a></div>`:''}</div></div>`;
 }
@@ -696,7 +703,7 @@ function renderPerson(){
   const f=$('p2Face');f.style.borderColor=col;f.textContent=initials(p.nombre);if(p.wiki)photo({id:p.wiki,wiki:p.wiki,nombre:p.nombre},f);
   const bio=p.wiki?(bioCache[p.wiki]):null;
   let h='<div class="dg">Situación actual</div>'+situacion(p,rolTxt,pk);
-  h+=`<div class="dg">Riesgo según prensa</div><div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}/100</span>`:'<span style="color:var(--mut)">sin información: estado neutro</span>'}</div>`;
+  h+=`<div class="dg">Riesgo según prensa</div><div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}/100</span>${r.nt?`<span>· tono medio ${r.tono>0?'+':''}${r.tono.toFixed(1)} (${r.nt} titulares)</span>`:''}`:'<span style="color:var(--mut)">sin información: estado neutro</span>'}</div>`;
   h+='<div class="dg">Trayectoria e historial</div>';
   if(!p.wiki)h+='<p class="sk">No tiene ficha en Wikipedia/Wikidata, así que Atalaya no conoce su trayectoria. Puedes añadirla como contexto propio en <a href="/atalaya/fuentes/#anadir" style="color:var(--acc)">Fuentes</a>.</p>';
   else if(bio===undefined)h+='<p class="sk">Cargando trayectoria…</p>';
@@ -708,7 +715,7 @@ function renderPerson(){
     if(bio.partidos.length)h+='<div class="dg">Partidos</div><ul class="tl">'+bio.partidos.map(c=>`<li>${esc(c.pt)}<span class="when">${esc(c.a||'?')}–${esc(c.b||'actual')}</span></li>`).join('')+'</ul>';
   }
   h+=`<div class="dg">Noticias recogidas · ${ns.length}</div>`;
-  h+=ns.length?ns.map(n=>`<div class="nw"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${n.r?'<span class="tag risk">EVENTO</span>':''}</div></div>`).join(''):'<p class="sk">Ninguna noticia recogida menciona a esta persona.</p>';
+  h+=ns.length?ns.map(n=>`<div class="nw"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${isRisk(n)?'<span class="tag risk">EVENTO</span>':''}</div></div>`).join(''):'<p class="sk">Ninguna noticia recogida menciona a esta persona.</p>';
   $('p2Body').innerHTML=h;
   $('p2Foot').innerHTML=`Fuentes: ${p.wiki?`<a href="https://es.wikipedia.org/wiki/${encodeURIComponent(p.wiki)}" target="_blank" rel="noopener">Wikipedia</a>${bio&&bio.qid?` · <a href="https://www.wikidata.org/wiki/${bio.qid}" target="_blank" rel="noopener">Wikidata</a>`:''} · `:''}titulares recogidos por Atalaya. Los historiales vienen de fuentes abiertas: verifica antes de usar.`;
 }

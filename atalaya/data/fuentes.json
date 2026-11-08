@@ -539,6 +539,24 @@
    ],
    "contar": "politicos",
    "nota": "Cabezas de lista nacionales."
+  },
+  {
+   "id": "nlp_gemini",
+   "nombre": "Clasificación de titulares con Gemini (tono, tema, partido, riesgo)",
+   "cat": "redes",
+   "url": "",
+   "acceso": "API de Gemini (clave en secretos del repo)",
+   "estado": "parcial",
+   "fiab": 2,
+   "cobertura": "Titulares recogidos",
+   "frecuencia": "Cada ejecución del workflow (con caché por titular)",
+   "usada": [
+    "Panel",
+    "Políticos",
+    "Peligros"
+   ],
+   "contar": "sentimiento",
+   "nota": "Solo ve el titular, no el artículo: orientativa. Sustituye a la heurística de palabras clave cuando hay clasificación; sin ella el panel vuelve a las palabras clave. Primer análisis real del tono de la prensa por territorio."
   }
  ]
 }

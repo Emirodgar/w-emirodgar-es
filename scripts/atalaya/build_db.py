@@ -58,6 +58,8 @@ def main():
     rx = [(p["id"], [re.compile(r"(?<!\w)" + re.escape(n(a)) + r"(?!\w)") for a in p["alias"]]) for p in pol if p["alias"]]
 
     # artículos
+    sj = J(D / "sentimiento.json") if (D / "sentimiento.json").exists() else {"items": {}}
+    SENT, SENT_MODELO = sj["items"], sj.get("modelo", "gemini")
     for a in J(D / "noticias.json")["noticias"]:
         aid = db.execute("INSERT OR IGNORE INTO articulo(url,titulo,medio,fuente_id,ambito,tipo,publicado,capturado) VALUES (?,?,?,?,?,?,?,?)",
                          (a["u"], a["t"], a["m"], fuente(a["m"], "prensa"), a["a"], "noticia", a["f"], ahora)).lastrowid
@@ -68,6 +70,8 @@ def main():
         t = n(a["t"])
         db.executemany("INSERT OR IGNORE INTO articulo_politico VALUES (?,?)", [(aid, pid) for pid, r in rx if any(x.search(t) for x in r)])
         db.execute("INSERT INTO analisis VALUES (?,?,?,?,?,?,?,?)", (aid, "palabras-clave", "0.1", ahora, None, None, int(a["r"]), None))
+        g = SENT.get(a.get("i"))
+        if g: db.execute("INSERT INTO analisis VALUES (?,?,?,?,?,?,?,?)", (aid, "gemini", SENT_MODELO, ahora, g["tono"] / 2, g["tema"], int(g["riesgo"] >= 2), g["riesgo"]))
     # propuestas / posiciones de los partidos (módulo Programas)
     prog = J(D / "programas.json")
     for af in prog["afirmaciones"]:
