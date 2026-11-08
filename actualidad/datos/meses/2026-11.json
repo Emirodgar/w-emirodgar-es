@@ -267,7 +267,7 @@
         "titulo": "El Cabildo de El Hierro declara la emergencia migratoria tras la llegada de cayucos con más de 8.000 personas en cinco semanas",
         "url": "https://www.elmundo.es/espana/2026/11/07/6aeefc79fdddff540c8b4583.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-07",
@@ -294,6 +294,48 @@
         "medio": "The Objective",
         "titulo": "Bruselas investiga a los directivos de ADIF que firmaron obras de Urda con fondos europeos",
         "url": "https://theobjective.com/espana/2026-11-07/bruselas-directivos-adif-urda-fondos-europeos/"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-08",
+      "edicion": "2026-11-08",
+      "titulo": "Masacre en Cracovia investigada como terrorismo",
+      "categoria": "Internacional",
+      "descripcion": "Un hombre mata a nueve personas en Cracovia, incluyendo a sus padres y hermana, en un acto que las autoridades investigan como terrorismo de extrema derecha.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Pánico en el corazón de Europa tras matar un hombre en Cracovia a nueve personas, entre ellos sus padres y su hermana: se investiga como \"terrorismo\"",
+        "url": "https://www.elmundo.es/internacional/2026/11/08/6aef98c7fdddffb6288b45b0.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-08",
+      "edicion": "2026-11-08",
+      "titulo": "El Cabildo de El Hierro decreta emergencia social por presión migratoria",
+      "categoria": "Sociedad",
+      "descripcion": "La llegada de 797 migrantes este fin de semana a El Hierro, una isla de 10.000 habitantes, ha llevado al Cabildo a decretar la emergencia social.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Salvamento Marítimo escolta un cayuco con 215 migrantes en aguas próximas a El Hierro y ascienden a 797 los llegados este fin de semana a la isla",
+        "url": "https://www.elmundo.es/espana/2026/11/08/6af04224e9cf4ad5298b4580.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-08",
+      "edicion": "2026-11-08",
+      "titulo": "Desalojo del campamento de migrantes del Puerto de Ceuta",
+      "categoria": "Sociedad",
+      "descripcion": "La Policía Nacional desmantela el campamento de migrantes en el Puerto de Ceuta, trasladándolos al CATE de El Tarajal para su filiación y posterior expulsión a Marruecos.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Policía Nacional desmantela el campamento de migrantes del Puerto de Ceuta",
+        "url": "https://www.elmundo.es/espana/2026/11/08/6af03dffe9cf4a8a4e8b456e.html"
       },
       "destacado": false
     }

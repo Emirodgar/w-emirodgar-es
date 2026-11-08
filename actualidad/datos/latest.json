@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-07",
-  "generado_en": "2026-11-07T11:37:03+00:00",
-  "titular": "Emergencia migratoria en El Hierro y debate sobre la gestión del accidente de Urda marcan la jornada",
+  "fecha": "2026-11-08",
+  "generado_en": "2026-11-08T11:48:28+00:00",
+  "titular": "Masacre en Cracovia y campaña electoral marcan la jornada, con el PSOE buscando el voto moderado.",
   "por_medio": {
-    "El Mundo": 29,
-    "The Objective": 142
+    "El Mundo": 22,
+    "The Objective": 105
   },
   "temas": [
     {
-      "tema": "Crisis migratoria en Canarias y Ceuta",
+      "tema": "Masacre en Cracovia",
+      "categoria": "Internacional",
+      "descripcion": "Un hombre mata a nueve personas, incluyendo a sus padres y hermana, en Cracovia, en un acto investigado como terrorismo por inspiración de extrema derecha."
+    },
+    {
+      "tema": "Campaña electoral del PSOE",
+      "categoria": "Política",
+      "descripcion": "Ministros del PSOE inician campaña sin Sánchez, buscando el voto moderado, mientras las investigaciones en ADIF afectan la campaña socialista."
+    },
+    {
+      "tema": "Campaña electoral de Vox",
+      "categoria": "Política",
+      "descripcion": "Vox presenta su cartel de campaña para el 29-N con Santiago Abascal y las ideas de \"prioridad nacional, desregulación y remigración\"."
+    },
+    {
+      "tema": "Crisis migratoria en España",
       "categoria": "Sociedad",
-      "descripcion": "El Hierro declara emergencia migratoria por la llegada masiva de cayucos, mientras que Ceuta experimentó una entrada de más de 100.000 personas desde Marruecos en 24 horas."
-    },
-    {
-      "tema": "Consecuencias y debate sobre el accidente de Urda",
-      "categoria": "Política",
-      "descripcion": "El accidente ferroviario de Urda sigue generando polémica, con peticiones de los ferroviarios para extender controles de seguridad y el PP proponiendo medidas de regeneración democrática. La tragedia impacta en las encuestas y provoca una investigación de Bruselas."
-    },
-    {
-      "tema": "Intervención del Gobierno en el mercado del aceite",
-      "categoria": "Economía",
-      "descripcion": "El Gobierno ha decidido almacenar 188.000 toneladas de aceite de oliva debido al excedente, una medida aplaudida por olivareros pero criticada por la industria envasadora."
-    },
-    {
-      "tema": "Declaraciones políticas y precampaña",
-      "categoria": "Política",
-      "descripcion": "Diversas declaraciones de líderes políticos marcan la precampaña, con críticas de Ayuso a Sánchez, Illa a Feijóo, y la estrategia de Sánchez de contraprogramar en medios."
+      "descripcion": "Llegada masiva de migrantes a El Hierro, desalojo de un campamento en Ceuta y propuesta de comprar parcelas para triajes a inmigrantes."
     }
   ]
 }
