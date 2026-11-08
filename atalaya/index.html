@@ -249,60 +249,13 @@ button,select,input{font:inherit;color:inherit}
   <div class="dbody" id="p2Body"></div>
   <div class="dfoot" id="p2Foot"></div>
 </aside>
+<script src="/atalaya/assets/sim.js"></script>
+<script src="/atalaya/assets/personas.js"></script>
 <script>
 (function(){
 'use strict';
-const PARTIES=[['PP','#3b9cff'],['PSOE','#ef4444'],['Vox','#7ac943'],['Cs','#fb923c'],['Sumar','#d6246e'],['Podemos','#9b59d0'],['Otros','#94a3b8']];
-const COL=Object.fromEntries(PARTIES);
-const POS={Vox:9,PP:7,Cs:5.5,Otros:5,PSOE:3.5,Sumar:2,Podemos:1.5};   // eje ideológico 0-10 (supuesto del modelo)
-const ID2P={PP:'PP',PSOE:'PSOE',VOX:'Vox',SUMAR:'Sumar',PODEMOS:'Podemos'};
-const YEARS=[2011,2015,2019,2023];
+const {PARTIES,COL,YEARS,rng,simulate,analyse}=window.AT;   // simulación compartida con Escenarios (assets/sim.js)
 const CAPITAL='37274';
-
-/* ---------- datos simulados deterministas ---------- */
-function rng(seed){let a=seed>>>0;return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
-function simulate(code,scale){
-  const r=rng(parseInt(code,10)*2654435761);
-  const lean=r(), trait=(0.6+r()*2.4)*(scale||1), hist=[];
-  const base={PP:28+lean*30,PSOE:22+(1-lean)*22};
-  const target=[[1,1,0,0],[.85,.95,0,1],[.8,.9,.45,.55],[.95,.85,1,.1]];
-  const noise=7*(scale||1);
-  YEARS.forEach((y,i)=>{
-    const s={};let tot=0;
-    s.PP=base.PP*target[i][0]*(.55+.45*target[i][0])+(r()-.5)*noise*trait;
-    s.PSOE=base.PSOE*target[i][1]+(r()-.5)*noise*trait;
-    s.Vox=(4+r()*9)*target[i][2];
-    s.Cs=(5+r()*9)*target[i][3];
-    for(const k of ['PP','PSOE','Vox','Cs']){s[k]=Math.max(0,s[k]);tot+=s[k]}
-    s.Otros=Math.max(2,6+r()*12);tot+=s.Otros;
-    for(const k in s)s[k]=+(s[k]/tot*100).toFixed(1);
-    hist.push(s);
-  });
-  let sent=Math.round((r()-.5)*24*(scale?1.6:1));
-  if(code===CAPITAL){
-    [[44.8,29.1,6.2,12.1],[41.2,28.4,7.5,17.0],[43.3,31.0,8.8,10.2],[45.9,27.5,10.4,2.5]].forEach((v,i)=>{
-      const s={PP:v[0],PSOE:v[1],Vox:v[2],Cs:v[3]};s.Otros=+(100-v[0]-v[1]-v[2]-v[3]).toFixed(1);hist[i]=s});
-    sent=-38;
-  }
-  return {hist,sent};
-}
-function analyse(sim){
-  const h=sim.hist, K=['PP','PSOE','Vox','Cs'];
-  const win=h.map(s=>K.slice().sort((a,b)=>s[b]-s[a])[0]);
-  const last=h[h.length-1], ord=K.slice().sort((a,b)=>last[b]-last[a]);
-  const margin=+(last[ord[0]]-last[ord[1]]).toFixed(1);
-  let ped=0;for(let i=1;i<h.length;i++){let d=0;for(const k in h[i])d+=Math.abs(h[i][k]-h[i-1][k]);ped+=d/2}
-  ped/=h.length-1;
-  const switches=win.reduce((n,w,i)=>n+(i&&w!==win[i-1]?1:0),0);
-  const vol=Math.min(100,Math.round(ped*4.2+switches*14));
-  const distinct=new Set(win).size;
-  const fragile=Math.max(0,30-margin)/30*100;
-  let risk=0.34*vol+0.30*fragile+0.36*Math.min(100,Math.max(0,-sim.sent)*2.2);
-  if(distinct===1&&sim.sent<-20)risk+=14;
-  risk=Math.max(0,Math.min(100,Math.round(risk)));
-  const type=distinct===1?'Bastión':(distinct>=3||vol>=85)?'Volátil':'Cambiante';
-  return {winner:win[win.length-1],margin,vol,risk,sent:sim.sent,type,last,hist:h,distinct,switches};
-}
 
 /* ---------- utilidades ---------- */
 const $=id=>document.getElementById(id);
@@ -512,7 +465,7 @@ function renderRisks(){
   $('risks').innerHTML=list.slice(0,30).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span class="tag risk">EVENTO</span><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}</div></div>`).join('')||'<div class="empty">Sin eventos de riesgo detectados.</div>';
 }
 /* clasificación automática de titulares (Gemini): tono -2..2, tema, partido y riesgo 0..3; si falta, se usa la heurística de palabras clave */
-const isRisk=n=>n.s?n.s.riesgo>=2:n.r;
+const isRisk=window.PE.isRisk;
 function mergeSent(){RS={};if(!SENT||!SENT.items)return;news.forEach(n=>{const s=SENT.items[n.i];if(!s)return;n.s=s;[...n.pv,...n.mun].forEach(c=>{const r=RS[c]||(RS[c]={sum:0,n:0});r.sum+=s.tono;r.n++})})}
 function realSent(c){const r=RS[c];return r&&r.n>=(c.length===2?5:3)?{v:Math.round(r.sum/r.n*50),n:r.n}:null}
 const fmtN=n=>n==null?'—':Math.round(n).toLocaleString('es');
@@ -538,20 +491,8 @@ function renderAgents(){
 }
 
 /* ---------- políticos: estado a partir de titulares ---------- */
-const photoCache={};
-function initials(n){return n?n.split(' ').filter(w=>/^[A-ZÁÉÍÓÚÑ]/.test(w)).slice(0,2).map(w=>w[0]).join(''):'?'}
-async function photo(p,el){
-  if(!p.wiki)return;
-  if(photoCache[p.id]===undefined){
-    let v=null;try{v=sessionStorage.getItem('atl-ph-'+p.id)}catch(e){}
-    if(v===null){
-      try{const r=await fetch('https://es.wikipedia.org/api/rest_v1/page/summary/'+encodeURIComponent(p.wiki));const j=await r.json();v=(j.type==='standard'&&j.thumbnail)?j.thumbnail.source:'';}catch(e){v=''}
-      try{sessionStorage.setItem('atl-ph-'+p.id,v)}catch(e){}
-    }
-    photoCache[p.id]=v;
-  }
-  if(photoCache[p.id])el.innerHTML=`<img src="${esc(photoCache[p.id])}" alt="${esc(p.nombre)}" loading="lazy">`;
-}
+const {PCOL,PNAME,PORDER,partyKey,initials,aliasesOf}=window.PE;       // utilidades compartidas con Políticos (assets/personas.js)
+async function photo(p,el){if(!p.wiki)return;const u=await window.PE.photoUrl(p.wiki);if(u)el.innerHTML=`<img src="${esc(u)}" alt="${esc(p.nombre)}" loading="lazy">`}
 /* ---------- búsqueda ---------- */
 let searchIdx=null;
 function search(v){
@@ -566,30 +507,7 @@ function search(v){
 
 
 /* ---------- panel lateral de políticos ---------- */
-const PCOL={PP:'#3b9cff',PSOE:'#ef4444',VOX:'#7ac943',FA:'#d6246e','FA/PODEMOS':'#d6246e',SUMAR:'#d6246e',PODEMOS:'#9b59d0',ERC:'#f95838',JUNTS:'#00c3b2',EHB:'#03cfb5',BILDU:'#03cfb5',PNV:'#046e44',BNG:'#76b2e1',CC:'#ffd74f'};
-const PNAME={PP:'PP',PSOE:'PSOE',VOX:'Vox',FA:'Frente Amplio','FA/PODEMOS':'Frente Amplio / Podemos',SUMAR:'Sumar',PODEMOS:'Podemos',ERC:'ERC',JUNTS:'Junts',EHB:'EH Bildu',BILDU:'EH Bildu',PNV:'PNV',BNG:'BNG',CC:'CC'};
-const PORDER=['PP','PSOE','VOX','FA','FA/PODEMOS','SUMAR','PODEMOS','ERC','JUNTS','EHB','BILDU','PNV','BNG','CC'];
-function partyKey(txt){
-  if(!txt)return '';const t=norm(txt);
-  if(t.includes('popular'))return 'PP';if(t.includes('socialista')||t.includes('psoe')||t.includes('psc'))return 'PSOE';if(t.includes('vox'))return 'VOX';
-  if(t.includes('podemos'))return 'PODEMOS';if(t.includes('nacionalista vasco'))return 'PNV';if(t.includes('esquerra'))return 'ERC';
-  return txt.slice(0,14);
-}
-function aliasesOf(p){
-  const out=new Set();if(p.nombre)out.add(p.nombre);
-  if(p.wiki){const w=decodeURIComponent(p.wiki).replace(/_/g,' ').replace(/\s*\(.*\)$/,'');if(w.split(' ').length>=2)out.add(w)}
-  const t=(p.nombre||'').split(' ');
-  if(t.length>=3){out.add(t.slice(-2).join(' '))}
-  return [...out].filter(a=>a.split(' ').length>=2);
-}
-function riskOf(p){
-  const al=aliasesOf(p);
-  if(!al.length)return {k:'none',label:'Neutro',score:0,n:0,r:0};
-  const rx=al.map(a=>new RegExp('(?<!\\w)'+norm(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)'));
-  const hits=news.filter(n=>{const t=norm(n.t);return rx.some(r=>r.test(t))}),rk=hits.filter(isRisk),tn=hits.filter(n=>n.s).map(n=>n.s.tono),neg=tn.filter(t=>t<0).length;
-  const k=rk.length>=6?'crisis':rk.length>=2?'press':hits.length?'focus':'none';
-  return {k,label:{crisis:'Crisis',press:'Bajo presión',focus:'En foco',none:'Neutro'}[k],score:hits.length?Math.min(100,rk.length*18+hits.length*4+neg*6):0,n:hits.length,r:rk.length,nt:tn.length,tono:tn.length?tn.reduce((s,x)=>s+x,0)/tn.length:null,last:rk[0]||hits[0]};
-}
+const riskOf=p=>window.PE.riskOf(p,news);
 function dPerson(p,rolTxt,pk){
   const r=riskOf(p),col=PCOL[pk]||'#94a3b8',stc={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'}[r.k];
   const id='df-'+Math.random().toString(36).slice(2,9);
