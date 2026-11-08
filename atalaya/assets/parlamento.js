@@ -122,11 +122,17 @@
     var bio = last.bio ? '<h3>Biografía oficial</h3><p class="bio">' + esc(last.bio.length > 1400 ? last.bio.slice(0, 1400) + '…' : last.bio) + '</p>' : '';
     $('dBody').innerHTML = dl + chips + bio + '<div id="dWiki"></div>';
     $('dFoot').innerHTML = 'Fuente: <a href="' + esc(D.fuente) + '" target="_blank" rel="noopener">' + (SEN ? 'senado.es' : 'congreso.es') + '</a>. La coincidencia con Wikipedia es automática: verifícala.';
-    $('dr').hidden = false; $('main').classList.add('hasp'); resize(); $('dName').focus();
+    $('dr').hidden = false; place(); $('dName').focus();
     wiki(P.n).then(function (w) { if ($('dName').textContent !== P.n) return; if (w) { if (w.img) $('dFace').style.backgroundImage = 'url(' + w.img + ')', $('dFace').textContent = ''; $('dWiki').innerHTML = '<h3>Wikipedia</h3><p>' + esc((w.ex || '').slice(0, 320)) + '… <a href="' + esc(w.u) + '" target="_blank" rel="noopener">Leer más</a></p>'; } });
   }
-  function closeP() { $('dr').hidden = true; $('main').classList.remove('hasp'); resize(); }
-  function resize() { setTimeout(function () { if (map) { map.invalidateSize(); layout(); } if (chart) chart.resize(); }, 30); }
+  function closeP() { $('dr').hidden = true; }
+  /* flotante: a la izquierda del listado si hay hueco (sin mover nada); si no, pegado al borde derecho */
+  function place() {
+    var dr = $('dr'), card = document.querySelector('#tAct .card:nth-child(2)'), w = Math.min(380, innerWidth - 32), r = 16;
+    if (card && !$('tAct').hidden && innerWidth > 1000) { var left = card.getBoundingClientRect().left; if (left - 10 - w > 80) r = innerWidth - left + 10; }
+    dr.style.right = r + 'px';
+  }
+  addEventListener('resize', function () { if (!$('dr').hidden) place(); });
 
   /* ───── histórico ───── */
   function fillHist() {
