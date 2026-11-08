@@ -9,7 +9,7 @@ El modelo ve solo el titular, así que el resultado es una pista orientativa, no
 Sin GEMINI_API_KEY el script termina sin error y sin tocar nada (el resto del workflow sigue).
 
 Uso (raíz del repo): GEMINI_API_KEY=... python3 scripts/atalaya/build_sentimiento.py
-Variables: GEMINI_MODEL (por defecto gemini-2.5-flash), MAX_NUEVOS (por defecto 400), LOTE (por defecto 40)
+Variables: GEMINI_MODEL (por defecto gemini-2.5-flash), MAX_NUEVOS (por defecto 400), LOTE (por defecto 100), PAUSA (s entre peticiones)
 """
 import hashlib, json, os, sys, time, urllib.error, urllib.request
 from datetime import datetime, timezone
@@ -20,7 +20,9 @@ NOTICIAS = RAIZ / "atalaya/data/noticias.json"
 SALIDA = RAIZ / "atalaya/data/sentimiento.json"
 MODELO = os.environ.get("GEMINI_MODEL") or "gemini-2.5-flash"
 MAX_NUEVOS = int(os.environ.get("MAX_NUEVOS") or 400)
-LOTE = int(os.environ.get("LOTE") or 40)
+LOTE = int(os.environ.get("LOTE") or 100)              # lotes grandes: la cuota gratuita de Gemini limita las PETICIONES, no los tokens
+PAUSA = float(os.environ.get("PAUSA") or 7)            # segundos entre peticiones (≈ 8 por minuto)
+MAX_FALLOS_SEGUIDOS = 2                                # con cuota agotada (429) no tiene sentido seguir insistiendo
 TEMAS = ["vivienda", "sanidad", "educación", "economía", "empleo", "corrupción y justicia", "seguridad", "inmigración", "infraestructuras",
          "medio ambiente", "cultura", "modelo territorial", "elecciones y partidos", "gestión municipal", "sucesos", "otros"]
 PARTIDOS = ["PP", "PSOE", "Vox", "Sumar", "Podemos", "otro", "ninguno"]
@@ -85,17 +87,21 @@ def main():
     actuales = {ident(n["u"]): n for n in noticias if n.get("u")}
     pendientes = [(i, n) for i, n in actuales.items() if i not in items][:MAX_NUEVOS]
     log(f"{len(actuales)} titulares; {len(items)} ya clasificados; {len(pendientes)} nuevos a clasificar con {MODELO}")
-    nuevos = fallos = 0
+    nuevos = fallos = seguidos = 0
     for k in range(0, len(pendientes), LOTE):
         lote = pendientes[k:k + LOTE]
         prompt = "Clasifica estos titulares (formato id | medio | titular):\n" + "\n".join(f"{i} | {n['m']} | {n['t']}" for i, n in lote)
         try: res = gemini(prompt)
         except Exception as e:
-            fallos += 1; log(f"Lote {k // LOTE + 1} fallido: {e}"); continue
+            fallos += 1; seguidos += 1; log(f"Lote {k // LOTE + 1} fallido: {str(e)[:160]}")
+            if seguidos >= MAX_FALLOS_SEGUIDOS: log("Demasiados fallos seguidos (¿cuota agotada?): se guarda lo clasificado y se sigue otro día."); break
+            continue
+        seguidos = 0
         ids = {i for i, _ in lote}
         for x in res:
             if x.get("id") in ids and valido(x):
                 items[x["id"]] = {"tono": x["tono"], "tema": x["tema"], "partido": x["partido"], "riesgo": x["riesgo"]}; nuevos += 1
+        time.sleep(PAUSA)
     items = {i: v for i, v in items.items() if i in actuales}           # la caché solo conserva lo que sigue en el feed
     if nuevos == 0 and not previo.get("items") and fallos:
         sys.exit("No se pudo clasificar ningún titular.")

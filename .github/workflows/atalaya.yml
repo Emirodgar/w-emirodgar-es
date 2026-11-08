@@ -54,9 +54,10 @@ jobs:
       - name: Sentimiento de los titulares (Gemini, opcional)
         # Si falta la clave o Gemini falla, el resto del workflow sigue con la heurística de palabras clave.
         continue-on-error: true
+        timeout-minutes: 12
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || vars.GEMINI_API_KEY }}
-          MAX_NUEVOS: ${{ steps.sem.outputs.semanal == 'true' && '1600' || '500' }}
+          MAX_NUEVOS: ${{ steps.sem.outputs.semanal == 'true' && '1000' || '400' }}
         run: python3 scripts/atalaya/build_sentimiento.py
 
       - name: Fichas indexables
