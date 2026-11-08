@@ -72,6 +72,18 @@ def main():
         db.execute("INSERT INTO analisis VALUES (?,?,?,?,?,?,?,?)", (aid, "palabras-clave", "0.1", ahora, None, None, int(a["r"]), None))
         g = SENT.get(a.get("i"))
         if g: db.execute("INSERT INTO analisis VALUES (?,?,?,?,?,?,?,?)", (aid, "gemini", SENT_MODELO, ahora, g["tono"] / 2, g["tema"], int(g["riesgo"] >= 2), g["riesgo"]))
+    # fuentes y contexto añadidos a mano en el menú Fuentes (atalaya/data/fuentes-propias.json)
+    TIPO = {"prensa_nacional": "prensa", "prensa_local": "prensa", "prensa_int": "prensa", "opinion": "opinion", "encuestas": "encuesta", "resultados": "oficial",
+            "demografia": "oficial", "macro": "oficial", "redes": "red_social", "eventos": "oficial", "documentos": "documento", "politicos": "oficial"}
+    propias = J(D / "fuentes-propias.json").get("fuentes", []) if (D / "fuentes-propias.json").exists() else []
+    for o in propias:
+        terr = o.get("territorio") if o.get("territorio") not in (None, "ES") else None
+        if o.get("tipo") == "contexto":
+            db.execute("INSERT INTO documento(tipo,territorio,fecha,url,titulo,texto) VALUES ('contexto_propio',?,?,?,?,?)",
+                       (terr, o.get("fecha") or ahora[:10], o.get("url") or None, o["nombre"], o.get("nota")))
+        else:
+            db.execute("INSERT INTO fuente(nombre,tipo,url,fiabilidad) VALUES (?,?,?,?)", (o["nombre"], TIPO.get(o.get("cat"), "documento"), o.get("url") or None, (o.get("fiab") or 3) / 5))
+
     # propuestas / posiciones de los partidos (módulo Programas)
     prog = J(D / "programas.json")
     for af in prog["afirmaciones"]:

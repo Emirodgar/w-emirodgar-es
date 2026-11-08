@@ -83,7 +83,8 @@ CREATE TABLE evento_articulo (evento_id INTEGER REFERENCES evento(id), articulo_
 
 -- ───────── Segundo cerebro: programas, propuestas, declaraciones ─────────
 CREATE TABLE documento (
-  id INTEGER PRIMARY KEY, tipo TEXT,                         -- programa, nota_prensa, entrevista, discurso, votacion
+  id INTEGER PRIMARY KEY, tipo TEXT,                         -- programa, nota_prensa, entrevista, discurso, votacion, contexto_propio
+  territorio TEXT REFERENCES territorio(codigo),            -- ámbito al que se refiere (contexto propio)
   partido_id TEXT REFERENCES partido(id), politico_id TEXT REFERENCES politico(id), fecha TEXT NOT NULL,
   url TEXT, titulo TEXT, texto TEXT
 );

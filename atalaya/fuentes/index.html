@@ -22,7 +22,8 @@ a{color:inherit}button,select,input,textarea{font:inherit;color:inherit}
 .tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
 .top{min-height:56px}
 .wrap{padding:12px 16px;max-width:1400px;margin:0 auto}
-.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-bottom:12px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:12px}
+.fr{font-size:12px;margin-top:3px}.fr.ok{color:var(--ok)}.fr.tarde{color:var(--bad);font-weight:600}
 .kpi,.card{background:var(--panel);border:1px solid var(--line);border-radius:8px}
 .kpi{padding:10px 14px}.kpi b{display:block;font-family:var(--mono);font-size:24px}.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
 .card{margin-bottom:12px;overflow:hidden}
@@ -94,7 +95,7 @@ td.c{text-align:center}.dot{display:inline-block;width:14px;height:14px;border-r
         <label for="te">Territorio</label><select id="te"><option value="ES">España (general)</option></select>
         <label for="fi">Fiabilidad (1–5)</label><select id="fi"><option>1</option><option>2</option><option>3</option><option selected>4</option><option>5</option></select>
         <label for="no">Notas o contexto</label><textarea id="no" maxlength="600" placeholder="Qué aporta, qué hay que saber, quién lo ha dicho…"></textarea>
-        <p style="margin-top:10px"><button class="btn pri" type="submit">Añadir</button></p>
+        <p style="margin-top:10px"><button class="btn pri" type="submit" id="subBtn">Añadir</button> <button class="btn" type="button" id="cancelEdit" hidden>Cancelar edición</button></p>
       </form>
       <div>
         <p class="hint">Lo que añadas se guarda <b>en este navegador</b> y suma a la cobertura del territorio elegido. Para que persista en el repositorio y lo lea el resto del sistema, exporta el JSON y guárdalo como <code>atalaya/data/fuentes-propias.json</code>.</p>
@@ -142,8 +143,10 @@ Promise.all([
   fetch('../data/programas.json').then(r=>r.json()).then(d=>{window.__prog=d.afirmaciones.reduce((n,a)=>n+Object.keys(a.posiciones).length,0)}).catch(()=>{}),
   fetch('../data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}})),
   fetch('../data/fuentes-propias.json').then(r=>r.ok?r.json():{fuentes:[]}).catch(()=>({fuentes:[]})),
+  fetch('../data/manifest.json').then(r=>r.ok?r.json():{}).catch(()=>({})),
   fetch('../../elecciones-espana/data/2026-11-29/encuestas.json').then(r=>r.json()).catch(()=>({sondeos:[]}))
-]).then(([f,n,e,p,ix,pg,_sent,_pad,_prog,pprov,sh,enc])=>{
+]).then(([f,n,e,p,ix,pg,_sent,_pad,_prog,pprov,sh,man,enc])=>{
+  window.__man=man;window.__encFecha=(enc.sondeos||[]).map(x=>x.fecha).sort().pop();
   window.__pp=pprov.prov||{};
   CAT=f.categorias;SRC=f.fuentes;NEWS=n.noticias;ESC=e;POLS=p.politicos;PROV=ix.prov;PGJ=pg;SHARED=(sh.fuentes||[]).map(x=>Object.assign({},x,{compartida:true}));
   MUN=ix.mun.filter(m=>PROV[m[0].slice(0,2)]).length;
@@ -172,11 +175,20 @@ function stars(n){return '★'.repeat(n)+'<span style="opacity:.25">'+'★'.repe
 
 function renderAll(){renderKpis();renderCat();renderOwn();renderCoverage()}
 
+function frescura(s){
+  let iso=null;
+  if(s.manifest&&window.__man&&window.__man[s.manifest])iso=window.__man[s.manifest];
+  else if(s.id==='sondeos'&&window.__encFecha)iso=window.__encFecha+'T12:00:00Z';
+  if(!iso||!s.max_dias)return null;
+  const d=(Date.now()-new Date(iso))/864e5;
+  return {txt:d<1?'hace '+Math.max(1,Math.round(d*24))+' h':'hace '+Math.round(d)+' d',tarde:d>s.max_dias,max:s.max_dias};
+}
 function renderKpis(){
+  const tarde=SRC.filter(s=>{const f=frescura(s);return f&&f.tarde}).length;
   const all=SRC.concat(allOwn().map(o=>Object.assign({estado:'propia'},o)));
   const act=SRC.filter(s=>s.estado==='activa'||s.estado==='parcial').length,pl=SRC.filter(s=>s.estado==='planificada').length;
   const cov=coverage(),avg=Math.round(cov.reduce((s,x)=>s+x.score,0)/cov.length);
-  $('kpis').innerHTML=[[all.length,'Fuentes y contextos'],[act,'Activas o parciales'],[pl,'Planificadas'],[NEWS.length,'Titulares capturados'],[avg+'/100','Cobertura media provincial']].map(k=>`<div class="kpi"><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
+  $('kpis').innerHTML=[[all.length,'Fuentes y contextos'],[act,'Activas o parciales'],[pl,'Planificadas'],[tarde,'Desactualizadas'],[NEWS.length,'Titulares capturados'],[avg+'/100','Cobertura media provincial']].map(k=>`<div class="kpi"><b>${k[0]}</b><span>${k[1]}</span></div>`).join('');
 }
 
 function renderCat(){
@@ -189,7 +201,7 @@ function renderCat(){
     const ls=list.filter(s=>s.cat===c.id);if(!ls.length)return;
     h+=`<div class="grp"><h3>${esc(c.nombre)} <span class="hint">· ${ls.length}</span></h3><p>${esc(c.desc)}</p></div>`;
     h+=ls.map(s=>{
-      const k=counts(s);
+      const k=counts(s),fr=frescura(s);
       let det='';
       if(s.id==='gnews'){
         const m={};NEWS.filter(x=>x.a==='local').forEach(x=>m[x.m]=(m[x.m]||0)+1);
@@ -198,7 +210,7 @@ function renderCat(){
       return `<div class="src"><div class="n"><b>${s.url?`<a href="${esc(s.url)}" ${/^https?:/.test(s.url)?'target="_blank" rel="noopener"':''}>${esc(s.nombre)}</a>`:esc(s.nombre)}</b><span class="sub">${esc(s.nota||'')}</span>${s.prioridad?`<span class="tag">prioridad ${esc(s.prioridad)}</span>`:''}${(s.usada||[]).map(u=>`<span class="tag">${esc(u)}</span>`).join('')}${det}</div>
         <div><span class="pill ${s.estado}">${{activa:'Activa',parcial:'Parcial',error:'Error',planificada:'Planificada',propia:s.tipo==='contexto'?'Contexto':'Propia'}[s.estado]}</span></div>
         <div class="sub">${esc(s.acceso||'')}<br>${esc(s.frecuencia||'')}</div>
-        <div class="sub">${esc(s.cobertura||'')}${k!=null?`<br><b style="color:var(--txt)">${k.toLocaleString('es')} registros</b>`:''}</div>
+        <div class="sub">${esc(s.cobertura||'')}${k!=null?`<br><b style="color:var(--txt)">${k.toLocaleString('es')} registros</b>`:''}${fr?`<div class="fr ${fr.tarde?'tarde':'ok'}">${fr.tarde?'⚠ Desactualizada · ':'Actualizado '}${fr.txt}${fr.tarde?` (máx. ${fr.max} d)`:''}</div>`:''}</div>
         <div class="stars" title="Fiabilidad">${stars(s.fiab||0)}</div></div>`}).join('');
   });
   $('cat').innerHTML=h||'<p class="hint">Sin resultados.</p>';
@@ -244,10 +256,19 @@ function initForm(){
   $('c').innerHTML=CAT.filter(c=>c.id!=='geo').map(c=>`<option value="${c.id}">${esc(c.nombre)}</option>`).join('');
   $('fc').innerHTML+=CAT.map(c=>`<option value="${c.id}">${esc(c.nombre)}</option>`).join('');
   $('te').innerHTML+=Object.entries(PROV).sort((a,b)=>a[1].localeCompare(b[1],'es')).map(([c,n])=>`<option value="${c}">${esc(n)}</option>`).join('');
+  let editId=null;
+  const endEdit=()=>{editId=null;$('form').reset();$('fi').value='4';$('subBtn').textContent='Añadir';$('cancelEdit').hidden=true};
+  window.__startEdit=id=>{
+    const o=OWN.find(x=>x.id===id);if(!o)return;editId=id;
+    $('n').value=o.nombre;$('t').value=o.tipo;$('c').value=o.cat;$('u').value=o.url||'';$('a').value=o.acceso;$('te').value=o.territorio;$('fi').value=String(o.fiab);$('no').value=o.nota||'';
+    $('subBtn').textContent='Guardar cambios';$('cancelEdit').hidden=false;$('anadir').scrollIntoView({behavior:'smooth'});$('n').focus();
+  };
+  $('cancelEdit').onclick=endEdit;
   $('form').onsubmit=e=>{
     e.preventDefault();
-    OWN.push({id:'own-'+Date.now(),nombre:$('n').value.trim(),tipo:$('t').value,cat:$('c').value,url:$('u').value.trim(),acceso:$('a').value,territorio:$('te').value,fiab:+$('fi').value,nota:$('no').value.trim(),fecha:new Date().toISOString().slice(0,10)});
-    saveOwn();e.target.reset();$('fi').value='4';renderAll();
+    const rec={nombre:$('n').value.trim(),tipo:$('t').value,cat:$('c').value,url:$('u').value.trim(),acceso:$('a').value,territorio:$('te').value,fiab:+$('fi').value,nota:$('no').value.trim(),fecha:new Date().toISOString().slice(0,10)};
+    if(editId)OWN=OWN.map(o=>o.id===editId?Object.assign({},o,rec):o);else OWN.push(Object.assign({id:'own-'+Date.now()},rec));
+    saveOwn();endEdit();renderAll();
   };
   ['fq','fc','fs'].forEach(id=>$(id).addEventListener('input',renderCat));
   $('exp').onclick=()=>{
@@ -263,8 +284,9 @@ function initForm(){
 }
 function renderOwn(){
   const ls=allOwn();
-  $('own').innerHTML=ls.length?ls.map(o=>`<div class="own"><div><b>${esc(o.nombre)}</b> ${o.compartida?'<span class="pill planificada">repositorio</span>':''}<br><span class="sub hint">${esc((CAT.find(c=>c.id===o.cat)||{}).nombre||'')} · ${o.territorio==='ES'?'España':esc(PROV[o.territorio]||o.territorio)}${o.nota?' · '+esc(o.nota.slice(0,90)):''}</span></div>${o.compartida?'':`<button class="btn" data-id="${esc(o.id)}" aria-label="Eliminar ${esc(o.nombre)}">Eliminar</button>`}</div>`).join(''):'<p class="hint">Todavía no has añadido nada.</p>';
+  $('own').innerHTML=ls.length?ls.map(o=>`<div class="own"><div><b>${esc(o.nombre)}</b> ${o.compartida?'<span class="pill planificada">repositorio</span>':''}<br><span class="sub hint">${esc((CAT.find(c=>c.id===o.cat)||{}).nombre||'')} · ${o.territorio==='ES'?'España':esc(PROV[o.territorio]||o.territorio)}${o.nota?' · '+esc(o.nota.slice(0,90)):''}</span></div>${o.compartida?'':`<span style="display:flex;gap:6px;flex:none"><button class="btn" data-edit="${esc(o.id)}" aria-label="Editar ${esc(o.nombre)}">Editar</button><button class="btn" data-id="${esc(o.id)}" aria-label="Eliminar ${esc(o.nombre)}">Eliminar</button></span>`}</div>`).join(''):'<p class="hint">Todavía no has añadido nada.</p>';
   $('own').querySelectorAll('button[data-id]').forEach(b=>b.onclick=()=>{OWN=OWN.filter(o=>o.id!==b.dataset.id);saveOwn();renderAll()});
+  $('own').querySelectorAll('button[data-edit]').forEach(b=>b.onclick=()=>window.__startEdit(b.dataset.edit));
 }
 })();
 </script>

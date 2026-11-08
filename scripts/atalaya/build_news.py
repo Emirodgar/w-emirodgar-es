@@ -120,3 +120,5 @@ def main():
         ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(len(out), "titulares;", sum(1 for x in out if x["a"] == "local"), "locales;", sum(1 for x in out if x["mun"]), "con municipio;", sum(1 for x in out if x["r"]), "de riesgo")
 main()
+from manifest import marcar
+marcar("noticias")

@@ -232,3 +232,5 @@ def main():
     for n, r, niv, rs in items:
         if n in ("Salamanca", "Barcelona", "Sevilla", "Madrid"): print(n, "|", niv, "|", rs[:200])
 main()
+from manifest import marcar
+marcar("fichas")

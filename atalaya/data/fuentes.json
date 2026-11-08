@@ -105,7 +105,9 @@
    "match": [
     "El País"
    ],
-   "nota": "Feed de la sección España."
+   "nota": "Feed de la sección España.",
+   "manifest": "noticias",
+   "max_dias": 2
   },
   {
    "id": "elmundo",
@@ -125,7 +127,9 @@
    "match": [
     "El Mundo"
    ],
-   "nota": ""
+   "nota": "",
+   "manifest": "noticias",
+   "max_dias": 2
   },
   {
    "id": "20min",
@@ -144,7 +148,9 @@
    "match": [
     "20minutos"
    ],
-   "nota": ""
+   "nota": "",
+   "manifest": "noticias",
+   "max_dias": 2
   },
   {
    "id": "europapress",
@@ -163,7 +169,9 @@
    "match": [
     "Europa Press"
    ],
-   "nota": "Agencia: base de muchas noticias de otros medios."
+   "nota": "Agencia: base de muchas noticias de otros medios.",
+   "manifest": "noticias",
+   "max_dias": 2
   },
   {
    "id": "eldiario",
@@ -198,7 +206,9 @@
     "Fichas"
    ],
    "matchAmbito": "local",
-   "nota": "Agrega prensa local de las 52 provincias, pero mete ruido (otras provincias y países). Ahora complementa a los RSS directos, que ganan en los duplicados."
+   "nota": "Agrega prensa local de las 52 provincias, pero mete ruido (otras provincias y países). Ahora complementa a los RSS directos, que ganan en los duplicados.",
+   "manifest": "noticias",
+   "max_dias": 2
   },
   {
    "id": "rss_local",
@@ -218,7 +228,9 @@
     "Fichas"
    ],
    "nota": "Descubiertos y validados con descubrir_rss.py (medios_locales.json). 30 de 70 medios probados no publican RSS abierto (La Voz de Galicia, Faro de Vigo, La Nueva España, Levante-EMV, Información…): son el siguiente hueco, que cubre hoy Google Noticias.",
-   "contar": "rss_local"
+   "contar": "rss_local",
+   "manifest": "noticias",
+   "max_dias": 2
   },
   {
    "id": "prensa_int",
@@ -263,7 +275,8 @@
     "Fichas"
    ],
    "contar": "encuestas",
-   "nota": "Media ponderada por antigüedad y muestra."
+   "nota": "Media ponderada por antigüedad y muestra.",
+   "max_dias": 10
   },
   {
    "id": "cis",
@@ -308,7 +321,9 @@
     "Mapa de cobertura"
    ],
    "contar": "escanos",
-   "nota": "Fuente secundaria (Wikipedia, que recoge datos oficiales). Madrid, Navarra, Tenerife, Ávila y Valladolid ya cargan; Tenerife no trae el total de escaños. Sustituir por Interior cuando se descargue."
+   "nota": "Fuente secundaria (Wikipedia, que recoge datos oficiales). Madrid, Navarra, Tenerife, Ávila y Valladolid ya cargan; Tenerife no trae el total de escaños. Sustituir por Interior cuando se descargue.",
+   "manifest": "escanos",
+   "max_dias": 14
   },
   {
    "id": "interior",
@@ -341,7 +356,9 @@
     "Mapa de cobertura"
    ],
    "nota": "Población oficial por municipio y año (2011, 2015, 2019, 2023 y último). Falta edad, sexo y renta para ponderar y estimar (MRP).",
-   "contar": "padron"
+   "contar": "padron",
+   "manifest": "padron",
+   "max_dias": 400
   },
   {
    "id": "macrodata",
@@ -458,7 +475,9 @@
     "Seguimiento de promesas"
    ],
    "nota": "115 posiciones, 99 documentadas con fuente. Faltan los PDFs completos de los programas de 2023 y 2026 y las propuestas de partidos regionales.",
-   "contar": "programas"
+   "contar": "programas",
+   "manifest": "programas",
+   "max_dias": 14
   },
   {
    "id": "wiki_foto",
@@ -505,7 +524,9 @@
     "Panel lateral de políticos"
    ],
    "contar": "candidatos_prov",
-   "nota": "Fuente secundaria; se actualiza al proclamarse las listas definitivas."
+   "nota": "Fuente secundaria; se actualiza al proclamarse las listas definitivas.",
+   "manifest": "politicos_prov",
+   "max_dias": 14
   },
   {
    "id": "wikidata_gob",
@@ -521,7 +542,9 @@
     "Panel lateral de políticos"
    ],
    "contar": "gobierno_prov",
-   "nota": "Faltan alcaldes en Albacete, Palma, Santa Cruz de Tenerife, Segovia, Ceuta y Melilla, y presidente autonómico de Navarra, Ceuta y Melilla. Se pueden completar como contexto propio. No hay presidentes de diputación."
+   "nota": "Faltan alcaldes en Albacete, Palma, Santa Cruz de Tenerife, Segovia, Ceuta y Melilla, y presidente autonómico de Navarra, Ceuta y Melilla. Se pueden completar como contexto propio. No hay presidentes de diputación.",
+   "manifest": "politicos_prov",
+   "max_dias": 14
   },
   {
    "id": "candidatos",
@@ -556,7 +579,9 @@
     "Peligros"
    ],
    "contar": "sentimiento",
-   "nota": "Solo ve el titular, no el artículo: orientativa. Sustituye a la heurística de palabras clave cuando hay clasificación; sin ella el panel vuelve a las palabras clave. Primer análisis real del tono de la prensa por territorio."
+   "nota": "Solo ve el titular, no el artículo: orientativa. Sustituye a la heurística de palabras clave cuando hay clasificación; sin ella el panel vuelve a las palabras clave. Primer análisis real del tono de la prensa por territorio.",
+   "manifest": "sentimiento",
+   "max_dias": 3
   }
  ]
 }

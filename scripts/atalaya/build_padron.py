@@ -43,3 +43,5 @@ def main():
     for c in ("37274", "28079", "08019"):
         print(c, mun.get(c))
 main()
+from manifest import marcar
+marcar("padron")

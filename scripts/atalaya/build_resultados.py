@@ -104,3 +104,5 @@ def main():
         s = ok.get(k)
         if s: print(prov[k], s["elecciones"][-2:], {p: v[-2:] for p, v in s["partidos"].items() if p in ("PP", "PSOE", "Vox", "Sumar", "Podemos")}, "total", (s.get("total") or [None])[-2:])
 main()
+from manifest import marcar
+marcar("escanos")

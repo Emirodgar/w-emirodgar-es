@@ -207,3 +207,5 @@ def main():
           "candidatos:", sum(1 for p in res.values() if p["candidatos"]), "provincias,", sum(len(p["candidatos"]) for p in res.values()), "personas")
     s = res["37"]; print("Salamanca", [(x["rol"], x["nombre"]) for x in s["gobierno"]], [(x["partido"], x["nombre"]) for x in s["candidatos"]])
 main()
+from manifest import marcar
+marcar("politicos_prov")

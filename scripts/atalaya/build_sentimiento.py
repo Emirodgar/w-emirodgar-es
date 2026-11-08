@@ -81,7 +81,7 @@ def valido(x):
 
 def main():
     if not os.environ.get("GEMINI_API_KEY"):
-        log("Sin GEMINI_API_KEY: se omite la clasificación de sentimiento."); return
+        log("Sin GEMINI_API_KEY: se omite la clasificación de sentimiento."); return False
     noticias = json.loads(NOTICIAS.read_text(encoding="utf8"))["noticias"]
     previo = json.loads(SALIDA.read_text(encoding="utf8")) if SALIDA.exists() else {"items": {}}
     items = previo.get("items", {})
@@ -111,4 +111,7 @@ def main():
                                   "items": items}, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     tonos = [v["tono"] for v in items.values()]
     log(f"Clasificados {nuevos} nuevos ({fallos} lotes fallidos). Total {len(items)}. Tono medio {sum(tonos) / max(1, len(tonos)):+.2f}; negativos {sum(1 for t in tonos if t < 0)}; riesgo>=2: {sum(1 for v in items.values() if v['riesgo'] >= 2)}")
-main()
+    return True
+if main():   # solo se marca como actualizado si realmente se ha clasificado algo
+    from manifest import marcar
+    marcar("sentimiento")

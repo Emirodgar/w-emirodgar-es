@@ -28,3 +28,5 @@ def main():
     n = sum(len(a["posiciones"]) for a in afs)
     print(len(afs), "afirmaciones;", n, "posiciones;", sum(1 for a in afs for p in a["posiciones"].values() if p["posicion"] != "sin_posicion"), "con posición documentada")
 main()
+from manifest import marcar
+marcar("programas")
