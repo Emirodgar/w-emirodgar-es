@@ -55,10 +55,12 @@ jobs:
       - name: Archivo permanente de encuestas (diario; solo añade)
         run: python3 scripts/atalaya/build_encuestas.py
 
-      - name: Congreso y Senado (semanal; solo añade, el Senado se reanuda si limita el acceso)
-        if: steps.sem.outputs.semanal == 'true'
+      - name: Congreso y Senado (solo añade; el Senado se completa por tandas si limita el acceso)
         continue-on-error: true
         timeout-minutes: 30
+        env:
+          SEMANAL: ${{ steps.sem.outputs.semanal == 'true' && '1' || '0' }}
+          MAX_FICHAS: '300'
         run: python3 scripts/atalaya/build_parlamento.py
 
       - name: Sentimiento de los titulares (Gemini, opcional)

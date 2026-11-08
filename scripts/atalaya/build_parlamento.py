@@ -136,7 +136,7 @@ def ficha(arg):
     id_, leg = arg
     if BLOQUEO["n"] >= 8: return id_, None
     for i in range(3):
-        time.sleep(0.35)
+        time.sleep(1.2)
         x = curl(f"https://www.senado.es/web/ficopendataservlet?tipoFich=1&cod={id_}&legis={leg}").decode("utf8", "replace")
         if "<fichaSenador>" in x and "<numLeg>" in x: BLOQUEO["n"] = 0; break
         BLOQUEO["n"] += 1; time.sleep(1 + i)
@@ -164,11 +164,14 @@ def senado():
         proc = unescape(re.sub(r"\s+", " ", proc)).strip(); tipo = proc.split(":")[0]
         pers.setdefault(id_, {"n": titulo(unescape(nom))})
         mand.append({"p": id_, "l": leg, "g": gcod, "gn": unescape(gname).title(), "t": {"Electo": "E", "Electa": "E"}.get(tipo, "R" if "real" in tipo else "D"),
-                     "cn": proc.split(":", 1)[-1].strip(), "c": prov_de(proc), "e": "pasado"})
+                     "cn": proc.split(":", 1)[-1].strip(), "c": prov_de(proc), "e": None if leg == 15 else "pasado"})   # None = no se toca el estado anterior
     # fichas pendientes: quien no tiene su historial completo y todos los de la legislatura actual (su estado cambia)
-    pend = [(i, l) for i, l in ultima.items() if l == 15 or not previo["personas"].get(i, {}).get("completo")]
-    print(f"   fichas del Senado a leer: {len(pend)}")
-    with ThreadPoolExecutor(4) as ex: fichas = dict(ex.map(ficha, pend))
+    import os
+    pend = [(i, l) for i, l in ultima.items() if not previo["personas"].get(i, {}).get("completo") or (l == 15 and os.environ.get("SEMANAL") == "1")]
+    pend.sort(key=lambda t: t[1] != 15)   # primero la legislatura actual
+    total = len(pend); pend = pend[:int(os.environ.get("MAX_FICHAS", "300"))]   # tope por ejecución: se completa en varias pasadas
+    print(f"   fichas del Senado pendientes: {total}; se leen {len(pend)} en esta pasada")
+    with ThreadPoolExecutor(2) as ex: fichas = dict(ex.map(ficha, pend))
     ok = 0
     for id_, f in fichas.items():
         if f is None: continue
@@ -184,7 +187,7 @@ def senado():
                 m["e"] = "baja" if g["baja_txt"] else "activo"; m["vig"] = not g["baja_txt"]; m["bio"] = f["bio"]
     print(f"   fichas leídas: {ok}/{len(pend)}" + ("  (el Senado limitó el acceso: vuelve a ejecutar más tarde para completar)" if ok < len(pend) else ""))
     return {"fuente": "https://www.senado.es/web/composicionorganizacion/senadores/composicionsenado/senadoresdesde1977/", "capturado": HOY, "legislatura_actual": 15,
-            "historico_completo": ok >= len(pend) and all(pers[i].get("completo") or previo["personas"].get(i, {}).get("completo") for i in ultima),
+            "historico_completo": all(pers[i].get("completo") or previo["personas"].get(i, {}).get("completo") for i in ultima),
             "legislaturas": legs, "personas": pers, "mandatos": mand}
 
 def main():
