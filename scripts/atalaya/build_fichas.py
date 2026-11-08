@@ -183,7 +183,7 @@ def main():
                    f"<li>Encuestas: sondeos publicados por empresas y medios, ponderados por antigüedad y tamaño de muestra, en <a href='/elecciones-espana/'>Elecciones en España</a>.</li>"
                    "<li>Noticias: titulares por RSS de medios nacionales y de Google Noticias para prensa local, etiquetados por provincia.</li>"
                    "<li>Método: el partido con más escaños en 2023 y su regularidad en las últimas seis convocatorias, contrastados con la tendencia nacional de encuestas.</li></ul>"
-                   f"<p>Explora el territorio en el <a href='/atalaya/#{pc}'>panel Atalaya</a> y consulta <a href='/atalaya/fuentes/'>todas las fuentes de datos</a>.</p>")
+                   f"<p>Explora el territorio en el <a href='/atalaya/#{pc}'>panel Atalaya</a>.</p>")
         faqs = [(q, resp)]
         if faq_hist: faqs.append((f"¿Quién ganó en {nombre} en las elecciones generales de 2023?", faq_hist + (f" Obtuvo {v['partidos'][L][-1]} de {tot} escaños." if tot else "")))
         faqs.append((f"¿Cuándo son las próximas elecciones generales?", f"Las elecciones generales se celebran el 29 de noviembre de 2026."))

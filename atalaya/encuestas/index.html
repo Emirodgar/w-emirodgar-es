@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Encuestas | Atalaya</title>
+<meta name="description" content="Carga encuestas electorales, calcula su media ponderada y proyecta rangos de resultado para detectar puntos débiles y oportunidades.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/encuestas/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+button,select,input,textarea{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.wrap{display:grid;grid-template-columns:minmax(280px,340px) minmax(0,1fr);gap:12px;padding:12px 16px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap}
+.card>h2 em{font-style:normal;color:var(--acc)}
+.body{padding:12px 14px}
+.ctl label{display:block;font-size:12px;color:var(--mut);margin:10px 0 3px;text-transform:uppercase;letter-spacing:.05em}
+.ctl input[type=text],.ctl input[type=date],.ctl input[type=number],.ctl select,.ctl textarea{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 9px}
+.ctl textarea{min-height:70px;resize:vertical;font-family:var(--mono);font-size:12px}
+.ctl input[type=range]{width:100%;accent-color:var(--acc)}
+.ctl .rl{display:flex;justify-content:space-between;align-items:baseline}
+.ctl output{font-family:var(--mono);font-size:12px;color:var(--txt)}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pv{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.pv label{margin-top:8px}.pv input{padding:7px 4px;text-align:center}
+.disc{color:var(--mut);font-size:12px;margin-top:10px}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 12px;cursor:pointer;font-size:13px}.btn:hover{border-color:var(--acc)}
+.btn.pri{background:var(--acc);color:#04222a;border-color:var(--acc);font-weight:600}
+.btn.sm{padding:3px 8px;font-size:12px}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px;margin-bottom:12px}
+.m{background:var(--panel2);border-radius:6px;padding:8px 10px;border-top:3px solid var(--c,var(--line))}.m span{display:block;font-size:12px;color:var(--mut)}.m b{font-family:var(--mono);font-size:20px}.m small{display:block;font-family:var(--mono);font-size:12px;color:var(--mut)}
+.bars{display:grid;gap:9px}
+.br{display:grid;grid-template-columns:70px 1fr 150px;gap:10px;align-items:center;font-size:13px}
+.br .t{position:relative;height:16px;background:var(--panel2);border-radius:4px}
+.br .t i{position:absolute;top:0;bottom:0;border-radius:4px;background:var(--c);opacity:.28}
+.br .t u{position:absolute;top:3px;bottom:3px;width:3px;margin-left:-1px;background:var(--c);border-radius:2px}
+.br .v{font-family:var(--mono);font-size:12px;color:var(--mut);text-align:right}.br .v b{color:var(--txt)}
+.chartbox{height:260px;position:relative}
+.ins{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
+.in{background:var(--panel2);border-left:3px solid var(--k);border-radius:4px;padding:10px 12px;font-size:13px}
+.in small{display:block;color:var(--k);font-family:var(--mono);font-size:12px;letter-spacing:.08em;margin-bottom:4px;text-transform:uppercase}
+.in.w{--k:var(--bad)}.in.o{--k:var(--ok)}.in.n{--k:var(--warn)}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child,th.l,td.l{text-align:left}
+th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--mut);letter-spacing:.06em}
+td.x{color:var(--mut)}.neg{color:var(--bad)}.pos{color:var(--ok)}
+.empty{padding:14px;color:var(--mut)}
+.sub{color:var(--mut);font-size:12px}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}}
+@media (max-width:600px){.br{grid-template-columns:56px 1fr}.br .v{grid-column:1/-1;text-align:left}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js"></script>
+<header class="top">
+  <h1 class="pt">Encuestas <small>media, rangos y puntos débiles</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<main class="wrap">
+  <div>
+    <section class="card">
+      <h2>Cargar encuesta</h2>
+      <form class="body ctl" id="f" autocomplete="off">
+        <div class="g2">
+          <div><label for="fd">Fecha</label><input type="date" id="fd" required></div>
+          <div><label for="fn">Muestra</label><input type="number" id="fn" min="100" max="100000" value="1000"></div>
+        </div>
+        <label for="fe">Empresa</label><input type="text" id="fe" maxlength="40" required placeholder="GAD3, 40dB, CIS…">
+        <div class="pv">
+          <div><label for="v0">PP</label><input type="number" id="v0" step="0.1" min="0" max="100"></div>
+          <div><label for="v1">PSOE</label><input type="number" id="v1" step="0.1" min="0" max="100"></div>
+          <div><label for="v2">Vox</label><input type="number" id="v2" step="0.1" min="0" max="100"></div>
+          <div><label for="v3">Sumar</label><input type="number" id="v3" step="0.1" min="0" max="100"></div>
+          <div><label for="v4">Podem.</label><input type="number" id="v4" step="0.1" min="0" max="100"></div>
+        </div>
+        <p class="disc">% de estimación de voto. Deja vacío el partido que la encuesta no incluya.</p>
+        <div class="row"><button class="btn pri" type="submit">Añadir</button></div>
+      </form>
+    </section>
+    <section class="card">
+      <h2>Importar / exportar</h2>
+      <div class="body ctl">
+        <div class="row" style="margin-top:0"><button class="btn" id="bImp" type="button">Traer las de Elecciones en España</button></div>
+        <label for="csv">Pegar CSV</label>
+        <textarea id="csv" placeholder="fecha,empresa,muestra,PP,PSOE,Vox,Sumar,Podemos&#10;2026-11-02,GAD3,1000,32.1,26.0,18.5,7.0,"></textarea>
+        <div class="row"><button class="btn" id="bCsv" type="button">Importar CSV</button><button class="btn" id="bExp" type="button">Exportar JSON</button><button class="btn" id="bClr" type="button">Borrar todo</button></div>
+        <p class="disc" id="msg" role="status"></p>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Supuestos del modelo</h2>
+      <div class="body ctl">
+        <label for="hl"><span class="rl"><span>Vida media de una encuesta</span><output id="hlo"></output></span></label><input type="range" id="hl" min="4" max="45" value="14">
+        <label for="se"><span class="rl"><span>Error sistemático de las encuestas</span><output id="seo"></output></span></label><input type="range" id="se" min="0" max="40" value="15">
+        <label for="dr"><span class="rl"><span>Deriva hasta el día de la votación</span><output id="dro"></output></span></label><input type="range" id="dr" min="0" max="30" value="12">
+        <label for="cis"><span class="rl"><span>Incluir al CIS en la media</span></span></label><select id="cis"><option value="0">No (metodología distinta)</option><option value="1">Sí</option></select>
+        <label for="mine">Mi partido (para el diagnóstico)</label><select id="mine"></select>
+        <p class="disc">Los intervalos combinan error de muestreo, dispersión entre encuestas, error sistemático y deriva. Son supuestos editables, no una predicción oficial.</p>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <section class="card">
+      <h2>Previsión de voto <em id="pvInfo"></em></h2>
+      <div class="body" id="forecast"></div>
+    </section>
+    <section class="card">
+      <h2>Puntos débiles y oportunidades <em id="insFor"></em></h2>
+      <div class="body" id="insights"></div>
+    </section>
+    <section class="card">
+      <h2>Evolución de la media</h2>
+      <div class="body"><div class="chartbox"><canvas id="ch" aria-label="Evolución de la media de encuestas por partido"></canvas></div></div>
+    </section>
+    <section class="card">
+      <h2>Sesgo por empresa <em>desvío frente a la media, puntos</em></h2>
+      <div class="body tw" id="house"></div>
+    </section>
+    <section class="card">
+      <h2>Encuestas cargadas <em id="cnt"></em></h2>
+      <div class="body tw" id="list"></div>
+    </section>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+var PARTS=[['PP','#3b9cff','d'],['PSOE','#ef4444','i'],['Vox','#7ac943','d'],['Sumar','#d6246e','i'],['Podemos','#9b59d0','i']];
+var ELECTION=new Date('2026-11-29T00:00:00'),KEY='atalaya-encuestas',N=5000;
+var ID2I={PP:0,PSOE:1,VOX:2,SUMAR:3,PODEMOS:4};
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var f1=function(x){return (Math.round(x*10)/10).toFixed(1).replace('.',',')};
+var sg=function(x){var r=Math.round(x*10)/10;return (r>0?'+':r<0?'−':'')+f1(Math.abs(r))};
+var DAY=864e5,polls=[],chart;
+
+function load(){try{polls=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){polls=[]}}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(polls))}catch(e){say('No se pudo guardar en el navegador: exporta el JSON para no perderlas.')}}
+function say(t){$('msg').textContent=t}
+function isCis(p){return /^cis/i.test(p.empresa.trim())}
+function used(p){return p.on!==false&&(!isCis(p)||$('cis').value==='1')}
+function dt(s){return new Date(s+'T00:00:00')}
+function clean(v){var o=[];for(var i=0;i<5;i++){var x=v[i];o.push(x===''||x==null||isNaN(+x)?null:+x)}return o}
+function addPoll(p){
+  if(!/^\d{4}-\d\d-\d\d$/.test(p.fecha)||!p.empresa||p.v.every(function(x){return x==null}))return false;
+  if(p.v.some(function(x){return x!=null&&(x<0||x>100)}))return false;
+  var d=polls.some(function(q){return q.fecha===p.fecha&&q.empresa.toLowerCase()===p.empresa.toLowerCase()});
+  if(d)return false;
+  polls.push({fecha:p.fecha,empresa:p.empresa.trim().slice(0,40),n:Math.max(100,+p.n||1000),v:p.v,on:!isCis(p)});
+  return true;
+}
+
+/* Media ponderada a una fecha: peso = 0,5^(edad/vida media) · √muestra. Solo cuentan los sondeos que incluyen al partido. */
+function agg(ref,hl,maxAge){
+  var res=PARTS.map(function(){return {s:0,w:0,w2:0,ns:0,k:0,vals:[]}});
+  polls.forEach(function(p){
+    if(!used(p))return;var age=(ref-dt(p.fecha))/DAY;if(age<0||age>maxAge)return;
+    var dec=Math.pow(.5,age/hl),w=dec*Math.sqrt(p.n);
+    p.v.forEach(function(x,i){if(x==null)return;var r=res[i];r.s+=x*w;r.w+=w;r.w2+=w*w;r.ns+=p.n*dec;r.k++;r.vals.push([x,w])});
+  });
+  return res.map(function(r){
+    if(!r.w)return null;var m=r.s/r.w,vr=0;r.vals.forEach(function(a){vr+=a[1]*Math.pow(a[0]-m,2)});vr/=r.w;
+    var neff=r.w*r.w/r.w2;
+    return {m:m,k:r.k,ns:r.ns,disp:Math.sqrt(vr),neff:neff};
+  });
+}
+function latest(){var d=0;polls.forEach(function(p){if(used(p)){var t=+dt(p.fecha);if(t>d)d=t}});return d?new Date(d):null}
+function trend(ref,hl){ /* pendiente ponderada (puntos cada 14 días) con los últimos 45 días */
+  return PARTS.map(function(_,i){
+    var pts=[];polls.forEach(function(p){if(!used(p)||p.v[i]==null)return;var a=(ref-dt(p.fecha))/DAY;if(a>=0&&a<=45)pts.push([-a,p.v[i],Math.pow(.5,a/(hl*2))*Math.sqrt(p.n)])});
+    if(pts.length<4)return null;var W=0,X=0,Y=0;pts.forEach(function(q){W+=q[2];X+=q[2]*q[0];Y+=q[2]*q[1]});X/=W;Y/=W;
+    var sxx=0,sxy=0;pts.forEach(function(q){sxx+=q[2]*Math.pow(q[0]-X,2);sxy+=q[2]*(q[0]-X)*(q[1]-Y)});
+    var span=Math.max.apply(null,pts.map(function(q){return q[0]}))-Math.min.apply(null,pts.map(function(q){return q[0]}));
+    return span<10||!sxx?null:sxy/sxx*14;
+  });
+}
+function gauss(r){var u=1-r(),v=r();return Math.sqrt(-2*Math.log(u))*Math.cos(2*Math.PI*v)}
+function rng(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+
+function model(){
+  var ref=latest();if(!ref)return null;var hl=+$('hl').value,A=agg(ref,hl,60);
+  var days=Math.max(0,Math.round((ELECTION-new Date())/DAY)),sys=+$('se').value/10,drift=+$('dr').value/100*Math.sqrt(days);
+  var sd=A.map(function(a){
+    if(!a)return null;var p=a.m/100,samp=100*Math.sqrt(p*(1-p)/Math.max(a.ns,300)),disp=a.k>1?a.disp/Math.sqrt(a.k):0;
+    return Math.sqrt(samp*samp+disp*disp+sys*sys*(a.m/25)+drift*drift*(a.m/25));
+  });
+  var r=rng(20261129),first=PARTS.map(function(){return 0}),rank=PARTS.map(function(){return []}),ppAhead=0,rightAhead=0,gaps=[];
+  for(var n=0;n<N;n++){
+    var sh=A.map(function(a,i){return a?Math.max(0,a.m+gauss(r)*sd[i]):null}),best=-1;
+    sh.forEach(function(x,i){if(x!=null&&(best<0||x>sh[best]))best=i;if(x!=null)rank[i].push(x)});
+    if(best>=0)first[best]++;
+    if(sh[0]!=null&&sh[1]!=null&&sh[0]>sh[1])ppAhead++;
+    var R=(sh[0]||0)+(sh[2]||0),L=(sh[1]||0)+(sh[3]||0)+(sh[4]||0);gaps.push(R-L);if(R>L)rightAhead++;
+  }
+  gaps.sort(function(a,b){return a-b});
+  var q=function(arr,p){return arr[Math.min(arr.length-1,Math.floor(arr.length*p))]};
+  return {ref:ref,days:days,A:A,sd:sd,tr:trend(ref,hl),pfirst:first.map(function(x){return x/N}),ppAhead:ppAhead/N,rightAhead:rightAhead/N,
+    gap:{m:q(gaps,.5),lo:q(gaps,.1),hi:q(gaps,.9)},
+    rng:rank.map(function(a){if(!a.length)return null;a.sort(function(x,y){return x-y});return [q(a,.1),q(a,.9)]})};
+}
+
+function house(M){
+  var by={};
+  polls.forEach(function(p){if(!used(p))return;var o=by[p.empresa]||(by[p.empresa]={n:0,d:PARTS.map(function(){return {s:0,c:0}})});o.n++;
+    p.v.forEach(function(x,i){if(x!=null&&M.A[i]){o.d[i].s+=x-M.A[i].m;o.d[i].c++}})});
+  var names=Object.keys(by).sort();
+  if(!names.length)return '';
+  return '<table><thead><tr><th>Empresa</th><th>Encuestas</th>'+PARTS.map(function(p){return '<th>'+p[0]+'</th>'}).join('')+'</tr></thead><tbody>'+names.map(function(k){
+    return '<tr><td>'+esc(k)+'</td><td>'+by[k].n+'</td>'+by[k].d.map(function(d){if(!d.c)return '<td class="x">·</td>';var v=d.s/d.c;return '<td class="'+(Math.abs(v)<.8?'':v>0?'pos':'neg')+'">'+sg(v)+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table><p class="disc">Con pocas encuestas por empresa el desvío es orientativo: mezcla sesgo real y fecha de campo.</p>';
+}
+
+function insights(M){
+  var mine=+$('mine').value,out=[],A=M.A,P=PARTS[mine];
+  if(!A[mine]){return '<p class="empty">Ninguna encuesta incluye a '+esc(P[0])+'.</p>'}
+  var a=A[mine],rank=A.map(function(x,i){return [i,x?x.m:-1]}).sort(function(x,y){return y[1]-x[1]}).map(function(x){return x[0]}),pos=rank.indexOf(mine);
+  var top=rank[0],rival=pos===0?rank[1]:top;
+  if(pos>0){var gap=A[top].m-a.m;out.push(['w','Distancia al primero','A '+f1(gap)+' puntos de '+PARTS[top][0]+' ('+f1(a.m)+' % frente a '+f1(A[top].m)+' %). Probabilidad de ser primero: '+Math.round(M.pfirst[mine]*100)+' %.'])}
+  else{out.push(['o','Líder de la media','Lidera con '+f1(a.m)+' %, '+f1(a.m-A[rival].m)+' puntos sobre '+PARTS[rival][0]+'. Probabilidad de ser primero: '+Math.round(M.pfirst[mine]*100)+' %.'])}
+  if(M.tr[mine]!=null){var t=M.tr[mine];out.push([t<=-.3?'w':t>=.3?'o':'n','Tendencia',(t<=-.3?'Cae ':t>=.3?'Sube ':'Estable: ')+sg(t)+' puntos cada 14 días en las últimas encuestas.'])}
+  var spread=a.k>1?a.disp:0;if(spread>=1.5)out.push(['n','Encuestas que no coinciden','Desviación de '+f1(spread)+' puntos entre encuestas: la media esconde discrepancias. Mira el sesgo por empresa antes de leerla como un dato firme.']);
+  if(pos>0&&pos<=2&&M.pfirst[mine]>.05&&M.pfirst[mine]<.6)out.push(['o','Resultado abierto','Con un margen de '+f1(M.rng[mine][0])+'–'+f1(M.rng[mine][1])+' %, la primera plaza no está cerrada. Movilizar y recuperar indecisos puede inclinarla.']);
+  var next=rank[pos+1];if(next!=null&&A[next]){var d=a.m-A[next].m;if(d<2)out.push(['w','Adelantado por poco','Solo '+f1(d)+' puntos sobre '+PARTS[next][0]+'. Los intervalos se solapan: riesgo real de perder esa posición.'])}
+  var right=P[2]==='d',gp=right?M.rightAhead:1-M.rightAhead;
+  out.push([gp>.5?'o':'w','Bloque ('+(right?'PP + Vox':'PSOE + Sumar + Podemos')+')','Probabilidad de sumar más voto que el bloque contrario: '+Math.round(gp*100)+' %. Diferencia estimada '+sg(right?M.gap.m:-M.gap.m)+' puntos (rango '+sg(right?M.gap.lo:-M.gap.hi)+' a '+sg(right?M.gap.hi:-M.gap.lo)+').']);
+  if(a.k>=3){var lo=null,hi=null;polls.forEach(function(p){if(used(p)&&p.v[mine]!=null&&(lo==null||p.v[mine]<lo.v))lo={v:p.v[mine],e:p.empresa};if(used(p)&&p.v[mine]!=null&&(hi==null||p.v[mine]>hi.v))hi={v:p.v[mine],e:p.empresa}});
+    if(lo&&hi&&hi.v-lo.v>=2)out.push(['n','Techo y suelo','Va de '+f1(lo.v)+' % ('+esc(lo.e)+') a '+f1(hi.v)+' % ('+esc(hi.e)+'). Cada punto cuenta: es la franja donde se decide el relato.'])}
+  return '<div class="ins">'+out.map(function(o){return '<div class="in '+o[0]+'"><small>'+({w:'Punto débil',o:'Oportunidad',n:'A vigilar'}[o[0]])+' · '+o[1]+'</small>'+o[2]+'</div>'}).join('')+'</div><p class="disc">Lectura automática del modelo nacional. No sustituye al análisis territorial: las provincias pueden ir en sentido contrario a la media.</p>';
+}
+
+function render(){
+  var ofr=polls.filter(used).length;$('cnt').textContent=polls.length+' · '+ofr+' en la media';
+  list();
+  var M=model();
+  if(!M){$('forecast').innerHTML='<p class="empty">Carga al menos una encuesta (o trae las de Elecciones en España) para ver la media y los rangos.</p>';$('insights').innerHTML='';$('house').innerHTML='';$('pvInfo').textContent='';$('insFor').textContent='';drawChart(null);return}
+  $('pvInfo').textContent='a '+M.ref.toLocaleDateString('es-ES')+' · faltan '+M.days+' días';
+  var top=0;M.pfirst.forEach(function(x,i){if(x>M.pfirst[top])top=i});
+  var h='<div class="kpis">'+PARTS.map(function(p,i){var a=M.A[i];return a?'<div class="m" style="--c:'+p[1]+'"><span>'+p[0]+'</span><b>'+f1(a.m)+' %</b><small>'+(M.tr[i]==null?'sin tendencia':sg(M.tr[i])+' / 14 d')+'</small></div>':''}).join('')+'</div>';
+  h+='<div class="bars">'+PARTS.map(function(p,i){var a=M.A[i];if(!a)return '';var r=M.rng[i],mx=40;
+    return '<div class="br" style="--c:'+p[1]+'"><span>'+p[0]+'</span><div class="t" aria-hidden="true"><i style="left:'+r[0]/mx*100+'%;width:'+(r[1]-r[0])/mx*100+'%"></i><u style="left:'+a.m/mx*100+'%"></u></div><span class="v"><b>'+f1(r[0])+'–'+f1(r[1])+' %</b> · 1.º '+Math.round(M.pfirst[i]*100)+' %</span></div>'}).join('')+'</div>';
+  h+='<div class="kpis" style="margin:14px 0 0"><div class="m"><span>Primer partido más probable</span><b>'+PARTS[top][0]+'</b><small>'+Math.round(M.pfirst[top]*100)+' % de probabilidad</small></div>'+
+     (M.A[0]&&M.A[1]?'<div class="m"><span>PP por delante del PSOE</span><b>'+Math.round(M.ppAhead*100)+' %</b><small>en voto</small></div>':'')+
+     '<div class="m"><span>PP + Vox vs. izquierda</span><b>'+sg(M.gap.m)+'</b><small>puntos · '+Math.round(M.rightAhead*100)+' % PP+Vox</small></div></div>';
+  h+='<p class="disc">Banda = intervalo del 80 % ('+N.toLocaleString('es-ES')+' simulaciones). Marca = media ponderada. Partidos simulados con independencia entre sí y sin Otros ni Cs; no se proyectan escaños (fase siguiente).</p>';
+  $('forecast').innerHTML=h;
+  $('insFor').textContent=PARTS[+$('mine').value][0];$('insights').innerHTML=insights(M);
+  $('house').innerHTML=house(M)||'<p class="empty">Sin datos.</p>';
+  drawChart(M);
+}
+
+function list(){
+  if(!polls.length){$('list').innerHTML='<p class="empty">Todavía no hay encuestas.</p>';return}
+  var rows=polls.map(function(p,i){return [p,i]}).sort(function(a,b){return a[0].fecha<b[0].fecha?1:a[0].fecha>b[0].fecha?-1:0});
+  $('list').innerHTML='<table><thead><tr><th class="l">Media</th><th class="l">Fecha</th><th class="l">Empresa</th><th>Muestra</th>'+PARTS.map(function(p){return '<th>'+p[0]+'</th>'}).join('')+'<th></th></tr></thead><tbody>'+rows.map(function(r){var p=r[0];
+    return '<tr><td class="l"><input type="checkbox" data-i="'+r[1]+'" '+(p.on!==false?'checked':'')+' aria-label="Incluir '+esc(p.empresa)+' '+p.fecha+' en la media"></td><td class="l">'+p.fecha+'</td><td class="l">'+esc(p.empresa)+'</td><td>'+p.n+'</td>'+p.v.map(function(x){return '<td>'+(x==null?'<span class="x">·</span>':f1(x))+'</td>'}).join('')+'<td><button class="btn sm" data-d="'+r[1]+'" aria-label="Borrar '+esc(p.empresa)+' '+p.fecha+'">Borrar</button></td></tr>'}).join('')+'</tbody></table>';
+}
+
+function drawChart(M){
+  if(chart){chart.destroy();chart=null}
+  if(!M||typeof Chart==='undefined')return;
+  var dates=[];polls.forEach(function(p){if(used(p)&&dates.indexOf(p.fecha)<0)dates.push(p.fecha)});dates.sort();
+  if(dates.length<2){return}
+  var hl=+$('hl').value,series=dates.map(function(d){return agg(dt(d),hl,30)});
+  chart=new Chart($('ch'),{type:'line',data:{labels:dates,datasets:PARTS.map(function(p,i){return {label:p[0],borderColor:p[1],backgroundColor:p[1],data:series.map(function(s){return s[i]?Math.round(s[i].m*10)/10:null}),tension:.25,pointRadius:2,borderWidth:2,spanGaps:true}})},
+    options:{responsive:true,maintainAspectRatio:false,animation:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10}}},scales:{x:{ticks:{color:'#8b97a8',maxTicksLimit:8},grid:{color:'#1f2937'}},y:{ticks:{color:'#8b97a8',callback:function(v){return v+' %'}},grid:{color:'#1f2937'}}}}});
+}
+
+/* Eventos */
+$('f').addEventListener('submit',function(e){
+  e.preventDefault();
+  var v=clean([0,1,2,3,4].map(function(i){return $('v'+i).value}));
+  if(addPoll({fecha:$('fd').value,empresa:$('fe').value,n:$('fn').value,v:v})){save();say('Encuesta añadida.');[0,1,2,3,4].forEach(function(i){$('v'+i).value=''});$('fe').value='';render()}
+  else say('No se añadió: revisa la fecha, la empresa y los porcentajes (0–100). Si ya existe esa empresa en esa fecha, se ignora.');
+});
+$('list').addEventListener('click',function(e){var d=e.target.getAttribute&&e.target.getAttribute('data-d');if(d!=null&&d!==''){polls.splice(+d,1);save();render()}});
+$('list').addEventListener('change',function(e){var i=e.target.getAttribute('data-i');if(i!=null){polls[+i].on=e.target.checked;save();render()}});
+$('bImp').addEventListener('click',function(){
+  fetch('../../elecciones-espana/data/2026-11-29/encuestas.json').then(function(r){return r.json()}).then(function(j){
+    var c=0;(j.sondeos||[]).forEach(function(s){var v=[null,null,null,null,null];for(var k in s.voto)if(k in ID2I)v[ID2I[k]]=s.voto[k];if(addPoll({fecha:s.fecha,empresa:s.empresa,n:s.muestra,v:v}))c++});
+    save();say(c+' encuestas nuevas importadas.');render();
+  }).catch(function(){say('No se pudo leer el archivo de Elecciones en España.')});
+});
+$('bCsv').addEventListener('click',function(){
+  var c=0,bad=0;$('csv').value.split(/\r?\n/).forEach(function(l){l=l.trim();if(!l||/^fecha/i.test(l))return;var a=l.split(/[;,\t]/).map(function(x){return x.trim().replace(',','.')});
+
+    if(addPoll({fecha:a[0],empresa:a[1],n:a[2],v:clean(a.slice(3,8))}))c++;else bad++});
+  save();say(c+' importadas'+(bad?', '+bad+' descartadas (formato o duplicadas)':'')+'. Formato: fecha,empresa,muestra,PP,PSOE,Vox,Sumar,Podemos con decimales en punto.');if(c)$('csv').value='';render();
+});
+$('bExp').addEventListener('click',function(){
+  var u=URL.createObjectURL(new Blob([JSON.stringify(polls,null,1)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='encuestas-atalaya.json';a.click();setTimeout(function(){URL.revokeObjectURL(u)},500);
+});
+$('bClr').addEventListener('click',function(){if(polls.length&&confirm('¿Borrar las '+polls.length+' encuestas cargadas en este navegador?')){polls=[];save();say('Borradas.');render()}});
+['hl','se','dr'].forEach(function(id){$(id).addEventListener('input',function(){outs();render()})});
+['cis','mine'].forEach(function(id){$(id).addEventListener('change',render)});
+function outs(){$('hlo').textContent=$('hl').value+' días';$('seo').textContent='±'+f1(+$('se').value/10)+' pt';$('dro').textContent=f1(+$('dr').value/100)+' pt/√día'}
+
+$('mine').innerHTML=PARTS.map(function(p,i){return '<option value="'+i+'">'+p[0]+'</option>'}).join('');
+$('fd').value=new Date().toISOString().slice(0,10);
+load();outs();render();
+})();
+</script>
+</body>
+</html>

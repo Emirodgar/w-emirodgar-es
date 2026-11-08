@@ -705,7 +705,7 @@ function renderPerson(){
   let h='<div class="dg">Situación actual</div>'+situacion(p,rolTxt,pk);
   h+=`<div class="dg">Riesgo según prensa</div><div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}/100</span>${r.nt?`<span>· tono medio ${r.tono>0?'+':''}${r.tono.toFixed(1)} (${r.nt} titulares)</span>`:''}`:'<span style="color:var(--mut)">sin información: estado neutro</span>'}</div>`;
   h+='<div class="dg">Trayectoria e historial</div>';
-  if(!p.wiki)h+='<p class="sk">No tiene ficha en Wikipedia/Wikidata, así que Atalaya no conoce su trayectoria. Puedes añadirla como contexto propio en <a href="/atalaya/fuentes/#anadir" style="color:var(--acc)">Fuentes</a>.</p>';
+  if(!p.wiki)h+='<p class="sk">No tiene ficha en Wikipedia/Wikidata, así que Atalaya no conoce su trayectoria. Puedes añadirla como contexto propio en Fuentes.</p>';
   else if(bio===undefined)h+='<p class="sk">Cargando trayectoria…</p>';
   else if(bio===null||(bio.err&&!bio.extract))h+='<p class="sk">No se pudo cargar la trayectoria ahora mismo. Inténtalo de nuevo.</p>';
   else{
