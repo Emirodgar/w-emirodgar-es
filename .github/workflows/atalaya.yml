@@ -52,6 +52,15 @@ jobs:
           python3 scripts/atalaya/build_politicos_prov.py
           python3 scripts/atalaya/build_programas.py
 
+      - name: Archivo permanente de encuestas (diario; solo añade)
+        run: python3 scripts/atalaya/build_encuestas.py
+
+      - name: Congreso y Senado (semanal; solo añade, el Senado se reanuda si limita el acceso)
+        if: steps.sem.outputs.semanal == 'true'
+        continue-on-error: true
+        timeout-minutes: 30
+        run: python3 scripts/atalaya/build_parlamento.py
+
       - name: Sentimiento de los titulares (Gemini, opcional)
         # Si falta la clave o Gemini falla, el resto del workflow sigue con la heurística de palabras clave.
         continue-on-error: true

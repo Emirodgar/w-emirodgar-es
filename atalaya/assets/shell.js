@@ -7,7 +7,9 @@
     ['Escenarios', '/atalaya/escenarios/', I('<path d="M4 6h10M18 6h2M4 12h2M10 12h10M4 18h12M20 18h0"/><circle cx="16" cy="6" r="2"/><circle cx="8" cy="12" r="2"/><circle cx="18" cy="18" r="2"/>')],
     ['Políticos', '/atalaya/politicos/', I('<circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M16 4.6a3.5 3.5 0 0 1 0 6.8M18 14.5c2 .7 3.5 2.4 3.5 5.5"/>')],
     ['Programas', '/atalaya/programas/', I('<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 14l2 2 4-4"/>')],
-    ['Encuestas', '/atalaya/encuestas/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')]
+    ['Encuestas', '/atalaya/encuestas/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')],
+    ['Congreso', '/atalaya/congreso/', I('<path d="M3 20h18M5 20V10M9.5 20V10M14.5 20V10M19 20V10M3 10l9-6 9 6z"/>')],
+    ['Senado', '/atalaya/senado/', I('<path d="M4 20h16M6 20v-8a6 6 0 0 1 12 0v8M12 6V3M9 20v-6M15 20v-6"/>')]
   ];
   var small = window.matchMedia && matchMedia('(max-width:700px)').matches, saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}

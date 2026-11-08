@@ -10,6 +10,8 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/atalaya/assets/shell.css">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 <style>
 :root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
@@ -60,7 +62,14 @@ th{font-family:var(--mono);font-size:12px;font-weight:600;color:var(--mut);lette
 td.x{color:var(--mut)}.neg{color:var(--bad)}.pos{color:var(--ok)}
 .empty{padding:14px;color:var(--mut)}
 .sub{color:var(--mut);font-size:12px}
-@media (max-width:1000px){.wrap{grid-template-columns:1fr}}
+.mp2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mp2 h3{font-size:13px;margin-bottom:6px}.mp2 select{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 9px;margin-bottom:8px}
+.mp{height:360px;background:#0a0d12;border-radius:6px}
+.leaflet-container{font-family:Inter,sans-serif}.leaflet-tooltip{background:#05070a;color:var(--txt);border:1px solid var(--line);box-shadow:none}.leaflet-tooltip:before{display:none}
+.lg{display:flex;flex-wrap:wrap;gap:10px;margin-top:8px;font-size:12px;color:var(--mut)}.lg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+.tag{font-family:var(--mono);font-size:11px;color:var(--warn);border:1px solid var(--warn);border-radius:99px;padding:0 6px;margin-left:6px}
+tr.arch td{opacity:.55}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}.mp2{grid-template-columns:1fr}}
 @media (max-width:600px){.br{grid-template-columns:56px 1fr}.br .v{grid-column:1/-1;text-align:left}}
 </style>
 </head>
@@ -93,12 +102,13 @@ td.x{color:var(--mut)}.neg{color:var(--bad)}.pos{color:var(--ok)}
       </form>
     </section>
     <section class="card">
-      <h2>Importar / exportar</h2>
+      <h2>Archivo y copia</h2>
       <div class="body ctl">
-        <div class="row" style="margin-top:0"><button class="btn" id="bImp" type="button">Traer las de Elecciones en España</button></div>
+        <p class="disc" style="margin-top:0">Las encuestas del archivo (<code>data/encuestas.json</code>) son permanentes: aquí solo se archivan, nunca se borran. Las que cargas a mano se guardan en este navegador; expórtalas y pásalas a <code>atalaya/data/encuestas-manuales.json</code> para que entren en el archivo.</p>
         <label for="csv">Pegar CSV</label>
         <textarea id="csv" placeholder="fecha,empresa,muestra,PP,PSOE,Vox,Sumar,Podemos&#10;2026-11-02,GAD3,1000,32.1,26.0,18.5,7.0,"></textarea>
-        <div class="row"><button class="btn" id="bCsv" type="button">Importar CSV</button><button class="btn" id="bExp" type="button">Exportar JSON</button><button class="btn" id="bClr" type="button">Borrar todo</button></div>
+        <div class="row"><button class="btn" id="bCsv" type="button">Importar CSV</button><button class="btn" id="bExp" type="button">Exportar las manuales (JSON)</button></div>
+        <label for="showArch" style="display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;margin-top:14px"><input type="checkbox" id="showArch" style="width:auto"> Mostrar archivadas en el listado</label>
         <p class="disc" id="msg" role="status"></p>
       </div>
     </section>
@@ -125,6 +135,19 @@ td.x{color:var(--mut)}.neg{color:var(--bad)}.pos{color:var(--ok)}
       <div class="body" id="insights"></div>
     </section>
     <section class="card">
+      <h2>Comparar dos mapas <em>estimación orientativa por provincia</em></h2>
+      <div class="body">
+        <div class="mp2">
+          <div><h3>Mapa A</h3><select id="sa" aria-label="Encuesta del mapa A"></select><div class="mp" id="mapA" aria-label="Mapa A"></div></div>
+          <div><h3>Mapa B</h3><select id="sb" aria-label="Encuesta del mapa B"></select><div class="mp" id="mapB" aria-label="Mapa B"></div></div>
+        </div>
+        <div class="lg" id="mlg"></div>
+        <div class="row"><button class="btn" id="mcan" type="button">Ir a Canarias</button><button class="btn" id="mpen" type="button">Ir a la península</button></div>
+        <div id="mdiff"></div>
+        <p class="disc">No es una encuesta territorial: las encuestas son nacionales. Cada provincia parte de su peso en 2023 (70 % escaños, 30 % voto nacional) y se escala con el cambio de cada partido entre la encuesta y el resultado nacional de 2023 (PP, PSOE, Vox, Sumar). Sirve para ver dónde cambiaría el ganador entre dos encuestas, no para predecir una provincia concreta.</p>
+      </div>
+    </section>
+    <section class="card">
       <h2>Evolución de la media</h2>
       <div class="body"><div class="chartbox"><canvas id="ch" aria-label="Evolución de la media de encuestas por partido"></canvas></div></div>
     </section>
@@ -149,21 +172,35 @@ var $=function(id){return document.getElementById(id)};
 var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var f1=function(x){return (Math.round(x*10)/10).toFixed(1).replace('.',',')};
 var sg=function(x){var r=Math.round(x*10)/10;return (r>0?'+':r<0?'−':'')+f1(Math.abs(r))};
-var DAY=864e5,polls=[],chart;
+var DAY=864e5,polls=[],manual=[],ov={},archive=[],chart,KEY2='atalaya-encuestas-ov';
+var slug=function(t){return t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')};
 
-function load(){try{polls=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){polls=[]}}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(polls))}catch(e){say('No se pudo guardar en el navegador: exporta el JSON para no perderlas.')}}
+function load(){
+  try{manual=JSON.parse(localStorage.getItem(KEY)||'[]')||[]}catch(e){manual=[]}
+  try{ov=JSON.parse(localStorage.getItem(KEY2)||'{}')||{}}catch(e){ov={}}
+}
+function save(){try{localStorage.setItem(KEY,JSON.stringify(manual));localStorage.setItem(KEY2,JSON.stringify(ov))}catch(e){say('No se pudo guardar en el navegador: exporta el JSON para no perderlas.')}}
 function say(t){$('msg').textContent=t}
 function isCis(p){return /^cis/i.test(p.empresa.trim())}
-function used(p){return p.on!==false&&(!isCis(p)||$('cis').value==='1')}
+function used(p){return p.on!==false&&!p.arch&&(!isCis(p)||$('cis').value==='1')}
+/* polls = archivo permanente (data/encuestas.json) + manuales del navegador, con las marcas locales de incluir/archivar */
+function rebuild(){
+  var seen={};polls=[];
+  archive.concat(manual.map(function(m){return {fecha:m.fecha,empresa:m.empresa,muestra:m.n,voto:null,v:m.v,archivada:false,src:'manual'}})).forEach(function(a){
+    var k=a.fecha+'|'+slug(a.empresa);if(seen[k])return;seen[k]=1;
+    var v=a.v||PARTS.map(function(_,i){var key=Object.keys(ID2I).filter(function(x){return ID2I[x]===i})[0];return a.voto&&a.voto[key]!=null?a.voto[key]:null});
+    var o=ov[k]||{};
+    polls.push({k:k,fecha:a.fecha,empresa:a.empresa,n:a.muestra||1000,v:v,voto:a.voto||null,src:a.src||'archivo',on:o.on!==undefined?o.on:!isCis(a),arch:o.arch!==undefined?o.arch:!!a.archivada});
+  });
+  polls.sort(function(a,b){return a.fecha<b.fecha?1:a.fecha>b.fecha?-1:0});
+}
 function dt(s){return new Date(s+'T00:00:00')}
 function clean(v){var o=[];for(var i=0;i<5;i++){var x=v[i];o.push(x===''||x==null||isNaN(+x)?null:+x)}return o}
 function addPoll(p){
   if(!/^\d{4}-\d\d-\d\d$/.test(p.fecha)||!p.empresa||p.v.every(function(x){return x==null}))return false;
   if(p.v.some(function(x){return x!=null&&(x<0||x>100)}))return false;
-  var d=polls.some(function(q){return q.fecha===p.fecha&&q.empresa.toLowerCase()===p.empresa.toLowerCase()});
-  if(d)return false;
-  polls.push({fecha:p.fecha,empresa:p.empresa.trim().slice(0,40),n:Math.max(100,+p.n||1000),v:p.v,on:!isCis(p)});
+  if(polls.some(function(q){return q.k===p.fecha+'|'+slug(p.empresa)}))return false;
+  manual.push({fecha:p.fecha,empresa:p.empresa.trim().slice(0,40),n:Math.max(100,+p.n||1000),v:p.v});rebuild();
   return true;
 }
 
@@ -245,10 +282,9 @@ function insights(M){
 }
 
 function render(){
-  var ofr=polls.filter(used).length;$('cnt').textContent=polls.length+' · '+ofr+' en la media';
   list();
   var M=model();
-  if(!M){$('forecast').innerHTML='<p class="empty">Carga al menos una encuesta (o trae las de Elecciones en España) para ver la media y los rangos.</p>';$('insights').innerHTML='';$('house').innerHTML='';$('pvInfo').textContent='';$('insFor').textContent='';drawChart(null);return}
+  if(!M){$('forecast').innerHTML='<p class="empty">Carga al menos una encuesta para ver la media y los rangos.</p>';$('insights').innerHTML='';$('house').innerHTML='';$('pvInfo').textContent='';$('insFor').textContent='';drawChart(null);return}
   $('pvInfo').textContent='a '+M.ref.toLocaleDateString('es-ES')+' · faltan '+M.days+' días';
   var top=0;M.pfirst.forEach(function(x,i){if(x>M.pfirst[top])top=i});
   var h='<div class="kpis">'+PARTS.map(function(p,i){var a=M.A[i];return a?'<div class="m" style="--c:'+p[1]+'"><span>'+p[0]+'</span><b>'+f1(a.m)+' %</b><small>'+(M.tr[i]==null?'sin tendencia':sg(M.tr[i])+' / 14 d')+'</small></div>':''}).join('')+'</div>';
@@ -261,14 +297,15 @@ function render(){
   $('forecast').innerHTML=h;
   $('insFor').textContent=PARTS[+$('mine').value][0];$('insights').innerHTML=insights(M);
   $('house').innerHTML=house(M)||'<p class="empty">Sin datos.</p>';
-  drawChart(M);
+  drawChart(M);updMaps();
 }
 
 function list(){
-  if(!polls.length){$('list').innerHTML='<p class="empty">Todavía no hay encuestas.</p>';return}
-  var rows=polls.map(function(p,i){return [p,i]}).sort(function(a,b){return a[0].fecha<b[0].fecha?1:a[0].fecha>b[0].fecha?-1:0});
-  $('list').innerHTML='<table><thead><tr><th class="l">Media</th><th class="l">Fecha</th><th class="l">Empresa</th><th>Muestra</th>'+PARTS.map(function(p){return '<th>'+p[0]+'</th>'}).join('')+'<th></th></tr></thead><tbody>'+rows.map(function(r){var p=r[0];
-    return '<tr><td class="l"><input type="checkbox" data-i="'+r[1]+'" '+(p.on!==false?'checked':'')+' aria-label="Incluir '+esc(p.empresa)+' '+p.fecha+' en la media"></td><td class="l">'+p.fecha+'</td><td class="l">'+esc(p.empresa)+'</td><td>'+p.n+'</td>'+p.v.map(function(x){return '<td>'+(x==null?'<span class="x">·</span>':f1(x))+'</td>'}).join('')+'<td><button class="btn sm" data-d="'+r[1]+'" aria-label="Borrar '+esc(p.empresa)+' '+p.fecha+'">Borrar</button></td></tr>'}).join('')+'</tbody></table>';
+  var sa=$('showArch').checked,rows=polls.filter(function(p){return sa||!p.arch});
+  $('cnt').textContent=polls.length+' en el archivo · '+polls.filter(used).length+' en la media';
+  if(!rows.length){$('list').innerHTML='<p class="empty">Todavía no hay encuestas.</p>';return}
+  $('list').innerHTML='<table><thead><tr><th class="l">Media</th><th class="l">Fecha</th><th class="l">Empresa</th><th>Muestra</th>'+PARTS.map(function(p){return '<th>'+p[0]+'</th>'}).join('')+'<th></th></tr></thead><tbody>'+rows.map(function(p){
+    return '<tr'+(p.arch?' class="arch"':'')+'><td class="l"><input type="checkbox" data-k="'+esc(p.k)+'" '+(p.on!==false&&!p.arch?'checked':'')+(p.arch?' disabled':'')+' aria-label="Incluir '+esc(p.empresa)+' '+p.fecha+' en la media"></td><td class="l">'+p.fecha+'</td><td class="l">'+esc(p.empresa)+(p.arch?'<span class="tag">archivada</span>':'')+'</td><td>'+p.n+'</td>'+p.v.map(function(x){return '<td>'+(x==null?'<span class="x">·</span>':f1(x))+'</td>'}).join('')+'<td><button class="btn sm" data-a="'+esc(p.k)+'" aria-label="'+(p.arch?'Restaurar ':'Archivar ')+esc(p.empresa)+' '+p.fecha+'">'+(p.arch?'Restaurar':'Archivar')+'</button></td></tr>'}).join('')+'</tbody></table><p class="disc">Archivar saca la encuesta de la media pero no la borra: sigue en el archivo.</p>';
 }
 
 function drawChart(M){
@@ -281,21 +318,62 @@ function drawChart(M){
     options:{responsive:true,maintainAspectRatio:false,animation:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10}}},scales:{x:{ticks:{color:'#8b97a8',maxTicksLimit:8},grid:{color:'#1f2937'}},y:{ticks:{color:'#8b97a8',callback:function(v){return v+' %'}},grid:{color:'#1f2937'}}}}});
 }
 
+/* Mapas comparables: estimación provincial orientativa a partir de una encuesta nacional (ver nota bajo los mapas) */
+var NAT23=[33.06,31.7,12.39,12.31],MK=['PP','PSOE','Vox','Sumar'],MKEY=['PP','Vox','Sumar'],ES23=null,GJ=null,MP={},mapsReady=false,PN={};
+function seatShare(c,k){var e=ES23&&ES23[c];if(!e)return 0;var a=(e.partidos&&e.partidos[k])||[],t=e.total||[];var n=a.length?a[a.length-1]:0,T=t.length?t[t.length-1]:0;return T?n/T:0}
+function estim(c,sh){
+  var st=MK.map(function(k,i){return (.7*seatShare(c,k)+.3*NAT23[i]/100)*sh[i]/NAT23[i]});
+  var o=st.map(function(x,i){return [x,i]}).sort(function(a,b){return b[0]-a[0]}),tot=st.reduce(function(a,b){return a+b},0)||1;
+  return {w:o[0][1],margin:o[0][0]?(o[0][0]-o[1][0])/o[0][0]:0,pct:st.map(function(x){return x/tot*100})};
+}
+function sharesOf(val,M){ /* val='media' o clave de encuesta; los partidos que la encuesta no incluye se rellenan con la media */
+  return MK.map(function(_,i){var x=null;if(val!=='media'){var p=polls.filter(function(q){return q.k===val})[0];if(p)x=p.v[i]}
+    if(x==null)x=M&&M.A[i]?M.A[i].m:NAT23[i];return x});
+}
+function fillSel(){
+  ['sa','sb'].forEach(function(id,j){var el=$(id),cur=el.value;
+    el.innerHTML='<option value="media">Media ponderada actual</option>'+polls.map(function(p){return '<option value="'+esc(p.k)+'">'+p.fecha+' · '+esc(p.empresa)+(p.arch?' (archivada)':'')+'</option>'}).join('');
+    el.value=cur&&el.querySelector('option[value="'+cur.replace(/"/g,'')+'"]')?cur:(j===0?'media':(polls[0]?polls[0].k:'media'))});
+}
+function paint(){
+  if(!mapsReady)return;var M=model(),res={};
+  ['A','B'].forEach(function(m){
+    var val=$(m==='A'?'sa':'sb').value,sh=sharesOf(val,M);res[m]={};
+    MP[m].layer.eachLayer(function(l){var c=l.feature.properties.c,r=estim(c,sh);res[m][c]=r;
+      l.setStyle({fillColor:PARTS[r.w][1],fillOpacity:.3+.65*Math.min(1,r.margin*2.2),color:'#05070a',weight:.8});
+      l.unbindTooltip();l.bindTooltip(esc(PN[c])+' · '+MK[r.w]+' ('+f1(r.pct[r.w])+' %, ventaja '+Math.round(r.margin*100)+' %)',{sticky:true})});
+  });
+  var diff=Object.keys(res.A).filter(function(c){return res.A[c].w!==res.B[c].w}).sort(function(a,b){return PN[a].localeCompare(PN[b],'es')});
+  $('mdiff').innerHTML='<h3 style="margin:12px 0 6px;font-size:13px">'+(diff.length?diff.length+' provincias cambian de ganador estimado':'Mismo ganador estimado en todas las provincias')+'</h3>'+
+    (diff.length?'<div class="tw"><table><thead><tr><th>Provincia</th><th>Mapa A</th><th>Mapa B</th></tr></thead><tbody>'+diff.map(function(c){return '<tr><td>'+esc(PN[c])+'</td><td style="color:'+PARTS[res.A[c].w][1]+'">'+MK[res.A[c].w]+'</td><td style="color:'+PARTS[res.B[c].w][1]+'">'+MK[res.B[c].w]+'</td></tr>'}).join('')+'</tbody></table></div>':'');
+}
+function updMaps(){if(mapsReady){fillSel();paint()}}
+function initMaps(){
+  if(mapsReady||typeof L==='undefined')return;
+  Promise.all([fetch('../data/provincias.geojson').then(function(r){return r.json()}),fetch('../data/escanos.json').then(function(r){return r.json()})]).then(function(a){
+    GJ=a[0];ES23=a[1];GJ.features.forEach(function(f){PN[f.properties.c]=f.properties.n});
+    ['A','B'].forEach(function(m){
+      var map=L.map('map'+m,{zoomControl:true,attributionControl:false,scrollWheelZoom:false,zoomSnap:.25}).setView([40.1,-3.6],4.75);
+      MP[m]={map:map,layer:L.geoJSON(GJ,{style:{weight:.8,color:'#05070a',fillOpacity:.5}}).addTo(map)};
+    });
+    var sync=false;['A','B'].forEach(function(m,i){var o=i?'A':'B';MP[m].map.on('moveend',function(){if(sync)return;sync=true;MP[o].map.setView(MP[m].map.getCenter(),MP[m].map.getZoom(),{animate:false});sync=false})});
+    $('mcan').onclick=function(){MP.A.map.setView([28.3,-15.9],6.5)};$('mpen').onclick=function(){MP.A.map.setView([40.1,-3.6],4.75)};
+    $('mlg').innerHTML=MK.map(function(k,i){return '<span><i style="background:'+PARTS[i][1]+'"></i>'+k+'</span>'}).join('')+'<span>Más intenso = más ventaja sobre el segundo</span>';
+    ['sa','sb'].forEach(function(id){$(id).addEventListener('change',paint)});
+    mapsReady=true;fillSel();paint();
+  }).catch(function(){$('mdiff').innerHTML='<p class="empty">No se pudieron cargar los datos de los mapas.</p>'});
+}
+
 /* Eventos */
 $('f').addEventListener('submit',function(e){
   e.preventDefault();
   var v=clean([0,1,2,3,4].map(function(i){return $('v'+i).value}));
-  if(addPoll({fecha:$('fd').value,empresa:$('fe').value,n:$('fn').value,v:v})){save();say('Encuesta añadida.');[0,1,2,3,4].forEach(function(i){$('v'+i).value=''});$('fe').value='';render()}
+  if(addPoll({fecha:$('fd').value,empresa:$('fe').value,n:$('fn').value,v:v})){save();say('Encuesta añadida (queda en este navegador; exporta para archivarla).');[0,1,2,3,4].forEach(function(i){$('v'+i).value=''});$('fe').value='';render()}
   else say('No se añadió: revisa la fecha, la empresa y los porcentajes (0–100). Si ya existe esa empresa en esa fecha, se ignora.');
 });
-$('list').addEventListener('click',function(e){var d=e.target.getAttribute&&e.target.getAttribute('data-d');if(d!=null&&d!==''){polls.splice(+d,1);save();render()}});
-$('list').addEventListener('change',function(e){var i=e.target.getAttribute('data-i');if(i!=null){polls[+i].on=e.target.checked;save();render()}});
-$('bImp').addEventListener('click',function(){
-  fetch('../../elecciones-espana/data/2026-11-29/encuestas.json').then(function(r){return r.json()}).then(function(j){
-    var c=0;(j.sondeos||[]).forEach(function(s){var v=[null,null,null,null,null];for(var k in s.voto)if(k in ID2I)v[ID2I[k]]=s.voto[k];if(addPoll({fecha:s.fecha,empresa:s.empresa,n:s.muestra,v:v}))c++});
-    save();say(c+' encuestas nuevas importadas.');render();
-  }).catch(function(){say('No se pudo leer el archivo de Elecciones en España.')});
-});
+$('list').addEventListener('click',function(e){var k=e.target.getAttribute&&e.target.getAttribute('data-a');if(k){var p=polls.filter(function(x){return x.k===k})[0];(ov[k]=ov[k]||{}).arch=!p.arch;save();rebuild();render()}});
+$('list').addEventListener('change',function(e){var k=e.target.getAttribute('data-k');if(k){(ov[k]=ov[k]||{}).on=e.target.checked;save();rebuild();render()}});
+$('showArch').addEventListener('change',list);
 $('bCsv').addEventListener('click',function(){
   var c=0,bad=0;$('csv').value.split(/\r?\n/).forEach(function(l){l=l.trim();if(!l||/^fecha/i.test(l))return;var a=l.split(/[;,\t]/).map(function(x){return x.trim().replace(',','.')});
 
@@ -303,16 +381,17 @@ $('bCsv').addEventListener('click',function(){
   save();say(c+' importadas'+(bad?', '+bad+' descartadas (formato o duplicadas)':'')+'. Formato: fecha,empresa,muestra,PP,PSOE,Vox,Sumar,Podemos con decimales en punto.');if(c)$('csv').value='';render();
 });
 $('bExp').addEventListener('click',function(){
-  var u=URL.createObjectURL(new Blob([JSON.stringify(polls,null,1)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='encuestas-atalaya.json';a.click();setTimeout(function(){URL.revokeObjectURL(u)},500);
+  var out=manual.map(function(m){var voto={};PARTS.forEach(function(p,i){if(m.v[i]!=null)voto[Object.keys(ID2I).filter(function(x){return ID2I[x]===i})[0]]=m.v[i]});return {fecha:m.fecha,empresa:m.empresa,muestra:m.n,voto:voto,ambito:'ES',tipo:'manual'}});
+  var u=URL.createObjectURL(new Blob([JSON.stringify(out,null,1)],{type:'application/json'})),a=document.createElement('a');a.href=u;a.download='encuestas-manuales.json';a.click();setTimeout(function(){URL.revokeObjectURL(u)},500);
 });
-$('bClr').addEventListener('click',function(){if(polls.length&&confirm('¿Borrar las '+polls.length+' encuestas cargadas en este navegador?')){polls=[];save();say('Borradas.');render()}});
 ['hl','se','dr'].forEach(function(id){$(id).addEventListener('input',function(){outs();render()})});
 ['cis','mine'].forEach(function(id){$(id).addEventListener('change',render)});
 function outs(){$('hlo').textContent=$('hl').value+' días';$('seo').textContent='±'+f1(+$('se').value/10)+' pt';$('dro').textContent=f1(+$('dr').value/100)+' pt/√día'}
 
 $('mine').innerHTML=PARTS.map(function(p,i){return '<option value="'+i+'">'+p[0]+'</option>'}).join('');
 $('fd').value=new Date().toISOString().slice(0,10);
-load();outs();render();
+load();outs();rebuild();render();
+fetch('../data/encuestas.json').then(function(r){return r.json()}).then(function(j){archive=j.encuestas||[];rebuild();render();initMaps()}).catch(function(){say('No se pudo leer el archivo data/encuestas.json.')});
 })();
 </script>
 </body>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Congreso | Atalaya</title>
+<meta name="description" content="Los 350 diputados del Congreso de los Diputados en un mapa, con su ficha, el histórico de legislaturas y quién entra y quién sale.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/congreso/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/parlamento.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js"></script>
+<header class="top">
+  <h1 class="pt">Congreso <small>quién ocupa los 350 escaños</small></h1>
+  <span class="tagline" id="capt">Inteligencia electoral</span>
+  <div class="tabs" role="tablist"><button role="tab" data-t="act" aria-selected="true">Quién ocupa los escaños</button><button role="tab" data-t="his" aria-selected="false">Histórico y relevos</button></div>
+</header>
+
+<main class="wrap" id="main">
+  <div id="tAct" class="grid">
+    <section class="card">
+      <h2>Mapa <em>un punto por persona</em></h2>
+      <div class="body">
+        <div class="kpis" id="kpis"></div>
+        <div id="map" aria-label="Mapa de España con un punto por cada persona"></div>
+        <div class="lg" id="lg"></div>
+        <div class="tools" style="margin-top:10px"><button class="btn" id="pen" type="button">Península</button><button class="btn" id="can" type="button">Canarias</button></div>
+        <p class="disc">Cada punto es una persona, agrupada por su circunscripción. El Congreso está disuelto: se muestra quien ocupaba el escaño al disolverse. Marca «incluir bajas» para ver también a quienes dejaron el escaño antes. Pincha en un punto o en la lista para abrir la ficha.</p>
+      </div>
+    </section>
+    <section class="card">
+      <h2>Personas <em id="cnt"></em></h2>
+      <div class="body">
+        <div class="tools"><input id="q" type="search" placeholder="Buscar por nombre…" aria-label="Buscar por nombre"><select id="ft" aria-label="Provincia"></select></div>
+        <label class="chk"><input type="checkbox" id="off"> Incluir también bajas de la legislatura</label>
+        <div class="list" id="list" style="margin-top:8px"></div>
+      </div>
+    </section>
+  </div>
+
+  <div id="tHis" hidden>
+    <section class="card">
+      <h2>Composición por legislatura <em>escaños por partido (resultado de cada elección)</em></h2>
+      <div class="body"><div class="chartbox"><canvas id="ch" aria-label="Composición por legislatura"></canvas></div></div>
+    </section>
+    <section class="card">
+      <h2>Entradas y salidas entre dos legislaturas</h2>
+      <div class="body">
+        <div class="hsel"><div><label for="hA">Legislatura anterior</label><select id="hA"></select></div><div><label for="hB">Legislatura a comparar</label><select id="hB"></select></div></div>
+        <p class="sub" id="hSum" style="margin-bottom:10px"></p>
+        <div class="cmp" id="hCmp"></div>
+        <p class="disc">Se compara por persona (nombre). Nada se borra: cada legislatura queda archivada con quienes pasaron por ella. La composición proviene de los resultados provinciales de cada elección; las altas y bajas, del listado oficial de diputados de cada legislatura.</p>
+      </div>
+    </section>
+  </div>
+</main>
+
+<aside class="dr" id="dr" hidden role="dialog" aria-labelledby="dName" aria-modal="false">
+  <div class="dh"><div class="big" id="dFace"></div><div style="min-width:0"><h2 id="dName" tabindex="-1"></h2><p class="sub" id="dSub"></p></div><button class="dx" id="dx" aria-label="Cerrar ficha">×</button></div>
+  <div class="db" id="dBody"></div>
+  <div class="df" id="dFoot"></div>
+</aside>
+<script src="/atalaya/assets/parlamento.js" data-camara="congreso"></script>
+</body>
+</html>
