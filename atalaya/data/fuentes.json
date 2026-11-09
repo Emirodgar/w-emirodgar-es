@@ -132,6 +132,28 @@
    "max_dias": 2
   },
   {
+   "id": "theobjective",
+   "nombre": "The Objective · feed general (política)",
+   "cat": "prensa_nacional",
+   "url": "https://theobjective.com/",
+   "acceso": "RSS (WordPress, 5 páginas)",
+   "estado": "activa",
+   "fiab": 3,
+   "cobertura": "Nacional",
+   "frecuencia": "Cada ejecución del script",
+   "usada": [
+    "Prensa",
+    "Peligros",
+    "Estado de políticos"
+   ],
+   "match": [
+    "The Objective"
+   ],
+   "manifest": "noticias",
+   "max_dias": 2,
+   "nota": "Feed general: se recorren 5 páginas (~un día) y se guardan solo los titulares políticos (nombres propios e instituciones). Línea editorial muy crítica con el Gobierno, según el responsable: conviene leer su tono junto al de medios de otra línea (elDiario.es, El País) y no como media del conjunto de la prensa."
+  },
+  {
    "id": "20min",
    "nombre": "20minutos · Nacional",
    "cat": "prensa_nacional",

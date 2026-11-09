@@ -21,6 +21,9 @@ NACIONAL = [
     ("elDiario.es", "https://www.eldiario.es/rss/politica"),
     ("20minutos", "https://www.20minutos.es/rss/nacional/"),
     ("Europa Press", "https://www.europapress.es/rss/rss.aspx?ch=66"),
+    # (medio, feed, páginas, filtrar por política): feed general de WordPress que solo guarda unas horas por página; se recorren
+    # hasta 5 páginas (~un día) y se conservan solo los titulares políticos.
+    ("The Objective", "https://theobjective.com/feed/", 5, True),
 ]
 ALIAS = {"Araba": "Álava", "Alacant": "Alicante", "Castelló": "Castellón", "Illes Balears": "Baleares", "València": "Valencia",
          "Gipuzkoa": "Guipúzcoa", "Bizkaia": "Vizcaya", "Asturias": "Asturias"}
@@ -46,6 +49,8 @@ def items(xml):
         yield unescape((it.findtext("title") or "").strip()), (it.findtext("link") or "").strip(), dt, it.findtext("source")
 POLITICA = re.compile(r"alcald|ayuntamient|diputaci|pleno|concejal|\bPP\b|PSOE|\bVox\b|Sumar|Podemos|elecciones|candidat|\bJunta\b|Gobierno|consejer|partido|municip|oposici|presupuest|subvenci|cortes|congreso|senado|socialist|popular", re.I)
 LOCALES = RAIZ / "scripts/atalaya/medios_locales.json"
+# filtro más amplio para medios generalistas: política nacional por nombres propios y vocabulario institucional
+POLITICA_NACIONAL = re.compile(POLITICA.pattern + r"|Sánchez|Feijóo|Abascal|Puigdemont|Junqueras|Ayuso|Mañueco|\bIlla\b|\bDíaz\b|ministr|president[ea]|Moncloa|La Moncloa|Supremo|Audiencia Nacional|fiscal|juez|jueza|corrupci|\bvoto|urnas|29-?N|\bUCO\b|Koldo|Ábalos|Cerdán|diputad|senador|Parlamento|ley\b|decreto|Hacienda|\bPNV\b|\bJunts\b|\bERC\b|\bBildu\b", re.I)
 
 def items_cualquiera(xml):
     """RSS 2.0 o Atom: (titulo, enlace, fecha)."""
@@ -82,8 +87,17 @@ def main():
         try: return [(pc, *x) for x in list(items(get(GN + quote(q))))[:22]]
         except Exception as e: print("FALLO", a, repr(e)[:120]); return []   # incluye respuestas que no son XML (límite de Google)
     def nacional(f):
-        try: return [(None, *x, f[0]) for x in items(get(f[1]))]
-        except Exception as e: print("FALLO", f[0], repr(e)[:120]); return []
+        paginas, filtrar = (f[2], f[3]) if len(f) > 2 else (1, False)
+        out = []
+        for n in range(1, paginas + 1):
+            url = f[1] if n == 1 else f[1] + ("&" if "?" in f[1] else "?") + f"paged={n}"
+            try: pag = list(items(get(url)))
+            except Exception as e:
+                if n == 1: print("FALLO", f[0], repr(e)[:120])
+                break                                           # sin más páginas (o error): nos quedamos con lo recogido
+            out += [(None, *x, f[0]) for x in pag if not filtrar or POLITICA_NACIONAL.search(x[0])]
+            if not pag: break
+        return out
 
     def directo(m):
         try: xml = get(m["url"])

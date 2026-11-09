@@ -75,7 +75,9 @@ def foto(nombre):
     carp.mkdir(parents=True, exist_ok=True)
     marca = carp / "ultimo.sha1"
     if marca.exists() and marca.read_text().strip() == h: return False
-    with open(carp / f"{HOY}.json.gz", "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0, compresslevel=9) as g: g.write(texto)
+    nombre = f"{HOY}.json.gz"
+    if (carp / nombre).exists(): nombre = f"{HOY}-{datetime.now(timezone.utc).strftime('%H%M')}.json.gz"   # nunca se pisa una foto anterior
+    with open(carp / nombre, "wb") as raw, gzip.GzipFile(fileobj=raw, mode="wb", mtime=0, compresslevel=9) as g: g.write(texto)
     marca.write_text(h)
     return True
 
