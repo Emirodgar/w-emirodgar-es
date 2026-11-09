@@ -50,13 +50,15 @@ table{border-collapse:collapse;width:100%;font-size:14px;margin:.6em 0}th,td{bor
 li{margin:.3em 0}details{margin:.5em 0}summary{cursor:pointer;font-weight:600}
 @media (prefers-color-scheme:dark){body{background:#0e1219;color:#e5e9f0}h2{border-color:#243044}.ans{background:#0f2036}th{background:#151d29}th,td{border-color:#273449}.meta,.src,nav.bc{color:#98a5b8}a{color:#7cb0ff}.warn{background:#2a2310}}"""
 
-def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False):
+def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False, lang="es", alt=None, pie=None):
     url = f"{BASE}/atalaya/fichas/{ruta}"
     css_extra = '<link rel="stylesheet" href="/atalaya/assets/shell.css">' if shell else ""
     js_extra = '<script src="/atalaya/assets/shell.js"></script>' if shell else ""
     pad = "body{max-width:none;padding-left:calc(var(--sbp) + 24px)}main{max-width:820px}" if shell else ""
+    alternates = "" if not alt else "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/atalaya/fichas/{r}">' for l, r in ({lang: ruta, **(alt or {})}).items())
+    pie = pie or f'Elaborado por <a href="https://emirodgar.es/sobre-mi">Emilio Rodríguez García</a> con el panel <a href="/atalaya/">Atalaya</a>. Última actualización: {fecha_es(FECHA)}. Contenido basado en datos públicos citados en cada apartado; no es una encuesta ni una predicción oficial. <a href="/atalaya/privacidad/">Política de privacidad</a>.'
     html = f"""<!DOCTYPE html>
-<html lang="es">
+<html lang="{lang}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -64,9 +66,9 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False):
 <meta name="description" content="{E(desc)}">
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
 <link rel="canonical" href="{url}">
-<meta property="og:type" content="article"><meta property="og:locale" content="es_ES"><meta property="og:site_name" content="Emirodgar">
+<meta property="og:type" content="article"><meta property="og:locale" content="{'es_ES' if lang == 'es' else 'en_US'}"><meta property="og:site_name" content="Emirodgar">
 <meta property="og:title" content="{E(titulo)}"><meta property="og:description" content="{E(desc)}"><meta property="og:url" content="{url}">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+{alternates}<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 {css_extra}
 <script type="application/ld+json">{json.dumps(jsonld, ensure_ascii=False)}</script>
 <style>{CSS}{pad}</style>
@@ -78,7 +80,7 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False):
 <h1>{E(h1)}</h1>
 {cuerpo}
 </main>
-<footer class="src"><p>Elaborado por <a href="https://emirodgar.es/sobre-mi">Emilio Rodríguez García</a> con el panel <a href="/atalaya/">Atalaya</a>. Última actualización: {fecha_es(FECHA)}. Contenido basado en datos públicos citados en cada apartado; no es una encuesta ni una predicción oficial. <a href="/atalaya/privacidad/">Política de privacidad</a>.</p></footer>
+<footer class="src"><p>{pie}</p></footer>
 </body>
 </html>
 """
@@ -275,7 +277,8 @@ def main():
                {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
                {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
                {"@type": "ListItem", "position": 3, "name": "Presidente del Gobierno", "item": f"{BASE}/atalaya/fichas/presidente/"}]}]
-    pagina("presidente/", "¿Quién es el presidente de España? Cómo se elige y cuánto dura (2026)", desc_p, qp, cp, ldp, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Presidente del Gobierno")
+    pagina("presidente/", "¿Quién es el presidente de España? Cómo se elige y cuánto dura (2026)", desc_p, qp, cp, ldp, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Presidente del Gobierno",
+           alt={"es": "presidente/", "en": "en/prime-minister-of-spain/"})
     urls.append(f"{BASE}/atalaya/fichas/presidente/")
     # Calendario y cómo votar (módulo aparte)
     from ficha_calendario import construir as construir_cal
@@ -291,6 +294,37 @@ def main():
                {"@type": "ListItem", "position": 3, "name": "Calendario y cómo votar", "item": f"{BASE}/atalaya/fichas/calendario/"}]}]
     pagina("calendario/", "¿Cuándo son las elecciones generales y cómo se vota? Calendario 29N 2026", desc_c, qc, cc, ldc, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Calendario y cómo votar")
     urls.append(f"{BASE}/atalaya/fichas/calendario/")
+    # Circunscripciones y escaños (módulo aparte)
+    from ficha_circunscripciones import construir as construir_circ
+    ps_ = {pc_: (ES.get(n_, n_), slug(ES.get(n_, n_)) + "/") for pc_, n_ in prov.items()}
+    ci, faqs_ci, resp_ci, desc_ci = construir_circ(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, J=J, D=D, RAIZ=RAIZ, prov_slug=ps_))
+    qci = "¿Cuántas circunscripciones electorales hay y cuántos escaños elige la mía?"
+    ldci = [{"@context": "https://schema.org", "@type": "Article", "headline": qci, "description": desc_ci, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
+             "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
+             "mainEntityOfPage": f"{BASE}/atalaya/fichas/circunscripciones/"},
+            {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_ci]},
+            {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
+                {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
+                {"@type": "ListItem", "position": 3, "name": "Circunscripciones", "item": f"{BASE}/atalaya/fichas/circunscripciones/"}]}]
+    pagina("circunscripciones/", "Circunscripciones electorales de España: escaños de cada provincia y reparto D'Hondt", desc_ci, qci, ci, ldci, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Circunscripciones")
+    urls.append(f"{BASE}/atalaya/fichas/circunscripciones/")
+
+    # Versión en inglés: Prime Minister of Spain (módulo aparte)
+    from ficha_en_primer_ministro import construir as construir_en
+    en_c, faqs_en, resp_en, desc_en, pie_en = construir_en(dict(E=E, FECHA=FECHA, J=J, D=D, RAIZ=RAIZ), info)
+    qen = "Who is the Prime Minister of Spain?"
+    lden = [{"@context": "https://schema.org", "@type": "Article", "headline": qen, "description": desc_en, "inLanguage": "en", "datePublished": FECHA, "dateModified": FECHA,
+             "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
+             "mainEntityOfPage": f"{BASE}/atalaya/fichas/en/prime-minister-of-spain/"},
+            {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_en]},
+            {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
+                {"@type": "ListItem", "position": 2, "name": "Prime Minister of Spain", "item": f"{BASE}/atalaya/fichas/en/prime-minister-of-spain/"}]}]
+    pagina("en/prime-minister-of-spain/", "Who is the Prime Minister of Spain? How the PM is chosen (2026)", desc_en, qen, en_c, lden, "<a href='/atalaya/'>Atalaya</a> › Prime Minister of Spain",
+           lang="en", alt={"es": "presidente/", "en": "en/prime-minister-of-spain/"}, pie=pie_en)
+    urls.append(f"{BASE}/atalaya/fichas/en/prime-minister-of-spain/")
+
     # Comparativa PSOE frente a PP (módulo aparte)
     from ficha_comparativa import construir as construir_cmp
     cm, faqs_m, resp_m, desc_m = construir_cmp(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, J=J, D=D, RAIZ=RAIZ, slug=slug, nacional=nacional, nsond=nsond, fsond=fsond))
@@ -317,7 +351,7 @@ def main():
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
