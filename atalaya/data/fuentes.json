@@ -212,14 +212,14 @@
   },
   {
    "id": "rss_local",
-   "nombre": "RSS directos de medios locales (La Gaceta, Tribuna de Salamanca, Diario de León, El Norte de Castilla…)",
+   "nombre": "Prensa local: feeds RSS propios y búsquedas «site:» de Google Noticias por medio",
    "cat": "prensa_local",
    "url": "",
    "acceso": "RSS / Atom",
    "estado": "parcial",
    "prioridad": "alta",
    "fiab": 4,
-   "cobertura": "40 feeds · 35 provincias con 5+ titulares",
+   "cobertura": "69 de 70 medios · 51 provincias",
    "frecuencia": "Cada ejecución del script",
    "usada": [
     "Prensa",
@@ -227,7 +227,7 @@
     "Estado de políticos",
     "Fichas"
    ],
-   "nota": "Descubiertos y validados con descubrir_rss.py (medios_locales.json). 30 de 70 medios probados no publican RSS abierto (La Voz de Galicia, Faro de Vigo, La Nueva España, Levante-EMV, Información…): son el siguiente hueco, que cubre hoy Google Noticias.",
+   "nota": "40 medios con RSS propio (descubiertos con descubrir_rss.py) y 29 más vía búsqueda site: de Google Noticias, que da titulares de ese medio con menos ruido que la búsqueda por provincia. Solo falta El Punt Avui.",
    "contar": "rss_local",
    "manifest": "noticias",
    "max_dias": 2
@@ -530,19 +530,19 @@
   },
   {
    "id": "wikidata_gob",
-   "nombre": "Wikidata · presidentes autonómicos y alcaldes de capitales",
+   "nombre": "Cargos: Wikidata y cuadros de Wikipedia (autonómicos, alcaldes, diputaciones)",
    "cat": "politicos",
    "url": "https://www.wikidata.org/",
    "acceso": "SPARQL",
    "estado": "parcial",
    "fiab": 3,
-   "cobertura": "50 provincias con gobierno; 46 de 52 alcaldes de capital",
+   "cobertura": "52 provincias con gobierno; 49 alcaldes; 38 de 43 diputaciones",
    "frecuencia": "Bajo demanda (build_politicos_prov.py)",
    "usada": [
     "Panel lateral de políticos"
    ],
    "contar": "gobierno_prov",
-   "nota": "Faltan alcaldes en Albacete, Palma, Santa Cruz de Tenerife, Segovia, Ceuta y Melilla, y presidente autonómico de Navarra, Ceuta y Melilla. Se pueden completar como contexto propio. No hay presidentes de diputación.",
+   "nota": "Wikidata trae presidentes autonómicos y la mayoría de alcaldes; los huecos se cubren con cuadros de Wikipedia (se descartan los desactualizados). Siguen sin dato: alcalde de Santa Cruz de Tenerife (cuadro antiguo) y presidentes de diputación de A Coruña, Gipuzkoa y Lleida; Ceuta y Melilla no tienen alcalde (las gobierna su presidente).",
    "manifest": "politicos_prov",
    "max_dias": 14
   },
@@ -582,6 +582,58 @@
    "nota": "Solo ve el titular, no el artículo: orientativa. Sustituye a la heurística de palabras clave cuando hay clasificación; sin ella el panel vuelve a las palabras clave. Primer análisis real del tono de la prensa por territorio.",
    "manifest": "sentimiento",
    "max_dias": 3
+  },
+  {
+   "id": "archivo",
+   "nombre": "Archivo histórico acumulativo (prensa, clasificaciones y fotos de cargos, escaños, programas y padrón)",
+   "cat": "documentos",
+   "url": "",
+   "acceso": "Ficheros diarios inmutables (JSONL comprimido)",
+   "estado": "activa",
+   "fiab": 5,
+   "cobertura": "Desde el 9 de noviembre de 2026",
+   "frecuencia": "Cada ejecución del workflow (archivo.py)",
+   "usada": [
+    "Base de datos SQLite",
+    "Histórico"
+   ],
+   "contar": "archivo",
+   "manifest": "archivo",
+   "max_dias": 3,
+   "nota": "Nunca se borra nada: cada titular, cada clasificación y cada cambio en cargos, escaños, programas o padrón queda archivado con su fecha de primera captura en atalaya/data/archivo/."
+  },
+  {
+   "id": "demografia",
+   "nombre": "INE · Atlas de distribución de renta de los hogares (edad y renta por municipio)",
+   "cat": "demografia",
+   "url": "https://www.ine.es/",
+   "acceso": "Descarga CSV oficial (operación 353)",
+   "estado": "activa",
+   "fiab": 5,
+   "cobertura": "8.134 municipios (año 2024)",
+   "frecuencia": "Anual (build_demografia.py)",
+   "usada": [
+    "Panel",
+    "Fichas"
+   ],
+   "contar": "demografia",
+   "manifest": "demografia",
+   "max_dias": 400,
+   "nota": "Edad media, % menores de 18, % de 65 y más y renta neta media por persona. Falta el cruce edad-sexo-renta con voto para estimar con un modelo (MRP)."
+  },
+  {
+   "id": "promesas",
+   "nombre": "Promesas extraídas de los programas completos (cita literal y página)",
+   "cat": "documentos",
+   "url": "",
+   "acceso": "Textos de programas en carpeta privada + Gemini",
+   "estado": "planificada",
+   "prioridad": "alta",
+   "fiab": 4,
+   "cobertura": "Pendiente de cargar los programas",
+   "frecuencia": "—",
+   "usada": [],
+   "nota": "build_promesas.py está listo: valida que cada cita aparezca literalmente en su página, conserva lo anotado a mano y procesa por tandas (cuota de Gemini). Falta el texto de los programas de 2023 y 2026."
   }
  ]
 }

@@ -272,7 +272,7 @@ const f1=x=>(Math.round(x*10)/10).toFixed(1);
 const sgn=x=>(x>0?'+':x<0?'−':'')+f1(Math.abs(x));
 
 /* ---------- estado ---------- */
-let SENT=null,RS={},PAD=null,PP_={prov:{}},lastDCode=null,DPEOPLE={},curPerson=null,p2Open=false,p2Token=0,bioCache={},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
+let DEMO=null,SENT=null,RS={},PAD=null,PP_={prov:{}},lastDCode=null,DPEOPLE={},curPerson=null,p2Open=false,p2Token=0,bioCache={},drawerOpen=false,dTab='gob',lastFocus=null,provGJ,news=[],idx,pols=[],provNames={},munNames={};
 const PA={},MA={};
 let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
@@ -286,9 +286,10 @@ Promise.all([
   fetch('data/politicos.json').then(r=>r.json()).catch(()=>({politicos:[]})),
   fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}})),
   fetch('data/padron.json').then(r=>r.json()).catch(()=>null),
-  fetch('data/sentimiento.json').then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([pg,nw,ix,pl,pp,pd,sj])=>{
-  PP_=pp;PAD=pd;SENT=sj;
+  fetch('data/sentimiento.json').then(r=>r.ok?r.json():null).catch(()=>null),
+  fetch('data/demografia.json').then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([pg,nw,ix,pl,pp,pd,sj,dm])=>{
+  PP_=pp;PAD=pd;SENT=sj;DEMO=dm;
   provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];
   provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
   idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
@@ -410,6 +411,7 @@ function ficha(){
         <div class="m"><span>Provincias en alarma</span><b style="color:var(--bad)">${ar.filter(x=>x.risk>=60).length}</b></div>
         <div class="m"><span>Habitantes (INE ${PAD?PAD.anios[0]:''})</span><b>${fmtN(pa.t)}</b></div>
         <div class="m"><span>Población en alarma</span><b style="color:var(--bad)">${pctTxt(pa.t?pa.a/pa.t*100:null)}</b></div>
+        ${dmCards(DEMO&&DEMO.esp)}
         <div class="m"><span>Titulares (real)</span><b>${news.length}</b></div>
       </div>
       <div class="chartbox"><canvas id="ch" aria-label="Evolución media del voto por partido"></canvas></div>
@@ -418,6 +420,7 @@ function ficha(){
   }
   const [pc,pt]=riskPill(a.risk);
   const rs=realSent(c),sv=rs?rs.v:a.sent;
+  const dm=DEMO?(selMun?DEMO.mun[c]:DEMO.prov[c]):null;
   const pop=popOf(c),totP=PAD?(selMun?(PAD.prov[curProv]||[])[0]:Object.values(PAD.prov).reduce((s,v)=>s+v[0],0)):null,share=pop&&totP?pop/totP*100:null;
   const alarmTxt=(curProv&&!selMun&&PAD)?(()=>{const q=popAlarm();return ` Los municipios en alarma suman ${fmtN(q.a)} habitantes (${pctTxt(q.t?q.a/q.t*100:null)} de la provincia).`})():'';
   $('fichaTag').textContent='';
@@ -431,6 +434,7 @@ function ficha(){
       <div class="m"><span>${rs?`Tono de la prensa (real · ${rs.n} noticias)`:'Tendencia sentimiento (ejemplo)'}</span><b style="color:${sv<0?'var(--bad)':'var(--ok)'}">${sv>0?'+':''}${sv}</b>${bar(Math.abs(sv)*2,sv<0?'var(--bad)':'var(--ok)')}</div>
       <div class="m"><span>Habitantes (INE ${PAD?PAD.anios[0]:''})</span><b>${fmtN(pop)}</b></div>
       <div class="m"><span>${selMun?'Peso en la provincia':'Peso en España'}</span><b>${pctTxt(share)}</b></div>
+      ${dmCards(dm)}
       <div class="m"><span>Titulares detectados (real)</span><b>${nc}</b>${bar(nc*(selMun?12:2),'var(--mut)')}</div>
     </div>
     <p style="margin:10px 0 0"><button class="btn pri" id="fichaPol">Ver políticos de la provincia</button></p>
@@ -469,6 +473,9 @@ const isRisk=window.PE.isRisk;
 function mergeSent(){RS={};if(!SENT||!SENT.items)return;news.forEach(n=>{const s=SENT.items[n.i];if(!s)return;n.s=s;[...n.pv,...n.mun].forEach(c=>{const r=RS[c]||(RS[c]={sum:0,n:0});r.sum+=s.tono;r.n++})})}
 function realSent(c){const r=RS[c];return r&&r.n>=(c.length===2?5:3)?{v:Math.round(r.sum/r.n*50),n:r.n}:null}
 const fmtN=n=>n==null?'—':Math.round(n).toLocaleString('es');
+const dmCards=r=>!r?'':`<div class="m"><span>Edad media (INE)</span><b>${r[0]==null?'—':String(r[0]).replace('.',',')+' años'}</b></div>
+      <div class="m"><span>Menores de 18 · mayores de 65</span><b>${r[1]==null?'—':String(r[1]).replace('.',',')+' % · '+String(r[2]).replace('.',',')+' %'}</b></div>
+      <div class="m"><span>Renta neta media por persona (${DEMO.anio})</span><b>${r[3]==null?'—':fmtN(r[3])+' €'}</b></div>`;
 function popOf(c){return PAD?(c.length===2?(PAD.prov[c]||[])[0]:(PAD.mun[c]||[])[0]):null}
 function popAlarm(){const S=scope();let a=0,t=0;S.codes.forEach(c=>{const p=popOf(c)||0;t+=p;if(S.tbl[c].risk>=60)a+=p});return {a,t}}
 const pctTxt=x=>x==null?'—':x<0.1?'<0,1 %':(Math.round(x*10)/10).toLocaleString('es')+' %';
@@ -537,11 +544,12 @@ function renderDrawer(){
     h+='<div class="dg">Gobierno de España</div>'+(ng?dPerson(ng,ng.rol,'PSOE'):'<p class="hint">Sin dato.</p>');
     if(code){
       const g=(d&&d.gobierno)||[];
-      [['autonómico','Gobierno autonómico'],['municipal','Capital de provincia']].forEach(([amb,tit])=>{
+      const SINDIP=['07','26','28','30','31','33','35','38','39'];   // uniprovinciales e islas: no hay diputación provincial
+      [['autonómico','Gobierno autonómico'],['municipal','Capital de provincia'],['provincial','Diputación provincial']].forEach(([amb,tit])=>{
         const ls=g.filter(x=>x.ambito===amb);
-        h+=`<div class="dg">${tit}</div>`+(ls.length?ls.map(x=>dPerson(x,x.rol,partyKey(x.partido))).join(''):'<p class="hint" style="margin:6px 0">Sin dato en Wikidata para este cargo. Añádelo como contexto en Fuentes.</p>');
+        const vacio=amb==='provincial'&&SINDIP.includes(code)?'No hay diputación provincial en este territorio.':'Sin dato en las fuentes abiertas para este cargo.';
+        h+=`<div class="dg">${tit}</div>`+(ls.length?ls.map(x=>dPerson(x,x.rol,partyKey(x.partido))).join(''):`<p class="hint" style="margin:6px 0">${vacio}</p>`);
       });
-      h+='<div class="dg">Diputación provincial</div><p class="hint" style="margin:6px 0">Pendiente: no hay una fuente abierta fiable para los presidentes de diputación.</p>';
     }
   }else{
     let ls=code?((d&&d.candidatos)||[]).map(c=>({nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?` (${c.nota})`:''),pk:c.partido})):

@@ -37,6 +37,13 @@ if "--semanal" in sys.argv:
         exige(sum(1 for x in pv.values() if any(g["ambito"] == "municipal" for g in x["gobierno"])) >= 40, "políticos: alcaldes en menos de 40 provincias")
         exige(sum(1 for x in pv.values() if any(g["ambito"] == "autonómico" for g in x["gobierno"])) >= 45, "políticos: presidentes autonómicos en menos de 45 provincias")
 
+res = D / "data/archivo/resumen.json"
+if res.exists():
+    r = json.loads(res.read_text(encoding="utf8"))
+    exige(r["noticias"] >= 1000, f"archivo: solo {r['noticias']} titulares archivados (debe ir creciendo)")
+else:
+    errores.append("archivo: falta atalaya/data/archivo/resumen.json")
+
 exige(len(list((D / "fichas").glob("*/index.html"))) >= 53, "fichas: faltan páginas (esperadas 53 más el índice)")
 
 if errores:

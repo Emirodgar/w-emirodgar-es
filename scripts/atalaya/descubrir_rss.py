@@ -9,7 +9,7 @@ Uso (raíz del repo): python3 scripts/atalaya/descubrir_rss.py
 import json, re, subprocess, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
-from urllib.parse import urljoin
+from urllib.parse import quote, urljoin, urlparse
 
 RAIZ = Path(__file__).resolve().parents[2]
 # (código de provincia, medio, portada). Una provincia puede tener varios medios.
@@ -54,6 +54,11 @@ def descubrir(c):
     for u in dict.fromkeys(urls):
         n = feed_valido(u)
         if n >= 5: return {"prov": pc, "medio": medio, "url": u, "items": n}
+    # Sin RSS propio: titulares de ese medio vía una búsqueda «site:» de Google Noticias (menos ruido que la búsqueda por provincia)
+    dominio = urlparse(portada).netloc.replace("www.", "")
+    gn = "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=" + quote(f"site:{dominio} when:3d")
+    n = feed_valido(gn)
+    if n >= 5: return {"prov": pc, "medio": medio, "url": gn, "items": n, "via": "google-site"}
     return {"prov": pc, "medio": medio, "url": None, "items": 0}
 
 def main():

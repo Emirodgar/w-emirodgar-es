@@ -107,22 +107,87 @@ def alcaldes_por_municipio(pend, out):
                 out[pc].append({"rol": f"Alcalde/sa de {n}", "ambito": "municipal", "nombre": v(r, "presLabel"), "partido": v(r, "partyLabel"),
                                 "wiki": art_title(v(r, "art")), "fuente": "Wikidata (mandato con fechas)"}); break
 
+SIN_DIPUTACION = {"07", "26", "28", "30", "31", "33", "35", "38", "39"}   # uniprovinciales e islas: no hay diputación provincial
+
+def norm_partido(p):
+    if not p: return None
+    t = nrm(p)
+    if "popular" in t or re.search(r"\bpp", t): return "Partido Popular"
+    if "socialista" in t or "psoe" in t or "psc" in t: return "Partido Socialista Obrero Español"
+    if "vox" in t: return "Vox"
+    return re.sub(r"\[\[|\]\]", "", p).strip()
+
+def persona_wiki(texto):
+    """De «[[Enlace|Nombre]] <small>([[Partido|SIGLAS]])</small>» saca (nombre, página de Wikipedia, partido)."""
+    base = re.split(r"<small|\s\(", texto)[0]
+    m = re.search(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]", base)
+    if m:
+        wiki = m.group(1).strip().replace(" ", "_")
+        nombre = re.sub(r"\s*\(.*\)$", "", m.group(1)).strip()
+        if len(nombre.split()) < len((m.group(2) or "").split()): nombre = m.group(2).strip()
+    else:
+        nombre, wiki = re.sub(r"<[^>]+>|\{\{[^}]*\}\}|'{2,3}|\[\[|\]\]", "", base).strip(), None
+    resto = texto[len(base):]
+    mp = re.search(r"\(\s*\[\[(?:[^\]|]*\|)?([^\]]+)\]\]", resto) or re.search(r"\(([^)<\[]{2,30})\)", resto)
+    return nombre, wiki, norm_partido(mp.group(1) if mp else None)
+
+def campo(w, nombre):
+    m = re.search(r"\|\s*" + nombre + r"\s*=\s*([^\n]*)", w, re.I)
+    return re.split(r"\s\|\s*\w[\w ñáéíóú_]*=", m.group(1))[0].strip() if m else None
+
 def diputaciones(prov):
     def uno(item):
         pc, nom = item
-        for pref in ("Diputación Provincial de ", "Diputación de ", "Diputación Foral de ", "Consejo Insular de "):
-            w = wikitext(pref + ES.get(nom, nom))
-            if w and not w.startswith("#REDIRECT"):
-                m = re.search(r"\|\s*(?:presidente|presidencia|presidente_actual)\s*=\s*([^\n]+)", w, re.I)
-                if m:
-                    t = m.group(1)
-                    mm = re.search(r"\[\[([^\]|]+)(?:\|([^\]]+))?\]\]", t)
-                    nombre = (mm.group(2) or mm.group(1)) if mm else re.sub(r"<[^>]+>|\{\{[^}]*\}\}|'''?", "", t).strip()
-                    if nombre and len(nombre) > 3:
-                        return pc, {"rol": "Presidente/a de la " + pref.strip().replace(" de", ""), "ambito": "provincial", "nombre": nombre.strip(), "partido": None,
-                                    "wiki": mm.group(1) if mm else None, "fuente": "Wikipedia (infobox; verificar)"}
+        if pc in SIN_DIPUTACION: return pc, None
+        base = ES.get(nom, nom)
+        for pref, rol in (("Diputación de ", "Presidente/a de la Diputación"), ("Diputación Provincial de ", "Presidente/a de la Diputación"), ("Diputación Foral de ", "Diputado/a General")):
+            w = wikitext(pref + base)
+            if not w or w.startswith("#REDIRECT"): continue
+            t = campo(w, "titular_nom")
+            if not t:
+                m = re.search(r"(?:su\s+)?presidente(?:a)?\s+(?:actual\s+)?es\s+(?:el\s+|la\s+)?(\[\[[^\]]+\]\])", w, re.I)
+                t = m.group(1) if m else None
+            if t:
+                nombre, wiki, partido = persona_wiki(t)
+                if len(nombre.split()) >= 2:
+                    if pc in {"01", "20", "48"}: rol = "Diputado/a General (Diputación Foral)"
+                    return pc, {"rol": rol, "ambito": "provincial", "nombre": nombre, "partido": partido, "wiki": wiki, "fuente": "Wikipedia (infobox; verificar)"}
         return pc, None
     with ThreadPoolExecutor(6) as ex: return dict(x for x in ex.map(uno, prov.items()))
+
+# Alcaldes de capital que Wikidata no trae: se leen del cuadro de la ciudad en Wikipedia. Se descarta si el mandato indicado es anterior a 2023.
+PAGINAS_CIUDAD = {"02": "Albacete", "07": "Palma de Mallorca", "38": "Santa Cruz de Tenerife", "40": "Segovia"}
+def alcaldes_infobox(faltan):
+    out = {}
+    for pc in faltan:
+        t = PAGINAS_CIUDAD.get(pc)
+        w = wikitext(t) if t else None
+        if not w: continue
+        al = campo(w, "alcalde") or campo(w, "alcaldesa")
+        if not al: continue
+        anio = re.match(r"\s*(\d{4})", campo(w, "alcalde_año") or "")
+        if anio and int(anio.group(1)) < 2023: continue          # cuadro desactualizado (mandato anterior a las elecciones de 2023)
+        nombre, wiki, partido = persona_wiki(al)
+        if len(nombre.split()) >= 2:
+            out[pc] = {"rol": f"Alcalde/sa de {t.split(' (')[0]}", "ambito": "municipal", "nombre": nombre, "partido": partido, "wiki": wiki, "fuente": "Wikipedia (cuadro de la ciudad; verificar)"}
+    return out
+
+# Presidentes que no salen de Wikidata: página «Presidente de …» de Wikipedia, campo «titular»
+PAGINAS_TITULAR = {"31": ("Presidente del Gobierno de Navarra", "Presidente/a de Navarra", "autonómico"),
+                   "51": ("Presidente de la Ciudad Autónoma de Ceuta", "Presidente/a de la Ciudad de Ceuta", "autonómico"),
+                   "52": ("Presidente de la Ciudad Autónoma de Melilla", "Presidente/a de la Ciudad de Melilla", "autonómico")}
+def titulares():
+    out = {}
+    for pc, (t, rol, amb) in PAGINAS_TITULAR.items():
+        w = wikitext(t)
+        if not w: continue
+        ti = campo(w, "titular")
+        if not ti: continue
+        nombre, wiki, partido = persona_wiki(ti)
+        partido = partido or norm_partido(re.sub(r"\[\[(?:[^\]|]*\|)?([^\]]+)\]\]", r"\1", campo(w, "partido") or ""))
+        if len(nombre.split()) >= 2:
+            out[pc] = {"rol": rol, "ambito": amb, "nombre": nombre, "partido": partido, "wiki": wiki, "fuente": "Wikipedia (cuadro del cargo; verificar)"}
+    return out
 
 def limpiar(t):
     t = re.sub(r"<ref[^>]*/>|<ref[^>]*>.*?</ref>", "", t, flags=re.S)
@@ -193,14 +258,19 @@ def candidatos(prov):
 
 def main():
     prov = json.loads((D / "indice.json").read_text(encoding="utf8"))["prov"]
-    cand = candidatos(prov); gob = gobierno(); dip = {}   # diputaciones(): cobertura <5 %, se deja fuera hasta tener fuente fiable
+    cand = candidatos(prov); gob = gobierno(); dip = diputaciones(prov); tit = titulares()
+    # huecos de alcaldes: cuadro de la ciudad en Wikipedia
+    faltan = [pc for pc in prov if not any(g["ambito"] == "municipal" for g in gob.get(pc, []))]
+    alc = alcaldes_infobox(faltan)
     res = {}
     for pc in prov:
         g = list(gob.get(pc, []))
+        if alc.get(pc): g.append(alc[pc])
+        if tit.get(pc): g.append(tit[pc])
         if dip.get(pc): g.append(dip[pc])
         res[pc] = {"gobierno": g, "candidatos": cand.get(pc, [])}
     out = {"actualizado": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-           "fuentes": {"gobierno": "Wikidata (cargos vigentes de presidente autonómico y alcalde de la capital)", "candidatos": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026"},
+           "fuentes": {"gobierno": "Wikidata (cargos vigentes) y, para los huecos, cuadros de Wikipedia (diputaciones, ciudades y presidencias): verificar", "candidatos": "https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026"},
            "prov": res}
     (D / "politicos_prov.json").write_text(json.dumps(out, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print("gobierno:", sum(1 for p in res.values() if p["gobierno"]), "provincias;", 

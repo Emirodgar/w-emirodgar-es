@@ -26,21 +26,49 @@
   },
   {
    "prov": "49",
+   "medio": "La Opinión de Zamora",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alaopiniondezamora.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "49",
    "medio": "Zamora News",
    "url": "https://www.zamoranews.com/rss/",
    "items": 20
   },
   {
+   "prov": "05",
+   "medio": "El Diario de Ávila",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariodeavila.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "09",
+   "medio": "Diario de Burgos",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariodeburgos.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
    "prov": "24",
    "medio": "Diario de León",
    "url": "https://www.diariodeleon.es/rss/home.xml",
-   "items": 128
+   "items": 142
   },
   {
    "prov": "34",
    "medio": "El Norte de Castilla Palencia",
    "url": "https://www.elnortedecastilla.es/rss/2.0/?section=palencia",
    "items": 100
+  },
+  {
+   "prov": "34",
+   "medio": "Diario Palentino",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariopalentino.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "40",
@@ -52,7 +80,7 @@
    "prov": "42",
    "medio": "Heraldo-Diario de Soria",
    "url": "https://www.heraldodiariodesoria.es/rss/home.xml",
-   "items": 112
+   "items": 119
   },
   {
    "prov": "47",
@@ -61,22 +89,36 @@
    "items": 100
   },
   {
+   "prov": "47",
+   "medio": "El Día de Valladolid",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aeldiadevalladolid.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
    "prov": "28",
    "medio": "Telemadrid",
    "url": "https://www.telemadrid.es/rss",
-   "items": 28
+   "items": 31
   },
   {
    "prov": "28",
    "medio": "Madridiario",
    "url": "https://www.madridiario.es/rss/ultimasNoticias/",
-   "items": 17
+   "items": 19
   },
   {
    "prov": "08",
    "medio": "La Vanguardia",
    "url": "https://www.lavanguardia.com/rss/home.xml",
-   "items": 153
+   "items": 148
+  },
+  {
+   "prov": "08",
+   "medio": "El Periódico",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aelperiodico.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "08",
@@ -88,13 +130,20 @@
    "prov": "41",
    "medio": "Diario de Sevilla",
    "url": "https://www.diariodesevilla.es/rss",
-   "items": 144
+   "items": 143
   },
   {
    "prov": "29",
    "medio": "Diario Sur",
    "url": "https://www.diariosur.es/rss/2.0/?section=",
    "items": 100
+  },
+  {
+   "prov": "29",
+   "medio": "La Opinión de Málaga",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alaopiniondemalaga.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "18",
@@ -106,7 +155,14 @@
    "prov": "18",
    "medio": "Granada Hoy",
    "url": "https://www.granadahoy.com/rss",
-   "items": 167
+   "items": 164
+  },
+  {
+   "prov": "14",
+   "medio": "Diario Córdoba",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariocordoba.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "23",
@@ -118,19 +174,26 @@
    "prov": "21",
    "medio": "Huelva Información",
    "url": "https://www.huelvainformacion.es/rss",
-   "items": 120
+   "items": 117
   },
   {
    "prov": "11",
    "medio": "Diario de Cádiz",
    "url": "https://www.diariodecadiz.es/rss",
-   "items": 145
+   "items": 133
   },
   {
    "prov": "04",
    "medio": "Diario de Almería",
    "url": "https://www.diariodealmeria.es/rss",
-   "items": 120
+   "items": 119
+  },
+  {
+   "prov": "46",
+   "medio": "Levante-EMV",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alevante-emv.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "46",
@@ -139,10 +202,66 @@
    "items": 100
   },
   {
+   "prov": "03",
+   "medio": "Información",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Ainformacion.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "12",
+   "medio": "El Periódico Mediterráneo",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aelperiodicomediterraneo.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
    "prov": "50",
    "medio": "Heraldo de Aragón",
    "url": "https://www.heraldo.es/rss",
-   "items": 194
+   "items": 180
+  },
+  {
+   "prov": "50",
+   "medio": "El Periódico de Aragón",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aelperiodicodearagon.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "22",
+   "medio": "Diario del AltoAragón",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariodelaltoaragon.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "44",
+   "medio": "Diario de Teruel",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariodeteruel.es%20when%3A3d",
+   "items": 86,
+   "via": "google-site"
+  },
+  {
+   "prov": "15",
+   "medio": "La Voz de Galicia",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alavozdegalicia.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "15",
+   "medio": "La Opinión A Coruña",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alaopinioncoruna.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "36",
+   "medio": "Faro de Vigo",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Afarodevigo.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "36",
@@ -154,13 +273,20 @@
    "prov": "32",
    "medio": "La Región",
    "url": "https://www.laregion.es/rss",
-   "items": 171
+   "items": 178
   },
   {
    "prov": "27",
    "medio": "El Progreso",
    "url": "https://www.elprogreso.es/rss/",
-   "items": 37
+   "items": 40
+  },
+  {
+   "prov": "33",
+   "medio": "La Nueva España",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alne.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
   },
   {
    "prov": "33",
@@ -196,7 +322,7 @@
    "prov": "31",
    "medio": "Diario de Navarra",
    "url": "https://www.diariodenavarra.es/rss/contenidos.xml",
-   "items": 108
+   "items": 114
   },
   {
    "prov": "26",
@@ -211,22 +337,99 @@
    "items": 100
   },
   {
+   "prov": "30",
+   "medio": "La Opinión de Murcia",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alaopiniondemurcia.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "02",
+   "medio": "La Tribuna de Albacete",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alatribunadealbacete.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "13",
+   "medio": "La Tribuna de Ciudad Real",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alatribunadeciudadreal.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "16",
+   "medio": "Las Noticias de Cuenca",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alasnoticiasdecuenca.es%20when%3A3d",
+   "items": 75,
+   "via": "google-site"
+  },
+  {
+   "prov": "19",
+   "medio": "Nueva Alcarria",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Anuevaalcarria.com%20when%3A3d",
+   "items": 62,
+   "via": "google-site"
+  },
+  {
+   "prov": "45",
+   "medio": "La Tribuna de Toledo",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alatribunadetoledo.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
    "prov": "06",
    "medio": "Diario Hoy",
    "url": "https://www.hoy.es/rss/2.0/?section=",
    "items": 100
   },
   {
+   "prov": "10",
+   "medio": "El Periódico Extremadura",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aelperiodicoextremadura.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "07",
+   "medio": "Diario de Mallorca",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariodemallorca.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "07",
+   "medio": "Ultima Hora",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aultimahora.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "35",
+   "medio": "La Provincia",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Alaprovincia.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "38",
+   "medio": "El Día",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aeldia.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
    "prov": "25",
    "medio": "Segre",
    "url": "https://www.segre.com/ca/rss/home.xml",
-   "items": 94
+   "items": 95
   },
   {
    "prov": "43",
    "medio": "Diari de Tarragona",
    "url": "https://www.diaridetarragona.com/rss/home.xml",
-   "items": 60
+   "items": 61
   },
   {
    "prov": "51",

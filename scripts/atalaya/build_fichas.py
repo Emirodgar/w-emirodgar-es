@@ -144,6 +144,7 @@ def main():
     global PROV
     ind = J(D / "indice.json"); prov = ind["prov"]; PROV = prov; esc = J(D / "escanos.json")
     pad = J(D / "padron.json"); anio_pad = pad["anios"][0]
+    dem = J(D / "demografia.json") if (D / "demografia.json").exists() else None
     # clima de prensa por provincia a partir de la clasificación automática de titulares (si existe)
     sj = J(D / "sentimiento.json")["items"] if (D / "sentimiento.json").exists() else {}
     clima = {}
@@ -185,13 +186,18 @@ def main():
             ev += f"<h2>3. Señales recientes en {E(nombre)}</h2><ul>" + "".join(f"<li><a href='{E(x['u'])}' rel='nofollow noopener'>{E(re.sub(chr(32)+'-'+chr(32)+'[^-]{3,60}$', '', x['t']))}</a> <span class='meta'>({E(x['m'])}, {fecha_es(x['f'])})</span></li>" for x in tit) + "</ul>"
         else:
             ev += f"<h2>3. Señales recientes en {E(nombre)}</h2><p>No se han detectado titulares recientes sobre política en {E(nombre)} en las fuentes monitorizadas.</p>"
+        dp = dem["prov"].get(pc) if dem else None
+        if dp and dp[0] is not None and dp[3] is not None:
+            es_ = dem["esp"]; c1 = lambda x: f"{x:.1f}".replace(".", ",")
+            ev += (f"<h2>4. Perfil demográfico y renta</h2><p>La edad media en {E(nombre)} es de {c1(dp[0])} años (en España, {c1(es_[0])}); un {c1(dp[2])} % de la población tiene 65 años o más "
+                   f"y un {c1(dp[1])} % menos de 18. La renta neta media por persona es de {nes(round(dp[3]))} euros ({nes(round(es_[3]))} en el conjunto de España), según el Atlas de distribución de renta de los hogares del INE de {dem['anio']}.</p>")
         cl = clima.get(pc)
         if cl and cl["n"] >= 8:
             pct = lambda k: round(100 * cl[k] / cl["n"])
             riesgo_txt = (f"{cl['riesgo']} titular{'es recogen' if cl['riesgo'] != 1 else ' recoge'} hechos de riesgo (por ejemplo, investigaciones judiciales o accidentes). "
                           if cl["riesgo"] else "Ninguno recoge hechos de riesgo como investigaciones judiciales o accidentes. ")
             temas = ", ".join(t for t, _ in sorted(((t, n) for t, n in cl["temas"].items() if t != "otros"), key=lambda kv: -kv[1])[:3])
-            ev += (f"<h2>4. El clima de prensa</h2><p>De {cl['n']} titulares recientes sobre {E(nombre)} clasificados de forma automática, un {pct('neg')} % tiene un tono negativo, "
+            ev += (f"<h2>{5 if (dp and dp[0] is not None and dp[3] is not None) else 4}. El clima de prensa</h2><p>De {cl['n']} titulares recientes sobre {E(nombre)} clasificados de forma automática, un {pct('neg')} % tiene un tono negativo, "
                    f"un {100 - pct('neg') - pct('pos')} % neutro y un {pct('pos')} % positivo. Los temas más frecuentes son: {E(temas)}. "
                    f"{riesgo_txt}"
                    f"Es una estimación orientativa: el modelo solo ve el titular y esto no equivale a una encuesta de opinión.</p>")

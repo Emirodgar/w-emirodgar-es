@@ -5,7 +5,7 @@ Salida: data-private/atalaya.sqlite (fuera de git y fuera de la web publicada).
 Orden: build_geo.py -> build_news.py -> build_politicos.py -> build_db.py
 Uso (raíz del repo): python3 scripts/atalaya/build_db.py
 """
-import json, sqlite3
+import gzip, json, sqlite3
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -13,6 +13,21 @@ RAIZ = Path(__file__).resolve().parents[2]
 D = RAIZ / "atalaya/data"; E = RAIZ / "elecciones-espana/data"
 OUT = RAIZ / "data-private/atalaya.sqlite"
 J = lambda p: json.loads(Path(p).read_text(encoding="utf8"))
+
+def _archivo(sub):
+    """Filas de atalaya/data/archivo/<sub>/*.jsonl.gz (el archivo histórico completo)."""
+    for f in sorted((D / "archivo" / sub).glob("*.jsonl.gz")):
+        with gzip.open(f, "rt", encoding="utf8") as fh:
+            for l in fh:
+                if l.strip(): yield json.loads(l)
+
+def noticias_historicas():
+    """Todo el archivo de prensa más lo vivo, sin duplicados."""
+    vistos = set()
+    for n in list(_archivo("noticias")) + J(D / "noticias.json")["noticias"]:
+        if n.get("i") in vistos: continue
+        vistos.add(n.get("i")); yield n
+
 
 def main():
     OUT.parent.mkdir(exist_ok=True)
@@ -59,8 +74,10 @@ def main():
 
     # artículos
     sj = J(D / "sentimiento.json") if (D / "sentimiento.json").exists() else {"items": {}}
-    SENT, SENT_MODELO = sj["items"], sj.get("modelo", "gemini")
-    for a in J(D / "noticias.json")["noticias"]:
+    SENT_MODELO = sj.get("modelo", "gemini")
+    SENT = {r["i"]: r for r in _archivo("sentimiento")}
+    SENT.update(sj["items"])           # el archivo conserva también las clasificaciones que ya salieron del fichero vivo
+    for a in noticias_historicas():
         aid = db.execute("INSERT OR IGNORE INTO articulo(url,titulo,medio,fuente_id,ambito,tipo,publicado,capturado) VALUES (?,?,?,?,?,?,?,?)",
                          (a["u"], a["t"], a["m"], fuente(a["m"], "prensa"), a["a"], "noticia", a["f"], ahora)).lastrowid
         if not aid: continue

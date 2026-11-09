@@ -92,6 +92,10 @@ jobs:
           MAX_NUEVOS: ${{ steps.sem.outputs.semanal == 'true' && '1000' || '400' }}
         run: python3 scripts/atalaya/build_sentimiento.py
 
+      - name: Archivo histórico (solo añade; nunca borra)
+        if: steps.hoy.outputs.ejecutar == 'true'
+        run: python3 scripts/atalaya/archivo.py
+
       - name: Fichas indexables
         if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/build_fichas.py
