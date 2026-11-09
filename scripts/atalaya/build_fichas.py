@@ -144,6 +144,16 @@ def main():
     global PROV
     ind = J(D / "indice.json"); prov = ind["prov"]; PROV = prov; esc = J(D / "escanos.json")
     pad = J(D / "padron.json"); anio_pad = pad["anios"][0]
+    # clima de prensa por provincia a partir de la clasificación automática de titulares (si existe)
+    sj = J(D / "sentimiento.json")["items"] if (D / "sentimiento.json").exists() else {}
+    clima = {}
+    for x in J(D / "noticias.json")["noticias"]:
+        sc = sj.get(x.get("i"))
+        if not sc: continue
+        for pc_ in x["pv"]:
+            c = clima.setdefault(pc_, {"n": 0, "neg": 0, "pos": 0, "riesgo": 0, "temas": {}})
+            c["n"] += 1; c["neg"] += sc["tono"] < 0; c["pos"] += sc["tono"] > 0; c["riesgo"] += sc["riesgo"] >= 2
+            c["temas"][sc["tema"]] = c["temas"].get(sc["tema"], 0) + 1
     nacional, nsond, fsond = poll_avg()
     orden = sorted(nacional.items(), key=lambda x: -x[1]); lider = orden[0][0]
     conv = J(RAIZ / "elecciones-espana/data/2026-11-29/convocatoria.json")
@@ -175,6 +185,16 @@ def main():
             ev += f"<h2>3. Señales recientes en {E(nombre)}</h2><ul>" + "".join(f"<li><a href='{E(x['u'])}' rel='nofollow noopener'>{E(re.sub(chr(32)+'-'+chr(32)+'[^-]{3,60}$', '', x['t']))}</a> <span class='meta'>({E(x['m'])}, {fecha_es(x['f'])})</span></li>" for x in tit) + "</ul>"
         else:
             ev += f"<h2>3. Señales recientes en {E(nombre)}</h2><p>No se han detectado titulares recientes sobre política en {E(nombre)} en las fuentes monitorizadas.</p>"
+        cl = clima.get(pc)
+        if cl and cl["n"] >= 8:
+            pct = lambda k: round(100 * cl[k] / cl["n"])
+            riesgo_txt = (f"{cl['riesgo']} titular{'es recogen' if cl['riesgo'] != 1 else ' recoge'} hechos de riesgo (por ejemplo, investigaciones judiciales o accidentes). "
+                          if cl["riesgo"] else "Ninguno recoge hechos de riesgo como investigaciones judiciales o accidentes. ")
+            temas = ", ".join(t for t, _ in sorted(((t, n) for t, n in cl["temas"].items() if t != "otros"), key=lambda kv: -kv[1])[:3])
+            ev += (f"<h2>4. El clima de prensa</h2><p>De {cl['n']} titulares recientes sobre {E(nombre)} clasificados de forma automática, un {pct('neg')} % tiene un tono negativo, "
+                   f"un {100 - pct('neg') - pct('pos')} % neutro y un {pct('pos')} % positivo. Los temas más frecuentes son: {E(temas)}. "
+                   f"{riesgo_txt}"
+                   f"Es una estimación orientativa: el modelo solo ve el titular y esto no equivale a una encuesta de opinión.</p>")
         limites = ("<h2>Qué podría cambiar el resultado</h2><ul><li>Un cambio de tendencia nacional en las semanas finales de campaña.</li><li>Un hecho que afecte a la imagen de los candidatos locales o nacionales (imputaciones, dimisiones, crisis de gestión).</li>"
                    "<li>La participación y el reparto de los indecisos, que en provincias con pocos escaños pueden mover el último diputado.</li></ul>"
                    "<h2>Lo que este análisis no incluye</h2><p class='warn'>Todavía no usa encuestas provinciales, resultados municipales ni análisis de sentimiento en redes. Es una estimación razonada con datos públicos, no una encuesta ni una previsión oficial.</p>")
