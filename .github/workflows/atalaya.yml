@@ -2,11 +2,12 @@ name: Atalaya · actualización de datos
 
 on:
   schedule:
-    # Cada día a las 09:23 UTC (10:23 o 11:23 en Madrid). Se eligió después de las 08:00 UTC, cuando se reinicia la
+    # Cada día desde las 09:23 UTC (10:23 o 11:23 en Madrid), con reintentos cada hora hasta las 12:23: GitHub descarta o retrasa
+    # a veces los disparos programados. El paso «¿Ya se actualizó hoy?» evita repetir el trabajo. Se eligió después de las 08:00 UTC, cuando se reinicia la
     # cuota diaria de Gemini (medianoche del Pacífico), para que la clasificación de titulares no choque con el día anterior.
     # Los lunes se regeneran además los datos "lentos" (cargos y escaños). Minuto :23
     # para evitar la hora punta de GitHub Actions.
-    - cron: '23 9 * * *'
+    - cron: '23 9-12 * * *'
   workflow_dispatch:
     inputs:
       semanal:
@@ -28,12 +29,27 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: ¿Ya se actualizó hoy?
+        # Los disparos programados repetidos terminan aquí si el manifiesto ya tiene la fecha de hoy; un fallo anterior no la guarda y se reintenta.
+        id: hoy
+        run: |
+          hoy=$(date -u +%F)
+          ult=$(python3 -c "import json;print(json.load(open('atalaya/data/manifest.json')).get('noticias','')[:10])" 2>/dev/null || echo "")
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$ult" = "$hoy" ]; then
+            echo "Ya hay una actualización de hoy ($ult): no se repite."
+            echo "ejecutar=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ejecutar=true" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Configurar Python
+        if: steps.hoy.outputs.ejecutar == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
 
       - name: ¿Toca la actualización semanal?
+        if: steps.hoy.outputs.ejecutar == 'true'
         id: sem
         run: |
           if [ "${{ inputs.semanal }}" = "true" ] || [ "$(date -u +%u)" = "1" ]; then
@@ -43,19 +59,22 @@ jobs:
           fi
 
       - name: Prensa por RSS (diario)
+        if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/build_news.py
 
       - name: Cargos, candidatos y escaños (semanal)
-        if: steps.sem.outputs.semanal == 'true'
+        if: steps.sem.outputs.semanal == 'true' && steps.hoy.outputs.ejecutar == 'true'
         run: |
           python3 scripts/atalaya/build_resultados.py
           python3 scripts/atalaya/build_politicos_prov.py
           python3 scripts/atalaya/build_programas.py
 
       - name: Archivo permanente de encuestas (diario; solo añade)
+        if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/build_encuestas.py
 
       - name: Congreso y Senado (solo añade; el Senado se completa por tandas si limita el acceso)
+        if: steps.hoy.outputs.ejecutar == 'true'
         continue-on-error: true
         timeout-minutes: 30
         env:
@@ -64,6 +83,7 @@ jobs:
         run: python3 scripts/atalaya/build_parlamento.py
 
       - name: Sentimiento de los titulares (Gemini, opcional)
+        if: steps.hoy.outputs.ejecutar == 'true'
         # Si falta la clave o Gemini falla, el resto del workflow sigue con la heurística de palabras clave.
         continue-on-error: true
         timeout-minutes: 12
@@ -73,13 +93,16 @@ jobs:
         run: python3 scripts/atalaya/build_sentimiento.py
 
       - name: Fichas indexables
+        if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/build_fichas.py
 
       - name: Comprobar que los datos son razonables
+        if: steps.hoy.outputs.ejecutar == 'true'
         # Si falla, NO se hace commit: mejor datos de ayer que datos rotos.
         run: python3 scripts/atalaya/check_data.py ${{ steps.sem.outputs.semanal == 'true' && '--semanal' || '' }}
 
       - name: Commit y push de lo que haya cambiado
+        if: steps.hoy.outputs.ejecutar == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
