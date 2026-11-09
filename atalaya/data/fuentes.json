@@ -660,6 +660,25 @@
    "nota": "Los PDFs de PP (112 páginas) y Sumar (182) se descargan de sus webs oficiales; PSOE y Vox bloquean los robots y hay que bajarlos a mano. Cada promesa lleva una cita literal verificada y su página. El estado de cumplimiento lo anota una persona con evidencia.",
    "manifest": "promesas",
    "max_dias": 3
+  },
+  {
+   "id": "interior_resultados",
+   "nombre": "Ministerio del Interior · Resultados electorales por municipio y circunscripción",
+   "cat": "resultados",
+   "url": "https://infoelectoral.interior.gob.es/",
+   "acceso": "Descarga manual de los Excel oficiales (el sitio bloquea los robots); se importan con build_interior.py",
+   "estado": "parcial",
+   "prioridad": "alta",
+   "fiab": 5,
+   "cobertura": "Congreso julio 2023 (8.131 municipios y 52 circunscripciones con escaños) y municipales de mayo de 2023; faltan 2011-2019",
+   "frecuencia": "Por elección (manual)",
+   "usada": [
+    "Panel",
+    "Fichas"
+   ],
+   "manifest": "resultados",
+   "max_dias": 1000,
+   "nota": "Sustituye a los datos simulados de 2023. La volatilidad y el riesgo siguen siendo de ejemplo hasta cargar elecciones anteriores."
   }
  ]
 }

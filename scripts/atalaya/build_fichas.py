@@ -139,12 +139,15 @@ def titulares(pc, nombre, n=5):
     nw = [x for x in J(D / "noticias.json")["noticias"] if pc in x["pv"] and any(k in nrm(x["t"]) or k in nrm(x["m"]) for k in claves)]
     return nw[:n]
 
+RC = None
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     global PROV
     ind = J(D / "indice.json"); prov = ind["prov"]; PROV = prov; esc = J(D / "escanos.json")
     pad = J(D / "padron.json"); anio_pad = pad["anios"][0]
     dem = J(D / "demografia.json") if (D / "demografia.json").exists() else None
+    global RC; RC = J(D / "resultados/congreso-2023-07/circunscripciones.json") if (D / "resultados/congreso-2023-07/circunscripciones.json").exists() else None
     # clima de prensa por provincia a partir de la clasificación automática de titulares (si existe)
     sj = J(D / "sentimiento.json")["items"] if (D / "sentimiento.json").exists() else {}
     clima = {}
@@ -183,6 +186,14 @@ def main():
             resp = f"No hay todavía datos suficientes para señalar un favorito en {nombre}: no hemos podido cargar su histórico de escaños. Lo que sí se sabe es el contexto nacional: la media de encuestas sitúa a {art(lider)} en cabeza."
             cab = f"<p class='ans'>{E(resp)}</p>"; ev = f"<h2>1. Histórico de {E(nombre)}</h2><p>Pendiente de carga desde fuentes oficiales.</p>"
             faq_hist = ""; desc = resp.split(". ")[0].rstrip(".") + "."; nivel = "sin datos"
+        rc = ((RC or {}).get("prov") or {}).get(pc)
+        if rc and rc["validos"]:
+            c1_ = lambda x: f"{x:.1f}".replace(".", ",")
+            top = sorted(rc["v"].items(), key=lambda kv: -kv[1][0])[:6]
+            part = round(100 * rc["votantes"] / rc["censo"], 1) if rc["censo"] else None
+            ev += (f"<h2>Votos en las elecciones generales de julio de 2023 (datos oficiales)</h2><p>En {E(nombre)} votaron {nes(rc['votantes'])} personas" + (f" (participación del {c1_(part)} %)" if part else "") + ". Reparto de los votos válidos: "
+                   + ", ".join(f"{E(k)} {c1_(100 * v_[0] / rc['validos'])} % ({v_[1]} escaño{'s' if v_[1] != 1 else ''})" for k, v_ in top)
+                   + ". Fuente: <a href='https://infoelectoral.interior.gob.es/'>Ministerio del Interior</a>.</p>")
         nac = ", ".join(f"{p} {v_:.1f}%" for p, v_ in orden[:5])
         ev += (f"<h2>2. El clima nacional</h2><p>Media ponderada de {nsond} sondeos publicados en los 30 días previos al {fecha_es(fsond)} (sin CIS): {E(nac)}. "
                f"No hay una encuesta pública específica de {E(nombre)} cargada en este análisis, así que se aplica la tendencia general como contexto, no como previsión provincial. "

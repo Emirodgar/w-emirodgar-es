@@ -234,7 +234,7 @@ button,select,input{font:inherit;color:inherit}
   </div>
 </section>
 
-<p class="foot">Real: límites (Opendatasoft/IGN), titulares (RSS nacionales y Google Noticias por provincia, etiquetados por coincidencia de nombre; puede haber ruido), candidatos y media nacional de encuestas (de /elecciones-espana). Simulado: resultados 2011–2023 por provincia y municipio (se simulan por separado), volatilidad, sentimiento, indecisos y las salidas de los agentes. El caso de Salamanca capital es ilustrativo. No tomar ninguna cifra como dato electoral. Datos agregados por territorio, sin perfilado de personas.</p>
+<p class="foot">Real: límites (Opendatasoft/IGN), titulares (RSS nacionales y Google Noticias por provincia, etiquetados por coincidencia de nombre; puede haber ruido), candidatos y media nacional de encuestas (de /elecciones-espana). Real: resultados del Congreso de julio de 2023 por provincia y municipio (Ministerio del Interior). Simulado: resultados de 2011, 2015 y 2019 (hasta cargarlos), volatilidad, sentimiento, indecisos y las salidas de los agentes. El caso de Salamanca capital es ilustrativo. No tomar ninguna cifra como dato electoral. Datos agregados por territorio, sin perfilado de personas.</p>
 
 
 <aside class="drawer" id="drawer" role="dialog" aria-modal="false" aria-labelledby="dTitle" tabindex="-1">
@@ -278,6 +278,27 @@ let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
 let map,provLayer,munLayer,chart;
 const cache={};
+/* ---------- resultados reales 2023 (Ministerio del Interior) sobre el modelo ---------- */
+let RCIRC=null;const RMUN={};
+const SIGLA={VOX:'Vox','SUMAR':'Sumar'};const sg=k=>SIGLA[k]||k;
+COL.Sumar=COL.Sumar||'#d6246e';
+function regCol(k){return COL[k]||'#a78bfa'}
+function realAnalysis(sim,v,extra){
+  /* v: {sigla:votos} con votos válidos; sustituye 2023 por el dato real y recalcula; conserva ganador real aunque sea regional */
+  const tot=Object.values(v).reduce((a,b)=>a+b,0);if(!tot)return analyse(sim);
+  const pc=k=>+((v[k]||0)/tot*100).toFixed(1),sh={PP:pc('PP'),PSOE:pc('PSOE'),Vox:pc('VOX'),Cs:pc('Cs')};
+  sh.Otros=+(100-sh.PP-sh.PSOE-sh.Vox-sh.Cs).toFixed(1);
+  sim.hist[sim.hist.length-1]=sh;
+  const a=analyse(sim),ord=Object.keys(v).sort((x,y)=>v[y]-v[x]),w=sg(ord[0]);
+  a.real={top:ord.slice(0,5).map(k=>[sg(k),pc(k)]),extra:extra||{}};
+  a.winner=w;a.last=Object.assign({},a.last,{[w]:pc(ord[0])});a.margin=+(pc(ord[0])-(ord[1]?pc(ord[1]):0)).toFixed(1);
+  return a;
+}
+function realProv(pc){
+  const r=RCIRC&&RCIRC[pc];if(!r)return null;
+  const v={},seats={};for(const k in r.v){v[k]=r.v[k][0];if(r.v[k][1])seats[sg(k)]=r.v[k][1]}
+  return {v,extra:{part:r.censo?+(r.votantes/r.censo*100).toFixed(1):null,seats,votantes:r.votantes,validos:r.validos}};
+}
 
 Promise.all([
   fetch('data/provincias.geojson').then(r=>r.json()),
@@ -287,11 +308,12 @@ Promise.all([
   fetch('data/politicos_prov.json').then(r=>r.json()).catch(()=>({prov:{}})),
   fetch('data/padron.json').then(r=>r.json()).catch(()=>null),
   fetch('data/sentimiento.json').then(r=>r.ok?r.json():null).catch(()=>null),
-  fetch('data/demografia.json').then(r=>r.ok?r.json():null).catch(()=>null)
-]).then(([pg,nw,ix,pl,pp,pd,sj,dm])=>{
-  PP_=pp;PAD=pd;SENT=sj;DEMO=dm;
+  fetch('data/demografia.json').then(r=>r.ok?r.json():null).catch(()=>null),
+  fetch('data/resultados/congreso-2023-07/circunscripciones.json').then(r=>r.ok?r.json():null).catch(()=>null)
+]).then(([pg,nw,ix,pl,pp,pd,sj,dm,rc])=>{
+  PP_=pp;PAD=pd;SENT=sj;DEMO=dm;RCIRC=rc&&rc.prov;
   provGJ=pg;news=nw.noticias||[];idx=ix;pols=pl.politicos||[];
-  provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;PA[c]=analyse(simulate(String(parseInt(c,10)*1000+7),.55))});
+  provGJ.features.forEach(f=>{const c=f.properties.c;provNames[c]=f.properties.n;{const sm=simulate(String(parseInt(c,10)*1000+7),.55),rp=realProv(c);PA[c]=rp?realAnalysis(sm,rp.v,rp.extra):analyse(sm)}});
   idx.mun.forEach(([c,n])=>{if(provNames[c.slice(0,2)])munNames[c]=n});
   news.forEach(n=>{n.pv.forEach(c=>nPv[c]=(nPv[c]||0)+1);n.mun.forEach(c=>nMun[c]=(nMun[c]||0)+1)});
   mergeSent();
@@ -314,7 +336,7 @@ function initMap(){
 function tip(c,tbl,n){const a=tbl[c];let s=`<b>${esc(n)}</b><br>${a.winner} · riesgo ${a.risk} · volatilidad ${a.vol}`;
   return s}
 function colorFor(a,c){
-  if(mode==='winner')return {fill:COL[a.winner],op:.35+.55*Math.min(1,a.margin/30)};
+  if(mode==='winner')return {fill:regCol(a.winner),op:.35+.55*Math.min(1,a.margin/30)};
   if(mode==='vol')return {fill:ramp(VOLR,a.vol/100),op:.85};
   if(mode==='risk')return {fill:ramp(RISKR,a.risk/100),op:.85};
   const rs=realSent(c);return rs?{fill:ramp(SENTR,(rs.v+50)/100),op:.9}:{fill:ramp(SENTR,(a.sent+50)/100),op:SENT?.3:.85};
@@ -351,7 +373,9 @@ function showSpain(){
 }
 async function loadProv(pc){
   if(!cache[pc])cache[pc]=await fetch(`data/prov/${pc}.geojson`).then(r=>r.json());
-  cache[pc].features.forEach(f=>{const c=f.properties.c;if(!MA[c])MA[c]=analyse(simulate(c))});
+  if(!RMUN[pc])RMUN[pc]=await fetch(`data/resultados/congreso-2023-07/${pc}.json`).then(r=>r.ok?r.json():{mun:{}}).catch(()=>({mun:{}}));
+  cache[pc].features.forEach(f=>{const c=f.properties.c;if(MA[c])return;const m=RMUN[pc].mun[c],sm=simulate(c);
+    MA[c]=m&&Object.keys(m.v).length?realAnalysis(sm,m.v,{part:m.censo?+(m.votantes/m.censo*100).toFixed(1):null,votantes:m.votantes,validos:m.validos}):analyse(sm)});
   return cache[pc];
 }
 async function openProvince(pc,mun){
@@ -426,8 +450,9 @@ function ficha(){
   $('fichaTag').textContent='';
   $('ficha').innerHTML=`
     <div class="title">${esc(name)}</div>
-    <div class="sub">${esc(sub)} · gana <b style="color:${COL[a.winner]}">${a.winner}</b> con ${a.last[a.winner]}% (ventaja ${a.margin} pts)</div>
-    <span class="pill ${pc}">${pt}</span><span class="pill p-mut">${a.type} · ${a.distinct} ganador${a.distinct>1?'es':''} en 4 elecciones</span>${c===CAPITAL?'<span class="pill p-warn">Caso ilustrativo</span>':''}
+    <div class="sub">${esc(sub)} · gana <b style="color:${regCol(a.winner)}">${a.winner}</b> con ${a.last[a.winner]}% (ventaja ${a.margin} pts)</div>
+    <span class="pill ${pc}">${pt}</span><span class="pill p-mut">${a.type} · ${a.distinct} ganador${a.distinct>1?'es':''} en 4 elecciones (ejemplo)</span>${a.real?'<span class="pill p-ok">2023 real · Interior</span>':''}${c===CAPITAL?'<span class="pill p-warn">Caso ilustrativo</span>':''}
+    ${realBlock(a)}
     <div class="metrics">
       <div class="m"><span>Riesgo de cambio</span><b style="color:${rcol(a.risk)}">${a.risk}</b>${bar(a.risk,rcol(a.risk))}</div>
       <div class="m"><span>Volatilidad histórica</span><b>${a.vol}</b>${bar(a.vol,'var(--acc)')}</div>
@@ -442,6 +467,12 @@ function ficha(){
     <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>${briefing(a,name,nc)}${alarmTxt}</div>`;
   drawChart(a);
   const fp=$('fichaPol');if(fp)fp.onclick=()=>openDrawer('gob');
+}
+function realBlock(a){
+  if(!a.real)return '';
+  const e=a.real.extra,top=a.real.top.map(([k,p])=>`<span style="color:${regCol(k)};font-weight:600">${esc(k)}</span> ${f1(p).replace('.',',')}%`).join(' · ');
+  const seats=e.seats&&Object.keys(e.seats).length?`<div class="sub" style="margin-top:4px">Escaños Congreso: ${Object.entries(e.seats).sort((x,y)=>y[1]-x[1]).map(([k,n])=>`${esc(k)} ${n}`).join(' · ')}</div>`:'';
+  return `<div class="brief" style="margin-top:10px"><small>RESULTADO REAL · CONGRESO, 23 JULIO 2023 (Ministerio del Interior)</small>${top}${e.part!=null?` · participación ${f1(e.part).replace('.',',')}%`:''}${seats}</div>`;
 }
 function drawChart(a){
   if(chart)chart.destroy();
