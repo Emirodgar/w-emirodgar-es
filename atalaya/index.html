@@ -515,7 +515,7 @@ function dPerson(p,rolTxt,pk){
   DPEOPLE[id]={p,rolTxt,pk};
   return `<div class="pc" role="button" tabindex="0" data-pid="${id}" aria-label="Ver ficha completa de ${esc(p.nombre)}"><div class="big" id="${id}" style="border-color:${col}">${esc(initials(p.nombre))}</div><div style="min-width:0">
     <b>${esc(p.nombre)}</b><div class="rol">${esc(rolTxt||'')}${pk?` · <span style="color:${col}">${esc(PNAME[pk]||pk)}</span>`:''}</div>
-    <div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}</span>${r.nt?`<span title="Tono medio de ${r.nt} titulares clasificados">· tono ${r.tono>0?'+':''}${r.tono.toFixed(1)}</span>`:''}`:'<span style="color:var(--mut)">sin información</span>'}</div>
+    <div class="risk"><span class="st" style="color:${stc}">${r.label}</span>${r.n?`<div class="bar"><i style="width:${r.score}%;background:${stc}"></i></div><span>${r.score}</span>${r.nt?`<span title="Tono medio de ${r.nt} titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono ${r.tono>0?'+':''}${r.tono.toFixed(1)}</span>`:''}`:'<span style="color:var(--mut)">sin información</span>'}</div>
     ${r.n?`<div class="hl">${r.n} titular${r.n>1?'es':''}${r.r?` · ${r.r} de riesgo`:''} · <a href="${esc(r.last.u)}" target="_blank" rel="noopener">${esc(cleanTitle(r.last.t).slice(0,90))}</a></div>`:''}
     ${p.wiki?`<div class="hl"><a href="https://es.wikipedia.org/wiki/${encodeURIComponent(p.wiki)}" target="_blank" rel="noopener">Wikipedia</a></div>`:''}</div></div>`;
 }

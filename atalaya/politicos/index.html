@@ -153,7 +153,7 @@ function card(p){
   var r=p.risk,col=PCOL[p.pk]||'#94a3b8',c=STC[r.k];
   return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
     '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+
-    '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares clasificados">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
+    '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
     (p.wiki?'<div class="hl"><a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a></div>':'')+'</div></div>';
 }
