@@ -160,6 +160,11 @@ def main():
     conv = J(RAIZ / "elecciones-espana/data/2026-11-29/convocatoria.json")
     urls = []
     items = []
+    # Congreso: fichas de diputados y legislaturas (antes de las provincias, que enlazan a sus diputados)
+    from fichas_congreso import parlamento
+    hub_parl, urls_parl, dips = parlamento(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, slug=slug, pagina=pagina, J=J, D=D,
+                                               prov_slug={pc_: (ES.get(n_, n_), slug(ES.get(n_, n_)) + "/") for pc_, n_ in prov.items()}))
+    urls += urls_parl
 
     for pc, nom in prov.items():
         nombre = ES.get(nom, nom); sl = slug(nombre); ruta = f"{sl}/"
@@ -204,6 +209,9 @@ def main():
         limites = ("<h2>Qué podría cambiar el resultado</h2><ul><li>Un cambio de tendencia nacional en las semanas finales de campaña.</li><li>Un hecho que afecte a la imagen de los candidatos locales o nacionales (imputaciones, dimisiones, crisis de gestión).</li>"
                    "<li>La participación y el reparto de los indecisos, que en provincias con pocos escaños pueden mover el último diputado.</li></ul>"
                    "<h2>Lo que este análisis no incluye</h2><p class='warn'>Todavía no usa encuestas provinciales, resultados municipales ni análisis de sentimiento en redes. Es una estimación razonada con datos públicos, no una encuesta ni una previsión oficial.</p>")
+        dl = sorted(dips.get(pc, []))
+        dipsec = (f"<h2>Diputados de {E(nombre)} en el Congreso</h2><p>Diputados vigentes en la XV Legislatura (Cortes disueltas el 6 de octubre de 2026):</p><ul>"
+                  + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n_)}</a> <span class='meta'>({E(pt_)})</span></li>" for n_, r, pt_ in dl) + "</ul>") if dl else ""
         fesc = ("<a href='" + v["url"] + "'>Wikipedia</a> (que recoge datos oficiales de resultados)") if v else "pendiente"
         fuentes = (f"<h2>Fuentes y método</h2><ul><li>Escaños por provincia: {fesc}.</li>"
                    f"<li>Encuestas: sondeos publicados por empresas y medios, ponderados por antigüedad y tamaño de muestra, en <a href='/elecciones-espana/'>Elecciones en España</a>.</li>"
@@ -225,7 +233,7 @@ def main():
                   {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
                   {"@type": "ListItem", "position": 3, "name": nombre, "item": f"{BASE}/atalaya/fichas/{ruta}"}]}]
         bc = "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › " + E(nombre)
-        cuerpo = f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p>{cab}{ev}{limites}{faq_html}{fuentes}"
+        cuerpo = f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p>{cab}{ev}{dipsec}{limites}{faq_html}{fuentes}"
         pagina(ruta, f"¿Quién ganará las elecciones en {nombre}? Análisis y datos (29N 2026)", desc, q, cuerpo, ld, bc)
         urls.append(f"{BASE}/atalaya/fichas/{ruta}"); items.append((nombre, ruta, nivel, resp))
 
@@ -255,7 +263,7 @@ def main():
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganará las elecciones generales de 2026?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganará las elecciones generales de 2026?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
