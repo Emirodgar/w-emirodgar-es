@@ -92,6 +92,21 @@ jobs:
           MAX_NUEVOS: ${{ steps.sem.outputs.semanal == 'true' && '1000' || '400' }}
         run: python3 scripts/atalaya/build_sentimiento.py
 
+      - name: Promesas de los programas (Gemini, opcional; por tandas)
+        # Descarga de las webs oficiales los programas que no bloquean los robots (PP y Sumar), extrae promesas con cita literal y
+        # las acumula en atalaya/data/promesas.json. Si falta la clave o la cuota, el resto del workflow sigue.
+        if: steps.hoy.outputs.ejecutar == 'true'
+        continue-on-error: true
+        timeout-minutes: 12
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || vars.GEMINI_API_KEY }}
+          MAX_LLAMADAS: '3'
+          PAGINAS_LOTE: '14'
+        run: |
+          command -v pdftotext >/dev/null || sudo apt-get install -y -qq poppler-utils
+          python3 scripts/atalaya/descargar_programas.py
+          python3 scripts/atalaya/build_promesas.py
+
       - name: Archivo histórico (solo añade; nunca borra)
         if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/archivo.py

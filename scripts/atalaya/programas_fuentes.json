@@ -1,0 +1,9 @@
+{
+  "nota": "Programas de las elecciones generales. «manual»: la web del partido bloquea las descargas automáticas; hay que bajar el PDF a mano y dejarlo en data-private/programas/<clave>.pdf (o en programas-fuente/).",
+  "documentos": {
+    "PP-2023": {"partido": "PP", "titulo": "Programa electoral del Partido Popular. Elecciones generales 23J", "fecha": "2023-07-04", "url": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf", "pagina": "https://www.pp.es/categoria/programa-electoral/"},
+    "SUMAR-2023": {"partido": "SUMAR", "titulo": "Un programa para ti. Sumar, elecciones generales 23J", "fecha": "2023-07-07", "url": "https://movimientosumar.es/wp-content/uploads/2023/07/Un-Programa-para-ti.pdf", "pagina": "https://movimientosumar.es/programa-electoral-23j/"},
+    "PSOE-2023": {"partido": "PSOE", "titulo": "Programa electoral. Elecciones generales 23 de julio de 2023", "fecha": "2023-07-07", "url": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf", "pagina": "https://www.psoe.es/actualidad/noticias-actualidad/programa-electoral-del-psoe-para-el-23j/", "manual": true},
+    "VOX-2023": {"partido": "VOX", "titulo": "Programa electoral para las Elecciones Generales del 23J de 2023", "fecha": "2023-07-23", "url": "https://www.voxespana.es/wp-content/uploads/2023/07/Programa-VOX-2023-con-menos-peso.pdf", "pagina": "https://www.voxespana.es/programa/programa-electoral-Vox", "manual": true}
+  }
+}

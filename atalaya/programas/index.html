@@ -48,6 +48,10 @@ a{color:inherit}button,select,input,textarea{font:inherit;color:inherit}
 .est{display:inline-block;font-weight:600;padding:1px 8px;border-radius:99px;font-size:12px}
 .e-sin_evidencia{background:rgba(148,163,184,.15);color:var(--mut)}.e-en_curso{background:rgba(34,211,238,.15);color:var(--acc)}.e-cumplida{background:rgba(52,211,153,.15);color:var(--ok)}.e-parcial{background:rgba(251,191,36,.15);color:var(--warn)}.e-incumplida{background:rgba(248,113,113,.15);color:var(--bad)}
 .empty{padding:24px;color:var(--mut)}
+.vista{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;width:max-content;margin-bottom:10px}
+.vista button{background:var(--panel2);border:0;border-right:1px solid var(--line);padding:8px 14px;cursor:pointer;color:var(--mut)}.vista button:last-child{border:0}.vista button.on{background:var(--acc);color:#04222a;font-weight:600}
+.cita.lit:before{content:"«"}.cita.lit:after{content:"»"}
+.det{font-size:12px;color:var(--mut);margin-top:4px}
 @media (max-width:800px){.kp{grid-template-columns:repeat(2,1fr)}.pcol{border-right:0;border-bottom:1px solid var(--line)}.tools input{min-width:0;flex:1}}
 </style>
 </head>
@@ -61,11 +65,13 @@ a{color:inherit}button,select,input,textarea{font:inherit;color:inherit}
 <main class="wrap">
   <div class="kp" id="kp"></div>
   <p class="note" id="aviso"></p>
+  <div class="vista" role="group" aria-label="Vista"><button data-v="pos" class="on">Posiciones sobre temas</button><button data-v="prom">Promesas de los programas</button></div>
   <div class="tools">
     <input id="q" type="search" placeholder="Buscar en las propuestas…" aria-label="Buscar en las propuestas">
     <select id="ft" aria-label="Tema"><option value="">Todos los temas</option></select>
     <select id="fp" aria-label="Partido"><option value="">Todos los partidos</option></select>
     <select id="fs" aria-label="Posición"><option value="">Cualquier posición</option><option value="favor">A favor</option><option value="contra">En contra</option><option value="matizada">Matizada</option><option value="sin_posicion">Sin posición</option></select>
+    <select id="fm" aria-label="Medibles" hidden><option value="">Todas las promesas</option><option value="1">Solo medibles (cifra, plazo o hecho)</option></select>
     <span style="margin-left:auto;display:flex;gap:8px"><button class="btn" id="exp">Exportar seguimiento</button><label class="btn">Importar<input id="imp" type="file" accept="application/json" hidden></label></span>
   </div>
   <div id="out"></div>
@@ -80,7 +86,7 @@ var norm=function(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCas
 var KEY='atalaya-seguimiento-v1';
 var POS={favor:'A favor',contra:'En contra',matizada:'Matizada',sin_posicion:'Sin posición'};
 var EST={sin_evidencia:'Sin evidencia',en_curso:'En curso',cumplida:'Cumplida',parcial:'Parcial',incumplida:'Incumplida'};
-var D,SEG={},SHARED={};
+var D,PR=null,view='pos',SEG={},SHARED={};
 function load(){try{return JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){return{}}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(SEG))}catch(e){alert('No se pudo guardar en este navegador. Exporta el seguimiento para no perderlo.')}}
 function get(k){return SEG[k]||SHARED[k]||{estado:'sin_evidencia',url:'',nota:''}}
@@ -88,16 +94,18 @@ function fecha(f){if(!f)return '';var m=f.split('-'),M=['ene','feb','mar','abr',
 
 Promise.all([
   fetch('../data/programas.json').then(function(r){return r.json()}),
-  fetch('../data/seguimiento.json').then(function(r){return r.ok?r.json():{}}).catch(function(){return {}})
+  fetch('../data/seguimiento.json').then(function(r){return r.ok?r.json():{}}).catch(function(){return {}}),
+  fetch('../data/promesas.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null})
 ]).then(function(a){
-  D=a[0];SHARED=(a[1]&&a[1].seguimiento)||{};SEG=load();
-  $('aviso').innerHTML='<b>Cómo leerlo.</b> Las posiciones salen de programas anteriores, votaciones y declaraciones recientes, con la fuente enlazada; los programas de 2026 aún no se han publicado y pueden cambiarlas. El <b>seguimiento de cumplimiento es manual</b>: Atalaya no lo calcula ni lo da por bueno sin una evidencia enlazada (BOE, ley aprobada, dato oficial). Datos actualizados el '+esc(D.actualizado)+'. Aún faltan los PDFs completos de los programas de 2023 y 2026.';
+  D=a[0];SHARED=(a[1]&&a[1].seguimiento)||{};SEG=load();PR=a[2];
+  $('aviso').innerHTML='<b>Cómo leerlo.</b> Las posiciones salen de programas anteriores, votaciones y declaraciones recientes, con la fuente enlazada; los programas de 2026 aún no se han publicado y pueden cambiarlas. El <b>seguimiento de cumplimiento es manual</b>: Atalaya no lo calcula ni lo da por bueno sin una evidencia enlazada (BOE, ley aprobada, dato oficial). Datos actualizados el '+esc(D.actualizado)+'. Las promesas de los programas completos se extraen con cita literal y página (pestaña «Promesas de los programas»); los programas de 2026 se añadirán cuando se publiquen.';
   $('ft').innerHTML+=D.temas.map(function(t){return '<option>'+esc(t)+'</option>'}).join('');
   $('fp').innerHTML+=D.partidos.map(function(p){return '<option value="'+p.id+'">'+esc(p.siglas)+'</option>'}).join('');
   render();
 });
 
 function render(){
+  if(view==='prom'){renderProm();return}
   var q=norm($('q').value.trim()),ft=$('ft').value,fp=$('fp').value,fs=$('fs').value;
   var parts=D.partidos.filter(function(p){return !fp||p.id===fp});
   var ls=D.afirmaciones.filter(function(a){
@@ -111,13 +119,16 @@ function render(){
   var keys=Object.keys(Object.assign({},SHARED,SEG)),marc=keys.filter(function(k){return get(k).estado!=='sin_evidencia'}).length,ev=keys.filter(function(k){return get(k).url}).length;
   $('kp').innerHTML=[[D.afirmaciones.length,'Afirmaciones por tema'],[doc+' / '+all,'Posiciones documentadas'],[marc,'Con seguimiento marcado'],[ev,'Con evidencia enlazada']].map(function(k){return '<div class="kpi"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
   $('out').innerHTML=ls.map(function(a){return card(a,parts)}).join('')||'<div class="empty">Sin resultados con estos filtros.</div>';
+  bind();
+}
+function bind(){
   document.querySelectorAll('.mas').forEach(function(b){b.onclick=function(){var c=b.previousElementSibling;c.classList.toggle('open');b.textContent=c.classList.contains('open')?'Ver menos':'Ver más'}});
   document.querySelectorAll('.seg [data-k]').forEach(function(el){el.addEventListener('change',function(){
     var k=el.dataset.k,f=el.dataset.f,cur=Object.assign({},get(k));cur[f]=el.value;SEG[k]=cur;save();
     if(f==='estado'){var tag=el.closest('.pcol').querySelector('.est');tag.className='est e-'+el.value;tag.textContent=EST[el.value]}
-    var keys=Object.keys(Object.assign({},SHARED,SEG));
-    document.querySelectorAll('.kpi b')[2].textContent=keys.filter(function(x){return get(x).estado!=='sin_evidencia'}).length;
-    document.querySelectorAll('.kpi b')[3].textContent=keys.filter(function(x){return get(x).url}).length;
+    var keys=Object.keys(Object.assign({},SHARED,SEG)),kb=document.querySelectorAll('.kpi b');
+    if(view==='prom'){kb[3].textContent=keys.filter(function(x){return x.indexOf('prom|')===0&&get(x).estado!=='sin_evidencia'}).length}
+    else{kb[2].textContent=keys.filter(function(x){return get(x).estado!=='sin_evidencia'}).length;kb[3].textContent=keys.filter(function(x){return get(x).url}).length}
   })});
 }
 function summary(a,parts){
@@ -138,7 +149,43 @@ function card(a,parts){
         '<textarea data-k="'+esc(k)+'" data-f="nota" placeholder="Nota" aria-label="Nota de seguimiento">'+esc(s.nota)+'</textarea></div></div>';
     }).join('')+'</div></article>';
 }
-['q','ft','fp','fs'].forEach(function(id){$(id).addEventListener('input',render)});
+function renderProm(){
+  var q=norm($('q').value.trim()),ft=$('ft').value,fp=$('fp').value,fm=$('fm').value;
+  var todas=(PR&&PR.promesas)||[];
+  var col={};D.partidos.forEach(function(p){col[p.id]=p})
+  var ls=todas.filter(function(x){
+    if(ft&&x.tema!==ft)return false;if(fp&&x.partido!==fp)return false;if(fm&&!x.medible)return false;
+    if(q&&norm(x.enunciado+' '+x.cita+' '+x.tema).indexOf(q)<0)return false;return true;
+  });
+  var docs={};todas.forEach(function(x){docs[x.documento]=1});
+  var keys=Object.keys(Object.assign({},SHARED,SEG)),marc=keys.filter(function(k){return k.indexOf('prom|')===0&&get(k).estado!=='sin_evidencia'}).length;
+  $('kp').innerHTML=[[todas.length,'Promesas extraídas'],[todas.filter(function(x){return x.medible}).length,'Medibles (cifra, plazo o hecho)'],[Object.keys(docs).length,'Programas procesados'],[marc,'Con seguimiento marcado']].map(function(k){return '<div class="kpi"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
+  if(!todas.length){
+    var pend=PR&&PR.procesado?Object.keys(PR.procesado).join(', '):'';
+    $('out').innerHTML='<div class="empty">Todavía no hay promesas extraídas. El proceso lee cada día unas pocas páginas de los programas completos (de 2023 hoy: PP y Sumar; PSOE y Vox requieren descargar el PDF a mano porque sus webs bloquean los robots) y las va añadiendo aquí, con cita literal y página.'+(pend?' En curso: '+esc(pend)+'.':'')+'</div>';
+    return;
+  }
+  $('out').innerHTML=ls.slice(0,300).map(function(x){
+    var p=col[x.partido]||{siglas:x.partido,color:'#475569'},k='prom|'+x.id,s=get(k);
+    return '<article class="card"><div class="ch"><div class="tema">'+esc(x.tema)+' · '+esc(p.siglas)+' '+esc(x.anio)+(x.medible?' · medible':'')+'</div><h2>'+esc(x.enunciado)+'</h2></div><div class="cols"><div class="pcol" style="--c:'+esc(p.color)+'">'+
+      '<div class="cita lit">'+esc(x.cita)+'</div><div class="fte">'+(x.url_documento?'<a href="'+esc(x.url_documento)+'" target="_blank" rel="noopener">Programa '+esc(p.siglas)+' '+esc(x.anio)+'</a>':'Programa '+esc(p.siglas)+' '+esc(x.anio))+' · página '+esc(x.pagina)+'</div>'+
+      '<div class="seg"><label>Seguimiento <span class="est e-'+s.estado+'">'+EST[s.estado]+'</span></label>'+
+      '<select data-k="'+esc(k)+'" data-f="estado" aria-label="Estado de cumplimiento">'+Object.keys(EST).map(function(e){return '<option value="'+e+'"'+(e===s.estado?' selected':'')+'>'+EST[e]+'</option>'}).join('')+'</select>'+
+      '<input data-k="'+esc(k)+'" data-f="url" type="url" placeholder="Enlace a la evidencia (BOE, ley, dato oficial)" value="'+esc(s.url)+'" aria-label="Enlace a la evidencia">'+
+      '<textarea data-k="'+esc(k)+'" data-f="nota" placeholder="Nota" aria-label="Nota de seguimiento">'+esc(s.nota)+'</textarea></div></div></div></article>';
+  }).join('')+(ls.length>300?'<div class="empty">Mostrando 300 de '+ls.length+' promesas: afina con los filtros.</div>':'')||'<div class="empty">Sin resultados con estos filtros.</div>';
+  bind();
+}
+function cambiarVista(v){
+  view=v;document.querySelectorAll('.vista button').forEach(function(b){b.classList.toggle('on',b.dataset.v===v)});
+  var temas=v==='prom'?Array.from(new Set(((PR&&PR.promesas)||[]).map(function(x){return x.tema}))).sort():D.temas;
+  $('ft').innerHTML='<option value="">Todos los temas</option>'+temas.map(function(t){return '<option>'+esc(t)+'</option>'}).join('');
+  $('fs').hidden=v==='prom';$('fm').hidden=v!=='prom';
+  $('q').placeholder=v==='prom'?'Buscar en las promesas…':'Buscar en las propuestas…';
+  render();
+}
+document.querySelectorAll('.vista button').forEach(function(b){b.onclick=function(){cambiarVista(b.dataset.v)}});
+['q','ft','fp','fs','fm'].forEach(function(id){$(id).addEventListener('input',render)});
 $('exp').onclick=function(){
   var m=Object.assign({},SHARED,SEG),o={};Object.keys(m).forEach(function(k){if(m[k].estado!=='sin_evidencia'||m[k].url||m[k].nota)o[k]=m[k]});
   var blob=new Blob([JSON.stringify({seguimiento:o},null,1)],{type:'application/json'}),a=document.createElement('a');

@@ -11,7 +11,7 @@ Garantías:
   - La cita debe aparecer literalmente en la página indicada (se normaliza el espacio y las mayúsculas); si el modelo parafrasea o inventa, se descarta.
   - Nunca se borra nada: se fusiona por id y se conserva el estado y las evidencias que se hayan anotado a mano.
   - Cuota: como máximo MAX_LLAMADAS peticiones a Gemini por ejecución; lo que falte se procesa otro día (se recuerda por documento).
-Uso: GEMINI_API_KEY=... python3 scripts/atalaya/build_promesas.py        Variables: PROGRAMAS_DIR, MAX_LLAMADAS (5), PAGINAS_LOTE (6), GEMINI_MODEL
+Uso: GEMINI_API_KEY=... python3 scripts/atalaya/build_promesas.py        Variables: PROGRAMAS_DIR, MAX_LLAMADAS (5), PAGINAS_LOTE (12), GEMINI_MODEL
 """
 import hashlib, json, os, re, sys, time, unicodedata, urllib.error, urllib.request
 from datetime import datetime, timezone
@@ -22,7 +22,7 @@ CARPETA = Path(os.environ.get("PROGRAMAS_DIR") or RAIZ / "data-private/programas
 SALIDA = RAIZ / "atalaya/data/promesas.json"
 MODELO = os.environ.get("GEMINI_MODEL") or "gemini-2.5-flash"
 MAX_LLAMADAS = int(os.environ.get("MAX_LLAMADAS") or 5)
-PAGINAS_LOTE = int(os.environ.get("PAGINAS_LOTE") or 6)
+PAGINAS_LOTE = int(os.environ.get("PAGINAS_LOTE") or 12)
 PAUSA = float(os.environ.get("PAUSA") or 7)
 TEMAS = ["Vivienda", "Sanidad", "Educación", "Impuestos", "Empleo", "Pensiones", "Energía", "Inmigración", "Derechos", "Igualdad", "Justicia",
          "Defensa", "Política exterior", "Modelo territorial", "Modelo de Estado", "Medio ambiente", "Economía", "Infraestructuras", "Otros"]

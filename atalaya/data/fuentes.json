@@ -649,13 +649,17 @@
    "cat": "documentos",
    "url": "",
    "acceso": "Textos de programas en carpeta privada + Gemini",
-   "estado": "planificada",
+   "estado": "parcial",
    "prioridad": "alta",
    "fiab": 4,
-   "cobertura": "Pendiente de cargar los programas",
-   "frecuencia": "—",
-   "usada": [],
-   "nota": "build_promesas.py está listo: valida que cada cita aparezca literalmente en su página, conserva lo anotado a mano y procesa por tandas (cuota de Gemini). Falta el texto de los programas de 2023 y 2026."
+   "cobertura": "PP y Sumar 2023 (descarga automática); PSOE y Vox 2023 pendientes",
+   "frecuencia": "Cada ejecución del workflow (3 peticiones a Gemini al día)",
+   "usada": [
+    "Programas"
+   ],
+   "nota": "Los PDFs de PP (112 páginas) y Sumar (182) se descargan de sus webs oficiales; PSOE y Vox bloquean los robots y hay que bajarlos a mano. Cada promesa lleva una cita literal verificada y su página. El estado de cumplimiento lo anota una persona con evidencia.",
+   "manifest": "promesas",
+   "max_dias": 3
   }
  ]
 }
