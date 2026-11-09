@@ -536,13 +536,13 @@
    "acceso": "SPARQL",
    "estado": "parcial",
    "fiab": 3,
-   "cobertura": "52 provincias con gobierno; 49 alcaldes; 38 de 43 diputaciones",
+   "cobertura": "52 provincias con gobierno; todos los alcaldes y diputaciones que existen",
    "frecuencia": "Bajo demanda (build_politicos_prov.py)",
    "usada": [
     "Panel lateral de políticos"
    ],
    "contar": "gobierno_prov",
-   "nota": "Wikidata trae presidentes autonómicos y la mayoría de alcaldes; los huecos se cubren con cuadros de Wikipedia (se descartan los desactualizados). Siguen sin dato: alcalde de Santa Cruz de Tenerife (cuadro antiguo) y presidentes de diputación de A Coruña, Gipuzkoa y Lleida; Ceuta y Melilla no tienen alcalde (las gobierna su presidente).",
+   "nota": "Wikidata trae presidentes autonómicos y la mayoría de alcaldes; los huecos se cubren con cuadros y listas de Wikipedia (diputaciones, ciudades, presidencias y la lista de diputados generales de Gipuzkoa), con «verificar». Ceuta y Melilla no tienen alcalde ni diputación: las gobierna su presidente. Los cargos se actualizan cada lunes.",
    "manifest": "politicos_prov",
    "max_dias": 14
   },

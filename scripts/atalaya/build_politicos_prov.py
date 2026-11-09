@@ -19,7 +19,7 @@ D = RAIZ / "atalaya/data"
 UA = "EmirodgarBot/1.0 (https://emirodgar.es/atalaya)"
 NL = "\n"
 ES = {"Araba": "Álava", "Alacant": "Alicante", "Castelló": "Castellón", "Illes Balears": "Baleares", "València": "Valencia",
-      "Gipuzkoa": "Guipúzcoa", "Bizkaia": "Vizcaya"}
+      "Gipuzkoa": "Guipúzcoa", "Bizkaia": "Vizcaya", "A Coruña": "La Coruña", "Lleida": "Lérida"}
 CCAA = {"Andalucía": "04 11 14 18 21 23 29 41", "Aragón": "22 44 50", "Asturias": "33", "Islas Baleares": "07", "Canarias": "35 38",
         "Cantabria": "39", "Castilla y León": "05 09 24 34 37 40 42 47 49", "Castilla-La Mancha": "02 13 16 19 45", "Cataluña": "08 17 25 43",
         "Comunidad Valenciana": "03 12 46", "Extremadura": "06 10", "Galicia": "15 27 32 36", "Comunidad de Madrid": "28",
@@ -153,7 +153,16 @@ def diputaciones(prov):
                     if pc in {"01", "20", "48"}: rol = "Diputado/a General (Diputación Foral)"
                     return pc, {"rol": rol, "ambito": "provincial", "nombre": nombre, "partido": partido, "wiki": wiki, "fuente": "Wikipedia (infobox; verificar)"}
         return pc, None
-    with ThreadPoolExecutor(6) as ex: return dict(x for x in ex.map(uno, prov.items()))
+    with ThreadPoolExecutor(6) as ex: res = dict(x for x in ex.map(uno, prov.items()))
+    if "20" in res and not res["20"]: res["20"] = diputado_general_gipuzkoa()
+    return res
+
+def diputado_general_gipuzkoa():
+    w = wikitext("Anexo:Diputados generales de Guipúzcoa") or ""
+    m = re.findall(r"\*\s*\[\[([^\]|]+)(?:\|([^\]]+))?\]\]\s*\((\d{4})\s*[-–]\s*(?:[Aa]ctualidad|[Pp]resente)\)", w)
+    if not m: return None
+    t, vis, _ = m[-1]
+    return {"rol": "Diputado/a General (Diputación Foral)", "ambito": "provincial", "nombre": re.sub(r"\s*\(.*\)$", "", t).strip(), "partido": None, "wiki": t.strip().replace(" ", "_"), "fuente": "Wikipedia (lista de diputados generales; verificar)"}
 
 # Alcaldes de capital que Wikidata no trae: se leen del cuadro de la ciudad en Wikipedia. Se descarta si el mandato indicado es anterior a 2023.
 PAGINAS_CIUDAD = {"02": "Albacete", "07": "Palma de Mallorca", "38": "Santa Cruz de Tenerife", "40": "Segovia"}
@@ -165,8 +174,8 @@ def alcaldes_infobox(faltan):
         if not w: continue
         al = campo(w, "alcalde") or campo(w, "alcaldesa")
         if not al: continue
-        anio = re.match(r"\s*(\d{4})", campo(w, "alcalde_año") or "")
-        if anio and int(anio.group(1)) < 2023: continue          # cuadro desactualizado (mandato anterior a las elecciones de 2023)
+        anio = re.match(r"\s*(\d{4})\s*(?:[-–]\s*(\d{4})?)?", campo(w, "alcalde_año") or "")
+        if anio and anio.group(2) and int(anio.group(2)) < 2023: continue       # mandato cerrado antes de las elecciones de 2023          # cuadro desactualizado (mandato anterior a las elecciones de 2023)
         nombre, wiki, partido = persona_wiki(al)
         if len(nombre.split()) >= 2:
             out[pc] = {"rol": f"Alcalde/sa de {t.split(' (')[0]}", "ambito": "municipal", "nombre": nombre, "partido": partido, "wiki": wiki, "fuente": "Wikipedia (cuadro de la ciudad; verificar)"}

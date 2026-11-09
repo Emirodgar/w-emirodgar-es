@@ -547,7 +547,7 @@ function renderDrawer(){
       const SINDIP=['07','26','28','30','31','33','35','38','39'];   // uniprovinciales e islas: no hay diputación provincial
       [['autonómico','Gobierno autonómico'],['municipal','Capital de provincia'],['provincial','Diputación provincial']].forEach(([amb,tit])=>{
         const ls=g.filter(x=>x.ambito===amb);
-        const vacio=amb==='provincial'&&SINDIP.includes(code)?'No hay diputación provincial en este territorio.':'Sin dato en las fuentes abiertas para este cargo.';
+        const vacio=(code==='51'||code==='52')&&amb!=='autonómico'?'Ciudad autónoma: la gobierna su presidente; no hay alcalde ni diputación.':amb==='provincial'&&SINDIP.includes(code)?'No hay diputación provincial en este territorio.':'Sin dato en las fuentes abiertas para este cargo.';
         h+=`<div class="dg">${tit}</div>`+(ls.length?ls.map(x=>dPerson(x,x.rol,partyKey(x.partido))).join(''):`<p class="hint" style="margin:6px 0">${vacio}</p>`);
       });
     }
