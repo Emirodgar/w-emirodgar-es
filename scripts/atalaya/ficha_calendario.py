@@ -42,7 +42,7 @@ def construir(c):
 
     cuerpo = (
         f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Fuente principal: Junta Electoral Central y Ministerio del Interior</p><p class='ans'>{E(resp)}</p>"
-        "<style>table.cal td,table.cal th{text-align:left;vertical-align:top}table.cal td:first-child{white-space:nowrap}</style>"
+        "<style>table.cal td,table.cal th{text-align:left;vertical-align:top}</style>"
         f"<h2>1. Calendario electoral completo</h2><p>{E(cv['resumen'])}</p>{tabla}"
         "<p>Fuentes: " + ", ".join(f"<a href='{E(f['url'])}' rel='nofollow noopener'>{E(f['titulo'])}</a>" for f in cv["fuentes"][:3]) + ".</p>"
         "<h2>2. Cómo votar el 29 de noviembre</h2>"
