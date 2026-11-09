@@ -79,7 +79,7 @@ def municipios(zpath):
         if "municipio" not in ambito or eid.startswith("senado"): continue   # el Senado se vota por candidatos, no por partidos: otro formato
         e = out.setdefault(eid, {"nombre": enombre, "partidos": {}, "prov": {}})
         for j in range(13, len(abrevs)):
-            if abrevs[j] and (nombres[j] if j < len(nombres) else ""): e["partidos"][abrevs[j]] = nombres[j]
+            if abrevs[j] and 0 <= j - 13 < len(nombres) and nombres[j - 13]: e["partidos"][abrevs[j]] = nombres[j - 13]
         for f in datos:
             if len(f) < 13 or not f[1].strip().isdigit() or not f[3].strip().isdigit(): continue
             cod = f"{int(f[1]):02d}{int(f[3]):03d}"
@@ -112,6 +112,7 @@ def main():
     SALIDA.mkdir(parents=True, exist_ok=True)
     indice = json.loads((SALIDA / "indice.json").read_text(encoding="utf8")) if (SALIDA / "indice.json").exists() else {"elecciones": {}}
     for z in zips:
+        if re.match(r"(PROV_)?03_", z.name): continue                      # Senado: otro formato (candidatos), no se importa
         print("Leyendo", z.name, flush=True)
         for eid, e in municipios(z).items():
             carp = SALIDA / eid; carp.mkdir(exist_ok=True)

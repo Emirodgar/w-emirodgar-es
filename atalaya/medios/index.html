@@ -55,6 +55,8 @@ tr.low td{color:var(--mut)}
 .q{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:13px}
 .q dt{color:var(--mut)}.q dd{font-family:var(--mono);text-align:right}
 .note{color:var(--mut);font-size:12px;margin-top:10px}
+.tm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2px}.tm span{font-size:12px;border:1px solid var(--line);border-radius:10px;padding:2px 8px}.tm b{font-family:var(--mono);font-weight:600}
+.gcol h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin:10px 0 4px}.gcol ul{list-style:none}.gcol li{padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}.gcol li:last-child{border:0}.gcol a{text-decoration:none}.gcol a:hover{text-decoration:underline}.gcol small{color:var(--mut)}
 .hl{list-style:none}
 .hl li{padding:8px 14px;border-bottom:1px solid var(--line);display:flex;gap:10px}
 .hl a{text-decoration:none}.hl a:hover{text-decoration:underline}
@@ -88,10 +90,12 @@ tr.low td{color:var(--mut)}
     </section>
     <section class="card" id="det" hidden>
       <h2><span>Titulares <em id="dt"></em></span></h2>
+      <div class="body" id="dth" style="border-bottom:1px solid var(--line)"></div>
       <ul class="hl" id="dl"></ul>
     </section>
   </div>
   <div>
+    <section class="card" id="gob"><h2><span>Gobierno: críticas y aciertos <em id="gt"></em></span></h2><div class="body" id="gb"></div></section>
     <section class="card" id="top"><h2><span>Afinidad</span></h2><div class="body" id="topb"></div></section>
     <section class="card"><h2><span>Calidad del dato</span></h2><div class="body"><dl class="q" id="qd"></dl><p class="note" id="qn"></p></div></section>
   </div>
@@ -206,6 +210,7 @@ function render(){
   if(sel&&st.by[sel.toLowerCase()])headlines(st.by[sel.toLowerCase()],party);else $('det').hidden=true;
 
   affinity(L,party,min,st);
+  gobierno(rows);
   quality(rows,L,clas);
 }
 function kpi(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
@@ -246,10 +251,23 @@ function quality(rows,L,clas){
   $('qn').textContent='El tono se calcula solo a partir del titular y lo asigna un modelo: es orientativo. Las noticias sin clasificar aún están en cola; el número crece con cada ejecución diaria.';
 }
 
+function gobierno(rows){
+  var G=['PSOE','Sumar'],mine=sel?rows.filter(function(n){return n.m===sel}):rows;
+  var g=mine.filter(function(n){return n.s&&G.indexOf(n.s.partido)>=0&&n.s.tono!==0}).sort(function(a,b){return String(b.f).localeCompare(String(a.f))});
+  var neg=g.filter(function(n){return n.s.tono<0}),pos=g.filter(function(n){return n.s.tono>0});
+  $('gt').textContent=sel?'· '+sel:'';
+  var li=function(n){var safe=/^https?:\/\//.test(n.u)?n.u:'#';return '<li><a href="'+esc(safe)+'" target="_blank" rel="noopener noreferrer">'+esc(n.t)+'</a> <small>· '+esc(n.m)+' · '+esc(n.s.tema)+'</small></li>'};
+  $('gb').innerHTML='<p class="note" style="margin:0">Titulares clasificados como negativos o positivos para los partidos del Gobierno (PSOE y Sumar). Clasificación automática solo a partir del titular: orientativa.</p>'+
+    '<div class="gcol"><h3 class="neg">Críticas · '+neg.length+'</h3><ul>'+(neg.slice(0,6).map(li).join('')||'<li><small>Sin titulares.</small></li>')+'</ul>'+
+    '<h3 class="pos">Aciertos · '+pos.length+'</h3><ul>'+(pos.slice(0,6).map(li).join('')||'<li><small>Sin titulares.</small></li>')+'</ul></div>';
+}
 function headlines(o,party){
   if(!o)return;
   $('det').hidden=false;
   $('dt').textContent='· '+o.m+(party?' · '+party:'');
+  var tm={},tn={};o.items.forEach(function(n){var t=n.s.tema;tm[t]=(tm[t]||0)+1;tn[t]=(tn[t]||0)+n.s.tono});
+  var tl=Object.keys(tm).filter(function(t){return t!=='otros'}).sort(function(a,b){return tm[b]-tm[a]}).slice(0,8);
+  $('dth').innerHTML=tl.length?'<div class="note" style="margin:0 0 6px">Temas más frecuentes (tono medio entre paréntesis)</div><div class="tm">'+tl.map(function(t){var m=tn[t]/tm[t];return '<span>'+esc(t)+' <b>'+tm[t]+'</b> <span class="'+cls(m*50)+'" style="border:0;padding:0">('+(m>0?'+':'')+m.toFixed(1)+')</span></span>'}).join('')+'</div>':'';
   var it=o.items.slice().sort(function(a,b){return String(b.f).localeCompare(String(a.f))}).slice(0,12);
   $('dl').innerHTML=it.length?it.map(function(n){
     var t=n.s.tono,safe=/^https?:\/\//.test(n.u)?n.u:'#';

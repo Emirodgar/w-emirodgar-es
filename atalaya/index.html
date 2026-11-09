@@ -190,6 +190,7 @@ button,select,input{font:inherit;color:inherit}
     <div class="mapwrap">
       <div class="seg" role="group" aria-label="Capa del mapa">
         <button data-mode="winner" class="on">Ganador</button>
+        <button data-mode="mun">Municipales 2023</button>
         <button data-mode="vol">Volatilidad</button>
         <button data-mode="risk">Riesgo de cambio</button>
         <button data-mode="sent">Sentimiento</button>
@@ -279,7 +280,7 @@ let curProv=null,selMun=null,mode='winner',newsTab='all';
 let map,provLayer,munLayer,chart;
 const cache={};
 /* ---------- resultados reales 2023 (Ministerio del Interior) sobre el modelo ---------- */
-let RCIRC=null;const RMUN={};
+let RCIRC=null;const RMUN={},RMUNI={},RMUNP={};
 const SIGLA={VOX:'Vox','SUMAR':'Sumar'};const sg=k=>SIGLA[k]||k;
 COL.Sumar=COL.Sumar||'#d6246e';
 function regCol(k){return COL[k]||'#a78bfa'}
@@ -336,7 +337,8 @@ function initMap(){
 function tip(c,tbl,n){const a=tbl[c];let s=`<b>${esc(n)}</b><br>${a.winner} · riesgo ${a.risk} · volatilidad ${a.vol}`;
   return s}
 function colorFor(a,c){
-  if(mode==='winner')return {fill:regCol(a.winner),op:.35+.55*Math.min(1,a.margin/30)};
+  if(mode==='mun'){const r=RMUNI[c];if(r)return {fill:regCol(r.w),op:.35+.55*Math.min(1,r.margin/30)};if(String(c).length===5)return {fill:'#334155',op:.5}}
+  if(mode==='winner'||mode==='mun')return {fill:regCol(a.winner),op:.35+.55*Math.min(1,a.margin/30)};
   if(mode==='vol')return {fill:ramp(VOLR,a.vol/100),op:.85};
   if(mode==='risk')return {fill:ramp(RISKR,a.risk/100),op:.85};
   const rs=realSent(c);return rs?{fill:ramp(SENTR,(rs.v+50)/100),op:.9}:{fill:ramp(SENTR,(a.sent+50)/100),op:SENT?.3:.85};
@@ -352,7 +354,8 @@ function restyle(){
 }
 function legend(){
   let h='';
-  if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox','Cs'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
+  if(mode==='mun')h='<div>Partido más votado en las municipales de mayo de 2023 (por municipio; entra el nivel de municipio al abrir una provincia).</div><div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
+  else if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox','Cs'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
   else{
     const s=mode==='vol'?VOLR:mode==='risk'?RISKR:SENTR;
     const e=mode==='vol'?['Estable','Muy volátil']:mode==='risk'?['Seguro','Alarma']:['Negativo','Positivo'];
@@ -374,6 +377,9 @@ function showSpain(){
 async function loadProv(pc){
   if(!cache[pc])cache[pc]=await fetch(`data/prov/${pc}.geojson`).then(r=>r.json());
   if(!RMUN[pc])RMUN[pc]=await fetch(`data/resultados/congreso-2023-07/${pc}.json`).then(r=>r.ok?r.json():{mun:{}}).catch(()=>({mun:{}}));
+  if(!RMUNP[pc])RMUNP[pc]=await fetch(`data/resultados/municipales-2023-05/${pc}.json`).then(r=>r.ok?r.json():{mun:{}}).catch(()=>({mun:{}}));
+  for(const c in RMUNP[pc].mun){const m=RMUNP[pc].mun[c],ord=Object.keys(m.v).sort((x,y)=>m.v[y]-m.v[x]),t=Object.values(m.v).reduce((a,b)=>a+b,0);
+    if(t)RMUNI[c]={top:ord.slice(0,5).map(k=>[sg(k),+(m.v[k]/t*100).toFixed(1)]),w:sg(ord[0]),margin:+((m.v[ord[0]]-(ord[1]?m.v[ord[1]]:0))/t*100).toFixed(1),part:m.censo?+(m.votantes/m.censo*100).toFixed(1):null}}
   cache[pc].features.forEach(f=>{const c=f.properties.c;if(MA[c])return;const m=RMUN[pc].mun[c],sm=simulate(c);
     MA[c]=m&&Object.keys(m.v).length?realAnalysis(sm,m.v,{part:m.censo?+(m.votantes/m.censo*100).toFixed(1):null,votantes:m.votantes,validos:m.validos}):analyse(sm)});
   return cache[pc];
@@ -452,7 +458,7 @@ function ficha(){
     <div class="title">${esc(name)}</div>
     <div class="sub">${esc(sub)} · gana <b style="color:${regCol(a.winner)}">${a.winner}</b> con ${a.last[a.winner]}% (ventaja ${a.margin} pts)</div>
     <span class="pill ${pc}">${pt}</span><span class="pill p-mut">${a.type} · ${a.distinct} ganador${a.distinct>1?'es':''} en 4 elecciones (ejemplo)</span>${a.real?'<span class="pill p-ok">2023 real · Interior</span>':''}${c===CAPITAL?'<span class="pill p-warn">Caso ilustrativo</span>':''}
-    ${realBlock(a)}
+    ${realBlock(a)}${munBlock(selMun)}
     <div class="metrics">
       <div class="m"><span>Riesgo de cambio</span><b style="color:${rcol(a.risk)}">${a.risk}</b>${bar(a.risk,rcol(a.risk))}</div>
       <div class="m"><span>Volatilidad histórica</span><b>${a.vol}</b>${bar(a.vol,'var(--acc)')}</div>
@@ -467,6 +473,10 @@ function ficha(){
     <div class="brief"><small>AGENTE ANALISTA · reglas sobre datos simulados</small>${briefing(a,name,nc)}${alarmTxt}</div>`;
   drawChart(a);
   const fp=$('fichaPol');if(fp)fp.onclick=()=>openDrawer('gob');
+}
+function munBlock(c){
+  const r=c&&RMUNI[c];if(!r)return '';
+  return `<div class="brief" style="margin-top:10px"><small>RESULTADO REAL · MUNICIPALES, 28 MAYO 2023 (Ministerio del Interior)</small>${r.top.map(([k,p])=>`<span style="color:${regCol(k)};font-weight:600">${esc(k)}</span> ${f1(p).replace('.',',')}%`).join(' · ')}${r.part!=null?` · participación ${f1(r.part).replace('.',',')}%`:''}</div>`;
 }
 function realBlock(a){
   if(!a.real)return '';
