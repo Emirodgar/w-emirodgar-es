@@ -3,6 +3,25 @@
  "actualizado": "2026-11-09",
  "encuestas": [
   {
+   "fecha": "2026-11-09",
+   "empresa": "Sigma Dos",
+   "medio": "El Mundo",
+   "muestra": 4172,
+   "tipo": "privada",
+   "ambito": "ES",
+   "convocatoria": "2026-11-29",
+   "voto": {
+    "PP": 31.0,
+    "PSOE": 25.2,
+    "VOX": 19.4,
+    "SUMAR": 8.1,
+    "PODEMOS": 1.6
+   },
+   "fuente": "elecciones-espana/data/2026-11-29/encuestas.json",
+   "capturada": "2026-11-09",
+   "archivada": false
+  },
+  {
    "fecha": "2026-10-18",
    "empresa": "EM-Analytics",
    "medio": "Electomanía",

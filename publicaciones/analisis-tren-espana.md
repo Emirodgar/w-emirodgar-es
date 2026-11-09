@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-09-01
-date_modified: 2026-10-29
+date_modified: 2026-11-09
 folder: analisis
 permalink: analisis-ferroviario
 ---
@@ -16,6 +16,8 @@ permalink: analisis-ferroviario
 
 La red ferroviaria española ha atravesado una década crítica (2015-2025) marcada por **problemas estructurales, inversiones insuficientes y una crisis operativa sin precedentes**, una crisis que profundizamos desde el punto de vista de la [inversión y el mantenimiento del sector ferroviario](https://emirodgar.es/analisis-sector-ferroviario) en otro de nuestros análisis. Aunque España mantiene la **segunda red de alta velocidad más extensa de Europa** con 3.297 kilómetros, presenta una **densidad de tráfico 5.5 veces inferior** a Francia y una **intensidad de uso de apenas el 35.3%** frente al 53% de media europea.
 
+> **Actualización (9 de noviembre de 2026):** el balance de Urda asciende a 69 fallecidos y Óscar Puente ha dimitido como ministro de Transportes.
+>
 > **Actualización (29 de octubre de 2026):** este análisis, publicado en 2025, no recogía los accidentes de 2026. Hemos añadido los de [Adamuz y Urda](#accidentes-graves-de-2026), nuevos gráficos y una revisión de las conclusiones.
 
 ## Problemas identificados por período gubernamental
@@ -69,7 +71,7 @@ Si analizamos datos cuantitativos y cualitativos (incidentes y compensaciones ec
 - **Récord histórico de incidentes**: 107 accidentes e incidentes en 2024, la cifra más alta desde 2008
 - **42 millones en compensaciones** por retrasos e incidencias
 - **Accidente de Adamuz (18 de enero de 2026)**: descarrilamiento de un Iryo y choque con un Alvia, con 46 muertos según las últimas cifras
-- **Accidente de Urda, Toledo (28 de octubre de 2026)**: choque entre un AVE y un Iryo, con al menos 68 muertos
+- **Accidente de Urda, Toledo (28 de octubre de 2026)**: choque entre un AVE y un Iryo, con 69 muertos
 
 
 ## Accidentes graves de 2026
@@ -77,7 +79,7 @@ Si analizamos datos cuantitativos y cualitativos (incidentes y compensaciones ec
 Desde la publicación de este análisis, 2026 ha traído los dos accidentes ferroviarios más mortíferos desde Angrois (2013), ambos en el corredor Madrid-Andalucía, y ambos entre trenes de alta velocidad de distintos operadores.
 
 - **Adamuz (Córdoba), 18 de enero:** un Iryo Málaga-Madrid descarriló e invadió la vía contraria, donde circulaba un Alvia Madrid-Huelva. Murieron 46 personas según las últimas cifras (41 en los primeros balances). Se investiga una posible rotura de carril o defecto de soldadura, en una línea renovada ocho meses antes.
-- **Urda (Toledo), 28 de octubre:** un AVE y un Iryo chocaron hacia las 8:54 h entre Los Yébenes y Urda, con 544 personas a bordo. Hay al menos 68 fallecidos según los últimos balances (cifra oficial aún sin confirmar) y 107 hospitalizados. La causa no está determinada: el ministro Óscar Puente habla de un fallo informático en el sistema de seguridad y de una «decisión errónea» del centro de control; hay secreto de sumario y las cajas negras están incautadas. La alta velocidad Madrid-Andalucía quedó suspendida el 29 de octubre.
+- **Urda (Toledo), 28 de octubre:** un AVE y un Iryo chocaron hacia las 8:54 h entre Los Yébenes y Urda, con 544 personas a bordo. Han fallecido 69 personas y 107 hospitalizados. La causa no está determinada: el ministro Óscar Puente habla de un fallo informático en el sistema de seguridad y de una «decisión errónea» del centro de control; hay secreto de sumario y las cajas negras están incautadas. La alta velocidad Madrid-Andalucía quedó suspendida el 29 de octubre.
 
 <figure class="grafico-ferroviario" style="margin:2rem 0">
 <svg viewBox="0 0 720 340" role="img" aria-label="Fallecidos en los accidentes ferroviarios de Angrois, Adamuz y Urda" style="width:100%;height:auto;font-family:inherit">
@@ -100,12 +102,12 @@ Desde la publicación de este análisis, 2026 ha traído los dos accidentes ferr
 <text x="380.0" y="168.2" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">46</text>
 <text x="380.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">Adamuz</text>
 <text x="380.0" y="315" text-anchor="middle" font-size="12" fill="currentColor">ene 2026</text>
-<rect x="534.7" y="123.6" width="117.3" height="156.4" rx="3" fill="#d6336c"/>
-<text x="593.3" y="117.6" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">68</text>
+<rect x="534.7" y="121.3" width="117.3" height="158.7" rx="3" fill="#d6336c"/>
+<text x="593.3" y="115.3" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">69</text>
 <text x="593.3" y="300" text-anchor="middle" font-size="12" fill="currentColor">Urda (Toledo)</text>
 <text x="593.3" y="315" text-anchor="middle" font-size="12" fill="currentColor">oct 2026</text>
 </svg>
-<figcaption style="font-size:.9rem;opacity:.8">Urda: al menos 68 según los últimos balances, pendiente de confirmación oficial.</figcaption>
+<figcaption style="font-size:.9rem;opacity:.8">Urda: 69 fallecidos según el balance más reciente.</figcaption>
 </figure>
 
 Estos hechos matizan la lectura de este análisis: la alta puntualidad media y la inversión récord conviven con fallos graves de seguridad y de gestión del tráfico. Profundizamos en la relación entre inversión y seguridad en nuestro análisis de la [inversión y mantenimiento del sector ferroviario](https://emirodgar.es/analisis-sector-ferroviario). La investigación sigue abierta, por lo que cualquier atribución de causa es todavía provisional.

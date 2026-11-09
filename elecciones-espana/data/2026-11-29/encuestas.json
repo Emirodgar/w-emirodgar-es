@@ -4,6 +4,20 @@
  "metodologia": "La media pondera cada sondeo por su antigüedad (vida media de 14 días) y por la raíz de su muestra, y solo usa los publicados en los 30 días previos al último sondeo. Para cada partido se promedian únicamente los sondeos que lo incluyen. El CIS se muestra pero, por defecto, queda fuera de la media por usar una metodología distinta; puedes incluirlo con el interruptor.",
  "sondeos": [
   {
+   "fecha": "2026-11-09",
+   "empresa": "Sigma Dos",
+   "medio": "El Mundo",
+   "muestra": 4172,
+   "tipo": "privada",
+   "voto": {
+    "PP": 31.0,
+    "PSOE": 25.2,
+    "VOX": 19.4,
+    "SUMAR": 8.1,
+    "PODEMOS": 1.6
+   }
+  },
+  {
    "fecha": "2026-10-18",
    "empresa": "EM-Analytics",
    "medio": "Electomanía",

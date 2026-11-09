@@ -86,7 +86,7 @@ Promise.all([
   if(a[5]&&a[5].items)news.forEach(function(n){var s=a[5].items[n.i];if(s)n.s=s});
   var map={};
   function add(p){
-    var k=p.tipo+'|'+(p.nombre||p.slot)+'|'+p.pk,e=map[k];
+    var k=p.tipo+'|'+(p.wiki||p.nombre||p.slot)+'|'+p.pk,e=map[k];
     if(e){if(p.prov&&e.provs.indexOf(p.prov)<0)e.provs.push(p.prov);return}
     p.provs=p.prov?[p.prov]:[];map[k]=p;P.push(p);
   }
@@ -96,10 +96,11 @@ Promise.all([
     else if(x.estado==='seguimiento')add({tipo:'seg',nombre:x.nombre,wiki:x.wiki,rol:x.cargo,pk:x.partidoId,nacional:true});
     else if(x.estado==='por_definir')add({tipo:'cand',nombre:null,slot:x.partidoId,rol:x.nota||'Candidatura por definir',pk:x.partidoId,nacional:true});
   });
+  var natC={};P.forEach(function(p){if(p.tipo==='cand'&&p.nacional&&p.wiki)natC[p.wiki]=p});
   Object.keys(pp.prov).forEach(function(pc){
     var d=pp.prov[pc];
     d.gobierno.forEach(function(g){add({tipo:'gob',nombre:g.nombre,wiki:g.wiki,rol:g.rol,pk:partyKey(g.partido),prov:pc,amb:g.ambito})});
-    d.candidatos.forEach(function(c){add({tipo:'cand',nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?' ('+c.nota+')':''),pk:c.partido,prov:pc})});
+    d.candidatos.forEach(function(c){var n=c.wiki&&natC[c.wiki];if(n){if(n.provs.indexOf(pc)<0)n.provs.push(pc);return}add({tipo:'cand',nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?' ('+c.nota+')':''),pk:c.partido,prov:pc})});
   });
   P.forEach(function(p){p.risk=riskOf(p);p.id='p'+Math.random().toString(36).slice(2,9)});
   $('ft').innerHTML+=Object.keys(prov).sort(function(x,y){return prov[x].localeCompare(prov[y],'es')}).map(function(c){return '<option value="'+c+'">'+esc(prov[c])+'</option>'}).join('');

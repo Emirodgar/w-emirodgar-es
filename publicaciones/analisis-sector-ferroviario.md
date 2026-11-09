@@ -7,15 +7,17 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-01-21
-date_modified: 2026-10-29
+date_modified: 2026-11-09
 folder: analisis
 permalink: analisis-sector-ferroviario
 ---
 
 # Inversión, mantenimiento y estado de los trenes en España 
 
-Los últimos años han sido bastante convulso en el sector ferroviario, acumulando muchos avisos, retrasos e inclusos accidentes. Algunos muy graves, como el de alta velocidad de Adamuz (Córdoba) en enero de 2026 y, **el pasado 28 de octubre, el choque entre un AVE y un Iryo en Urda (Toledo)**, que con al menos 68 fallecidos según los últimos balances se perfila como el peor accidente ferroviario de España en décadas.
+Los últimos años han sido bastante convulso en el sector ferroviario, acumulando muchos avisos, retrasos e inclusos accidentes. Algunos muy graves, como el de alta velocidad de Adamuz (Córdoba) en enero de 2026 y, **el pasado 28 de octubre, el choque entre un AVE y un Iryo en Urda (Toledo)**, que con 69 fallecidos se perfila como el peor accidente ferroviario de España en décadas.
 
+> **Actualización (9 de noviembre de 2026):** el balance de Urda asciende a 69 fallecidos y Óscar Puente ha dimitido como ministro de Transportes. Se mantiene la investigación judicial y las causas siguen sin cerrarse.
+>
 > **Actualización (29 de octubre de 2026):** hemos añadido el [accidente de Urda](#accidente-de-urda-toledo-28-de-octubre-de-2026), nuevos gráficos de evolución y una sección de conclusiones. Las cifras de víctimas y las causas siguen en investigación y pueden cambiar.
 Hace unos meses realizamos un primer análisis sobre los [problemas ferroviarios en España](https://emirodgar.es/analisis-ferroviario), poniendo especial atención en las incidencias y compensaciones.
 
@@ -215,8 +217,9 @@ Las causas permanecen bajo investigación (se examina una posible rotura de carr
 
 Ayer, miércoles 28 de octubre, hacia las 8:54 h, un AVE de Renfe y un tren de Iryo chocaron entre Los Yébenes y Urda (Toledo), en torno al punto kilométrico 118 de la línea de alta velocidad Madrid-Sevilla, a unos 150 km de Madrid. Las dos composiciones llevaban 544 personas y hasta cuatro coches descarrilaron y cayeron por un terraplén.
 
-- **Víctimas:** al menos **68 fallecidos** según los últimos balances (algunos medios citan 64 y la cifra oficial definitiva aún no está confirmada). Entre los fallecidos figura el maquinista del AVE. Hay 107 heridos hospitalizados en Castilla-La Mancha, 15 de ellos en código rojo.
+- **Víctimas:** **69 fallecidos** según el balance más reciente (los primeros recuentos hablaban de entre 64 y 68). Entre los fallecidos figura el maquinista del AVE. Hay 107 heridos hospitalizados en Castilla-La Mancha, 15 de ellos en código rojo.
 - **Causa:** sin determinar. El ministro Óscar Puente habla de un fallo informático en el sistema de seguridad de un tramo de 63 km y de una "decisión errónea" del centro de control de Atocha; se han difundido audios en los que Adif indica al maquinista que reconecte el sistema LZB y reanude la marcha normal. Otras versiones apuntan a error humano o a una alcance por tren detenido. Un juez ha decretado el secreto de sumario, ha incautado las cajas negras y ha acotado dos kilómetros de vía.
+- **Consecuencias políticas:** Óscar Puente ha dimitido como ministro de Transportes. El accidente paralizó además la precampaña de las elecciones del 29 de noviembre y, según el último barómetro de Sigma Dos para El Mundo, el PSOE cayó por debajo del 25 % de intención de voto antes de recuperar unas décimas tras la dimisión.
 - **Servicio:** Renfe suspendió el jueves 29 toda la alta velocidad Madrid-Andalucía, con plan alternativo desde el viernes 30 y venta de billetes bloqueada hasta el 13 de diciembre; Iryo canceló sus servicios al sur y Ouigo los suspendió hasta al menos el 2 de noviembre.
 
 Es el tercer gran suceso del año en la misma línea troncal tras Adamuz, y encaja con la tesis de este análisis: **el problema ya no es solo cuánto se invierte, sino cómo se gestionan la señalización, los protocolos de control y la capacidad de una red cada vez más saturada**. Con todo, conviene la cautela: la investigación no ha concluido y varios accidentes de 2026 (Adamuz, Gelida, Talavera, Ricla) no tienen, por ahora, una causa común demostrada.
@@ -242,12 +245,12 @@ Es el tercer gran suceso del año en la misma línea troncal tras Adamuz, y enca
 <text x="380.0" y="168.2" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">46</text>
 <text x="380.0" y="300" text-anchor="middle" font-size="12" fill="currentColor">Adamuz</text>
 <text x="380.0" y="315" text-anchor="middle" font-size="12" fill="currentColor">ene 2026</text>
-<rect x="534.7" y="123.6" width="117.3" height="156.4" rx="3" fill="#d6336c"/>
-<text x="593.3" y="117.6" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">68</text>
+<rect x="534.7" y="121.3" width="117.3" height="158.7" rx="3" fill="#d6336c"/>
+<text x="593.3" y="115.3" text-anchor="middle" font-size="13" font-weight="700" fill="currentColor">69</text>
 <text x="593.3" y="300" text-anchor="middle" font-size="12" fill="currentColor">Urda (Toledo)</text>
 <text x="593.3" y="315" text-anchor="middle" font-size="12" fill="currentColor">oct 2026</text>
 </svg>
-<figcaption style="font-size:.9rem;opacity:.8">Urda: al menos 68 según los últimos balances, pendiente de confirmación oficial. Adamuz: 46 según las últimas cifras (41 en los primeros balances).</figcaption>
+<figcaption style="font-size:.9rem;opacity:.8">Urda: 69 fallecidos según el balance más reciente. Adamuz: 46 según las últimas cifras (41 en los primeros balances).</figcaption>
 </figure>
 
 #### Otros accidentes e incidentes de 2026
@@ -259,7 +262,7 @@ Es el tercer gran suceso del año en la misma línea troncal tras Adamuz, y enca
 | 22 ene | Cartagena-Los Nietos (Murcia) | Un camión con grúa golpea un tren de vía estrecha | 6 heridos leves |
 | 12 feb | Talavera de la Reina (Toledo) | Un Alvia arrolla un coche en un paso a nivel sin protección | 1 muerto (conductor del coche) |
 | 12 oct | Ricla (Zaragoza) | Incendio en la cabina trasera de un AVE Madrid-Figueres | 283 evacuados, sin heridos |
-| 28 oct | Urda (Toledo) | Choque entre un AVE y un Iryo | Al menos 68 muertos, 107 hospitalizados |
+| 28 oct | Urda (Toledo) | Choque entre un AVE y un Iryo | 69 muertos, 107 hospitalizados |
 
 <figure class="grafico-ferroviario" style="margin:2rem 0">
 <svg viewBox="0 0 720 360" role="img" aria-label="Incidentes y compensaciones económicas en el ferrocarril español 2015-2024" style="width:100%;height:auto;font-family:inherit">

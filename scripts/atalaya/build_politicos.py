@@ -20,7 +20,6 @@ EXTRAS = [  # figuras que interesa seguir aunque no sean cabeza de lista naciona
     {"nombre": "José Luis Rodríguez Zapatero", "partidoId": "PSOE", "cargo": "Expresidente del Gobierno", "alias": ["Zapatero"]},
     {"nombre": "Isabel Díaz Ayuso", "partidoId": "PP", "cargo": "Presidenta de la Comunidad de Madrid", "alias": ["Ayuso"]},
     {"nombre": "Alfonso Fernández Mañueco", "partidoId": "PP", "cargo": "Presidente de la Junta de Castilla y León", "alias": ["Mañueco"]},
-    {"nombre": "Irene Montero", "partidoId": "PODEMOS", "cargo": "Aspira a encabezar la lista de Podemos", "alias": ["Irene Montero"]},
 ]
 
 def slug(s): return re.sub(r"[^a-z0-9]+", "-", s.lower().encode("ascii", "ignore").decode()).strip("-")

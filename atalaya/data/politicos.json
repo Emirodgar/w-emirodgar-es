@@ -42,28 +42,30 @@
    ]
   },
   {
-   "id": "slot-sumar",
-   "nombre": null,
+   "id": "ada-colau",
+   "nombre": "Ada Colau",
    "partidoId": "SUMAR",
-   "cargo": null,
+   "cargo": "Cabeza de lista de Frente Amplio, alianza heredera de Sumar",
    "ambito": "nacional",
    "prov": null,
-   "estado": "por_definir",
-   "nota": "Se presentará el 17 de octubre junto con el proyecto de alianza «Frente Amplio».",
-   "wiki": null,
-   "alias": []
+   "estado": "candidato",
+   "wiki": "Ada_Colau",
+   "alias": [
+    "Ada Colau"
+   ]
   },
   {
-   "id": "slot-podemos",
-   "nombre": null,
+   "id": "irene-montero",
+   "nombre": "Irene Montero",
    "partidoId": "PODEMOS",
-   "cargo": null,
+   "cargo": "Candidata de Podemos, que concurre en solitario",
    "ambito": "nacional",
    "prov": null,
-   "estado": "por_definir",
-   "nota": "Sin decidir si concurre en solitario o en coalición; Irene Montero ha expresado su intención de encabezar la lista.",
-   "wiki": null,
-   "alias": []
+   "estado": "candidato",
+   "wiki": "Irene_Montero",
+   "alias": [
+    "Irene Montero"
+   ]
   },
   {
    "id": "gabriel-rufin",
@@ -216,19 +218,6 @@
    "wiki": "Alfonso_Fernández_Mañueco",
    "alias": [
     "Mañueco"
-   ]
-  },
-  {
-   "id": "irene-montero",
-   "nombre": "Irene Montero",
-   "partidoId": "PODEMOS",
-   "cargo": "Aspira a encabezar la lista de Podemos",
-   "ambito": "nacional",
-   "prov": null,
-   "estado": "seguimiento",
-   "wiki": "Irene_Montero",
-   "alias": [
-    "Irene Montero"
    ]
   }
  ]
