@@ -291,6 +291,20 @@ def main():
                {"@type": "ListItem", "position": 3, "name": "Calendario y cómo votar", "item": f"{BASE}/atalaya/fichas/calendario/"}]}]
     pagina("calendario/", "¿Cuándo son las elecciones generales y cómo se vota? Calendario 29N 2026", desc_c, qc, cc, ldc, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Calendario y cómo votar")
     urls.append(f"{BASE}/atalaya/fichas/calendario/")
+    # Comparativa PSOE frente a PP (módulo aparte)
+    from ficha_comparativa import construir as construir_cmp
+    cm, faqs_m, resp_m, desc_m = construir_cmp(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, J=J, D=D, RAIZ=RAIZ, slug=slug, nacional=nacional, nsond=nsond, fsond=fsond))
+    qm = "¿Qué diferencias hay entre el PSOE y el PP?"
+    ldm = [{"@context": "https://schema.org", "@type": "Article", "headline": qm, "description": desc_m, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
+            "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
+            "mainEntityOfPage": f"{BASE}/atalaya/fichas/comparar/psoe-pp/"},
+           {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_m]},
+           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
+               {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
+               {"@type": "ListItem", "position": 3, "name": "PSOE frente a PP", "item": f"{BASE}/atalaya/fichas/comparar/psoe-pp/"}]}]
+    pagina("comparar/psoe-pp/", "PSOE frente a PP: diferencias, coincidencias y posiciones (2026)", desc_m, qm, cm, ldm, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › PSOE frente a PP")
+    urls.append(f"{BASE}/atalaya/fichas/comparar/psoe-pp/")
     print("España:", info["lid"], info["pm"].get("PP"), info["n_pv"], "/", info["n"])
     urls.insert(0, f"{BASE}/atalaya/fichas/espana/")
 
@@ -303,7 +317,7 @@ def main():
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
