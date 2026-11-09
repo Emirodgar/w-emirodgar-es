@@ -246,10 +246,16 @@ def main():
     pagina("espana/", "¿Quién ganará las elecciones generales de 2026? Encuestas y análisis", resp[:155], q, cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › España")
     urls.insert(0, f"{BASE}/atalaya/fichas/espana/")
 
+    # fichas de partido y de tema (módulo aparte)
+    from fichas_tematicas import generar
+    extra, urls_extra = generar(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, slug=slug, nes=nes, pagina=pagina, J=J, D=D, RAIZ=RAIZ,
+                                     nacional=nacional, nsond=nsond, fsond=fsond))
+    urls += urls_extra
+
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganará las elecciones generales de 2026?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganará las elecciones generales de 2026?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
