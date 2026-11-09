@@ -78,7 +78,7 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False):
 <h1>{E(h1)}</h1>
 {cuerpo}
 </main>
-<footer class="src"><p>Elaborado por <a href="https://emirodgar.es/sobre-mi">Emilio Rodríguez García</a> con el panel <a href="/atalaya/">Atalaya</a>. Última actualización: {fecha_es(FECHA)}. Contenido basado en datos públicos citados en cada apartado; no es una encuesta ni una predicción oficial.</p></footer>
+<footer class="src"><p>Elaborado por <a href="https://emirodgar.es/sobre-mi">Emilio Rodríguez García</a> con el panel <a href="/atalaya/">Atalaya</a>. Última actualización: {fecha_es(FECHA)}. Contenido basado en datos públicos citados en cada apartado; no es una encuesta ni una predicción oficial. <a href="/atalaya/privacidad/">Política de privacidad</a>.</p></footer>
 </body>
 </html>
 """

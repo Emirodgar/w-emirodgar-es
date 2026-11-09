@@ -42,10 +42,14 @@
     setTimeout(function () { window.dispatchEvent(new Event('resize')); }, 250);
   });
   document.body.insertBefore(nav, document.body.firstChild);
-  // Pie común: solo "Fichas". /atalaya/fuentes/ existe pero no se enlaza (uso privado).
-  var pf = document.createElement('footer');
-  pf.className = 'pf';
-  pf.innerHTML = '<a href="/atalaya/fichas/">Fichas</a>';
-  document.body.appendChild(pf);
+  // Pie común: Fichas y Privacidad. /atalaya/fuentes/ existe pero no se enlaza (uso privado).
+  // Este script se carga al principio del <body>: el pie se añade cuando el documento está completo, para que quede al final.
+  function pie() {
+    var pf = document.createElement('footer');
+    pf.className = 'pf';
+    pf.innerHTML = '<a href="/atalaya/fichas/">Fichas</a><a href="/atalaya/privacidad/">Privacidad</a>';
+    document.body.appendChild(pf);
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', pie); else pie();
   sync();
 })();
