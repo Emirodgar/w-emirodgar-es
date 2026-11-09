@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Medios | Atalaya</title>
+<meta name="description" content="Qué medios aportan las noticias recogidas, cuántas son y con qué tono tratan a cada partido: calidad de la información y afinidad de cada medio.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/medios/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+button,select,input{font:inherit;color:inherit}
+a{color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;padding:12px 16px 0}
+.bar label{display:block;font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.bar select,.bar input{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:150px}
+.bar select:focus-visible,.bar input:focus-visible,th button:focus-visible,tr.r:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.kpi b{display:block;font-family:var(--mono);font-size:24px;font-weight:600}
+.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.kpi small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr);gap:12px;padding:12px 16px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.card>h2 em{font-style:normal;color:var(--acc)}
+.body{padding:12px 14px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em;position:sticky;top:0;background:var(--panel)}
+th button{background:none;border:0;cursor:pointer;color:inherit;font:inherit;text-transform:inherit;letter-spacing:inherit;padding:0}
+th button:hover{color:var(--acc)}
+th[aria-sort] button{color:var(--acc)}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+tr.r{cursor:pointer}tr.r:hover,tr.r.on{background:var(--panel2)}
+tr.low td{color:var(--mut)}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:10px;border:1px solid var(--line);color:var(--mut);margin-left:6px}
+.stk{display:flex;height:10px;width:130px;border-radius:5px;overflow:hidden;background:var(--panel2)}
+.stk i{display:block;height:100%}
+.bal{font-family:var(--mono);font-weight:600}
+.pos{color:var(--ok)}.neg{color:var(--bad)}.neu{color:var(--mut)}
+.lst{list-style:none}
+.lst li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px solid var(--line)}
+.lst li:last-child{border:0}
+.lst span{color:var(--mut);font-size:12px}
+.q{display:grid;grid-template-columns:1fr auto;gap:6px 12px;font-size:13px}
+.q dt{color:var(--mut)}.q dd{font-family:var(--mono);text-align:right}
+.note{color:var(--mut);font-size:12px;margin-top:10px}
+.hl{list-style:none}
+.hl li{padding:8px 14px;border-bottom:1px solid var(--line);display:flex;gap:10px}
+.hl a{text-decoration:none}.hl a:hover{text-decoration:underline}
+.hl .t{font-family:var(--mono);font-size:12px;flex:none;width:28px}
+.empty{padding:18px 14px;color:var(--mut)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js"></script>
+<header class="top">
+  <h1 class="pt">Medios <small>calidad de la información y afinidad por partido</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<div class="bar" role="group" aria-label="Filtros">
+  <div><label for="fp">Partido</label><select id="fp"></select></div>
+  <div><label for="fa">Ámbito</label><select id="fa"><option value="">Nacional y local</option><option value="nacional">Nacional</option><option value="local">Local</option></select></div>
+  <div><label for="ft">Fuentes</label><select id="ft"><option value="prensa">Solo prensa</option><option value="">Prensa, partidos e instituciones</option></select></div>
+  <div><label for="fm">Mín. noticias con tono</label><select id="fm"><option>1</option><option selected>3</option><option>5</option><option>10</option></select></div>
+  <div><label for="fq">Buscar medio</label><input type="search" id="fq" placeholder="El Mundo, Granada…"></div>
+</div>
+
+<section class="kpis" id="kpis" aria-label="Resumen"></section>
+
+<main class="grid">
+  <div>
+    <section class="card">
+      <h2><span>Medios <em id="tt"></em></span><span id="cnt"></span></h2>
+      <div class="tw"><table id="tb"></table></div>
+    </section>
+    <section class="card" id="det" hidden>
+      <h2><span>Titulares <em id="dt"></em></span></h2>
+      <ul class="hl" id="dl"></ul>
+    </section>
+  </div>
+  <div>
+    <section class="card" id="top"><h2><span>Afinidad</span></h2><div class="body" id="topb"></div></section>
+    <section class="card"><h2><span>Calidad del dato</span></h2><div class="body"><dl class="q" id="qd"></dl><p class="note" id="qn"></p></div></section>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+var PARTS=['PP','PSOE','Vox','Sumar','Podemos'];
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var f0=function(x){return Math.round(x).toLocaleString('es-ES')};
+var sg=function(x){var r=Math.round(x);return (r>0?'+':r<0?'−':'')+Math.abs(r)};
+var pc=function(a,b){return b?Math.round(a*100/b)+'%':'—'};
+var K=3;                                   // suavizado: añade K noticias neutras ficticias para no premiar muestras diminutas
+var all=[],sort={k:'nsel',d:-1},sel=null;
+
+// Una fuente institucional o de partido no es prensa: su tono hacia sí misma no mide afinidad editorial.
+function tipo(m){
+  if(/^(vox españa|pp de |psoe|partido popular|podemos|sumar)/i.test(m))return 'partido';
+  if(/^(mi )?ayuntamiento|^diputaci|^junta de|^gobierno/i.test(m))return 'institución';
+  return 'prensa';
+}
+function medio(m){return String(m||'').replace(/^[\s|]+|[\s.|]+$/g,'')||'(sin medio)'}
+
+Promise.all([
+  fetch('../data/noticias.json').then(function(r){return r.json()}),
+  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}})
+]).then(function(r){
+  var S=r[1].items||{};
+  all=(r[0].noticias||[]).map(function(n){
+    var s=S[n.i],m=medio(n.m);
+    return {i:n.i,t:n.t,u:n.u,f:n.f,m:m,k:m.toLowerCase(),a:n.a,tipo:tipo(m),s:s||null,p:n.p||[]};
+  });
+  $('fp').innerHTML='<option value="">Todos (cualquier noticia)</option>'+PARTS.map(function(p){return '<option>'+p+'</option>'}).join('');
+  ['fp','fa','ft','fm'].forEach(function(id){$(id).addEventListener('change',function(){sel=null;render()})});
+  $('fq').addEventListener('input',render);
+  render();
+}).catch(function(){$('tb').innerHTML='<tr><td class="empty">No se pudieron leer los datos de noticias.</td></tr>'});
+
+function scope(){
+  var a=$('fa').value,t=$('ft').value;
+  return all.filter(function(n){return (!a||n.a===a)&&(!t||n.tipo===t)});
+}
+function stats(rows,party){
+  var by={};
+  rows.forEach(function(n){
+    var o=by[n.k]||(by[n.k]={m:n.m,a:n.a,tipo:n.tipo,n:0,clas:0,nsel:0,pos:0,neu:0,neg:0,items:[]});
+    o.n++;
+    if(n.s){
+      o.clas++;
+      if(!party||n.s.partido===party){
+        o.nsel++;o.items.push(n);
+        if(n.s.tono>0)o.pos++;else if(n.s.tono<0)o.neg++;else o.neu++;
+      }
+    }
+  });
+  var P=0,Ng=0,Gn=0;
+  Object.keys(by).forEach(function(k){var o=by[k];P+=o.pos;Ng+=o.neg;Gn+=o.nsel});
+  var base=Gn?(P-Ng)/(Gn+K)*100:0;
+  Object.keys(by).forEach(function(k){
+    var o=by[k];
+    o.bal=o.nsel?(o.pos-o.neg)/o.nsel*100:0;
+    o.adj=o.nsel?(o.pos-o.neg)/(o.nsel+K)*100:0;      // balance suavizado
+    o.rel=o.adj-base;                                   // frente a la media de todos los medios: descuenta el ciclo de noticias
+  });
+  return {by:by,base:base,list:Object.keys(by).map(function(k){return by[k]})};
+}
+
+function render(){
+  var party=$('fp').value,min=+$('fm').value,q=$('fq').value.trim().toLowerCase();
+  var rows=scope(),st=stats(rows,party),L=st.list;
+  var clas=rows.filter(function(n){return n.s}).length;
+  var nsel=L.reduce(function(a,o){return a+o.nsel},0);
+  var fiables=L.filter(function(o){return o.nsel>=min}).length;
+  $('tt').textContent=party?('· '+party):'';
+
+  $('kpis').innerHTML=
+    kpi(f0(rows.length),'Noticias recogidas',f0(L.length)+' medios distintos')+
+    kpi(pc(clas,rows.length),'Con tono clasificado',f0(clas)+' de '+f0(rows.length))+
+    kpi(f0(nsel),party?'Noticias sobre '+party:'Noticias con tono',party?'según el partido afectado':'todas las clasificadas')+
+    kpi(f0(fiables),'Medios con muestra útil','≥ '+min+' noticias con tono');
+
+  var vis=L.filter(function(o){return o.nsel>=min&&(!q||o.m.toLowerCase().indexOf(q)>=0)});
+  vis.sort(function(a,b){
+    var x=a[sort.k],y=b[sort.k];
+    if(typeof x==='string')return sort.d*x.localeCompare(y,'es');
+    return sort.d*(x-y)||b.nsel-a.nsel;
+  });
+  $('cnt').textContent=vis.length+' medios';
+  var cols=[['m','Medio'],['n','Recogidas',1],['clas','Con tono',1],['nsel',party?'Sobre '+party:'Con tono',1],['d','Reparto'],['bal','Balance',1],['rel','Frente a la media',1]];
+  var h='<thead><tr>'+cols.map(function(c){
+    var on=sort.k===c[0];
+    return '<th class="'+(c[2]?'n':'')+'"'+(on?' aria-sort="'+(sort.d<0?'descending':'ascending')+'"':'')+'>'+(c[0]==='d'?c[1]:'<button type="button" data-k="'+c[0]+'">'+c[1]+(on?(sort.d<0?' ↓':' ↑'):'')+'</button>')+'</th>'
+  }).join('')+'</tr></thead><tbody>';
+  if(!vis.length)h+='<tr><td colspan="7" class="empty">Ningún medio llega a '+min+' noticias con tono para este filtro. Baja el mínimo o cambia de partido.</td></tr>';
+  vis.slice(0,200).forEach(function(o){
+    var low=o.nsel<5,w=function(x){return o.nsel?(x*100/o.nsel).toFixed(1):0};
+    h+='<tr class="r'+(low?' low':'')+(sel===o.m?' on':'')+'" tabindex="0" data-m="'+esc(o.m)+'">'+
+      '<td>'+esc(o.m)+(o.a==='nacional'?'<span class="tag">nacional</span>':'')+(o.tipo!=='prensa'?'<span class="tag">'+o.tipo+'</span>':'')+(low?'<span class="tag" title="Menos de 5 noticias: cifra poco fiable">muestra baja</span>':'')+'</td>'+
+      '<td class="n">'+o.n+'</td><td class="n">'+o.clas+'</td><td class="n">'+o.nsel+'</td>'+
+      '<td><div class="stk" title="'+o.neg+' negativas · '+o.neu+' neutras · '+o.pos+' positivas"><i style="width:'+w(o.neg)+'%;background:var(--bad)"></i><i style="width:'+w(o.neu)+'%;background:#475569"></i><i style="width:'+w(o.pos)+'%;background:var(--ok)"></i></div></td>'+
+      '<td class="n bal '+cls(o.bal)+'">'+sg(o.bal)+'</td><td class="n bal '+cls(o.rel)+'">'+sg(o.rel)+'</td></tr>';
+  });
+  $('tb').innerHTML=h+'</tbody>';
+  Array.prototype.forEach.call($('tb').querySelectorAll('th button'),function(b){b.onclick=function(){
+    var k=b.dataset.k;sort=sort.k===k?{k:k,d:-sort.d}:{k:k,d:k==='m'?1:-1};render()}});
+  Array.prototype.forEach.call($('tb').querySelectorAll('tr.r'),function(tr){
+    var go=function(){sel=tr.dataset.m;render();headlines(st.by[sel.toLowerCase()],party);$('det').scrollIntoView({block:'nearest',behavior:'smooth'})};
+    tr.onclick=go;tr.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}};
+  });
+  if(sel&&st.by[sel.toLowerCase()])headlines(st.by[sel.toLowerCase()],party);else $('det').hidden=true;
+
+  affinity(L,party,min,st);
+  quality(rows,L,clas);
+}
+function kpi(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
+function cls(x){return Math.round(x)>0?'pos':Math.round(x)<0?'neg':'neu'}
+
+function affinity(L,party,min,st){
+  var el=$('topb');
+  if(!party){el.innerHTML='<p class="note" style="margin:0">Elige un partido para ver qué medios lo tratan mejor o peor que la media. Con «Todos» el balance mezcla partidos y no mide afinidad.</p>';return}
+  var c=L.filter(function(o){return o.nsel>=min&&o.tipo==='prensa'});
+  if(c.length<2){el.innerHTML='<p class="note" style="margin:0">Hay pocos medios con '+min+' o más noticias sobre '+party+'. Baja el mínimo para ver una primera aproximación.</p>';return}
+  c.sort(function(a,b){return b.rel-a.rel});
+  var li=function(o){return '<li><span style="color:var(--txt)">'+esc(o.m)+'</span><b class="bal '+cls(o.rel)+'">'+sg(o.rel)+' <span>n='+o.nsel+'</span></b></li>'};
+  var n=Math.min(5,Math.floor(c.length/2));
+  el.innerHTML='<h3 style="font-size:12px;color:var(--mut);margin-bottom:4px">MÁS FAVORABLES A '+esc(party.toUpperCase())+'</h3><ul class="lst">'+c.slice(0,n).map(li).join('')+'</ul>'+
+    '<h3 style="font-size:12px;color:var(--mut);margin:12px 0 4px">MÁS CRÍTICOS CON '+esc(party.toUpperCase())+'</h3><ul class="lst">'+c.slice(-n).reverse().map(li).join('')+'</ul>'+
+    '<p class="note">«Frente a la media» resta el balance medio de todos los medios ('+sg(st.base)+'). Así una racha de malas noticias reales no se confunde con hostilidad editorial. El tono mide la noticia, no la línea del medio: con pocas noticias es solo una pista.</p>';
+}
+
+function quality(rows,L,clas){
+  var sin=rows.filter(function(n){return n.s&&n.s.partido==='ninguno'}).length;
+  var uno=L.filter(function(o){return o.n<=2}).length;
+  var top=L.slice().sort(function(a,b){return b.n-a.n}).slice(0,10).reduce(function(a,o){return a+o.n},0);
+  var ext=rows.filter(function(n){return n.tipo!=='prensa'}).length;
+  var loc=rows.filter(function(n){return n.a==='local'}).length;
+  var fs=rows.map(function(n){return n.f}).filter(Boolean).sort();
+  var ds={};fs.forEach(function(f){ds[f.slice(0,10)]=1});
+  var men=rows.filter(function(n){return n.p.length}).length;
+  var d=function(k,v){return '<dt>'+k+'</dt><dd>'+v+'</dd>'};
+  $('qd').innerHTML=
+    d('Sin tono clasificado',f0(rows.length-clas)+' ('+pc(rows.length-clas,rows.length)+')')+
+    d('Clasificadas sin partido claro',f0(sin)+' ('+pc(sin,clas)+')')+
+    d('Mencionan un partido por nombre',f0(men)+' ('+pc(men,rows.length)+')')+
+    d('Medios con 1–2 noticias',f0(uno)+' de '+f0(L.length))+
+    d('Las 10 mayores fuentes aportan',pc(top,rows.length))+
+    d('Noticias locales',pc(loc,rows.length))+
+    d('De partidos o instituciones',f0(ext)+' ('+pc(ext,rows.length)+')')+
+    d('Ventana de fechas',fs.length?fs[0].slice(5,10)+' → '+fs[fs.length-1].slice(5,10)+' ('+Object.keys(ds).length+' días)':'—');
+  $('qn').textContent='El tono se calcula solo a partir del titular y lo asigna un modelo: es orientativo. Las noticias sin clasificar aún están en cola; el número crece con cada ejecución diaria.';
+}
+
+function headlines(o,party){
+  if(!o)return;
+  $('det').hidden=false;
+  $('dt').textContent='· '+o.m+(party?' · '+party:'');
+  var it=o.items.slice().sort(function(a,b){return String(b.f).localeCompare(String(a.f))}).slice(0,12);
+  $('dl').innerHTML=it.length?it.map(function(n){
+    var t=n.s.tono,safe=/^https?:\/\//.test(n.u)?n.u:'#';
+    return '<li><span class="t bal '+cls(t)+'">'+(t>0?'+':t<0?'−':'')+Math.abs(t)+'</span><span><a href="'+esc(safe)+'" target="_blank" rel="noopener noreferrer">'+esc(n.t)+'</a> <span class="neu" style="font-size:12px">· '+esc(n.s.tema)+' · '+esc(n.s.partido)+'</span></span></li>';
+  }).join(''):'<li class="empty">Este medio no tiene noticias con tono para el filtro actual.</li>';
+}
+})();
+</script>
+</body>
+</html>
