@@ -248,21 +248,50 @@ def main():
         pagina(ruta, f"¿Quién ganará las elecciones en {nombre}? Análisis y datos (29N 2026)", desc, q, cuerpo, ld, bc)
         urls.append(f"{BASE}/atalaya/fichas/{ruta}"); items.append((nombre, ruta, nivel, resp))
 
-    # España
-    pp = orden[0]; sg = orden[1]
-    resp = (f"Las encuestas sitúan a {art(pp[0])} en cabeza ({pp[1]:.1f}%), con {pp[1]-sg[1]:.1f} puntos sobre {art(sg[0])} ({sg[1]:.1f}%), pero el resultado no está decidido: "
-            f"el reparto de escaños depende de lo que ocurra provincia a provincia.")
-    nac = "".join(f"<tr><td>{p}</td><td>{v_:.1f}%</td></tr>" for p, v_ in orden)
-    cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(FECHA)}</p><p class='ans'>{E(resp)}</p>"
-              f"<h2>Media de encuestas</h2><p>Media ponderada de {nsond} sondeos de los 30 días previos al {fecha_es(fsond)} (sin CIS).</p><table><thead><tr><th>Partido</th><th>Estimación de voto</th></tr></thead><tbody>{nac}</tbody></table>"
-              "<p>Detalle y metodología en <a href='/elecciones-espana/'>Elecciones en España</a>.</p>"
-              "<h2>Por provincias</h2><p>Consulta la ficha de cada provincia:</p><ul>" + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n)}</a></li>" for n, r, _, _ in items) + "</ul>"
-              "<h2>Límites</h2><p class='warn'>Una media de encuestas no es una previsión de escaños. No incluye todavía modelos territoriales ni análisis de redes.</p>")
-    q = "¿Quién ganará las elecciones generales de 2026 en España?"
-    ld = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": resp, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
-           "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "mainEntityOfPage": f"{BASE}/atalaya/fichas/espana/"},
-          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": resp}}]}]
-    pagina("espana/", "¿Quién ganará las elecciones generales de 2026? Encuestas y análisis", resp[:155], q, cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › España")
+    # España: ficha nacional «¿Quién ganaría hoy?» (módulo aparte)
+    from ficha_nacional import construir
+    cuerpo, faqs_n, resp, desc_n, info = construir(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, J=J, D=D, RAIZ=RAIZ))
+    cuerpo = cuerpo.replace("<h2>Por provincias</h2><p>Consulta cómo ha votado cada provincia y quién va primero en las <a href='/atalaya/fichas/'>fichas por provincia</a>.</p>",
+                            "<h2>Por provincias</h2><p>Consulta cómo ha votado cada provincia y quién va primero en su ficha:</p><ul>" + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n)}</a></li>" for n, r, _, _ in items) + "</ul>")
+    q = "¿Quién ganaría hoy las elecciones generales de 2026 en España?"
+    ld = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": desc_n, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
+           "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
+           "mainEntityOfPage": f"{BASE}/atalaya/fichas/espana/"},
+          {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_n]},
+          {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+              {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
+              {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
+              {"@type": "ListItem", "position": 3, "name": "España", "item": f"{BASE}/atalaya/fichas/espana/"}]}]
+    pagina("espana/", "¿Quién ganaría hoy las elecciones generales? Encuestas y escaños (29N 2026)", desc_n, q, cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › España")
+    # Presidente del Gobierno (módulo aparte)
+    from ficha_presidente import construir as construir_pres
+    cp, faqs_p, resp_p, desc_p = construir_pres(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, J=J, D=D, RAIZ=RAIZ), info)
+    qp = "¿Quién es el presidente de España y cómo se elige?"
+    ldp = [{"@context": "https://schema.org", "@type": "Article", "headline": qp, "description": desc_p, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
+            "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
+            "mainEntityOfPage": f"{BASE}/atalaya/fichas/presidente/"},
+           {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_p]},
+           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
+               {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
+               {"@type": "ListItem", "position": 3, "name": "Presidente del Gobierno", "item": f"{BASE}/atalaya/fichas/presidente/"}]}]
+    pagina("presidente/", "¿Quién es el presidente de España? Cómo se elige y cuánto dura (2026)", desc_p, qp, cp, ldp, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Presidente del Gobierno")
+    urls.append(f"{BASE}/atalaya/fichas/presidente/")
+    # Calendario y cómo votar (módulo aparte)
+    from ficha_calendario import construir as construir_cal
+    cc, faqs_c, resp_c, desc_c, ev_c = construir_cal(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, J=J, D=D, RAIZ=RAIZ))
+    qc = "¿Cuándo son las elecciones generales y cómo se vota?"
+    ldc = [{"@context": "https://schema.org", "@type": "Article", "headline": qc, "description": desc_c, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
+            "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
+            "mainEntityOfPage": f"{BASE}/atalaya/fichas/calendario/"}, ev_c,
+           {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_c]},
+           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+               {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
+               {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
+               {"@type": "ListItem", "position": 3, "name": "Calendario y cómo votar", "item": f"{BASE}/atalaya/fichas/calendario/"}]}]
+    pagina("calendario/", "¿Cuándo son las elecciones generales y cómo se vota? Calendario 29N 2026", desc_c, qc, cc, ldc, "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Calendario y cómo votar")
+    urls.append(f"{BASE}/atalaya/fichas/calendario/")
+    print("España:", info["lid"], info["pm"].get("PP"), info["n_pv"], "/", info["n"])
     urls.insert(0, f"{BASE}/atalaya/fichas/espana/")
 
     # fichas de partido y de tema (módulo aparte)
@@ -274,7 +303,7 @@ def main():
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganará las elecciones generales de 2026?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
