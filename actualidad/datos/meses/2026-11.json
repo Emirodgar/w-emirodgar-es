@@ -338,6 +338,48 @@
         "url": "https://www.elmundo.es/espana/2026/11/08/6af03dffe9cf4a8a4e8b456e.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-09",
+      "edicion": "2026-11-09",
+      "titulo": "El Hierro declara la \"emergencia social\" por la crisis migratoria",
+      "categoria": "Sociedad",
+      "descripcion": "La isla de El Hierro ha declarado la \"emergencia social\" tras la llegada de 4.500 migrantes en una semana, lo que ha llevado al Gobierno a convocar de urgencia la Comisión Interministerial de Inmigración.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El 'SOS' de El Hierro tras las 4.500 llegadas en siete días y el desguace de 30 cayucos",
+        "url": "https://www.elmundo.es/espana/2026/11/09/6af1cc3ae85ecebb328b4581.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-09",
+      "edicion": "2026-11-09",
+      "titulo": "El Supremo rechaza suspender el voto a los hijos de nacionalizados por la Ley de Nietos",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo ha rechazado la suspensión del derecho a voto para las próximas elecciones del 29-N a los hijos e hijas de quienes obtuvieron la nacionalidad española por la Ley de Nietos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Supremo rechaza suspender el voto a los hijos de los nacionalizados en la ley de nietos",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/09/6af1c361e9cf4ab4658b4571.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-09",
+      "edicion": "2026-11-09",
+      "titulo": "Gobierno pide a Fiscalía estudiar paralización de TikTok por abuso sexual infantil",
+      "categoria": "Sociedad",
+      "descripcion": "El Ministerio de Juventud e Infancia ha solicitado a la Fiscalía General del Estado que estudie la posibilidad de paralizar los servicios de TikTok en España por presunta vulneración de derechos de la infancia tras detectarse casos de abuso sexual infantil.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno pide a la Fiscalía estudiar la paralización de TikTok por \"vulneración de derechos de la infancia\" tras detectarse abuso sexual infantil",
+        "url": "https://www.elmundo.es/espana/2026/11/09/6af1a1d1e9cf4a0d5f8b4583.html"
+      },
+      "destacado": false
     }
   ]
 }

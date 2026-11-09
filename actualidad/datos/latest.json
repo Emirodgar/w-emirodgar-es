@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-08",
-  "generado_en": "2026-11-08T11:48:28+00:00",
-  "titular": "Masacre en Cracovia y campaña electoral marcan la jornada, con el PSOE buscando el voto moderado.",
+  "fecha": "2026-11-09",
+  "generado_en": "2026-11-09T13:44:17+00:00",
+  "titular": "Crisis migratoria en El Hierro, debate electoral y polémica por la Ley de Nietos marcan la jornada",
   "por_medio": {
-    "El Mundo": 22,
-    "The Objective": 105
+    "El Mundo": 26,
+    "The Objective": 100
   },
   "temas": [
     {
-      "tema": "Masacre en Cracovia",
-      "categoria": "Internacional",
-      "descripcion": "Un hombre mata a nueve personas, incluyendo a sus padres y hermana, en Cracovia, en un acto investigado como terrorismo por inspiración de extrema derecha."
-    },
-    {
-      "tema": "Campaña electoral del PSOE",
-      "categoria": "Política",
-      "descripcion": "Ministros del PSOE inician campaña sin Sánchez, buscando el voto moderado, mientras las investigaciones en ADIF afectan la campaña socialista."
-    },
-    {
-      "tema": "Campaña electoral de Vox",
-      "categoria": "Política",
-      "descripcion": "Vox presenta su cartel de campaña para el 29-N con Santiago Abascal y las ideas de \"prioridad nacional, desregulación y remigración\"."
-    },
-    {
-      "tema": "Crisis migratoria en España",
+      "tema": "Crisis migratoria en El Hierro",
       "categoria": "Sociedad",
-      "descripcion": "Llegada masiva de migrantes a El Hierro, desalojo de un campamento en Ceuta y propuesta de comprar parcelas para triajes a inmigrantes."
+      "descripcion": "El Hierro ha declarado la \"emergencia social\" tras la llegada de 4.500 migrantes en siete días, lo que ha provocado la convocatoria urgente de la Comisión Interministerial de Inmigración."
+    },
+    {
+      "tema": "Debate electoral y Ley de Nietos",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo ha rechazado suspender el voto a los hijos de nacionalizados por la Ley de Nietos, mientras el PSOE propone a la Academia de Televisión para organizar el debate electoral."
+    },
+    {
+      "tema": "Investigación a TikTok por abuso sexual infantil",
+      "categoria": "Sociedad",
+      "descripcion": "El Gobierno ha solicitado a la Fiscalía que investigue la posible paralización de TikTok en España por presunta vulneración de derechos de la infancia y abuso sexual infantil."
+    },
+    {
+      "tema": "Resultados electorales y propuestas del PP",
+      "categoria": "Política",
+      "descripcion": "Según El Mundo, PP y Vox sumarían 199 diputados, mientras el PP promete recuperar la presencia del Estado en el País Vasco y Cataluña en seis meses."
     }
   ]
 }
