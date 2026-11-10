@@ -166,6 +166,25 @@ def main():
     urls = []
     items = []
     # Congreso: fichas de diputados y legislaturas (antes de las provincias, que enlazan a sus diputados)
+    def publicar(ruta, titulo, desc, q, cuerpo_, faqs_, bc_nombre, lang="es", alt=None, pie=None):
+        """Publica una ficha con Article + FAQPage + BreadcrumbList y la añade al sitemap."""
+        u = f"{BASE}/atalaya/fichas/{ruta}"
+        raiz = "Atalaya" if lang == "es" else "Atalaya"
+        ld_ = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": desc, "inLanguage": lang, "datePublished": FECHA, "dateModified": FECHA,
+                "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"}, "mainEntityOfPage": u},
+               {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_]},
+               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+                   {"@type": "ListItem", "position": 1, "name": raiz, "item": f"{BASE}/atalaya/"}, {"@type": "ListItem", "position": 2, "name": bc_nombre, "item": u}]}]
+        bc_ = ("<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › " if lang == "es" else "<a href='/atalaya/'>Atalaya</a> › ") + E(bc_nombre)
+        pagina(ruta, titulo, desc, q, cuerpo_, ld_, bc_, lang=lang, alt=alt, pie=pie)
+        urls.append(u)
+
+    # Volatilidad territorial: ¿qué provincias y ciudades pueden cambiar de partido? (módulos aparte)
+    import volatilidad, fichas_cambio
+    ps_ = {pc_: (ES.get(n_, n_), slug(ES.get(n_, n_)) + "/") for pc_, n_ in prov.items()}
+    VOL = volatilidad.calcular(dict(J=J, D=D, RAIZ=RAIZ))
+    bloque_cambio, frase_cambio = fichas_cambio.generar(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, ps=ps_, publicar=publicar, slug=slug), VOL)
+
     from fichas_congreso import parlamento
     hub_parl, urls_parl, dips = parlamento(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, slug=slug, pagina=pagina, J=J, D=D,
                                                prov_slug={pc_: (ES.get(n_, n_), slug(ES.get(n_, n_)) + "/") for pc_, n_ in prov.items()}))
@@ -178,11 +197,16 @@ def main():
         q = f"¿Quién ganará las elecciones generales en {nombre}?"
         if v:
             resp, L, nivel = respuesta(nombre, v, nacional)
+            pv_ = VOL["P"][pc]
+            if pv_["cat"] == "cambio":
+                resp += f" Si los sondeos recientes se trasladan a los votos de 2023, {art(volatilidad.nom(pv_['lm']))} pasaría a ser la lista más votada ({f'{pv_[chr(109)+chr(109)]:.1f}'.replace('.', ',')} puntos)."
+            elif pv_["cat"] == "aire":
+                resp += f" Si los sondeos recientes se trasladan a los votos de 2023, su ventaja bajaría a {f'{pv_[chr(109)+chr(109)]:.1f}'.replace('.', ',')} puntos."
             tot = (v.get("total") or [None])[-1]
             cab = f"<p class='ans'>{E(resp)}</p>"
             ev = (f"<h2>1. Qué ha votado {E(nombre)} en las últimas elecciones generales</h2><p>Escaños al Congreso por partido en las últimas convocatorias generales (fuente: <a href='{v['url']}'>Wikipedia, «{E(v['titulo'])}»</a>, que recoge datos oficiales; la serie completa llega hasta 1977):</p>{tabla_escanos(v)}"
                   f"<p>{E(nombre)} elige {tot} diputados al Congreso. Con pocos escaños en juego, unos pocos votos pueden mover el último escaño entre partidos." + (f" Tiene {nes(pob)} habitantes (INE, 1 de enero de {anio_pad}), unos {nes(round(pob / tot))} por diputado." if pob else "") + "</p>" if tot else "")
-            faq_hist = f"En 2023, {art(L)} fue el partido con más escaños en {nombre}." if L else ""
+            faq_hist = f"En 2023, {art(volatilidad.nom(pv_['l23']))} fue el partido más votado en {nombre} y obtuvo {pv_['seats23'].get(pv_['l23'], 0)} de {tot} escaños." if tot else f"En 2023, {art(volatilidad.nom(pv_['l23']))} fue el partido más votado en {nombre}."
             desc = resp.split(". ")[0].rstrip(".") + ". Escaños en el Congreso, encuestas y noticias recientes."
         else:
             resp = f"No hay todavía datos suficientes para señalar un favorito en {nombre}: no hemos podido cargar su histórico de escaños. Lo que sí se sabe es el contexto nacional: la media de encuestas sitúa a {art(lider)} en cabeza."
@@ -232,7 +256,8 @@ def main():
                    "<li>Método: el partido con más escaños en 2023 y su regularidad en las últimas seis convocatorias, contrastados con la tendencia nacional de encuestas.</li></ul>"
                    f"<p>Explora el territorio en el <a href='/atalaya/#{pc}'>panel Atalaya</a>.</p>")
         faqs = [(q, resp)]
-        if faq_hist: faqs.append((f"¿Quién ganó en {nombre} en las elecciones generales de 2023?", faq_hist + (f" Obtuvo {v['partidos'][L][-1]} de {tot} escaños." if tot else "")))
+        faqs.append((f"¿Puede cambiar de partido {nombre} en las elecciones del 29N?", frase_cambio(VOL['P'][pc])))
+        if faq_hist: faqs.append((f"¿Quién ganó en {nombre} en las elecciones generales de 2023?", faq_hist))
         faqs.append((f"¿Cuándo son las próximas elecciones generales?", f"Las elecciones generales se celebran el 29 de noviembre de 2026."))
         if tot: faqs.append((f"¿Cuántos diputados elige {nombre} al Congreso?", f"{nombre} elige {tot} diputados al Congreso de los Diputados."))
         if pob: faqs.append((f"¿Cuántos habitantes tiene {nombre}?", f"{nombre} tiene {nes(pob)} habitantes según el padrón del INE a 1 de enero de {anio_pad}."))
@@ -246,7 +271,7 @@ def main():
                   {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
                   {"@type": "ListItem", "position": 3, "name": nombre, "item": f"{BASE}/atalaya/fichas/{ruta}"}]}]
         bc = "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › " + E(nombre)
-        cuerpo = f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p>{cab}{ev}{dipsec}{limites}{faq_html}{fuentes}"
+        cuerpo = f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p>{cab}{ev}{dipsec}{bloque_cambio(pc)}{limites}{faq_html}{fuentes}"
         pagina(ruta, f"¿Quién ganará las elecciones en {nombre}? Análisis y datos (29N 2026)", desc, q, cuerpo, ld, bc)
         urls.append(f"{BASE}/atalaya/fichas/{ruta}"); items.append((nombre, ruta, nivel, resp))
 
@@ -325,19 +350,6 @@ def main():
            lang="en", alt={"es": "presidente/", "en": "en/prime-minister-of-spain/"}, pie=pie_en)
     urls.append(f"{BASE}/atalaya/fichas/en/prime-minister-of-spain/")
 
-    def publicar(ruta, titulo, desc, q, cuerpo_, faqs_, bc_nombre, lang="es", alt=None, pie=None):
-        """Publica una ficha con Article + FAQPage + BreadcrumbList y la añade al sitemap."""
-        u = f"{BASE}/atalaya/fichas/{ruta}"
-        raiz = "Atalaya" if lang == "es" else "Atalaya"
-        ld_ = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": desc, "inLanguage": lang, "datePublished": FECHA, "dateModified": FECHA,
-                "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"}, "mainEntityOfPage": u},
-               {"@context": "https://schema.org", "@type": "FAQPage", "inLanguage": lang, "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs_]},
-               {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-                   {"@type": "ListItem", "position": 1, "name": raiz, "item": f"{BASE}/atalaya/"}, {"@type": "ListItem", "position": 2, "name": bc_nombre, "item": u}]}]
-        bc_ = ("<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › " if lang == "es" else "<a href='/atalaya/'>Atalaya</a> › ") + E(bc_nombre)
-        pagina(ruta, titulo, desc, q, cuerpo_, ld_, bc_, lang=lang, alt=alt, pie=pie)
-        urls.append(u)
-
     # Rey de España
     from ficha_rey import construir as construir_rey
     cr, fq_r, _, desc_r = construir_rey(dict(E=E, FECHA=FECHA, fecha_es=fecha_es, J=J, RAIZ=RAIZ))
@@ -377,7 +389,7 @@ def main():
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/rey/'>¿Quién es el rey de España y qué papel tiene en las elecciones?</a></li><li><a href='/atalaya/fichas/escrutinio/'>¿Cuándo se conocen los resultados y cómo funciona el escrutinio?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li><li><a href='/atalaya/fichas/en/spanish-politics-parties/' hreflang='en' lang='en'>How does Spain's political system work and who are the main parties? (English)</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/cambio/'>¿Qué provincias pueden cambiar de partido en las elecciones generales?</a></li><li><a href='/atalaya/fichas/cambio/ciudades/'>¿Qué ciudades pueden cambiar de partido más votado?</a></li><li><a href='/atalaya/fichas/rey/'>¿Quién es el rey de España y qué papel tiene en las elecciones?</a></li><li><a href='/atalaya/fichas/escrutinio/'>¿Cuándo se conocen los resultados y cómo funciona el escrutinio?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li><li><a href='/atalaya/fichas/en/spanish-politics-parties/' hreflang='en' lang='en'>How does Spain's political system work and who are the main parties? (English)</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
