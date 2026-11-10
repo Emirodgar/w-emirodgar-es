@@ -187,7 +187,7 @@ def footer():
 
 
 def byline():
-    return f'<p class="text-xs text-slate-500">Por <a class="underline" href="https://emirodgar.es/sobre-mi.html">Emilio Rodríguez</a> · Actualizado el <time datetime="{modified_iso}">{e(modified_txt)}</time> · Todas las posiciones llevan su fuente enlazada</p>'
+    return f'<p class="text-xs text-slate-500">Por <a class="underline" href="https://emirodgar.es/sobre-mi">Emilio Rodríguez</a> · Actualizado el <time datetime="{modified_iso}">{e(modified_txt)}</time> · Todas las posiciones llevan su fuente enlazada</p>'
 
 
 def faq_block(faq):
@@ -211,7 +211,7 @@ def breadcrumb_ld(items):
 def webpage_ld(name, desc, path):
     return {"@context": "https://schema.org", "@type": "WebPage", "name": name, "description": desc, "url": SITE + path,
             "inLanguage": "es-ES", "dateModified": modified_iso,
-            "author": {"@type": "Person", "name": "Emilio Rodríguez", "url": SITE + "/sobre-mi.html"},
+            "author": {"@type": "Person", "name": "Emilio Rodríguez", "url": SITE + "/sobre-mi"},
             "isPartOf": {"@type": "WebSite", "name": "Emirodgar", "url": SITE + "/"}}
 
 
