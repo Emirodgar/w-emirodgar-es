@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-15
+date_modified: 2026-11-10
 folder: ia
 permalink: visibilidad-marca-ia
 ---
@@ -45,6 +46,14 @@ Lo relevante de este ecosistema de herramientas no es que exista, sino la veloci
 ## Un nuevo factor: la publicidad dentro de ChatGPT
 
 La medición de visibilidad en IA va a tener que distinguir entre presencia orgánica y presencia pagada. OpenAI ha llevado **ChatGPT Ads a Europa, incluida España**, con acceso de autoservicio mediante Ads Manager en 31 mercados. Los anuncios solo se muestran en los planes Free y Go, van etiquetados y separados de las respuestas, y la compañía asegura que no influyen en ellas. Para quien mida share of model, esto añade una capa: una cosa es que ChatGPT te recomiende y otra que pagues por aparecer, y los informes deberían separar ambas. Además, con ChatGPT designado como motor de búsqueda de muy gran tamaño bajo la DSA, esa publicidad deberá poder auditarse.
+
+## Hacia un "Search Console" de ChatGPT: la medición propia de OpenAI
+
+Hasta ahora, todo lo anterior dependía de herramientas de terceros que preguntan a los modelos desde fuera. Eso podría cambiar. Según [Search Engine Roundtable](https://www.seroundtable.com/chatgpt-tools-for-business-42476.html), OpenAI está desarrollando una herramienta parecida a Search Console para que las empresas "reclamen" su negocio en ChatGPT. La promesa tiene tres partes: ver cuántas veces se menciona tu marca en las conversaciones, mantener actualizados productos y datos del negocio, y controlar el contexto con el que un agente del negocio responde a los clientes.
+
+Lo que ha trascendido, a partir de capturas que compartió el analista Juozas Kaziukėnas en LinkedIn, es que mediría **impresiones y clics** (cuántas veces aparece el negocio en las respuestas y cuántos enlaces a su web se pulsan), con seguimiento diario y gráfico. Forma parte de un "Business Hub" más amplio y, por ahora, solo estaría disponible para negocios con la propiedad verificada, por ejemplo conectando una tienda de Shopify. Sigue en desarrollo y OpenAI no la ha anunciado oficialmente, así que conviene tomarlo como una señal, no como un producto cerrado.
+
+Lo interesante es lo que no mostraría: ni prompts, ni datos de usuarios, ni comparativas con la competencia. Es decir, te diría **cuánto** apareces, pero no **por qué** sube o baja. Por eso no sustituye al prompt tracking: lo complementa. Combinar un dato propio fiable de impresiones y clics con herramientas que sí registran los prompts permitiría, por primera vez, comprobar con datos de primera mano si una estrategia de GEO está funcionando. Y todo apunta a que sería independiente de la publicidad, pensada para las respuestas orgánicas.
 
 ## Cuidado con medir solo la cita: una cita no es una verificación
 

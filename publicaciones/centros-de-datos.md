@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1  
 feed: 1  
 date: 2025-09-29
+date_modified: 2026-11-10
 folder: ia
 permalink: centros-de-datos  
 ---
@@ -91,6 +92,18 @@ Esta es una de las claves de todo el asunto:
 - No obstante, el desafío de **coordinar la capacidad eléctrica** con la demanda creciente ya es real, como quedó patente en mi [análisis del gran apagón eléctrico en España](https://emirodgar.es/analisis-apagon-electrico), en un país que además ya tiene una relación peculiar con [el precio de su electricidad](https://emirodgar.es/analisis-precio-electricidad-espana).  
 
 En definitiva: si España quiere acoger ese crecimiento, no basta con construir centros de datos, hay que asegurar que el sistema eléctrico, la regulación y la sostenibilidad estén preparados.
+
+## Actualización de noviembre de 2026: el mercado y las urnas se meten en la ecuación
+
+Desde que escribí este análisis, el escenario se ha complicado por dos frentes. Los datos de este bloque proceden de un [análisis de Ignacio de Gregorio](https://medium.com/@ignacio.de.gregorio.noblejas/the-future-of-data-centers-in-the-us-253071a65574) publicado el 7 de noviembre, así que conviene leerlos como su lectura de los hechos, no como cifras oficiales.
+
+**El mercado.** Según ese análisis, un solo jueves se evaporaron unos 3 billones de dólares de capitalización en empresas del S&P 500, vinculado en parte a las elecciones de mitad de mandato. Desde el máximo de julio, el índice de semiconductores de Filadelfia habría caído cerca de un 36%, mientras que los índices amplios solo bajan un dígito. Lo llamativo es que ocurre con resultados récord en las empresas afectadas: se vende lo que factura más, algo que solo se explica por dudas sobre el retorno futuro de la IA. Es justo la pregunta de la que hablaba antes: no el volumen invertido, sino lo que rinde.
+
+**Las urnas.** El rechazo local a los centros de datos ha pasado a ser un factor electoral. En esas elecciones hubo 47 referendos locales sobre centros de datos y los votantes optaron por restringirlos en 46. En las encuestas a pie de urna de NBC, para un 23% eran un factor decisivo y para casi un 60%, un factor importante. Y el rechazo fue transversal: en Pensilvania, tanto el demócrata Josh Shapiro como la republicana Stacy Garrity defendieron frenar o condicionar su despliegue.
+
+**Texas, el caso límite.** Texas concentraría alrededor del 25% de los centros de datos previstos hasta 2030 y el 41% de los que deben llegar en 2028. Allí el gobernador saliente ordenó congelar los permisos desde el 21 de septiembre de 2026 a la espera de una auditoría, con un informe de ERCOT previsto para el 10 de diciembre. Que los centros de datos vayan a construirse no parece estar en duda; lo que se decide es dónde y con qué condiciones.
+
+**La enseñanza para España.** Si la fricción local ya frena proyectos en EE. UU., conviene no dar por hecho que el pipeline español, del que hablaba más arriba, llegará completo a buen puerto. La disponibilidad de energía y la aceptación de las comunidades donde se instalan pesarán tanto como el capital. Y los hubs que no consigan ninguna de las dos cosas verán cómo la inversión se va a otro país.
 
 ## Conclusión: tres lecciones clave
 

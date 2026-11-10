@@ -1,5 +1,5 @@
 {
- "aviso": "Test orientativo, no un consejo de voto. Las posiciones proceden de programas anteriores, votaciones y declaraciones públicas recientes de cada partido, con la fuente enlazada; los programas electorales de 2026 aún no se han publicado y pueden cambiarlas. Cuando no hay evidencia clara, la posición se marca como «sin posición» y esa afirmación no cuenta para ese partido. Solo incluye a los partidos de ámbito estatal con presencia en el Congreso.",
+ "aviso": "Test orientativo, no un consejo de voto. Las posiciones proceden de programas anteriores, votaciones y declaraciones públicas recientes de cada partido, con la fuente enlazada; el PP ya ha presentado su programa de 2026 y sus posiciones se van actualizando con él; para los demás partidos no consta aún un programa de 2026 y este puede cambiarlas. Cuando no hay evidencia clara, la posición se marca como «sin posición» y esa afirmación no cuenta para ese partido. Solo incluye a los partidos de ámbito estatal con presencia en el Congreso.",
  "afirmaciones": [
   {
    "id": "alquiler",
@@ -8,9 +8,9 @@
    "posiciones": {
     "PP": {
      "posicion": "contra",
-     "cita": "Paloma Martín (PP): \"eliminaremos las zonas tensionadas y el intervencionismo\"; propone quitar los topes de alquiler de la Ley de Vivienda.",
-     "fuente": "https://www.eldiario.es/politica/pp-propone-eliminar-topes-precios-alquiler-ley-vivienda_1_11699904.html",
-     "fecha": "2024-10"
+     "cita": "Programa 2026 (medida 145, p. 53): \"Derogaremos la Ley de Vivienda\" y eliminarán las zonas tensionadas y el índice de precios del alquiler.",
+     "fuente": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
+     "fecha": "2026-11"
     },
     "PSOE": {
      "posicion": "favor",
@@ -46,9 +46,9 @@
    "posiciones": {
     "PP": {
      "posicion": "matizada",
-     "cita": "Programa 2023: promover vivienda social y movilizar suelo público (resumen de El Debate); sin empresa pública estatal masiva.",
-     "fuente": "https://www.eldebate.com/espana/20230714/23j-elecciones-generales-comparador-programas-electorales_128018.html",
-     "fecha": "2023-07"
+     "cita": "Programa 2026 (medida 144, p. 53): \"Construiremos un millón de viviendas\" movilizando suelo público y privado con comunidades y ayuntamientos; no menciona una empresa pública estatal.",
+     "fuente": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
+     "fecha": "2026-11"
     },
     "PSOE": {
      "posicion": "favor",
@@ -235,9 +235,9 @@
    "posiciones": {
     "PP": {
      "posicion": "favor",
-     "cita": "Propuesta PP 2023: rebajar el IRPF a rentas de menos de 40.000 euros y simplificar IRPF y Sociedades para pymes.",
-     "fuente": "https://theobjective.com/espana/politica/2023-07-07/programas-pp-psoe-sumar-vox/",
-     "fecha": "2023-07"
+     "cita": "Programa 2026 (medidas 177 y 181, pp. 60-61): bajar el IRPF de rentas medias, bajas y familias, y libertad de amortización en Sociedades para quien invierta.",
+     "fuente": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
+     "fecha": "2026-11"
     },
     "PSOE": {
      "posicion": "matizada",
@@ -771,9 +771,9 @@
    "posiciones": {
     "PP": {
      "posicion": "favor",
-     "cita": "El PP coincide con Vox en que los jueces deben elegir a la mayoría de los vocales, aunque criticó la redacción de Vox.",
-     "fuente": "https://www.elobservador.com.uy/espana/el-congreso-rechaza-que-los-jueces-puedan-elegir-la-mayoria-de-los-vocales-del-poder-judicial-2024227194732",
-     "fecha": "2024-02"
+     "cita": "Programa 2026 (medida 72, p. 32): \"Los jueces y magistrados de todas las categorías elegirán a los doce vocales judiciales\" del CGPJ.",
+     "fuente": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf",
+     "fecha": "2026-11"
     },
     "PSOE": {
      "posicion": "sin_posicion",
