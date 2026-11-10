@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-09",
-  "generado_en": "2026-11-09T13:44:17+00:00",
-  "titular": "Crisis migratoria en El Hierro, debate electoral y polémica por la Ley de Nietos marcan la jornada",
+  "fecha": "2026-11-10",
+  "generado_en": "2026-11-10T13:22:24+00:00",
+  "titular": "La Audiencia Nacional avala investigar a Zapatero por presunto tráfico de influencias en Bolivia y un policía muere en Oviedo",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 100
+    "El Mundo": 24,
+    "The Objective": 141
   },
   "temas": [
     {
-      "tema": "Crisis migratoria en El Hierro",
-      "categoria": "Sociedad",
-      "descripcion": "El Hierro ha declarado la \"emergencia social\" tras la llegada de 4.500 migrantes en siete días, lo que ha provocado la convocatoria urgente de la Comisión Interministerial de Inmigración."
-    },
-    {
-      "tema": "Debate electoral y Ley de Nietos",
+      "tema": "Investigación a Zapatero por tráfico de influencias",
       "categoria": "Política",
-      "descripcion": "El Tribunal Supremo ha rechazado suspender el voto a los hijos de nacionalizados por la Ley de Nietos, mientras el PSOE propone a la Academia de Televisión para organizar el debate electoral."
+      "descripcion": "La Audiencia Nacional ha dado luz verde a la investigación del expresidente José Luis Rodríguez Zapatero por presunto tráfico de influencias en Bolivia, incluyendo un pago de 200.000 euros."
     },
     {
-      "tema": "Investigación a TikTok por abuso sexual infantil",
-      "categoria": "Sociedad",
-      "descripcion": "El Gobierno ha solicitado a la Fiscalía que investigue la posible paralización de TikTok en España por presunta vulneración de derechos de la infancia y abuso sexual infantil."
+      "tema": "Muerte de un policía y heridas a otro en Oviedo",
+      "categoria": "Sucesos",
+      "descripcion": "Un agente de la Policía Nacional ha fallecido y otro ha resultado gravemente herido, con amputación de una pierna, tras la explosión de una mochila en Oviedo. Un perro policía también murió en el incidente."
     },
     {
-      "tema": "Resultados electorales y propuestas del PP",
+      "tema": "Propuestas electorales del PP y acciones del Gobierno",
       "categoria": "Política",
-      "descripcion": "Según El Mundo, PP y Vox sumarían 199 diputados, mientras el PP promete recuperar la presencia del Estado en el País Vasco y Cataluña en seis meses."
+      "descripcion": "El PP ha presentado su programa electoral, proponiendo una \"renta de activación\" y cambios en educación. El Gobierno, por su parte, ha anunciado Consejos de Ministros extraordinarios antes de las elecciones."
+    },
+    {
+      "tema": "Accidente múltiple en Bulgaria",
+      "categoria": "Internacional",
+      "descripcion": "Un accidente múltiple en una autopista de Bulgaria, provocado por la densa niebla, ha dejado al menos 11 muertos y 48 heridos."
     }
   ]
 }

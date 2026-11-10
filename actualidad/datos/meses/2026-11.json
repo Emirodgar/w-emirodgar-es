@@ -309,7 +309,7 @@
         "titulo": "Pánico en el corazón de Europa tras matar un hombre en Cracovia a nueve personas, entre ellos sus padres y su hermana: se investiga como \"terrorismo\"",
         "url": "https://www.elmundo.es/internacional/2026/11/08/6aef98c7fdddffb6288b45b0.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-08",
@@ -378,6 +378,48 @@
         "medio": "El Mundo",
         "titulo": "El Gobierno pide a la Fiscalía estudiar la paralización de TikTok por \"vulneración de derechos de la infancia\" tras detectarse abuso sexual infantil",
         "url": "https://www.elmundo.es/espana/2026/11/09/6af1a1d1e9cf4a0d5f8b4583.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-10",
+      "edicion": "2026-11-10",
+      "titulo": "Audiencia Nacional avala investigar a Zapatero por tráfico de influencias",
+      "categoria": "Política",
+      "descripcion": "La Audiencia Nacional ha respaldado la investigación al expresidente José Luis Rodríguez Zapatero por presunto tráfico de influencias en Bolivia, incluyendo un pago de 200.000 euros.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Audiencia avala investigar a Zapatero por presunto tráfico de influencias en Bolivia",
+        "url": "https://www.elmundo.es/espana/2026/11/10/6af3166a21efa0f1788b4590.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-10",
+      "edicion": "2026-11-10",
+      "titulo": "Fallece un policía y otro resulta herido grave en explosión en Oviedo",
+      "categoria": "Sucesos",
+      "descripcion": "Un agente de la Policía Nacional ha muerto y otro ha sufrido la amputación de una pierna tras la explosión de una mochila en Oviedo, en un incidente que también causó la muerte de un perro policía.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Muere un policía y otro resulta herido con la amputación de una pierna por la explosión de una mochila en Oviedo tras un tiroteo cuyo autor permanece huido y armado",
+        "url": "https://www.elmundo.es/espana/2026/11/10/6af2d90ae85ecebb328b459d.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-10",
+      "edicion": "2026-11-10",
+      "titulo": "Ana Botín anuncia que será la última de su familia en la presidencia del Santander",
+      "categoria": "Economía",
+      "descripcion": "La presidenta del Banco Santander, Ana Botín, ha declarado que no habrá otro miembro de la familia Botín al frente de la entidad.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Ana Botín asegura que ella será la última de la familia Botín en la presidencia del Santander",
+        "url": "https://www.elmundo.es/economia/empresas/2026/11/10/6af2ffabe9cf4a9c488b459f.html"
       },
       "destacado": false
     }
