@@ -1,13 +1,13 @@
 {
-  "lastUpdated": "31 de Octubre, 2026",
-  "resumenEjecutivo": "El tipo de interés medio de las hipotecas constituidas sobre viviendas sube al 3,08% en agosto de 2026 (último dato publicado por el INE), el valor más alto de lo que va de año, con las hipotecas a tipo fijo (3,16%) más caras de media que las variables (2,95%). El 64,1% de las hipotecas se firmó a tipo fijo, frente a un 35,9% a variable, de modo que el fijo recupera peso tras el mínimo de mayo (60,9%). El importe medio concedido es de 181.285 €, un 7,7% más que hace un año, mientras que en agosto se constituyeron 33.841 hipotecas sobre viviendas, un 2,3% más que en el mismo mes de 2025 pese a la caída estacional del 22,0% respecto a julio. Entre los bancos comparados, Sabadell (2,75%) y BBVA (2,95%) ofrecen el TIN fijo bonificado más bajo, y en variable el diferencial más bajo es Euríbor + 0,50% (CaixaBank, Sabadell, Bankinter). El Euríbor 12 meses, que marca el tipo real de toda hipoteca variable, cerró septiembre con una media del 3,25%; y según el termómetro de riesgo de recesión de MacroData España, la inflación —no el crecimiento ni el empleo— es hoy el principal factor que empuja hacia una subida o un mantenimiento de los tipos, más que hacia una bajada.",
+  "lastUpdated": "10 de Noviembre, 2026",
+  "resumenEjecutivo": "El tipo de interés medio de las hipotecas constituidas sobre viviendas sube al 3,08% en agosto de 2026 (último dato publicado por el INE), el valor más alto de lo que va de año, con las hipotecas a tipo fijo (3,16%) más caras de media que las variables (2,95%). El 64,1% de las hipotecas se firmó a tipo fijo, frente a un 35,9% a variable, de modo que el fijo recupera peso tras el mínimo de mayo (60,9%). El importe medio concedido es de 181.285 €, un 7,7% más que hace un año, mientras que en agosto se constituyeron 33.841 hipotecas sobre viviendas, un 2,3% más que en el mismo mes de 2025 pese a la caída estacional del 22,0% respecto a julio. Entre los bancos comparados, Sabadell (2,75%) y CaixaBank (2,80%) ofrecen el TIN fijo bonificado más bajo, y en variable el diferencial más bajo es Euríbor + 0,50% (CaixaBank), seguido de Sabadell (+0,55%) y BBVA (+0,60%). El Euríbor 12 meses, que marca el tipo real de toda hipoteca variable, cerró septiembre con una media del 3,25%; y según el termómetro de riesgo de recesión de MacroData España, la inflación —no el crecimiento ni el empleo— es hoy el principal factor que empuja hacia una subida o un mantenimiento de los tipos, más que hacia una bajada.",
   "sparklineSvg": "<svg viewBox=\"0 0 320 110\" xmlns=\"http://www.w3.org/2000/svg\" preserveAspectRatio=\"none\" role=\"img\" aria-label=\"Evolucion del tipo medio hipotecario, marzo-agosto 2026\" style=\"width:100%;height:100%\"><polygon points=\"12,89.6 71.2,72.3 130.4,49.2 189.6,55.0 248.8,40.6 308,20.4 308,100 12,100\" fill=\"rgba(5,150,105,0.08)\"/><polyline points=\"12,89.6 71.2,72.3 130.4,49.2 189.6,55.0 248.8,40.6 308,20.4\" fill=\"none\" stroke=\"#059669\" stroke-width=\"2.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><circle cx=\"12\" cy=\"89.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"71.2\" cy=\"72.3\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"130.4\" cy=\"49.2\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"189.6\" cy=\"55.0\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"248.8\" cy=\"40.6\" r=\"2.5\" fill=\"#059669\"/><circle cx=\"308\" cy=\"20.4\" r=\"3\" fill=\"#059669\"/></svg>",
   "sources": {
     "tipoMedio": "INE, Estadística de Hipotecas (H) — tipo de interés medio de las hipotecas constituidas sobre viviendas. Nota de prensa mensual (ine.es/dyngs/Prensa/H[MMAA].htm), con ~2 meses de desfase respecto al mes en curso",
     "importeMedio": "INE, Estadística de Hipotecas (H) — importe medio de las hipotecas constituidas sobre viviendas",
     "numHipotecas": "INE, Estadística de Hipotecas (H) — número de hipotecas constituidas sobre viviendas y su variación interanual",
     "pctFijo": "INE, Estadística de Hipotecas (H) — reparto de las hipotecas constituidas entre tipo fijo y variable; el INE no publica un tercer bucket de \"tipo mixto\" en su nota de prensa mensual, por lo que este panel solo distingue fijo/variable",
-    "bancos": "Comparadores (HelpMyCash y OCU, octubre de 2026); el TIN fijo de Sabadell (2,75%) se reconfirmó el 31 de octubre de 2026. CaixaBank, BBVA y Bankinter, contrastados con los datos de las webs oficiales de las entidades de la revisión anterior (17 de septiembre de 2026); las webs de BBVA y Sabadell bloquean la consulta automática. Santander conserva los datos del 17 de septiembre de 2026 (no se ha podido reconfirmar su oferta fija). Perfil estándar con bonificaciones. Las TAE incluyen el coste de los productos vinculados exigidos para la bonificación, por eso pueden ser sensiblemente más altas que el TIN",
+    "bancos": "Comparadores (HelpMyCash y OCU, octubre de 2026); el TIN fijo de Sabadell (2,75%) se reconfirmó el 31 de octubre de 2026. CaixaBank, BBVA y Bankinter, contrastados con los datos de las webs oficiales de las entidades de la revisión anterior (17 de septiembre de 2026); las webs de BBVA y Sabadell bloquean la consulta automática. Santander conserva los datos del 17 de septiembre de 2026 (no se ha podido reconfirmar su oferta fija). Perfil estándar con bonificaciones. Las TAE incluyen el coste de los productos vinculados exigidos para la bonificación, por eso pueden ser sensiblemente más altas que el TIN. Actualización parcial del 10 de noviembre de 2026: TIN de CaixaBank (fijo), Sabadell (variable) y Bankinter (fijo y variable) tomados de la comparativa de Finect del 7 de noviembre de 2026 (préstamo de 175.000 € a 30 años, nómina de 3.000 €); sus TAE no se han podido reconfirmar y conservan el valor de la revisión anterior",
     "euribor": "Euríbor 12 meses y termómetro de riesgo de recesión, leídos en vivo del panel MacroData España (emirodgar.es/macrodata-espana/), no se guardan en este data.json"
   },
   "indicators": [
@@ -125,13 +125,13 @@
   "bancos": [
     {
       "nombre": "CaixaBank",
-      "tinFijo": 2.85,
+      "tinFijo": 2.8,
       "taeFijo": 4.26,
       "tinVariable": 0.5,
       "taeVariableAprox": 3.47,
-      "condiciones": "Hipoteca CasaFácil a 30 años. Bonificación hasta 1 punto: domiciliar nómina (mín. 6 meses) + 3 recibos + tarjeta CaixaBank, seguro de hogar, seguro de vida o salud, alarma Securitas Direct. El tipo variable (2,70% el primer año, después Euríbor + 0,50%) procede de comparadores, no confirmado directamente en caixabank.es",
+      "condiciones": "Hipoteca CasaFácil a 30 años. Bonificación hasta 1 punto: domiciliar nómina (mín. 6 meses) + 3 recibos + tarjeta CaixaBank, seguro de hogar, seguro de vida o salud, alarma Securitas Direct. El tipo variable (2,70% el primer año, después Euríbor + 0,50%) procede de comparadores, no confirmado directamente en caixabank.es. TIN fijo actualizado el 10/11/2026 (Finect); TAE pendiente de reconfirmar",
       "fuente": "caixabank.es/particular/hipotecas/casafacil.html",
-      "fechaConsulta": "2026-10-08"
+      "fechaConsulta": "2026-11-10"
     },
     {
       "nombre": "Santander",
@@ -157,21 +157,21 @@
       "nombre": "Sabadell",
       "tinFijo": 2.75,
       "taeFijo": 3.67,
-      "tinVariable": 0.5,
+      "tinVariable": 0.55,
       "taeVariableAprox": 4.12,
-      "condiciones": "Con domiciliación de nómina/pensión + seguros de vida, hogar y protección total de pagos con Sabadell. Variable: Euríbor + 0,50% (1,50% TIN el primer año según la última oferta confirmada). Condiciones de la oferta de septiembre; no se ha podido verificar en bancsabadell.com la nueva fecha de validez",
+      "condiciones": "Con domiciliación de nómina/pensión + seguros de vida, hogar y protección total de pagos con Sabadell. Variable: Euríbor + 0,50% (1,50% TIN el primer año según la última oferta confirmada). Condiciones de la oferta de septiembre; no se ha podido verificar en bancsabadell.com la nueva fecha de validez. Variable actualizado el 10/11/2026 a Euríbor + 0,55% (Finect, 1,55% el primer año); TAE pendiente de reconfirmar",
       "fuente": "bancsabadell.com",
-      "fechaConsulta": "2026-10-31"
+      "fechaConsulta": "2026-11-10"
     },
     {
       "nombre": "Bankinter",
-      "tinFijo": 3.2,
+      "tinFijo": 2.85,
       "taeFijo": 3.79,
-      "tinVariable": 0.5,
+      "tinVariable": 0.7,
       "taeVariableAprox": 4.04,
-      "condiciones": "Variable desde Euríbor + 0,50% (4,04% TAE bonificado) con bonificaciones por productos asociados. El TIN fijo (3,20%) y el tipo inicial proceden de la revisión anterior y no se han podido reconfirmar; la oferta anterior caducaba el 15/10/2026",
+      "condiciones": "Fijo 2,85% TIN inicial y variable Euríbor + 0,70% (2,25% el primer año), según Finect (7/11/2026), con bonificaciones por productos asociados. TAE pendiente de reconfirmar (conserva la de la revisión anterior)",
       "fuente": "bankinter.com",
-      "fechaConsulta": "2026-10-08"
+      "fechaConsulta": "2026-11-10"
     }
   ],
   "calculadoraDefaults": {
