@@ -12,7 +12,7 @@ hub: true
 
 Ayudo a administraciones públicas y empresas a sacar partido a los **datos** y la **inteligencia artificial** sin perder el control: con criterios claros de gobernanza, ética y cumplimiento, y con resultados que se puedan medir. Soy ingeniero informático y trabajo en estrategia digital desde 2009; la docencia y la divulgación forman parte de mi trabajo.
 
-<p class="hub-cta"><a href="mailto:hola@emirodgar.com?subject=Consulta%20desde%20emirodgar.es">Cuéntame tu caso →</a></p>
+<p class="hub-cta"><a href="mailto:emirodgar@gmail.com?subject=Consulta%20desde%20emirodgar.es">Cuéntame tu caso →</a></p>
 
 ## En qué puedo ayudarte
 
@@ -48,4 +48,4 @@ No tienes que fiarte de una presentación: gran parte del trabajo está publicad
 
 ## ¿Hablamos?
 
-Escríbeme a [hola@emirodgar.com](mailto:hola@emirodgar.com) con tu caso, o encuéntrame en [LinkedIn](https://www.linkedin.com/in/emirodgar/).
+Escríbeme a [emirodgar@gmail.com](mailto:emirodgar@gmail.com) con tu caso, o encuéntrame en [LinkedIn](https://www.linkedin.com/in/emirodgar/).

@@ -68,4 +68,4 @@ La IA no espera, y una administración que llega tarde acumula obsolescencia leg
 
 ## ¿Hablamos?
 
-Si tu organización está valorando cómo incorporar la IA de forma responsable, escríbeme a [hola@emirodgar.com](mailto:hola@emirodgar.com) o por [LinkedIn](https://www.linkedin.com/in/emirodgar/).
+Si tu organización está valorando cómo incorporar la IA de forma responsable, escríbeme a [emirodgar@gmail.com](mailto:emirodgar@gmail.com) o por [LinkedIn](https://www.linkedin.com/in/emirodgar/).
