@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-10",
-  "generado_en": "2026-11-10T13:22:24+00:00",
-  "titular": "La Audiencia Nacional avala investigar a Zapatero por presunto tráfico de influencias en Bolivia y un policía muere en Oviedo",
+  "fecha": "2026-11-11",
+  "generado_en": "2026-11-11T12:33:25+00:00",
+  "titular": "España afronta una huelga general por vivienda y salarios, marcada por incidentes y debate político",
   "por_medio": {
-    "El Mundo": 24,
-    "The Objective": 141
+    "El Mundo": 27,
+    "The Objective": 192
   },
   "temas": [
     {
-      "tema": "Investigación a Zapatero por tráfico de influencias",
+      "tema": "Huelga general en España",
       "categoria": "Política",
-      "descripcion": "La Audiencia Nacional ha dado luz verde a la investigación del expresidente José Luis Rodríguez Zapatero por presunto tráfico de influencias en Bolivia, incluyendo un pago de 200.000 euros."
+      "descripcion": "España celebra una huelga general por la crisis de la vivienda y el poder adquisitivo, con incidentes y críticas políticas sobre su carácter electoral."
     },
     {
-      "tema": "Muerte de un policía y heridas a otro en Oviedo",
+      "tema": "Búsqueda de 'el Ruso' en Oviedo",
       "categoria": "Sucesos",
-      "descripcion": "Un agente de la Policía Nacional ha fallecido y otro ha resultado gravemente herido, con amputación de una pierna, tras la explosión de una mochila en Oviedo. Un perro policía también murió en el incidente."
+      "descripcion": "Oviedo vive en tensión por la fuga de 'el Ruso', sospechoso de una explosión que mató a un policía y dejó herida a una menor, con un amplio dispositivo de búsqueda."
     },
     {
-      "tema": "Propuestas electorales del PP y acciones del Gobierno",
+      "tema": "Concesión de tercer grado a etarra",
       "categoria": "Política",
-      "descripcion": "El PP ha presentado su programa electoral, proponiendo una \"renta de activación\" y cambios en educación. El Gobierno, por su parte, ha anunciado Consejos de Ministros extraordinarios antes de las elecciones."
+      "descripcion": "El Gobierno vasco ha concedido el tercer grado al etarra Asier Eceiza, condenado por el asesinato de Priede, generando debate."
     },
     {
-      "tema": "Accidente múltiple en Bulgaria",
+      "tema": "Amenazas de bomba en colegios de Italia",
       "categoria": "Internacional",
-      "descripcion": "Un accidente múltiple en una autopista de Bulgaria, provocado por la densa niebla, ha dejado al menos 11 muertos y 48 heridos."
+      "descripcion": "Al menos 300 colegios en Italia han sido evacuados tras recibir amenazas de bomba por correo electrónico en varias ciudades."
     }
   ]
 }

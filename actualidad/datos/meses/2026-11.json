@@ -407,7 +407,7 @@
         "titulo": "Muere un policía y otro resulta herido con la amputación de una pierna por la explosión de una mochila en Oviedo tras un tiroteo cuyo autor permanece huido y armado",
         "url": "https://www.elmundo.es/espana/2026/11/10/6af2d90ae85ecebb328b459d.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-10",
@@ -420,6 +420,48 @@
         "medio": "El Mundo",
         "titulo": "Ana Botín asegura que ella será la última de la familia Botín en la presidencia del Santander",
         "url": "https://www.elmundo.es/economia/empresas/2026/11/10/6af2ffabe9cf4a9c488b459f.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-11",
+      "edicion": "2026-11-11",
+      "titulo": "Primera huelga general en 14 años en España",
+      "categoria": "Política",
+      "descripcion": "España afronta su primera huelga general en 14 años, convocada por la crisis de la vivienda y el poder adquisitivo, a pocas semanas de las elecciones generales.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Primera huelga general en 14 años por la vivienda y los salarios en plena precampaña: \"Van a petar las calles de España\"",
+        "url": "https://www.elmundo.es/economia/2026/11/11/6af4223ee4d4d8787d8b4593.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-11",
+      "edicion": "2026-11-11",
+      "titulo": "Concesión de tercer grado a etarra condenado por asesinato",
+      "categoria": "Política",
+      "descripcion": "El Gobierno vasco concede el tercer grado a Asier Eceiza, etarra condenado en 2023 a 19 años de cárcel por el asesinato de Priede.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La consejera socialista de Justicia concede el tercer grado a un etarra condenado en 2023 a 19 años de cárcel por asesinar a Priede",
+        "url": "https://www.elmundo.es/pais-vasco/2026/11/11/6af45751fdddff3f178b4577.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-11",
+      "edicion": "2026-11-11",
+      "titulo": "Evacuación de 300 colegios en Italia por amenazas de bomba",
+      "categoria": "Internacional",
+      "descripcion": "Al menos 300 centros educativos en Italia son evacuados tras recibir amenazas de bomba por correo electrónico en varias ciudades.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Evacúan al menos 300 colegios en Italia tras recibir amenazas de bomba por correo electrónico",
+        "url": "https://www.elmundo.es/internacional/2026/11/11/6af4510de85ece8f298b4572.html"
       },
       "destacado": false
     }
