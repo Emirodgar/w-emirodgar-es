@@ -103,6 +103,20 @@ Hay una posible razón más sutil. Daniel Hook, director científico de Holtzbri
 
 Automatizar revisiones bibliográficas, análisis o escritura permite avanzar más rápido, pero también evita desacuerdos que obligaban a revisar las propias ideas. Y los incentivos empujan en esa dirección: recortes que afectan a viajes y talleres, evaluaciones que premian la velocidad del output y una máquina que nunca discute ni reclama aparecer como coautora. Su propuesta no es prohibir la IA, sino financiar la colaboración como infraestructura y evaluar la contribución en vez de la velocidad. Quizá estemos midiendo mal una parte de la productividad: **eliminar fricción no siempre es eliminar desperdicio**. Es un ensayo de opinión, sin datos cuantitativos, no un resultado medido.
 
+## Lo que dicen los estudios a nivel de tarea
+
+**La IA aumenta la productividad en tareas concretas, pero de forma desigual y no siempre.** Esa es la conclusión que sale de los experimentos más citados, y encaja con que el efecto no se vea todavía en las estadísticas agregadas:
+
+| Estudio | Muestra | Resultado |
+|---|---|---|
+| Brynjolfsson, Li y Raymond (NBER, publicado en *Quarterly Journal of Economics*, 2025) | Más de 5.000 agentes de atención al cliente | +14 % de incidencias resueltas por hora en la versión preliminar; hasta +34 % en los novatos y efecto mínimo en los más expertos |
+| Noy y Zhang (*Science*, 2023) | 453 profesionales con tareas de escritura | Cerca de un 40 % menos de tiempo y mejor calidad, con menos diferencia entre los participantes |
+| Dell'Acqua et al. (BCG y Harvard) | 758 consultores | Más rápidos y con mejor resultado en tareas dentro de la capacidad de la IA, y menos aciertos en una tarea compleja fuera de ella |
+| METR (2025) | 16 programadores expertos, 246 tareas | Tardaron un 19 % más con IA, pese a creer que habían ido un 20 % más rápido |
+| BetterUp y Stanford (2025) | 1.150 trabajadores de oficina | El 40 % recibió en el último mes "workslop", unas dos horas perdidas por caso |
+
+Dos ideas se repiten. La primera, que **la IA ayuda más a quien menos experiencia tiene**, lo que conecta con lo que contaba sobre [el impacto de la IA en el trabajo de los jóvenes](https://emirodgar.es/impacto-ia-trabajos). La segunda, la "frontera irregular" que describen Dell'Acqua y sus colegas: la IA es muy buena en unas tareas y mala en otras que parecen igual de difíciles, y a veces no se nota hasta que se revisa. Si no se revisa, el ahorro de uno acaba siendo el trabajo de otro.
+
 ## ¿Qué tendría que pasar para que la IA cambie realmente la productividad?
 
 Si miramos lo ocurrido con otras tecnologías, el patrón se repite bastante.
@@ -151,3 +165,47 @@ Sino porque **las organizaciones cambian mucho más despacio que las herramienta
 La lección de la historia es bastante clara: **las grandes revoluciones tecnológicas no se producen cuando aparece la tecnología, sino cuando aprendemos a reorganizar el mundo alrededor de ella**.
 
 Y en el caso de la IA, todo apunta a que **ese proceso acaba de empezar**.
+
+## Cómo usar la IA sin perder tiempo: seis hábitos
+
+1. **Define el resultado antes de abrir la herramienta.** Qué quieres obtener y para qué.
+2. **Mide con y sin IA, incluyendo la revisión.** La sensación de ir más rápido no es fiable.
+3. **Empieza por tareas repetitivas y de bajo riesgo**: borradores, resúmenes de lo que ya conoces, ordenar notas.
+4. **Revisa siempre cifras, nombres y fuentes** y mantén tú el razonamiento central.
+5. **No pases a otros un borrador sin revisar.** Si no lo firmarías, no lo envíes.
+6. **Acordad reglas en el equipo** sobre cuándo usarla y cómo se revisa lo que genera.
+
+## Preguntas frecuentes
+
+### ¿La inteligencia artificial aumenta la productividad?
+En tareas concretas, sí, sobre todo en atención al cliente y en escritura, y más en personas con menos experiencia. En el conjunto de la economía todavía no se aprecia con claridad, y algunos experimentos, como el de METR con programadores expertos, han medido incluso más tiempo con IA.
+
+### ¿Por qué la productividad no se nota en las estadísticas?
+Porque el uso intensivo sigue siendo minoritario y porque la mejora llega cuando se rediseñan procesos y organización, no cuando se compran licencias. Con los ordenadores ocurrió lo mismo (la paradoja de Solow).
+
+### ¿Qué es el "workslop"?
+Contenido generado con IA que parece trabajo terminado pero no aporta valor, y que obliga a quien lo recibe a rehacerlo. Según una encuesta de BetterUp y Stanford, el 40 % de los trabajadores de oficina encuestados lo recibió en el último mes.
+
+### ¿Para qué tareas conviene usar IA?
+Para borradores, resúmenes de documentos que ya conoces, organizar ideas y tareas repetitivas. Requieren más cuidado las decisiones que dependen de contexto propio, las cifras exactas y los errores costosos.
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type": "Question", "name": "¿La inteligencia artificial aumenta la productividad?", "acceptedAnswer": {"@type": "Answer", "text": "En tareas concretas, sí, sobre todo en atención al cliente y en escritura, y más en personas con menos experiencia. En el conjunto de la economía todavía no se aprecia con claridad, y algunos experimentos, como el de METR con programadores expertos, han medido incluso más tiempo con IA."}},
+    {"@type": "Question", "name": "¿Por qué la productividad no se nota en las estadísticas?", "acceptedAnswer": {"@type": "Answer", "text": "Porque el uso intensivo sigue siendo minoritario y porque la mejora llega cuando se rediseñan procesos y organización, no cuando se compran licencias. Con los ordenadores ocurrió lo mismo (la paradoja de Solow)."}},
+    {"@type": "Question", "name": "¿Qué es el workslop?", "acceptedAnswer": {"@type": "Answer", "text": "Contenido generado con IA que parece trabajo terminado pero no aporta valor, y que obliga a quien lo recibe a rehacerlo. Según una encuesta de BetterUp y Stanford, el 40 % de los trabajadores de oficina encuestados lo recibió en el último mes."}},
+    {"@type": "Question", "name": "¿Para qué tareas conviene usar IA?", "acceptedAnswer": {"@type": "Answer", "text": "Para borradores, resúmenes de documentos que ya conoces, organizar ideas y tareas repetitivas. Requieren más cuidado las decisiones que dependen de contexto propio, las cifras exactas y los errores costosos."}}
+  ]
+}
+</script>
+
+## Fuentes
+
+- Brynjolfsson, Li y Raymond, [Generative AI at Work](https://www.nber.org/papers/w31161), NBER Working Paper 31161; *The Quarterly Journal of Economics*, vol. 140, n.º 2 (2025).
+- Noy y Zhang, [Experimental evidence on the productivity effects of generative artificial intelligence](https://doi.org/10.1126/science.adh2586), *Science*, vol. 381 (2023).
+- Dell'Acqua et al., *Navigating the Jagged Technological Frontier*, Harvard Business School Working Paper 24-013.
+- METR, [Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) (julio de 2025).
+- BetterUp Labs y Stanford Social Media Lab, [Workslop](https://www.betterup.com/workslop) (septiembre de 2025).

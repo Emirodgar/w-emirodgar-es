@@ -63,6 +63,15 @@ Hay varias razones claras, en línea con lo que ya vivió el sector con la [burb
 
 La tecnología funciona bien en demos y casos muy concretos, pero **llevarla al día a día de una gran organización es otra historia**.
 
+## ¿Y en el puesto de trabajo concreto? Lo que miden los experimentos
+
+Los datos macro llegan tarde y mezclan muchas cosas, así que conviene mirar también experimentos controlados. Y aquí aparece un detalle incómodo: **la sensación de ir más rápido no es un buen indicador**.
+
+- **Desarrolladores con IA, más lentos.** En un ensayo de METR (julio de 2025), 16 programadores experimentados resolvieron 246 tareas en sus propios proyectos de código abierto, con y sin IA asignada al azar. Con IA tardaron un **19 % más**. Antes de empezar esperaban ir un 24 % más rápido y, al terminar, seguían creyendo que habían ganado un 20 %. Los autores avisan de que es una muestra pequeña, de herramientas de principios de 2025 y de un contexto muy concreto (programadores expertos en código que conocían bien), así que no es extrapolable a cualquier trabajador.
+- **Workslop: el trabajo que otros tienen que rehacer.** Una encuesta de BetterUp Labs y el Stanford Social Media Lab a 1.150 trabajadores de oficina de EE. UU. (septiembre de 2025) encontró que el **40 %** había recibido en el último mes contenido generado con IA que parecía correcto pero no aportaba nada, y que cada caso se llevaba en torno a **dos horas** de quien lo recibía. Es el ahorro del que lo genera, pagado por otro.
+
+Ninguno de los dos resultados dice que la IA no sirva. Dicen que **el ahorro individual no es automático ni se traslada solo a la organización**, justo lo que explicaría que no se note en las estadísticas. En [la paradoja de la inteligencia artificial y la productividad](https://emirodgar.es/la-paradoja-de-la-inteligencia-artificial-y-la-productividad) recojo también los estudios que sí encuentran mejoras, y cuándo aparecen.
+
 ## ¿IA o deslocalización encubierta?
 
 Otro punto incómodo del debate es que algunos despidos atribuidos a la IA esconden otra realidad más antigua: **la externalización**. Se despide en un país caro y se contrata en otro donde la mano de obra es más barata.
@@ -82,3 +91,8 @@ Lo más probable es un escenario gradual:
 Tal como lo veo yo, necesitamos menos hype y más realidad. La IA está aquí y se va a quedar, pero conviene bajar el volumen del entusiasmo. **La historia nos dice que la tecnología tarda en traducirse en productividad real**, y que el impacto suele ser más complejo de lo que parece en los titulares.
 
 Quizá dentro de unos años hablemos de un antes y un después. De momento, lo que tenemos es una herramienta potente, muchas expectativas… y unos datos que, por ahora, siguen sin acompañar.
+
+## Fuentes
+
+- METR, [Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity](https://metr.org/blog/2025-07-10-early-2025-ai-experienced-os-dev-study/) (julio de 2025).
+- BetterUp Labs y Stanford Social Media Lab, [Workslop](https://www.betterup.com/workslop) (septiembre de 2025); resumen en [Harvard Business Review](https://hbr.org/2025/09/ai-generated-workslop-is-destroying-productivity).
