@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-08-08
+date_modified: 2026-11-13
 folder: espana
 permalink: ia-ayuntamientos
 ---
@@ -242,6 +243,22 @@ Aunque la implementación de IA en ayuntamientos españoles está en fase de des
 - Sistemas de gestión inteligente del tráfico en grandes ciudades
 - Plataformas de participación ciudadana potenciadas por IA
 - Proyectos piloto de análisis predictivo para servicios municipales
+
+### 8.3. Un caso concreto: la plusvalía en Salamanca
+
+En noviembre de 2026 el Ayuntamiento de Salamanca anunció que su organismo de recaudación, el OAGER, incorpora IA a los trámites del impuesto de plusvalía, según [recoge Tribuna de Salamanca](https://www.tribunasalamanca.com/noticias/466265/el-ayuntamiento-de-salamanca-apuesta-por-la-ia-para-facilitar-los-tramites-del-impuesto-de-plusvalia). Es un buen ejemplo de automatización de tareas rutinarias en una administración local española, porque ataca justo la parte más pesada del trámite.
+
+Hasta ahora, el contribuyente tenía que leer las escrituras, localizar los datos y pasarlos a mano a los formularios. Con la herramienta, la IA extrae esos datos de los documentos y propone el formulario ya relleno. A la persona solo le queda revisar lo que sugiere y completar lo que no se haya podido extraer.
+
+En esta primera fase se aplica a cinco procedimientos:
+
+- Autoliquidación del impuesto, a partir de las escrituras de adquisición y de transmisión del inmueble.
+- Solicitud de liquidación por la Administración, sin que el ciudadano tenga que autoliquidar.
+- Prórroga por fallecimiento, en herencias, leyendo documentos como el certificado de defunción, el DNI y la información catastral.
+- Solicitud de no sujeción, cuando no ha habido incremento del valor del terreno.
+- Comunicación de la transmisión a efectos registrales, con justificante con código seguro de verificación (CSV) para acreditarla ante el Registro de la Propiedad.
+
+El plan no se queda ahí. El OAGER prevé seguir con los trámites del Impuesto sobre Vehículos y extender la IA de forma progresiva al resto de procedimientos de su sede electrónica. Todavía es pronto para medir el ahorro real de tiempo, que por ahora es un resultado previsto y no un dato publicado, pero el caso encaja con la tendencia que describe este informe: usar la IA para quitar trabajo de papeleo al ciudadano, con una persona que revisa antes de enviar.
 
 
 ## Referencias
