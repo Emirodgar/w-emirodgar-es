@@ -1,0 +1,58 @@
+name: Atalaya · recogida frecuente de titulares
+
+# Solo RECOGE y ARCHIVA titulares (sin Gemini, sin gastar cuota). Los feeds RSS solo muestran las últimas horas o días y Google Noticias
+# limita los resultados, así que recoger una vez al día deja pasar titulares. La curación (tono, tema…) sigue siendo la del
+# workflow diario, a su ritmo, y toma también los titulares archivados que aún no se han clasificado.
+# NO marca «noticias» en el manifiesto: el workflow diario usa esa fecha para saber si ya hizo su trabajo.
+
+on:
+  schedule:
+    # Cada 4 horas, al minuto :47 (lejos de la ventana del workflow diario, 09:23-12:23 UTC, y de la hora punta de GitHub Actions).
+    - cron: '47 */4 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atalaya          # el mismo grupo que atalaya.yml: nunca dos a la vez escribiendo en atalaya/data
+  cancel-in-progress: false
+
+jobs:
+  recoger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Prensa por RSS
+        env:
+          SIN_MARCA: '1'
+        run: python3 scripts/atalaya/build_news.py
+
+      - name: Archivo histórico (solo añade; nunca borra)
+        run: python3 scripts/atalaya/archivo.py
+
+      - name: Comprobar que los datos son razonables
+        # Si falla, NO se hace commit: mejor datos anteriores que datos rotos.
+        run: python3 scripts/atalaya/check_data.py
+
+      - name: Commit y push de lo que haya cambiado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add atalaya/data
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git commit -m "Recogida de titulares de Atalaya ($(date -u '+%F %H:%M'))"
+          for i in 1 2 3; do
+            git pull --rebase && git push && exit 0
+            sleep 5
+          done
+          exit 1

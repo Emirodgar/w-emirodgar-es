@@ -4,7 +4,7 @@ Prototipo. Solo librería estándar. Salida: atalaya/data/noticias.json
 Requiere haber ejecutado build_geo.py (usa atalaya/data/indice.json).
 Uso (raíz del repo): python3 scripts/atalaya/build_news.py
 """
-import hashlib, json, re, unicodedata, urllib.request, xml.etree.ElementTree as ET
+import hashlib, json, os, re, unicodedata, urllib.request, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
@@ -84,7 +84,7 @@ def main():
     def local(pc):
         a = ALIAS.get(provs[pc], provs[pc])
         q = f'"{a}" (alcalde OR ayuntamiento OR elecciones OR PP OR PSOE OR Vox OR pleno) when:3d'
-        try: return [(pc, *x) for x in list(items(get(GN + quote(q))))[:22]]
+        try: return [(pc, *x) for x in list(items(get(GN + quote(q))))[:60]]
         except Exception as e: print("FALLO", a, repr(e)[:120]); return []   # incluye respuestas que no son XML (límite de Google)
     def nacional(f):
         paginas, filtrar = (f[2], f[3]) if len(f) > 2 else (1, False)
@@ -104,7 +104,7 @@ def main():
         except Exception as e: print("FALLO", m["medio"], e); return []
         try: lst = list(items_cualquiera(xml))
         except Exception as e: print("FEED ILEGIBLE", m["medio"], e); return []
-        return [(m["prov"], t, l, dt, None, m["medio"]) for t, l, dt in lst if POLITICA.search(t)][:40]
+        return [(m["prov"], t, l, dt, None, m["medio"]) for t, l, dt in lst if POLITICA.search(t)][:100]
     medios = json.load(open(LOCALES, encoding="utf8"))["medios"] if LOCALES.exists() else []
 
     with ThreadPoolExecutor(8) as ex:
@@ -134,5 +134,8 @@ def main():
         ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(len(out), "titulares;", sum(1 for x in out if x["a"] == "local"), "locales;", sum(1 for x in out if x["mun"]), "con municipio;", sum(1 for x in out if x["r"]), "de riesgo")
 main()
-from manifest import marcar
-marcar("noticias")
+# El recolector frecuente (atalaya-recogida.yml) define SIN_MARCA=1: no debe marcar «noticias» como actualizado hoy, porque el workflow
+# diario usa esa fecha para decidir si ya hizo su trabajo (Congreso, Senado, encuestas…).
+if not os.environ.get("SIN_MARCA"):
+    from manifest import marcar
+    marcar("noticias")

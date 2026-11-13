@@ -28,6 +28,8 @@ TEMAS = ["vivienda", "sanidad", "educación", "economía", "empleo", "corrupció
          "medio ambiente", "cultura", "modelo territorial", "elecciones y partidos", "gestión municipal", "sucesos", "otros"]
 PARTIDOS = ["PP", "PSOE", "Vox", "Sumar", "Podemos", "otro", "ninguno"]
 
+from archivo import ids_archivados, leer_lineas   # el archivo permanente también alimenta la cola de clasificación
+
 def ident(url): return hashlib.sha1(url.encode("utf8")).hexdigest()[:12]
 def log(*a): print(*a, flush=True)
 
@@ -86,9 +88,27 @@ def main():
     previo = json.loads(SALIDA.read_text(encoding="utf8")) if SALIDA.exists() else {"items": {}}
     items = previo.get("items", {})
     actuales = {ident(n["u"]): n for n in noticias if n.get("u")}
-    pendientes = [(i, n) for i, n in actuales.items() if i not in items][:MAX_NUEVOS]
-    log(f"{len(actuales)} titulares; {len(items)} ya clasificados; {len(pendientes)} nuevos a clasificar con {MODELO}")
+    # Cola: primero los titulares del feed actual y, con lo que sobre, el atrasado del archivo (titulares que ya salieron del feed y
+    # nunca se clasificaron). En ambos casos, antes los políticamente relevantes (partido citado o riesgo) y, dentro, los más recientes.
+    clasificados = set(items)
+    carp_s = RAIZ / "atalaya/data/archivo/sentimiento"
+    if carp_s.exists(): clasificados |= ids_archivados(carp_s)
+    def prioridad(n):
+        try: ts = datetime.fromisoformat(n["f"]).timestamp()
+        except Exception: ts = 0
+        return (0 if (n.get("p") or n.get("r")) else 1, -ts)
+    vivos = sorted(((i, n) for i, n in actuales.items() if i not in items), key=lambda x: prioridad(x[1]))
+    atrasados = []
+    carp_n = RAIZ / "atalaya/data/archivo/noticias"
+    if carp_n.exists():
+        for f in carp_n.glob("*.jsonl.gz"):
+            for n in leer_lineas(f):
+                if n.get("i") and n["i"] not in clasificados and n["i"] not in actuales and n.get("t"): atrasados.append((n["i"], n))
+        atrasados.sort(key=lambda x: prioridad(x[1]))
+    pendientes = (vivos + atrasados)[:MAX_NUEVOS]
+    log(f"{len(actuales)} titulares en el feed; {len(items)} ya clasificados; cola: {len(vivos)} del feed + {len(atrasados)} atrasados del archivo; hoy se envían {len(pendientes)} a {MODELO}")
     nuevos = fallos = seguidos = 0
+    nuevos_ids = set()
     for k in range(0, len(pendientes), LOTE):
         if k // LOTE >= MAX_LLAMADAS: log(f"Límite de {MAX_LLAMADAS} peticiones diarias alcanzado: el resto se clasifica mañana."); break
         lote = pendientes[k:k + LOTE]
@@ -102,9 +122,11 @@ def main():
         ids = {i for i, _ in lote}
         for x in res:
             if x.get("id") in ids and valido(x):
-                items[x["id"]] = {"tono": x["tono"], "tema": x["tema"], "partido": x["partido"], "riesgo": x["riesgo"]}; nuevos += 1
+                items[x["id"]] = {"tono": x["tono"], "tema": x["tema"], "partido": x["partido"], "riesgo": x["riesgo"]}; nuevos += 1; nuevos_ids.add(x["id"])
         time.sleep(PAUSA)
-    items = {i: v for i, v in items.items() if i in actuales}           # la caché solo conserva lo que sigue en el feed
+    # La caché viva solo conserva lo que sigue en el feed y lo clasificado hoy (que archivo.py copia al archivo permanente a continuación;
+    # lo clasificado en días anteriores ya está allí).
+    items = {i: v for i, v in items.items() if i in actuales or i in nuevos_ids}
     if nuevos == 0 and not previo.get("items") and fallos:
         sys.exit("No se pudo clasificar ningún titular.")
     SALIDA.write_text(json.dumps({"modelo": MODELO, "actualizado": datetime.now(timezone.utc).isoformat(), "aviso": "Clasificación automática solo a partir del titular: orientativa.",

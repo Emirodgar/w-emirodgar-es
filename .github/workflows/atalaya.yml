@@ -89,7 +89,7 @@ jobs:
         timeout-minutes: 12
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || vars.GEMINI_API_KEY }}
-          MAX_NUEVOS: ${{ steps.sem.outputs.semanal == 'true' && '1000' || '400' }}
+          MAX_NUEVOS: '1000'
         run: python3 scripts/atalaya/build_sentimiento.py
 
       - name: Promesas de los programas (Gemini, opcional; por tandas)
