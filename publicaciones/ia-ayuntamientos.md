@@ -18,6 +18,8 @@ La [Inteligencia Artificial](https://emirodgar.es/guia-conceptos-basicos-intelig
 
 Este informe analiza en profundidad las ventajas que supone la integración de la IA en los ayuntamientos, basándose en investigaciones de diversas fuentes especializadas y casos de éxito reales. El objetivo es proporcionar una visión completa de cómo la IA puede convertirse en una herramienta fundamental para la modernización de la administración local, mejorando la eficiencia, la transparencia y la calidad de los servicios públicos.
 
+<img width="720" class="img-responsive" alt="Mapa de las siete áreas de ventaja de integrar IA en los ayuntamientos: eficiencia, atención 24/7, decisiones con datos, seguridad, transparencia, sostenibilidad y digitalización" src="https://emirodgar.es/images/ia-ayuntamientos-siete-ventajas.svg" />
+
 ## 1. Mejora en la eficiencia administrativa y automatización de procesos
 
 ### 1.1. Automatización de tareas rutinarias
@@ -101,6 +103,8 @@ La IA permite a los ayuntamientos analizar grandes volúmenes de datos para obte
 - Visualización avanzada de datos para facilitar su comprensión
 
 Según la encuesta Bloomberg Philanthropies de 2023, el 58% de las ciudades están explorando las aplicaciones potenciales de la IA generativa para el análisis de datos y el 76% para la elaboración de políticas basadas en datos.
+
+<img width="720" class="img-responsive" alt="Tres cifras clave: hasta un 75 % menos de tiempo de gestión al automatizar (Oracle), informes de alcantarillado de 75 a 10 minutos en Washington DC y 58 % y 76 % de ciudades explorando IA generativa (Bloomberg Philanthropies)" src="https://emirodgar.es/images/ia-ayuntamientos-cifras-clave.svg" />
 
 ### 3.2. Predicción y anticipación de necesidades
 
@@ -250,6 +254,8 @@ En noviembre de 2026 el Ayuntamiento de Salamanca anunció que su organismo de r
 
 Hasta ahora, el contribuyente tenía que leer las escrituras, localizar los datos y pasarlos a mano a los formularios. Con la herramienta, la IA extrae esos datos de los documentos y propone el formulario ya relleno. A la persona solo le queda revisar lo que sugiere y completar lo que no se haya podido extraer.
 
+<img width="720" class="img-responsive" alt="Esquema del trámite de plusvalía en Salamanca antes y ahora: antes se leían las escrituras y se copiaban los datos a mano; ahora la IA los extrae, propone el formulario y la persona lo revisa" src="https://emirodgar.es/images/ia-plusvalia-salamanca-antes-ahora.svg" />
+
 En esta primera fase se aplica a cinco procedimientos:
 
 - Autoliquidación del impuesto, a partir de las escrituras de adquisición y de transmisión del inmueble.
@@ -257,6 +263,8 @@ En esta primera fase se aplica a cinco procedimientos:
 - Prórroga por fallecimiento, en herencias, leyendo documentos como el certificado de defunción, el DNI y la información catastral.
 - Solicitud de no sujeción, cuando no ha habido incremento del valor del terreno.
 - Comunicación de la transmisión a efectos registrales, con justificante con código seguro de verificación (CSV) para acreditarla ante el Registro de la Propiedad.
+
+<img width="720" class="img-responsive" alt="Los cinco trámites del OAGER de Salamanca con IA: autoliquidación, liquidación por la Administración, prórroga por fallecimiento, no sujeción y comunicación registral; siguiente paso, el Impuesto sobre Vehículos" src="https://emirodgar.es/images/oager-cinco-tramites-ia.svg" />
 
 El plan no se queda ahí. El OAGER prevé seguir con los trámites del Impuesto sobre Vehículos y extender la IA de forma progresiva al resto de procedimientos de su sede electrónica. Todavía es pronto para medir el ahorro real de tiempo, que por ahora es un resultado previsto y no un dato publicado, pero el caso encaja con la tendencia que describe este informe: usar la IA para quitar trabajo de papeleo al ciudadano, con una persona que revisa antes de enviar.
 

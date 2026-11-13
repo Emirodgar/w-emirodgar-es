@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" font-family="Arial,Helvetica,sans-serif" role="img" aria-label="Comparación del trámite de plusvalía en Salamanca antes y después de incorporar IA">
+<defs>
+<marker id="a1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#9aa0a6"/></marker>
+<marker id="a2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2563eb"/></marker>
+</defs>
+<rect width="800" height="450" fill="#ffffff"/>
+<text x="40" y="38" font-size="22" font-weight="bold" fill="#1a1a1a">Trámite de plusvalía: antes y ahora</text>
+<text x="40" y="62" font-size="14" fill="#555">Caso del OAGER, Ayuntamiento de Salamanca · Fuente: Tribuna de Salamanca (12/11/2026)</text>
+
+<text x="40" y="106" font-size="13" font-weight="bold" letter-spacing="1" fill="#6b7280">ANTES</text>
+<g fill="#f3f4f6" stroke="#d1d5db">
+<rect x="40" y="118" width="200" height="86" rx="10"/>
+<rect x="300" y="118" width="200" height="86" rx="10"/>
+<rect x="560" y="118" width="200" height="86" rx="10"/>
+</g>
+<g font-size="15" fill="#374151" text-anchor="middle">
+<text x="140" y="156">Leer e interpretar</text><text x="140" y="176">las escrituras</text>
+<text x="400" y="156">Localizar los datos</text><text x="400" y="176">necesarios</text>
+<text x="660" y="156">Pasarlos a mano al</text><text x="660" y="176">formulario</text>
+</g>
+<g stroke="#9aa0a6" stroke-width="2" marker-end="url(#a1)">
+<line x1="244" y1="161" x2="294" y2="161"/>
+<line x1="504" y1="161" x2="554" y2="161"/>
+</g>
+
+<text x="40" y="262" font-size="13" font-weight="bold" letter-spacing="1" fill="#2563eb">AHORA, CON IA</text>
+<g stroke-width="1.5">
+<rect x="40" y="274" width="160" height="96" rx="10" fill="#eff4ff" stroke="#2563eb"/>
+<rect x="226.7" y="274" width="160" height="96" rx="10" fill="#eff4ff" stroke="#2563eb"/>
+<rect x="413.3" y="274" width="160" height="96" rx="10" fill="#e8f7ee" stroke="#16a34a"/>
+<rect x="600" y="274" width="160" height="96" rx="10" fill="#eff4ff" stroke="#2563eb"/>
+</g>
+<g font-size="15" fill="#1f2937" text-anchor="middle">
+<text x="120" y="314">Aportas las</text><text x="120" y="334">escrituras y</text><text x="120" y="354">documentos</text>
+<text x="306.7" y="304">La IA extrae</text><text x="306.7" y="324">los datos y</text><text x="306.7" y="344">propone el</text><text x="306.7" y="364">formulario</text>
+<text x="493.3" y="314" font-weight="bold" fill="#15803d">Tú revisas y</text><text x="493.3" y="334" font-weight="bold" fill="#15803d">completas lo que</text><text x="493.3" y="354" font-weight="bold" fill="#15803d">falte</text>
+<text x="680" y="324">Envío del</text><text x="680" y="344">trámite</text>
+</g>
+<g stroke="#2563eb" stroke-width="2" marker-end="url(#a2)">
+<line x1="204" y1="322" x2="220" y2="322"/>
+<line x1="390.7" y1="322" x2="407" y2="322"/>
+<line x1="577.3" y1="322" x2="594" y2="322"/>
+</g>
+
+<text x="40" y="412" font-size="13" fill="#555">Hoy se aplica a 5 trámites del OAGER. El ahorro de tiempo real todavía no se ha publicado.</text>
+<text x="40" y="432" font-size="13" fill="#555">La persona sigue validando los datos antes de enviar.</text>
+</svg>

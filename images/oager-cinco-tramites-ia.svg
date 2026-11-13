@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" font-family="Arial,Helvetica,sans-serif" role="img" aria-label="Los cinco trámites del OAGER de Salamanca que ya incorporan inteligencia artificial">
+<rect width="800" height="480" fill="#ffffff"/>
+<text x="40" y="38" font-size="22" font-weight="bold" fill="#1a1a1a">Los 5 trámites del OAGER que ya usan IA</text>
+<text x="40" y="62" font-size="14" fill="#555">Primera fase del proyecto · Fuente: Tribuna de Salamanca (12/11/2026)</text>
+
+<g>
+<rect x="40" y="82" width="720" height="58" rx="10" fill="#eff4ff" stroke="#bfd0fb"/>
+<circle cx="72" cy="111" r="16" fill="#2563eb"/><text x="72" y="117" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">1</text>
+<text x="102" y="106" font-size="16" font-weight="bold" fill="#1a1a1a">Autoliquidación del impuesto</text>
+<text x="102" y="127" font-size="13" fill="#4b5563">Parte de las escrituras de adquisición y transmisión y de la documentación del contribuyente</text>
+
+<rect x="40" y="150" width="720" height="58" rx="10" fill="#eff4ff" stroke="#bfd0fb"/>
+<circle cx="72" cy="179" r="16" fill="#2563eb"/><text x="72" y="185" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">2</text>
+<text x="102" y="174" font-size="16" font-weight="bold" fill="#1a1a1a">Solicitud de liquidación por la Administración</text>
+<text x="102" y="195" font-size="13" fill="#4b5563">Aportas la documentación y el OAGER liquida, sin que tengas que autoliquidar</text>
+
+<rect x="40" y="218" width="720" height="58" rx="10" fill="#eff4ff" stroke="#bfd0fb"/>
+<circle cx="72" cy="247" r="16" fill="#2563eb"/><text x="72" y="253" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">3</text>
+<text x="102" y="242" font-size="16" font-weight="bold" fill="#1a1a1a">Prórroga por fallecimiento</text>
+<text x="102" y="263" font-size="13" fill="#4b5563">En herencias: interpreta el certificado de defunción, el DNI y la información catastral</text>
+
+<rect x="40" y="286" width="720" height="58" rx="10" fill="#eff4ff" stroke="#bfd0fb"/>
+<circle cx="72" cy="315" r="16" fill="#2563eb"/><text x="72" y="321" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">4</text>
+<text x="102" y="310" font-size="16" font-weight="bold" fill="#1a1a1a">Solicitud de no sujeción</text>
+<text x="102" y="331" font-size="13" fill="#4b5563">Cuando no ha habido incremento del valor del terreno; usa escrituras y documentos de identidad</text>
+
+<rect x="40" y="354" width="720" height="58" rx="10" fill="#eff4ff" stroke="#bfd0fb"/>
+<circle cx="72" cy="383" r="16" fill="#2563eb"/><text x="72" y="389" font-size="16" font-weight="bold" text-anchor="middle" fill="#fff">5</text>
+<text x="102" y="378" font-size="16" font-weight="bold" fill="#1a1a1a">Comunicación de la transmisión a efectos registrales</text>
+<text x="102" y="399" font-size="13" fill="#4b5563">Genera el justificante con CSV para acreditarla ante el Registro de la Propiedad</text>
+</g>
+
+<rect x="40" y="424" width="720" height="40" rx="10" fill="#f3f4f6" stroke="#d1d5db"/>
+<text x="56" y="441" font-size="13" fill="#374151"><tspan font-weight="bold">Siguiente paso previsto:</tspan> trámites del Impuesto sobre Vehículos y, de forma progresiva,</text>
+<text x="56" y="457" font-size="13" fill="#374151">el resto de procedimientos de la sede electrónica del OAGER.</text>
+</svg>

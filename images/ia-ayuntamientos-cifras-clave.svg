@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" font-family="Arial,Helvetica,sans-serif" role="img" aria-label="Tres cifras clave sobre inteligencia artificial en ayuntamientos: hasta un 75 por ciento menos de tiempo de gestión, informes de 75 a 10 minutos y 58 y 76 por ciento de ciudades explorando IA generativa">
+<rect width="800" height="340" fill="#ffffff"/>
+<text x="40" y="38" font-size="22" font-weight="bold" fill="#1a1a1a">Tres cifras clave del informe</text>
+<text x="40" y="62" font-size="14" fill="#555">Datos de estudios y casos citados en el texto</text>
+
+<g fill="#eff4ff" stroke="#bfd0fb" stroke-width="1.5">
+<rect x="40" y="84" width="230" height="190" rx="12"/>
+<rect x="285" y="84" width="230" height="190" rx="12"/>
+<rect x="530" y="84" width="230" height="190" rx="12"/>
+</g>
+<g text-anchor="middle" fill="#2563eb" font-weight="bold">
+<text x="155" y="140" font-size="30">hasta −75 %</text>
+<text x="400" y="140" font-size="30">75 → 10 min</text>
+<text x="645" y="140" font-size="30">58 % · 76 %</text>
+</g>
+<g text-anchor="middle" font-size="14" fill="#1f2937">
+<text x="155" y="180">del tiempo de gestión</text><text x="155" y="199">al automatizar procesos</text>
+<text x="400" y="180">en elaborar informes de</text><text x="400" y="199">inspección de alcantarillado</text><text x="400" y="218">(Washington DC)</text>
+<text x="645" y="172">de ciudades exploran IA</text><text x="645" y="191">generativa para analizar datos</text><text x="645" y="210">(58 %) y para políticas</text><text x="645" y="229">basadas en datos (76 %)</text>
+</g>
+<g text-anchor="middle" font-size="12" fill="#6b7280">
+<text x="155" y="258">Fuente: Oracle (2023)</text>
+<text x="400" y="258">Caso citado en el informe</text>
+<text x="645" y="258">Fuente: Bloomberg Philanthropies (2023)</text>
+</g>
+<text x="40" y="308" font-size="13" fill="#555">Son cifras de estudios y de casos de otros países: no miden resultados en ayuntamientos españoles.</text>
+</svg>
