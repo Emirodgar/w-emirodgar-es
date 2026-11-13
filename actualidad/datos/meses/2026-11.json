@@ -506,6 +506,48 @@
         "url": "https://www.elmundo.es/elecciones/2026/11/12/6af574fee9cf4a3f318b4571.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-13",
+      "edicion": "2026-11-13",
+      "titulo": "Destitución del presidente de Renfe",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno ha destituido a Álvaro Fernández Heredia como presidente de Renfe y ha nombrado a Inmaculada Gutiérrez Carrizo en su lugar, en un contexto de crisis en la gestión ferroviaria.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Cuerpo destituye al presidente de Renfe afín a Puente para apaciguar al sector y recupera a Joaquim Hortalà para dirigir Adif",
+        "url": "https://www.elmundo.es/economia/empresas/2026/11/13/6af706bae4d4d85b4d8b4574.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-13",
+      "edicion": "2026-11-13",
+      "titulo": "Inicio de la revalorización de pensiones",
+      "categoria": "Política",
+      "descripcion": "El Gobierno ha iniciado la tramitación urgente para revalorizar las pensiones, con una subida estimada entre el 3% y el 4%, coincidiendo con el inicio de la campaña electoral.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno inicia el camino para revalorizar las pensiones en el primer día de campaña electoral",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/13/6af6fb2121efa0c94b8b457a.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-13",
+      "edicion": "2026-11-13",
+      "titulo": "Rosalía hace historia en los Latin Grammy",
+      "categoria": "Cultura",
+      "descripcion": "Rosalía ha ganado su tercer álbum del año y un total de cinco premios en los Latin Grammy 2026, haciendo historia en la gala de Las Vegas.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Rosalía hace historia en los Latin Grammy 2026 con su tercer álbum del año",
+        "url": "https://www.elmundo.es/cultura/musica/2026/11/13/6af6a959fc6c830f298b456f.html"
+      },
+      "destacado": false
     }
   ]
 }

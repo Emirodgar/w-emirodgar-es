@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-12",
-  "generado_en": "2026-11-12T13:38:12+00:00",
-  "titular": "La UCO investiga donaciones al PSOE y fraude en Igualdad, mientras la vivienda y las elecciones marcan la agenda",
+  "fecha": "2026-11-13",
+  "generado_en": "2026-11-13T12:56:29+00:00",
+  "titular": "El Gobierno destituye al presidente de Renfe y revaloriza las pensiones en el inicio de la campaña electoral",
   "por_medio": {
-    "El Mundo": 27,
-    "The Objective": 221
+    "El Mundo": 31,
+    "The Objective": 210
   },
   "temas": [
     {
-      "tema": "Investigaciones judiciales y corrupción",
-      "categoria": "Política",
-      "descripcion": "La UCO investiga presuntas irregularidades en donaciones al PSOE y un posible fraude en la compra de pulseras antimaltrato en el Ministerio de Igualdad. Además, se ha imputado al exdelegado del Gobierno en Ceuta."
+      "tema": "Cambios en la cúpula de Renfe y Adif",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno ha destituido al presidente de Renfe, Álvaro Fernández Heredia, y ha recuperado a Joaquim Hortalà para dirigir Adif, en un intento de apaciguar al sector tras la tragedia de Urda. Inmaculada Gutiérrez Carrizo ha sido nombrada nueva presidenta de Renfe."
     },
     {
-      "tema": "Política de vivienda y elecciones",
+      "tema": "Revalorización de pensiones en campaña",
       "categoria": "Política",
-      "descripcion": "La Diputación Permanente convalida el decreto de vivienda del PSOE. Se debate sobre la huelga general y las propuestas electorales de los partidos en materia de vivienda y otros temas."
+      "descripcion": "El Gobierno ha iniciado la tramitación urgente para revalorizar las pensiones, con una horquilla de subida prevista entre el 3% y el 4%, coincidiendo con el inicio de la campaña electoral."
     },
     {
-      "tema": "Controversias políticas y electorales",
+      "tema": "Investigación del ático del Gobierno de Ayuso",
       "categoria": "Política",
-      "descripcion": "Abascal justifica su decisión de cancelar una entrevista, generando reacciones diversas. Se discute la estrategia de los partidos de cara a las elecciones y posibles impugnaciones."
+      "descripcion": "El Tribunal de Cuentas ha ordenado investigar la compra de un ático por parte del Gobierno de Ayuso, al detectar indicios de perjuicio a fondos públicos y la falta de justificación previa."
     },
     {
-      "tema": "Ciberseguridad y amenazas internacionales",
-      "categoria": "Internacional",
-      "descripcion": "Bélgica señala a Irán por ciberataques a supermercados, sumándose a Francia. Se investiga una amenaza de explosiones en colegios en Italia."
+      "tema": "Caída mundial de servicios de Microsoft",
+      "categoria": "Ciencia y Tecnología",
+      "descripcion": "Microsoft ha sufrido una caída mundial de sus servicios, incluyendo Outlook y Teams, atribuida a una \"carga elevada\" en su infraestructura, afectando a usuarios durante más de 17 horas."
     }
   ]
 }
