@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-13",
-  "generado_en": "2026-11-13T12:56:29+00:00",
-  "titular": "El Gobierno destituye al presidente de Renfe y revaloriza las pensiones en el inicio de la campaña electoral",
+  "fecha": "2026-11-14",
+  "generado_en": "2026-11-14T11:59:46+00:00",
+  "titular": "Cumbre inédita de líderes mundiales y tensiones políticas marcan la agenda internacional y nacional",
   "por_medio": {
-    "El Mundo": 31,
-    "The Objective": 210
+    "El Mundo": 27,
+    "The Objective": 145
   },
   "temas": [
     {
-      "tema": "Cambios en la cúpula de Renfe y Adif",
-      "categoria": "Economía",
-      "descripcion": "El Gobierno ha destituido al presidente de Renfe, Álvaro Fernández Heredia, y ha recuperado a Joaquim Hortalà para dirigir Adif, en un intento de apaciguar al sector tras la tragedia de Urda. Inmaculada Gutiérrez Carrizo ha sido nombrada nueva presidenta de Renfe."
+      "tema": "Minicumbre Trump, Xi y Putin",
+      "categoria": "Internacional",
+      "descripcion": "Los presidentes de Estados Unidos, China y Rusia celebrarán una minicumbre inédita la próxima semana para discutir armas nucleares, Irán y tierras raras, sin incluir el tema de Ucrania."
     },
     {
-      "tema": "Revalorización de pensiones en campaña",
+      "tema": "Propuesta de EEUU a Ucrania y exigencias rusas a la OTAN",
+      "categoria": "Internacional",
+      "descripcion": "Zelenski ha desvelado que Estados Unidos propuso la entrada de Ucrania en la OTAN a cambio del Donbás, mientras Rusia exige a la OTAN retirar sus fuerzas a posiciones de 1997 y limitar la protección nuclear europea."
+    },
+    {
+      "tema": "Campaña electoral en España",
       "categoria": "Política",
-      "descripcion": "El Gobierno ha iniciado la tramitación urgente para revalorizar las pensiones, con una horquilla de subida prevista entre el 3% y el 4%, coincidiendo con el inicio de la campaña electoral."
+      "descripcion": "El PSOE planea una campaña con \"golpes de efecto\" para desviar la atención de las investigaciones judiciales, mientras Vox modera sus posturas en temas clave para acercarse al PP."
     },
     {
-      "tema": "Investigación del ático del Gobierno de Ayuso",
-      "categoria": "Política",
-      "descripcion": "El Tribunal de Cuentas ha ordenado investigar la compra de un ático por parte del Gobierno de Ayuso, al detectar indicios de perjuicio a fondos públicos y la falta de justificación previa."
-    },
-    {
-      "tema": "Caída mundial de servicios de Microsoft",
+      "tema": "Recuperación de servicios de Microsoft y crisis aérea en EEUU",
       "categoria": "Ciencia y Tecnología",
-      "descripcion": "Microsoft ha sufrido una caída mundial de sus servicios, incluyendo Outlook y Teams, atribuida a una \"carga elevada\" en su infraestructura, afectando a usuarios durante más de 17 horas."
+      "descripcion": "Microsoft ha restablecido completamente sus servicios tras una caída global, descartando ciberataque o IA como causa. Paralelamente, Estados Unidos reabrió sus aeropuertos tras una suspensión de vuelos por un fallo en los sistemas de control, afectando vuelos en España."
     }
   ]
 }
