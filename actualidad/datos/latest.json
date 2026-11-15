@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-14",
-  "generado_en": "2026-11-14T11:59:46+00:00",
-  "titular": "Cumbre inédita de líderes mundiales y tensiones políticas marcan la agenda internacional y nacional",
+  "fecha": "2026-11-15",
+  "generado_en": "2026-11-15T12:36:08+00:00",
+  "titular": "La Ruta Canaria registra un récord histórico de llegadas de migrantes mientras la campaña electoral se intensifica",
   "por_medio": {
     "El Mundo": 27,
-    "The Objective": 145
+    "The Objective": 100
   },
   "temas": [
     {
-      "tema": "Minicumbre Trump, Xi y Putin",
-      "categoria": "Internacional",
-      "descripcion": "Los presidentes de Estados Unidos, China y Rusia celebrarán una minicumbre inédita la próxima semana para discutir armas nucleares, Irán y tierras raras, sin incluir el tema de Ucrania."
+      "tema": "Récord de llegadas en la Ruta Canaria",
+      "categoria": "Sociedad",
+      "descripcion": "La Ruta Canaria ha registrado un récord histórico de llegadas de migrantes, con 1.488 personas en un día y un total de 2.331 en dos jornadas, la cifra más alta en 32 años."
     },
     {
-      "tema": "Propuesta de EEUU a Ucrania y exigencias rusas a la OTAN",
-      "categoria": "Internacional",
-      "descripcion": "Zelenski ha desvelado que Estados Unidos propuso la entrada de Ucrania en la OTAN a cambio del Donbás, mientras Rusia exige a la OTAN retirar sus fuerzas a posiciones de 1997 y limitar la protección nuclear europea."
-    },
-    {
-      "tema": "Campaña electoral en España",
+      "tema": "Campaña electoral y encuestas",
       "categoria": "Política",
-      "descripcion": "El PSOE planea una campaña con \"golpes de efecto\" para desviar la atención de las investigaciones judiciales, mientras Vox modera sus posturas en temas clave para acercarse al PP."
+      "descripcion": "La campaña electoral se intensifica con PP y Vox confiando en una mayoría de votos y escaños, mientras el PSOE busca el voto de centro. Se destacan declaraciones polémicas de Irene Montero y un ataque al candidato del PP en Gipuzkoa."
     },
     {
-      "tema": "Recuperación de servicios de Microsoft y crisis aérea en EEUU",
-      "categoria": "Ciencia y Tecnología",
-      "descripcion": "Microsoft ha restablecido completamente sus servicios tras una caída global, descartando ciberataque o IA como causa. Paralelamente, Estados Unidos reabrió sus aeropuertos tras una suspensión de vuelos por un fallo en los sistemas de control, afectando vuelos en España."
+      "tema": "Sucesos y seguridad ciudadana",
+      "categoria": "Sucesos",
+      "descripcion": "Seis personas han sido detenidas por un atraco a una joyería en Torrijos y un alumno de 13 años ha resultado herido tras ser apuñalado a la salida de un instituto en Madrid."
+    },
+    {
+      "tema": "Agenda internacional y realeza",
+      "categoria": "Internacional",
+      "descripcion": "La princesa Kate retoma su agenda internacional tras superar el cáncer, acompañando al príncipe Guillermo en un viaje oficial a India."
     }
   ]
 }

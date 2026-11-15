@@ -561,7 +561,7 @@
         "titulo": "Trump, Xi y Putin celebrarán una minicumbre inédita la semana que viene",
         "url": "https://www.elmundo.es/internacional/2026/11/14/6af7fe21e85ecea3138b456f.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-14",
@@ -588,6 +588,48 @@
         "medio": "El Mundo",
         "titulo": "Microsoft restablece por completo sus servicios tras la caída mundial y descarta el ciberataque o la IA como causa del fallo",
         "url": "https://www.elmundo.es/economia/2026/11/14/6af8465cfc6c836c098b4593.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-15",
+      "edicion": "2026-11-15",
+      "titulo": "Récord histórico de llegadas de migrantes en la Ruta Canaria",
+      "categoria": "Sociedad",
+      "descripcion": "La Ruta Canaria ha registrado la cifra más alta de llegadas de migrantes en 32 años, con 1.488 personas en un solo día y un total de 2.331 en dos jornadas.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Un sábado de rescates sin pausa hace historia en la Ruta Canaria: 1.488 personas en un día, la cifra más alta en 32 años",
+        "url": "https://www.elmundo.es/espana/2026/11/15/6af97162fdddff6c338b4599.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-15",
+      "edicion": "2026-11-15",
+      "titulo": "Fallecimiento de Antonio Sabugueiro, fundador de la San Silvestre Vallecana",
+      "categoria": "Deportes",
+      "descripcion": "Antonio Sabugueiro, figura clave del atletismo y fundador de la emblemática carrera San Silvestre Vallecana, ha fallecido a los 94 años.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Muere Antonio Sabugueiro, fundador de la San Silvestre Vallecana, a los 94 años",
+        "url": "https://www.elmundo.es/madrid/2026/11/15/6af9896be9cf4a085f8b4575.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-15",
+      "edicion": "2026-11-15",
+      "titulo": "Hacienda reserva 13.618 millones para indemnizar por litigios perdidos",
+      "categoria": "Economía",
+      "descripcion": "El Ministerio de Hacienda ha reservado una cantidad significativa para cubrir indemnizaciones por litigios perdidos debido a decisiones gubernamentales, reflejando el coste de una legislación deficiente.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El coste de legislar mal: Hacienda reserva 13.618 millones para indemnizar por litigios perdidos",
+        "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/15/6af5f19fe85eceed7a8b4588.html"
       },
       "destacado": false
     }
