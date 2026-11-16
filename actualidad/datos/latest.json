@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-15",
-  "generado_en": "2026-11-15T12:36:08+00:00",
-  "titular": "La Ruta Canaria registra un récord histórico de llegadas de migrantes mientras la campaña electoral se intensifica",
+  "fecha": "2026-11-16",
+  "generado_en": "2026-11-16T13:28:43+00:00",
+  "titular": "El Gobierno subirá el SMI mientras la Guardia Civil cuestiona al CNI por la alerta de Ceuta",
   "por_medio": {
-    "El Mundo": 27,
-    "The Objective": 100
+    "El Mundo": 32,
+    "The Objective": 143
   },
   "temas": [
     {
-      "tema": "Récord de llegadas en la Ruta Canaria",
-      "categoria": "Sociedad",
-      "descripcion": "La Ruta Canaria ha registrado un récord histórico de llegadas de migrantes, con 1.488 personas en un día y un total de 2.331 en dos jornadas, la cifra más alta en 32 años."
+      "tema": "Subida del SMI y medidas fiscales",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno tiene previsto aprobar un aumento del 5,3% del Salario Mínimo Interprofesional, junto con medidas fiscales para que la nueva cuantía no tribute."
     },
     {
-      "tema": "Campaña electoral y encuestas",
+      "tema": "Cuestionamiento del CNI por la Guardia Civil",
       "categoria": "Política",
-      "descripcion": "La campaña electoral se intensifica con PP y Vox confiando en una mayoría de votos y escaños, mientras el PSOE busca el voto de centro. Se destacan declaraciones polémicas de Irene Montero y un ataque al candidato del PP en Gipuzkoa."
+      "descripcion": "La Guardia Civil ha criticado la información del CNI sobre la entrada de inmigrantes en Ceuta, considerándola insuficiente para prever la amenaza."
     },
     {
-      "tema": "Sucesos y seguridad ciudadana",
-      "categoria": "Sucesos",
-      "descripcion": "Seis personas han sido detenidas por un atraco a una joyería en Torrijos y un alumno de 13 años ha resultado herido tras ser apuñalado a la salida de un instituto en Madrid."
+      "tema": "Demanda de Repsol a eléctricas por apagón",
+      "categoria": "Economía",
+      "descripcion": "Repsol ha demandado a Iberdrola, Endesa, Naturgy y Red Eléctrica, reclamando 125 millones de euros por los daños causados por un apagón en sus refinerías."
     },
     {
-      "tema": "Agenda internacional y realeza",
-      "categoria": "Internacional",
-      "descripcion": "La princesa Kate retoma su agenda internacional tras superar el cáncer, acompañando al príncipe Guillermo en un viaje oficial a India."
+      "tema": "Desalojo de acampada en Plaza Catalunya",
+      "categoria": "Sociedad",
+      "descripcion": "Se ha llevado a cabo el desalojo sorpresa de la acampada por la vivienda en Plaza Catalunya, Barcelona, con un operativo de 465 efectivos."
     }
   ]
 }

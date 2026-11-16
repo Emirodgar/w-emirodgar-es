@@ -632,6 +632,48 @@
         "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/15/6af5f19fe85eceed7a8b4588.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-16",
+      "edicion": "2026-11-16",
+      "titulo": "Aprobación de la subida del 5,3% del SMI",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno aprobará una subida del 5,3% del Salario Mínimo Interprofesional, acompañada de medidas fiscales para que la nueva cuantía no tribute.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno aprobará mañana la subida del 5,3% del SMI",
+        "url": "https://www.elmundo.es/economia/empresas/2026/11/16/6afafd7d21efa00b548b45bd.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-16",
+      "edicion": "2026-11-16",
+      "titulo": "Retirada de candidatura de Yolanda Díaz a la OIT",
+      "categoria": "Política",
+      "descripcion": "Yolanda Díaz ha retirado su candidatura a la dirección de la Organización Internacional del Trabajo para evitar la división del movimiento sindical.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Yolanda Díaz retira su candidatura a la OIT para \"no dividir\" al movimiento sindical",
+        "url": "https://www.elmundo.es/economia/2026/11/16/6afaae0021efa0532e8b4579.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-16",
+      "edicion": "2026-11-16",
+      "titulo": "Demanda de Repsol a eléctricas por apagón",
+      "categoria": "Economía",
+      "descripcion": "Repsol ha demandado a Iberdrola, Endesa, Naturgy y Red Eléctrica, reclamando 125 millones de euros por los daños sufridos en sus refinerías a causa de un apagón.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Repsol demanda a Iberdrola, Endesa, Naturgy y Red Eléctrica por los daños del apagón",
+        "url": "https://www.elmundo.es/economia/empresas/2026/11/16/6afaeae4e85ece2a028b457f.html"
+      },
+      "destacado": false
     }
   ]
 }
