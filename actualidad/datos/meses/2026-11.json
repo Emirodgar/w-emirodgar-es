@@ -674,6 +674,48 @@
         "url": "https://www.elmundo.es/economia/empresas/2026/11/16/6afaeae4e85ece2a028b457f.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-17",
+      "edicion": "2026-11-17",
+      "titulo": "Aprobación de la subida del SMI a 1.286 euros y del 4,5% en el sueldo de funcionarios",
+      "categoria": "Economía",
+      "descripcion": "El Consejo de Ministros aprueba un incremento del Salario Mínimo Interprofesional y de los sueldos de los empleados públicos, afectando a millones de trabajadores.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno lanza en plena campaña la subida del salario mínimo a 1.286 euros y del 4,5% en el sueldo de los funcionarios y alcanza a 5 millones de empleados",
+        "url": "https://www.elmundo.es/economia/2026/11/17/6afc2279fc6c83ea548b45a1.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-17",
+      "edicion": "2026-11-17",
+      "titulo": "Aprobación del Estatuto de la Agencia Estatal de Salud Pública",
+      "categoria": "Sociedad",
+      "descripcion": "El Consejo de Ministros aprueba la creación de la Agencia Estatal de Salud Pública, con sede en Zaragoza, como 'escudo' contra futuras pandemias.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Seis años después del shock del covid, nace el 'escudo' contra pandemias: así funcionará la Agencia de Salud Pública",
+        "url": "https://www.elmundo.es/salud/2026/11/17/6afc1094e85ece966e8b4572.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-17",
+      "edicion": "2026-11-17",
+      "titulo": "Suspensión de voto a 113.326 nacionalizados por la 'ley de nietos'",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo suspende el derecho a voto de más de cien mil nacionalizados, según los cálculos de la Oficina del Censo Electoral.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La suspensión de voto del Supremo afectará a 113.326 nacionalizados por la 'ley de nietos'",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/17/6afc4d74e85ecef8068b45b2.html"
+      },
+      "destacado": false
     }
   ]
 }
