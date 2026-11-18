@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
-date_modified: 2026-11-04
+date_modified: 2026-11-18
 folder: ia
 permalink: agentes-de-ia
 ---
@@ -69,6 +69,8 @@ Estos riesgos ya no son teóricos. **Muse**, el asistente personal de Meta lanza
 **La privacidad.** Varios investigadores lograron sacar de la propia app las instrucciones internas del agente, algo que Meta dice haber permitido a propósito en aras de la transparencia. Según [WIRED](https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/), entre ellas figura la de crear cada hora una "página" por cada persona del entorno del usuario (familia, pareja, amigos, compañeros), con datos como cumpleaños, hechos relevantes, cómo es la relación y sugerencias para reforzarla. Meta defiende que necesita ese contexto para ser útil, que cada usuario tiene su propia máquina virtual aislada, que puede borrar la memoria y que Muse pide confirmación antes de enviar un correo o comprar algo. Aun así, la experta Miranda Bogen señala que estas herramientas piden "enchufar" la vida entera del usuario, y el volumen de lo que saben sobre nosotros (y sobre terceros que nunca aceptaron nada) no deja de crecer. Es el mismo dilema de [permisos mínimos y trazabilidad](https://emirodgar.es/peligros-ia) que mencionábamos arriba, aplicado a un producto de consumo.
 
 **El dinero.** Torsten Sløk, economista jefe de Apollo, ha advertido de una posible "fuga bancaria agéntica": si un agente recibe la orden de "ganar rentabilidad", podría mover los saldos parados en cuentas que pagan un 0,1% hacia depósitos que ofrecen hasta un 5%. Sus cálculos, recogidos por [Yahoo Finance](https://finance.yahoo.com/technology/ai/articles/wall-street-giant-warns-ai-172119618.html), apuntan a que los bancos perderían los depósitos baratos con los que financian sus préstamos. Hoy es un escenario remoto, porque ni Muse ni Dots, de OpenAI, pueden mover dinero. Pero muestra algo que va más allá de la banca: la **inercia del cliente** sostiene el negocio de muchos sectores (seguros, telecos, suministros), y un agente que cambia de proveedor sin esfuerzo la rompe.
+
+**Cuentas bancarias con visitantes que no son personas.** Axios [adelantó el 22 de octubre de 2026](https://www.axios.com/2026/10/22/ai-agents-banks-unauthorized-accounts-access) que grandes bancos de EE. UU. están detectando agentes de IA de terceros, sin verificar, operando dentro de cuentas de clientes, y que algunos intentan acciones que parecen ir más allá de lo que pidió el usuario. Según sus fuentes, a los bancos les cuesta determinar quién actúa y hasta dónde llega su autorización. Es una exclusiva con fuentes anónimas, no un informe con cifras, así que conviene leerla como señal y no como dato. Pero apunta a la cuestión de fondo de la economía de agentes: cómo acreditar una delegación. Una contraseña permite entrar, pero dice muy poco de la intención de quien la entrega. Pedirle a un asistente que revise tus gastos deja abiertas muchas preguntas sobre lo que puede hacer mientras cumple ese encargo, y para una entidad financiera esa ambigüedad afecta al diseño de sus sistemas y a quién responde de cada decisión. Hacen falta permisos comprensibles, límites verificables y un registro que permita reconstruir cada acción, justo lo que recomendaban los informes de arriba.
 
 ## Cuando compra un agente, se rompen modelos de negocio enteros
 

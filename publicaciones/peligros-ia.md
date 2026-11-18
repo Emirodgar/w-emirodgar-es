@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-04-30
+date_modified: 2026-11-18
 folder: formacion
 permalink: peligros-ia
 ---
@@ -20,6 +21,8 @@ La inteligencia artificial (IA) está transformando nuestras vidas a un ritmo ac
 Con el auge de la tecnología, y especialmente de la inteligencia artificial, estamos comenzando a ver cómo muchos aspectos fundamentales de nuestra cultura, como las lenguas, tradiciones y costumbres locales, podrían desvanecerse. En lugar de fomentar la diversidad, las tecnologías actuales corren el riesgo de promover una estandarización global, donde lo local se diluye en una masa homogénea impulsada por la automatización. Este proceso puede llevar a la desaparición de identidades culturales únicas en favor de una cultura globalizada, donde las diferencias se ven como un obstáculo para el progreso.
 
 La pregunta clave es cómo lograr que el progreso tecnológico no sacrifique la riqueza cultural de cada comunidad. Si bien la tecnología puede ofrecer innumerables ventajas, debemos ser conscientes de su poder para transformar lo que nos hace únicos. Es importante reflexionar sobre cómo podemos equilibrar la innovación con la protección de nuestras tradiciones, evitando que la cultura local se vea opacada por la globalización digital.
+
+**Doce modelos, la misma opinión sobre nosotros.** ModelCompare, una firma que normalmente evalúa y clasifica modelos de lenguaje, preguntó a 12 modelos de diez laboratorios de tres países cuál era su opinión más polémica sobre la humanidad, y The Register [lo contó el 23 de octubre de 2026](https://www.theregister.com/ai-and-ml/2026/10/23/ai-models-describe-humans-as-a-bunch-of-amoral-sheep/5305123). Todos coincidieron, al menos en una respuesta: somos menos racionales de lo que creemos y más devotos de pertenecer a un grupo que de buscar la verdad. Los modelos de imagen, por su parte, retrataron a la humanidad sobre todo como consumidores adictos al móvil que destruyen el planeta. Lo interesante no es el insulto, sino la unanimidad: si doce sistemas aprendieron de fuentes culturales parecidas, doce respuestas iguales no son doce opiniones independientes, sino una misma visión del mundo repetida desde sistemas distintos. Es otra cara de la uniformidad: la IA no solo puede homogeneizar lo que producimos, también lo que dice pensar de nosotros. Y es un experimento de una sola firma, sin que conozcamos aquí el detalle de su método.
 
 ## 2. La ambigüedad entre la mejora profesional y el fraude
 
