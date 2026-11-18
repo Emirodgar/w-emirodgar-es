@@ -716,6 +716,48 @@
         "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/17/6afc4d74e85ecef8068b45b2.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-18",
+      "edicion": "2026-11-18",
+      "titulo": "Crece el número de nacimientos en España por primera vez en tres años",
+      "categoria": "Sociedad",
+      "descripcion": "España rompe la tendencia descendente de los últimos años y alcanza los 321.684 nacimientos en 2025, un 1,2% más que el año anterior.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Crece el número de nacimientos en España por primera vez en tres años",
+        "url": "https://www.elmundo.es/economia/2026/11/18/6afd8a96fdddff9c5c8b45c2.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-18",
+      "edicion": "2026-11-18",
+      "titulo": "Brasil documenta por primera vez en tres décadas un contacto con indígenas aislados",
+      "categoria": "Internacional",
+      "descripcion": "Imágenes grabadas por miembros de la comunidad indígena guajajara y compartidas por Survival International muestran a adultos y niños awa en medio de una densa vegetación, alertando sobre las amenazas a la Amazonía.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Brasil documenta por primera vez en tres décadas un contacto con indígenas aislados y alerta sobre las amenazas a la Amazonía",
+        "url": "https://www.elmundo.es/internacional/2026/11/18/6afd83eefdddff2e238b4576.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-18",
+      "edicion": "2026-11-18",
+      "titulo": "La Audiencia Nacional admite la querella contra Julio Iglesias por delitos contra la libertad sexual",
+      "categoria": "Cultura",
+      "descripcion": "El juez Antonio Puña reclama la jurisdicción española, acepta los indicios presentados por las querellantes y rechaza la acusación de trata de seres humanos.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Audiencia Nacional admite la querella contra Julio Iglesias por delitos contra libertad sexual y cita a las querellantes",
+        "url": "https://www.elmundo.es/cultura/musica/2026/11/18/6afd91a2fc6c83fa228b4585.html"
+      },
+      "destacado": false
     }
   ]
 }

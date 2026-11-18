@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-17",
-  "generado_en": "2026-11-17T14:14:14+00:00",
-  "titular": "El Gobierno aprueba la subida del SMI y sueldos públicos en plena campaña, mientras la UE alerta sobre precios y vivienda",
+  "fecha": "2026-11-18",
+  "generado_en": "2026-11-18T13:45:04+00:00",
+  "titular": "Tensiones internacionales y políticas marcan la jornada, con conflictos en Oriente Medio y debates electorales en España.",
   "por_medio": {
-    "El Mundo": 30,
-    "The Objective": 214
+    "El Mundo": 28,
+    "The Objective": 202
   },
   "temas": [
     {
-      "tema": "Medidas económicas del Gobierno en campaña",
-      "categoria": "Economía",
-      "descripcion": "El Gobierno ha aprobado la subida del Salario Mínimo Interprofesional y el incremento salarial para funcionarios, generando críticas del PP por su coincidencia con la campaña electoral."
-    },
-    {
-      "tema": "Situación migratoria en Canarias",
-      "categoria": "Sociedad",
-      "descripcion": "El Gobierno ha gestionado el traslado de la mayoría de los inmigrantes llegados a El Hierro, mientras el presidente canario critica la falta de previsión y las propuestas de centros de deportación."
-    },
-    {
-      "tema": "Previsiones económicas de la Unión Europea",
-      "categoria": "Economía",
-      "descripcion": "Bruselas mejora la previsión de crecimiento para España, pero advierte sobre el aumento de precios y los desafíos en el mercado de la vivienda."
-    },
-    {
-      "tema": "Conflictos internacionales y cumbres",
+      "tema": "Tensiones en Oriente Medio y diplomacia internacional",
       "categoria": "Internacional",
-      "descripcion": "Se registran ataques a puentes estratégicos entre Ucrania y Rusia, y la cumbre del clima en Turquía enfrenta divisiones por los combustibles fósiles. Trump revive el Quad y se prepara para una cumbre con Xi y Putin."
+      "descripcion": "Irán ataca bases de EEUU en Kuwait y Bahréin, mientras Washington bombardea Ormuz, interrumpiendo una tregua. Además, Irán anuncia la destrucción de un dron Predator de EEUU. Xi Jinping y Donald Trump se encuentran en China, y Putin y Xi Jinping exhiben su alianza."
+    },
+    {
+      "tema": "Investigaciones judiciales y políticas en España",
+      "categoria": "Política",
+      "descripcion": "El PSOE se escuda en el secreto profesional en el 'caso Cloacas'. El Tribunal de Cuentas investiga pagos al hermano de Pedro Sánchez. El juez del 'caso Air Europa' acepta la declaración por videoconferencia de la ministra Aagesen. El juez Moreno tumba el intento de Ábalos de anular el registro de su vivienda. El Tribunal Supremo ratifica condena a Alfonso Rus."
+    },
+    {
+      "tema": "Proceso electoral y movimientos políticos en España",
+      "categoria": "Política",
+      "descripcion": "El empuje de Adelante podría barrer al Frente Amplio en Andalucía. El PP identifica a Adelante con Bildu. El PSOE no puede bajar en votos y esquilma a la izquierda. Feijóo critica el blanqueamiento de Bildu. El Gobierno pacta con sindicatos para desconvocar huelga ferroviaria."
+    },
+    {
+      "tema": "Sucesos y seguridad ciudadana",
+      "categoria": "Sucesos",
+      "descripcion": "Asesinado un hombre en un tiroteo en Badajoz. Un hombre de 69 años muere tiroteado desde una moto en Badajoz. Caos en el Bus VAO de la A-6 por un accidente."
     }
   ]
 }
