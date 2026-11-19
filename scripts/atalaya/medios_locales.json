@@ -231,9 +231,8 @@
   {
    "prov": "22",
    "medio": "Diario del AltoAragón",
-   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adiariodelaltoaragon.es%20when%3A3d",
-   "items": 100,
-   "via": "google-site"
+   "url": "https://www.diariodelaltoaragon.es/rss/ultimas-noticias",
+   "items": 100
   },
   {
    "prov": "44",
@@ -442,6 +441,120 @@
    "medio": "El Faro de Melilla",
    "url": "https://elfarodemelilla.es/feed/",
    "items": 10
+  },
+  {
+   "prov": "15",
+   "medio": "El Ideal Gallego",
+   "url": "https://www.elidealgallego.com/rss",
+   "items": 64
+  },
+  {
+   "prov": "15",
+   "medio": "Diario de Ferrol",
+   "url": "https://www.diariodeferrol.com/rss",
+   "items": 51
+  },
+  {
+   "prov": "03",
+   "medio": "Alicante Plaza",
+   "url": "https://alicanteplaza.es/feed",
+   "items": 87
+  },
+  {
+   "prov": "02",
+   "medio": "El Digital de Albacete",
+   "url": "https://www.eldigitaldealbacete.com/politica/feed",
+   "items": 50
+  },
+  {
+   "prov": "09",
+   "medio": "BurgosConecta",
+   "url": "https://www.burgosconecta.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "09",
+   "medio": "Burgos Noticias",
+   "url": "https://burgosnoticias.com/rss.xml",
+   "items": 300
+  },
+  {
+   "prov": "09",
+   "medio": "El Correo de Burgos",
+   "url": "https://www.elcorreodeburgos.com/rss/home.xml",
+   "items": 44
+  },
+  {
+   "prov": "12",
+   "medio": "Castellón Plaza",
+   "url": "https://castellonplaza.com/feed/",
+   "items": 90
+  },
+  {
+   "prov": "12",
+   "medio": "Castellón Información",
+   "url": "https://www.castelloninformacion.com/rss.xml",
+   "items": 50
+  },
+  {
+   "prov": "14",
+   "medio": "Cordópolis",
+   "url": "https://cordopolis.eldiario.es/rss",
+   "items": 66
+  },
+  {
+   "prov": "14",
+   "medio": "El Día de Córdoba",
+   "url": "https://www.eldiadecordoba.es/rss",
+   "items": 152
+  },
+  {
+   "prov": "14",
+   "medio": "Cordobahoy",
+   "url": "https://www.cordobahoy.es/rss/",
+   "items": 30
+  },
+  {
+   "prov": "19",
+   "medio": "El Decano",
+   "url": "https://eldecanodeguadalajara.com/rss.php",
+   "items": 50
+  },
+  {
+   "prov": "07",
+   "medio": "Noudiari",
+   "url": "https://www.noudiari.es/feed/",
+   "items": 10
+  },
+  {
+   "prov": "07",
+   "medio": "Ara Balears",
+   "url": "https://www.arabalears.cat/rss/politica",
+   "items": 20
+  },
+  {
+   "prov": "35",
+   "medio": "Canarias7",
+   "url": "https://www.canarias7.es/rss/2.0/?section=",
+   "items": 100
+  },
+  {
+   "prov": "35",
+   "medio": "La Voz de Lanzarote",
+   "url": "https://www.lavozdelanzarote.com/rss",
+   "items": 75
+  },
+  {
+   "prov": "38",
+   "medio": "Diario de Avisos",
+   "url": "https://diariodeavisos.elespanol.com/politica/feed",
+   "items": 12
+  },
+  {
+   "prov": "05",
+   "medio": "El Norte de Castilla (Ávila)",
+   "url": "https://www.elnortedecastilla.es/rss/2.0/?section=avila",
+   "items": 100
   }
  ]
 }
