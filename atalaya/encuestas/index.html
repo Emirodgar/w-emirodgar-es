@@ -83,8 +83,8 @@ tr.arch td{opacity:.55}
 <main class="wrap">
   <div>
     <section class="card">
-      <h2>Cargar encuesta</h2>
-      <form class="body ctl" id="f" autocomplete="off">
+      <h2>Cargar encuesta <em>deshabilitado</em></h2>
+      <form class="body ctl" id="f" autocomplete="off" aria-disabled="true"><fieldset disabled style="border:0;min-width:0;opacity:.55">
         <div class="g2">
           <div><label for="fd">Fecha</label><input type="date" id="fd" required></div>
           <div><label for="fn">Muestra</label><input type="number" id="fn" min="100" max="100000" value="1000"></div>
@@ -98,16 +98,16 @@ tr.arch td{opacity:.55}
           <div><label for="v4">Podem.</label><input type="number" id="v4" step="0.1" min="0" max="100"></div>
         </div>
         <p class="disc">% de estimación de voto. Deja vacío el partido que la encuesta no incluya.</p>
-        <div class="row"><button class="btn pri" type="submit">Añadir</button></div>
-      </form>
+        <div class="row"><button class="btn pri" type="submit" disabled style="cursor:not-allowed">Añadir</button></div>
+      </fieldset></form>
     </section>
     <section class="card">
       <h2>Archivo y copia</h2>
       <div class="body ctl">
         <p class="disc" style="margin-top:0">Las encuestas del archivo (<code>data/encuestas.json</code>) son permanentes: aquí solo se archivan, nunca se borran. Las que cargas a mano se guardan en este navegador; expórtalas y pásalas a <code>atalaya/data/encuestas-manuales.json</code> para que entren en el archivo.</p>
         <label for="csv">Pegar CSV</label>
-        <textarea id="csv" placeholder="fecha,empresa,muestra,PP,PSOE,Vox,Sumar,Podemos&#10;2026-11-02,GAD3,1000,32.1,26.0,18.5,7.0,"></textarea>
-        <div class="row"><button class="btn" id="bCsv" type="button">Importar CSV</button><button class="btn" id="bExp" type="button">Exportar las manuales (JSON)</button></div>
+        <textarea id="csv" disabled placeholder="fecha,empresa,muestra,PP,PSOE,Vox,Sumar,Podemos&#10;2026-11-02,GAD3,1000,32.1,26.0,18.5,7.0,"></textarea>
+        <div class="row"><button class="btn" id="bCsv" type="button" disabled style="cursor:not-allowed;opacity:.55">Importar CSV</button><button class="btn" id="bExp" type="button">Exportar las manuales (JSON)</button></div>
         <label for="showArch" style="display:flex;gap:8px;align-items:center;text-transform:none;letter-spacing:0;margin-top:14px"><input type="checkbox" id="showArch" style="width:auto"> Mostrar archivadas en el listado</label>
         <p class="disc" id="msg" role="status"></p>
       </div>
@@ -126,6 +126,14 @@ tr.arch td{opacity:.55}
   </div>
 
   <div>
+    <section class="card" id="cAc" hidden>
+      <h2>Encuesta que más acertó <em id="acInfo"></em></h2>
+      <div class="body" id="acBox"></div>
+    </section>
+    <section class="card" id="cDe" hidden>
+      <h2>Desviaciones frente al resultado <em>puntos: encuesta − resultado</em></h2>
+      <div class="body tw" id="deBox"></div>
+    </section>
     <section class="card">
       <h2>Previsión de voto <em id="pvInfo"></em></h2>
       <div class="body" id="forecast"></div>
@@ -190,7 +198,7 @@ function rebuild(){
     var k=a.fecha+'|'+slug(a.empresa);if(seen[k])return;seen[k]=1;
     var v=a.v||PARTS.map(function(_,i){var key=Object.keys(ID2I).filter(function(x){return ID2I[x]===i})[0];return a.voto&&a.voto[key]!=null?a.voto[key]:null});
     var o=ov[k]||{};
-    polls.push({k:k,fecha:a.fecha,empresa:a.empresa,n:a.muestra||1000,v:v,voto:a.voto||null,src:a.src||'archivo',on:o.on!==undefined?o.on:!isCis(a),arch:o.arch!==undefined?o.arch:!!a.archivada});
+    polls.push({k:k,fecha:a.fecha,empresa:a.empresa,n:a.muestra||1000,v:v,voto:a.voto||null,src:a.src||'archivo',on:o.on!==undefined?o.on:!isCis(a),arch:!!a.archivada});
   });
   polls.sort(function(a,b){return a.fecha<b.fecha?1:a.fecha>b.fecha?-1:0});
 }
@@ -281,9 +289,43 @@ function insights(M){
   return '<div class="ins">'+out.map(function(o){return '<div class="in '+o[0]+'"><small>'+({w:'Punto débil',o:'Oportunidad',n:'A vigilar'}[o[0]])+' · '+o[1]+'</small>'+o[2]+'</div>'}).join('')+'</div><p class="disc">Lectura automática del modelo nacional. No sustituye al análisis territorial: las provincias pueden ir en sentido contrario a la media.</p>';
 }
 
+/* Tras el 29N: qué encuesta acertó más y cuánto se desvió cada una del resultado (solo se muestra si resultados.json ya está disponible) */
+var RES=null;
+function acierto(M){
+  var c1=$('cAc'),c2=$('cDe');
+  if(!RES||!RES.disponible||!RES.votoPct){c1.hidden=c2.hidden=true;return}
+  var r=PARTS.map(function(_,i){var key=Object.keys(ID2I).filter(function(x){return ID2I[x]===i})[0];return RES.votoPct[key]!=null?+RES.votoPct[key]:null});
+  var idx=[];r.forEach(function(x,i){if(x!=null)idx.push(i)});
+  if(!idx.length){c1.hidden=c2.hidden=true;return}
+  var rows=polls.filter(function(p){return !p.arch&&p.fecha<=(RES.fechaEscrutinio||'9999')}).map(function(p){
+    var d=PARTS.map(function(_,i){return r[i]!=null&&p.v[i]!=null?p.v[i]-r[i]:null}),k=0,s=0,mx=0;
+    d.forEach(function(x){if(x!=null){k++;s+=Math.abs(x);mx=Math.max(mx,Math.abs(x))}});
+    return {p:p,d:d,k:k,mae:k?s/k:null,mx:mx,full:k===idx.length};
+  }).filter(function(x){return x.k>0});
+  if(!rows.length){c1.hidden=c2.hidden=true;return}
+  rows.sort(function(a,b){return (b.full-a.full)||(a.mae-b.mae)||(a.p.fecha<b.p.fecha?1:-1)});
+  var w=rows[0],fe=RES.fechaEscrutinio?new Date(RES.fechaEscrutinio+'T00:00:00').toLocaleDateString('es-ES'):'';
+  c1.hidden=c2.hidden=false;
+  $('acInfo').textContent=fe?'resultado del '+fe:'';
+  $('acBox').innerHTML='<div class="kpis" style="margin:0"><div class="m" style="--c:var(--ok)"><span>Encuesta más acertada</span><b>'+esc(w.p.empresa)+'</b><small>'+w.p.fecha+'</small></div>'+
+    '<div class="m"><span>Error medio</span><b>'+f1(w.mae)+' pt</b><small>media de desvíos en valor absoluto</small></div>'+
+    '<div class="m"><span>Mayor desvío</span><b>'+f1(w.mx)+' pt</b><small>en un partido</small></div></div>'+
+    '<p class="disc">Se compara el % de voto de cada encuesta con el resultado de '+idx.map(function(i){return PARTS[i][0]+' ('+f1(r[i])+' %)'}).join(', ')+'. Compiten las encuestas que incluyen todos esos partidos; en caso de empate, la más reciente.</p>';
+  var h='<table><thead><tr><th class="l">#</th><th class="l">Fecha</th><th class="l">Empresa</th>'+idx.map(function(i){return '<th>'+PARTS[i][0]+'</th>'}).join('')+'<th>Error medio</th></tr></thead><tbody>';
+  h+='<tr><td class="l"></td><td class="l">'+(RES.fechaEscrutinio||'')+'</td><td class="l"><b>Resultado</b></td>'+idx.map(function(i){return '<td><b>'+f1(r[i])+'</b></td>'}).join('')+'<td></td></tr>';
+  var dv=function(x){return x==null?'<td class="x">·</td>':'<td class="'+(x>0.05?'pos':x<-0.05?'neg':'')+'">'+sg(x)+'</td>'};
+  rows.forEach(function(x,n){
+    h+='<tr><td class="l">'+(n+1)+'</td><td class="l">'+x.p.fecha+'</td><td class="l">'+esc(x.p.empresa)+(n===0?'<span class="tag">más acertada</span>':'')+(x.full?'':'<span class="tag">parcial</span>')+'</td>'+idx.map(function(i){return dv(x.d[i])}).join('')+'<td>'+f1(x.mae)+'</td></tr>';
+  });
+  if(M){var d=idx.map(function(i){return M.A[i]?M.A[i].m-r[i]:null}),vs=d.filter(function(x){return x!=null});
+    if(vs.length)h+='<tr><td class="l"></td><td class="l"></td><td class="l"><i>Media ponderada de Atalaya</i></td>'+d.map(dv).join('')+'<td>'+f1(vs.reduce(function(a,b){return a+Math.abs(b)},0)/vs.length)+'</td></tr>'}
+  $('deBox').innerHTML=h+'</tbody></table><p class="disc">Verde: la encuesta sobrestimó al partido; rojo: lo subestimó. La media ponderada es la de hoy, orientativa. Las encuestas archivadas no cuentan.</p>';
+}
+
 function render(){
   list();
   var M=model();
+  acierto(M);
   if(!M){$('forecast').innerHTML='<p class="empty">Carga al menos una encuesta para ver la media y los rangos.</p>';$('insights').innerHTML='';$('house').innerHTML='';$('pvInfo').textContent='';$('insFor').textContent='';drawChart(null);return}
   $('pvInfo').textContent='a '+M.ref.toLocaleDateString('es-ES')+' · faltan '+M.days+' días';
   var top=0;M.pfirst.forEach(function(x,i){if(x>M.pfirst[top])top=i});
@@ -305,7 +347,7 @@ function list(){
   $('cnt').textContent=polls.length+' en el archivo · '+polls.filter(used).length+' en la media';
   if(!rows.length){$('list').innerHTML='<p class="empty">Todavía no hay encuestas.</p>';return}
   $('list').innerHTML='<table><thead><tr><th class="l">Media</th><th class="l">Fecha</th><th class="l">Empresa</th><th>Muestra</th>'+PARTS.map(function(p){return '<th>'+p[0]+'</th>'}).join('')+'<th></th></tr></thead><tbody>'+rows.map(function(p){
-    return '<tr'+(p.arch?' class="arch"':'')+'><td class="l"><input type="checkbox" data-k="'+esc(p.k)+'" '+(p.on!==false&&!p.arch?'checked':'')+(p.arch?' disabled':'')+' aria-label="Incluir '+esc(p.empresa)+' '+p.fecha+' en la media"></td><td class="l">'+p.fecha+'</td><td class="l">'+esc(p.empresa)+(p.arch?'<span class="tag">archivada</span>':'')+'</td><td>'+p.n+'</td>'+p.v.map(function(x){return '<td>'+(x==null?'<span class="x">·</span>':f1(x))+'</td>'}).join('')+'<td><button class="btn sm" data-a="'+esc(p.k)+'" aria-label="'+(p.arch?'Restaurar ':'Archivar ')+esc(p.empresa)+' '+p.fecha+'">'+(p.arch?'Restaurar':'Archivar')+'</button></td></tr>'}).join('')+'</tbody></table><p class="disc">Archivar saca la encuesta de la media pero no la borra: sigue en el archivo.</p>';
+    return '<tr'+(p.arch?' class="arch"':'')+'><td class="l"><input type="checkbox" data-k="'+esc(p.k)+'" '+(p.on!==false&&!p.arch?'checked':'')+(p.arch?' disabled':'')+' aria-label="Incluir '+esc(p.empresa)+' '+p.fecha+' en la media"></td><td class="l">'+p.fecha+'</td><td class="l">'+esc(p.empresa)+(p.arch?'<span class="tag">archivada</span>':'')+'</td><td>'+p.n+'</td>'+p.v.map(function(x){return '<td>'+(x==null?'<span class="x">·</span>':f1(x))+'</td>'}).join('')+'<td><button class="btn sm" disabled style="cursor:not-allowed;opacity:.55" aria-label="'+(p.arch?'Restaurar ':'Archivar ')+esc(p.empresa)+' '+p.fecha+' (deshabilitado)">'+(p.arch?'Restaurar':'Archivar')+'</button></td></tr>'}).join('')+'</tbody></table><p class="disc">Archivar está deshabilitado: las encuestas no se pueden quitar desde aquí.</p>';
 }
 
 function drawChart(M){
@@ -366,15 +408,16 @@ function initMaps(){
 
 /* Eventos */
 $('f').addEventListener('submit',function(e){
-  e.preventDefault();
+  e.preventDefault();return; /* carga deshabilitada */
   var v=clean([0,1,2,3,4].map(function(i){return $('v'+i).value}));
   if(addPoll({fecha:$('fd').value,empresa:$('fe').value,n:$('fn').value,v:v})){save();say('Encuesta añadida (queda en este navegador; exporta para archivarla).');[0,1,2,3,4].forEach(function(i){$('v'+i).value=''});$('fe').value='';render()}
   else say('No se añadió: revisa la fecha, la empresa y los porcentajes (0–100). Si ya existe esa empresa en esa fecha, se ignora.');
 });
-$('list').addEventListener('click',function(e){var k=e.target.getAttribute&&e.target.getAttribute('data-a');if(k){var p=polls.filter(function(x){return x.k===k})[0];(ov[k]=ov[k]||{}).arch=!p.arch;save();rebuild();render()}});
+$('list').addEventListener('click',function(e){var k=null;/* archivar deshabilitado */if(k){var p=polls.filter(function(x){return x.k===k})[0];(ov[k]=ov[k]||{}).arch=!p.arch;save();rebuild();render()}});
 $('list').addEventListener('change',function(e){var k=e.target.getAttribute('data-k');if(k){(ov[k]=ov[k]||{}).on=e.target.checked;save();rebuild();render()}});
 $('showArch').addEventListener('change',list);
 $('bCsv').addEventListener('click',function(){
+  return; /* importación deshabilitada */
   var c=0,bad=0;$('csv').value.split(/\r?\n/).forEach(function(l){l=l.trim();if(!l||/^fecha/i.test(l))return;var a=l.split(/[;,\t]/).map(function(x){return x.trim().replace(',','.')});
 
     if(addPoll({fecha:a[0],empresa:a[1],n:a[2],v:clean(a.slice(3,8))}))c++;else bad++});
@@ -391,6 +434,7 @@ function outs(){$('hlo').textContent=$('hl').value+' días';$('seo').textContent
 $('mine').innerHTML=PARTS.map(function(p,i){return '<option value="'+i+'">'+p[0]+'</option>'}).join('');
 $('fd').value=new Date().toISOString().slice(0,10);
 load();outs();rebuild();render();
+fetch('../../elecciones-espana/data/2026-11-29/resultados.json').then(function(r){return r.json()}).then(function(j){RES=j;render()}).catch(function(){});
 fetch('../data/encuestas.json').then(function(r){return r.json()}).then(function(j){archive=j.encuestas||[];rebuild();render();initMaps()}).catch(function(){say('No se pudo leer el archivo data/encuestas.json.')});
 })();
 </script>
