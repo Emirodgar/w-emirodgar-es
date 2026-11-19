@@ -58,16 +58,16 @@ table.t .pn{display:flex;align-items:center;gap:6px}
   <h1 class="pt">Ley d'Hondt <small>cómo se convierten votos en escaños</small></h1>
   <span class="tagline">Inteligencia electoral</span>
   <div class="tabs" role="tablist">
-    <button role="tab" data-t="how" aria-selected="true">Cómo funciona</button>
+    <button role="tab" data-t="how" aria-selected="false">Cómo funciona</button>
     <button role="tab" data-t="prov" aria-selected="false">Distribución por voto</button>
-    <button role="tab" data-t="cmp" aria-selected="false">Comparativa</button>
+    <button role="tab" data-t="cmp" aria-selected="true">Comparativa</button>
   </div>
 </header>
 
 <main class="wrap">
 
 <!-- ============ 1. CÓMO FUNCIONA ============ -->
-<div id="tHow">
+<div id="tHow" hidden>
   <div class="pg">
     <section class="card">
       <h2>La idea en cuatro pasos</h2>
@@ -122,7 +122,7 @@ table.t .pn{display:flex;align-items:center;gap:6px}
 </div>
 
 <!-- ============ 3. COMPARATIVA ============ -->
-<div id="tCmp" hidden>
+<div id="tCmp">
   <section class="card">
     <h2>Dos Congresos con los mismos votos <em>generales de julio de 2023</em></h2>
     <div class="body">
