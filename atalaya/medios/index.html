@@ -67,6 +67,7 @@ tr.low td{color:var(--mut)}
 </head>
 <body>
 <script src="/atalaya/assets/shell.js?v=2"></script>
+<script src="/atalaya/assets/personas.js"></script>
 <header class="top">
   <h1 class="pt">Medios <small>calidad de la información y afinidad por partido</small></h1>
   <span class="tagline">Inteligencia electoral</span>
@@ -84,6 +85,11 @@ tr.low td{color:var(--mut)}
 
 <main class="grid">
   <div>
+    <section class="card" id="pol">
+      <h2><span>Políticos más nombrados <em id="pt"></em></span><span id="pcnt"></span></h2>
+      <div class="tw"><table id="ptb"></table></div>
+      <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="pnote"></p></div>
+    </section>
     <section class="card">
       <h2><span>Medios <em id="tt"></em></span><span id="cnt"></span></h2>
       <div class="tw"><table id="tb"></table></div>
@@ -123,9 +129,12 @@ function medio(m){return String(m||'').replace(/^[\s|]+|[\s.|]+$/g,'')||'(sin me
 
 Promise.all([
   fetch('../data/noticias.json').then(function(r){return r.json()}),
-  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}})
+  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}}),
+  fetch('../data/politicos.json').then(function(r){return r.json()}).catch(function(){return {politicos:[]}}),
+  fetch('../data/politicos_prov.json').then(function(r){return r.json()}).catch(function(){return {prov:{}}})
 ]).then(function(r){
   var S=r[1].items||{};
+  buildPeople(r[2].politicos||[],r[3].prov||{});
   all=(r[0].noticias||[]).map(function(n){
     var s=S[n.i],m=medio(n.m);
     return {i:n.i,t:n.t,u:n.u,f:n.f,m:m,k:m.toLowerCase(),a:n.a,tipo:tipo(m),s:s||null,p:n.p||[]};
@@ -135,6 +144,59 @@ Promise.all([
   $('fq').addEventListener('input',render);
   render();
 }).catch(function(){$('tb').innerHTML='<tr><td class="empty">No se pudieron leer los datos de noticias.</td></tr>'});
+
+/* ---------- Políticos más nombrados ---------- */
+var PEOPLE=[];
+var PE=window.PE,NORM=function(t){return t.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()};
+var PKEY={PP:'PP',PSOE:'PSOE',VOX:'Vox',SUMAR:'Sumar',FA:'Sumar','FA/PODEMOS':'Sumar',PODEMOS:'Podemos'};
+var EXTRA={'Pedro Sánchez':'Sánchez'};   // apellido suelto: solo se cuenta en noticias nacionales (en las locales hay otros Sánchez)
+function rxOf(a){return new RegExp('(?<!\\w)'+NORM(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)')}
+function buildPeople(nat,prov){
+  var by={};
+  var add=function(nombre,wiki,partido,extra,rol){
+    if(!nombre)return;
+    var k=NORM(wiki||nombre);if(by[k]||by[NORM(nombre)])return;
+    var al=PE.aliasesOf({nombre:nombre,wiki:wiki}).concat(extra||[]);
+    al=al.filter(function(a,i){return al.indexOf(a)===i});
+    if(!al.length)return;
+    var pk=PKEY[String(partido||'').toUpperCase()]||PKEY[PE.partyKey(partido)]||'';
+    by[k]={n:nombre,rol:rol||'',pk:pk,rx:al.map(rxOf),rxNac:EXTRA[nombre]?rxOf(EXTRA[nombre]):null};
+  };
+  nat.forEach(function(p){add(p.nombre,p.wiki,p.partidoId,p.alias,p.cargo)});
+  Object.keys(prov).forEach(function(c){
+    (prov[c].gobierno||[]).forEach(function(g){add(g.nombre,g.wiki,g.partido,null,g.rol)});
+    (prov[c].candidatos||[]).forEach(function(g){add(g.nombre,g.wiki,g.partido,null,'Cabeza de lista')});
+  });
+  PEOPLE=Object.keys(by).map(function(k){return by[k]});
+}
+function politicos(rows){
+  var T=rows.map(function(n){return {n:n,t:NORM(n.t)}});
+  var L=[];
+  PEOPLE.forEach(function(p){
+    var m=0,c=0,pos=0,neg=0;
+    T.forEach(function(x){
+      if(!(p.rx.some(function(r){return r.test(x.t)})||(p.rxNac&&x.n.a==='nacional'&&p.rxNac.test(x.t))))return;
+      m++;
+      var s=x.n.s;
+      if(s&&p.pk&&s.partido===p.pk){c++;if(s.tono>0)pos++;else if(s.tono<0)neg++}
+    });
+    if(m)L.push({p:p,m:m,c:c,pos:pos,neg:neg,neu:c-pos-neg,bal:c?(pos-neg)/(c+K)*100:null});
+  });
+  L.sort(function(a,b){return b.m-a.m||(b.c-a.c)});
+  var top=L.slice(0,15);
+  $('pcnt').textContent=L.length+' con menciones';
+  var h='<thead><tr><th>#</th><th>Político</th><th class="n">Menciones</th><th class="n">Con tono</th><th>Reparto</th><th class="n">Balance</th><th>Lectura</th></tr></thead><tbody>';
+  if(!top.length)h+='<tr><td colspan="7" class="empty">Sin menciones en este filtro.</td></tr>';
+  top.forEach(function(o,i){
+    var w=function(x){return o.c?(x*100/o.c).toFixed(1):0};
+    var lec=!o.p.pk?'<span class="neu">sin partido medible</span>':o.bal===null?'<span class="neu">sin noticias con tono</span>':o.c<3?'<span class="neu">pocas noticias</span>':o.bal>=15?'<b class="pos">Positivo</b>':o.bal<=-15?'<b class="neg">Negativo</b>':'<span class="neu">Equilibrado</span>';
+    h+='<tr><td class="n">'+(i+1)+'</td><td>'+esc(o.p.n)+(o.p.pk?'<span class="tag">'+esc(o.p.pk)+'</span>':'')+'</td><td class="n">'+o.m+'</td><td class="n">'+(o.p.pk?o.c:'—')+'</td>'+
+      '<td>'+(o.c?'<div class="stk" title="'+o.neg+' negativas · '+o.neu+' neutras · '+o.pos+' positivas"><i style="width:'+w(o.neg)+'%;background:var(--bad)"></i><i style="width:'+w(o.neu)+'%;background:#475569"></i><i style="width:'+w(o.pos)+'%;background:var(--ok)"></i></div>':'<span class="neu">·</span>')+'</td>'+
+      '<td class="n bal '+(o.bal===null?'neu':cls(o.bal))+'">'+(o.bal===null?'—':sg(o.bal))+'</td><td>'+lec+'</td></tr>';
+  });
+  $('ptb').innerHTML=h+'</tbody>';
+  $('pnote').textContent='Menciones: titulares que citan al político por su nombre (o su apellido, cuando es inequívoco). El balance sale del tono de los titulares que lo citan y que el modelo clasifica como afectando a su partido: (positivos − negativos) ÷ (noticias con tono + '+K+'), de −100 a +100. El tono valora la noticia, no a la persona: es orientativo.';
+}
 
 function scope(){
   var a=$('fa').value,t=$('ft').value;
@@ -211,6 +273,7 @@ function render(){
 
   affinity(L,party,min,st);
   gobierno(rows);
+  politicos(rows);
   quality(rows,L,clas);
 }
 function kpi(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
