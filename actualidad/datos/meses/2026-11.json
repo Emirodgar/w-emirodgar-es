@@ -603,7 +603,7 @@
         "titulo": "Un sábado de rescates sin pausa hace historia en la Ruta Canaria: 1.488 personas en un día, la cifra más alta en 32 años",
         "url": "https://www.elmundo.es/espana/2026/11/15/6af97162fdddff6c338b4599.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-15",
@@ -756,6 +756,48 @@
         "medio": "El Mundo",
         "titulo": "La Audiencia Nacional admite la querella contra Julio Iglesias por delitos contra libertad sexual y cita a las querellantes",
         "url": "https://www.elmundo.es/cultura/musica/2026/11/18/6afd91a2fc6c83fa228b4585.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-19",
+      "edicion": "2026-11-19",
+      "titulo": "Cumbre trilateral de líderes mundiales en China",
+      "categoria": "Internacional",
+      "descripcion": "Los presidentes de China, Estados Unidos y Rusia se reúnen en una cumbre histórica para abordar la paz mundial, la proliferación nuclear y la reforma de la ONU.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Trump, Putin y Xi Jinping se reúnen en China en una cumbre histórica: \"Compartimos la responsabilidad de mantener la paz mundial\"",
+        "url": "https://www.elmundo.es/internacional/2026/11/19/6afe5afa21efa0b2798b457b.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-19",
+      "edicion": "2026-11-19",
+      "titulo": "CIJ declara a Birmania responsable de genocidio rohinyá",
+      "categoria": "Internacional",
+      "descripcion": "La Corte Internacional de Justicia emite su primer fallo que establece la responsabilidad internacional de un Estado por el crimen de genocidio, ordenando indemnizar a las víctimas.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La CIJ declara a Birmania responsable del genocidio rohinyá y ordena indemnizar a las víctimas",
+        "url": "https://www.elmundo.es/internacional/2026/11/19/6afee72be85ece76148b457f.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-19",
+      "edicion": "2026-11-19",
+      "titulo": "Vicente Luis Mora, primer español en ganar el National Book Award",
+      "categoria": "Cultura",
+      "descripcion": "El poeta cordobés logra el premio literario más importante de EEUU en la categoría de traducción, marcando un hito para la literatura española.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Vicente Luis Mora, primer español en lograr el National Book Award, el premio literario más importante de EEUU",
+        "url": "https://www.elmundo.es/cultura/literatura/2026/11/19/6afe9199e85ece407a8b45a5.html"
       },
       "destacado": false
     }

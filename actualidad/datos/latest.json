@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-18",
-  "generado_en": "2026-11-18T13:45:04+00:00",
-  "titular": "Tensiones internacionales y políticas marcan la jornada, con conflictos en Oriente Medio y debates electorales en España.",
+  "fecha": "2026-11-19",
+  "generado_en": "2026-11-19T14:14:09+00:00",
+  "titular": "Cumbre histórica en China con Trump, Putin y Xi; Puigdemont revela negociaciones con el PSOE y genera reacciones políticas",
   "por_medio": {
     "El Mundo": 28,
-    "The Objective": 202
+    "The Objective": 217
   },
   "temas": [
     {
-      "tema": "Tensiones en Oriente Medio y diplomacia internacional",
+      "tema": "Cumbre trilateral en China",
       "categoria": "Internacional",
-      "descripcion": "Irán ataca bases de EEUU en Kuwait y Bahréin, mientras Washington bombardea Ormuz, interrumpiendo una tregua. Además, Irán anuncia la destrucción de un dron Predator de EEUU. Xi Jinping y Donald Trump se encuentran en China, y Putin y Xi Jinping exhiben su alianza."
+      "descripcion": "Los presidentes de China, Estados Unidos y Rusia se han reunido en una cumbre histórica para discutir la paz mundial, la no proliferación nuclear y la reforma de la ONU."
     },
     {
-      "tema": "Investigaciones judiciales y políticas en España",
+      "tema": "Declaraciones de Puigdemont y reacciones políticas",
       "categoria": "Política",
-      "descripcion": "El PSOE se escuda en el secreto profesional en el 'caso Cloacas'. El Tribunal de Cuentas investiga pagos al hermano de Pedro Sánchez. El juez del 'caso Air Europa' acepta la declaración por videoconferencia de la ministra Aagesen. El juez Moreno tumba el intento de Ábalos de anular el registro de su vivienda. El Tribunal Supremo ratifica condena a Alfonso Rus."
+      "descripcion": "Carles Puigdemont ha afirmado haber usado la ambición de Sánchez para \"derrotar a España\", lo que ha generado denuncias de Vox y críticas del PP."
     },
     {
-      "tema": "Proceso electoral y movimientos políticos en España",
-      "categoria": "Política",
-      "descripcion": "El empuje de Adelante podría barrer al Frente Amplio en Andalucía. El PP identifica a Adelante con Bildu. El PSOE no puede bajar en votos y esquilma a la izquierda. Feijóo critica el blanqueamiento de Bildu. El Gobierno pacta con sindicatos para desconvocar huelga ferroviaria."
+      "tema": "Aumento de la conflictividad en centros educativos",
+      "categoria": "Sociedad",
+      "descripcion": "Las peticiones de ayuda de profesores por faltas de respeto y falsas acusaciones han aumentado un 20%, evidenciando una creciente conflictividad."
     },
     {
-      "tema": "Sucesos y seguridad ciudadana",
-      "categoria": "Sucesos",
-      "descripcion": "Asesinado un hombre en un tiroteo en Badajoz. Un hombre de 69 años muere tiroteado desde una moto en Badajoz. Caos en el Bus VAO de la A-6 por un accidente."
+      "tema": "Expedientes de la Comisión Europea a España",
+      "categoria": "Economía",
+      "descripcion": "Bruselas ha expedientado a España por incumplir directivas europeas contra la malversación y por exceder los días de pesca permitidos."
     }
   ]
 }
