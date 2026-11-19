@@ -40,6 +40,9 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 .tb{width:100%;border-collapse:collapse;font-size:13px}.tb th,.tb td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}.tb th{position:sticky;top:56px;background:#05070a;color:var(--mut);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;user-select:none}.tb th.on{color:var(--acc)}.tb tr:hover td{background:var(--panel)}.tbw{overflow-x:auto}
 .btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer}.btn:hover{border-color:var(--acc)}
 .sp{display:inline-block;vertical-align:middle}.tr{font-family:var(--mono);font-size:11px}
+.upd{color:var(--mut);font-size:12px;margin-bottom:10px}
+details.g>summary{list-style:none;cursor:pointer}details.g>summary::-webkit-details-marker{display:none}details.g>summary::before{content:'▾ '}details.g:not([open])>summary::before{content:'▸ '}
+@media (max-width:800px){.pc{grid-template-columns:48px 1fr;gap:10px;padding:10px}.pc .big{width:48px;height:48px;font-size:15px}}
 .fl{color:var(--acc)!important;font-weight:600}
 .foot{color:var(--mut);font-size:12px;margin-top:20px;max-width:900px}
 .empty{padding:20px;color:var(--mut)}
@@ -48,16 +51,16 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 </head>
 <body>
 <script src="/atalaya/assets/shell.js?v=2"></script>
-<script src="/atalaya/assets/personas.js?v=2"></script>
+<script src="/atalaya/assets/personas.js?v=3"></script>
 <header class="top">
   <h1 class="pt">Políticos <small>quién gobierna y quién se presenta</small></h1>
   <span class="tagline">Inteligencia electoral</span>
 </header>
 
 <main class="wrap">
-  <div class="kp" id="kp"></div>
+  <div class="kp" id="kp" aria-live="polite"></div>
   <div class="tools">
-    <input id="q" type="search" placeholder="Buscar por nombre…" aria-label="Buscar por nombre">
+    <input id="q" type="search" placeholder="Nombre, partido, cargo, provincia… (t: texto en titulares)" aria-label="Buscar por nombre, partido, cargo o provincia; con t: delante, en titulares" title="Escribe varias palabras para afinar. Con «t:» delante busca en los titulares donde aparece la persona.">
     <select id="ft" aria-label="Territorio"><option value="">Todo el país</option></select>
     <select id="fp" aria-label="Partido"><option value="">Todos los partidos</option></select>
     <select id="fn" aria-label="Nivel"><option value="">Todos los niveles</option><option value="nacional">Nacional</option><option value="autonómico">Autonómico</option><option value="provincial">Diputación</option><option value="municipal">Municipal</option><option value="circ">Cabeza de lista (circunscripción)</option></select>
@@ -68,6 +71,7 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
     <button class="btn" id="csv" type="button" title="Descargar la vista filtrada">Exportar CSV</button>
     <select id="fo" aria-label="Orden"><option value="risk">Ordenar por riesgo</option><option value="name">Ordenar por nombre</option><option value="party">Ordenar por partido</option></select>
   </div>
+  <div class="upd" id="upd" role="status"></div>
   <div id="out"></div>
   <p class="foot" id="foot"></p>
 </main>
@@ -81,7 +85,7 @@ var norm=function(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCas
 var cleanTitle=function(t){return t.replace(/\s+-\s+[^-]{3,60}$/,'')};
 var PE=window.PE,PCOL=PE.PCOL,PNAME=PE.PNAME,PORDER=PE.PORDER,partyKey=PE.partyKey,initials=PE.initials;
 
-var P=[],news=[],prov={},dips={};
+var P=[],news=[],prov={},dips={},pvN={},closed={};
 var SLUG='alava albacete alicante almeria avila badajoz baleares barcelona burgos caceres cadiz castellon ciudad-real cordoba a-coruna cuenca girona granada guadalajara guipuzcoa huelva huesca jaen leon lleida la-rioja lugo madrid malaga murcia navarra ourense asturias palencia las-palmas pontevedra salamanca santa-cruz-de-tenerife cantabria segovia sevilla soria tarragona teruel toledo valencia valladolid vizcaya zamora zaragoza ceuta melilla'.split(' ');
 var slug=function(s){return norm(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')};
 /* ficha: presidente > diputado (si existe) > ficha de su provincia */
@@ -102,7 +106,7 @@ Promise.all([
   fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}),
   fetch('../fichas/sitemap.xml').then(function(r){return r.ok?r.text():''}).catch(function(){return ''})
 ]).then(function(a){
-  var nat=a[0].politicos,pp=a[1],ix=a[3];String(a[6]).replace(/fichas\/diputado\/([^\/<]+)\//g,function(m,x){dips[x]=1});news=a[2].noticias;prov=ix.prov;
+  var nat=a[0].politicos,pp=a[1],ix=a[3];String(a[6]).replace(/fichas\/diputado\/([^\/<]+)\//g,function(m,x){dips[x]=1});news=a[2].noticias;prov=ix.prov;news.forEach(function(n){(n.pv||[]).forEach(function(c){pvN[c]=(pvN[c]||0)+1})});$('upd').innerHTML='Titulares recogidos: '+esc(new Date(a[2].generado).toLocaleString('es-ES',{dateStyle:'medium',timeStyle:'short'}))+' · Cargos: Wikidata ('+esc(pp.actualizado||'')+') · Candidatos: Wikipedia';
   if(a[5]&&a[5].items)news.forEach(function(n){var s=a[5].items[n.i];if(s)n.s=s});
   var map={};
   function add(p){
@@ -137,7 +141,17 @@ function riskOf(p){return PE.riskOf(p,news)}
 var io=window.IntersectionObserver?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);photo(e.target)}})},{rootMargin:'200px'}):null;
 function photo(el){
   var w=el.dataset.wiki;if(!w)return;
-  PE.photoUrl(w).then(function(u){if(u)el.innerHTML='<img src="'+esc(u)+'" alt="'+esc(el.dataset.n)+'" loading="lazy">'});
+  PE.photoUrl(w).then(function(u){if(u)el.innerHTML='<img src="'+esc(u)+'" alt="'+esc(el.dataset.n+(el.dataset.r?', '+el.dataset.r:''))+'" loading="lazy">'});
+}
+/* busqueda: todas las palabras deben aparecer en nombre, partido, cargo o territorio; con "t:" se busca en los titulares de la persona */
+function qmatch(p,q){
+  var inT=/^t:/.test(q);if(inT)q=q.slice(2).trim();if(!q)return true;
+  var hay=inT?norm((p.risk.ts||[]).join(' ')):norm([p.nombre,PNAME[p.pk],p.pk,p.rol,terr(p)].join(' '));
+  return q.split(/\s+/).every(function(w){return hay.indexOf(w)>=0});
+}
+function lowS(p){
+  var c=!p.nacional&&p.provs.length===1&&p.provs[0],n=c?(pvN[c]||0):0;
+  return c&&n<40?'<div class="hl" style="color:var(--warn)" title="Pocos titulares recogidos en esta provincia: la ausencia de cobertura aquí no es una señal fiable.">⚠ Muestra baja: '+n+' titulares en la provincia</div>':'';
 }
 function nivel(p){return p.nacional?'nacional':p.amb?{'autonómico':'autonómico','provincial':'provincial','municipal':'municipal'}[p.amb]||'':p.tipo==='cand'?'circ':''}
 function cargo(p){var r=norm(p.rol||'');return /^presidente|^diputado\/a general/.test(r)?'pres':/^alcalde/.test(r)?'alc':p.tipo==='gob'?'':'cand'}
@@ -185,7 +199,7 @@ function render(){
     if(kind&&p.tipo!==kind&&!(kind==='cand'&&p.tipo==='seg'))return false;
     if(fp&&p.pk!==fp&&!(fp==='FA'&&p.pk==='FA/PODEMOS'))return false;
     if(ft&&!(p.provs.indexOf(ft)>=0||(p.nacional&&p.tipo==='gob')))return false;
-    if(q&&!norm(p.nombre||'').includes(q))return false;
+    if(q&&!qmatch(p,q))return false;
     if($('fn').value&&nivel(p)!==$('fn').value)return false;
     if($('fc').value&&cargo(p)!==$('fc').value)return false;
     if($('fm').value&&tonoK(p)!==$('fm').value)return false;
@@ -202,7 +216,7 @@ function render(){
   var groups=[['gob','Gobiernan hoy'],['cand','Candidatos a las elecciones del 29 de noviembre'],['seg','En seguimiento']],h='';
   groups.forEach(function(g){
     var gl=ls.filter(function(p){return p.tipo===g[0]});if(!gl.length)return;
-    if(!vista)h+='<div class="dg">'+g[1]+' · '+gl.length+'</div><div class="grid">'+gl.map(card).join('')+'</div>';
+    if(!vista)h+='<details class="g" data-g="'+g[0]+'"'+(closed[g[0]]?'':' open')+'><summary class="dg">'+g[1]+' · '+gl.length+'</summary><div class="grid">'+gl.map(card).join('')+'</div></details>';
   });
   if(vista&&ls.length)h=table(ls);
   $('out').innerHTML=h||'<div class="empty">Sin resultados con estos filtros.</div>';
@@ -211,8 +225,8 @@ function render(){
 var STC={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--mut)'};
 function card(p){
   var r=p.risk,col=PCOL[p.pk]||'#94a3b8',c=STC[r.k];
-  return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
-    '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+
+  return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" data-r="'+esc(p.rol||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
+    '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+lowS(p)+
     '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
     (r.n?spark(p):'')+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
@@ -222,7 +236,7 @@ var COLS=[['nombre','Nombre',function(p){return p.nombre||'Por definir'}],['part
 function table(ls){
   var c=COLS.filter(function(x){return x[0]===sk})[0];
   if(c)ls=ls.slice().sort(function(a,b){var x=c[2](a),y=c[2](b);return (typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y),'es'))*sd});
-  return '<div class="tbw"><table class="tb"><thead><tr>'+COLS.map(function(x){return '<th data-s="'+x[0]+'"'+(x[0]===sk?' class="on"':'')+'>'+x[1]+(x[0]===sk?(sd>0?' ▲':' ▼'):'')+'</th>'}).join('')+'<th style="cursor:default">Ficha</th></tr></thead><tbody>'+ls.map(function(p){
+  return '<div class="tbw"><table class="tb"><thead><tr>'+COLS.map(function(x){return '<th data-s="'+x[0]+'" tabindex="0" role="columnheader" aria-sort="'+(x[0]===sk?(sd>0?'ascending':'descending'):'none')+'"'+(x[0]===sk?' class="on"':'')+'>'+x[1]+(x[0]===sk?(sd>0?' ▲':' ▼'):'')+'</th>'}).join('')+'<th style="cursor:default">Ficha</th></tr></thead><tbody>'+ls.map(function(p){
     var f=fichaUrl(p);return '<tr>'+COLS.map(function(x,i){var v=x[2](p);return '<td>'+(i===0&&f?'<a class="fl" href="'+f+'">'+esc(v)+'</a>':esc(v))+'</td>'}).join('')+'<td>'+(f?'<a href="'+f+'">Ver</a>':'')+'</td></tr>'}).join('')+'</tbody></table></div>';
 }
 function csv(){
@@ -235,6 +249,8 @@ function csv(){
 $('csv').onclick=csv;
 $('out').addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('th[data-s]');if(!t)return;var k=t.dataset.s;if(sk===k)sd=-sd;else{sk=k;sd=1}render()});
 document.querySelectorAll('#vw button').forEach(function(b){b.onclick=function(){vista=b.dataset.v;document.querySelectorAll('#vw button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
+$('out').addEventListener('keydown',function(e){if((e.key==='Enter'||e.key===' ')&&e.target.matches&&e.target.matches('th[data-s]')){e.preventDefault();e.target.click()}});
+$('out').addEventListener('toggle',function(e){if(e.target.dataset&&e.target.dataset.g)closed[e.target.dataset.g]=!e.target.open},true);
 window.addEventListener('hashchange',function(){readUrl();render()});
 ['q','ft','fp','fo','fn','fc','fm'].forEach(function(id){$(id).addEventListener('input',render)});
 document.querySelectorAll('.seg:not(#vw) button').forEach(function(b){b.onclick=function(){kind=b.dataset.k;document.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
