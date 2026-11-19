@@ -10,6 +10,7 @@
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/atalaya/assets/shell.css">
 <link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<link rel="stylesheet" href="/atalaya/assets/vendor/leaflet/leaflet.css">
 <style>
 :root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -18,7 +19,7 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 .top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
 .pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
 .tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
-.wrap{padding:12px 16px;max-width:1500px}
+.wrap{padding:12px 16px 80px;max-width:1500px}
 .tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;align-items:center}
 .tools input,.tools select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}
 .tools input{min-width:240px}
@@ -43,6 +44,11 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 .upd{color:var(--mut);font-size:12px;margin-bottom:10px}
 details.g>summary{list-style:none;cursor:pointer}details.g>summary::-webkit-details-marker{display:none}details.g>summary::before{content:'▾ '}details.g:not([open])>summary::before{content:'▸ '}
 @media (max-width:800px){.pc{grid-template-columns:48px 1fr;gap:10px;padding:10px}.pc .big{width:48px;height:48px;font-size:15px}}
+.mp{margin-bottom:10px;background:var(--panel);border:1px solid var(--line);border-radius:8px}.mp>summary{cursor:pointer;padding:8px 12px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+#map{height:380px;background:#0a0d12;border-top:1px solid var(--line)}.mpl{padding:6px 12px;font-size:12px;color:var(--mut)}.leaflet-container{font-family:Inter,sans-serif}.leaflet-tooltip{background:#05070a;color:var(--txt);border:1px solid var(--line);box-shadow:none}.leaflet-tooltip:before{display:none}
+.cmp{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--mut);margin-top:6px;cursor:pointer}
+.cbar{position:fixed;left:50%;bottom:14px;transform:translateX(-50%);z-index:1100;display:none;gap:8px;align-items:center;background:#05070a;border:1px solid var(--acc);border-radius:8px;padding:8px 12px;box-shadow:0 4px 20px #000a}.cbar.on{display:flex}
+#cmpv{margin-bottom:14px;background:var(--panel);border:1px solid var(--acc);border-radius:8px;padding:10px;overflow-x:auto}#cmpv table{border-collapse:collapse;width:100%;font-size:13px}#cmpv th,#cmpv td{padding:6px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}#cmpv th{color:var(--mut);font-weight:400;font-family:var(--mono);font-size:11px;text-transform:uppercase;white-space:nowrap}
 .fl{color:var(--acc)!important;font-weight:600}
 .foot{color:var(--mut);font-size:12px;margin-top:20px;max-width:900px}
 .empty{padding:20px;color:var(--mut)}
@@ -51,6 +57,8 @@ details.g>summary{list-style:none;cursor:pointer}details.g>summary::-webkit-deta
 </head>
 <body>
 <script src="/atalaya/assets/shell.js?v=2"></script>
+<script src="/atalaya/assets/vendor/leaflet/leaflet.js"></script>
+<script src="/atalaya/assets/mapa-bloqueo.js"></script>
 <script src="/atalaya/assets/personas.js?v=3"></script>
 <header class="top">
   <h1 class="pt">Políticos <small>quién gobierna y quién se presenta</small></h1>
@@ -72,9 +80,12 @@ details.g>summary{list-style:none;cursor:pointer}details.g>summary::-webkit-deta
     <select id="fo" aria-label="Orden"><option value="risk">Ordenar por riesgo</option><option value="name">Ordenar por nombre</option><option value="party">Ordenar por partido</option></select>
   </div>
   <div class="upd" id="upd" role="status"></div>
+  <div id="cmpv" hidden></div>
+  <details class="mp" id="mp"><summary>Mapa de provincias · clic para filtrar</summary><div id="map"></div><div class="mpl" id="mpl"></div></details>
   <div id="out"></div>
   <p class="foot" id="foot"></p>
 </main>
+<div class="cbar" id="cbar" role="region" aria-label="Comparador"><span id="cn"></span><button class="btn" id="cgo" type="button">Comparar</button><button class="btn" id="cclr" type="button">Vaciar</button></div>
 
 <script>
 (function(){
@@ -192,19 +203,61 @@ function writeUrl(){
   var o=[['prov',$('ft').value],['partido',$('fp').value],['nivel',$('fn').value],['cargo',$('fc').value],['tono',$('fm').value],['tipo',kind],['q',$('q').value.trim()],['orden',$('fo').value==='risk'?'':$('fo').value],['vista',vista]].filter(function(x){return x[1]});
   try{history.replaceState(null,'',location.pathname+location.search+(o.length?'#'+o.map(function(x){return x[0]+'='+encodeURIComponent(x[1])}).join('&'):''))}catch(e){}
 }
-var cur=[];
+var cur=[],cnt={},sel=[];
+/* ---------- mapa ---------- */
+var map=null,layer=null,gjProv=null;
+var key=function(p){return p.tipo+'|'+(p.wiki||p.nombre||p.slot)+'|'+p.pk};
+function colorMap(){
+  if(!layer)return;
+  var mx=Math.max.apply(null,Object.keys(cnt).map(function(c){return cnt[c]}).concat([1]));
+  layer.eachLayer(function(l){
+    var c=l.feature.properties.c,n=cnt[c]||0,on=$('ft').value===c;
+    l.setStyle({fillColor:n?'rgb('+Math.round(14+(34-14)*n/mx)+','+Math.round(40+(211-40)*n/mx)+','+Math.round(60+(238-60)*n/mx)+')':'#222a36',fillOpacity:.9,color:on?'#fff':'#0b0f15',weight:on?2.5:.6});
+    l.setTooltipContent('<b>'+esc(prov[c])+'</b><br>'+n+' político'+(n===1?'':'s')+' con el filtro actual');
+  });
+  $('mpl').textContent=$('ft').value?'Filtrando por '+prov[$('ft').value]+'. Pulsa de nuevo esa provincia, o el mar, para quitar el filtro.':'Color = número de políticos con los filtros actuales (sin contar el de provincia).';
+}
+function initMap(){
+  if(map||!window.L)return;
+  map=L.map('map',{zoomControl:false,minZoom:4,zoomSnap:.25});L.control.zoom({position:'bottomright'}).addTo(map);
+  map.attributionControl.addAttribution('Límites: IGN / Opendatasoft');
+  fetch('../data/provincias.geojson').then(function(r){return r.json()}).then(function(gj){
+    layer=L.geoJSON(gj,{style:{fillColor:'#222a36',fillOpacity:.9,color:'#0b0f15',weight:.6},onEachFeature:function(f,l){
+      l.bindTooltip('');
+      l.on('click',function(e){L.DomEvent.stopPropagation(e);var c=f.properties.c;$('ft').value=$('ft').value===c?'':c;render()});
+    }}).addTo(map);
+    map.fitBounds([[35.9,-9.6],[43.9,4.6]],{padding:[10,10]});
+    map.on('click',function(){if($('ft').value){$('ft').value='';render()}});
+    colorMap();
+  });
+}
+$('mp').addEventListener('toggle',function(){if($('mp').open){initMap();setTimeout(function(){if(map)map.invalidateSize()},50)}});
+/* ---------- comparador ---------- */
+function cbar(){$('cbar').classList.toggle('on',sel.length>0);$('cn').textContent=sel.length+' seleccionado'+(sel.length===1?'':'s')+' (máx. 3)';$('cgo').disabled=sel.length<2}
+function cmpView(){
+  var ps=sel.map(function(k){return P.filter(function(p){return key(p)===k})[0]}).filter(Boolean),el=$('cmpv');
+  if(ps.length<2){el.hidden=true;return}
+  var rows=[['Partido',function(p){return PNAME[p.pk]||p.pk||''}],['Cargo',function(p){return p.rol||''}],['Territorio',terr],['Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]}],['Titulares',function(p){return p.risk.n}],['De riesgo',function(p){return p.risk.r}],['Cobertura (0-100)',function(p){return p.risk.score}],['Tono medio',function(p){return p.risk.nt?(p.risk.tono>0?'+':'')+p.risk.tono.toFixed(1)+' ('+p.risk.nt+' titulares)':'sin datos'}],['Últimos 14 días',function(p){return p.risk.n?spark(p).replace('class="hl"','style="font-size:12px"'):'—'}],['Último titular',function(p){return p.risk.n?'<a href="'+esc(p.risk.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(p.risk.last.t).slice(0,100))+'</a>':'—'}],['Ficha',function(p){var u=fichaUrl(p);return u?'<a class="fl" href="'+u+'">Ver ficha →</a>':'—'}]];
+  var raw={'Últimos 14 días':1,'Último titular':1,'Ficha':1};
+  el.innerHTML='<table><thead><tr><th></th>'+ps.map(function(p){return '<th style="color:var(--txt);font-size:14px;font-family:Inter,sans-serif;text-transform:none">'+esc(p.nombre||'Por definir')+'</th>'}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr><th>'+r[0]+'</th>'+ps.map(function(p){var v=r[1](p);return '<td>'+(raw[r[0]]?v:esc(v))+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table><button class="btn" id="cclose" type="button" style="margin-top:8px">Cerrar comparación</button>';
+  el.hidden=false;$('cclose').onclick=function(){el.hidden=true};el.scrollIntoView({block:'nearest'});
+}
+$('out').addEventListener('change',function(e){var t=e.target;if(!t.matches||!t.matches('input.cc'))return;var k=t.dataset.k,i=sel.indexOf(k);
+  if(t.checked){if(sel.length>=3){t.checked=false;return}if(i<0)sel.push(k)}else if(i>=0)sel.splice(i,1);cbar();if(!$('cmpv').hidden)cmpView()});
+$('cgo').onclick=cmpView;$('cclr').onclick=function(){sel=[];$('cmpv').hidden=true;cbar();render()};
 function render(){
   var q=norm($('q').value.trim()),ft=$('ft').value,fp=$('fp').value,fo=$('fo').value;
-  var ls=P.filter(function(p){
+  var base=P.filter(function(p){
     if(kind&&p.tipo!==kind&&!(kind==='cand'&&p.tipo==='seg'))return false;
     if(fp&&p.pk!==fp&&!(fp==='FA'&&p.pk==='FA/PODEMOS'))return false;
-    if(ft&&!(p.provs.indexOf(ft)>=0||(p.nacional&&p.tipo==='gob')))return false;
     if(q&&!qmatch(p,q))return false;
     if($('fn').value&&nivel(p)!==$('fn').value)return false;
     if($('fc').value&&cargo(p)!==$('fc').value)return false;
     if($('fm').value&&tonoK(p)!==$('fm').value)return false;
     return true;
   });
+  var ls=base.filter(function(p){return !ft||p.provs.indexOf(ft)>=0||(p.nacional&&p.tipo==='gob')});
+  cnt={};base.forEach(function(p){p.provs.forEach(function(c){cnt[c]=(cnt[c]||0)+1})});colorMap();
   ls.sort(function(a,b){
     if(fo==='name')return (a.nombre||'~').localeCompare(b.nombre||'~','es');
     if(fo==='party')return (PORDER.indexOf(a.pk)+99)%99-(PORDER.indexOf(b.pk)+99)%99||(a.nombre||'').localeCompare(b.nombre||'','es');
@@ -230,7 +283,7 @@ function card(p){
     '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
     (r.n?spark(p):'')+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
-    '<div class="hl">'+(fichaUrl(p)?'<a class="fl" href="'+fichaUrl(p)+'">Ver ficha →</a>'+(p.wiki?' · ':''):'')+(p.wiki?'<a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a>':'')+'</div></div></div>';
+    '<div class="hl">'+(fichaUrl(p)?'<a class="fl" href="'+fichaUrl(p)+'">Ver ficha →</a>'+(p.wiki?' · ':''):'')+(p.wiki?'<a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a>':'')+'</div>'+(p.nombre?'<label class="cmp"><input class="cc" type="checkbox" data-k="'+esc(key(p))+'"'+(sel.indexOf(key(p))>=0?' checked':'')+'> Comparar</label>':'')+'</div></div>';
 }
 var COLS=[['nombre','Nombre',function(p){return p.nombre||'Por definir'}],['partido','Partido',function(p){return PNAME[p.pk]||p.pk||''}],['cargo','Cargo',function(p){return p.rol||''}],['territorio','Territorio',terr],['tipo','Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]||p.tipo}],['titulares','Titulares',function(p){return p.risk.n}],['score','Cobertura',function(p){return p.risk.score}],['tono','Tono',function(p){return p.risk.nt?+p.risk.tono.toFixed(1):''}]];
 function table(ls){
