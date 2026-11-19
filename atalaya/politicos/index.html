@@ -37,6 +37,9 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 .risk{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;margin-top:6px;font-size:12px}.risk .st{font-weight:600}
 .bar{flex:1;height:5px;background:#1b2330;border-radius:3px}.bar i{display:block;height:100%;border-radius:3px}
 .hl{font-size:12px;margin-top:6px;color:var(--mut)}.hl a{text-decoration:none}.hl a:hover{color:var(--acc)}
+.tb{width:100%;border-collapse:collapse;font-size:13px}.tb th,.tb td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}.tb th{position:sticky;top:56px;background:#05070a;color:var(--mut);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;user-select:none}.tb th.on{color:var(--acc)}.tb tr:hover td{background:var(--panel)}.tbw{overflow-x:auto}
+.btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer}.btn:hover{border-color:var(--acc)}
+.fl{color:var(--acc)!important;font-weight:600}
 .foot{color:var(--mut);font-size:12px;margin-top:20px;max-width:900px}
 .empty{padding:20px;color:var(--mut)}
 @media (max-width:800px){.kp{grid-template-columns:repeat(2,1fr)}.tools input{min-width:0;flex:1}}
@@ -57,6 +60,8 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
     <select id="ft" aria-label="Territorio"><option value="">Todo el país</option></select>
     <select id="fp" aria-label="Partido"><option value="">Todos los partidos</option></select>
     <div class="seg" role="group" aria-label="Tipo"><button data-k="" class="on">Todos</button><button data-k="gob">Gobiernan hoy</button><button data-k="cand">Candidatos 29N</button></div>
+    <div class="seg" role="group" aria-label="Vista" id="vw"><button data-v="" class="on">Tarjetas</button><button data-v="tabla">Tabla</button></div>
+    <button class="btn" id="csv" type="button" title="Descargar la vista filtrada">Exportar CSV</button>
     <select id="fo" aria-label="Orden"><option value="risk">Ordenar por riesgo</option><option value="name">Ordenar por nombre</option><option value="party">Ordenar por partido</option></select>
   </div>
   <div id="out"></div>
@@ -72,7 +77,17 @@ var norm=function(s){return s.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCas
 var cleanTitle=function(t){return t.replace(/\s+-\s+[^-]{3,60}$/,'')};
 var PE=window.PE,PCOL=PE.PCOL,PNAME=PE.PNAME,PORDER=PE.PORDER,partyKey=PE.partyKey,initials=PE.initials;
 
-var P=[],news=[],prov={};
+var P=[],news=[],prov={},dips={};
+var SLUG='alava albacete alicante almeria avila badajoz baleares barcelona burgos caceres cadiz castellon ciudad-real cordoba a-coruna cuenca girona granada guadalajara guipuzcoa huelva huesca jaen leon lleida la-rioja lugo madrid malaga murcia navarra ourense asturias palencia las-palmas pontevedra salamanca santa-cruz-de-tenerife cantabria segovia sevilla soria tarragona teruel toledo valencia valladolid vizcaya zamora zaragoza ceuta melilla'.split(' ');
+var slug=function(s){return norm(s).replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')};
+/* ficha: presidente > diputado (si existe) > ficha de su provincia */
+function fichaUrl(p){
+  if(p.tipo==='gob'&&p.nacional)return '../fichas/presidente/';
+  if(p.nombre&&dips[slug(p.nombre)])return '../fichas/diputado/'+slug(p.nombre)+'/';
+  if(p.amb==='autonómico'&&p.provs.length>1)return '';
+  var c=p.provs&&p.provs[0],i=c?parseInt(c,10)-1:-1;
+  return SLUG[i]?'../fichas/'+SLUG[i]+'/':'';
+}
 
 Promise.all([
   fetch('../data/politicos.json').then(function(r){return r.json()}),
@@ -80,9 +95,10 @@ Promise.all([
   fetch('../data/noticias.json').then(function(r){return r.json()}),
   fetch('../data/indice.json').then(function(r){return r.json()}),
   fetch('../data/fuentes-propias.json').then(function(r){return r.json()}).catch(function(){return {}}),
-  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null})
+  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}),
+  fetch('../fichas/sitemap.xml').then(function(r){return r.ok?r.text():''}).catch(function(){return ''})
 ]).then(function(a){
-  var nat=a[0].politicos,pp=a[1],ix=a[3];news=a[2].noticias;prov=ix.prov;
+  var nat=a[0].politicos,pp=a[1],ix=a[3];String(a[6]).replace(/fichas\/diputado\/([^\/<]+)\//g,function(m,x){dips[x]=1});news=a[2].noticias;prov=ix.prov;
   if(a[5]&&a[5].items)news.forEach(function(n){var s=a[5].items[n.i];if(s)n.s=s});
   var map={};
   function add(p){
@@ -106,7 +122,7 @@ Promise.all([
   $('ft').innerHTML+=Object.keys(prov).sort(function(x,y){return prov[x].localeCompare(prov[y],'es')}).map(function(c){return '<option value="'+c+'">'+esc(prov[c])+'</option>'}).join('');
   var pk={};P.forEach(function(p){if(p.pk)pk[p.pk]=1});
   $('fp').innerHTML+=Object.keys(pk).sort(function(x,y){return (PORDER.indexOf(x)+99)%99-(PORDER.indexOf(y)+99)%99}).map(function(k){return '<option value="'+esc(k)+'">'+esc(PNAME[k]||k)+'</option>'}).join('');
-  var h=location.hash.slice(1);if(/^\d\d$/.test(h)&&prov[h])$('ft').value=h;
+  readUrl();
   $('foot').innerHTML='Esta etiqueta <b>no valora a la persona</b>: describe cuánta cobertura de prensa recibe en los titulares recogidos. <b>Neutro</b> si no hay menciones; <b>Con cobertura</b> si aparece en titulares; <b>Cobertura de riesgo</b> si 2 a 5 titulares traen hechos de riesgo (por ejemplo detenciones, imputaciones o accidentes, según palabras clave o la clasificación automática); <b>Alta cobertura de riesgo</b> a partir de 6. Un titular de riesgo no implica responsabilidad de la persona citada. Tuits y redes aún no están conectados. Cargos: Wikidata ('+esc(pp.actualizado||'')+'). Candidatos: <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a>. Fotos: Wikipedia / Wikimedia Commons. Verifica antes de usar.';
   render();
 });
@@ -124,7 +140,23 @@ function terr(p){
   if(p.amb==='autonómico'&&p.provs.length)return 'Comunidad · '+p.provs.map(function(c){return prov[c]}).slice(0,3).join(', ')+(p.provs.length>3?'…':'');
   return p.provs.map(function(c){return prov[c]}).slice(0,3).join(', ')+(p.provs.length>3?'…':'');
 }
-var kind='';
+var kind='',vista='',sk='',sd=1;
+function readUrl(){
+  var h=location.hash.slice(1),o={};
+  if(/^\d\d$/.test(h))o.prov=h;else h.split('&').forEach(function(x){var i=x.indexOf('=');if(i>0)o[x.slice(0,i)]=decodeURIComponent(x.slice(i+1).replace(/\+/g,' '))});
+  $('ft').value=o.prov&&prov[o.prov]?o.prov:'';
+  $('fp').value=o.partido&&$('fp').querySelector('option[value="'+o.partido.replace(/"/g,'')+'"]')?o.partido:'';
+  $('q').value=o.q||'';
+  $('fo').value=/^(name|party)$/.test(o.orden||'')?o.orden:'risk';
+  kind=/^(gob|cand)$/.test(o.tipo||'')?o.tipo:'';vista=o.vista==='tabla'?'tabla':'';
+  document.querySelectorAll('.seg:not(#vw) button').forEach(function(x){x.classList.toggle('on',x.dataset.k===kind)});
+  document.querySelectorAll('#vw button').forEach(function(x){x.classList.toggle('on',x.dataset.v===vista)});
+}
+function writeUrl(){
+  var o=[['prov',$('ft').value],['partido',$('fp').value],['tipo',kind],['q',$('q').value.trim()],['orden',$('fo').value==='risk'?'':$('fo').value],['vista',vista]].filter(function(x){return x[1]});
+  try{history.replaceState(null,'',location.pathname+location.search+(o.length?'#'+o.map(function(x){return x[0]+'='+encodeURIComponent(x[1])}).join('&'):''))}catch(e){}
+}
+var cur=[];
 function render(){
   var q=norm($('q').value.trim()),ft=$('ft').value,fp=$('fp').value,fo=$('fo').value;
   var ls=P.filter(function(p){
@@ -139,13 +171,15 @@ function render(){
     if(fo==='party')return (PORDER.indexOf(a.pk)+99)%99-(PORDER.indexOf(b.pk)+99)%99||(a.nombre||'').localeCompare(b.nombre||'','es');
     return b.risk.score-a.risk.score||(a.nombre||'~').localeCompare(b.nombre||'~','es');
   });
+  cur=ls;writeUrl();
   var withInfo=ls.filter(function(p){return p.risk.n}).length;
   $('kp').innerHTML=[[ls.length,'Políticos en el filtro'],[ls.filter(function(p){return p.tipo==='gob'}).length,'Gobiernan hoy'],[ls.filter(function(p){return p.tipo==='cand'}).length,'Candidatos 29N'],[withInfo,'Con titulares (resto: Neutro)']].map(function(k){return '<div class="kpi"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
   var groups=[['gob','Gobiernan hoy'],['cand','Candidatos a las elecciones del 29 de noviembre'],['seg','En seguimiento']],h='';
   groups.forEach(function(g){
     var gl=ls.filter(function(p){return p.tipo===g[0]});if(!gl.length)return;
-    h+='<div class="dg">'+g[1]+' · '+gl.length+'</div><div class="grid">'+gl.map(card).join('')+'</div>';
+    if(!vista)h+='<div class="dg">'+g[1]+' · '+gl.length+'</div><div class="grid">'+gl.map(card).join('')+'</div>';
   });
+  if(vista&&ls.length)h=table(ls);
   $('out').innerHTML=h||'<div class="empty">Sin resultados con estos filtros.</div>';
   document.querySelectorAll('.big[data-wiki]').forEach(function(el){if(io)io.observe(el);else photo(el)});
 }
@@ -156,10 +190,28 @@ function card(p){
     '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+
     '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
-    (p.wiki?'<div class="hl"><a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a></div>':'')+'</div></div>';
+    '<div class="hl">'+(fichaUrl(p)?'<a class="fl" href="'+fichaUrl(p)+'">Ver ficha →</a>'+(p.wiki?' · ':''):'')+(p.wiki?'<a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a>':'')+'</div></div></div>';
 }
+var COLS=[['nombre','Nombre',function(p){return p.nombre||'Por definir'}],['partido','Partido',function(p){return PNAME[p.pk]||p.pk||''}],['cargo','Cargo',function(p){return p.rol||''}],['territorio','Territorio',terr],['tipo','Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]||p.tipo}],['titulares','Titulares',function(p){return p.risk.n}],['score','Cobertura',function(p){return p.risk.score}],['tono','Tono',function(p){return p.risk.nt?+p.risk.tono.toFixed(1):''}]];
+function table(ls){
+  var c=COLS.filter(function(x){return x[0]===sk})[0];
+  if(c)ls=ls.slice().sort(function(a,b){var x=c[2](a),y=c[2](b);return (typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y),'es'))*sd});
+  return '<div class="tbw"><table class="tb"><thead><tr>'+COLS.map(function(x){return '<th data-s="'+x[0]+'"'+(x[0]===sk?' class="on"':'')+'>'+x[1]+(x[0]===sk?(sd>0?' ▲':' ▼'):'')+'</th>'}).join('')+'<th style="cursor:default">Ficha</th></tr></thead><tbody>'+ls.map(function(p){
+    var f=fichaUrl(p);return '<tr>'+COLS.map(function(x,i){var v=x[2](p);return '<td>'+(i===0&&f?'<a class="fl" href="'+f+'">'+esc(v)+'</a>':esc(v))+'</td>'}).join('')+'<td>'+(f?'<a href="'+f+'">Ver</a>':'')+'</td></tr>'}).join('')+'</tbody></table></div>';
+}
+function csv(){
+  var q=function(v){v=String(v==null?'':v);return /[",\n;]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+  var rows=[COLS.map(function(x){return x[1]}).concat(['Wikipedia','Ficha']).join(',')].concat(cur.map(function(p){
+    return COLS.map(function(x){return q(x[2](p))}).concat([q(p.wiki?'https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki):''),q(fichaUrl(p)?new URL(fichaUrl(p),location.href).href:'')]).join(',')}));
+  var a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+rows.join('\r\n')],{type:'text/csv;charset=utf-8'}));
+  a.download='atalaya-politicos-'+new Date().toISOString().slice(0,10)+'.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},1000);
+}
+$('csv').onclick=csv;
+$('out').addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('th[data-s]');if(!t)return;var k=t.dataset.s;if(sk===k)sd=-sd;else{sk=k;sd=1}render()});
+document.querySelectorAll('#vw button').forEach(function(b){b.onclick=function(){vista=b.dataset.v;document.querySelectorAll('#vw button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
+window.addEventListener('hashchange',function(){readUrl();render()});
 ['q','ft','fp','fo'].forEach(function(id){$(id).addEventListener('input',render)});
-document.querySelectorAll('.seg button').forEach(function(b){b.onclick=function(){kind=b.dataset.k;document.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
+document.querySelectorAll('.seg:not(#vw) button').forEach(function(b){b.onclick=function(){kind=b.dataset.k;document.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
 })();
 </script>
 </body>
