@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ley d'Hondt | Atalaya</title>
+<meta name="description" content="Cómo funciona la ley d'Hondt, cómo se reparten los escaños por provincia en las últimas generales y cómo sería el Congreso si cada persona valiera un voto.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/ley-dhont/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/parlamento.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+.pg{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start}
+.steps{counter-reset:s;list-style:none;display:grid;gap:10px}
+.steps li{counter-increment:s;background:var(--panel2);border-radius:8px;padding:10px 12px 10px 48px;position:relative;font-size:13px}
+.steps li::before{content:counter(s);position:absolute;left:12px;top:10px;width:24px;height:24px;border-radius:50%;background:var(--acc);color:#04222a;font:700 13px/24px var(--mono);text-align:center}
+.steps b{color:var(--txt)}
+.prose p{margin-bottom:10px;color:#c3ccd9;font-size:13px}.prose h3{font-size:14px;margin:14px 0 6px}
+.prose ul{margin:0 0 10px 18px;color:#c3ccd9;font-size:13px}.prose li{margin-bottom:4px}
+.ex{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:10px}
+.ex label{display:block;font-size:12px;color:var(--mut);margin-bottom:3px}
+.ex input{width:100%;background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:6px 8px;font-family:var(--mono)}
+.tw{overflow:auto}
+table.t{border-collapse:collapse;width:100%;font-size:13px}
+table.t th,table.t td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t th:first-child,table.t td:first-child{text-align:left}
+table.t th{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);position:sticky;top:0;background:var(--panel)}
+table.t td.w{background:rgba(34,211,238,.18);color:var(--txt);font-weight:600;border-radius:4px}
+table.t td.x{color:#5c6675}
+table.t .pn{display:flex;align-items:center;gap:6px}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;flex:none;background:var(--c)}
+.pos{color:var(--ok)}.neg{color:var(--bad)}
+.hm{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.hm figure{background:var(--panel2);border-radius:8px;padding:10px;margin:0}
+.hm figcaption{font-size:13px;margin-bottom:4px}.hm figcaption b{display:block;font-size:15px}
+.hm svg{width:100%;height:auto;display:block}
+.bars{display:grid;gap:7px}
+.br{display:grid;grid-template-columns:110px minmax(0,1fr) 92px;gap:8px;align-items:center;font-size:12px}
+.br .tr{background:var(--panel2);border-radius:4px;height:9px;margin-bottom:3px;overflow:hidden}
+.br .tr i{display:block;height:100%;background:var(--c);border-radius:4px}
+.br .tr.alt i{background:transparent;border:1.5px solid var(--c);height:100%;box-sizing:border-box}
+.br .vv{font-family:var(--mono);text-align:right;color:var(--mut)}
+.br b{font-weight:500}
+.sel select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:220px}
+.leg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin:6px 0 10px}
+.leg span i{display:inline-block;width:18px;height:8px;border-radius:3px;margin-right:5px;vertical-align:0}
+.ok{display:inline-block;font:600 11px var(--mono);letter-spacing:.06em;padding:3px 9px;border-radius:99px;border:1px solid var(--ok);color:var(--ok)}
+.note{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:13px;margin-top:12px;color:#c3ccd9}
+@media (max-width:1000px){.pg,.hm{grid-template-columns:1fr}}
+@media (max-width:700px){.br{grid-template-columns:82px minmax(0,1fr) 78px}.tabs{margin-left:0;width:100%;flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js"></script>
+<header class="top">
+  <h1 class="pt">Ley d'Hondt <small>cómo se convierten votos en escaños</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+  <div class="tabs" role="tablist">
+    <button role="tab" data-t="how" aria-selected="true">Cómo funciona</button>
+    <button role="tab" data-t="prov" aria-selected="false">Distribución por voto</button>
+    <button role="tab" data-t="cmp" aria-selected="false">Comparativa</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+<!-- ============ 1. CÓMO FUNCIONA ============ -->
+<div id="tHow">
+  <div class="pg">
+    <section class="card">
+      <h2>La idea en cuatro pasos</h2>
+      <div class="body">
+        <ol class="steps">
+          <li><b>Cada provincia es una elección distinta.</b> El Congreso tiene 350 escaños: 2 por cada una de las 50 provincias peninsulares e insulares, 1 para Ceuta y otro para Melilla (102 en total) y los 248 restantes, según población. Madrid reparte 37; Soria, 2.</li>
+          <li><b>Se descartan las listas por debajo del 3 %</b> de los votos válidos de esa provincia (los votos en blanco cuentan como válidos).</li>
+          <li><b>Se divide el voto de cada lista entre 1, 2, 3, 4…</b> Cada resultado es un «cociente».</li>
+          <li><b>Los escaños van a los cocientes más altos.</b> Si la provincia reparte 5, se llevan escaño los 5 cocientes mayores de toda la tabla, sin importar de qué lista sean.</li>
+        </ol>
+        <div class="prose">
+          <h3>Por qué favorece a los grandes</h3>
+          <p>Dividir entre 1, 2, 3… hace que cada escaño adicional de una lista «cueste» más votos que el anterior. Las listas mayores acumulan muchos cocientes altos, y las pequeñas se quedan con restos que no llegan a convertirse en escaño. Cuantos menos escaños reparte una provincia, más se nota: en una de 3 o 4 escaños hace falta rondar el 20-25 % de los votos para entrar.</p>
+          <h3>Qué NO es</h3>
+          <p>No es «una persona, un voto» a escala nacional. Los votos solo compiten dentro de su provincia, así que un mismo partido necesita muchos más votos por escaño donde no es fuerte. La pestaña <i>Comparativa</i> muestra cuánto cambiaría el Congreso con un reparto proporcional puro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Pruébalo <em>ejemplo editable</em></h2>
+      <div class="body">
+        <div class="ex" id="exIn"></div>
+        <div class="tw" id="exTab"></div>
+        <p class="sub" id="exSum" style="margin-top:8px"></p>
+        <div class="note" id="exNote"></div>
+      </div>
+    </section>
+  </div>
+</div>
+
+<!-- ============ 2. DISTRIBUCIÓN POR VOTO ============ -->
+<div id="tProv" hidden>
+  <section class="card">
+    <h2>Votos y escaños por provincia <em>generales de julio de 2023</em></h2>
+    <div class="body">
+      <div class="sel" style="margin-bottom:10px"><label class="sub" for="ps">Provincia</label><br><select id="ps"></select></div>
+      <div class="kpis" id="pk"></div>
+      <div class="leg"><span><i style="background:#8b97a8"></i>% de voto</span><span><i style="background:transparent;border:1.5px solid #8b97a8;height:5px"></i>% de escaños</span></div>
+      <div class="bars" id="pb"></div>
+      <div class="tw" style="margin-top:14px" id="pt"></div>
+      <p class="disc">Solo se detallan las listas con voto relevante; el resto se agrupa. Los escaños se recalculan aquí con la ley d'Hondt a partir de los votos de cada lista.</p>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Lo que pesa un escaño en cada provincia <em>votos válidos por escaño</em></h2>
+    <div class="body">
+      <p class="sub" style="margin-bottom:10px">En Soria o Teruel basta una fracción de los votos que cuesta un escaño en Madrid o Barcelona. Es el efecto de repartir pocos escaños en circunscripciones pequeñas.</p>
+      <div class="bars" id="pw"></div>
+    </div>
+  </section>
+</div>
+
+<!-- ============ 3. COMPARATIVA ============ -->
+<div id="tCmp" hidden>
+  <section class="card">
+    <h2>Dos Congresos con los mismos votos <em>generales de julio de 2023</em></h2>
+    <div class="body">
+      <div class="hm" id="hm"></div>
+      <div class="lg" id="hl"></div>
+      <div class="kpis" id="ck" style="margin-top:12px"></div>
+      <p class="disc" id="chk"></p>
+    </div>
+  </section>
+  <section class="card">
+    <h2>Escaños por partido <em>d'Hondt por provincias frente a «una persona, un voto»</em></h2>
+    <div class="body">
+      <div class="leg"><span><i style="background:#8b97a8"></i>Ley d'Hondt (resultado real)</span><span><i style="background:transparent;border:1.5px solid #8b97a8;height:5px"></i>Reparto proporcional puro</span></div>
+      <div class="bars" id="cb"></div>
+      <div class="tw" style="margin-top:14px" id="ct"></div>
+      <div class="note" id="cn"></div>
+      <p class="disc">«Una persona, un voto» aquí es un reparto proporcional puro: los 350 escaños se asignan en una única circunscripción nacional por el método del resto mayor, sin umbral ni provincias. Es un ejercicio teórico con los votos de 2023: no recoge cómo habrían votado las personas en otro sistema. Datos: Ministerio del Interior. No incluye el voto del exterior (CERA).</p>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var nf=new Intl.NumberFormat('es-ES');
+var f1=function(x){return x.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})};
+var f2=function(x){return x.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})};
+var sg=function(n){return (n>0?'+':n<0?'−':'')+Math.abs(n)};
+
+/* ---------- identidad de partidos ---------- */
+var P={ // orden = de izquierda a derecha en el hemiciclo
+  'SUMAR':['Sumar','#D6246E'],'PSOE':['PSOE','#E2231A'],'ERC':['ERC','#F5A623'],'EH Bildu':['EH Bildu','#9ACD32'],
+  'B.N.G.':['BNG','#6FB8E8'],'EAJ-PNV':['PNV','#2E9D6B'],'JxCAT - JUNTS':['Junts','#1FC1B6'],'CCa':['CCa','#F2D21B'],
+  'U.P.N.':['UPN','#C77DD8'],'PACMA':['PACMA','#B5E48C'],'CUP-PR':['CUP','#FFD166'],
+  'PP':['PP','#0A5EB0'],'VOX':['Vox','#5FA52A']
+};
+var ORDER=Object.keys(P);
+var OTH='#6B7686';
+function pname(k){return P[k]?P[k][0]:k}
+function pcol(k){return P[k]?P[k][1]:OTH}
+// el azul del PP y el verde de Vox ya son legibles sobre fondo oscuro; se aclara solo el PP para barras
+function bcol(k){return k==='PP'?'#3b8fe0':pcol(k)}
+
+/* ---------- motores electorales ---------- */
+// d'Hondt: votos {lista:n}, m escaños, validos para el umbral (3 %). Devuelve {lista:escaños}
+function dhondt(votes,m,valid,thr){
+  var min=valid*(thr||0),c=[],out={};
+  Object.keys(votes).forEach(function(k){
+    out[k]=0;
+    if(votes[k]>0&&votes[k]>=min)for(var d=1;d<=m;d++)c.push([votes[k]/d,k,votes[k]]);
+  });
+  c.sort(function(a,b){return b[0]-a[0]||b[2]-a[2]});
+  for(var i=0;i<m&&i<c.length;i++)out[c[i][1]]++;
+  return out;
+}
+// resto mayor (cuota de Hare): reparto proporcional puro
+function hare(votes,m){
+  var tot=0,k,out={},rem=[],used=0;
+  for(k in votes)tot+=votes[k];
+  for(k in votes){var q=votes[k]*m/tot;out[k]=Math.floor(q);used+=out[k];rem.push([q-out[k],k])}
+  rem.sort(function(a,b){return b[0]-a[0]});
+  for(var i=0;used<m;i++,used++)out[rem[i][1]]++;
+  return out;
+}
+
+/* ---------- pestañas ---------- */
+var TABS={how:$('tHow'),prov:$('tProv'),cmp:$('tCmp')};
+function showTab(t){
+  Object.keys(TABS).forEach(function(k){TABS[k].hidden=k!==t});
+  document.querySelectorAll('.tabs button').forEach(function(b){b.setAttribute('aria-selected',String(b.dataset.t===t))});
+  if(location.hash.slice(1)!==t)history.replaceState(null,'','#'+t);
+}
+document.querySelectorAll('.tabs button').forEach(function(b){b.onclick=function(){showTab(b.dataset.t)}});
+
+/* ---------- 1. ejemplo editable ---------- */
+var EX=[['Lista A',340000],['Lista B',280000],['Lista C',160000],['Lista D',60000],['Lista E',30000]],EXC=['#22d3ee','#fbbf24','#f87171','#a78bfa','#34d399'];
+function exInit(){
+  $('exIn').innerHTML='<div><label for="exM">Escaños</label><input id="exM" type="number" min="1" max="20" value="7"></div>'+
+    EX.map(function(e,i){return '<div><label for="ex'+i+'">'+e[0]+'</label><input id="ex'+i+'" type="number" min="0" step="1000" value="'+e[1]+'"></div>'}).join('');
+  $('exIn').addEventListener('input',exRun);exRun();
+}
+function exRun(){
+  var m=Math.max(1,Math.min(20,parseInt($('exM').value,10)||1)),v={},tot=0,i;
+  EX.forEach(function(e,j){v[e[0]]=Math.max(0,parseFloat($('ex'+j).value)||0);tot+=v[e[0]]});
+  var res=dhondt(v,m,tot,0),pure=hare(v,m);
+  // marcar ganadores: los m cocientes más altos
+  var c=[];EX.forEach(function(e){for(var d=1;d<=m;d++)c.push([v[e[0]]/d,e[0],d])});
+  c.sort(function(a,b){return b[0]-a[0]});
+  var win={};c.slice(0,m).forEach(function(x){win[x[1]+'|'+x[2]]=1});
+  var h='<table class="t"><thead><tr><th>Lista</th><th>Votos</th>';
+  for(i=1;i<=m;i++)h+='<th>÷ '+i+'</th>';
+  h+='<th>Escaños</th></tr></thead><tbody>';
+  EX.forEach(function(e,j){
+    h+='<tr><td><span class="pn"><i class="dot" style="--c:'+EXC[j]+'"></i>'+e[0]+'</span></td><td>'+nf.format(v[e[0]])+'</td>';
+    for(i=1;i<=m;i++){var q=v[e[0]]/i;h+='<td class="'+(win[e[0]+'|'+i]?'w':'x')+'">'+nf.format(Math.round(q))+'</td>'}
+    h+='<td><b>'+res[e[0]]+'</b></td></tr>';
+  });
+  $('exTab').innerHTML=h+'</tbody></table>';
+  var cut=c[m-1]?Math.round(c[m-1][0]):0;
+  $('exSum').textContent='Los '+m+' cocientes más altos (resaltados) son los escaños. El último en entrar es '+nf.format(cut)+'.';
+  var top=EX.slice().sort(function(a,b){return v[b[0]]-v[a[0]]})[0][0],tp=tot?v[top]/tot*100:0,ts=res[top]/m*100;
+  $('exNote').innerHTML='<b>'+esc(top)+'</b> tiene el '+f1(tp)+' % de los votos y obtiene el '+f1(ts)+' % de los escaños'+
+    (ts>tp?' (+'+f1(ts-tp)+' puntos de «prima»)':'')+'. Con reparto proporcional exacto tendría '+pure[top]+' de '+m+'.';
+}
+
+/* ---------- datos ---------- */
+var D,CODES,SEATS={};
+fetch('../data/resultados/congreso-2023-07/circunscripciones.json').then(function(r){return r.json()}).then(function(j){
+  D=j.prov;CODES=Object.keys(D).sort(function(a,b){return D[a].n.localeCompare(D[b].n,'es')});
+  CODES.forEach(function(c){
+    var v={},s=0;for(var k in D[c].v){v[k]=D[c].v[k][0];s+=D[c].v[k][1]}
+    D[c].votes=v;D[c].m=s;D[c].res=dhondt(v,s,D[c].validos,.03);
+  });
+  provInit();cmpInit();
+  var t=location.hash.slice(1);if(TABS[t])showTab(t);
+}).catch(function(){
+  ['tProv','tCmp'].forEach(function(id){$(id).innerHTML='<section class="card"><div class="empty">No se han podido cargar los resultados de 2023.</div></section>'});
+});
+
+/* ---------- 2. distribución por provincia ---------- */
+function provInit(){
+  $('ps').innerHTML=CODES.map(function(c){return '<option value="'+c+'">'+esc(D[c].n)+' ('+D[c].m+' '+(D[c].m===1?'escaño':'escaños')+')</option>'}).join('');
+  $('ps').value=CODES.filter(function(c){return D[c].n==='Madrid'})[0]||CODES[0];
+  $('ps').onchange=provRender;provRender();
+  var rows=CODES.slice().sort(function(a,b){return D[a].validos/D[a].m-D[b].validos/D[b].m}),mx=D[rows[rows.length-1]].validos/D[rows[rows.length-1]].m;
+  $('pw').innerHTML=rows.map(function(c){var x=D[c].validos/D[c].m;
+    return '<div class="br"><b>'+esc(D[c].n)+'</b><div><div class="tr" style="--c:#22d3ee"><i style="width:'+(x/mx*100)+'%"></i></div></div><span class="vv">'+nf.format(Math.round(x))+'</span></div>'}).join('');
+}
+function provRender(){
+  var c=$('ps').value,p=D[c],tot=p.validos,m=p.m;
+  var ks=Object.keys(p.votes).sort(function(a,b){return p.votes[b]-p.votes[a]});
+  var main=ks.filter(function(k,i){return i<6&&(p.votes[k]/tot>=.01||p.res[k]>0)});
+  var win=ks.filter(function(k){return p.res[k]>0}).length;
+  var topk=ks[0];
+  $('pk').innerHTML=[['Escaños en juego',m],['Votos válidos',nf.format(tot)],['Votos por escaño',nf.format(Math.round(tot/m))],['Listas con escaño',win]].map(function(x){return '<div class="m" style="cursor:default"><span>'+x[0]+'</span><b>'+x[1]+'</b></div>'}).join('');
+  $('pb').innerHTML=main.map(function(k){var pv=p.votes[k]/tot*100,ps=p.res[k]/m*100;
+    return '<div class="br"><b>'+esc(pname(k))+'</b><div><div class="tr" style="--c:'+bcol(k)+'"><i style="width:'+Math.min(100,pv)+'%"></i></div><div class="tr alt" style="--c:'+bcol(k)+'"><i style="width:'+Math.min(100,ps)+'%"></i></div></div><span class="vv">'+f1(pv)+'% · '+f1(ps)+'%</span></div>'}).join('');
+  var rest=ks.filter(function(k){return main.indexOf(k)<0}),rv=0,rs=0;rest.forEach(function(k){rv+=p.votes[k];rs+=p.res[k]});
+  var h='<table class="t"><thead><tr><th>Lista</th><th>Votos</th><th>% válidos</th><th>Escaños</th><th>Votos / escaño</th></tr></thead><tbody>';
+  main.forEach(function(k){h+='<tr><td><span class="pn"><i class="dot" style="--c:'+pcol(k)+'"></i>'+esc(pname(k))+'</span></td><td>'+nf.format(p.votes[k])+'</td><td>'+f1(p.votes[k]/tot*100)+'</td><td><b>'+p.res[k]+'</b></td><td>'+(p.res[k]?nf.format(Math.round(p.votes[k]/p.res[k])):'—')+'</td></tr>'});
+  if(rest.length)h+='<tr><td>Otras listas ('+rest.length+')</td><td>'+nf.format(rv)+'</td><td>'+f1(rv/tot*100)+'</td><td><b>'+rs+'</b></td><td>'+(rs?nf.format(Math.round(rv/rs)):'—')+'</td></tr>';
+  h+='<tr><td>En blanco</td><td>'+nf.format(p.blanco)+'</td><td>'+f1(p.blanco/tot*100)+'</td><td>0</td><td>—</td></tr>';
+  $('pt').innerHTML=h+'</tbody></table>';
+}
+
+/* ---------- 3. comparativa ---------- */
+function hemi(list,label){ // list: [[clave,escaños]] en orden izquierda→derecha
+  var N=0,R=10,r0=82,r1=190,rows=[],sr=0,i,j;
+  list.forEach(function(x){N+=x[1]});
+  for(i=0;i<R;i++){var r=r0+(r1-r0)*i/(R-1);rows.push({r:r,n:0});sr+=r}
+  var used=0;rows.forEach(function(w){w.n=Math.round(N*w.r/sr);used+=w.n});rows[R-1].n+=N-used;
+  var pts=[];
+  rows.forEach(function(w){for(j=0;j<w.n;j++){var a=Math.PI*(1-(w.n===1?.5:j/(w.n-1)));pts.push([a,w.r])}});
+  pts.sort(function(a,b){return b[0]-a[0]||a[1]-b[1]});
+  var s='<svg viewBox="0 0 400 206" role="img" aria-label="'+esc(label)+'">',k=0,idx=0,left=list[0][1];
+  pts.forEach(function(q){
+    while(left===0&&idx<list.length-1){idx++;left=list[idx][1]}
+    s+='<circle cx="'+(200+q[1]*Math.cos(q[0])).toFixed(1)+'" cy="'+(200-q[1]*Math.sin(q[0])).toFixed(1)+'" r="4.3" fill="'+pcol(list[idx][0])+'"/>';
+    left--;
+  });
+  return s+'<text x="200" y="196" text-anchor="middle" fill="#e5e9f0" font-family="JetBrains Mono,monospace" font-size="30" font-weight="600">'+N+'</text></svg>';
+}
+function gall(v,s,tv,ts){var q=0;Object.keys(v).forEach(function(k){var d=v[k]/tv*100-(s[k]||0)/ts*100;q+=d*d});return Math.sqrt(q/2)}
+function cmpInit(){
+  var V={},A={},tv=0,tb=0,i,k,c,mt=0,okp=0,exact=0;
+  CODES.forEach(function(c){
+    for(k in D[c].votes){V[k]=(V[k]||0)+D[c].votes[k];tv+=D[c].votes[k]}
+    tb+=D[c].blanco;mt+=D[c].m;
+    var same=true;for(k in D[c].votes){A[k]=(A[k]||0)+D[c].res[k];if(D[c].res[k]!==D[c].v[k][1])same=false}
+    if(same)okp++;
+  });
+  var H=hare(V,350);
+  var real={};CODES.forEach(function(c){for(k in D[c].v)real[k]=(real[k]||0)+D[c].v[k][1]});
+  for(k in V)if(A[k]!==real[k])exact+=Math.abs(A[k]-real[k]);
+  $('chk').innerHTML='<span class="ok">'+(exact===0?'VERIFICADO':'REVISAR')+'</span> Aplicando d\'Hondt provincia a provincia el cálculo reproduce el reparto oficial en '+okp+' de '+CODES.length+' circunscripciones ('+(exact===0?'350 de 350 escaños coinciden':'hay diferencias en '+exact+' escaños')+'). ';
+  // listas con escaño en alguno de los dos sistemas, en orden de hemiciclo
+  var show=Object.keys(V).filter(function(k){return A[k]>0||H[k]>0});
+  show.sort(function(a,b){var x=ORDER.indexOf(a),y=ORDER.indexOf(b);x=x<0?50:x;y=y<0?50:y;return x-y||V[b]-V[a]});
+  var lo=function(src){return show.map(function(k){return [k,src[k]]})};
+  var oth=Object.keys(V).filter(function(k){return show.indexOf(k)<0});
+  $('hm').innerHTML='<figure><figcaption><b>Ley d\'Hondt por provincias</b>Resultado real: '+show.filter(function(k){return A[k]>0}).length+' candidaturas con escaño</figcaption>'+hemi(lo(A),'Congreso con la ley d\'Hondt')+'</figure>'+
+    '<figure><figcaption><b>Una persona, un voto</b>Reparto proporcional nacional: '+show.filter(function(k){return H[k]>0}).length+' candidaturas con escaño</figcaption>'+hemi(lo(H),'Congreso con reparto proporcional puro')+'</figure>';
+  $('hl').innerHTML=show.map(function(k){return '<span style="cursor:default"><i style="background:'+pcol(k)+'"></i>'+esc(pname(k))+'</span>'}).join('');
+  var lg=gall(V,A,tv,350),lp=gall(V,H,tv,350),minA=0;
+  var big=function(S){return (S.PP||0)+(S.PSOE||0)};
+  $('ck').innerHTML=[
+    ['PP + PSOE · d\'Hondt',big(A)+' escaños ('+f1(big(A)/3.5)+' %)'],
+    ['PP + PSOE · proporcional',big(H)+' escaños ('+f1(big(H)/3.5)+' %)'],
+    ['Desproporcionalidad · d\'Hondt',f2(lg)+' (Gallagher)'],
+    ['Desproporcionalidad · proporcional',f2(lp)+' (Gallagher)']
+  ].map(function(x){return '<div class="m" style="cursor:default"><span>'+x[0]+'</span><b style="font-size:15px">'+x[1]+'</b></div>'}).join('');
+  // barras y tabla
+  $('cb').innerHTML=show.map(function(k){var pv=V[k]/(tv)*100;
+    return '<div class="br"><b>'+esc(pname(k))+'</b><div><div class="tr" style="--c:'+bcol(k)+'"><i style="width:'+(A[k]/350*100*2.2)+'%"></i></div><div class="tr alt" style="--c:'+bcol(k)+'"><i style="width:'+(H[k]/350*100*2.2)+'%"></i></div></div><span class="vv">'+A[k]+' · '+H[k]+'</span></div>'}).join('');
+  var h='<table class="t"><thead><tr><th>Candidatura</th><th>Votos</th><th>% voto</th><th>Esc. d\'Hondt</th><th>Esc. proporcional</th><th>Diferencia</th><th>Votos / escaño</th></tr></thead><tbody>';
+  show.slice().sort(function(a,b){return V[b]-V[a]}).forEach(function(k){
+    var d=A[k]-H[k];
+    h+='<tr><td><span class="pn"><i class="dot" style="--c:'+pcol(k)+'"></i>'+esc(pname(k))+'</span></td><td>'+nf.format(V[k])+'</td><td>'+f2(V[k]/tv*100)+'</td><td><b>'+A[k]+'</b></td><td><b>'+H[k]+'</b></td><td class="'+(d>0?'pos':d<0?'neg':'')+'">'+sg(d)+'</td><td>'+(A[k]?nf.format(Math.round(V[k]/A[k])):'sin escaño')+'</td></tr>';
+  });
+  var ov=0;oth.forEach(function(k){ov+=V[k]});
+  h+='<tr><td>Resto de candidaturas ('+oth.length+')</td><td>'+nf.format(ov)+'</td><td>'+f2(ov/tv*100)+'</td><td><b>0</b></td><td><b>0</b></td><td></td><td>sin escaño</td></tr>';
+  $('ct').innerHTML=h+'</tbody></table>';
+  var gain=show.slice().sort(function(a,b){return (A[b]-H[b])-(A[a]-H[a])});
+  var w=gain[0],l=gain[gain.length-1];
+  $('cn').innerHTML='Con los mismos votos, <b>'+esc(pname(w))+'</b> gana '+sg(A[w]-H[w])+' escaños gracias a la ley d\'Hondt y las provincias, y <b>'+esc(pname(l))+'</b> pierde '+Math.abs(A[l]-H[l])+'. '+
+    'En el reparto proporcional puro los 350 escaños se distribuirían sin que el voto de ninguna provincia pese más que el de otra; las candidaturas pequeñas pero repartidas por toda España (como PACMA) pasarían a tener representación, y las muy concentradas en un territorio (como PNV o Bildu) tendrían menos peso que ahora.';
+}
+
+exInit();
+})();
+</script>
+</body>
+</html>

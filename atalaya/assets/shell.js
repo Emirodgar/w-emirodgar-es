@@ -10,7 +10,8 @@
     ['Medios', '/atalaya/medios/', I('<path d="M4 5h13a1 1 0 0 1 1 1v13H6a2 2 0 0 1-2-2zM18 9h2a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2M8 9h6M8 13h6M8 16h4"/>')],
     ['Encuestas', '/atalaya/encuestas/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')],
     ['Congreso', '/atalaya/congreso/', I('<path d="M3 20h18M5 20V10M9.5 20V10M14.5 20V10M19 20V10M3 10l9-6 9 6z"/>')],
-    ['Senado', '/atalaya/senado/', I('<path d="M4 20h16M6 20v-8a6 6 0 0 1 12 0v8M12 6V3M9 20v-6M15 20v-6"/>')]
+    ['Senado', '/atalaya/senado/', I('<path d="M4 20h16M6 20v-8a6 6 0 0 1 12 0v8M12 6V3M9 20v-6M15 20v-6"/>')],
+    ["Ley d'Hondt", '/atalaya/ley-dhont/', I('<path d="M4 20V9M10 20V4M16 20v-6M22 20H2"/><path d="M13 8l3-3 3 3"/>')]
   ];
   var small = window.matchMedia && matchMedia('(max-width:700px)').matches, saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}
