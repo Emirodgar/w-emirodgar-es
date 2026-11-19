@@ -23,7 +23,8 @@
     var out = {}; if (p.nombre) out[p.nombre] = 1;
     if (p.wiki) { var w = decodeURIComponent(p.wiki).replace(/_/g, ' ').replace(/\s*\(.*\)$/, ''); if (w.split(' ').length >= 2) out[w] = 1; }
     var t = (p.nombre || '').split(' '); if (t.length >= 3) out[t.slice(-2).join(' ')] = 1;
-    return Object.keys(out).filter(function (a) { return a.split(' ').length >= 2; });
+    /* sin partículas: «Bruno García de León» no debe buscarse como «de León» (coincidiría con cualquier titular de León) */
+    return Object.keys(out).filter(function (a) { var w = a.split(' '); return w.length >= 2 && w.every(function (x) { return /^[A-ZÁÉÍÓÚÑÜ]/.test(x); }); });
   }
 
   /* estado y puntuación a partir de los titulares: usa la clasificación de Gemini (n.s) si existe y, si no, las palabras clave (n.r).

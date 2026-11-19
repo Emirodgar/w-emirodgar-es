@@ -29,7 +29,8 @@ CAP = {"01": ["Vitoria-Gasteiz", "Vitoria"], "03": ["Alicante"], "07": ["Palma"]
        "20": ["San Sebastián", "Donostia"], "26": ["Logroño"], "30": ["Murcia"], "31": ["Pamplona"], "33": ["Oviedo"], "35": ["Las Palmas de Gran Canaria"],
        "38": ["Santa Cruz de Tenerife"], "39": ["Santander"], "46": ["Valencia", "València"], "48": ["Bilbao"], "51": ["Ceuta"], "52": ["Melilla"], "32": ["Ourense", "Orense"],
        "17": ["Girona", "Gerona"], "25": ["Lleida", "Lérida"], "21": ["Huelva"], "36": ["Pontevedra"]}
-COLS = ["PP", "PSOE", "VOX", "FA", "PODEMOS", "ERC", "JUNTS", "EHB", "PNV", "BNG", "CC"]
+# orden real de las columnas de la tabla de Wikipedia (Podemos va despues de PNV)
+COLS = ["PP", "PSOE", "VOX", "FA", "ERC", "JUNTS", "EHB", "PNV", "PODEMOS", "BNG", "CC"]
 SPECIAL = {"baleares, islas": "07", "coruña, a": "15", "coruña, la": "15", "palmas, las": "35", "rioja, la": "26", "alicante": "03", "castellón": "12", "valencia": "46",
            "guipúzcoa": "20", "vizcaya": "48", "álava": "01", "orense": "32", "gerona": "17", "lérida": "25", "asturias": "33", "cantabria": "39", "navarra": "31"}
 

@@ -59,7 +59,7 @@ details.g>summary{list-style:none;cursor:pointer}details.g>summary::-webkit-deta
 <script src="/atalaya/assets/shell.js?v=2"></script>
 <script src="/atalaya/assets/vendor/leaflet/leaflet.js"></script>
 <script src="/atalaya/assets/mapa-bloqueo.js"></script>
-<script src="/atalaya/assets/personas.js?v=3"></script>
+<script src="/atalaya/assets/personas.js?v=4"></script>
 <header class="top">
   <h1 class="pt">Políticos <small>quién gobierna y quién se presenta</small></h1>
   <span class="tagline">Inteligencia electoral</span>
@@ -137,7 +137,7 @@ Promise.all([
   Object.keys(pp.prov).forEach(function(pc){
     var d=pp.prov[pc];
     d.gobierno.forEach(function(g){add({tipo:'gob',nombre:g.nombre,wiki:g.wiki,rol:g.rol,pk:partyKey(g.partido),prov:pc,amb:g.ambito})});
-    d.candidatos.forEach(function(c){var n=c.wiki&&natC[c.wiki];if(n){if(n.provs.indexOf(pc)<0)n.provs.push(pc);return}add({tipo:'cand',nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?' ('+c.nota+')':''),pk:c.partido,prov:pc})});
+    d.candidatos.forEach(function(c){var n=c.wiki&&natC[c.wiki];if(n){if(n.provs.indexOf(pc)<0)n.provs.push(pc);return}add({tipo:'cand',nombre:c.nombre,wiki:c.wiki,rol:'Cabeza de lista al Congreso'+(c.nota?' ('+c.nota.replace(/\[\[(?:[^\]|]*\|)?([^\]]*)\]\]/g,'$1').replace(/\[\[|\]\]/g,'')+')':''),pk:c.partido,prov:pc})});
   });
   P.forEach(function(p){p.risk=riskOf(p);p.id='p'+Math.random().toString(36).slice(2,9)});
   $('ft').innerHTML+=Object.keys(prov).sort(function(x,y){return prov[x].localeCompare(prov[y],'es')}).map(function(c){return '<option value="'+c+'">'+esc(prov[c])+'</option>'}).join('');
