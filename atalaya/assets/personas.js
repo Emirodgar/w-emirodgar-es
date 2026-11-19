@@ -31,13 +31,13 @@
    orientativo y NO entra en la puntuación. */
   function isRisk(n) { return n.s ? n.s.riesgo >= 2 : n.r; }
   function riskOf(p, news) {
-    var al = aliasesOf(p); if (!al.length) return { k: 'none', label: 'Neutro', score: 0, n: 0, r: 0 };
+    var al = aliasesOf(p); if (!al.length) return { k: 'none', label: 'Neutro', score: 0, n: 0, r: 0, fechas: [] };
     var rx = al.map(function (a) { return new RegExp('(?<!\\w)' + norm(a).replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '(?!\\w)'); });
     var hits = news.filter(function (n) { var t = norm(n.t); return rx.some(function (r) { return r.test(t); }); });
     var rk = hits.filter(isRisk), tn = hits.filter(function (n) { return n.s; }).map(function (n) { return n.s.tono; });
     var k = rk.length >= 6 ? 'crisis' : rk.length >= 2 ? 'press' : hits.length ? 'focus' : 'none';
     return { k: k, label: { crisis: 'Alta cobertura de riesgo', press: 'Cobertura de riesgo', focus: 'Con cobertura', none: 'Neutro' }[k],
-             score: hits.length ? Math.min(100, rk.length * 18 + hits.length * 4) : 0, n: hits.length, r: rk.length, nt: tn.length,
+             fechas: hits.map(function (n) { return n.f; }), score: hits.length ? Math.min(100, rk.length * 18 + hits.length * 4) : 0, n: hits.length, r: rk.length, nt: tn.length,
              tono: tn.length ? tn.reduce(function (s, x) { return s + x; }, 0) / tn.length : null, last: rk[0] || hits[0] };
   }
 

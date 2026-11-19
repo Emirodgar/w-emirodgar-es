@@ -13,7 +13,7 @@ permalink: analisis-universidades
 
 # El imparable avance de la universidad privada en España
 
-Durante los últimos 25 años, el panorama universitario español ha experimentado una metamorfosis silenciosa pero quizá demasiado profunda, que analizamos en detalle en nuestro estudio sobre el [crecimiento de las universidades privadas en España](https://emirodgar.es/universidades-privadas-espana). Mientras la última universidad pública, la Politécnica de Cartagena, abría sus puertas en 1998, el tejido de la educación superior privada ha florecido sin apenas freno: 27 nuevas universidades privadas han surgido desde entonces, más de una por año de media, aproximándose en número a las públicas. Este fenómeno no es casual ni inocente. Responde a una confluencia de factores económicos, demográficos y políticos que están reconfigurando el derecho a la educación superior en nuestro país.
+Durante los últimos 25 años, el panorama universitario español ha experimentado una metamorfosis silenciosa pero quizá demasiado profunda, que analizamos en detalle en nuestro estudio sobre el [crecimiento de las universidades privadas en España](https://emirodgar.es/universidades-privadas-espana/). Mientras la última universidad pública, la Politécnica de Cartagena, abría sus puertas en 1998, el tejido de la educación superior privada ha florecido sin apenas freno: 27 nuevas universidades privadas han surgido desde entonces, más de una por año de media, aproximándose en número a las públicas. Este fenómeno no es casual ni inocente. Responde a una confluencia de factores económicos, demográficos y políticos que están reconfigurando el derecho a la educación superior en nuestro país.
 
 ### La gran redistribución: cómo los estudiantes cambian de bando
 

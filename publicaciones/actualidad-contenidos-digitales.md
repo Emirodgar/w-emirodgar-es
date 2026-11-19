@@ -40,7 +40,7 @@ Lo que empezó como una herramienta para agilizar tareas puede acabar convirtié
 ## ¿Estamos ante una revolución o un riesgo para la información?
 
 La **automatización del contenido** tiene ventajas evidentes: más rapidez, más volumen y menos costes. Pero también está transformando la forma en que **entendemos la información y confiamos en ella**.  
-Si cada texto, noticia o análisis se genera sin intervención humana, ¿cómo sabremos qué es verdad, qué está manipulado o simplemente mal interpretado? Aprender a mirar de frente esa incertidumbre es justo lo que planteo en mi reflexión sobre el [truth coping en la era de la inteligencia artificial](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial).
+Si cada texto, noticia o análisis se genera sin intervención humana, ¿cómo sabremos qué es verdad, qué está manipulado o simplemente mal interpretado? Aprender a mirar de frente esa incertidumbre es justo lo que planteo en mi reflexión sobre el [truth coping en la era de la inteligencia artificial](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/).
 
 El problema no es que la IA escriba, sino que **escriba sola**, sin supervisión ni contraste.  
 Cuando eso ocurre, corremos el riesgo de **perder la perspectiva humana** que da sentido, contexto y criterio a los datos.

@@ -29,7 +29,7 @@ Ejemplo: ChatGPT, Midjourney o Sora son sistemas de IA generativa, cada uno espe
 ## 👻 Alucinación
 
 Ocurre cuando un modelo genera información que suena convincente pero es falsa o inventada, sin ser consciente de ello. No es un fallo técnico puntual, es una consecuencia de cómo funcionan estos modelos: no "saben" cosas, calculan qué palabra es más probable.
-Ejemplo: pedirle a un LLM una cita académica y que invente un artículo, un autor y hasta un año de publicación que no existen. Es uno de los motivos por los que conviene desarrollar el [truth coping del que hablamos en este artículo](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial).
+Ejemplo: pedirle a un LLM una cita académica y que invente un artículo, un autor y hasta un año de publicación que no existen. Es uno de los motivos por los que conviene desarrollar el [truth coping del que hablamos en este artículo](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/).
 
 ## 🧩 Agente de IA
 

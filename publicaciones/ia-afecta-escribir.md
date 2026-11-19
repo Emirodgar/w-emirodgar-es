@@ -128,7 +128,7 @@ Pero sí conviene **mantener cierto equilibrio**. Os dejo mis recomendaciones:
 
 En otras palabras, **no renunciar del todo a la lectura profunda**.
 
-Porque leer de forma exigente no solo sirve para informarse. También es una forma de **entrenar la mente**, un ejercicio que conecta con lo que en otros ámbitos organizativos llamamos [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial): la capacidad de sostener la complejidad de la realidad sin refugiarse en atajos cómodos.
+Porque leer de forma exigente no solo sirve para informarse. También es una forma de **entrenar la mente**, un ejercicio que conecta con lo que en otros ámbitos organizativos llamamos [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/): la capacidad de sostener la complejidad de la realidad sin refugiarse en atajos cómodos.
 
 ---
 

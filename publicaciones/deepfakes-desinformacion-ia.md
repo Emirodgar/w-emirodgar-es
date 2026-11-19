@@ -62,4 +62,4 @@ Es útil, pero con un límite claro: solo identifica contenido hecho con las IA 
 
 ## Aprender a dudar, sin dejar de confiar en nada
 
-El reto de fondo con los deepfakes no es solo técnico ni solo legal, es también cultural: aprender a mirar un vídeo con el mismo escepticismo con el que ya miramos un email sospechoso, sin caer en la paranoia de no creer nada. Es, en el fondo, el mismo ejercicio de [truth coping](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial) del que ya hablamos: aprender a convivir con una realidad donde ver ya no es, automáticamente, creer.
+El reto de fondo con los deepfakes no es solo técnico ni solo legal, es también cultural: aprender a mirar un vídeo con el mismo escepticismo con el que ya miramos un email sospechoso, sin caer en la paranoia de no creer nada. Es, en el fondo, el mismo ejercicio de [truth coping](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/) del que ya hablamos: aprender a convivir con una realidad donde ver ya no es, automáticamente, creer.

@@ -176,7 +176,7 @@ El **Observatorio de las Ocupaciones del Servicio Público de Empleo Estatal** p
 
 El **Observatorio Estatal de Violencia sobre la Mujer** ha desempeñado un papel crucial en la evaluación de políticas contra la violencia de género, la recopilación de estadísticas judiciales y la formulación de recomendaciones que han influido en la legislación española.
 
-El **Observatorio de la Calidad del Sistema Español de Universidades** de ANECA proporciona análisis rigurosos sobre el estado de la evaluación externa de la calidad universitaria, ofreciendo orientación clara para la mejora del sistema, algo especialmente relevante en un sector, el de las [universidades privadas](https://emirodgar.es/universidades-privadas-espana), que no deja de crecer.
+El **Observatorio de la Calidad del Sistema Español de Universidades** de ANECA proporciona análisis rigurosos sobre el estado de la evaluación externa de la calidad universitaria, ofreciendo orientación clara para la mejora del sistema, algo especialmente relevante en un sector, el de las [universidades privadas](https://emirodgar.es/universidades-privadas-espana/), que no deja de crecer.
 
 Estos ejemplos demuestran que cuando los observatorios cuentan con metodologías sólidas, recursos adecuados, independencia técnica y compromiso real con la producción de conocimiento útil, pueden convertirse en herramientas valiosas para la mejora de las políticas públicas.
 

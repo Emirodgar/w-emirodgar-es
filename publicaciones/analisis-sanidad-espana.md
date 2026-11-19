@@ -35,7 +35,7 @@ Más de **1,6 millones de funcionarios optaron por la sanidad privada a través 
 
 ## Una tensión que conecta con otros problemas ya conocidos
 
-Este trasvase hacia la sanidad privada no ocurre en el vacío. Encaja con el mismo patrón que ya vimos al analizar el [crecimiento de las universidades privadas en España](https://emirodgar.es/universidades-privadas-espana): un servicio público que no da abasto y un sector privado que crece para llenar ese hueco, con quien puede pagarlo.
+Este trasvase hacia la sanidad privada no ocurre en el vacío. Encaja con el mismo patrón que ya vimos al analizar el [crecimiento de las universidades privadas en España](https://emirodgar.es/universidades-privadas-espana/): un servicio público que no da abasto y un sector privado que crece para llenar ese hueco, con quien puede pagarlo.
 
 También está directamente relacionado con la [pérdida de poder adquisitivo de los españoles](https://emirodgar.es/evolucion-poder-adquisitivo): pagar una segunda vez por algo que ya pagas con impuestos solo es una opción real si tu economía lo permite. Y con el reto demográfico de fondo: a medida que [la población envejece](https://emirodgar.es/evolucion-poblacion), la presión sobre el sistema público de salud —y sobre las pensiones, como analizamos en [pensiones frente al salario mínimo](https://emirodgar.es/pensiones-smi)— solo va a crecer.
 

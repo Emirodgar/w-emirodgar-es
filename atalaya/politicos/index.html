@@ -39,6 +39,7 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 .hl{font-size:12px;margin-top:6px;color:var(--mut)}.hl a{text-decoration:none}.hl a:hover{color:var(--acc)}
 .tb{width:100%;border-collapse:collapse;font-size:13px}.tb th,.tb td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}.tb th{position:sticky;top:56px;background:#05070a;color:var(--mut);font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap;user-select:none}.tb th.on{color:var(--acc)}.tb tr:hover td{background:var(--panel)}.tbw{overflow-x:auto}
 .btn{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 12px;cursor:pointer}.btn:hover{border-color:var(--acc)}
+.sp{display:inline-block;vertical-align:middle}.tr{font-family:var(--mono);font-size:11px}
 .fl{color:var(--acc)!important;font-weight:600}
 .foot{color:var(--mut);font-size:12px;margin-top:20px;max-width:900px}
 .empty{padding:20px;color:var(--mut)}
@@ -47,7 +48,7 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
 </head>
 <body>
 <script src="/atalaya/assets/shell.js?v=2"></script>
-<script src="/atalaya/assets/personas.js"></script>
+<script src="/atalaya/assets/personas.js?v=2"></script>
 <header class="top">
   <h1 class="pt">Políticos <small>quién gobierna y quién se presenta</small></h1>
   <span class="tagline">Inteligencia electoral</span>
@@ -59,6 +60,9 @@ a{color:inherit}button,select,input{font:inherit;color:inherit}
     <input id="q" type="search" placeholder="Buscar por nombre…" aria-label="Buscar por nombre">
     <select id="ft" aria-label="Territorio"><option value="">Todo el país</option></select>
     <select id="fp" aria-label="Partido"><option value="">Todos los partidos</option></select>
+    <select id="fn" aria-label="Nivel"><option value="">Todos los niveles</option><option value="nacional">Nacional</option><option value="autonómico">Autonómico</option><option value="provincial">Diputación</option><option value="municipal">Municipal</option><option value="circ">Cabeza de lista (circunscripción)</option></select>
+    <select id="fc" aria-label="Cargo"><option value="">Todos los cargos</option><option value="pres">Presidente/a</option><option value="alc">Alcalde/sa</option><option value="cand">Candidato/a</option></select>
+    <select id="fm" aria-label="Tono de la cobertura"><option value="">Cualquier tono</option><option value="neg">Tono negativo</option><option value="neu">Tono neutro</option><option value="pos">Tono positivo</option><option value="nd">Sin datos de tono</option></select>
     <div class="seg" role="group" aria-label="Tipo"><button data-k="" class="on">Todos</button><button data-k="gob">Gobiernan hoy</button><button data-k="cand">Candidatos 29N</button></div>
     <div class="seg" role="group" aria-label="Vista" id="vw"><button data-v="" class="on">Tarjetas</button><button data-v="tabla">Tabla</button></div>
     <button class="btn" id="csv" type="button" title="Descargar la vista filtrada">Exportar CSV</button>
@@ -135,6 +139,23 @@ function photo(el){
   var w=el.dataset.wiki;if(!w)return;
   PE.photoUrl(w).then(function(u){if(u)el.innerHTML='<img src="'+esc(u)+'" alt="'+esc(el.dataset.n)+'" loading="lazy">'});
 }
+function nivel(p){return p.nacional?'nacional':p.amb?{'autonómico':'autonómico','provincial':'provincial','municipal':'municipal'}[p.amb]||'':p.tipo==='cand'?'circ':''}
+function cargo(p){var r=norm(p.rol||'');return /^presidente|^diputado\/a general/.test(r)?'pres':/^alcalde/.test(r)?'alc':p.tipo==='gob'?'':'cand'}
+function tonoK(p){var t=p.risk.tono;return t==null?'nd':t<=-0.3?'neg':t>=0.3?'pos':'neu'}
+/* cobertura de los ultimos 14 dias + tendencia (7 d frente a los 7 anteriores) */
+function dias(p){
+  var now=new Date(),b=[],i;for(i=0;i<14;i++)b.push(0);
+  var t0=Date.UTC(now.getFullYear(),now.getMonth(),now.getDate());
+  (p.risk.fechas||[]).forEach(function(f){var d=Math.floor((t0-Date.UTC(+f.slice(0,4),+f.slice(5,7)-1,+f.slice(8,10)))/864e5);if(d>=0&&d<14)b[13-d]++});
+  return b;
+}
+function spark(p){
+  var b=dias(p),m=Math.max.apply(null,b),tot=b.reduce(function(s,x){return s+x},0);if(!tot)return '';
+  var a=b.slice(7).reduce(function(s,x){return s+x},0),pr=b.slice(0,7).reduce(function(s,x){return s+x},0);
+  var tr=pr>=3?(a>pr*1.25?['▲','var(--bad)','sube']:a<pr*0.75?['▼','var(--ok)','baja']:['■','var(--mut)','estable']):null;
+  var svg='<svg class="sp" width="84" height="16" viewBox="0 0 84 16" role="img" aria-label="Titulares por día, últimos 14 días">'+b.map(function(x,i){var h=x?Math.max(2,Math.round(x/m*16)):1;return '<rect x="'+(i*6)+'" y="'+(16-h)+'" width="5" height="'+h+'" rx="1" fill="'+(x?'var(--acc)':'#1f2937')+'"><title>'+x+' titular'+(x===1?'':'es')+'</title></rect>'}).join('')+'</svg>';
+  return '<div class="hl" title="Titulares por día en los últimos 14 días ('+tot+' en total)">'+svg+(tr?' <span class="tr" style="color:'+tr[1]+'" title="Últimos 7 días ('+a+') frente a los 7 anteriores ('+pr+')">'+tr[0]+' '+tr[2]+'</span>':'')+'</div>';
+}
 function terr(p){
   if(p.nacional)return 'Ámbito nacional';
   if(p.amb==='autonómico'&&p.provs.length)return 'Comunidad · '+p.provs.map(function(c){return prov[c]}).slice(0,3).join(', ')+(p.provs.length>3?'…':'');
@@ -147,13 +168,14 @@ function readUrl(){
   $('ft').value=o.prov&&prov[o.prov]?o.prov:'';
   $('fp').value=o.partido&&$('fp').querySelector('option[value="'+o.partido.replace(/"/g,'')+'"]')?o.partido:'';
   $('q').value=o.q||'';
+  ['fn','fc','fm'].forEach(function(id,i){var k=['nivel','cargo','tono'][i];$(id).value=o[k]&&$(id).querySelector('option[value="'+o[k].replace(/"/g,'')+'"]')?o[k]:''});
   $('fo').value=/^(name|party)$/.test(o.orden||'')?o.orden:'risk';
   kind=/^(gob|cand)$/.test(o.tipo||'')?o.tipo:'';vista=o.vista==='tabla'?'tabla':'';
   document.querySelectorAll('.seg:not(#vw) button').forEach(function(x){x.classList.toggle('on',x.dataset.k===kind)});
   document.querySelectorAll('#vw button').forEach(function(x){x.classList.toggle('on',x.dataset.v===vista)});
 }
 function writeUrl(){
-  var o=[['prov',$('ft').value],['partido',$('fp').value],['tipo',kind],['q',$('q').value.trim()],['orden',$('fo').value==='risk'?'':$('fo').value],['vista',vista]].filter(function(x){return x[1]});
+  var o=[['prov',$('ft').value],['partido',$('fp').value],['nivel',$('fn').value],['cargo',$('fc').value],['tono',$('fm').value],['tipo',kind],['q',$('q').value.trim()],['orden',$('fo').value==='risk'?'':$('fo').value],['vista',vista]].filter(function(x){return x[1]});
   try{history.replaceState(null,'',location.pathname+location.search+(o.length?'#'+o.map(function(x){return x[0]+'='+encodeURIComponent(x[1])}).join('&'):''))}catch(e){}
 }
 var cur=[];
@@ -164,6 +186,9 @@ function render(){
     if(fp&&p.pk!==fp&&!(fp==='FA'&&p.pk==='FA/PODEMOS'))return false;
     if(ft&&!(p.provs.indexOf(ft)>=0||(p.nacional&&p.tipo==='gob')))return false;
     if(q&&!norm(p.nombre||'').includes(q))return false;
+    if($('fn').value&&nivel(p)!==$('fn').value)return false;
+    if($('fc').value&&cargo(p)!==$('fc').value)return false;
+    if($('fm').value&&tonoK(p)!==$('fm').value)return false;
     return true;
   });
   ls.sort(function(a,b){
@@ -189,6 +214,7 @@ function card(p){
   return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
     '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+
     '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
+    (r.n?spark(p):'')+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
     '<div class="hl">'+(fichaUrl(p)?'<a class="fl" href="'+fichaUrl(p)+'">Ver ficha →</a>'+(p.wiki?' · ':''):'')+(p.wiki?'<a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a>':'')+'</div></div></div>';
 }
@@ -210,7 +236,7 @@ $('csv').onclick=csv;
 $('out').addEventListener('click',function(e){var t=e.target.closest&&e.target.closest('th[data-s]');if(!t)return;var k=t.dataset.s;if(sk===k)sd=-sd;else{sk=k;sd=1}render()});
 document.querySelectorAll('#vw button').forEach(function(b){b.onclick=function(){vista=b.dataset.v;document.querySelectorAll('#vw button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
 window.addEventListener('hashchange',function(){readUrl();render()});
-['q','ft','fp','fo'].forEach(function(id){$(id).addEventListener('input',render)});
+['q','ft','fp','fo','fn','fc','fm'].forEach(function(id){$(id).addEventListener('input',render)});
 document.querySelectorAll('.seg:not(#vw) button').forEach(function(b){b.onclick=function(){kind=b.dataset.k;document.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)});render()}});
 })();
 </script>

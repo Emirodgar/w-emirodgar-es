@@ -50,7 +50,7 @@ La IA no espera, y una administración que llega tarde acumula obsolescencia leg
 <li><a class="hub-card" href="https://emirodgar.es/deepfakes-desinformacion-ia"><strong>Deepfakes y desinformación</strong><span>Un problema que ya tiene coste económico.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/manipular-ia-estadisticas-falsas"><strong>Manipular a la IA</strong><span>Qué fácil es contaminar un modelo con datos falsos.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/peligros-ia"><strong>Peligros de la IA</strong><span>Los riesgos que hay que conocer.</span></a></li>
-<li><a class="hub-card" href="https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial"><strong>Truth coping</strong><span>Cómo afrontar la verdad en la era de la IA.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/"><strong>Truth coping</strong><span>Cómo afrontar la verdad en la era de la IA.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/hipnocracia"><strong>Hipnocracia</strong><span>El arte de manipular a la gente.</span></a></li>
 </ul>
 

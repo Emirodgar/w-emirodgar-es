@@ -89,7 +89,7 @@ Aquí está la lección más importante, y no es para quien publica sino para qu
 - **Sube por la cadena de citas.** Antes de copiar un dato en una presentación, un informe o un artículo, busca de dónde sale originalmente. Si todos los caminos terminan en una web sin autoría ni metodología, ahí está el problema.
 - **Contrasta con dos fuentes independientes** cuando la cifra vaya a sostener una decisión: una inversión, una política pública, un titular.
 
-Es un ejercicio de [truth coping](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial) muy concreto: aprender a convivir con una información que llega pulida, citada y con aspecto de rigor, sin que eso la haga cierta.
+Es un ejercicio de [truth coping](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/) muy concreto: aprender a convivir con una información que llega pulida, citada y con aspecto de rigor, sin que eso la haga cierta.
 
 ## Una vulnerabilidad cara de arreglar
 

@@ -51,5 +51,5 @@ La respuesta europea y española ha sido priorizar la confianza, la transparenci
 - **La clave está en la gestión estratégica del cambio**: Es fundamental invertir en formación continua, fomentar la agilidad organizacional y mantener un diálogo abierto entre tecnología, ética y sociedad.
 - **El futuro dependerá de la capacidad de cerrar la brecha**: La evolución de la IA en Europa y España estará marcada por el éxito en reducir la distancia entre el potencial tecnológico y la preparación institucional y social para aprovecharlo de forma segura y responsable.
 
-La Ley de Martec no es una condena, sino una advertencia: la verdadera innovación no solo depende de la tecnología, sino de nuestra capacidad colectiva para adaptarnos y gobernarla. Aceptar esta brecha con honestidad, en lugar de negarla, es en el fondo un ejercicio de [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial) organizativo.
+La Ley de Martec no es una condena, sino una advertencia: la verdadera innovación no solo depende de la tecnología, sino de nuestra capacidad colectiva para adaptarnos y gobernarla. Aceptar esta brecha con honestidad, en lugar de negarla, es en el fondo un ejercicio de [*truth coping*](https://emirodgar.es/truth-coping-afrontar-la-verdad-era-inteligencia-artificial/) organizativo.
 
