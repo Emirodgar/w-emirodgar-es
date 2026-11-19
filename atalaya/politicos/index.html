@@ -115,7 +115,9 @@ Promise.all([
   fetch('../data/indice.json').then(function(r){return r.json()}),
   fetch('../data/fuentes-propias.json').then(function(r){return r.json()}).catch(function(){return {}}),
   fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}),
-  fetch('../fichas/sitemap.xml').then(function(r){return r.ok?r.text():''}).catch(function(){return ''})
+  fetch('../fichas/sitemap.xml').then(function(r){return r.ok?r.text():''}).catch(function(){return ''}),
+  fetch('../data/resultados/congreso-2023-07/circunscripciones.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}),
+  fetch('../data/encuestas.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null})
 ]).then(function(a){
   var nat=a[0].politicos,pp=a[1],ix=a[3];String(a[6]).replace(/fichas\/diputado\/([^\/<]+)\//g,function(m,x){dips[x]=1});news=a[2].noticias;prov=ix.prov;news.forEach(function(n){(n.pv||[]).forEach(function(c){pvN[c]=(pvN[c]||0)+1})});$('upd').innerHTML='Titulares recogidos: '+esc(new Date(a[2].generado).toLocaleString('es-ES',{dateStyle:'medium',timeStyle:'short'}))+' · Cargos: Wikidata ('+esc(pp.actualizado||'')+') · Candidatos: Wikipedia';
   if(a[5]&&a[5].items)news.forEach(function(n){var s=a[5].items[n.i];if(s)n.s=s});
@@ -141,8 +143,8 @@ Promise.all([
   $('ft').innerHTML+=Object.keys(prov).sort(function(x,y){return prov[x].localeCompare(prov[y],'es')}).map(function(c){return '<option value="'+c+'">'+esc(prov[c])+'</option>'}).join('');
   var pk={};P.forEach(function(p){if(p.pk)pk[p.pk]=1});
   $('fp').innerHTML+=Object.keys(pk).sort(function(x,y){return (PORDER.indexOf(x)+99)%99-(PORDER.indexOf(y)+99)%99}).map(function(k){return '<option value="'+esc(k)+'">'+esc(PNAME[k]||k)+'</option>'}).join('');
-  readUrl();
-  $('foot').innerHTML='Esta etiqueta <b>no valora a la persona</b>: describe cuánta cobertura de prensa recibe en los titulares recogidos. <b>Neutro</b> si no hay menciones; <b>Con cobertura</b> si aparece en titulares; <b>Cobertura de riesgo</b> si 2 a 5 titulares traen hechos de riesgo (por ejemplo detenciones, imputaciones o accidentes, según palabras clave o la clasificación automática); <b>Alta cobertura de riesgo</b> a partir de 6. Un titular de riesgo no implica responsabilidad de la persona citada. Tuits y redes aún no están conectados. Cargos: Wikidata ('+esc(pp.actualizado||'')+'). Candidatos: <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a>. Fotos: Wikipedia / Wikimedia Commons. Verifica antes de usar.';
+  readUrl();try{buildElect(a[7],a[8])}catch(e){EL={}}
+  $('foot').innerHTML='Esta etiqueta <b>no valora a la persona</b>: describe cuánta cobertura de prensa recibe en los titulares recogidos. <b>Neutro</b> si no hay menciones; <b>Con cobertura</b> si aparece en titulares; <b>Cobertura de riesgo</b> si 2 a 5 titulares traen hechos de riesgo (por ejemplo detenciones, imputaciones o accidentes, según palabras clave o la clasificación automática); <b>Alta cobertura de riesgo</b> a partir de 6. Un titular de riesgo no implica responsabilidad de la persona citada. Tuits y redes aún no están conectados. Cargos: Wikidata ('+esc(pp.actualizado||'')+'). Candidatos: <a href="https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2026" target="_blank" rel="noopener">Wikipedia</a>. Fotos: Wikipedia / Wikimedia Commons. Verifica antes de usar.'+ELNOTE;
   render();
 });
 
@@ -204,6 +206,48 @@ function writeUrl(){
   try{history.replaceState(null,'',location.pathname+location.search+(o.length?'#'+o.map(function(x){return x[0]+'='+encodeURIComponent(x[1])}).join('&'):''))}catch(e){}
 }
 var cur=[],cnt={},sel=[];
+/* ---------- probabilidad de escaño (orientativa) ----------
+   Votos de 2023 por circunscripción x cambio de cada partido entre su resultado nacional de 2023 y la media de encuestas
+   (swing nacional uniforme), con ruido aleatorio (nacional y provincial) y Ley d'Hondt con barrera del 3 %. */
+var EL={},ELINFO=null;
+var ELNOTE=' <b>Probabilidad de escaño</b>: estimación orientativa solo para cabezas de lista de PP, PSOE, VOX y Frente Amplio (este último comparado con Sumar y Podemos en 2023). Parte de los votos de 2023 en cada circunscripción, aplica el cambio nacional de la media de encuestas (sin CIS, últimos 30 días) y simula 400 variaciones aleatorias con la Ley d’Hondt y barrera del 3 %. No usa encuestas provinciales y no es una predicción; es la probabilidad de que su partido obtenga al menos un escaño.';
+var PK2R={PP:'PP',PSOE:'PSOE',VOX:'VOX',FA:'SUMAR',ERC:'ERC',JUNTS:'JxCAT - JUNTS',PNV:'EAJ-PNV',BNG:'B.N.G.',EHB:'EH Bildu',CC:'CCa'};
+var MODEL={PP:1,PSOE:1,VOX:1,SUMAR:1};
+function dh(v,m,min){var q=[],k;for(k in v){if(v[k]<min)continue;for(var i=1;i<=m;i++)q.push([v[k]/i,k])}q.sort(function(a,b){return b[0]-a[0]});var r={};q.slice(0,m).forEach(function(x){r[x[1]]=(r[x[1]]||0)+1});return r}
+function mulberry(a){return function(){a|=0;a=a+0x6D2B79F5|0;var t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+function buildElect(res,enc){
+  EL={};ELINFO=null;if(!res||!enc||!res.prov)return;
+  var pr=res.prov,codes=Object.keys(pr),tot=0,sums={};
+  codes.forEach(function(c){tot+=pr[c].validos;for(var k in pr[c].v)sums[k]=(sums[k]||0)+pr[c].v[k][0]});
+  var sh=function(k){return (sums[k]||0)/tot*100};
+  var ps=(enc.encuestas||[]).filter(function(x){return x.voto&&!/cis/i.test(x.empresa||'')&&x.fecha});if(!ps.length)return;
+  ps.sort(function(a,b){return b.fecha<a.fecha?-1:1});var last=new Date(ps[0].fecha);
+  ps=ps.filter(function(x){return (last-new Date(x.fecha))/864e5<=30});
+  var acc={},wt={};ps.forEach(function(x){var w=Math.sqrt(x.muestra||1000);for(var k in x.voto){acc[k]=(acc[k]||0)+x.voto[k]*w;wt[k]=(wt[k]||0)+w}});
+  var poll={};for(var k in acc)poll[k]=acc[k]/wt[k];
+  if(!poll.PP||!poll.PSOE||!poll.VOX)return;
+  var tgt={PP:poll.PP,PSOE:poll.PSOE,VOX:poll.VOX,SUMAR:(poll.SUMAR||0)+(poll.PODEMOS||0)},rat={},used=0,old=0;
+  for(k in tgt){rat[k]=tgt[k]/Math.max(sh(k),.1);used+=tgt[k];old+=sh(k)}
+  var ro=Math.max(.2,Math.min(3,(100-used)/Math.max(100-old,1)));
+  ELINFO={n:ps.length,fecha:ps[0].fecha};
+  codes.forEach(function(c){
+    var d=pr[c],m=0,keys=Object.keys(d.v);keys.forEach(function(k){m+=d.v[k][1]});if(!m)return;
+    var rnd=mulberry(parseInt(c,10)*7919+13),gauss=function(){return Math.sqrt(-2*Math.log(1-rnd()))*Math.cos(2*Math.PI*rnd())};
+    var run=function(sn,sp){var v={},tv=d.validos;keys.forEach(function(k){var x=d.v[k][0],r=MODEL[k]?rat[k]:ro;if(sn)r*=Math.exp(sn*(MODEL[k]?G[k]:0));if(sp)r*=Math.exp(sp*gauss());v[k]=x*r;tv+=v[k]-x});return dh(v,m,.03*tv)};
+    var G={},base=run(0,0),cnt={},n=400,tl={};
+    keys.forEach(function(k){cnt[k]=0});
+    for(var i=0;i<n;i++){for(var kk in MODEL)G[kk]=gauss();var r=run(.08,.1);for(var k2 in r)cnt[k2]++}
+    EL[c]={m:m,t:Object.keys(MODEL).reduce(function(o,k){var x=d.v[k];if(x)o[k]={s23:x[1],p23:x[0]/d.validos*100,est:base[k]||0,prob:cnt[k]/n};return o},{})};
+    keys.forEach(function(k){if(!MODEL[k]&&!EL[c].t[k])EL[c].t[k]={s23:d.v[k][1],p23:d.v[k][0]/d.validos*100,est:null,prob:null}});
+  });
+}
+function elOf(p){if(p.tipo!=='cand'||p.nacional||p.provs.length!==1)return null;var e=EL[p.provs[0]],k=PK2R[p.pk];return e&&k&&e.t[k]?{m:e.m,d:e.t[k]}:null}
+function elLine(p){
+  var e=elOf(p);if(!e)return '';var d=e.d,h23=d.s23+' de '+e.m+' escaños en 2023 ('+d.p23.toFixed(1)+' % de los votos)';
+  if(d.prob==null)return '<div class="hl" title="Sin estimación para este partido.">🗳 '+h23+'</div>';
+  var pc=Math.round(d.prob*100),c=pc>=80?'var(--ok)':pc>=40?'var(--warn)':'var(--mut)';
+  return '<div class="hl" title="Probabilidad orientativa de que su partido obtenga al menos un escaño en esta circunscripción (como cabeza de lista ocuparía el primero). Estimación central: '+d.est+' de '+e.m+'. Ver nota al pie.">🗳 Escaño: <b style="color:'+c+'">~'+pc+' %</b> · '+h23+'</div>';
+}
 /* ---------- mapa ---------- */
 var map=null,layer=null,gjProv=null;
 var key=function(p){return p.tipo+'|'+(p.wiki||p.nombre||p.slot)+'|'+p.pk};
@@ -237,7 +281,7 @@ function cbar(){$('cbar').classList.toggle('on',sel.length>0);$('cn').textConten
 function cmpView(){
   var ps=sel.map(function(k){return P.filter(function(p){return key(p)===k})[0]}).filter(Boolean),el=$('cmpv');
   if(ps.length<2){el.hidden=true;return}
-  var rows=[['Partido',function(p){return PNAME[p.pk]||p.pk||''}],['Cargo',function(p){return p.rol||''}],['Territorio',terr],['Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]}],['Titulares',function(p){return p.risk.n}],['De riesgo',function(p){return p.risk.r}],['Cobertura (0-100)',function(p){return p.risk.score}],['Tono medio',function(p){return p.risk.nt?(p.risk.tono>0?'+':'')+p.risk.tono.toFixed(1)+' ('+p.risk.nt+' titulares)':'sin datos'}],['Últimos 14 días',function(p){return p.risk.n?spark(p).replace('class="hl"','style="font-size:12px"'):'—'}],['Último titular',function(p){return p.risk.n?'<a href="'+esc(p.risk.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(p.risk.last.t).slice(0,100))+'</a>':'—'}],['Ficha',function(p){var u=fichaUrl(p);return u?'<a class="fl" href="'+u+'">Ver ficha →</a>':'—'}]];
+  var rows=[['Partido',function(p){return PNAME[p.pk]||p.pk||''}],['Cargo',function(p){return p.rol||''}],['Territorio',terr],['Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]}],['Titulares',function(p){return p.risk.n}],['De riesgo',function(p){return p.risk.r}],['Prob. de escaño',function(p){var e=elOf(p);return e&&e.d.prob!=null?'~'+Math.round(e.d.prob*100)+' % (2023: '+e.d.s23+' de '+e.m+')':'—'}],['Cobertura (0-100)',function(p){return p.risk.score}],['Tono medio',function(p){return p.risk.nt?(p.risk.tono>0?'+':'')+p.risk.tono.toFixed(1)+' ('+p.risk.nt+' titulares)':'sin datos'}],['Últimos 14 días',function(p){return p.risk.n?spark(p).replace('class="hl"','style="font-size:12px"'):'—'}],['Último titular',function(p){return p.risk.n?'<a href="'+esc(p.risk.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(p.risk.last.t).slice(0,100))+'</a>':'—'}],['Ficha',function(p){var u=fichaUrl(p);return u?'<a class="fl" href="'+u+'">Ver ficha →</a>':'—'}]];
   var raw={'Últimos 14 días':1,'Último titular':1,'Ficha':1};
   el.innerHTML='<table><thead><tr><th></th>'+ps.map(function(p){return '<th style="color:var(--txt);font-size:14px;font-family:Inter,sans-serif;text-transform:none">'+esc(p.nombre||'Por definir')+'</th>'}).join('')+'</tr></thead><tbody>'+rows.map(function(r){return '<tr><th>'+r[0]+'</th>'+ps.map(function(p){var v=r[1](p);return '<td>'+(raw[r[0]]?v:esc(v))+'</td>'}).join('')+'</tr>'}).join('')+'</tbody></table><button class="btn" id="cclose" type="button" style="margin-top:8px">Cerrar comparación</button>';
   el.hidden=false;$('cclose').onclick=function(){el.hidden=true};el.scrollIntoView({block:'nearest'});
@@ -279,13 +323,13 @@ var STC={crisis:'var(--bad)',press:'var(--warn)',focus:'var(--acc)',none:'var(--
 function card(p){
   var r=p.risk,col=PCOL[p.pk]||'#94a3b8',c=STC[r.k];
   return '<div class="pc"><div class="big" data-wiki="'+esc(p.wiki||'')+'" data-n="'+esc(p.nombre||'')+'" data-r="'+esc(p.rol||'')+'" style="border-color:'+col+'">'+esc(p.nombre?initials(p.nombre):'?')+'</div><div style="min-width:0">'+
-    '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+lowS(p)+
+    '<b>'+esc(p.nombre||'Por definir')+'</b><div class="rol">'+esc(p.rol||'')+' · <span style="color:'+col+'">'+esc(PNAME[p.pk]||p.pk||'')+'</span></div><div class="terr">'+esc(terr(p))+'</div>'+lowS(p)+elLine(p)+
     '<div class="risk"><span class="st" style="color:'+c+'">'+r.label+'</span>'+(r.n?'<div class="bar"><i style="width:'+r.score+'%;background:'+c+'"></i></div><span>'+r.score+'</span>'+(r.nt?'<span title="Tono medio de '+r.nt+' titulares donde aparece (orientativo: el modelo valora la noticia, no a la persona)">· tono '+(r.tono>0?'+':'')+r.tono.toFixed(1)+'</span>':''):'<span style="color:var(--mut)">sin información</span>')+'</div>'+
     (r.n?spark(p):'')+
     (r.n?'<div class="hl">'+r.n+' titular'+(r.n>1?'es':'')+(r.r?' · '+r.r+' de riesgo':'')+' · <a href="'+esc(r.last.u)+'" target="_blank" rel="noopener">'+esc(cleanTitle(r.last.t).slice(0,90))+'</a></div>':'')+
     '<div class="hl">'+(fichaUrl(p)?'<a class="fl" href="'+fichaUrl(p)+'">Ver ficha →</a>'+(p.wiki?' · ':''):'')+(p.wiki?'<a href="https://es.wikipedia.org/wiki/'+encodeURIComponent(p.wiki)+'" target="_blank" rel="noopener">Wikipedia</a>':'')+'</div>'+(p.nombre?'<label class="cmp"><input class="cc" type="checkbox" data-k="'+esc(key(p))+'"'+(sel.indexOf(key(p))>=0?' checked':'')+'> Comparar</label>':'')+'</div></div>';
 }
-var COLS=[['nombre','Nombre',function(p){return p.nombre||'Por definir'}],['partido','Partido',function(p){return PNAME[p.pk]||p.pk||''}],['cargo','Cargo',function(p){return p.rol||''}],['territorio','Territorio',terr],['tipo','Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]||p.tipo}],['titulares','Titulares',function(p){return p.risk.n}],['score','Cobertura',function(p){return p.risk.score}],['tono','Tono',function(p){return p.risk.nt?+p.risk.tono.toFixed(1):''}]];
+var COLS=[['nombre','Nombre',function(p){return p.nombre||'Por definir'}],['partido','Partido',function(p){return PNAME[p.pk]||p.pk||''}],['cargo','Cargo',function(p){return p.rol||''}],['territorio','Territorio',terr],['tipo','Tipo',function(p){return {gob:'Gobierna hoy',cand:'Candidato 29N',seg:'En seguimiento'}[p.tipo]||p.tipo}],['titulares','Titulares',function(p){return p.risk.n}],['score','Cobertura',function(p){return p.risk.score}],['tono','Tono',function(p){return p.risk.nt?+p.risk.tono.toFixed(1):''}],['esc','Prob. escaño (%)',function(p){var e=elOf(p);return e&&e.d.prob!=null?Math.round(e.d.prob*100):''}],['esc23','Escaños 2023 (partido)',function(p){var e=elOf(p);return e?e.d.s23+' de '+e.m:''}]];
 function table(ls){
   var c=COLS.filter(function(x){return x[0]===sk})[0];
   if(c)ls=ls.slice().sort(function(a,b){var x=c[2](a),y=c[2](b);return (typeof x==='number'&&typeof y==='number'?x-y:String(x).localeCompare(String(y),'es'))*sd});
