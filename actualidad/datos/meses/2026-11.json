@@ -771,7 +771,7 @@
         "titulo": "Trump, Putin y Xi Jinping se reúnen en China en una cumbre histórica: \"Compartimos la responsabilidad de mantener la paz mundial\"",
         "url": "https://www.elmundo.es/internacional/2026/11/19/6afe5afa21efa0b2798b457b.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-19",
@@ -798,6 +798,48 @@
         "medio": "El Mundo",
         "titulo": "Vicente Luis Mora, primer español en lograr el National Book Award, el premio literario más importante de EEUU",
         "url": "https://www.elmundo.es/cultura/literatura/2026/11/19/6afe9199e85ece407a8b45a5.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-20",
+      "edicion": "2026-11-20",
+      "titulo": "Caída de misiles rusos en Polonia",
+      "categoria": "Internacional",
+      "descripcion": "Dos misiles rusos cayeron en territorio polaco, lo que llevó a Varsovia a pedir a la OTAN reforzar la defensa de la frontera oriental.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Dos misiles rusos caen en territorio polaco y Varsovia pedirá a la OTAN reforzar la defensa de la frontera oriental",
+        "url": "https://www.elmundo.es/internacional/2026/11/20/6afff1b621efa002318b459c.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-20",
+      "edicion": "2026-11-20",
+      "titulo": "Aprobación del decreto de centros de datos",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno aprobó el decreto de centros de datos a nueve días de las elecciones, desoyendo al sector que cifra en 67.000 millones de euros las inversiones en riesgo.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Sánchez desoye al sector y aprueba el decreto de centros de datos a nueve días de las elecciones",
+        "url": "https://www.elmundo.es/economia/empresas/2026/11/20/6b00340be85ecec7198b4571.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-20",
+      "edicion": "2026-11-20",
+      "titulo": "Liberación de millonario acusado de financiar a Hamás",
+      "categoria": "Sucesos",
+      "descripcion": "La Audiencia Nacional dejó libre al millonario americano James Cox Chambers, acusado de financiar a Hamás, por \"errores sustanciales\" en la traducción de la petición de extradición de EE. UU.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Audiencia deja libre al millonario americano acusado de financiar a Hamas por \"errores sustanciales\" en la traducción de la petición de extradición de EEUU",
+        "url": "https://www.elmundo.es/espana/2026/11/20/6b002a6421efa0631f8b4575.html"
       },
       "destacado": false
     }

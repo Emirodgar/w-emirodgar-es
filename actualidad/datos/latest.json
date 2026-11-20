@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-19",
-  "generado_en": "2026-11-19T14:14:09+00:00",
-  "titular": "Cumbre histórica en China con Trump, Putin y Xi; Puigdemont revela negociaciones con el PSOE y genera reacciones políticas",
+  "fecha": "2026-11-20",
+  "generado_en": "2026-11-20T13:55:05+00:00",
+  "titular": "Feijóo se impone a Sánchez en el debate electoral, mientras la economía y la geopolítica marcan la agenda",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 217
+    "El Mundo": 26,
+    "The Objective": 213
   },
   "temas": [
     {
-      "tema": "Cumbre trilateral en China",
-      "categoria": "Internacional",
-      "descripcion": "Los presidentes de China, Estados Unidos y Rusia se han reunido en una cumbre histórica para discutir la paz mundial, la no proliferación nuclear y la reforma de la ONU."
-    },
-    {
-      "tema": "Declaraciones de Puigdemont y reacciones políticas",
+      "tema": "Debate electoral Sánchez-Feijóo",
       "categoria": "Política",
-      "descripcion": "Carles Puigdemont ha afirmado haber usado la ambición de Sánchez para \"derrotar a España\", lo que ha generado denuncias de Vox y críticas del PP."
+      "descripcion": "Análisis y reacciones al cara a cara entre los candidatos a la presidencia, con percepciones de victoria para Feijóo y críticas a la actuación de Sánchez desde la izquierda."
     },
     {
-      "tema": "Aumento de la conflictividad en centros educativos",
-      "categoria": "Sociedad",
-      "descripcion": "Las peticiones de ayuda de profesores por faltas de respeto y falsas acusaciones han aumentado un 20%, evidenciando una creciente conflictividad."
+      "tema": "Tensión geopolítica en Europa",
+      "categoria": "Internacional",
+      "descripcion": "Caída de misiles rusos en Polonia y el bloqueo marroquí de obras en Ceuta, elevando la preocupación por la seguridad y las disputas territoriales."
     },
     {
-      "tema": "Expedientes de la Comisión Europea a España",
+      "tema": "Situación económica y tecnológica",
       "categoria": "Economía",
-      "descripcion": "Bruselas ha expedientado a España por incumplir directivas europeas contra la malversación y por exceder los días de pesca permitidos."
+      "descripcion": "Preocupación por una posible burbuja en la IA y la aprobación del decreto de centros de datos, junto con el aumento de las ventas industriales."
+    },
+    {
+      "tema": "Actividad judicial y seguridad",
+      "categoria": "Sucesos",
+      "descripcion": "Liberación de un millonario acusado de financiar a Hamás, intento de agresión en un centro de menores y desarticulación de tramas criminales."
     }
   ]
 }
