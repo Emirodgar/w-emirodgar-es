@@ -48,6 +48,7 @@ h3{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:upp
 .af .who{font-family:var(--mono);font-size:12px;color:var(--mut)}
 .tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl td,.tbl th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}.tbl th{color:var(--mut);font-weight:500}
 a.s{color:var(--acc);text-decoration:none}a.s:hover{text-decoration:underline}
+.prom{margin-top:10px;padding-top:8px;border-top:1px dashed var(--line)}.pr{font-size:13px;margin-bottom:6px}
 ul.l{margin-left:18px}ul.l li{margin-bottom:4px}
 @media (max-width:800px){.kp{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}.pc{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
@@ -108,6 +109,15 @@ function bar(a,b,pa,pb,ca,cb){
   return '<div class="bar" role="img" aria-label="'+esc(pa)+' '+num(a)+' %, '+esc(pb)+' '+num(b)+' %"><span style="width:'+a+'%;background:'+ca+'">'+num(a)+'</span><span style="width:'+rest+'%;background:#334155"></span><span style="width:'+b+'%;background:'+cb+'">'+num(b)+'</span></div>';
 }
 
+var REL={coincide:'Coincide con el programa',tema:'Mismo tema en el programa'};
+function prom(d,ls){
+  if(!ls||!ls.length||!d.promesas_ref)return '';
+  return '<div class="prom"><div class="mut" style="margin-bottom:4px">Programas electorales relacionados</div>'+ls.map(function(l){
+    var r=d.promesas_ref[l.id];if(!r)return '';
+    return '<div class="pr"><span class="chip">'+esc(r.partido)+' '+esc(r.anio)+' · p. '+esc(r.pagina)+'</span> <span class="v v-'+(l.relacion==='coincide'?'verdadero':'sin_veredicto')+'">'+esc(REL[l.relacion]||l.relacion)+'</span> '+
+      esc(r.enunciado)+(l.nota?' <span class="mut">'+esc(l.nota)+'</span>':'')+' '+lnk(r.url_documento||'','Programa')+'</div>';
+  }).join('')+'</div>';
+}
 function detalle(d){
   document.title=d.titulo+' | Atalaya';
   var P={};d.participantes.forEach(function(p){P[p.id]=p});
@@ -125,7 +135,7 @@ function detalle(d){
   h+='<h3>Qué se dijo, bloque a bloque</h3>';
   d.bloques.forEach(function(b){
     h+='<article class="card"><div class="pad" style="padding-bottom:0"><div class="k">'+esc(b.tema)+'</div></div><div class="cols">'+
-      b.resumen.map(function(r){var p=P[r.p];return '<div class="pc" style="--c:'+esc(p.color)+'"><b>'+esc(p.nombre)+' · '+esc(p.partido)+'</b><div>'+esc(r.t)+'</div></div>'}).join('')+'</div></article>';
+      b.resumen.map(function(r){var p=P[r.p];return '<div class="pc" style="--c:'+esc(p.color)+'"><b>'+esc(p.nombre)+' · '+esc(p.partido)+'</b><div>'+esc(r.t)+'</div></div>'}).join('')+'</div>'+(b.promesas?'<div class="pad" style="border-top:1px solid var(--line)">'+prom(d,b.promesas)+'</div>':'')+'</article>';
   });
 
   h+='<h3>Verificación de datos</h3><p class="note">'+esc(d.verificacion_meta.texto)+' '+lnk(d.verificacion_meta.fuente,'Fuente')+'<br><b>Ojo:</b> '+esc(d.verificacion_meta.sesgo)+'</p>';
@@ -134,7 +144,7 @@ function detalle(d){
   d.afirmaciones.forEach(function(a){
     var p=P[a.p];
     h+='<div class="af"><div class="who" style="color:'+esc(p.color)+'">'+esc(p.nombre)+' · '+esc(a.tema)+'</div><div style="margin:3px 0"><b>'+esc(a.afirmacion)+'</b></div><div class="mut">'+esc(a.contraste)+'</div><div style="margin-top:6px">'+
-      a.veredictos.map(function(v){return '<span class="v v-'+esc(v.veredicto)+'" title="'+esc(v.verificador)+'">'+esc(v.verificador)+': '+esc(v.etiqueta)+'</span>'}).join('')+'</div>'+(a.nota?'<div class="mut" style="margin-top:4px">'+esc(a.nota)+'</div>':'')+'</div>';
+      a.veredictos.map(function(v){return '<span class="v v-'+esc(v.veredicto)+'" title="'+esc(v.verificador)+'">'+esc(v.verificador)+': '+esc(v.etiqueta)+'</span>'}).join('')+'</div>'+(a.nota?'<div class="mut" style="margin-top:4px">'+esc(a.nota)+'</div>':'')+prom(d,a.promesas)+'</div>';
   });
   h+='</article>';
 

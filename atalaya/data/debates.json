@@ -73,6 +73,28 @@
               "p": "feijoo",
               "t": "Pidió no culpar a las comunidades autónomas. Propuso ley antiocupación, fondo estatal para arrendatarios, bonificaciones para jóvenes y construir un millón de viviendas; acusó a Sánchez de no ejecutar la mitad del presupuesto de vivienda."
             }
+          ],
+          "promesas": [
+            {
+              "id": "dca2966d9103",
+              "relacion": "coincide",
+              "nota": "Feijóo propuso construir un millón de viviendas: figura en su programa de 2026."
+            },
+            {
+              "id": "93e40e45a255",
+              "relacion": "coincide",
+              "nota": "Ley para recuperar la vivienda ocupada en 48 horas."
+            },
+            {
+              "id": "06d17f92bc0f",
+              "relacion": "tema",
+              "nota": "El PP de 2023 prometía derogar la ley de vivienda; en el debate Sánchez pidió no derogarla."
+            },
+            {
+              "id": "abc597bd6cfd",
+              "relacion": "coincide",
+              "nota": "Sánchez defendió la contención de precios de la Ley de Vivienda."
+            }
           ]
         },
         {
@@ -85,6 +107,13 @@
             {
               "p": "feijoo",
               "t": "Acusó al Gobierno de recaudar en exceso, habló de la subida de precios (leche, huevos) y de la deuda; propuso revalorizar pensiones con el IPC y bajar impuestos."
+            }
+          ],
+          "promesas": [
+            {
+              "id": "7dd34c2389a9",
+              "relacion": "coincide",
+              "nota": "Feijóo propuso revalorizar las pensiones con el IPC."
             }
           ]
         },
@@ -99,6 +128,13 @@
               "p": "sanchez",
               "t": "Pidió perdón a las víctimas, ofreció un pacto de Estado para blindar la revalorización de las pensiones en la Constitución y preguntó si Feijóo privatizaría el sistema público de pensiones; Feijóo respondió que lo garantizará."
             }
+          ],
+          "promesas": [
+            {
+              "id": "b6af31643704",
+              "relacion": "coincide",
+              "nota": "Sánchez ofreció blindar la revalorización de las pensiones en la Constitución, como en su programa de 2023."
+            }
           ]
         },
         {
@@ -112,6 +148,12 @@
               "p": "sanchez",
               "t": "Pidió perdón por los casos que afectan al PSOE, dijo que la corrupción cero no existe pero sí la tolerancia cero, y calificó al PP de formación más corrupta del sistema."
             }
+          ],
+          "promesas": [
+            {
+              "id": "5636204b3a2d",
+              "relacion": "tema"
+            }
           ]
         },
         {
@@ -124,6 +166,21 @@
             {
               "p": "sanchez",
               "t": "Negó que haya pruebas de que Marruecos esté detrás, citó un informe del CNI entregado a la Audiencia Nacional y defendió la aportación de la inmigración frente al invierno demográfico."
+            }
+          ],
+          "promesas": [
+            {
+              "id": "a87c4d53eb02",
+              "relacion": "tema"
+            },
+            {
+              "id": "0cc3e98b41dd",
+              "relacion": "tema"
+            },
+            {
+              "id": "b9915fbfad31",
+              "relacion": "tema",
+              "nota": "Feijóo propuso que Ceuta fuese el primer asunto del Consejo de Ministros."
             }
           ]
         },
@@ -189,6 +246,18 @@
               "veredicto": "sin_veredicto",
               "etiqueta": "T'ho expliquem (sin veredicto)"
             }
+          ],
+          "promesas": [
+            {
+              "id": "640107d345c7",
+              "relacion": "tema",
+              "nota": "El programa de 2023 fija metas de vivienda pública (183.000 para alquiler); el millón citado incluye vivienda libre."
+            },
+            {
+              "id": "fb5f2bae659b",
+              "relacion": "tema",
+              "nota": "Compromiso de alcanzar el 20 % de vivienda pública."
+            }
           ]
         },
         {
@@ -229,7 +298,18 @@
               "etiqueta": "Falso"
             }
           ],
-          "nota": "Hay discrepancia entre verificadores con el mismo dato de partida; Newtral recoge la afirmación como «600 euros»."
+          "nota": "Hay discrepancia entre verificadores con el mismo dato de partida; Newtral recoge la afirmación como «600 euros».",
+          "promesas": [
+            {
+              "id": "19f5dd4aa99f",
+              "relacion": "tema"
+            },
+            {
+              "id": "b6af31643704",
+              "relacion": "tema",
+              "nota": "Blindar el poder adquisitivo de las pensiones con IPC."
+            }
+          ]
         },
         {
           "id": "ave-19000",
@@ -262,6 +342,18 @@
               "verificador": "Verificat",
               "veredicto": "falso",
               "etiqueta": "Fals"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "74d65111764c",
+              "relacion": "tema",
+              "nota": "Meta de alta velocidad del programa de 2023."
+            },
+            {
+              "id": "6b94a3f03637",
+              "relacion": "tema",
+              "nota": "Programa del PP: renovar vías y trenes antiguos de alta velocidad."
             }
           ]
         },
@@ -301,6 +393,13 @@
               "verificador": "Maldita",
               "veredicto": "falso",
               "etiqueta": "Falso"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "e84a61aeb76d",
+              "relacion": "tema",
+              "nota": "Recursos para la Ley de Libertad Sexual (programa del PSOE de 2023)."
             }
           ]
         },
@@ -350,6 +449,13 @@
               "veredicto": "sin_veredicto",
               "etiqueta": "Mide sobre el PIB"
             }
+          ],
+          "promesas": [
+            {
+              "id": "cba719e041a8",
+              "relacion": "tema",
+              "nota": "Reducir la deuda con objetivos conforme a las reglas europeas."
+            }
           ]
         },
         {
@@ -365,7 +471,13 @@
               "etiqueta": "Falso"
             }
           ],
-          "nota": "Según El Debate, la cifra de El País está muy cerca de la afirmada."
+          "nota": "Según El Debate, la cifra de El País está muy cerca de la afirmada.",
+          "promesas": [
+            {
+              "id": "7e9cdf41b490",
+              "relacion": "tema"
+            }
+          ]
         },
         {
           "id": "ceuta-100k",
@@ -385,7 +497,17 @@
               "etiqueta": "Coincide con la estimación de Vivas"
             }
           ],
-          "nota": "Los verificadores discrepan entre sí."
+          "nota": "Los verificadores discrepan entre sí.",
+          "promesas": [
+            {
+              "id": "a87c4d53eb02",
+              "relacion": "tema"
+            },
+            {
+              "id": "b9915fbfad31",
+              "relacion": "tema"
+            }
+          ]
         },
         {
           "id": "cuerpo-pensiones",
@@ -409,6 +531,13 @@
               "veredicto": "falso",
               "etiqueta": "Fals"
             }
+          ],
+          "promesas": [
+            {
+              "id": "7dd34c2389a9",
+              "relacion": "tema",
+              "nota": "El programa del PP de 2026 propone actualizar las pensiones con el IPC cada año."
+            }
           ]
         },
         {
@@ -422,6 +551,13 @@
               "verificador": "Newtral",
               "veredicto": "falso",
               "etiqueta": "Incorrecto"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "52ce81125e94",
+              "relacion": "tema",
+              "nota": "La cita del programa del PP habla de una ley de programación de la defensa sin fijar un porcentaje del PIB."
             }
           ]
         },
@@ -462,7 +598,13 @@
               "etiqueta": "Verdader, con matiz"
             }
           ],
-          "nota": "Maldita y Verificat recuerdan que en otros momentos Sánchez dijo que lo pagaba todo el Gobierno central."
+          "nota": "Maldita y Verificat recuerdan que en otros momentos Sánchez dijo que lo pagaba todo el Gobierno central.",
+          "promesas": [
+            {
+              "id": "ca933f8756a1",
+              "relacion": "tema"
+            }
+          ]
         },
         {
           "id": "alquiler-bcn-69",
@@ -475,6 +617,17 @@
               "verificador": "Verificat",
               "veredicto": "enganoso",
               "etiqueta": "Enganyós"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "abc597bd6cfd",
+              "relacion": "tema",
+              "nota": "Medidas de la Ley de Vivienda para contener precios."
+            },
+            {
+              "id": "149e82405a72",
+              "relacion": "tema"
             }
           ]
         },
@@ -489,6 +642,16 @@
               "verificador": "Verificat",
               "veredicto": "enganoso",
               "etiqueta": "Enganyós"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "149e82405a72",
+              "relacion": "tema"
+            },
+            {
+              "id": "abc597bd6cfd",
+              "relacion": "tema"
             }
           ]
         },
@@ -510,7 +673,14 @@
               "etiqueta": "Verdader"
             }
           ],
-          "nota": "En la misma intervención citó un +110 % en legumbres secas; los datos del INE dan +24,3 %."
+          "nota": "En la misma intervención citó un +110 % en legumbres secas; los datos del INE dan +24,3 %.",
+          "promesas": [
+            {
+              "id": "d00247c6ebb3",
+              "relacion": "tema",
+              "nota": "Propone reducir temporalmente el IVA a carne, pescados y conservas."
+            }
+          ]
         },
         {
           "id": "pobreza-infantil",
@@ -528,6 +698,17 @@
               "verificador": "Verificat",
               "veredicto": "verdadero",
               "etiqueta": "Verdader"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "53159125e202",
+              "relacion": "tema",
+              "nota": "Reducir drásticamente la pobreza infantil."
+            },
+            {
+              "id": "14d1efa7c540",
+              "relacion": "tema"
             }
           ]
         },
@@ -562,6 +743,16 @@
               "veredicto": "verdadero",
               "etiqueta": "Verdader"
             }
+          ],
+          "promesas": [
+            {
+              "id": "d00247c6ebb3",
+              "relacion": "tema"
+            },
+            {
+              "id": "7e9cdf41b490",
+              "relacion": "tema"
+            }
           ]
         },
         {
@@ -580,6 +771,18 @@
               "verificador": "Verificat",
               "veredicto": "verdadero",
               "etiqueta": "Verdader"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "453fafae8724",
+              "relacion": "tema",
+              "nota": "Meta de PIB del programa del PSOE de 2023."
+            },
+            {
+              "id": "02c20ba0f625",
+              "relacion": "tema",
+              "nota": "El PP de 2023 prometía que España liderase el crecimiento de la UE."
             }
           ]
         },
@@ -600,6 +803,16 @@
               "veredicto": "sin_veredicto",
               "etiqueta": "T'ho expliquem (sin veredicto)"
             }
+          ],
+          "promesas": [
+            {
+              "id": "d00247c6ebb3",
+              "relacion": "tema"
+            },
+            {
+              "id": "7e9cdf41b490",
+              "relacion": "tema"
+            }
           ]
         },
         {
@@ -615,7 +828,18 @@
               "etiqueta": "Enganyós"
             }
           ],
-          "nota": "Newtral lo da por falso; El Debate sostiene que su fecha de devolución es errónea. Los verificadores no coinciden en el matiz."
+          "nota": "Newtral lo da por falso; El Debate sostiene que su fecha de devolución es errónea. Los verificadores no coinciden en el matiz.",
+          "promesas": [
+            {
+              "id": "b83cf7498333",
+              "relacion": "tema"
+            },
+            {
+              "id": "eebb8d55d439",
+              "relacion": "tema",
+              "nota": "63.000 viviendas con fondos europeos del Plan de Recuperación."
+            }
+          ]
         },
         {
           "id": "frontex",
@@ -628,6 +852,16 @@
               "verificador": "Verificat",
               "veredicto": "enganoso",
               "etiqueta": "Enganyós"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "a87c4d53eb02",
+              "relacion": "tema"
+            },
+            {
+              "id": "0cc3e98b41dd",
+              "relacion": "tema"
             }
           ]
         },
@@ -642,6 +876,12 @@
               "verificador": "Verificat",
               "veredicto": "sin_veredicto",
               "etiqueta": "T'ho expliquem (sin veredicto)"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "0cc3e98b41dd",
+              "relacion": "tema"
             }
           ]
         },
@@ -661,6 +901,17 @@
               "verificador": "Verificat",
               "veredicto": "falso",
               "etiqueta": "Fals"
+            }
+          ],
+          "promesas": [
+            {
+              "id": "5636204b3a2d",
+              "relacion": "tema",
+              "nota": "No indultar a condenados por corrupción."
+            },
+            {
+              "id": "0a246a1b591d",
+              "relacion": "tema"
             }
           ]
         }
@@ -882,7 +1133,37 @@
         "estado": "pendiente",
         "nota": "Comparar la media de encuestas de /atalaya/encuestas/ antes y después del debate cuando haya sondeos posteriores. Referencia previa (Demócrata, 18-nov): PP 31,4 %, PSOE 27,4 %."
       },
-      "promesas_relacionadas": [],
+      "promesas_relacionadas": [
+        "640107d345c7",
+        "fb5f2bae659b",
+        "19f5dd4aa99f",
+        "b6af31643704",
+        "74d65111764c",
+        "6b94a3f03637",
+        "e84a61aeb76d",
+        "cba719e041a8",
+        "7e9cdf41b490",
+        "a87c4d53eb02",
+        "b9915fbfad31",
+        "7dd34c2389a9",
+        "52ce81125e94",
+        "ca933f8756a1",
+        "abc597bd6cfd",
+        "149e82405a72",
+        "d00247c6ebb3",
+        "53159125e202",
+        "14d1efa7c540",
+        "453fafae8724",
+        "02c20ba0f625",
+        "b83cf7498333",
+        "eebb8d55d439",
+        "0cc3e98b41dd",
+        "5636204b3a2d",
+        "0a246a1b591d",
+        "dca2966d9103",
+        "93e40e45a255",
+        "06d17f92bc0f"
+      ],
       "lectura": "Los sondeos con muestra coinciden en dar ventaja a Feijóo (entre 13 y 32 puntos según el método), pero ninguno mide cambio de voto. En verificación, ambos candidatos acumulan afirmaciones desmentidas o matizadas; los verificadores discrepan entre sí en varios casos (viviendas, Ceuta, pensiones). Atalaya no declara ganador: recoge mediciones y atribuye cada valoración a su origen.",
       "fuentes": [
         {
@@ -939,10 +1220,303 @@
       "pendiente": [
         "Transcripción oficial para contar tiempos reales de intervención.",
         "Efecto en encuestas a partir de sondeos posteriores al 20-N.",
-        "Vincular afirmaciones con promesas de programas.json/promesas.json.",
         "Newtral: leer sus verificaciones directamente (acceso bloqueado al consultar).",
-        "RTVE Verifica, EFE Verifica y El País: enlazar sus verificaciones una a una."
-      ]
+        "RTVE Verifica, EFE Verifica y El País: enlazar sus verificaciones una a una.",
+        "Procesar el programa del PSOE de 2026 (p. 14, 19.000 M€ de ferrocarril) en promesas.json para vincularlo; hoy solo está PSOE-2023.",
+        "Revisar a mano los vínculos: la relación «tema» indica el mismo asunto, no que la afirmación cumpla o incumpla la promesa."
+      ],
+      "promesas_ref": {
+        "640107d345c7": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 131,
+          "tema": "Vivienda",
+          "enunciado": "Se construirán 183.000 viviendas públicas para alquiler, garantizando que la mitad vaya destinada a jóvenes, y se ampliará la dotación y el número de receptores del Bono de Alquiler Joven.",
+          "cita": "Queremos construir 183.000 viviendas públicas para alquiler y garantizando que la mitad vaya destinada a jóvenes, ampliando la dotación y el número de receptores del Bono de Alquiler Joven.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "fb5f2bae659b": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 99,
+          "tema": "Vivienda",
+          "enunciado": "El gobierno se compromete a alcanzar el 20% de vivienda pública para garantizar la emancipación de la población joven.",
+          "cita": "En materia de vivienda, el bono de alquiler joven, la ley de vivienda y el compromiso de alcanzar el 20% de vivienda pública son y serán claves para garantizar la emancipación de la población joven.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "19f5dd4aa99f": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 166,
+          "tema": "Pensiones",
+          "enunciado": "Garantizar la revalorización de la pensión de los pensionistas en la próxima legislatura.",
+          "cita": "Los pensionistas tendrán garantizada la revalorización de su pensión.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "b6af31643704": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 170,
+          "tema": "Pensiones",
+          "enunciado": "Blindar el poder adquisitivo de las pensiones con un cambio constitucional, garantizando su revalorización con arreglo al IPC.",
+          "cita": "Blindaremos el poder adquisitivo de las pensiones con un cambio constitucional. Garantizaremos ante cualquier circunstancia el poder adquisitivo de todas las pensiones con arreglo al IPC.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "74d65111764c": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 79,
+          "tema": "Infraestructuras",
+          "enunciado": "Seguir desarrollando la red de Alta Velocidad para que llegue a Asturias en 2023 y a Almería en 2026.",
+          "cita": "Seguiremos desarrollando la red de Alta Velocidad para que llegue a Asturias en este mismo año y a Almería en el 2026.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "6b94a3f03637": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 45,
+          "tema": "Infraestructuras",
+          "enunciado": "Se renovarán las vías y trenes más antiguos de la Alta Velocidad y se intensificará el mantenimiento preventivo, empezando por el Corredor de Alta Velocidad a Andalucía.",
+          "cita": "Renovaremos las vías y trenes más antiguos, e intensificaremos el mantenimiento preventivo para reducir progresivamente averías y retrasos, empezando por el Corredor de Alta Velocidad a Andalucía.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "e84a61aeb76d": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 155,
+          "tema": "Igualdad",
+          "enunciado": "Garantizar los recursos para el desarrollo de la Ley de Libertad Sexual.",
+          "cita": "Garantizaremos los recursos para el desarrollo de la Ley de Libertad Sexual",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "cba719e041a8": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 13,
+          "tema": "Economía",
+          "enunciado": "Se reducirá la deuda con objetivos para los próximos años conforme a las reglas europeas.",
+          "cita": "reduciremos la deuda con objetivos para los próximos años conforme a las reglas europeas. Ningún gasto nuevo se aprobará sin garantizar cómo se financiará, también en el futuro.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "7e9cdf41b490": {
+          "partido": "PP",
+          "anio": 2023,
+          "documento": "PP-2023",
+          "pagina": 23,
+          "tema": "Impuestos",
+          "enunciado": "Realizar una reforma integral del sistema fiscal con criterios de eficacia, equidad y sostenibilidad, eliminando el impuesto a las grandes fortunas y simplificando el IRPF y Sociedades para pymes.",
+          "cita": "REALIZAREMOS UNA REFORMA INTEGRAL DEL SISTEMA FISCAL con criterios de eficacia, equidad y sostenibilidad de los servicios públicos destinada a proteger el ahorro, la inversión y fomentar la creación de empleo. Eliminaremos el impuesto a las grandes fortunas, y simplificaremos el IRPF y el Impuesto sobre Sociedades para las pymes, con especial atención a las empresas con pérdidas y aquellas que incrementen el promedio de su plantilla de trabajadores con contratos indefinidos.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
+        },
+        "a87c4d53eb02": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 16,
+          "tema": "Inmigración",
+          "enunciado": "Fortalecer físicamente la frontera de Ceuta y reclamar cooperación de Marruecos en readmisiones.",
+          "cita": "Fortaleceremos físicamente la frontera y reclamaremos la cooperación de Marruecos en las readmisiones.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "b9915fbfad31": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 16,
+          "tema": "Otros",
+          "enunciado": "Aprobar el Plan de Reactivación de Ceuta, reforzar la plantilla del hospital público e impulsar la construcción de nuevas viviendas.",
+          "cita": "Aprobaremos el Plan de Reactivación de Ceuta para que el respaldo del Estado continúe después de la emergencia. Reforzaremos la plantilla del hospital público e impulsaremos la construcción de nuevas viviendas para atender las necesidades de la población ceutí.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "7dd34c2389a9": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 43,
+          "tema": "Pensiones",
+          "enunciado": "Las pensiones se actualizarán anualmente con el IPC y se asegurará el poder adquisitivo de las futuras pensiones de los jóvenes.",
+          "cita": "cada año con el IPC. Aseguraremos a los más jóvenes que sus futuras pensiones también mantendrán su poder adquisitivo.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "52ce81125e94": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 26,
+          "tema": "Defensa",
+          "enunciado": "Aprobar una ley de programación y financiación de la defensa, con objetivos de personal y material a medio y largo plazo.",
+          "cita": "Aprobaremos una ley de programación y financiación de la defensa, con objetivos de personal y material a medio y largo plazo.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "ca933f8756a1": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 224,
+          "tema": "Vivienda",
+          "enunciado": "Se reforzarán los programas de los Planes Estatales de Vivienda.",
+          "cita": "Reforzaremos los programas de los Planes Estatales de Vivienda.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "abc597bd6cfd": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 221,
+          "tema": "Vivienda",
+          "enunciado": "Se desarrollarán las medidas contempladas en la Ley de Vivienda para la contención de los precios de la vivienda.",
+          "cita": "Desarrollaremos las medidas contempladas para la contención de los precios de la vivienda.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "149e82405a72": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 55,
+          "tema": "Impuestos",
+          "enunciado": "Los inquilinos tendrán una deducción en el IRPF por el alquiler de su vivienda habitual, graduada según sus ingresos.",
+          "cita": "Los inquilinos tendrán una deducción en el IRPF por el alquiler de su vivienda habitual, graduada según sus ingresos, con más apoyo para quien menos gana.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "d00247c6ebb3": {
+          "partido": "PP",
+          "anio": 2023,
+          "documento": "PP-2023",
+          "pagina": 23,
+          "tema": "Impuestos",
+          "enunciado": "Aprobar un alivio fiscal inmediato a las familias, corrigiendo los efectos de la inflación en el IRPF y reduciendo temporalmente el IVA a carne, pescados y conservas.",
+          "cita": "APROBAREMOS UN ALIVIO FISCAL INMEDIATO A LAS FAMILIAS. Corregiremos los efectos de la inflación en la tarifa del IRPF que supone una subida real de impuestos sobre la clase media. Reduciremos el IVA a la carne, pescados y conservas con carácter temporal.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
+        },
+        "53159125e202": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 57,
+          "tema": "Derechos",
+          "enunciado": "Reducir drásticamente la pobreza infantil reforzando ayudas a familias vulnerables, apoyo educativo y protección de menores en riesgo.",
+          "cita": "Reduciremos drásticamente la pobreza infantil reforzando las ayudas a las familias vulnerables, el apoyo educativo y la protección de los menores en riesgo.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "14d1efa7c540": {
+          "partido": "PP",
+          "anio": 2023,
+          "documento": "PP-2023",
+          "pagina": 55,
+          "tema": "Otros",
+          "enunciado": "Promover ayudas contra la pobreza infantil, impulsando y coordinando un despliegue acelerado de la Garantía Infantil Europea en todo el territorio para asegurar el acceso efectivo a servicios de 0-3 años de comedor escolar, salud, vivienda ",
+          "cita": "PROMOVEREMOS AYUDAS CONTRA LA POBREZA INFANTIL, donde España impulse y coordine un despliegue acelerado de la Garantía Infantil Europea en todo el territorio para asegurar el acceso efectivo a servicios de 0-3 años de comedor escolar, salud, vivienda y alimentación.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
+        },
+        "453fafae8724": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 22,
+          "tema": "Economía",
+          "enunciado": "Aumentar el Producto Interior Bruto de España en 3 puntos porcentuales y duplicar el crecimiento potencial.",
+          "cita": "Este programa permitirá aumentar el nivel del Producto Interior Bruto de España en 3 puntos porcentuales, aumentar la productividad, duplicar el crecimiento potencial",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "02c20ba0f625": {
+          "partido": "PP",
+          "anio": 2023,
+          "documento": "PP-2023",
+          "pagina": 8,
+          "tema": "Economía",
+          "enunciado": "España liderará el crecimiento y la creación de empleo en la Unión Europea, dejando atrás el conformismo y el triunfalismo.",
+          "cita": "Dejaremos atrás el conformismo y el triunfalismo de quien ha colocado a España en la cola de la recuperación tras la pandemia y a la cabeza del paro en la Unión Europea, para colocarnos en el liderazgo del crecimiento y la creación de empleo.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
+        },
+        "b83cf7498333": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 48,
+          "tema": "Economía",
+          "enunciado": "Aprovechar los recursos del Plan de Recuperación, Transformación y Resiliencia, a través de los PERTE, para acelerar la transformación industrial.",
+          "cita": "Vamos a aprovechar la gran oportunidad que suponen los recursos e instrumentos provenientes del Plan de Recuperación, Transformación y Resiliencia, instrumentalizados a través de los distintos PERTE, para acelerar la transformación de nuestra industria, asegurando que la inversión se dirige de forma eficaz y eficiente a modernizar el tejido productivo.",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "eebb8d55d439": {
+          "partido": "PSOE",
+          "anio": 2023,
+          "documento": "PSOE-2023",
+          "pagina": 222,
+          "tema": "Vivienda",
+          "enunciado": "Se gestionarán 63.000 viviendas con recursos de los fondos europeos adscritos al Plan de Recuperación, Transformación y Resiliencia.",
+          "cita": "63.000 viviendas con recursos de los fondos europeos adscritos al Plan de Recuperación, Transformación y Resiliencia",
+          "url_documento": "https://www.psoe.es/media-content/2023/07/PROGRAMA_ELECTORAL-GENERALES-2023.pdf"
+        },
+        "0cc3e98b41dd": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 21,
+          "tema": "Inmigración",
+          "enunciado": "Crear una autoridad única para toda la política migratoria que dirija la entrada, permanencia, retorno e integración, y coordine a los departamentos y administraciones implicadas.",
+          "cita": "Una autoridad única dirigirá la entrada, la permanencia, el retorno y la integración, y coordinará a los departamentos implicados y al resto de administraciones.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "5636204b3a2d": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 29,
+          "tema": "Justicia",
+          "enunciado": "No podrán ser indultados los condenados por corrupción, terrorismo, delitos contra la integridad territorial o el orden constitucional ni por delitos graves contra menores.",
+          "cita": "No podrán ser indultados los condenados por corrupción, terrorismo, delitos contra la integridad territorial o el orden constitucional ni por delitos graves contra menores.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "0a246a1b591d": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 29,
+          "tema": "Justicia",
+          "enunciado": "Se ampliarán las incompatibilidades e inelegibilidades para condenados por terrorismo, corrupción grave, delitos contra la vida o delitos graves contra las instituciones del Estado.",
+          "cita": "Ampliaremos las incompatibilidades e inelegibilidades aplicables a los condenados por terrorismo, así como a los condenados por corrupción grave, delitos contra la vida o delitos graves contra las instituciones del Estado.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "dca2966d9103": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 53,
+          "tema": "Vivienda",
+          "enunciado": "Se construirán un millón de viviendas, movilizando suelo público y privado.",
+          "cita": "CONSTRUIREMOS UN MILLÓN DE VIVIENDAS. Movilizaremos suelo público y privado en colaboración con las Comunidades Autónomas y las entidades locales.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "93e40e45a255": {
+          "partido": "PP",
+          "anio": 2026,
+          "documento": "PP-2026",
+          "pagina": 55,
+          "tema": "Vivienda",
+          "enunciado": "Se aprobará una ley para que el propietario pueda recuperar su vivienda ocupada en 48 horas desde el primer día por orden judicial.",
+          "cita": "Aprobaremos una ley para que el propietario pueda recuperar su vivienda en 48 horas desde el primer día. Reformaremos la Ley de Propiedad Horizontal para que las comunidades de propietarios puedan pedir al juez el desalojo.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2026/11/LA-RECONSTRUCCION-NACIONAL.pdf"
+        },
+        "06d17f92bc0f": {
+          "partido": "PP",
+          "anio": 2023,
+          "documento": "PP-2023",
+          "pagina": 34,
+          "tema": "Vivienda",
+          "enunciado": "Derogar la ley de vivienda actual.",
+          "cita": "Derogaremos la ley de vivienda, que ha generado inseguridad jurídica y no resuelve ninguno de los problemas de fondo del mercado de la vivienda.",
+          "url_documento": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
+        }
+      }
     }
   ]
 }

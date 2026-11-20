@@ -30,6 +30,10 @@ def main():
             if a["p"] not in pid: err.append(f"{i}/{a['id']}: participante desconocido")
             for v in a["veredictos"]:
                 if v["veredicto"] not in VEREDICTOS: err.append(f"{i}/{a['id']}: veredicto inválido «{v['veredicto']}»")
+        ref = x.get("promesas_ref", {})
+        for a in x.get("afirmaciones", []) + x.get("bloques", []):
+            for l in a.get("promesas", []):
+                if l["id"] not in ref: err.append(f"{i}: promesa {l['id']} sin entrada en promesas_ref")
         for f in x.get("fuentes", []):
             if not f["url"].startswith("http"): err.append(f"{i}: fuente sin URL válida")
         if not x.get("fuentes"): err.append(f"{i}: sin fuentes")
