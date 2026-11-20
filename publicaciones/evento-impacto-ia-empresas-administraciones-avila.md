@@ -1,7 +1,7 @@
 ---
 title: Participo en "El impacto de la Inteligencia Artificial en las empresas y las administraciones", el 23 de noviembre en Ávila
 description: El 23 de noviembre participo en una mesa redonda sobre IA en las empresas y las administraciones, organizada por Eventos Tribuna en Ávila con la Junta de Castilla y León. Cuento qué es el evento, quién interviene y por qué me alegra dar visibilidad a la IA en nuestra tierra.
-image: https://emirodgar.com/cdn/images/og/estrategia-seo.png
+image: https://emirodgar.es/images/evento-impacto-ia-empresas-administraciones-avila.png
 author: Emirodgar
 lang: es_ES
 sitemap: 1
@@ -16,6 +16,8 @@ permalink: evento-impacto-ia-empresas-administraciones-avila
 El próximo **23 de noviembre** participo como ponente en una jornada sobre inteligencia artificial en Ávila. Lo cuento por aquí porque me hace especial ilusión, y porque no es un evento más: se habla de IA en Castilla y León, con la Junta y con empresas de la región en la misma sala.
 
 ## El evento
+
+<img width="446" class="img-responsive" alt="Cartel de la jornada El impacto de la Inteligencia Artificial en las empresas y las administraciones, Eventos Tribuna, 23 de noviembre en el Hotel Sofraga Palacio de Ávila" src="https://emirodgar.es/images/evento-impacto-ia-empresas-administraciones-avila.png" />
 
 La jornada la organiza **Eventos Tribuna**, el área de eventos de Tribuna Grupo, con el impulso de la Junta de Castilla y León. Estos son los datos:
 
