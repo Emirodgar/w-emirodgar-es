@@ -1,0 +1,605 @@
+{
+  "actualizado": "2026-11-20",
+  "aviso": "Repositorio de debates y entrevistas. Nunca se borra nada: lo obsoleto se marca (estado). Cada dato lleva fuente enlazada; los veredictos de verificación son de cada verificador, no de Atalaya, y las valoraciones se atribuyen a su origen.",
+  "esquema": {
+    "tipos": [
+      "debate",
+      "entrevista",
+      "comparecencia",
+      "mitin"
+    ],
+    "veredictos": [
+      "verdadero",
+      "enganoso",
+      "falso",
+      "sin_veredicto"
+    ],
+    "calidad_fuente": [
+      "ficha_completa",
+      "sin_ficha",
+      "votacion_abierta",
+      "partidista"
+    ]
+  },
+  "debates": [
+    {
+      "id": "2026-11-19-sanchez-feijoo",
+      "estado": "vigente",
+      "tipo": "debate",
+      "titulo": "Cara a cara Sánchez – Feijóo (29-N)",
+      "fecha": "2026-11-19",
+      "hora": "22:00",
+      "contexto": "Debate electoral de campaña de las elecciones generales del 29 de noviembre de 2026.",
+      "organiza": "Academia de Televisión",
+      "moderacion": "María Casado",
+      "lugar": "Plató A de Madrid Content City (Tres Cantos)",
+      "emision": "La 1, Antena 3, Telecinco, Cuatro, laSexta y online",
+      "participantes": [
+        {
+          "id": "sanchez",
+          "nombre": "Pedro Sánchez",
+          "partido": "PSOE",
+          "color": "#e5484d"
+        },
+        {
+          "id": "feijoo",
+          "nombre": "Alberto Núñez Feijóo",
+          "partido": "PP",
+          "color": "#2f7fd8"
+        }
+      ],
+      "formato": {
+        "bloques": 5,
+        "minutos_por_bloque": 16,
+        "inicio": "Un minuto y medio inicial por candidato para valorar la legislatura (según Vozpópuli).",
+        "orden": "Por sorteo: abre Feijóo y cierra Sánchez.",
+        "excluidos": "Abascal y Colau no fueron invitados."
+      },
+      "audiencia": {
+        "espectadores": 10152000,
+        "cuota": 70.8,
+        "nota": "Media; dato recogido por El Español.",
+        "fuente": "https://www.elespanol.com/espana/politica/20261120/debate-termino-creen-gano-feijoo-solo-hizo-sanchez/1003744466162_0.html"
+      },
+      "bloques": [
+        {
+          "tema": "Vivienda",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Pidió un gran acuerdo por ser el mayor problema del país, defendió la Ley de Vivienda («construir, pero regulando») y recordó que las competencias son autonómicas. Pidió perdón por no haber resuelto el problema."
+            },
+            {
+              "p": "feijoo",
+              "t": "Pidió no culpar a las comunidades autónomas. Propuso ley antiocupación, fondo estatal para arrendatarios, bonificaciones para jóvenes y construir un millón de viviendas; acusó a Sánchez de no ejecutar la mitad del presupuesto de vivienda."
+            }
+          ]
+        },
+        {
+          "tema": "Economía y fiscalidad",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Destacó el crecimiento del PIB, la protección de las pensiones y la subida del salario mínimo hacia el 60 % del salario medio; dijo haber bajado impuestos a las clases medias."
+            },
+            {
+              "p": "feijoo",
+              "t": "Acusó al Gobierno de recaudar en exceso, habló de la subida de precios (leche, huevos) y de la deuda; propuso revalorizar pensiones con el IPC y bajar impuestos."
+            }
+          ]
+        },
+        {
+          "tema": "Política social y servicios públicos",
+          "resumen": [
+            {
+              "p": "feijoo",
+              "t": "Retó a Sánchez a pedir perdón a las víctimas del accidente ferroviario de Urda y le reprochó su asistencia a un mitin tras el funeral de Estado."
+            },
+            {
+              "p": "sanchez",
+              "t": "Pidió perdón a las víctimas, ofreció un pacto de Estado para blindar la revalorización de las pensiones en la Constitución y preguntó si Feijóo privatizaría el sistema público de pensiones; Feijóo respondió que lo garantizará."
+            }
+          ]
+        },
+        {
+          "tema": "Corrupción y regeneración democrática",
+          "resumen": [
+            {
+              "p": "feijoo",
+              "t": "Dijo que el PSOE prometió un gobierno limpio y tiene más imputados que diputados; preguntó quién pagó las primarias de Sánchez. Esta insinuación no está verificada por las fuentes."
+            },
+            {
+              "p": "sanchez",
+              "t": "Pidió perdón por los casos que afectan al PSOE, dijo que la corrupción cero no existe pero sí la tolerancia cero, y calificó al PP de formación más corrupta del sistema."
+            }
+          ]
+        },
+        {
+          "tema": "Migración y política exterior",
+          "resumen": [
+            {
+              "p": "feijoo",
+              "t": "Criticó la gestión de la entrada masiva en Ceuta (julio), la vinculó con la presión en Canarias, habló de efecto llamada y preguntó qué debe Sánchez a Marruecos."
+            },
+            {
+              "p": "sanchez",
+              "t": "Negó que haya pruebas de que Marruecos esté detrás, citó un informe del CNI entregado a la Audiencia Nacional y defendió la aportación de la inmigración frente al invierno demográfico."
+            }
+          ]
+        },
+        {
+          "tema": "Minutos finales",
+          "resumen": [
+            {
+              "p": "feijoo",
+              "t": "Pidió el voto para poner en marcha España."
+            },
+            {
+              "p": "sanchez",
+              "t": "Pidió movilizar el voto contra los poderosos y votar al PSOE."
+            }
+          ]
+        }
+      ],
+      "afirmaciones": [
+        {
+          "id": "viv-1m",
+          "p": "sanchez",
+          "tema": "Vivienda",
+          "afirmacion": "Se han construido un millón de viviendas en ocho años.",
+          "contraste": "Las terminadas rondan 700.000-750.000 (Newtral cita 693.676).",
+          "veredictos": [
+            {
+              "verificador": "EFE Verifica",
+              "veredicto": "enganoso",
+              "etiqueta": "Engañoso"
+            },
+            {
+              "verificador": "RTVE Verifica",
+              "veredicto": "enganoso",
+              "etiqueta": "Exagerado"
+            },
+            {
+              "verificador": "Antena 3",
+              "veredicto": "enganoso",
+              "etiqueta": "Engañoso"
+            },
+            {
+              "verificador": "laSexta",
+              "veredicto": "enganoso",
+              "etiqueta": "Exagera"
+            },
+            {
+              "verificador": "El País",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "Newtral",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Sin etiqueta; aporta la cifra"
+            }
+          ]
+        },
+        {
+          "id": "pens-6000",
+          "p": "sanchez",
+          "tema": "Economía y pensiones",
+          "afirmacion": "Las pensiones han subido unos 6.000 euros al año.",
+          "contraste": "La subida acumulada ronda los 6.145 euros al año.",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "RTVE Verifica",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "EFE Verifica",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "El País",
+              "veredicto": "enganoso",
+              "etiqueta": "Descontextualizado"
+            },
+            {
+              "verificador": "Antena 3",
+              "veredicto": "enganoso",
+              "etiqueta": "Necesita contexto"
+            }
+          ],
+          "nota": "Hay discrepancia entre verificadores con el mismo dato de partida; Newtral recoge la afirmación como «600 euros»."
+        },
+        {
+          "id": "ave-19000",
+          "p": "sanchez",
+          "tema": "Infraestructuras",
+          "afirmacion": "19.000 millones para alta velocidad en seis años.",
+          "contraste": "El programa del PSOE habla de toda la red ferroviaria, 2026-2030.",
+          "veredictos": [
+            {
+              "verificador": "El País",
+              "veredicto": "enganoso",
+              "etiqueta": "Descontextualizado"
+            },
+            {
+              "verificador": "EFE Verifica",
+              "veredicto": "enganoso",
+              "etiqueta": "Engañoso"
+            },
+            {
+              "verificador": "Antena 3",
+              "veredicto": "falso",
+              "etiqueta": "Falso en los términos expresados"
+            }
+          ]
+        },
+        {
+          "id": "viol-1400",
+          "p": "feijoo",
+          "tema": "Corrupción y justicia",
+          "afirmacion": "1.400 violadores excarcelados.",
+          "contraste": "Según el CGPJ, mezcla reducciones de pena (1.233) y excarcelaciones (126).",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "RTVE Verifica",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "EFE Verifica",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "El País",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "Antena 3",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            }
+          ]
+        },
+        {
+          "id": "turisticos-1",
+          "p": "feijoo",
+          "tema": "Vivienda",
+          "afirmacion": "Los pisos turísticos son el 1 % del parque.",
+          "contraste": "El INE da 1,28 %.",
+          "veredictos": [
+            {
+              "verificador": "EFE Verifica",
+              "veredicto": "enganoso",
+              "etiqueta": "Engañoso"
+            },
+            {
+              "verificador": "Antena 3",
+              "veredicto": "enganoso",
+              "etiqueta": "Engañoso"
+            }
+          ]
+        },
+        {
+          "id": "deuda",
+          "p": "feijoo",
+          "tema": "Economía y fiscalidad",
+          "afirmacion": "La deuda pública ha subido más que con nadie.",
+          "contraste": "553.194 M€ con Sánchez frente a 437.832 M€ con Rajoy; Newtral añade que omite la gestión de Rajoy y que depende de medir en euros, en % o sobre el PIB.",
+          "veredictos": [
+            {
+              "verificador": "Newtral",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Aporta contexto"
+            },
+            {
+              "verificador": "Cadena SER",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Mide sobre el PIB"
+            }
+          ]
+        },
+        {
+          "id": "recaud-220",
+          "p": "feijoo",
+          "tema": "Economía y fiscalidad",
+          "afirmacion": "220.000 millones más de recaudación que en 2018.",
+          "contraste": "El País reconoce un aumento de 217.975 M€ en impuestos y cotizaciones.",
+          "veredictos": [
+            {
+              "verificador": "El País",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            }
+          ],
+          "nota": "Según El Debate, la cifra de El País está muy cerca de la afirmada."
+        },
+        {
+          "id": "ceuta-100k",
+          "p": "feijoo",
+          "tema": "Migración",
+          "afirmacion": "100.000 personas entraron en Ceuta en julio.",
+          "contraste": "Coincide con la estimación del presidente de Ceuta, según RTVE Verifica.",
+          "veredictos": [
+            {
+              "verificador": "Cadena SER",
+              "veredicto": "falso",
+              "etiqueta": "«Se ha inventado» la cifra"
+            },
+            {
+              "verificador": "RTVE Verifica",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Coincide con la estimación de Vivas"
+            }
+          ],
+          "nota": "Los verificadores discrepan entre sí."
+        },
+        {
+          "id": "cuerpo-pensiones",
+          "p": "feijoo",
+          "tema": "Economía y pensiones",
+          "afirmacion": "El ministro Cuerpo dijo que las pensiones iban a «petar».",
+          "contraste": "Cuerpo afirmó que la sostenibilidad está garantizada.",
+          "veredictos": [
+            {
+              "verificador": "Varias fuentes",
+              "veredicto": "falso",
+              "etiqueta": "Desmentido por ocho fuentes (según El Debate)"
+            }
+          ]
+        },
+        {
+          "id": "defensa-5",
+          "p": "sanchez",
+          "tema": "Defensa",
+          "afirmacion": "El programa del PP incluye un 5 % del PIB en defensa.",
+          "contraste": "El programa del PP no recoge esa cifra.",
+          "veredictos": [
+            {
+              "verificador": "Newtral",
+              "veredicto": "falso",
+              "etiqueta": "Incorrecto"
+            }
+          ]
+        }
+      ],
+      "verificacion_meta": {
+        "texto": "Según El Debate se identificaron 154 afirmaciones comprobables (89 de Feijóo, 65 de Sánchez). Los cuatro verificadores profesionales (Newtral, Verificat, RTVE Verifica, EFE Verifica) comprobaron el 36 % y el 37 % respectivamente. Cadena SER publicó 11 piezas sobre Feijóo y 2 sobre Sánchez; El País, 15 y 6; Newtral, 23 y 17.",
+        "fuente": "https://www.eldebate.com/espana/20261120/mismos-datos-distinto-veredicto-asi-trataron-verificadores-sanchez-feijoo-cara-cara-cns_483334.html",
+        "sesgo": "Recuento hecho por un medio de línea conservadora; contrastar con los propios verificadores. Las verificaciones de Newtral no se pudieron leer en directo (acceso bloqueado) y se citan a través de El Debate.",
+        "enlaces_verificadores": [
+          {
+            "verificador": "Newtral",
+            "url": "https://www.newtral.es/verificacion-directo-cara-a-dara-sanchez-feijoo-factchecking/20261119/"
+          }
+        ]
+      },
+      "valoracion": {
+        "sondeos": [
+          {
+            "id": "sociometrica-elespanol",
+            "origen": "SocioMétrica para El Español",
+            "calidad": "ficha_completa",
+            "ficha": "1.600 entrevistas online (panel CAWI), 20-nov-2026, ajustado por sexo, edad, provincia y recuerdo de voto. Muestreo no probabilístico (error de equilibrado ±3 %).",
+            "ganador": {
+              "feijoo": 64,
+              "sanchez": 32
+            },
+            "por_bloque": [
+              {
+                "tema": "Vivienda",
+                "sanchez": 27,
+                "feijoo": 60,
+                "empate": 10
+              },
+              {
+                "tema": "Economía y fiscalidad",
+                "sanchez": 32,
+                "feijoo": 58,
+                "empate": 7
+              },
+              {
+                "tema": "Política social y servicios públicos",
+                "sanchez": 38,
+                "feijoo": 56,
+                "empate": 4
+              },
+              {
+                "tema": "Corrupción y regeneración",
+                "sanchez": 23,
+                "feijoo": 62,
+                "empate": 13
+              },
+              {
+                "tema": "Migración y política exterior",
+                "sanchez": 31,
+                "feijoo": 60,
+                "empate": 7
+              },
+              {
+                "tema": "Minuto final",
+                "sanchez": 37,
+                "feijoo": 53,
+                "empate": 7
+              }
+            ],
+            "atributos": [
+              {
+                "atributo": "Más preparado",
+                "feijoo": 64,
+                "sanchez": 29
+              },
+              {
+                "atributo": "Más creíble",
+                "feijoo": 59,
+                "sanchez": 33
+              },
+              {
+                "atributo": "Más agresivo",
+                "feijoo": 69,
+                "sanchez": 10
+              },
+              {
+                "atributo": "Mantuvo más la calma",
+                "feijoo": 41,
+                "sanchez": 46
+              },
+              {
+                "atributo": "Respetó más al adversario",
+                "feijoo": 28,
+                "sanchez": 45
+              }
+            ],
+            "url": "https://www.elespanol.com/espana/politica/20261120/debate-termino-creen-gano-feijoo-solo-hizo-sanchez/1003744466162_0.html"
+          },
+          {
+            "id": "ateneo-eldiario",
+            "origen": "Ateneo del Dato para elDiario.es (sondeo flash)",
+            "calidad": "sin_ficha",
+            "ficha": "Ficha técnica no consultada. El 88 % de los participantes dice que mantendrá su voto.",
+            "ganador": {
+              "feijoo": 45.2,
+              "sanchez": 31.9
+            },
+            "url": "https://www.elplural.com/politica/espana/quien-gano-debate-entre-sanchez-feijoo-segun-encuestas-medios-comunicacion-hacemos-repaso_804774102"
+          }
+        ],
+        "votaciones_lectores": {
+          "aviso": "Votaciones abiertas en webs de medios: no son representativas y reflejan la audiencia de cada medio.",
+          "resultados": [
+            {
+              "origen": "ABC",
+              "feijoo": 82,
+              "sanchez": 15
+            },
+            {
+              "origen": "La Razón",
+              "feijoo": 75,
+              "sanchez": 24
+            },
+            {
+              "origen": "El País",
+              "feijoo": 68,
+              "sanchez": 32
+            },
+            {
+              "origen": "Demócrata",
+              "feijoo": 66,
+              "sanchez": 34
+            },
+            {
+              "origen": "El Plural",
+              "feijoo": 55,
+              "sanchez": 39
+            },
+            {
+              "origen": "elDiario.es",
+              "feijoo": 53,
+              "sanchez": 47
+            },
+            {
+              "origen": "HuffPost",
+              "feijoo": 52,
+              "sanchez": 48
+            }
+          ],
+          "url": "https://www.elplural.com/politica/espana/quien-gano-debate-entre-sanchez-feijoo-segun-encuestas-medios-comunicacion-hacemos-repaso_804774102"
+        },
+        "reacciones": [
+          {
+            "quien": "Rebeca Torró (PSOE)",
+            "bando": "PSOE",
+            "t": "Dio por ganador a Sánchez y acusó a Feijóo de «embarrar» todo el rato."
+          },
+          {
+            "quien": "Borja Sémper (PP)",
+            "bando": "PP",
+            "t": "Dijo que Sánchez no tiene ganas de gobernar, aunque advirtió de que no hay nada ganado."
+          },
+          {
+            "quien": "Ester Muñoz (PP)",
+            "bando": "PP",
+            "t": "Dio la victoria a Feijóo por cinco a cero más el minuto final."
+          },
+          {
+            "quien": "Gabriel Rufián (ERC)",
+            "bando": "otros",
+            "t": "Dijo que Feijóo se «comió» a Sánchez."
+          },
+          {
+            "quien": "Ada Colau (Frente Amplio)",
+            "bando": "otros",
+            "t": "Calificó el debate de fallido y lamentó que no hubiera una voz para el 51 % de la población."
+          },
+          {
+            "quien": "Carlos Hernández Quero (Vox)",
+            "bando": "otros",
+            "t": "Lamentó que la inmigración quedara desplazada."
+          }
+        ]
+      },
+      "efecto_electoral": {
+        "estado": "pendiente",
+        "nota": "Comparar la media de encuestas de /atalaya/encuestas/ antes y después del debate cuando haya sondeos posteriores. Referencia previa (Demócrata, 18-nov): PP 31,4 %, PSOE 27,4 %."
+      },
+      "promesas_relacionadas": [],
+      "lectura": "Los sondeos con muestra coinciden en dar ventaja a Feijóo (entre 13 y 32 puntos según el método), pero ninguno mide cambio de voto. En verificación, ambos candidatos acumulan afirmaciones desmentidas o matizadas; los verificadores discrepan entre sí en varios casos (viviendas, Ceuta, pensiones). Atalaya no declara ganador: recoge mediciones y atribuye cada valoración a su origen.",
+      "fuentes": [
+        {
+          "titulo": "Infobae: cobertura en directo",
+          "url": "https://www.infobae.com/espana/2026/11/19/debate-cara-a-cara-entre-pedro-sanchez-y-alberto-nunez-feijoo-en-directo-ultima-hora-sobre-las-elecciones-generales-29-n-en-espana/",
+          "tipo": "cronica"
+        },
+        {
+          "titulo": "El Mirador de Madrid: claves por bloques",
+          "url": "https://elmiradordemadrid.es/debate-entre-sanchez-y-feijoo-claves/",
+          "tipo": "cronica"
+        },
+        {
+          "titulo": "El Español: sondeo SocioMétrica",
+          "url": "https://www.elespanol.com/espana/politica/20261120/debate-termino-creen-gano-feijoo-solo-hizo-sanchez/1003744466162_0.html",
+          "tipo": "sondeo"
+        },
+        {
+          "titulo": "El Plural: repaso de encuestas de medios",
+          "url": "https://www.elplural.com/politica/espana/quien-gano-debate-entre-sanchez-feijoo-segun-encuestas-medios-comunicacion-hacemos-repaso_804774102",
+          "tipo": "sondeo"
+        },
+        {
+          "titulo": "El Debate: comparativa de verificadores",
+          "url": "https://www.eldebate.com/espana/20261120/mismos-datos-distinto-veredicto-asi-trataron-verificadores-sanchez-feijoo-cara-cara-cns_483334.html",
+          "tipo": "verificacion"
+        },
+        {
+          "titulo": "Newtral: verificación en directo",
+          "url": "https://www.newtral.es/verificacion-directo-cara-a-dara-sanchez-feijoo-factchecking/20261119/",
+          "tipo": "verificacion"
+        },
+        {
+          "titulo": "Vozpópuli: guía de formato",
+          "url": "https://www.vozpopuli.com/espana/politica/guia-para-no-perderse-en-el-cara-a-cara-entre-sanchez-y-feijoo-horario-bloques-tiempos-y-quien-lo-modera.html",
+          "tipo": "formato"
+        }
+      ],
+      "pendiente": [
+        "Transcripción oficial para contar tiempos reales de intervención.",
+        "Verificaciones de Maldita y Verificat enlazadas una a una.",
+        "Efecto en encuestas a partir de sondeos posteriores al 20-N.",
+        "Vincular afirmaciones con promesas de programas.json/promesas.json."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Debates y entrevistas | Atalaya</title>
+<meta name="description" content="Archivo de debates y entrevistas a políticos: formato, bloques, verificación de datos, sondeos y reacciones, con fuente enlazada.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/debates/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+a{color:inherit}button,select,input{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.wrap{padding:12px 16px;max-width:1200px}
+.note{background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.28);border-radius:6px;padding:10px 12px;color:var(--mut);font-size:13px;margin-bottom:12px}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.tools input,.tools select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:8px 10px}.tools input{min-width:240px}
+:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;margin-bottom:12px;overflow:hidden}
+.card.link{display:block;text-decoration:none;padding:14px}.card.link:hover{border-color:var(--acc)}
+.k{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--acc)}
+h2{font-size:17px;font-weight:600;margin-top:2px}
+h3{font-size:12px;font-family:var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mut);margin:18px 0 8px;font-weight:600}
+.mut{color:var(--mut);font-size:13px}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.chip{font-size:12px;padding:2px 9px;border-radius:99px;background:var(--panel2);border:1px solid var(--line);color:var(--mut)}
+.back{display:inline-block;margin-bottom:10px;color:var(--acc);text-decoration:none}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:12px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}.kpi b{display:block;font-family:var(--mono);font-size:22px}.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.pad{padding:14px}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.pc{padding:12px 14px;border-top:3px solid var(--c,#475569);border-right:1px solid var(--line);min-width:0}.pc:last-child{border-right:0}
+.pc b{display:block;font-size:13px;margin-bottom:4px}
+.bar{display:flex;height:22px;border-radius:5px;overflow:hidden;background:var(--panel2);font-family:var(--mono);font-size:11px;line-height:22px}
+.bar span{padding:0 6px;white-space:nowrap;overflow:hidden;color:#06121a;font-weight:600}
+.row{display:grid;grid-template-columns:200px 1fr;gap:10px;align-items:center;margin-bottom:6px}
+.v{display:inline-block;font-size:12px;font-weight:600;padding:1px 8px;border-radius:99px;margin:2px 4px 2px 0}
+.v-falso{background:rgba(248,113,113,.15);color:var(--bad)}.v-enganoso{background:rgba(251,191,36,.15);color:var(--warn)}.v-verdadero{background:rgba(52,211,153,.15);color:var(--ok)}.v-sin_veredicto{background:rgba(148,163,184,.15);color:var(--mut)}
+.leg{display:flex;gap:14px;font-size:12px;color:var(--mut);margin-bottom:8px}.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:5px}
+.af{padding:12px 14px;border-top:1px solid var(--line)}.af:first-child{border-top:0}
+.af .who{font-family:var(--mono);font-size:12px;color:var(--mut)}
+.tbl{width:100%;border-collapse:collapse;font-size:13px}.tbl td,.tbl th{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left}.tbl th{color:var(--mut);font-weight:500}
+a.s{color:var(--acc);text-decoration:none}a.s:hover{text-decoration:underline}
+ul.l{margin-left:18px}ul.l li{margin-bottom:4px}
+@media (max-width:800px){.kp{grid-template-columns:repeat(2,1fr)}.row{grid-template-columns:1fr}.pc{border-right:0;border-bottom:1px solid var(--line)}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=2"></script>
+<header class="top">
+  <h1 class="pt">Debates y entrevistas <small>qué se dijo, qué se verificó y cómo se valoró</small></h1>
+  <span class="tagline">Archivo</span>
+</header>
+<main class="wrap" id="app"><div class="mut">Cargando…</div></main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var norm=function(s){return String(s).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+var M=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+function fecha(f){var m=f.split('-');return +m[2]+' '+M[+m[1]-1]+' '+m[0]}
+function num(n){return String(n).replace('.',',')}
+var D,app=$('app');
+function safe(u){return /^https?:\/\//.test(u)?u:'#'}
+function lnk(u,t){return '<a class="s" href="'+esc(safe(u))+'" target="_blank" rel="noopener">'+esc(t)+'</a>'}
+
+fetch('../data/debates.json').then(function(r){return r.json()}).then(function(d){D=d;route()}).catch(function(){app.innerHTML='<div class="note">No se pudo cargar el archivo de debates.</div>'});
+window.addEventListener('hashchange',route);
+
+function route(){
+  var id=decodeURIComponent((location.hash||'').slice(1));
+  var d=D.debates.filter(function(x){return x.id===id})[0];
+  d?detalle(d):indice();
+  window.scrollTo(0,0);
+}
+
+function indice(){
+  document.title='Debates y entrevistas | Atalaya';
+  app.innerHTML='<p class="note">'+esc(D.aviso)+' Actualizado el '+esc(fecha(D.actualizado))+'.</p>'+
+   '<div class="tools"><input id="q" type="search" placeholder="Buscar por político, tema o medio…" aria-label="Buscar"><select id="ft" aria-label="Tipo"><option value="">Todos los tipos</option>'+D.esquema.tipos.map(function(t){return '<option>'+esc(t)+'</option>'}).join('')+'</select></div><div id="ls"></div>';
+  function pintar(){
+    var q=norm($('q').value.trim()),t=$('ft').value;
+    var ls=D.debates.filter(function(x){
+      if(t&&x.tipo!==t)return false;
+      return !q||norm([x.titulo,x.organiza,x.moderacion,x.participantes.map(function(p){return p.nombre+' '+p.partido}).join(' '),x.bloques.map(function(b){return b.tema}).join(' ')].join(' ')).indexOf(q)>=0;
+    }).sort(function(a,b){return a.fecha<b.fecha?1:-1});
+    $('ls').innerHTML=ls.map(function(x){
+      return '<a class="card link" href="#'+esc(x.id)+'"><div class="k">'+esc(x.tipo)+' · '+esc(fecha(x.fecha))+(x.estado!=='vigente'?' · '+esc(x.estado):'')+'</div><h2>'+esc(x.titulo)+'</h2>'+
+        '<div class="mut" style="margin-top:4px">'+esc(x.contexto)+'</div>'+
+        '<div class="chips">'+x.participantes.map(function(p){return '<span class="chip" style="border-color:'+esc(p.color)+'">'+esc(p.nombre)+' · '+esc(p.partido)+'</span>'}).join('')+
+        '<span class="chip">'+x.bloques.length+' bloques</span><span class="chip">'+x.afirmaciones.length+' afirmaciones verificadas</span></div></a>';
+    }).join('')||'<div class="mut">Sin resultados.</div>';
+  }
+  $('q').addEventListener('input',pintar);$('ft').addEventListener('change',pintar);pintar();
+}
+
+function bar(a,b,pa,pb,ca,cb){
+  var rest=Math.max(0,100-a-b);
+  return '<div class="bar" role="img" aria-label="'+esc(pa)+' '+num(a)+' %, '+esc(pb)+' '+num(b)+' %"><span style="width:'+a+'%;background:'+ca+'">'+num(a)+'</span><span style="width:'+rest+'%;background:#334155"></span><span style="width:'+b+'%;background:'+cb+'">'+num(b)+'</span></div>';
+}
+
+function detalle(d){
+  document.title=d.titulo+' | Atalaya';
+  var P={};d.participantes.forEach(function(p){P[p.id]=p});
+  var A=d.participantes[0],B=d.participantes[1];
+  var h='<a class="back" href="#">← Todos los debates</a><div class="k">'+esc(d.tipo)+' · '+esc(fecha(d.fecha))+' · '+esc(d.hora)+'</div><h2 style="font-size:22px">'+esc(d.titulo)+'</h2><div class="mut" style="margin-top:4px">'+esc(d.contexto)+'</div>';
+
+  h+='<div class="kp"><div class="kpi"><b>'+d.bloques.length+'</b><span>Bloques</span></div>'+
+     '<div class="kpi"><b>'+(d.audiencia?num((d.audiencia.espectadores/1e6).toFixed(1))+' M':'–')+'</b><span>Espectadores (media)</span></div>'+
+     '<div class="kpi"><b>'+(d.audiencia?num(d.audiencia.cuota)+' %':'–')+'</b><span>Cuota de pantalla</span></div>'+
+     '<div class="kpi"><b>'+d.afirmaciones.length+'</b><span>Afirmaciones con veredicto</span></div></div>';
+
+  h+='<h3>Ficha</h3><div class="card pad"><table class="tbl"><tr><th>Organiza</th><td>'+esc(d.organiza)+'</td></tr><tr><th>Moderación</th><td>'+esc(d.moderacion)+'</td></tr><tr><th>Lugar</th><td>'+esc(d.lugar)+'</td></tr><tr><th>Emisión</th><td>'+esc(d.emision)+'</td></tr><tr><th>Formato</th><td>'+d.formato.bloques+' bloques de '+d.formato.minutos_por_bloque+' min. '+esc(d.formato.inicio)+' '+esc(d.formato.orden)+' '+esc(d.formato.excluidos)+'</td></tr></table>'+
+     (d.audiencia?'<div class="mut" style="margin-top:8px">Audiencia: '+esc(d.audiencia.nota)+' '+lnk(d.audiencia.fuente,'Fuente')+'</div>':'')+'</div>';
+
+  h+='<h3>Qué se dijo, bloque a bloque</h3>';
+  d.bloques.forEach(function(b){
+    h+='<article class="card"><div class="pad" style="padding-bottom:0"><div class="k">'+esc(b.tema)+'</div></div><div class="cols">'+
+      b.resumen.map(function(r){var p=P[r.p];return '<div class="pc" style="--c:'+esc(p.color)+'"><b>'+esc(p.nombre)+' · '+esc(p.partido)+'</b><div>'+esc(r.t)+'</div></div>'}).join('')+'</div></article>';
+  });
+
+  h+='<h3>Verificación de datos</h3><p class="note">'+esc(d.verificacion_meta.texto)+' '+lnk(d.verificacion_meta.fuente,'Fuente')+'<br><b>Ojo:</b> '+esc(d.verificacion_meta.sesgo)+'</p><article class="card">';
+  d.afirmaciones.forEach(function(a){
+    var p=P[a.p];
+    h+='<div class="af"><div class="who" style="color:'+esc(p.color)+'">'+esc(p.nombre)+' · '+esc(a.tema)+'</div><div style="margin:3px 0"><b>'+esc(a.afirmacion)+'</b></div><div class="mut">'+esc(a.contraste)+'</div><div style="margin-top:6px">'+
+      a.veredictos.map(function(v){return '<span class="v v-'+esc(v.veredicto)+'" title="'+esc(v.verificador)+'">'+esc(v.verificador)+': '+esc(v.etiqueta)+'</span>'}).join('')+'</div>'+(a.nota?'<div class="mut" style="margin-top:4px">'+esc(a.nota)+'</div>':'')+'</div>';
+  });
+  h+='</article>';
+
+  var v=d.valoracion;
+  h+='<h3>Cómo se valoró</h3>';
+  v.sondeos.forEach(function(s){
+    h+='<article class="card pad"><div class="k">Sondeo · '+esc(s.origen)+'</div><div class="mut" style="margin:4px 0 10px">'+esc(s.ficha)+' '+lnk(s.url,'Fuente')+(s.calidad==='sin_ficha'?' <b>(sin ficha técnica completa)</b>':'')+'</div>'+
+      '<div class="leg"><span><i style="background:'+A.color+'"></i>'+esc(A.nombre)+'</span><span><i style="background:'+B.color+'"></i>'+esc(B.nombre)+'</span></div>'+
+      '<div class="row"><b>¿Quién ganó?</b>'+bar(s.ganador[A.id],s.ganador[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'+
+      (s.por_bloque?'<h3 style="margin-top:12px">Por bloque</h3>'+s.por_bloque.map(function(b){return '<div class="row"><span>'+esc(b.tema)+'</span>'+bar(b[A.id],b[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join(''):'')+
+      (s.atributos?'<h3 style="margin-top:12px">Atributos</h3>'+s.atributos.map(function(b){return '<div class="row"><span>'+esc(b.atributo)+'</span>'+bar(b[A.id],b[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join(''):'')+'</article>';
+  });
+  var vl=v.votaciones_lectores;
+  h+='<article class="card pad"><div class="k">Votaciones de lectores</div><div class="mut" style="margin:4px 0 10px">'+esc(vl.aviso)+' '+lnk(vl.url,'Fuente')+'</div>'+
+    vl.resultados.map(function(r){return '<div class="row"><span>'+esc(r.origen)+'</span>'+bar(r[A.id],r[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join('')+'</article>';
+  h+='<article class="card pad"><div class="k">Reacciones</div><ul class="l" style="margin-top:8px">'+v.reacciones.map(function(r){return '<li><b>'+esc(r.quien)+'</b>: '+esc(r.t)+'</li>'}).join('')+'</ul></article>';
+
+  h+='<h3>Efecto electoral</h3><article class="card pad"><span class="v v-sin_veredicto">'+esc(d.efecto_electoral.estado)+'</span> '+esc(d.efecto_electoral.nota)+'</article>';
+  h+='<h3>Lectura</h3><article class="card pad">'+esc(d.lectura)+'</article>';
+  h+='<h3>Fuentes</h3><article class="card pad"><ul class="l">'+d.fuentes.map(function(f){return '<li>'+lnk(f.url,f.titulo)+' <span class="mut">· '+esc(f.tipo)+'</span></li>'}).join('')+'</ul></article>';
+  if(d.pendiente&&d.pendiente.length)h+='<h3>Pendiente de completar</h3><article class="card pad"><ul class="l">'+d.pendiente.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')+'</ul></article>';
+  app.innerHTML=h;
+}
+})();
+</script>
+</body>
+</html>
