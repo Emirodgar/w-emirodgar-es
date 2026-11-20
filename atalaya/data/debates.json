@@ -147,7 +147,7 @@
           "p": "sanchez",
           "tema": "Vivienda",
           "afirmacion": "Se han construido un millón de viviendas en ocho años.",
-          "contraste": "Las terminadas rondan 700.000-750.000 (Newtral cita 693.676).",
+          "contraste": "Las terminadas rondan 700.000-750.000 (Newtral cita 693.676). Maldita y Verificat dan 719.602 viviendas (88.354 protegidas, 14 %; Sánchez dijo 13 %).",
           "veredictos": [
             {
               "verificador": "EFE Verifica",
@@ -178,6 +178,16 @@
               "verificador": "Newtral",
               "veredicto": "sin_veredicto",
               "etiqueta": "Sin etiqueta; aporta la cifra"
+            },
+            {
+              "verificador": "Maldita",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Sin etiqueta; 719.602 viviendas (3T 2018-2T 2026)"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "T'ho expliquem (sin veredicto)"
             }
           ]
         },
@@ -212,6 +222,11 @@
               "verificador": "Antena 3",
               "veredicto": "enganoso",
               "etiqueta": "Necesita contexto"
+            },
+            {
+              "verificador": "Maldita",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
             }
           ],
           "nota": "Hay discrepancia entre verificadores con el mismo dato de partida; Newtral recoge la afirmación como «600 euros»."
@@ -237,6 +252,16 @@
               "verificador": "Antena 3",
               "veredicto": "falso",
               "etiqueta": "Falso en los términos expresados"
+            },
+            {
+              "verificador": "Maldita",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "falso",
+              "etiqueta": "Fals"
             }
           ]
         },
@@ -271,6 +296,11 @@
               "verificador": "Antena 3",
               "veredicto": "falso",
               "etiqueta": "Falso"
+            },
+            {
+              "verificador": "Maldita",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
             }
           ]
         },
@@ -290,6 +320,16 @@
               "verificador": "Antena 3",
               "veredicto": "enganoso",
               "etiqueta": "Engañoso"
+            },
+            {
+              "verificador": "Maldita",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Sin etiqueta; INE 1,28 %"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "T'ho expliquem (sin veredicto)"
             }
           ]
         },
@@ -358,6 +398,16 @@
               "verificador": "Varias fuentes",
               "veredicto": "falso",
               "etiqueta": "Desmentido por ocho fuentes (según El Debate)"
+            },
+            {
+              "verificador": "Maldita",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "falso",
+              "etiqueta": "Fals"
             }
           ]
         },
@@ -374,16 +424,293 @@
               "etiqueta": "Incorrecto"
             }
           ]
+        },
+        {
+          "id": "desahucios-276k",
+          "p": "feijoo",
+          "tema": "Vivienda",
+          "afirmacion": "276.000 desahucios durante la legislatura de Sánchez.",
+          "contraste": "CGPJ: 276.897 lanzamientos desde el 3T 2018, con tendencia a la baja (67.000 en 2015; unos 24.500 en 2025).",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdadero"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdader"
+            }
+          ]
+        },
+        {
+          "id": "vivienda-60",
+          "p": "sanchez",
+          "tema": "Vivienda",
+          "afirmacion": "Seis de cada diez euros del plan de vivienda los pone la Administración General del Estado.",
+          "contraste": "Plan Estatal 2026-2030: 7.000 M€, el Estado aporta 4.200 M€ (60 %) y las comunidades 2.800 M€ (40 %).",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdadero"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdader, con matiz"
+            }
+          ],
+          "nota": "Maldita y Verificat recuerdan que en otros momentos Sánchez dijo que lo pagaba todo el Gobierno central."
+        },
+        {
+          "id": "alquiler-bcn-69",
+          "p": "feijoo",
+          "tema": "Vivienda",
+          "afirmacion": "La oferta de pisos de alquiler en Barcelona ha bajado un 69 %.",
+          "contraste": "Idealista coincide con el 69 % (2023-2026) pero no es necesariamente representativo; Fedea cifra la caída en 22,2 % tras la regulación.",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "enganoso",
+              "etiqueta": "Enganyós"
+            }
+          ]
+        },
+        {
+          "id": "oferta-400k",
+          "p": "feijoo",
+          "tema": "Vivienda",
+          "afirmacion": "La oferta de alquiler ha disminuido en 400.000 viviendas.",
+          "contraste": "Idealista: 393.000 anuncios menos que en 2018; el Banco de España habla de un aumento del stock de alquiler de unas 95.000 viviendas al año (2021-2025).",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "enganoso",
+              "etiqueta": "Enganyós"
+            }
+          ]
+        },
+        {
+          "id": "alimentos-143",
+          "p": "feijoo",
+          "tema": "Coste de la vida",
+          "afirmacion": "100 euros de alimentos en 2018 cuestan ahora 143 euros (un 43 % más).",
+          "contraste": "INE: alimentos y bebidas no alcohólicas +42,8 % desde junio de 2018; IPC general +28,6 %. Leche +53,1 %, huevos +91,5 %.",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdadero"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdader"
+            }
+          ],
+          "nota": "En la misma intervención citó un +110 % en legumbres secas; los datos del INE dan +24,3 %."
+        },
+        {
+          "id": "pobreza-infantil",
+          "p": "feijoo",
+          "tema": "Coste de la vida",
+          "afirmacion": "España es el país con más pobreza infantil de la UE.",
+          "contraste": "Eurostat 2025: 33,8 % de menores en riesgo de pobreza o exclusión, el más alto de la UE (media 24,3 %).",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdadero"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdader"
+            }
+          ]
+        },
+        {
+          "id": "inseguridad",
+          "p": "feijoo",
+          "tema": "Criminalidad",
+          "afirmacion": "La inseguridad ha aumentado de forma exponencial (infracciones +18 %, homicidios +26 %, agresiones sexuales con penetración «el triple»).",
+          "contraste": "Interior: infracciones penales +18,7 % (junio 2018-junio 2026); INE: tasa de homicidios +24 %. Maldita no puede separar agresiones y abusos por la unificación de tipos penales.",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Sin etiqueta; aporta cifras"
+            }
+          ]
+        },
+        {
+          "id": "presion-fiscal",
+          "p": "feijoo",
+          "tema": "Economía y fiscalidad",
+          "afirmacion": "España es el tercer país de la UE que más ha subido la presión fiscal.",
+          "contraste": "Eurostat: 38,1 % del PIB en 2025 (37,2 % en 2024), tercer mayor aumento; sigue por debajo de la media UE (40,7 %).",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdadero"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdader"
+            }
+          ]
+        },
+        {
+          "id": "crecimiento-ue",
+          "p": "sanchez",
+          "tema": "Economía y fiscalidad",
+          "afirmacion": "La Comisión Europea dice que España será la gran economía europea que más crezca.",
+          "contraste": "Previsiones de otoño (17-nov-2026): España +2,6 % en 2026, primera entre las grandes economías; ocho países de la UE crecen más.",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdadero"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "verdadero",
+              "etiqueta": "Verdader"
+            }
+          ]
+        },
+        {
+          "id": "impuestos-100",
+          "p": "feijoo",
+          "tema": "Economía y fiscalidad",
+          "afirmacion": "Sánchez ha subido los impuestos 100 veces.",
+          "contraste": "La cifra procede del «impuestómetro» del Instituto Juan de Mariana, que cuenta también cotizaciones; un experto matiza que subir no siempre implica más recaudación.",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "Sin etiqueta"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "T'ho expliquem (sin veredicto)"
+            }
+          ]
+        },
+        {
+          "id": "nextgen-80k",
+          "p": "feijoo",
+          "tema": "Economía y fiscalidad",
+          "afirmacion": "Los 80.000 millones de los fondos Next Generation hay que devolverlos.",
+          "contraste": "España recibió unos 79.800 M€ en transferencias no reembolsables; solo los préstamos (unos 17.000-21.500 M€) se devuelven, de 2028 a 2058.",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "enganoso",
+              "etiqueta": "Enganyós"
+            }
+          ],
+          "nota": "Newtral lo da por falso; El Debate sostiene que su fecha de devolución es errónea. Los verificadores no coinciden en el matiz."
+        },
+        {
+          "id": "frontex",
+          "p": "feijoo",
+          "tema": "Migración",
+          "afirmacion": "Sánchez no deja que Frontex esté en España.",
+          "contraste": "Frontex opera en España desde hace años; el Gobierno rechazó al principio su ayuda tras Ceuta y la pidió después para triajes (Moncloa, 28-ago-2026).",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "enganoso",
+              "etiqueta": "Enganyós"
+            }
+          ]
+        },
+        {
+          "id": "migracion-21",
+          "p": "sanchez",
+          "tema": "Migración",
+          "afirmacion": "Su Gobierno ha reducido la migración irregular un 21 % desde 2018.",
+          "contraste": "Interior: 55.949 entradas (1 ene-14 nov 2018) frente a 44.238 en 2026, sin contar las de Ceuta de julio; Verificat advierte de que las series no son comparables.",
+          "veredictos": [
+            {
+              "verificador": "Verificat",
+              "veredicto": "sin_veredicto",
+              "etiqueta": "T'ho expliquem (sin veredicto)"
+            }
+          ]
+        },
+        {
+          "id": "imputado-financiacion",
+          "p": "feijoo",
+          "tema": "Corrupción",
+          "afirmacion": "Sánchez está imputado por financiación irregular en dos sumarios.",
+          "contraste": "No hay imputación formal contra Sánchez ni contra el PSOE como persona jurídica; el juez Pedraz consideró prematuro imputar al partido (oct-2026).",
+          "veredictos": [
+            {
+              "verificador": "Maldita",
+              "veredicto": "falso",
+              "etiqueta": "Falso"
+            },
+            {
+              "verificador": "Verificat",
+              "veredicto": "falso",
+              "etiqueta": "Fals"
+            }
+          ]
         }
       ],
       "verificacion_meta": {
-        "texto": "Según El Debate se identificaron 154 afirmaciones comprobables (89 de Feijóo, 65 de Sánchez). Los cuatro verificadores profesionales (Newtral, Verificat, RTVE Verifica, EFE Verifica) comprobaron el 36 % y el 37 % respectivamente. Cadena SER publicó 11 piezas sobre Feijóo y 2 sobre Sánchez; El País, 15 y 6; Newtral, 23 y 17.",
+        "texto": "Según El Debate se identificaron 154 afirmaciones comprobables (89 de Feijóo, 65 de Sánchez). Los cuatro verificadores profesionales (Newtral, Verificat, RTVE Verifica, EFE Verifica) comprobaron el 36 % y el 37 % respectivamente. Cadena SER publicó 11 piezas sobre Feijóo y 2 sobre Sánchez; El País, 15 y 6; Newtral, 23 y 17. Maldita y Verificat, que trabajan juntas en la alianza Comprobado, coinciden en el veredicto en casi todas las afirmaciones que comparten.",
         "fuente": "https://www.eldebate.com/espana/20261120/mismos-datos-distinto-veredicto-asi-trataron-verificadores-sanchez-feijoo-cara-cara-cns_483334.html",
-        "sesgo": "Recuento hecho por un medio de línea conservadora; contrastar con los propios verificadores. Las verificaciones de Newtral no se pudieron leer en directo (acceso bloqueado) y se citan a través de El Debate.",
+        "sesgo": "El recuento general lo hace un medio de línea conservadora; contrastar con los propios verificadores. Las verificaciones de Newtral no se pudieron leer en directo (acceso bloqueado) y se citan a través de El Debate. Maldita y Verificat sí se leyeron directamente. Los veredictos «sin etiqueta» son los que el verificador explica sin calificar.",
         "enlaces_verificadores": [
           {
             "verificador": "Newtral",
             "url": "https://www.newtral.es/verificacion-directo-cara-a-dara-sanchez-feijoo-factchecking/20261119/"
+          },
+          {
+            "verificador": "Maldita",
+            "url": "https://maldita.es/desinfo/20261120/verificacion-cara-a-cara-sanchez-feijoo-29n/"
+          },
+          {
+            "verificador": "Verificat",
+            "url": "https://www.verificat.cat/verificacions-del-cara-a-cara-entre-pedro-sanchez-i-alberto-nunez-feijoo/"
+          },
+          {
+            "verificador": "papeleta.es (no oficial)",
+            "url": "https://papeleta.es/verificador/cara-a-cara"
+          }
+        ],
+        "recuentos": [
+          {
+            "verificador": "Maldita (Comprobado)",
+            "tipo": "profesional",
+            "url": "https://maldita.es/desinfo/20261120/verificacion-cara-a-cara-sanchez-feijoo-29n/",
+            "total": 15,
+            "desglose": "6 verdadero, 5 falso, 4 sin etiqueta visible",
+            "nota": "Todo en una sola página, sin enlaces individuales a cada verificación."
+          },
+          {
+            "verificador": "Verificat (Comprobado)",
+            "tipo": "profesional",
+            "url": "https://www.verificat.cat/verificacions-del-cara-a-cara-entre-pedro-sanchez-i-alberto-nunez-feijoo/",
+            "total": 20,
+            "desglose": "7 verdader, 5 fals, 4 enganyós, 4 sin veredicto (T'ho expliquem)",
+            "nota": "Artículo único en catalán; también existe versión en castellano."
+          },
+          {
+            "verificador": "papeleta.es",
+            "tipo": "no oficial, con IA y revisión humana",
+            "url": "https://papeleta.es/verificador/cara-a-cara",
+            "total": 66,
+            "desglose": "Sánchez (37): 19 cierto, 15 a medias, 2 falso, 1 no comprobable. Feijóo (29): 7 cierto, 15 a medias, 6 falso, 1 no comprobable.",
+            "nota": "Proyecto no oficial: una IA propone las fichas y una persona las aprueba. Dos fichas de Feijóo se corrigieron el 20-nov."
           }
         ]
       },
@@ -592,13 +919,29 @@
           "titulo": "Vozpópuli: guía de formato",
           "url": "https://www.vozpopuli.com/espana/politica/guia-para-no-perderse-en-el-cara-a-cara-entre-sanchez-y-feijoo-horario-bloques-tiempos-y-quien-lo-modera.html",
           "tipo": "formato"
+        },
+        {
+          "titulo": "Maldita: verificaciones del cara a cara",
+          "url": "https://maldita.es/desinfo/20261120/verificacion-cara-a-cara-sanchez-feijoo-29n/",
+          "tipo": "verificacion"
+        },
+        {
+          "titulo": "Verificat: verificaciones del cara a cara",
+          "url": "https://www.verificat.cat/verificacions-del-cara-a-cara-entre-pedro-sanchez-i-alberto-nunez-feijoo/",
+          "tipo": "verificacion"
+        },
+        {
+          "titulo": "papeleta.es: verificación no oficial de 66 afirmaciones",
+          "url": "https://papeleta.es/verificador/cara-a-cara",
+          "tipo": "verificacion"
         }
       ],
       "pendiente": [
         "Transcripción oficial para contar tiempos reales de intervención.",
-        "Verificaciones de Maldita y Verificat enlazadas una a una.",
         "Efecto en encuestas a partir de sondeos posteriores al 20-N.",
-        "Vincular afirmaciones con promesas de programas.json/promesas.json."
+        "Vincular afirmaciones con promesas de programas.json/promesas.json.",
+        "Newtral: leer sus verificaciones directamente (acceso bloqueado al consultar).",
+        "RTVE Verifica, EFE Verifica y El País: enlazar sus verificaciones una a una."
       ]
     }
   ]

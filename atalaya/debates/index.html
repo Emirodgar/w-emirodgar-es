@@ -128,7 +128,9 @@ function detalle(d){
       b.resumen.map(function(r){var p=P[r.p];return '<div class="pc" style="--c:'+esc(p.color)+'"><b>'+esc(p.nombre)+' · '+esc(p.partido)+'</b><div>'+esc(r.t)+'</div></div>'}).join('')+'</div></article>';
   });
 
-  h+='<h3>Verificación de datos</h3><p class="note">'+esc(d.verificacion_meta.texto)+' '+lnk(d.verificacion_meta.fuente,'Fuente')+'<br><b>Ojo:</b> '+esc(d.verificacion_meta.sesgo)+'</p><article class="card">';
+  h+='<h3>Verificación de datos</h3><p class="note">'+esc(d.verificacion_meta.texto)+' '+lnk(d.verificacion_meta.fuente,'Fuente')+'<br><b>Ojo:</b> '+esc(d.verificacion_meta.sesgo)+'</p>';
+  if(d.verificacion_meta.recuentos)h+='<article class="card pad"><div class="k">Qué comprobó cada verificador</div><table class="tbl" style="margin-top:8px"><tr><th>Verificador</th><th>Afirmaciones</th><th>Desglose</th></tr>'+d.verificacion_meta.recuentos.map(function(r){return '<tr><td>'+lnk(r.url,r.verificador)+'<div class="mut">'+esc(r.tipo)+'</div></td><td>'+r.total+'</td><td>'+esc(r.desglose)+'<div class="mut">'+esc(r.nota)+'</div></td></tr>'}).join('')+'</table></article>';
+  h+='<article class="card">';
   d.afirmaciones.forEach(function(a){
     var p=P[a.p];
     h+='<div class="af"><div class="who" style="color:'+esc(p.color)+'">'+esc(p.nombre)+' · '+esc(a.tema)+'</div><div style="margin:3px 0"><b>'+esc(a.afirmacion)+'</b></div><div class="mut">'+esc(a.contraste)+'</div><div style="margin-top:6px">'+
