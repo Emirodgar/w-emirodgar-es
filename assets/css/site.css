@@ -152,6 +152,8 @@ a.sg-article:hover{transform:translateY(-6px)}
 /* Autor y relacionados */
 .author-box{display:flex;align-items:center;gap:16px;margin:56px 0 0;padding:24px;border-radius:22px;background:var(--sg-bg-alt)}
 .author-box img{flex:none;width:64px;height:64px;border-radius:50% !important;object-fit:cover}
+.author-box img{filter:grayscale(1);transition:filter .3s}
+.author-box:hover img,.author-box img:hover{filter:grayscale(0)}
 .author-box p{margin:0 0 4px;font-size:15px}
 .author-box a{font-weight:600}
 .related{margin:64px 0 0;padding-top:32px;border-top:1px solid var(--sg-border)}
