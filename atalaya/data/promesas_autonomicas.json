@@ -19,7 +19,8 @@
     {"titulo": "Panel Económico CyL", "url": "/panel-economico-cyl/", "desc": "paro, afiliación, presupuesto y comparativa con España, actualizado cada mes."},
     {"titulo": "¿Quién Gobierna CyL?", "url": "/quien-gobierna-cyl/", "desc": "composición actual de la Junta, tras las elecciones del 15 de marzo de 2026."},
     {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología aplicada a la Comunidad de Madrid."},
-    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última legislatura completa como presidente de la Xunta de Galicia."}
+    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última legislatura completa como presidente de la Xunta de Galicia."},
+    {"titulo": "¿Es coherente Abascal con los votos de Vox?", "url": "/atalaya/fichas/politico/abascal/", "desc": "discurso vs. votos en el Congreso, para líderes sin cargo ejecutivo."}
    ],
    "promesas": [
     {
@@ -122,7 +123,8 @@
    "enlaces": [
     {"titulo": "¿Quién ganará en Madrid?", "url": "/atalaya/fichas/madrid/", "desc": "seguimiento electoral de la provincia en Atalaya."},
     {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "la misma metodología aplicada a Castilla y León."},
-    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última legislatura completa como presidente de la Xunta de Galicia."}
+    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última legislatura completa como presidente de la Xunta de Galicia."},
+    {"titulo": "¿Es coherente Abascal con los votos de Vox?", "url": "/atalaya/fichas/politico/abascal/", "desc": "discurso vs. votos en el Congreso, para líderes sin cargo ejecutivo."}
    ],
    "promesas": [
     {
@@ -241,7 +243,8 @@
    },
    "enlaces": [
     {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "la misma metodología aplicada a Castilla y León."},
-    {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología aplicada a la Comunidad de Madrid."}
+    {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología aplicada a la Comunidad de Madrid."},
+    {"titulo": "¿Es coherente Abascal con los votos de Vox?", "url": "/atalaya/fichas/politico/abascal/", "desc": "un formato distinto, discurso vs. votos en el Congreso."}
    ],
    "promesas": [
     {

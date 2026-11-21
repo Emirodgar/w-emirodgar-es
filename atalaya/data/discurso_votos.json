@@ -1,0 +1,137 @@
+{
+ "aviso": "Compara lo que dice públicamente un líder político con cómo ha votado su grupo parlamentario en el Congreso en los asuntos relacionados. Se usa cuando el político no tiene (o no ha tenido) cargo ejecutivo que permita contrastar promesas con hechos de gobierno. Cada posición declarada y cada voto llevan su propia fuente; nunca se borra nada, solo se amplía.",
+ "politicos": [
+  {
+   "id": "santiago-abascal",
+   "slug": "abascal",
+   "nombre": "Santiago Abascal",
+   "cargo": "Presidente de Vox",
+   "partido": "Vox",
+   "wiki": "https://es.wikipedia.org/wiki/Santiago_Abascal",
+   "actualizado": "2026-11-21",
+   "nota_contexto": "Abascal nunca ha tenido cargo ejecutivo, ni autonómico ni nacional: siempre ha liderado Vox desde la oposición en el Congreso. Por eso esta ficha no compara promesas de gobierno con hechos, sino lo que dice públicamente (él u otros portavoces de Vox, que votan bajo su liderazgo) con cómo ha votado realmente el Grupo Parlamentario Vox en el Congreso de los Diputados en los asuntos relacionados.",
+   "enlaces": [
+    {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "promesas de gobierno contrastadas con hechos, en Castilla y León."},
+    {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología de promesas y hechos, en Madrid."},
+    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última etapa de gobierno, en Galicia."}
+   ],
+   "casos": [
+    {
+     "id": "amnistia",
+     "tema": "Amnistía",
+     "posicion": {
+      "cita": "Pueden estar seguros de que nosotros no les vamos a conceder ninguna amnistía.",
+      "autor": "Santiago Abascal",
+      "fecha": "2023-12-12",
+      "contexto": "Intervención en el Congreso durante el debate de toma en consideración de la proposición de ley de amnistía; también la calificó de \"el mayor acto de corrupción que este parlamento ha visto desde el inicio de la democracia\".",
+      "fuentes": [{"titulo": "Valencia News: crónica del debate de amnistía", "url": "https://www.valencianews.es"}]
+     },
+     "voto": {
+      "resultado": "El Congreso dio la aprobación definitiva a la Ley Orgánica de Amnistía el 30 de mayo de 2024, levantando el veto del Senado, con 177 votos a favor y 172 en contra. Vox votó en contra, junto a PP, Coalición Canaria y UPN.",
+      "fecha": "2024-05-30",
+      "fuentes": [
+       {"titulo": "El Independiente: aprobación definitiva de la Ley de Amnistía", "url": "https://www.elindependiente.com"},
+       {"titulo": "Deia: votación de la Ley de Amnistía", "url": "https://www.deia.eus"}
+      ]
+     },
+     "veredicto": "coherente",
+     "etiqueta": "Coherente",
+     "color": "ok",
+     "analisis": "El discurso y el voto coinciden sin matices: Abascal anunció el rechazo con meses de antelación y Vox votó en contra en todas las fases de tramitación."
+    },
+    {
+     "id": "estado-alarma",
+     "tema": "Estado de alarma (COVID-19)",
+     "posicion": {
+      "cita": "Ni salva vidas ni salva empleos.",
+      "autor": "Santiago Abascal",
+      "fecha": "2020-05-06",
+      "contexto": "Intervención en el debate de la cuarta prórroga del estado de alarma por la pandemia, en la que también lo calificó de ilegal (caracterización de prensa, no cita literal continua).",
+      "fuentes": [{"titulo": "Moncloa.com (Canarias): crónica del debate de la cuarta prórroga", "url": "https://www.moncloa.com"}]
+     },
+     "voto": {
+      "resultado": "Vox votó a favor de la primera prórroga (25 de marzo de 2020, aprobada 321 a favor y 28 abstenciones, sin votos en contra), pero votó en contra de la segunda (9 de abril), la tercera (22 de abril) y la cuarta (6 de mayo).",
+      "fecha": "2020-03-25 a 2020-05-06",
+      "fuentes": [
+       {"titulo": "Maldita.es: Vox y el estado de alarma", "url": "https://maldita.es"},
+       {"titulo": "El Independiente: votación de la segunda prórroga", "url": "https://www.elindependiente.com"}
+      ]
+     },
+     "veredicto": "matizado",
+     "etiqueta": "Coherente, con un giro a mitad de camino",
+     "color": "mid",
+     "analisis": "Vox apoyó la primera prórroga, en las semanas de mayor unidad política por la pandemia, y fue endureciendo su posición —tanto en el discurso como en el voto— a medida que se sucedían las prórrogas. El giro del discurso y el del voto van de la mano, pero cambian de sentido por el camino."
+    },
+    {
+     "id": "reforma-laboral",
+     "tema": "Reforma laboral 2021-2022",
+     "posicion": {
+      "cita": "Pucherazo.",
+      "autor": "Santiago Abascal y Macarena Olona (Vox)",
+      "fecha": "2022-02-03",
+      "contexto": "Reacción al resultado de la votación, en la que Vox anunció que recurriría ante el Tribunal Constitucional. No se ha localizado una cita suya centrada en el contenido de la reforma (derechos laborales, negociación colectiva), solo en la legitimidad del procedimiento de voto.",
+      "fuentes": [
+       {"titulo": "Moncloa.com (Canarias): Abascal habla de \"pucherazo\"", "url": "https://www.moncloa.com"},
+       {"titulo": "Que.es: Vox califica de \"pucherazo\" lo ocurrido en el Congreso", "url": "https://www.que.es"}
+      ]
+     },
+     "voto": {
+      "resultado": "El Pleno convalidó el Real Decreto-ley 32/2021 de reforma laboral por 175 votos a favor y 174 en contra, gracias a un voto telemático erróneo de un diputado del PP que no se pudo corregir. Vox (52 diputados) votó en contra, junto con el PP, ERC, PNV y EH Bildu.",
+      "fecha": "2022-02-03",
+      "fuentes": [{"titulo": "Ara (es): confusión en el Congreso por el voto erróneo del PP", "url": "https://es.ara.cat"}]
+     },
+     "veredicto": "incompleto",
+     "etiqueta": "Votó en contra, sin discurso de fondo conocido",
+     "color": "mid",
+     "analisis": "El voto en contra es inequívoco, pero el argumento público que más repitió Vox tras la votación fue sobre la legitimidad del procedimiento (el voto erróneo), no sobre el contenido laboral de la reforma. No hay constancia de una cita suya que explique por qué se opone al fondo de la norma."
+    },
+    {
+     "id": "revalorizacion-pensiones",
+     "tema": "Revalorización de pensiones con el IPC",
+     "posicion": {
+      "cita": "Sentido de la responsabilidad.",
+      "autor": "Víctor González (Vox)",
+      "fecha": "2020-02-04",
+      "contexto": "Explicación del voto de Vox en el debate de una subida previa de pensiones (RD-ley 1/2020, +0,9 %), donde también argumentó que el modelo de pensiones \"promueve la inmigración masiva\". No se ha localizado una cita suya de 2021 sobre la ley que finalmente ató las pensiones al IPC.",
+      "fuentes": [{"titulo": "Público: Vox y la subida de las pensiones en el Congreso", "url": "https://www.publico.es"}]
+     },
+     "voto": {
+      "resultado": "El Congreso aprobó la ley de garantía del poder adquisitivo de las pensiones (revalorización con el IPC) el 2 de diciembre de 2021, con 176 votos a favor y 148 en contra. Vox votó en contra, junto con PP, Cs, CUP, UPN, Coalición Canaria, Foro Asturias y BNG, calificando el paquete de insuficiente. El Senado la aprobó definitivamente el 22 de diciembre (151 a favor, 108 en contra, 3 abstenciones), con el mismo bloque en contra.",
+      "fecha": "2021-12-02",
+      "fuentes": [
+       {"titulo": "El Independiente: el Congreso aprueba la primera reforma de pensiones con el IPC", "url": "https://www.elindependiente.com"},
+       {"titulo": "Público: el Senado aprueba definitivamente la ley que revaloriza las pensiones con el IPC", "url": "https://www.publico.es"}
+      ]
+     },
+     "veredicto": "incoherente",
+     "etiqueta": "Votó en contra de subir las pensiones",
+     "color": "bad",
+     "analisis": "Vox justificó su voto en contra calificando la subida de insuficiente, pero votar en contra de la ley no la mejora: deja en vigor el sistema anterior, con revalorizaciones no garantizadas. No se abstuvo ni presentó una alternativa con su apoyo condicionado."
+    },
+    {
+     "id": "decreto-omnibus-smi",
+     "tema": "Salario Mínimo Interprofesional y pensiones (decreto ómnibus)",
+     "posicion": {
+      "cita": "Se puede subir el salario mínimo de toda España bajando la cotización a la Seguridad Social y el IRPF.",
+      "autor": "Iván Espinosa de los Monteros (Vox)",
+      "fecha": "2022-08-26",
+      "contexto": "Entrevista en TVE, rechazando que la subida del SMI deba ir \"a costa del empresario\".",
+      "fuentes": [{"titulo": "Merca2: Vox rechaza que subir el salario mínimo sea a costa del empresario", "url": "https://www.merca2.es"}]
+     },
+     "voto": {
+      "resultado": "El 22 de enero de 2025 el Congreso tumbó el \"decreto ómnibus\" que prorrogaba la subida del SMI de 2024 junto con la revalorización de las pensiones y ayudas al transporte: 177 votos en contra (PP, Vox y Junts), 171 a favor. Al separar el Gobierno la revalorización de pensiones en un decreto propio, sin el SMI, el Congreso lo convalidó el 12 de febrero de 2025 por 315 votos a favor y 33 en contra: Vox fue el único partido que votó en contra de esa subida de las pensiones.",
+      "fecha": "2025-01-22 y 2025-02-12",
+      "fuentes": [
+       {"titulo": "ElDiario.es: el Congreso tumba el decreto ómnibus con el SMI y las pensiones", "url": "https://www.eldiario.es"},
+       {"titulo": "Menorca.info: el Congreso convalida la subida de pensiones con Vox como única oposición", "url": "https://www.menorca.info"}
+      ]
+     },
+     "veredicto": "incoherente",
+     "etiqueta": "Único partido en contra de subir las pensiones",
+     "color": "bad",
+     "analisis": "Vox defiende públicamente bajar impuestos a los trabajadores, pero votó en contra de un decreto que incluía la subida del SMI y de las pensiones, contribuyendo a tumbarlo junto al PP y Junts. Cuando el Gobierno separó la revalorización de pensiones del SMI, Vox fue el único partido de todo el Congreso que votó en contra de mantenerla."
+    }
+   ]
+  }
+ ]
+}
