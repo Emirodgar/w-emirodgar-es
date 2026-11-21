@@ -8,8 +8,6 @@ sitemap: 1
 feed: 1
 schema: ProfilePage
 permalink: emilio
-redirect_from:
-  - /sobre-mi
 ---
 
 <img class="sobre-mi-foto" src="/assets/images/emirodgar-firma.jpg" alt="Emilio Rodríguez García" width="160" height="160">
