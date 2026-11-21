@@ -842,6 +842,48 @@
         "url": "https://www.elmundo.es/espana/2026/11/20/6b002a6421efa0631f8b4575.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-21",
+      "edicion": "2026-11-21",
+      "titulo": "Sánchez anuncia la prórroga del impuesto a la banca para 2027",
+      "categoria": "Economía",
+      "descripcion": "El presidente del Gobierno, Pedro Sánchez, ha anunciado que el Consejo de Ministros aprobará la prórroga del impuesto a la banca para 2027, destinando la recaudación a vivienda.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Sánchez anuncia la prórroga del impuesto a la banca para 2027 y la recaudación irá a vivienda",
+        "url": "https://theobjective.com/espana/politica/2026-11-21/sanchez-impuesto-banca/"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-21",
+      "edicion": "2026-11-21",
+      "titulo": "Captura del narcotraficante 'Chapo Isidro' en México",
+      "categoria": "Internacional",
+      "descripcion": "El Gobierno de México ha confirmado la captura de 'Chapo Isidro', uno de los diez criminales más buscados por el FBI, por quien se ofrecía una recompensa de cinco millones de dólares.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "México confirma la captura del narcotraficante 'Chapo Isidro', uno de los 10 criminales más buscados por el FBI",
+        "url": "https://www.elmundo.es/internacional/2026/11/21/6b0183ccfc6c83c7038b456e.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-21",
+      "edicion": "2026-11-21",
+      "titulo": "Detección de cloruro de hidrógeno en Marte sugiere actividad volcánica",
+      "categoria": "Ciencia y Tecnología",
+      "descripcion": "La sonda TGO de la ESA ha detectado trazas de cloruro de hidrógeno cerca de Alba Mons en Marte, lo que podría ser un indicio de actividad volcánica reciente en el planeta.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Marte no está muerto: su cloruro de hidrógeno sugiere actividad volcánica",
+        "url": "https://www.elmundo.es/ciencia/2026/11/21/6aff0f26e4d4d875568b45b1.html"
+      },
+      "destacado": false
     }
   ]
 }

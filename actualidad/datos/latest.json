@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-20",
-  "generado_en": "2026-11-20T13:55:05+00:00",
-  "titular": "Feijóo se impone a Sánchez en el debate electoral, mientras la economía y la geopolítica marcan la agenda",
+  "fecha": "2026-11-21",
+  "generado_en": "2026-11-21T13:18:46+00:00",
+  "titular": "La campaña electoral se intensifica con mítines y cruces de declaraciones, mientras Sánchez anuncia la prórroga del impuesto a la banca.",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 213
+    "El Mundo": 28,
+    "The Objective": 123
   },
   "temas": [
     {
-      "tema": "Debate electoral Sánchez-Feijóo",
+      "tema": "Campaña electoral y declaraciones políticas",
       "categoria": "Política",
-      "descripcion": "Análisis y reacciones al cara a cara entre los candidatos a la presidencia, con percepciones de victoria para Feijóo y críticas a la actuación de Sánchez desde la izquierda."
+      "descripcion": "Diversos líderes políticos, como Yolanda Díaz, Ayuso, Aznar, Feijóo y Abascal, han realizado declaraciones y mítines en el marco de la campaña electoral, criticando posturas y llamando a la movilización."
     },
     {
-      "tema": "Tensión geopolítica en Europa",
-      "categoria": "Internacional",
-      "descripcion": "Caída de misiles rusos en Polonia y el bloqueo marroquí de obras en Ceuta, elevando la preocupación por la seguridad y las disputas territoriales."
-    },
-    {
-      "tema": "Situación económica y tecnológica",
+      "tema": "Prórroga del impuesto a la banca",
       "categoria": "Economía",
-      "descripcion": "Preocupación por una posible burbuja en la IA y la aprobación del decreto de centros de datos, junto con el aumento de las ventas industriales."
+      "descripcion": "Pedro Sánchez ha anunciado la prórroga del impuesto a la banca para 2027, con el objetivo de destinar la recaudación a vivienda, una medida que ha generado controversia en el sector."
     },
     {
-      "tema": "Actividad judicial y seguridad",
-      "categoria": "Sucesos",
-      "descripcion": "Liberación de un millonario acusado de financiar a Hamás, intento de agresión en un centro de menores y desarticulación de tramas criminales."
+      "tema": "Sucesos internacionales",
+      "categoria": "Internacional",
+      "descripcion": "Se ha confirmado la captura de un importante narcotraficante en México, la muerte de un ex jefe de policía italiano investigado por la mafia, y un derrumbe de edificio en Nueva York con víctimas mortales."
+    },
+    {
+      "tema": "Crisis migratoria en España",
+      "categoria": "Sociedad",
+      "descripcion": "La inmigración irregular ha experimentado un notable aumento, con rescates en Canarias y la solicitud de ayuda por parte del gobierno canario para la financiación de la acogida de menores."
     }
   ]
 }
