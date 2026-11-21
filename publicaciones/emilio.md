@@ -14,6 +14,8 @@ permalink: emilio
 
 # Sobre mí
 
+*Actualizado el 21 de noviembre de 2026*
+
 La inteligencia artificial (IA) está transformando radicalmente la manera en que operan las administraciones públicas. Desde la optimización de procesos burocráticos hasta la mejora en la toma de decisiones estratégicas, la IA se ha convertido en un aliado clave para la modernización del sector.
 
 Una de las principales ventajas de la digitalización en el sector público es la **automatización de tareas repetitivas**. Esto no solo permite a los funcionarios enfocarse en labores de mayor valor añadido, sino que también **reduce tiempos de espera y mejora la eficiencia operativa**.
