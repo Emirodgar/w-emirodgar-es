@@ -6,6 +6,7 @@ lang: es_ES
 layout: default
 sitemap: 1
 feed: 1
+schema: ProfilePage
 permalink: emilio
 redirect_from:
   - /sobre-mi
