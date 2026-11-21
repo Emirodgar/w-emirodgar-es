@@ -86,11 +86,11 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, pie):
     return url
 
 
-def bloque_promesa(p):
+def bloque_promesa(p, fecha_disc):
     fu = " · ".join(f"<a href='{E(f['url'])}' rel='nofollow noopener'>{E(f['titulo'])}</a>" for f in p["fuentes"])
     return (f"<div class='prom'><div class='tema'>{E(p['tema'])}</div>"
             f"<h3>¿Qué prometió?</h3><blockquote class='cita'>«{E(p['cita'])}»</blockquote>"
-            f"<p class='meta'>Discurso de investidura, 11 de abril de 2022, pág. {p['pagina']}.</p>"
+            f"<p class='meta'>Discurso de investidura, {fecha_disc}, pág. {p['pagina']}.</p>"
             f"<h3>¿Qué dicen los datos? <span class='chip {E(p['color'])}'>{E(p['etiqueta'])}</span></h3>"
             f"<p>{E(p['hecho'])}</p><p class='fu'>Fuentes:{fu}</p></div>")
 
@@ -103,28 +103,29 @@ def main():
         n_incumplidas = sum(1 for p in proms if p["estado"] == "incumplida")
         n_resto = len(proms) - n_cumplidas - n_incumplidas
         v = lambda n, s, p: f"{n} {s}" if n == 1 else f"{n} {p}"
-        resumen = (f"De {len(proms)} compromisos de su discurso de investidura de 2022 con cita literal y fuente, "
+        resumen = (f"De {len(proms)} compromisos de su discurso de investidura de {pol['programa']['fecha'][:4]} con cita literal y fuente, "
                    f"{v(n_cumplidas, 'se cumplió', 'se cumplieron')} en el plazo prometido, "
                    f"{v(n_incumplidas, 'no se cumplió', 'no se cumplieron')} y "
-                   f"{v(n_resto, 'se cumplió solo en parte o sin el resultado buscado', 'se cumplieron solo en parte o sin el resultado buscado')}.")
-        titulo = f"{pol['nombre']}: lo que prometió en 2022 y lo que dicen los datos"
-        h1 = f"¿Qué prometió {pol['nombre'].split()[-1]} en su investidura de 2022 y qué ha cumplido?"
+                   f"{v(n_resto, 'sigue en marcha, se cumplió solo en parte o no hay pruebas suficientes para valorarlo', 'siguen en marcha, se cumplieron solo en parte o no hay pruebas suficientes para valorarlos')}.")
+        anio = pol["programa"]["fecha"][:4]
+        fecha_disc = fecha_es(pol["programa"]["fecha"])
+        titulo = f"{pol['nombre']}: lo que prometió en {anio} y lo que dicen los datos"
+        h1 = f"¿Qué prometió {pol['nombre'].split()[-1]} en su investidura de {anio} y qué ha cumplido?"
         desc = resumen
-        cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(pol['actualizado'])} · {E(pol['cargo'])} (PP)</p>"
+        enlaces = "".join(f"<li><a href='{E(e['url'])}'>{E(e['titulo'])}</a>: {E(e['desc'])}</li>" for e in pol.get("enlaces", []))
+        cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(pol['actualizado'])} · {E(pol['cargo'])} ({E(pol['partido'])})</p>"
                   f"<p class='ans'>{E(resumen)}</p>"
-                  "<p class='warn'>Metodología: cada promesa es una cita literal copiada del Diario de Sesiones de las Cortes de Castilla y León "
+                  f"<p class='warn'>Metodología: cada promesa es una cita literal copiada del Diario de Sesiones de {E(pol['institucion'])} "
                   f"(<a href='{E(pol['programa']['url'])}' rel='nofollow noopener'>fuente oficial</a>, discurso de investidura del "
-                  f"{fecha_es(pol['programa']['fecha'])}), nunca una paráfrasis. Cada hecho tiene su propia fuente verificable. "
+                  f"{fecha_disc}), nunca una paráfrasis. Cada hecho tiene su propia fuente verificable. "
                   "No es un balance exhaustivo del mandato: es una muestra representativa por tema, que se ampliará con el tiempo.</p>"
                   "<h2>Promesas y hechos, una por una</h2>"
-                  + "".join(bloque_promesa(p) for p in proms)
+                  + "".join(bloque_promesa(p, fecha_disc) for p in proms)
                   + "<h2>Para seguir profundizando</h2><ul>"
-                  "<li><a href='/panel-economico-cyl/'>Panel Económico CyL</a>: paro, afiliación, presupuesto y comparativa con España, actualizado cada mes.</li>"
-                  "<li><a href='/quien-gobierna-cyl/'>¿Quién Gobierna CyL?</a>: composición actual de la Junta, tras las elecciones del 15 de marzo de 2026.</li>"
-                  f"<li><a href='{E(pol['wiki'])}'>Ficha de Wikipedia</a> de {E(pol['nombre'])}.</li>"
-                  "</ul>"
-                  "<p class='warn'>Próximamente: la misma ficha de promesas y hechos para Isabel Díaz Ayuso (Comunidad de Madrid).</p>")
-        faqs = [(f"¿Cumplió {pol['nombre']} sus promesas electorales de 2022?", resumen)]
+                  + enlaces
+                  + f"<li><a href='{E(pol['wiki'])}'>Ficha de Wikipedia</a> de {E(pol['nombre'])}.</li>"
+                  "</ul>")
+        faqs = [(f"¿Cumplió {pol['nombre']} sus promesas electorales de {anio}?", resumen)]
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": titulo, "description": desc, "inLanguage": "es",
                "datePublished": pol["actualizado"], "dateModified": pol["actualizado"],
                "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"},
