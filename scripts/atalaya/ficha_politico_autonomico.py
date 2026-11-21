@@ -113,10 +113,12 @@ def main():
         h1 = f"¿Qué prometió {pol['nombre'].split()[-1]} en su investidura de {anio} y qué ha cumplido?"
         desc = resumen
         enlaces = "".join(f"<li><a href='{E(e['url'])}'>{E(e['titulo'])}</a>: {E(e['desc'])}</li>" for e in pol.get("enlaces", []))
+        nota = f"<p class='warn'>{E(pol['nota_contexto'])}</p>" if pol.get("nota_contexto") else ""
         cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(pol['actualizado'])} · {E(pol['cargo'])} ({E(pol['partido'])})</p>"
                   f"<p class='ans'>{E(resumen)}</p>"
-                  f"<p class='warn'>Metodología: cada promesa es una cita literal copiada del Diario de Sesiones de {E(pol['institucion'])} "
-                  f"(<a href='{E(pol['programa']['url'])}' rel='nofollow noopener'>fuente oficial</a>, discurso de investidura del "
+                  + nota +
+                  f"<p class='warn'>Metodología: cada promesa es una cita literal copiada del Diario de Sesiones {E(pol['institucion'])}, "
+                  f"en el idioma original del discurso (<a href='{E(pol['programa']['url'])}' rel='nofollow noopener'>fuente oficial</a>, discurso de investidura del "
                   f"{fecha_disc}), nunca una paráfrasis. Cada hecho tiene su propia fuente verificable. "
                   "No es un balance exhaustivo del mandato: es una muestra representativa por tema, que se ampliará con el tiempo.</p>"
                   "<h2>Promesas y hechos, una por una</h2>"

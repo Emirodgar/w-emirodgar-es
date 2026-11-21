@@ -9,7 +9,7 @@
    "partido": "PP",
    "wiki": "https://es.wikipedia.org/wiki/Alfonso_Fern%C3%A1ndez_Ma%C3%B1ueco",
    "actualizado": "2026-11-21",
-   "institucion": "las Cortes de Castilla y León",
+   "institucion": "de las Cortes de Castilla y León",
    "programa": {
     "titulo": "Discurso de investidura ante las Cortes de Castilla y León (Programa de Gobierno, XI Legislatura)",
     "fecha": "2022-04-11",
@@ -18,7 +18,8 @@
    "enlaces": [
     {"titulo": "Panel Económico CyL", "url": "/panel-economico-cyl/", "desc": "paro, afiliación, presupuesto y comparativa con España, actualizado cada mes."},
     {"titulo": "¿Quién Gobierna CyL?", "url": "/quien-gobierna-cyl/", "desc": "composición actual de la Junta, tras las elecciones del 15 de marzo de 2026."},
-    {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología aplicada a la Comunidad de Madrid."}
+    {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología aplicada a la Comunidad de Madrid."},
+    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última legislatura completa como presidente de la Xunta de Galicia."}
    ],
    "promesas": [
     {
@@ -112,7 +113,7 @@
    "partido": "PP",
    "wiki": "https://es.wikipedia.org/wiki/Isabel_D%C3%ADaz_Ayuso",
    "actualizado": "2026-11-21",
-   "institucion": "la Asamblea de Madrid",
+   "institucion": "de la Asamblea de Madrid",
    "programa": {
     "titulo": "Discurso de investidura ante la Asamblea de Madrid (Programa de Gobierno, XIII Legislatura)",
     "fecha": "2023-06-21",
@@ -120,7 +121,8 @@
    },
    "enlaces": [
     {"titulo": "¿Quién ganará en Madrid?", "url": "/atalaya/fichas/madrid/", "desc": "seguimiento electoral de la provincia en Atalaya."},
-    {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "la misma metodología aplicada a Castilla y León."}
+    {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "la misma metodología aplicada a Castilla y León."},
+    {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "su última legislatura completa como presidente de la Xunta de Galicia."}
    ],
    "promesas": [
     {
@@ -218,6 +220,123 @@
      "fuentes": [
       {"titulo": "BOE: Ley 17/2023, de 27 de diciembre", "url": "https://boe.es/boe/dias/2024/05/29/pdfs/BOE-A-2024-10767.pdf"},
       {"titulo": "Amnistía Internacional: la ley trans de Madrid", "url": "https://www.es.amnesty.org/en-que-estamos/blog/historia/articulo/ley-trans-madrid/"}
+     ]
+    }
+   ]
+  },
+  {
+   "id": "alberto-nunez-feijoo",
+   "slug": "feijoo",
+   "nombre": "Alberto Núñez Feijóo",
+   "cargo": "Presidente de la Xunta de Galicia (2016-2020)",
+   "partido": "PP",
+   "wiki": "https://es.wikipedia.org/wiki/Alberto_N%C3%BA%C3%B1ez_Feij%C3%B3o",
+   "actualizado": "2026-11-21",
+   "institucion": "del Parlamento de Galicia",
+   "nota_contexto": "Feijóo no gobierna actualmente ningún territorio: dejó la Presidencia de la Xunta en 2022 para liderar el PP a nivel nacional. Por eso esta ficha usa su última legislatura completa como presidente autonómico (2016-2020), la única etapa en la que tuvo el poder real de cumplir lo que prometió.",
+   "programa": {
+    "titulo": "Discurso de investidura ante el Parlamento de Galicia (Programa de Gobierno, X Legislatura)",
+    "fecha": "2016-11-08",
+    "url": "https://praza.gal/storage/xornal/uploads/arquivos/arquivo/5823187e0d050-081116intervencionanfdebateinvestiduradef.pdf"
+   },
+   "enlaces": [
+    {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "la misma metodología aplicada a Castilla y León."},
+    {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "la misma metodología aplicada a la Comunidad de Madrid."}
+   ],
+   "promesas": [
+    {
+     "id": "empleo-2016",
+     "tema": "Empleo",
+     "cita": "Co obxectivo de que se creen entre 80.000 e 100.000 novos postos de traballo e que a taxa de paro se sitúe nunha cifra por debaixo dos dous díxitos.",
+     "pagina": 15,
+     "estado": "incumplida",
+     "etiqueta": "Incumplida",
+     "color": "bad",
+     "hecho": "Según la EPA, entre 2016 y 2020 se crearon unos 33.600 empleos netos en Galicia (muy por debajo de los 80.000-100.000 prometidos; ni siquiera en el mejor año, 2019, se llegó a los 55.000). La tasa de paro nunca bajó de dos dígitos: su mínimo fue el 11,8 % en 2019, y subió de nuevo al 12 % en 2020 por la pandemia.",
+     "fuentes": [
+      {"titulo": "CIG: Mercado laboral galego 2017 (datos EPA-INE)", "url": "https://cig.gal/files/documentos/Doc_Economia/Mercado_Traballo_Galiza/Mercado_Traballo_Galiza_2010/MercadoTraballo_Galiza_2017.pdf"},
+      {"titulo": "CIG: Mercado laboral galego 2020 (datos IGE-EPA)", "url": "https://cig.gal/files/documentos/Doc_Economia/Mercado_Traballo_Galiza/Mercado_Traballo_Galiza_2020/MercadoTraballo_Galiza_2020.pdf"}
+     ]
+    },
+    {
+     "id": "presupuestos-2017",
+     "tema": "Presupuestos",
+     "cita": "A primeira decisión do novo Goberno será a aprobación do teito de gasto para o próximo ano, e posteriormente dos presupostos antes de que remate este 2016.",
+     "pagina": 9,
+     "estado": "incumplida",
+     "etiqueta": "Incumplida en plazo",
+     "color": "bad",
+     "hecho": "No se cumplió: el Decreto 189/2016, de 29 de diciembre, tuvo que prorrogar los presupuestos de 2016 para 2017 porque la ley definitiva (Ley 1/2017, de presupuestos de Galicia para 2017) no se publicó hasta el 9 de febrero de 2017, más de un mes después de lo prometido.",
+     "fuentes": [
+      {"titulo": "DOG: Ley 1/2017, de presupuestos generales de Galicia para 2017 (9 de febrero)", "url": "https://www.xunta.gal/dog/Publicados/2017/20170209/AnuncioC3B0-080217-0001_pt.html"},
+      {"titulo": "Decreto 189/2016, de prórroga presupuestaria", "url": "https://www.elnotario.es/images/pdf/LAUT-N71-21-GAL-Decreto-1892016.pdf"}
+     ]
+    },
+    {
+     "id": "vivienda-rural-2017",
+     "tema": "Vivienda",
+     "cita": "Desde o 1 de xaneiro de 2017 haberá impostos cero para os mozos, as familias numerosas e as persoas con discapacidade que adquiran unha vivenda habitual nun municipio de menos de 20.000 habitantes.",
+     "pagina": 28,
+     "estado": "cumplida",
+     "etiqueta": "Cumplida (con un mes de retraso)",
+     "color": "ok",
+     "hecho": "La Ley 2/2017, de 8 de febrero, de medidas fiscales de Galicia, introdujo una deducción del 100 % en el ITP-AJD para la compra de vivienda habitual por jóvenes, familias numerosas y personas con discapacidad en zonas poco pobladas, delimitadas por orden de la Xunta en lugar de por el umbral literal de 20.000 habitantes. Entró en vigor un mes después de lo prometido, no el 1 de enero.",
+     "fuentes": [
+      {"titulo": "Fiscal-Impuestos: Ley 2/2017 de medidas fiscales de Galicia", "url": "https://www.fiscal-impuestos.com/node/16483"}
+     ]
+    },
+    {
+     "id": "rias-saneadas-2020",
+     "tema": "Medio ambiente",
+     "cita": "Ao remate da lexislatura, todas as infraestruturas hídricas previstas no Plan Hidrolóxico Galicia Costa estarán funcionando ou coa súa execución garantida, polo que as rías galegas de 2020 estarán totalmente saneadas.",
+     "pagina": 30,
+     "estado": "incumplida",
+     "etiqueta": "Incumplida",
+     "color": "bad",
+     "hecho": "No se cumplió: el plan que debía sustituir al anterior (Plan Hidrolóxico Galicia Costa 2021-2027) no entró en vigor hasta febrero de 2023. En septiembre de 2021 la propia Xunta reconocía 265 vertidos contaminantes activos en las rías, y el Tribunal de Justicia de la UE condenó a España en 2018 por la depuración deficiente de aguas en Vigo y Santiago, con multa de la que la Xunta asumió parte del coste.",
+     "fuentes": [
+      {"titulo": "Xunta de Galicia: entrada en vigor del Plan Hidrolóxico Galicia Costa 2021-2027", "url": "https://www.xunta.gal/notas-de-prensa/-/nova/77158/plan-hidroloxico-galicia-costa-2021-2027-entra-vigor-como-unha-folla-ruta-para"},
+      {"titulo": "Que.es: 265 vertidos contaminantes activos en las rías gallegas (2021)", "url": "https://www.que.es/2021/09/28/rias-gallegas-vertidos-contaminantes/"}
+     ]
+    },
+    {
+     "id": "bono-autonomo",
+     "tema": "Autónomos",
+     "cita": "Un lugar máis favorable tamén para que un autónomo creza, por exemplo, coa creación dun Bono Autónomo de ata 2.000 €.",
+     "pagina": 16,
+     "estado": "cumplida",
+     "etiqueta": "Cumplida y ampliada",
+     "color": "ok",
+     "hecho": "El Bono Autónomo se creó en 2017, con una cuantía superior a la prometida: hasta 3.000 € (más tarde ampliado hasta 7.000 € en 2024). Según datos acumulados de la Xunta, se benefició a cerca de 17.500 autónomos con unos 39 millones de euros en ocho años.",
+     "fuentes": [
+      {"titulo": "Xunta de Galicia: balance de ayudas al autónomo", "url": "https://www.xunta.gal/es/notas-de-prensa/-/nova/004752/xunta-lleva-concedido-este-ano-cerca-6-mas-2-100-personas-trabajadoras-autonomas"}
+     ]
+    },
+    {
+     "id": "energia-renovable",
+     "tema": "Energía",
+     "cita": "Aprobaremos as Directrices Enerxéticas de Galicia, co obxectivo de aumentar en máis dun terzo a potencia instalada de fontes renovables como a hidráulica, a eólica, a biomasa ou a xeotermia.",
+     "pagina": 31,
+     "estado": "incumplida",
+     "etiqueta": "Incumplida",
+     "color": "bad",
+     "hecho": "Las Directrices se presentaron en marzo de 2018, pero centradas en el ahorro de consumo, no en el objetivo de renovables, y no hay confirmación de que llegaran a aprobarse formalmente en el Diario Oficial de Galicia. La potencia renovable instalada (datos de Inega) pasó de unos 7.172 MW en 2016 a unos 7.753 MW en 2020: un aumento de apenas el 8 %, muy lejos del tercio (33 %) prometido.",
+     "fuentes": [
+      {"titulo": "Smartgridsinfo: Galicia prepara las Directrices Enerxéticas (2018)", "url": "https://www.smartgridsinfo.es/2018/03/12/galicia-prepara-directrices-energeticas-basadas-rebaja-consumo-recursos-propios"},
+      {"titulo": "Energías Renovables: potencia instalada en Galicia", "url": "https://www.energias-renovables.com/eolica/galicia-ha-instalado-en-2019-mas-potencia-20200119"}
+     ]
+    },
+    {
+     "id": "educacion-plurilingue",
+     "tema": "Educación",
+     "cita": "Estender esta medida aos ciclos de Educación Infantil de 3 a 6 anos, [e] lograr que en cada unha das sete grandes cidades haxa polo menos un centro público de excelencia en Bacharelato plurilingüe.",
+     "pagina": 21,
+     "estado": "cumplida_parcial",
+     "etiqueta": "Cumplida solo en parte",
+     "color": "mid",
+     "hecho": "El plurilingüismo en Educación Infantil sí se extendió con fuerza, hasta cientos de centros en los años siguientes. Pero no hay ninguna fuente que confirme el compromiso de un centro de excelencia en Bachillerato plurilingüe en cada una de las siete grandes ciudades: el programa correspondiente (PluriBach) arrancó en 2017 con solo 4 centros, ninguno de ellos en esas ciudades.",
+     "fuentes": [
+      {"titulo": "Xunta de Galicia: 522 centros plurilingües en el curso 2025/26", "url": "https://www.xunta.gal/notas-de-prensa/-/nova/015989/sistema-educativo-galego-contara-este-novo-curso-con-522-centros-plurilingues"}
      ]
     }
    ]
