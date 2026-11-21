@@ -11,9 +11,13 @@ a mano en atalaya/data/discurso_votos.json: nunca se borra nada, solo se amplía
 Uso (raíz del repo): python3 scripts/atalaya/ficha_discurso_votos.py
 """
 import json
+import sys
 from datetime import datetime, timezone
 from html import escape as E
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from tendencia_busqueda import CSS_TENDENCIA, bloque_tendencia
 
 RAIZ = Path(__file__).resolve().parents[2]
 D = RAIZ / "atalaya/data"
@@ -49,7 +53,8 @@ li{margin:.3em 0}main,h1{overflow-wrap:anywhere}
 .fu{font-size:13px;margin-top:.4em}
 @media (prefers-color-scheme:dark){body{background:#0e1219;color:#e5e9f0}h2,h3{border-color:#243044}.ans{background:#0f2036}
 .meta,.src,.tema,nav.bc{color:#98a5b8}a{color:#7cb0ff}.warn{background:#2a2310}.caso{border-color:#273449}.cita{border-color:#475569;color:#cbd5e1}
-.chip.ok{background:#07271d;border-color:#34d399;color:#6ee7b7}.chip.bad{background:#2a1212;border-color:#f87171;color:#fca5a5}.chip.mid{background:#2a2310;border-color:#d99a00;color:#fbbf24}}"""
+.chip.ok{background:#07271d;border-color:#34d399;color:#6ee7b7}.chip.bad{background:#2a1212;border-color:#f87171;color:#fca5a5}.chip.mid{background:#2a2310;border-color:#d99a00;color:#fbbf24}}
+""" + CSS_TENDENCIA
 
 
 def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, pie):
@@ -102,6 +107,7 @@ def bloque_caso(c):
 
 def main():
     data = J(D / "discurso_votos.json")
+    tendencias = J(D / "tendencias_busqueda.json")
     for pol in data["politicos"]:
         casos = pol["casos"]
         n_coherente = sum(1 for c in casos if c["veredicto"] == "coherente")
@@ -123,7 +129,8 @@ def main():
                   "<p class='warn'>Metodología: cada posición pública lleva cita literal, autor, fecha y fuente; cada voto es el resultado oficial "
                   "de una votación en el Congreso de los Diputados, con su propia fuente. No es un balance exhaustivo de su trayectoria: "
                   "es una muestra representativa por tema, que se ampliará con el tiempo.</p>"
-                  "<h2>Caso por caso</h2>"
+                  + bloque_tendencia(pol["slug"], tendencias)
+                  + "<h2>Caso por caso</h2>"
                   + "".join(bloque_caso(c) for c in casos)
                   + "<h2>Para seguir profundizando</h2><ul>"
                   + enlaces

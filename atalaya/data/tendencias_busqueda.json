@@ -1,0 +1,11 @@
+{
+ "aviso": "Volumen de búsqueda mensual en Google España y tendencia de los últimos 12 meses (índice relativo al propio máximo del periodo, de 0 a 1), vía Semrush. Dato de contexto, no de cumplimiento: no mide apoyo ni intención de voto, solo interés de búsqueda.",
+ "fuente": "Semrush (Keyword Overview, base de datos España)",
+ "actualizado": "2026-11-21",
+ "personas": {
+  "manueco": {"keyword": "Alfonso Fernández Mañueco", "volumen": 6600, "trend": [0.16, 0.08, 0.03, 0.04, 0.05, 0.05, 0.16, 0.05, 0.00, 0.05, 0.01, 0.00]},
+  "ayuso": {"keyword": "Isabel Díaz Ayuso", "volumen": 74000, "trend": [0.67, 0.44, 0.36, 0.24, 0.16, 0.20, 0.16, 0.16, 0.44, 0.30, 0.36, 1.00]},
+  "feijoo": {"keyword": "Alberto Núñez Feijóo", "volumen": 40500, "trend": [0.04, 0.07, 0.03, 0.01, 0.02, 0.02, 0.01, 0.02, 0.01, 0.04, 0.02, 0.02]},
+  "abascal": {"keyword": "Santiago Abascal", "volumen": 40500, "trend": [0.04, 0.08, 0.04, 0.07, 0.04, 0.07, 0.13, 0.04, 0.06, 0.03, 0.02, 0.04]}
+ }
+}

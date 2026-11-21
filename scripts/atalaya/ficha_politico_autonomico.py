@@ -11,9 +11,13 @@ su propia fuente. Nunca se borra nada: se amplía añadiendo promesas o actualiz
 Uso (raíz del repo): python3 scripts/atalaya/ficha_politico_autonomico.py
 """
 import json
+import sys
 from datetime import datetime, timezone
 from html import escape as E
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
+from tendencia_busqueda import CSS_TENDENCIA, bloque_tendencia
 
 RAIZ = Path(__file__).resolve().parents[2]
 D = RAIZ / "atalaya/data"
@@ -50,7 +54,8 @@ li{margin:.3em 0}main,h1{overflow-wrap:anywhere}
 .fu{font-size:13px;margin-top:.4em}
 @media (prefers-color-scheme:dark){body{background:#0e1219;color:#e5e9f0}h2,h3{border-color:#243044}.ans{background:#0f2036}
 .meta,.src,.tema,nav.bc{color:#98a5b8}a{color:#7cb0ff}.warn{background:#2a2310}.prom{border-color:#273449}.cita{border-color:#475569;color:#cbd5e1}
-.chip.ok{background:#07271d;border-color:#34d399;color:#6ee7b7}.chip.bad{background:#2a1212;border-color:#f87171;color:#fca5a5}.chip.mid{background:#2a2310;border-color:#d99a00;color:#fbbf24}}"""
+.chip.ok{background:#07271d;border-color:#34d399;color:#6ee7b7}.chip.bad{background:#2a1212;border-color:#f87171;color:#fca5a5}.chip.mid{background:#2a2310;border-color:#d99a00;color:#fbbf24}}
+""" + CSS_TENDENCIA
 
 
 def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, pie):
@@ -97,6 +102,7 @@ def bloque_promesa(p, fecha_disc):
 
 def main():
     data = J(D / "promesas_autonomicas.json")
+    tendencias = J(D / "tendencias_busqueda.json")
     for pol in data["politicos"]:
         proms = pol["promesas"]
         n_cumplidas = sum(1 for p in proms if p["estado"] == "cumplida")
@@ -121,7 +127,8 @@ def main():
                   f"en el idioma original del discurso (<a href='{E(pol['programa']['url'])}' rel='nofollow noopener'>fuente oficial</a>, discurso de investidura del "
                   f"{fecha_disc}), nunca una paráfrasis. Cada hecho tiene su propia fuente verificable. "
                   "No es un balance exhaustivo del mandato: es una muestra representativa por tema, que se ampliará con el tiempo.</p>"
-                  "<h2>Promesas y hechos, una por una</h2>"
+                  + bloque_tendencia(pol["slug"], tendencias)
+                  + "<h2>Promesas y hechos, una por una</h2>"
                   + "".join(bloque_promesa(p, fecha_disc) for p in proms)
                   + "<h2>Para seguir profundizando</h2><ul>"
                   + enlaces
