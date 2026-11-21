@@ -235,3 +235,5 @@ a.hub-card:hover strong{text-decoration-color:var(--sg-heading)}
 
 .sidebar-wrapper .avatar{filter:grayscale(1);transition:filter .3s}
 .sidebar-wrapper .avatar:hover{filter:grayscale(0)}
+.sg-post img.sobre-mi-foto{display:block;width:160px;height:160px;margin:0 auto 24px;border-radius:50% !important;object-fit:cover;filter:grayscale(1);transition:filter .3s}
+.sg-post img.sobre-mi-foto:hover{filter:grayscale(0)}
