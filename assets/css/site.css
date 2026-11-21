@@ -232,3 +232,6 @@ a.hub-card:hover strong{text-decoration-color:var(--sg-heading)}
 .sg-faq__body{padding:0 0 8px}
 .sg-faq__body p{margin:0 0 16px !important;font-size:16px;color:var(--sg-text-alt)}
 @media (max-width:576px){.sg-faq__item{padding:2px 20px}.sg-faq__item summary{font-size:16px}}
+
+.sidebar-wrapper .avatar{filter:grayscale(1);transition:filter .3s}
+.sidebar-wrapper .avatar:hover{filter:grayscale(0)}
