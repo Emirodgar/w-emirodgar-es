@@ -18,7 +18,7 @@ Una de las principales ventajas de la digitalización en el sector público es l
 
 El análisis de datos, por otro lado, desempeña un papel fundamental en la **formulación de políticas públicas basadas en evidencia**. Mediante la recopilación y procesamiento de grandes volúmenes de información, los gobiernos pueden anticipar tendencias, optimizar recursos y ofrecer soluciones más efectivas a las necesidades ciudadanas.
 
-Te puedo contar que nací en Salamanca, tengo 40 años, estudié Ingeniería Informática y actualmente trabajo como Director de Producción en la agencia internacional Smartup.
+Te puedo contar que nací en Salamanca, tengo 40 años, estudié Ingeniería Informática y actualmente trabajo como Director SEO en la agencia internacional Smartup.
 
 ## Mi trayectoria
 
