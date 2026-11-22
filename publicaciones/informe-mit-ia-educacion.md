@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-11-05
+date_modified: 2026-11-22
 folder: ia
 permalink: informe-mit-ia-educacion
 ---
@@ -64,6 +65,15 @@ El matiz social es importante: igual que la automatización aísla a los trabaja
 - **Transparencia del profesorado.** Si el docente usa IA para slides, feedback o notas, debe decirlo. Los estudiantes lo viven como un doble rasero cuando a ellos se lo restringen.
 - **Desigualdad de acceso.** Los planes más caros cuestan hasta 200 dólares al mes. Algunos estudiantes pueden pagarlo y otros no, con la ventaja que eso supone en tareas que hoy se resuelven en una noche. El MIT ofrece a toda la comunidad una plataforma con varios modelos y hasta 30 dólares mensuales de crédito, y el propio comité duda de que alcance.
 - **Sin receta única.** Un seminario de poesía, una demostración matemática y un taller de arquitectura no se relacionan igual con la IA. Por eso propone un menú de políticas (uso libre, solo como herramienta de apoyo, uso obligatorio o prohibido) para que cada departamento elija.
+
+## Del informe a la práctica en lo público
+
+El informe no se queda en la universidad. Varias de sus recomendaciones sirven para una administración, y he desarrollado cuatro en artículos aparte:
+
+- [Parley](https://emirodgar.es/parley-ia-institucional-mit), la plataforma del MIT que da acceso a varios modelos bajo sus propias reglas de privacidad.
+- Qué modelos poner detrás, con [ALIA y otras alternativas abiertas](https://emirodgar.es/modelos-abiertos-administracion-publica).
+- Lo que cuesta de verdad: [el coste real de la IA](https://emirodgar.es/coste-real-ia).
+- Cómo organizarlo: la [estrategia de adopción](https://emirodgar.es/estrategia-adopcion-ia-administracion-publica) y un [decálogo de gobernanza](https://emirodgar.es/decalogo-gobernanza-ia-administracion-publica).
 
 ## Mi lectura
 

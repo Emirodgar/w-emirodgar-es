@@ -29,6 +29,10 @@ La IA no espera, y una administración que llega tarde acumula obsolescencia leg
 <li><a class="hub-card" href="https://emirodgar.es/alia-promesa-fallida-ia-publica-espana"><strong>ALIA, la promesa fallida</strong><span>La IA pública española y sus límites.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/ia-publica-contenido-entrenamiento"><strong>El saqueo digital</strong><span>La cara oscura de la IA española y los datos de entrenamiento.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/proyectos-ia-tecnologia"><strong>Oportunidades para España</strong><span>Proyectos de IA y tecnología.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/estrategia-adopcion-ia-administracion-publica"><strong>Cómo adoptar la IA en una administración</strong><span>Prioridades y estructura, a partir del informe del MIT.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/decalogo-gobernanza-ia-administracion-publica"><strong>Decálogo de gobernanza de IA</strong><span>Diez principios para regular el uso interno.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/parley-ia-institucional-mit"><strong>Parley, la plataforma de IA del MIT</strong><span>Una pasarela agnóstica de modelo para lo público.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/modelos-abiertos-administracion-publica"><strong>ALIA y modelos abiertos</strong><span>Qué es gratis, qué no y qué alternativas hay.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/analisis-funcionarios"><strong>Los funcionarios en España</strong><span>Plantilla pública, edad y jubilaciones: el contexto de cualquier adopción.</span></a></li>
 </ul>
 
@@ -63,6 +67,11 @@ La IA no espera, y una administración que llega tarde acumula obsolescencia leg
 <li><a class="hub-card" href="https://emirodgar.es/impacto-ia-trabajos"><strong>Impacto de la IA en los trabajos</strong><span>Qué cambia en el empleo.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/trabajos-afectados-ia"><strong>Trabajos afectados por la IA</strong><span>Qué perfiles están más expuestos.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/40-profesiones-en-riesgo-por-la-inteligencia-artificial"><strong>40 profesiones en riesgo</strong><span>El listado completo.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/coste-real-ia"><strong>El coste real de la IA</strong><span>Económico, humano, organizativo y ambiental.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/ia-problema-cognitivo-no-tecnologico"><strong>Un problema cognitivo, no tecnológico</strong><span>Dónde está de verdad el cuello de botella.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/paradoja-jevons-ia"><strong>La paradoja de Jevons y la IA</strong><span>El tiempo que la IA no devuelve.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/bucle-aprendizaje-ia"><strong>Del modelo al bucle de aprendizaje</strong><span>Dónde estará la ventaja competitiva.</span></a></li>
+<li><a class="hub-card" href="https://emirodgar.es/ia-empleo-ampliar-capacidades"><strong>Aumentar o sustituir</strong><span>Lo que decide el empleo con IA.</span></a></li>
 <li><a class="hub-card" href="https://emirodgar.es/crisis-economica-ia"><strong>Una crisis económica impulsada por la IA</strong><span>El escenario de riesgo.</span></a></li>
 </ul>
 

@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-11-20
+date_modified: 2026-11-22
 folder: ia
 permalink: evento-impacto-ia-empresas-administraciones-avila
 ---
@@ -51,6 +52,16 @@ Llevo tiempo defendiendo aquí que la IA no es solo cosa de Silicon Valley ni de
 Por eso me alegra que se hable de esto en nuestra tierra, delante de quienes toman decisiones y de quienes tienen que aplicarlas. Castilla y León tiene mucho que ganar con la IA y también mucho que perder si llega tarde. Hace falta que se hable de ella aquí, con ejemplos de aquí y sin tecnicismos que dejen fuera a media sala.
 
 Mi intención en la mesa es sencilla: aterrizar el debate. Hablar de qué puede hacer hoy una empresa o una administración con IA, qué errores conviene evitar y por dónde empezar. Todavía no sé por dónde nos llevará la conversación, y eso es lo bueno de una mesa redonda. Pero tengo claro lo que quiero defender: menos promesas y más casos reales.
+
+## Los temas que llevo a la mesa
+
+Para preparar la sesión he ordenado tres preguntas y he escrito sobre cada una:
+
+1. **¿En qué punto está la IA y cómo la aplican las empresas?** [Del modelo al bucle de aprendizaje](https://emirodgar.es/bucle-aprendizaje-ia) y [por qué el reto es cognitivo y no tecnológico](https://emirodgar.es/ia-problema-cognitivo-no-tecnologico).
+2. **¿Cómo transformará el empleo?** [Aumentar o sustituir](https://emirodgar.es/ia-empleo-ampliar-capacidades) y [la paradoja de Jevons](https://emirodgar.es/paradoja-jevons-ia).
+3. **¿Qué coste real exige?** [El coste real de la IA](https://emirodgar.es/coste-real-ia).
+
+Y para el lado de la administración: [Parley](https://emirodgar.es/parley-ia-institucional-mit), [ALIA y los modelos abiertos](https://emirodgar.es/modelos-abiertos-administracion-publica), una [estrategia de adopción](https://emirodgar.es/estrategia-adopcion-ia-administracion-publica) y un [decálogo de gobernanza](https://emirodgar.es/decalogo-gobernanza-ia-administracion-publica).
 
 ## Después del evento
 

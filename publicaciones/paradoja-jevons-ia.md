@@ -39,6 +39,8 @@ Hay que ser prudentes. Es un solo caso, en una sola empresa, y los propios autor
 
 Si la IA no devuelve tiempo por sí sola, alguien tiene que decidir qué se hace con el que libera. Los autores del estudio apuntan a normas que marquen cuándo avanza el trabajo y a más interacción humana. Yo añadiría algo más básico: medir si el tiempo liberado se dedica a trabajo de mayor valor o simplemente a más volumen, porque sin esa medición no hay forma de saberlo. Esto enlaza con lo que contaba sobre [ampliar capacidades en lugar de sustituir](https://emirodgar.es/ia-empleo-ampliar-capacidades) y con la idea del [bucle de aprendizaje](https://emirodgar.es/bucle-aprendizaje-ia): el ahorro de tiempo solo sirve si se invierte en aprender.
 
+Este tiempo absorbido es parte del [coste real de la IA](https://emirodgar.es/coste-real-ia), y encaja con la idea de que el reto es [más cognitivo que tecnológico](https://emirodgar.es/ia-problema-cognitivo-no-tecnologico).
+
 La eficiencia no regala tiempo. Lo reasigna, y casi siempre a más trabajo.
 
 ## Fuentes

@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-02-09
+date_modified: 2026-11-22
 folder: espana
 permalink: alia-promesa-fallida-ia-publica-espana
 ---
@@ -55,6 +56,8 @@ Uno de los grandes argumentos de ALIA era la **soberanía del dato** y la autono
 Es el mismo patrón que se repite en toda [la soberanía digital europea](https://emirodgar.es/soberania-digital-europea-nube-chips): el problema no es solo de oferta, es de **inercia**. Qwant o Ecosia llevan años existiendo como alternativas europeas a Google y su cuota sigue siendo mínima, igual que ALIA tiene el modelo pero no los usuarios. La dependencia no se rompe solo creando alternativas, sino cambiando hábitos, compras públicas e incentivos. A día de hoy, podemos alcanzar esos objetivos con modelos de código abierto como los de Mistral o Meta que permiten exactamente lo mismo: ejecución local, privacidad y cumplimiento normativo europeo, pero con **costes mucho más bajos** y un soporte comunitario real.
 
 > Cuando una alternativa privada ofrece lo mismo, mejor y más barato, el argumento de la infraestructura pública pierde fuerza rápidamente.
+
+Una idea que he ido madurando desde que escribí esto: el modelo no tiene por qué usarse solo. Combinado con una pasarela institucional como [Parley](https://emirodgar.es/parley-ia-institucional-mit), ALIA podría ser uno más entre varios modelos que una administración elige según la tarea. Lo comento, junto con las alternativas abiertas, en [Parley con ALIA: ¿IA pública gratuita?](https://emirodgar.es/modelos-abiertos-administracion-publica).
 
 ## ¿Era este un fracaso anunciado?
 

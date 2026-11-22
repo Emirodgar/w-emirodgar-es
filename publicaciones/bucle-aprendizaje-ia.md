@@ -41,6 +41,8 @@ Hay otra cosa que conviene tener presente. Los modelos funcionan con atajos esta
 
 Por eso el criterio humano no es opcional dentro del bucle. Sin él, el sistema aprende errores y los repite con mucha convicción.
 
+Si te preguntas por qué cuesta tanto construirlo, creo que el obstáculo [no es tecnológico sino cognitivo](https://emirodgar.es/ia-problema-cognitivo-no-tecnologico), y que el coste real va mucho más allá de la licencia: lo cuento en [el coste real de la IA](https://emirodgar.es/coste-real-ia).
+
 El modelo se compra. El bucle se construye. Lo primero dura hasta el próximo lanzamiento, y lo segundo se queda en la empresa.
 
 ## Fuentes

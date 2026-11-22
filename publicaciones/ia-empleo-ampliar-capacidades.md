@@ -35,6 +35,8 @@ Cuando la información y las respuestas automáticas sobran, lo escaso es formul
 
 Tampoco parece que nos lo regale. Eso lo cuento aparte, en [la paradoja de Jevons y la IA](https://emirodgar.es/paradoja-jevons-ia).
 
+Si te interesa cómo llevar este principio a una organización pública, he propuesto un [decálogo de gobernanza de IA](https://emirodgar.es/decalogo-gobernanza-ia-administracion-publica) y una [estrategia de adopción](https://emirodgar.es/estrategia-adopcion-ia-administracion-publica).
+
 Sustituir es lo que sale por defecto. Ampliar hay que decidirlo.
 
 ## Fuentes
