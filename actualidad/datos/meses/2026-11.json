@@ -813,7 +813,7 @@
         "titulo": "Dos misiles rusos caen en territorio polaco y Varsovia pedirá a la OTAN reforzar la defensa de la frontera oriental",
         "url": "https://www.elmundo.es/internacional/2026/11/20/6afff1b621efa002318b459c.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-20",
@@ -884,6 +884,34 @@
         "url": "https://www.elmundo.es/ciencia/2026/11/21/6aff0f26e4d4d875568b45b1.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-21",
+      "edicion": "2026-11-22",
+      "titulo": "El Teatro Real, mejor teatro de ópera del mundo",
+      "categoria": "Cultura",
+      "descripcion": "El Teatro Real de Madrid ha sido galardonado como el mejor teatro de ópera del mundo en los International Opera Awards 2026, un reconocimiento que ya obtuvo en 2021.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Teatro Real se corona como mejor teatro de ópera del mundo en los International Opera Awards 2026",
+        "url": "https://www.elmundo.es/cultura/musica/2026/11/21/6b019003fdddff36768b456d.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-22",
+      "edicion": "2026-11-22",
+      "titulo": "Colapso de la COP31 por desacuerdo sobre combustibles fósiles",
+      "categoria": "Internacional",
+      "descripcion": "La cumbre del clima más larga de la historia, la COP31, ha colapsado al rechazar la UE un acuerdo que no mencione los combustibles fósiles, debido a la resistencia de los \"petroestados\".",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Colapsa la cumbre del clima más larga de la historia: la UE rechaza un acuerdo sin mención a los combustibles fósiles",
+        "url": "https://www.elmundo.es/ciencia/2026/11/22/6b02a7d721efa09c698b4575.html"
+      },
+      "destacado": true
     }
   ]
 }

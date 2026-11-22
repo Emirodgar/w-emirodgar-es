@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-21",
-  "generado_en": "2026-11-21T13:18:46+00:00",
-  "titular": "La campaña electoral se intensifica con mítines y cruces de declaraciones, mientras Sánchez anuncia la prórroga del impuesto a la banca.",
+  "fecha": "2026-11-22",
+  "generado_en": "2026-11-22T13:11:23+00:00",
+  "titular": "La cumbre del clima colapsa por los combustibles fósiles mientras la campaña electoral entra en su recta final",
   "por_medio": {
-    "El Mundo": 28,
-    "The Objective": 123
+    "El Mundo": 26,
+    "The Objective": 111
   },
   "temas": [
     {
-      "tema": "Campaña electoral y declaraciones políticas",
-      "categoria": "Política",
-      "descripcion": "Diversos líderes políticos, como Yolanda Díaz, Ayuso, Aznar, Feijóo y Abascal, han realizado declaraciones y mítines en el marco de la campaña electoral, criticando posturas y llamando a la movilización."
-    },
-    {
-      "tema": "Prórroga del impuesto a la banca",
-      "categoria": "Economía",
-      "descripcion": "Pedro Sánchez ha anunciado la prórroga del impuesto a la banca para 2027, con el objetivo de destinar la recaudación a vivienda, una medida que ha generado controversia en el sector."
-    },
-    {
-      "tema": "Sucesos internacionales",
+      "tema": "Colapso de la Cumbre del Clima COP31",
       "categoria": "Internacional",
-      "descripcion": "Se ha confirmado la captura de un importante narcotraficante en México, la muerte de un ex jefe de policía italiano investigado por la mafia, y un derrumbe de edificio en Nueva York con víctimas mortales."
+      "descripcion": "La cumbre del clima más larga de la historia ha colapsado debido a la falta de consenso sobre la mención de los combustibles fósiles, con la UE rechazando un acuerdo sin esta condición."
     },
     {
-      "tema": "Crisis migratoria en España",
+      "tema": "Recta final de la campaña electoral",
+      "categoria": "Política",
+      "descripcion": "A una semana de las elecciones generales, los partidos intensifican sus mítines, con Feijóo y Sánchez buscando movilizar el voto y las encuestas mostrando al PP con ventaja sobre el PSOE."
+    },
+    {
+      "tema": "Incendio en fábrica de caramelos en Indonesia",
+      "categoria": "Internacional",
+      "descripcion": "Al menos tres trabajadores han muerto y decenas están desaparecidos tras un incendio en una fábrica de caramelos cerca de Yakarta, generando preocupación por la seguridad laboral."
+    },
+    {
+      "tema": "Incidencias en infraestructuras y sucesos",
       "categoria": "Sociedad",
-      "descripcion": "La inmigración irregular ha experimentado un notable aumento, con rescates en Canarias y la solicitud de ayuda por parte del gobierno canario para la financiación de la acogida de menores."
+      "descripcion": "Una avería en el tren satélite de la T4 de Barajas causó largas colas, y la caída de un árbol en Barcelona dejó nueve heridos durante una carrera."
     }
   ]
 }

@@ -1,0 +1,1246 @@
+{
+  "fecha": "2026-11-22",
+  "generado_en": "2026-11-22T13:11:23+00:00",
+  "modelo": "gemini-2.5-flash",
+  "titular": "La cumbre del clima colapsa por los combustibles fósiles mientras la campaña electoral entra en su recta final",
+  "resumen": "La COP31 ha colapsado tras convertirse en la cumbre del clima más larga de la historia, debido a la resistencia de los \"petroestados\" a incluir una mención a los combustibles fósiles en el acuerdo, lo que ha llevado a la Unión Europea a rechazar un consenso sin esta condición. Este estancamiento genera temor a un fracaso en las negociaciones entre las casi 200 delegaciones. En otro ámbito internacional, se reporta la desaparición de decenas de personas en el incendio de una fábrica de caramelos en Indonesia, con al menos tres trabajadores fallecidos, y se ha producido un incidente \"angustiante\" en Seattle donde agentes del ICE arrestaron a un hombre y su hija en un vuelo.\n\nEn el panorama nacional, a una semana de las elecciones generales, los partidos intensifican sus campañas. El PP y el PSOE ganan apoyos, manteniendo Feijóo una ventaja de 3,5 puntos sobre Sánchez, mientras Vox desciende. Feijóo advierte desde Murcia que \"España no puede permitirse que ocurra lo que pasó en el año 2023\" y pide no relajarse. Por su parte, Sánchez apela a la \"remontada\" y al voto oculto, mientras Ada Colau llama a \"quitarle un escaño a Vox\" en Las Palmas. La presidenta de la Comunidad de Madrid, Isabel Díaz Ayuso, ha calificado la política de Sánchez como \"perronismo\", describiéndola como \"personalista\" y \"mafiosa\".\n\nEn la sección de sucesos y sociedad, una avería en el tren satélite de la Terminal 4 de Barajas ha provocado largas colas de viajeros, y la caída de un árbol por fuertes vientos ha dejado nueve heridos en Barcelona durante la Cursa de Dones. En deportes, Marc Márquez busca su décimo campeonato mundial en el Gran Premio de Portugal, y Alcaraz se enfrenta a Zverev en la final de las ATP Finals. El Teatro Real ha sido reconocido como el mejor teatro de ópera del mundo en los International Opera Awards 2026.",
+  "temas": [
+    {
+      "tema": "Colapso de la Cumbre del Clima COP31",
+      "categoria": "Internacional",
+      "descripcion": "La cumbre del clima más larga de la historia ha colapsado debido a la falta de consenso sobre la mención de los combustibles fósiles, con la UE rechazando un acuerdo sin esta condición.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Colapsa la cumbre del clima más larga de la historia: la UE rechaza un acuerdo sin mención a los combustibles fósiles",
+          "url": "https://www.elmundo.es/ciencia/2026/11/22/6b02a7d721efa09c698b4575.html"
+        }
+      ]
+    },
+    {
+      "tema": "Recta final de la campaña electoral",
+      "categoria": "Política",
+      "descripcion": "A una semana de las elecciones generales, los partidos intensifican sus mítines, con Feijóo y Sánchez buscando movilizar el voto y las encuestas mostrando al PP con ventaja sobre el PSOE.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Ada Colau da la última batalla en Las Palmas: \"Hay que quitarle un escaño a Vox\"",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b02de1ce85ecef0328b4584.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Feijóo advierte desde Murcia que \"España no puede permitirse que ocurra lo que pasó en el año 2023\": \"Que no se relaje nadie\"",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b028ed3d458235619ac0956-directo.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Sánchez alienta el 'sí se puede' en el ecuador de la campaña: \"Nos queda una semana de remontada\"",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b02d70be4d4d8693e8b457a.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Maribel Vaquero: \"Soy 'abertzale': ni de izquierdas ni de derechas; es el modelo PNV\"",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b01ba10e9cf4a9d1f8b459c.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "PP y PSOE ganan apoyos y la derecha ancla su ventaja a una semana de votar",
+          "url": "https://www.elmundo.es/espana/encuestas/2026/11/21/6b01d96dfc6c83e5298b4592.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Ayuso bautiza como 'perronismo' la política \"personalista\" y \"mafiosa\" de Sánchez",
+          "url": "https://www.elmundo.es/espana/2026/11/21/6b01eb3afc6c833a5f8b4596-video.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Colau llama «esclavistas» a PP y Vox por querer a los inmigrantes para que «trabajen gratis»",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/colau-pp-vox-esclavistas-frente-amplio/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Feijóo, al PSOE: «A los de las bofetadas les vamos a parar con votos el próximo domingo»",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/feijoo-psoe-bofetadas/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Aznar pide concentrar el voto en el PP frente a quienes «compran el Gobierno»",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/aznar-voto-pp-sanchez-gobierno/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez ignora las palabras de Morant sobre Feijóo e insiste en llamar «maleducado» al PP",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/sanchez-ignora-morant-feijoo-maleducado-pp/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez exige a la Comunidad de Madrid que retire las instrucciones al profesorado",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/sanchez-gobierno-madrid-instrucciones-profesorado/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Guardiola defiende que PP y Vox saben «caminar de la mano» por un proyecto de país",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/guardiola-pp-vox-proyecto-pais/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Bolaños pide el voto para lograr el primer senador por Formentera: «Lo siento muy mío»",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/bolanos-voto-senador-izquierdas-formentera-mio/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "DIRECTO | Feijóo interviene en un mitin en Murcia",
+          "url": "https://theobjective.com/videos/espana/politica/2026-11-22/directo-feijoo-murcia/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Hazte Oír pide frenar las urnas paralelas en los consulados para los ‘nietos’",
+          "url": "https://theobjective.com/espana/2026-11-22/hazte-oir-urnas-paralelas-consulados/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Salvador Illa llama a movilizar Cataluña para que «Pedro Sánchez gobierne»",
+          "url": "https://theobjective.com/espana/politica/2026-11-22/salvador-illa-pedro-sanchez-2/"
+        }
+      ]
+    },
+    {
+      "tema": "Incendio en fábrica de caramelos en Indonesia",
+      "categoria": "Internacional",
+      "descripcion": "Al menos tres trabajadores han muerto y decenas están desaparecidos tras un incendio en una fábrica de caramelos cerca de Yakarta, generando preocupación por la seguridad laboral.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Decenas de desaparecidos en el infierno de una fábrica de caramelos en Indonesia",
+          "url": "https://www.elmundo.es/internacional/2026/11/22/6b02b78fe9cf4a75168b458f.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Al menos tres muertos y 30 desaparecidos en el incendio de una fábrica en Indonesia",
+          "url": "https://theobjective.com/internacional/2026-11-22/muertos-desaparecidos-incendio-fabrica-indonesia/"
+        }
+      ]
+    },
+    {
+      "tema": "Incidencias en infraestructuras y sucesos",
+      "categoria": "Sociedad",
+      "descripcion": "Una avería en el tren satélite de la T4 de Barajas causó largas colas, y la caída de un árbol en Barcelona dejó nueve heridos durante una carrera.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Caos en Barajas: una avería del tren satélite en la Terminal 4 provoca largas colas de viajeros",
+          "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/22/6b02e79c21efa01e3e8b4575.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "La caída de un árbol por culpa del fuerte viento deja nueve heridos en Barcelona al paso de la carrera Cursa de Dones",
+          "url": "https://www.elmundo.es/cataluna/2026/11/22/6b02c12d21efa07f188b457c.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Una avería en el tren de la T4 de Barajas provoca largas colas de pasajeros",
+          "url": "https://theobjective.com/sociedad/2026-11-22/averia-tren-barajas-pasajeros/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Nueve heridos leves al caer un árbol en la avenida Meridiana de Barcelona",
+          "url": "https://theobjective.com/sociedad/suceso/2026-11-22/heridos-caida-arbol-barcelona-carrera-mujer/"
+        }
+      ]
+    },
+    {
+      "tema": "Éxito internacional del Teatro Real",
+      "categoria": "Cultura",
+      "descripcion": "El Teatro Real de Madrid ha sido galardonado como el mejor teatro de ópera del mundo en los International Opera Awards 2026.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "El Teatro Real se corona como mejor teatro de ópera del mundo en los International Opera Awards 2026",
+          "url": "https://www.elmundo.es/cultura/musica/2026/11/21/6b019003fdddff36768b456d.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Teatro Real de Madrid vuelve a ser elegido el mejor teatro de ópera del mundo",
+          "url": "https://theobjective.com/cultura/teatro/2026-11-22/teatro-real-madrid-opera/"
+        }
+      ]
+    },
+    {
+      "tema": "Deportes: MotoGP y Tenis",
+      "categoria": "Deportes",
+      "descripcion": "Marc Márquez busca su décimo campeonato mundial en el Gran Premio de Portugal, mientras Carlos Alcaraz se enfrenta a Zverev en la final de las ATP Finals.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Gran Premio de Portugal: Marc Márquez, en busca del Mundial",
+          "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/22/05_0502_20261122_21_1-directo.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "La lección que Alcaraz ha aprendido de Federer: \"Sólo ganas el 54% de los puntos\"",
+          "url": "https://www.elmundo.es/deportes/tenis/2026/11/21/6b01f6d9fc6c830e508b4585.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Verstappen ridiculiza a Russell tras la carrera en Las Vegas: «Está muy por debajo de mi nivel»",
+          "url": "https://theobjective.com/deportes/formula-1/2026-11-22/verstappen-victoria-russell-vegas-nivel-f1/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Verstappen conquista Las Vegas por delante de los McLaren: Sainz octavo y Alonso no termina",
+          "url": "https://theobjective.com/deportes/formula-1/2026-11-22/verstappen-las-vegas-sainz-alonso/"
+        }
+      ]
+    },
+    {
+      "tema": "Política migratoria europea y española",
+      "categoria": "Internacional",
+      "descripcion": "Europa avanza hacia acuerdos de deportación de migrantes irregulares con Ruanda, dejando a España con una política migratoria más aislada, mientras se reportan rescates de cayucos en El Hierro.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Europa cierra la puerta: la alianza con Ruanda que deja a España casi sola en su política migratoria",
+          "url": "https://www.elmundo.es/internacional/2026/11/21/6b01ac60fdddffb2188b457e.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Rescatado un tercer cayuco en El Hierro y ya son 179 los inmigrantes llegados este domingo",
+          "url": "https://theobjective.com/sociedad/2026-11-22/cayuco-hierro-inmigrantes-cayuco-guardia-civil/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Interceptados dos cayucos con inmigrantes a bordo en aguas de El Hierro",
+          "url": "https://theobjective.com/sociedad/2026-11-22/inmigrantes-cayucos-el-hierro/"
+        }
+      ]
+    }
+  ],
+  "enfoques": "Ambos medios coinciden en destacar la recta final de la campaña electoral, con especial atención a los mítines de Feijóo y Sánchez, así como a las declaraciones de otros líderes políticos. También cubren la avería en el tren de la T4 de Barajas y la caída de un árbol en Barcelona. The Objective, además, pone un foco significativo en la política migratoria, con múltiples noticias sobre la llegada de cayucos y la postura europea. El Mundo, por su parte, dedica más espacio al colapso de la cumbre del clima y a noticias de ciencia y cultura, como el reconocimiento del Teatro Real.",
+  "por_medio": {
+    "El Mundo": 26,
+    "The Objective": 111
+  },
+  "por_categoria": {
+    "Internacional": 3,
+    "Política": 1,
+    "Sociedad": 1,
+    "Deportes": 1,
+    "Cultura": 1
+  },
+  "hitos": [
+    {
+      "fecha": "2026-11-22",
+      "edicion": "2026-11-22",
+      "titulo": "Colapso de la COP31 por desacuerdo sobre combustibles fósiles",
+      "categoria": "Internacional",
+      "descripcion": "La cumbre del clima más larga de la historia, la COP31, ha colapsado al rechazar la UE un acuerdo que no mencione los combustibles fósiles, debido a la resistencia de los \"petroestados\".",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Colapsa la cumbre del clima más larga de la historia: la UE rechaza un acuerdo sin mención a los combustibles fósiles",
+        "url": "https://www.elmundo.es/ciencia/2026/11/22/6b02a7d721efa09c698b4575.html"
+      }
+    },
+    {
+      "fecha": "2026-11-21",
+      "edicion": "2026-11-22",
+      "titulo": "El Teatro Real, mejor teatro de ópera del mundo",
+      "categoria": "Cultura",
+      "descripcion": "El Teatro Real de Madrid ha sido galardonado como el mejor teatro de ópera del mundo en los International Opera Awards 2026, un reconocimiento que ya obtuvo en 2021.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Teatro Real se corona como mejor teatro de ópera del mundo en los International Opera Awards 2026",
+        "url": "https://www.elmundo.es/cultura/musica/2026/11/21/6b019003fdddff36768b456d.html"
+      }
+    }
+  ],
+  "noticias": [
+    {
+      "medio": "El Mundo",
+      "seccion": "ciencia",
+      "titulo": "Colapsa la cumbre del clima más larga de la historia: la UE rechaza un acuerdo sin mención a los combustibles fósiles",
+      "url": "https://www.elmundo.es/ciencia/2026/11/22/6b02a7d721efa09c698b4575.html",
+      "fecha": "2026-11-22T13:03:35+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Caos en Barajas: una avería del tren satélite en la Terminal 4 provoca largas colas de viajeros",
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/22/6b02e79c21efa01e3e8b4575.html",
+      "fecha": "2026-11-22T13:02:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Colau llama «esclavistas» a PP y Vox por querer a los inmigrantes para que «trabajen gratis»",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/colau-pp-vox-esclavistas-frente-amplio/",
+      "fecha": "2026-11-22T12:56:43+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Ada Colau da la última batalla en Las Palmas: \"Hay que quitarle un escaño a Vox\"",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b02de1ce85ecef0328b4584.html",
+      "fecha": "2026-11-22T12:55:03+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Feijóo advierte desde Murcia que \"España no puede permitirse que ocurra lo que pasó en el año 2023\": \"Que no se relaje nadie\"",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b028ed3d458235619ac0956-directo.html",
+      "fecha": "2026-11-22T12:51:19+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cronica",
+      "titulo": "Los profetas de la remontada de Pedro Sánchez",
+      "url": "https://www.elmundo.es/cronica/2026/11/21/6b015b0221efa0930c8b4597.html",
+      "fecha": "2026-11-22T12:45:08+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo, al PSOE: «A los de las bofetadas les vamos a parar con votos el próximo domingo»",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/feijoo-psoe-bofetadas/",
+      "fecha": "2026-11-22T12:37:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Una avería en el tren de la T4 de Barajas provoca largas colas de pasajeros",
+      "url": "https://theobjective.com/sociedad/2026-11-22/averia-tren-barajas-pasajeros/",
+      "fecha": "2026-11-22T12:30:36+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Sánchez alienta el 'sí se puede' en el ecuador de la campaña: \"Nos queda una semana de remontada\"",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b02d70be4d4d8693e8b457a.html",
+      "fecha": "2026-11-22T12:25:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Aznar pide concentrar el voto en el PP frente a quienes «compran el Gobierno»",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/aznar-voto-pp-sanchez-gobierno/",
+      "fecha": "2026-11-22T12:21:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez ignora las palabras de Morant sobre Feijóo e insiste en llamar «maleducado» al PP",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/sanchez-ignora-morant-feijoo-maleducado-pp/",
+      "fecha": "2026-11-22T12:17:04+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez exige a la Comunidad de Madrid que retire las instrucciones al profesorado",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/sanchez-gobierno-madrid-instrucciones-profesorado/",
+      "fecha": "2026-11-22T12:13:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Rescatado un tercer cayuco en El Hierro y ya son 179 los inmigrantes llegados este domingo",
+      "url": "https://theobjective.com/sociedad/2026-11-22/cayuco-hierro-inmigrantes-cayuco-guardia-civil/",
+      "fecha": "2026-11-22T12:04:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Guardiola defiende que PP y Vox saben «caminar de la mano» por un proyecto de país",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/guardiola-pp-vox-proyecto-pais/",
+      "fecha": "2026-11-22T12:02:03+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Agentes del ICE causan una escena \"angustiante\" al arrestar a un hombre y su hija en el embarque de un vuelo en Seattle",
+      "url": "https://www.elmundo.es/internacional/2026/11/22/6b02a762fdddffa7228b4595.html",
+      "fecha": "2026-11-22T11:47:24+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Verstappen ridiculiza a Russell tras la carrera en Las Vegas: «Está muy por debajo de mi nivel»",
+      "url": "https://theobjective.com/deportes/formula-1/2026-11-22/verstappen-victoria-russell-vegas-nivel-f1/",
+      "fecha": "2026-11-22T11:40:48+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Cuánto y cuándo se cobra por estar en una mesa electoral durante las elecciones generales del 29 de noviembre de 2026",
+      "url": "https://theobjective.com/espana/2026-11-22/cuanto-cuando-cobra-mesa-electoral/",
+      "fecha": "2026-11-22T11:28:15+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El 112 registra 179 incidencias en Galicia por el temporal, en su mayoría ocurridas en carreteras",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-22/112-incidencias-galicia-temporal-carreteras/",
+      "fecha": "2026-11-22T11:24:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Bolaños pide el voto para lograr el primer senador por Formentera: «Lo siento muy mío»",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/bolanos-voto-senador-izquierdas-formentera-mio/",
+      "fecha": "2026-11-22T11:21:17+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "Cuando la perfección estética impuesta por el algoritmo mata el deseo",
+      "url": "https://www.elmundo.es/yodona/vida-saludable/2026/11/22/6afdab5421efa023118b4580.html",
+      "fecha": "2026-11-22T11:13:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Comunidad de Madrid pide al Supremo «controlar» el censo real de la ley de nietos",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/comunidad-madrid-supremo-censo-ley-nietos/",
+      "fecha": "2026-11-22T11:09:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "DIRECTO | Feijóo interviene en un mitin en Murcia",
+      "url": "https://theobjective.com/videos/espana/politica/2026-11-22/directo-feijoo-murcia/",
+      "fecha": "2026-11-22T10:59:46+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Al menos tres muertos y 30 desaparecidos en el incendio de una fábrica en Indonesia",
+      "url": "https://theobjective.com/internacional/2026-11-22/muertos-desaparecidos-incendio-fabrica-indonesia/",
+      "fecha": "2026-11-22T10:56:33+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cataluna",
+      "titulo": "La caída de un árbol por culpa del fuerte viento deja nueve heridos en Barcelona al paso de la carrera Cursa de Dones",
+      "url": "https://www.elmundo.es/cataluna/2026/11/22/6b02c12d21efa07f188b457c.html",
+      "fecha": "2026-11-22T10:48:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Nueve heridos leves al caer un árbol en la avenida Meridiana de Barcelona",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-22/heridos-caida-arbol-barcelona-carrera-mujer/",
+      "fecha": "2026-11-22T10:40:11+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Gran Premio de Portugal: Marc Márquez, en busca del Mundial",
+      "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/22/05_0502_20261122_21_1-directo.html",
+      "fecha": "2026-11-22T10:30:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Hazte Oír pide frenar las urnas paralelas en los consulados para los ‘nietos’",
+      "url": "https://theobjective.com/espana/2026-11-22/hazte-oir-urnas-paralelas-consulados/",
+      "fecha": "2026-11-22T10:30:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "ciencia",
+      "titulo": "Muere abatido un ejemplar de oso pardo durante un control de jabalíes en Picos de Europa",
+      "url": "https://www.elmundo.es/ciencia/2026/11/22/6b02c39fe85ece873e8b458c.html",
+      "fecha": "2026-11-22T10:27:46+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Barcelona - Villarreal",
+      "url": "https://www.elmundo.es/deportes/futbol/laliga-ea-sports/barcelona-villarreal/2026/11/22/01_0101_20261122_178_449-directo.html",
+      "fecha": "2026-11-22T10:20:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Un hombre detenido por robar más de 30.000 euros en joyas a dependientes en Mallorca",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-22/detenido-robo-joyas-oro-personas-mallorca/",
+      "fecha": "2026-11-22T10:08:51+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Decenas de desaparecidos en el infierno de una fábrica de caramelos en Indonesia",
+      "url": "https://www.elmundo.es/internacional/2026/11/22/6b02b78fe9cf4a75168b458f.html",
+      "fecha": "2026-11-22T09:56:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Interceptados dos cayucos con inmigrantes a bordo en aguas de El Hierro",
+      "url": "https://theobjective.com/sociedad/2026-11-22/inmigrantes-cayucos-el-hierro/",
+      "fecha": "2026-11-22T09:42:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Salvador Illa llama a movilizar Cataluña para que «Pedro Sánchez gobierne»",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/salvador-illa-pedro-sanchez-2/",
+      "fecha": "2026-11-22T09:19:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Seis detenidos en Salamanca por usurpar 394 identidades y estafar 203.000 euros",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-22/detenidos-salamanca-identidades-estafa/",
+      "fecha": "2026-11-22T08:56:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "El Teatro Real de Madrid vuelve a ser elegido el mejor teatro de ópera del mundo",
+      "url": "https://theobjective.com/cultura/teatro/2026-11-22/teatro-real-madrid-opera/",
+      "fecha": "2026-11-22T08:38:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Muere un hombre de 37 años tras volcar su coche en una carretera de Navarra",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-22/muere-hombre-salida-via-navarra/",
+      "fecha": "2026-11-22T08:27:24+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Rusia asegura haber derribado 170 drones ucranianos durante la noche en siete regiones",
+      "url": "https://theobjective.com/internacional/2026-11-22/rusia-drones-ucranianos-regiones/",
+      "fecha": "2026-11-22T08:00:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Verstappen conquista Las Vegas por delante de los McLaren: Sainz octavo y Alonso no termina",
+      "url": "https://theobjective.com/deportes/formula-1/2026-11-22/verstappen-las-vegas-sainz-alonso/",
+      "fecha": "2026-11-22T07:34:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Reino Unido llama a Putin «asesino a sangre fría» y respalda a Zelenski frente a Trump",
+      "url": "https://theobjective.com/internacional/2026-11-22/reino-unido-putin-kiev/",
+      "fecha": "2026-11-22T07:16:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Pablo, el hijo mayor de Felipe González: «Nunca hablo de política con mi padre, ni antes ni ahora; es un abuelo excelente, su mente no para nunca»",
+      "url": "https://theobjective.com/gente/2026-11-22/pablo-hijo-mayor-felipe-gonzalez-politica-padre-abuelo-excelente-mente-para/",
+      "fecha": "2026-11-22T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Ni sérums milagrosos ni tratamientos: cinco trucos para evitar el pelo encrespado mientras duermes",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-11-22/ni-serums-milagrosos-ni-tratamientos-cinco-trucos-para-evitar-el-pelo-encrespado-mientras-duermes/",
+      "fecha": "2026-11-22T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Paloma San Basilio cumple 76 años: una vida marcada por dos amores, una separación y una voz que ha hecho historia",
+      "url": "https://theobjective.com/gente/2026-11-22/paloma-san-basilio-76-anos-escenarios-amores-historia/",
+      "fecha": "2026-11-22T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Juan Leal, experto capilar: «Encontrar mucho pelo en la ducha no siempre significa que estés perdiendo cabello»",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-11-22/juan-leal-experto-capilar-encontrar-mucho-pelo-en-la-ducha-no-siempre-significa-que-estes-perdiendo-cabello/",
+      "fecha": "2026-11-22T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "Comprar Lotería de Navidad 2026 en La Rioja: números y décimos por administración para el sorteo",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-22/comprar-loteria-de-navidad-2026-en-la-rioja-numeros-y-decimos-por-administracion-para-el-sorteo/",
+      "fecha": "2026-11-22T04:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "Comprar Lotería de Navidad 2026 en Burgos: números y décimos por administración para el sorteo",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-22/comprar-loteria-de-navidad-2026-en-burgos-numeros-y-decimos-por-administracion-para-el-sorteo/",
+      "fecha": "2026-11-22T04:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | 1933: perdieron las elecciones y culparon a las mujeres",
+      "url": "https://theobjective.com/podcasts/historia-canalla/podcast-historia-canalla-1933-elecciones-mujeres/",
+      "fecha": "2026-11-22T04:25:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Semioculto centro, palanca de cambio",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/semioculto-palanca-cambio-articulo-villena/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "El centro de quita y pon: el último viaje de Pedro Sánchez",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/quita-y-pon-articulo-gloria-lomana/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Sánchez premió a Puigdemont por tratar de «derrotar a España»",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/sanchez-puigdemont-articulo-teresa-barbat/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Votar con miedo, gobernar sin límites",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/votar-con-miedo-articulo-benito-arrunada/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "No más parranda",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/no-parranda-articulo-carlos-granes/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Perder el debate, ganar el relato",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/debate-relato-articulo-guadalupe-sanchez/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Las vallas, el árabe y el destinatario imaginario",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-22/vallas-arabe-clon-de-semana/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Gobierno gasta tres veces más en ayudas al transporte que en su prioridad, la vivienda",
+      "url": "https://theobjective.com/economia/2026-11-22/gobierno-gasta-cuatro-veces-mas-subvencionar-transporte-vivienda/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "tecnologia",
+      "titulo": "Las fuerzas especiales albergan en su arsenal material del Decathlon y tienen sus razones",
+      "url": "https://theobjective.com/tecnologia/2026-11-22/fuerzas-especiales-material-decathlon/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "¿Cuánto tributan empresas y autónomos si les ha tocado ‘El Gordo’?",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-22/cuanto-tributan-empresas-y-autonomos-si-les-ha-tocado-el-gordo/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "¿Cuántos premios se reparten en total en la Lotería de Navidad 2026? Todas las cantidades",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-22/cuantos-premios-se-reparten-en-total-en-la-loteria-de-navidad-2026-todas-las-cantidades/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Solo el 62% de los 147 millones de Exteriores para la FAO computa como ayuda al desarrollo",
+      "url": "https://theobjective.com/espana/2026-11-22/millones-exteriores-fao-desarrollo/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Interior se ve obligado a revelar los fallos del sistema que vigila a mujeres maltratadas",
+      "url": "https://theobjective.com/espana/2026-11-22/interior-obligado-fallos-sistema-vigila-mujeres-maltratadas/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Santiago Calvo, economista, sobre las pensiones: «Incluso con récord de empleo, la deuda de la Seguridad Social es de 136.000 millones. La sostenibilidad no está garantizada»",
+      "url": "https://theobjective.com/economia/2026-11-22/santiago-calvo-economista-sobre-las-pensiones-incluso-con-record-de-empleo-la-deuda-de-la-seguridad-social-es-de-136-000-millones-la-sostenibilidad-no-esta-garantizada/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La CNMC recorta un 84% los incentivos a Red Eléctrica por su gestión en el año del apagón",
+      "url": "https://theobjective.com/economia/energia/2026-11-22/cnmc-recorta-incentivos-red-electrica-apagon/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Lo mejor de la semana: muertes extrañas, inseguridad en campaña y voto por correo",
+      "url": "https://theobjective.com/espana/2026-11-22/mejor-semana-muertes-extranas-inseguridad-campana-voto-correo/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Roberto Vaquero, líder de Frente Obrero: «El problema de la vivienda llega porque ni Aznar, ni Felipe González, ni Zapatero ni el Gobierno más progresista han construido hogares»",
+      "url": "https://theobjective.com/economia/2026-11-22/roberto-vaquero-lider-de-frente-obrero-el-problema-de-la-vivienda-llega-porque-ni-aznar-ni-felipe-gonzalez-ni-zapatero-ni-el-gobierno-mas-progresista-han-construido-hogares/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Cristina Villar, diseñadora, sobre comprar en Primark o Zara: «Si quieres un jersey que dure mucho años, no te fijes solo en su diseño o el color para saber si merece la pena»",
+      "url": "https://theobjective.com/lifestyle/moda/2026-11-22/cristina-villar-disenadora-sobre-comprar-en-primark-o-zara-si-quieres-un-jersey-que-dure-mucho-anos-no-te-fijes-solo-en-su-diseno-o-el-color-para-saber-si-merece-la-pena/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Gobierno destina 3,7 millones a Casa 47, que solo ofrece 1.249 viviendas de alquiler asequible",
+      "url": "https://theobjective.com/economia/2026-11-22/gobierno-destina-3-7-millones-casa-47-1249-viviendas/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Karlos Arguiñano (78 años), cocinero: «El tradicional cocido madrileño se hace con carne y cociendo los garbanzos 30′, pero por separado del chorizo y la morcilla»",
+      "url": "https://theobjective.com/gastronomia/2026-11-22/karlos-arguinano-78-anos-cocinero-el-tradicional-cocido-madrileno-se-hace-con-carne-y-cociendo-los-garbanzos-30-pero-por-separado-del-chorizo-y-la-morcilla/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Niño Becerra, economista, contundente sobre la subida del SMI: «Lo que pasará es que el mercado, al ver que la población tiene más dinero, incrementará los precios»",
+      "url": "https://theobjective.com/economia/2026-11-22/nino-becerra-economista-contundente-sobre-la-subida-del-smi-lo-que-pasara-es-que-el-mercado-al-ver-que-la-poblacion-tiene-mas-dinero-incrementara-los-precios/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La falta de cultura económica dispara los bulos de la izquierda ante las elecciones",
+      "url": "https://theobjective.com/economia/2026-11-22/falta-cultura-economica-bulos-izquierda-elecciones/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La trama mafiosa más poderosa de Francia prepara su desembarco en la Costa del Sol",
+      "url": "https://theobjective.com/espana/2026-11-22/trama-mafiosa-poderosa-francia-prepara/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Interior censura el expediente de la medalla que Marlaska dio al fiscal de la invasión de Ceuta",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/interior-expediente-medalla-marlaska-fiscal-ceuta/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El dilema de Colau ante el fracaso: liderar la derrota o irse para preparar las catalanas",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/dilema-colau-catalanas/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Carlos H. Quero (Vox): «Los grandes fondos votan a PSOE y Sumar»",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/carlos-quero-vox-inmigracion-gran-recorte-publico-espana/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La brecha salarial entre España y la UE ha crecido en 2.000 euros con Sánchez",
+      "url": "https://theobjective.com/economia/2026-11-22/brecha-salarial-ue-crece-subida-smi/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Jordi Cruz, chef: «Para que los espaguetis queden mucho más sabrosos no los cuezas en agua solo con sal, añade parmesano, y haz esta salsa con 200 ml de caldo de pollo y limón»",
+      "url": "https://theobjective.com/gastronomia/2026-11-22/jordi-cruz-chef-para-que-los-espaguetis-queden-mucho-mas-sabrosos-no-los-cuezas-en-agua-solo-con-sal-anade-parmesano-y-haz-esta-salsa-con-200-ml-de-caldo-de-pollo-y-limon/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Consejo de Estado reúne la próxima semana la comisión que estudia inhabilitar a De la Vega",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/calvo-consejo-estado-comision/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "PP y Vox consolidan una mayoría absoluta de hasta 208 escaños a siete días del 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/pp-vox-psoe-votometro-ocho-dias-elecciones/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez, a punto de batir el récord de gobernar por decreto de toda la democracia",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/sanchez-record-gobernar-decreto-democracia/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Uno de cada cinco jóvenes españoles de menos de 35 años no ahorra ni un solo euro",
+      "url": "https://theobjective.com/economia/2026-11-22/jovenes-espanoles-no-ahorra-euro/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "El Gobierno ha regado con casi 52 millones de euros a UGT y CCOO desde 2025",
+      "url": "https://theobjective.com/opinion/2026-11-22/gobierno-regado-52-millones-ugt-ccoo/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "1933: perdieron las elecciones y culparon a las mujeres",
+      "url": "https://theobjective.com/cultura/2026-11-22/historia-canalla-1933-elecciones-mujeres/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "La zarigüeya monclovita y el misterio de los escorpiones desagradecidos",
+      "url": "https://theobjective.com/opinion/2026-11-22/zarigueya-misterio-escorpiones-desagradecidos/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Begoña Gómez, la ‘santa Evita’ del sanchismo enamorado",
+      "url": "https://theobjective.com/opinion/2026-11-22/begona-gomez-sanchismo-enamorado-el-bestiario/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "El otoño irrepetible de András Schiff",
+      "url": "https://theobjective.com/cultura/2026-11-22/otono-irrepetible-andras-schiff-lo-que-hay-que-oir/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Felipe IV vuelve a casa",
+      "url": "https://theobjective.com/cultura/2026-11-22/felipe-iv-casa-historias-de-la-historia/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Árbitros del cara a cara",
+      "url": "https://theobjective.com/opinion/2026-11-22/arbitros-cara-cara-articulo-fotomaton/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "El primer viaje de Tintoretto a París",
+      "url": "https://theobjective.com/cultura/arte/2026-11-22/tintoretto-paris/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "La lección (¡antikantiana!) de Sancho Gracia",
+      "url": "https://theobjective.com/opinion/2026-11-22/sancho-gracia-montanoscopia/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Los consulados montan mesas con urnas de cartón para los ‘nietos’ que no pueden votar",
+      "url": "https://theobjective.com/espana/2026-11-22/montan-mesas-urnas-carton-nietos-votar/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Mathieu Flamini (42 años), ex de Getafe y Arsenal, sobre su negocio valorado en 12.500 millones: «Mientras algunos jugaban a la Play Station, yo elegí aprender»",
+      "url": "https://theobjective.com/economia/2026-11-22/mathieu-flamini-42-anos-ex-de-getafe-y-arsenal-sobre-su-negocio-valorado-en-12-500-millones-mientras-algunos-jugaban-a-la-play-station-yo-elegi-aprender/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "30 años después",
+      "url": "https://theobjective.com/lifestyle/2026-11-22/treinta-anos-despues/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez se olvida en su programa de Maricarmen, Ceuta, los ‘nietos’ y el apagón",
+      "url": "https://theobjective.com/espana/politica/2026-11-22/sanchez-olvida-programa/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "La precaria recuperación de la economía venezolana",
+      "url": "https://theobjective.com/internacional/2026-11-22/precaria-recuperacion-economia-venezolana/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Carlos H. Quero: «La inmigración ha sido el gran recorte de lo público en España»",
+      "url": "https://theobjective.com/videos/espana/2026-11-22/video-carlos-h-quero-inmigracion-vivienda/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Lo mejor de la semana: muertes extrañas, inseguridad en campaña y voto por correo",
+      "url": "https://theobjective.com/videos/espana/2026-11-22/video-resumen-semanal-muertes-inseguridad-debate-elecciones/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Gobierno gasta tres veces más en ayudas al transporte que en su prioridad, la vivienda",
+      "url": "https://theobjective.com/videos/economia/2026-11-22/video-gasto-gobierno-ayudas-transporte-vivenda/",
+      "fecha": "2026-11-22T04:25:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Maribel Vaquero: \"Soy 'abertzale': ni de izquierdas ni de derechas; es el modelo PNV\"",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/22/6b01ba10e9cf4a9d1f8b459c.html",
+      "fecha": "2026-11-22T00:13:55+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Espí, 4 goles en 62 minutos: \"Si lo pongo con Mbappé de inicio tengo que entrar yo a dar una hostia\"",
+      "url": "https://www.elmundo.es/deportes/futbol/2026/11/22/6b022e97fdddffac748b4584.html",
+      "fecha": "2026-11-21T23:55:46+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "metropoli",
+      "titulo": "Taberna 13 Cuadros, la tasca de La Latina donde conviven exposiciones, buenos vinos y cocina casera",
+      "url": "https://www.elmundo.es/metropoli/2026/11/22/6afc4452e4d4d8de368b457e.html",
+      "fecha": "2026-11-21T23:35:18+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "El ejercicio que desafía al abdomen y ayuda a quemar calorías sin recurrir a los burpees",
+      "url": "https://www.elmundo.es/yodona/vida-saludable/2026/11/22/6ae98e90fdddffbb508b457f.html",
+      "fecha": "2026-11-21T23:06:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "album",
+      "titulo": "Lola Lolita ¿en pañales?, Penélope Cruz impecable o una Charlize Theron que corta el aliento: estos son los mejores (y algunos cuestionables) looks de la semana",
+      "url": "https://www.elmundo.es/album/yodona/moda/2026/11/22/6b000a08fdddff36678b459c.html",
+      "fecha": "2026-11-21T23:05:57+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "La subvención española que aprovecha Francia tras la del 'tope ibérico': la ayuda a los carburantes",
+      "url": "https://www.elmundo.es/economia/macroeconomia/2026/11/22/6afedb85e85ece6b768b4593.html",
+      "fecha": "2026-11-21T23:04:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Real Madrid amarra los tres puntos frente al Celta en el minuto 85",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-11-21/real-madrid-amarra-tres-puntos-celta/",
+      "fecha": "2026-11-21T22:56:21+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Un error del portero del Betis deja el derbi sevillano en empate en el descuento",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-11-21/portero-betis-derbi-sevillano-cronica/",
+      "fecha": "2026-11-21T22:32:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox se querellará contra Albares y los cónsules por la urna alternativa para la ley de nietos",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/vox-querellara-albares-consules-ley-de-nietos/",
+      "fecha": "2026-11-21T22:17:57+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cultura",
+      "titulo": "El Teatro Real se corona como mejor teatro de ópera del mundo en los International Opera Awards 2026",
+      "url": "https://www.elmundo.es/cultura/musica/2026/11/21/6b019003fdddff36768b456d.html",
+      "fecha": "2026-11-21T22:00:22+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "PP y PSOE ganan apoyos y la derecha ancla su ventaja a una semana de votar",
+      "url": "https://www.elmundo.es/espana/encuestas/2026/11/21/6b01d96dfc6c83e5298b4592.html",
+      "fecha": "2026-11-21T21:55:11+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Europa cierra la puerta: la alianza con Ruanda que deja a España casi sola en su política migratoria",
+      "url": "https://www.elmundo.es/internacional/2026/11/21/6b01ac60fdddffb2188b457e.html",
+      "fecha": "2026-11-21T21:51:08+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Manu, Eduardo, Juan e Isaac Muga: \"Crecemos por primera vez fuera de Rioja a Ribera del Duero; hay que adaptarse\"",
+      "url": "https://www.elmundo.es/economia/2026/11/21/6b0043d9fc6c83d7128b45c3.html",
+      "fecha": "2026-11-21T21:50:56+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "La lección que Alcaraz ha aprendido de Federer: \"Sólo ganas el 54% de los puntos\"",
+      "url": "https://www.elmundo.es/deportes/tenis/2026/11/21/6b01f6d9fc6c830e508b4585.html",
+      "fecha": "2026-11-21T21:50:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Torres avisa de que los menores inmigrantes no pueden retornar y la derecha los «hacinará»",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/torres-menores-inmigrantes-hacinados-derecha/",
+      "fecha": "2026-11-21T21:26:14+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cultura",
+      "titulo": "Rosendo y la ansiedad: \"Cada vez me sentía con más responsabilidad y con más miedo\"",
+      "url": "https://www.elmundo.es/cultura/literatura/2026/11/21/6b0177f0fdddffb9078b45b5.html",
+      "fecha": "2026-11-21T21:17:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Largas colas para votar en París en las elecciones españolas: «Estoy alucinada»",
+      "url": "https://theobjective.com/internacional/2026-11-21/largas-colas-votar-paris/",
+      "fecha": "2026-11-21T20:40:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El BOE publica los nuevos requisitos de energía y soberanía digital para los centros de datos",
+      "url": "https://theobjective.com/economia/2026-11-21/boe-requisitos-energia-centro-datos/",
+      "fecha": "2026-11-21T20:25:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Huelva rendirá homenaje a las víctimas de los accidentes ferroviarios de Adamuz y Urda",
+      "url": "https://theobjective.com/espana/2026-11-21/huelva-homenaje-urda-adamuz-accidente-ferroviario/",
+      "fecha": "2026-11-21T19:45:57+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Ayuso bautiza como 'perronismo' la política \"personalista\" y \"mafiosa\" de Sánchez",
+      "url": "https://www.elmundo.es/espana/2026/11/21/6b01eb3afc6c833a5f8b4596-video.html",
+      "fecha": "2026-11-21T19:04:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Salvamento Marítimo y Guardia Civil escoltan hasta El Hierro un cayuco con 67 personas",
+      "url": "https://theobjective.com/espana/2026-11-21/salvamento-maritimo-guardia-civil-hierro-cayuco/",
+      "fecha": "2026-11-21T18:45:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Detenido en México El Chapo Isidro, uno de los diez criminales más buscados por el FBI",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-21/detenido-chapo-isidro-criminal-buscado-fbi/",
+      "fecha": "2026-11-21T18:42:03+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Colas generalizadas en los consulados de España el primer día de votación para el 29-N",
+      "url": "https://theobjective.com/espana/2026-11-21/colas-consulados-bogota-votacion/",
+      "fecha": "2026-11-21T18:23:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "Colas en los consulados de Bogotá y Buenos Aires en el primer día de votación",
+      "url": "https://theobjective.com/videos/espana/2026-11-21/colas-consulados-bogota-buenos-aires-29-n/",
+      "fecha": "2026-11-21T17:37:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Muere Paolo Bulgari, el joyero que llevó el color de Roma al mundo",
+      "url": "https://theobjective.com/internacional/2026-11-21/obituario-paolo-bulgari-joyero/",
+      "fecha": "2026-11-21T17:13:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP exige que Morant rectifique por desear «cuatro bofetadas» de Sánchez a Feijóo",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/pp-morant-cuatro-bofetadas-feijoo-sanchez/",
+      "fecha": "2026-11-21T17:03:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Francia rechaza el presupuesto europeo de Costa y Alemania y Suecia exigen más recortes",
+      "url": "https://theobjective.com/internacional/2026-11-21/francia-presupuesto-alemania-suecia-recortes/",
+      "fecha": "2026-11-21T16:47:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Belarra pide apostar el 29-N por la izquierda «que puede cambiar las cosas»",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/belarra-izquierda-elecciones-apuesta-psoe/",
+      "fecha": "2026-11-21T16:24:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Juanma Moreno no se fía y pide «ojos de transparencia» en todas las mesas electorales",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/moreno-transparencia-pp-mesas-electorales/",
+      "fecha": "2026-11-21T16:20:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox pide reindustrializar España para recuperar el empleo y frenar la despoblación",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/buxade-pp-psoe-vox-trabajadores/",
+      "fecha": "2026-11-21T15:57:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Bildu pide dar «una paliza antológica» a los «reaccionarios» en tierras vascas el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/bildu-voto-paliza-democratica-reaccionarios-derecha/",
+      "fecha": "2026-11-21T15:51:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Morant cree que a los socialistas les gustaría que Sánchez «diera cuatro bofetadas a Feijóo»",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/morant-cuatro-bofetadas-sanchez-feijoo/",
+      "fecha": "2026-11-21T15:38:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Atendidas 34 personas tras el incendio de un piso en Tarrasa (Barcelona) esta madrugada",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-21/atendidos-34-incendio-piso-tarrasa-madrugada/",
+      "fecha": "2026-11-21T14:56:39+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Rescatado un hombre tras pasar 15 horas secuestrado y atado a una silla en Valencia",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-21/guardia-civil-hombre-secuestro-silla-valencia/",
+      "fecha": "2026-11-21T14:54:36+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Un terremoto de magnitud 6,8 sacude Indonesia sin causar víctimas",
+      "url": "https://theobjective.com/internacional/2026-11-21/terremoto-magnitud-indonesia-victimas-alerta-tsunami/",
+      "fecha": "2026-11-21T14:53:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Albares llama a movilizar el voto progresista para «frenar» a PP y Vox",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/albares-voto-progresista-pp-vox/",
+      "fecha": "2026-11-21T14:50:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Bolaños ironiza con que se necesita «un ejército de verificadores» para «las mentiras de Feijóo»",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/bolanos-ironiza-verificadores-mentiras-feijoo/",
+      "fecha": "2026-11-21T14:36:08+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Colau acusa a Sánchez de «resignarse» ante un posible Gobierno de PP y Vox",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/colau-sanchez-pp-vox-gobierno/",
+      "fecha": "2026-11-21T14:34:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Illa alerta de que el PP acabaría «vaciando» el autogobierno de Cataluña de la mano de Vox",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/illa-alerta-pp-autogobierno-cataluna-vox/",
+      "fecha": "2026-11-21T14:21:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez carga contra el PP: «Desde el privilegio no se puede hablar de los derechos de la gente»",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/sanchez-pp-privilegio-derechos-gente/",
+      "fecha": "2026-11-21T14:19:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Hazte Oír señala al Gobierno por desafiar al Supremo con ‘la ley de nietos’",
+      "url": "https://theobjective.com/espana/politica/2026-11-21/hazte-oir-senala-gobierno-supremo-ley-de-nietos/",
+      "fecha": "2026-11-21T14:07:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Rafa Nadal entra en la Junta Directiva del Real Madrid: «Lo asumo con humildad»",
+      "url": "https://theobjective.com/deportes/futbol/laliga/2026-11-21/rafa-nadal-junta-real-madrid/",
+      "fecha": "2026-11-21T13:38:09+00:00"
+    }
+  ]
+}
