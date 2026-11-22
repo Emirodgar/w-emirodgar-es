@@ -21,6 +21,8 @@ Mi duda es si estamos mirando donde toca. Seguimos hablando de qué modelo usar 
 
 La capacidad de procesamiento de inteligencia se está volviendo abundante. Si todos acceden al último modelo, tenerlo no distingue a nadie. Lo que sí distingue es diseñar un bucle de aprendizaje continuo, donde el capital humano (criterio, ingenio) y el capital de tokens (capacidad algorítmica) se refuerzan entre sí. El criterio decide qué merece la pena preguntar y qué respuesta es buena. Los tokens aportan escala y velocidad. El objetivo es un conocimiento de valor que se acumule y se mantenga en el tiempo, en lugar de una mejora de productividad que desaparece cuando cambia la herramienta.
 
+El planteamiento de capital humano y capital de tokens lo formuló Satya Nadella en junio de 2026, y la idea de fondo es que el aprendizaje que genera ese bucle pasa a ser propiedad intelectual de la empresa ([Redmond Magazine](https://redmondmag.com/articles/2026/06/18/nadella-says-enterprise-ai-future-may-depend-less-on-frontier-models-than-learning-systems.aspx)). Que lo diga el CEO de Microsoft no lo hace cierto, pero sí indica hacia dónde mira quien vende los modelos.
+
 Me recuerda a la frase que se atribuye a Lincoln: si tuviera diez horas para cortar un árbol, emplearía siete en afilar el hacha. El modelo es el hacha. El bucle es el afilado, y no se termina nunca.
 
 ## ¿Y por sectores?
@@ -29,7 +31,7 @@ El gráfico mide el porcentaje de encuestados cuyas organizaciones han elegido c
 
 <img width="480" class="img-responsive" alt="Gráfico de barras con el porcentaje de organizaciones que construyen con IA en lugar de comprar software por sector: tecnología 41%, sanidad 39%, servicios profesionales 38%, energía y materiales 38%, instituciones financieras 36%, media y telecomunicaciones 34%, farma 33%, viajes y logística 31%, consumo y retail 29%, ingeniería y construcción 28%, fabricación avanzada 27%, seguros 19% y sector público y social 17%. Total 32%" src="https://emirodgar.es/images/adopcion-ia-por-sectores-construir-vs-comprar.png" />
 
-Que las tecnológicas vayan por delante tiene lógica, y que el sector público vaya por detrás también. Mi suposición es que pesan la contratación pública, la regulación y la aversión al riesgo, aunque la encuesta no lo explica. Un matiz: la muestra por sector va de 40 a 205 respondientes, así que mejor quedarse con el orden de magnitud que con cada punto.
+Que las tecnológicas vayan por delante tiene lógica, y que el sector público vaya por detrás también. Mi suposición es que pesan la contratación pública, la regulación y la aversión al riesgo, aunque la encuesta no lo explica. Por desgracia, muchas de las organizaciones que van por detrás se quedarán en comprar herramientas, y sin un bucle propio lo que aprenden se queda en el proveedor. Un matiz: la muestra por sector va de 40 a 205 respondientes, así que mejor quedarse con el orden de magnitud que con cada punto.
 
 *Fuente: McKinsey Global Survey on the state of AI (1.719 participantes, mayo-junio 2026). Gráfico de InvestorSight.*
 
@@ -40,3 +42,8 @@ Hay otra cosa que conviene tener presente. Los modelos funcionan con atajos esta
 Por eso el criterio humano no es opcional dentro del bucle. Sin él, el sistema aprende errores y los repite con mucha convicción.
 
 El modelo se compra. El bucle se construye. Lo primero dura hasta el próximo lanzamiento, y lo segundo se queda en la empresa.
+
+## Fuentes
+
+- McKinsey, Global Survey on the state of AI (mayo-junio 2026), a través del gráfico de InvestorSight.
+- Satya Nadella sobre capital humano, capital de tokens y bucle de aprendizaje: [Redmond Magazine](https://redmondmag.com/articles/2026/06/18/nadella-says-enterprise-ai-future-may-depend-less-on-frontier-models-than-learning-systems.aspx), [Diginomica](https://diginomica.com/tokenomics-microsoft-worldview-ceo-satya-nadella-pitches-loopy-vision-human-capital-gaining-value) y [Fast Company](https://www.fastcompany.com/91561371/satya-nadella-is-asking-the-right-ai-question).
