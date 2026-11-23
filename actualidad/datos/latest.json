@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-22",
-  "generado_en": "2026-11-22T13:11:23+00:00",
-  "titular": "La cumbre del clima colapsa por los combustibles fósiles mientras la campaña electoral entra en su recta final",
+  "fecha": "2026-11-23",
+  "generado_en": "2026-11-23T15:48:45+00:00",
+  "titular": "El Supremo aplica la amnistía a Puigdemont mientras el CIS pronostica un \"arrase\" del PSOE en elecciones",
   "por_medio": {
-    "El Mundo": 26,
-    "The Objective": 111
+    "El Mundo": 24,
+    "The Objective": 161
   },
   "temas": [
     {
-      "tema": "Colapso de la Cumbre del Clima COP31",
-      "categoria": "Internacional",
-      "descripcion": "La cumbre del clima más larga de la historia ha colapsado debido a la falta de consenso sobre la mención de los combustibles fósiles, con la UE rechazando un acuerdo sin esta condición."
-    },
-    {
-      "tema": "Recta final de la campaña electoral",
+      "tema": "Amnistía y reacciones políticas",
       "categoria": "Política",
-      "descripcion": "A una semana de las elecciones generales, los partidos intensifican sus mítines, con Feijóo y Sánchez buscando movilizar el voto y las encuestas mostrando al PP con ventaja sobre el PSOE."
+      "descripcion": "El Tribunal Supremo aplica la amnistía a Carles Puigdemont, archivando la causa del procés, lo que genera reacciones diversas en el ámbito político."
     },
     {
-      "tema": "Incendio en fábrica de caramelos en Indonesia",
+      "tema": "Encuesta del CIS y campaña electoral",
+      "categoria": "Política",
+      "descripcion": "El CIS pronostica una victoria \"arrasadora\" del PSOE en las elecciones, lo que provoca reacciones de sorpresa y burla entre los partidos."
+    },
+    {
+      "tema": "Tensiones internacionales y conflictos",
       "categoria": "Internacional",
-      "descripcion": "Al menos tres trabajadores han muerto y decenas están desaparecidos tras un incendio en una fábrica de caramelos cerca de Yakarta, generando preocupación por la seguridad laboral."
+      "descripcion": "Alertas sobre el posible despliegue de armas nucleares rusas en el espacio y la extensión de la guerra de Ucrania al Mediterráneo."
     },
     {
-      "tema": "Incidencias en infraestructuras y sucesos",
-      "categoria": "Sociedad",
-      "descripcion": "Una avería en el tren satélite de la T4 de Barajas causó largas colas, y la caída de un árbol en Barcelona dejó nueve heridos durante una carrera."
+      "tema": "Investigaciones de corrupción y sucesos",
+      "categoria": "Sucesos",
+      "descripcion": "Declaraciones en el 'caso Koldo' y el 'caso Kitchen', así como otros incidentes de seguridad y violencia."
     }
   ]
 }

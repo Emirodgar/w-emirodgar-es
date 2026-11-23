@@ -911,7 +911,49 @@
         "titulo": "Colapsa la cumbre del clima más larga de la historia: la UE rechaza un acuerdo sin mención a los combustibles fósiles",
         "url": "https://www.elmundo.es/ciencia/2026/11/22/6b02a7d721efa09c698b4575.html"
       },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-23",
+      "edicion": "2026-11-23",
+      "titulo": "El Tribunal Supremo aplica la amnistía a Puigdemont y archiva la causa del procés",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo ha dictado un auto aplicando la amnistía a Carles Puigdemont y archivando definitivamente la causa del procés, nueve años después.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Supremo aplica la amnistía a Puigdemont y archiva definitivamente la causa del procés",
+        "url": "https://www.elmundo.es/espana/2026/11/23/6b042ed9e4d4d8872c8b4579.html"
+      },
       "destacado": true
+    },
+    {
+      "fecha": "2026-11-23",
+      "edicion": "2026-11-23",
+      "titulo": "El CIS pronostica una victoria \"arrasadora\" del PSOE en las elecciones",
+      "categoria": "Política",
+      "descripcion": "El Centro de Investigaciones Sociológicas (CIS) asegura que el PSOE obtendrá el 33,3% de los votos, situándose diez puntos por encima del PP, en su último sondeo antes de las elecciones.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El 'último' servicio de Tezanos: el CIS asegura que el PSOE arrasará y Sánchez gobernará y el PP se burla y anuncia que será \"uno de los primeros\" en echar",
+        "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b041c85fc6c83271c8b4593.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-23",
+      "edicion": "2026-11-23",
+      "titulo": "Alertas de inteligencia sobre el despliegue de armas nucleares rusas en el espacio",
+      "categoria": "Internacional",
+      "descripcion": "Informes de inteligencia, con especial intensidad desde aliados como Alemania, alertan de que Rusia planea lanzar un satélite con armamento nuclear este año.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Informes de inteligencia alertan de que \"Rusia quiere desplegar armas nucleares en el espacio\"",
+        "url": "https://www.elmundo.es/internacional/2026/11/23/6b04507be4d4d898108b458b.html"
+      },
+      "destacado": false
     }
   ]
 }
