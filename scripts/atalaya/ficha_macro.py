@@ -24,7 +24,7 @@ BASE = "https://emirodgar.es"
 HOY = datetime.now(timezone.utc)
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
-INDICADORES = ["presion_fiscal.json", "paro_epa.json"]
+INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json"]
 
 
 def fecha_es(iso):
@@ -52,7 +52,7 @@ li{margin:.3em 0}main,h1{overflow-wrap:anywhere}
 .leyenda i{width:14px;height:3px;border-radius:2px;display:inline-block}
 .gband-label{font-size:11px;fill:#5b6778}
 .axis-label{font-size:11px;fill:#5b6778}
-.grid{stroke:#e3e8ef;stroke-width:1}
+.grid{stroke:#e3e8ef;stroke-width:1}.grid.cero{stroke:#b7c0cc;stroke-width:1.5}
 table.datos{border-collapse:collapse;width:100%;font-size:14px;margin:.6em 0}
 table.datos th,table.datos td{border:1px solid #d9e0ea;padding:5px 8px;text-align:right}
 table.datos th:first-child,table.datos td:first-child{text-align:left}
@@ -65,7 +65,7 @@ circle.ls-principal.dot{fill:#1b2330;stroke:none}circle.ls-secundaria.dot{fill:#
 text.ls-principal.endlabel{fill:#1b2330}text.ls-secundaria.endlabel{fill:#5b6778}
 @media (prefers-color-scheme:dark){body{background:#0e1219;color:#e5e9f0}h2{border-color:#243044}.ans{background:#0f2036}
 .meta,.src,nav.bc,.leyenda{color:#98a5b8}a{color:#7cb0ff}.warn{background:#2a2310}
-.grid{stroke:#243044}.gband-label,.axis-label{fill:#8b97a8}
+.grid{stroke:#243044}.grid.cero{stroke:#3b4b63}.gband-label,.axis-label{fill:#8b97a8}
 table.datos th,table.datos td{border-color:#273449}table.datos th{background:#151d29}
 details summary{color:#7cb0ff}.ring{fill:#0e1219}
 .ls-principal{stroke:#e5e9f0}.ls-secundaria{stroke:#475569}
@@ -110,6 +110,7 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, pie):
 def grafico(ind, gobiernos, anio_min, anio_max):
     """SVG sin JS: línea principal (tinta) + línea secundaria opcional (gris), bandas de gobierno de fondo."""
     y_max, y_paso, unidad = ind["yMax"], ind["yPaso"], ind["unidad"]
+    y_min = ind.get("yMin", 0)
     W, H = 760, 320
     ML, MR, MT, MB = 42, 70, 14, 28
     PW, PH = W - ML - MR, H - MT - MB
@@ -118,7 +119,7 @@ def grafico(ind, gobiernos, anio_min, anio_max):
         return ML + (anio - anio_min) / (anio_max - anio_min) * PW
 
     def y(val):
-        return MT + PH - (val / y_max) * PH
+        return MT + PH - (val - y_min) / (y_max - y_min) * PH
 
     partes = []
     # bandas de gobierno
@@ -136,12 +137,14 @@ def grafico(ind, gobiernos, anio_min, anio_max):
         if anio_min < per["desde"] < anio_max + 1:
             xi = x(per["desde"])
             partes.append(f"<line class='grid' x1='{xi:.1f}' y1='{MT}' x2='{xi:.1f}' y2='{MT + PH}'/>")
-    # cuadrícula horizontal + etiquetas eje Y
-    v = 0
+    # cuadrícula horizontal + etiquetas eje Y (empieza en el primer múltiplo de y_paso >= y_min)
+    v = -(-y_min // y_paso) * y_paso if y_min < 0 else (y_min // y_paso) * y_paso
     while v <= y_max:
         yy = y(v)
-        partes.append(f"<line class='grid' x1='{ML}' y1='{yy:.1f}' x2='{ML + PW}' y2='{yy:.1f}'/>")
-        partes.append(f"<text class='axis-label' x='{ML - 6}' y='{yy + 4:.1f}' text-anchor='end'>{v}{unidad}</text>")
+        cls = "grid cero" if v == 0 and y_min < 0 else "grid"
+        partes.append(f"<line class='{cls}' x1='{ML}' y1='{yy:.1f}' x2='{ML + PW}' y2='{yy:.1f}'/>")
+        signo = "" if v == 0 else ("+" if v > 0 else "")
+        partes.append(f"<text class='axis-label' x='{ML - 6}' y='{yy + 4:.1f}' text-anchor='end'>{signo}{v}{unidad}</text>")
         v += y_paso
     # eje X: años cada 5 (cada 10 si la serie pasa de 40 años, para no amontonar etiquetas)
     paso_x = 10 if (anio_max - anio_min) > 40 else 5

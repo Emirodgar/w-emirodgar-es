@@ -13,6 +13,7 @@
  "yPaso": 10,
  "colTabla": "% del PIB",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado el PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma metodología, con el crecimiento económico."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
   {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "IPC, PIB, paro y otros indicadores económicos, actualizados cada mes."},
   {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "promesas de bajadas de impuestos, contrastadas con hechos."},

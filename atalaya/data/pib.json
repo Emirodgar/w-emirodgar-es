@@ -1,0 +1,38 @@
+{
+ "slug": "pib",
+ "titulo_pagina": "PIB de España: crecimiento desde 1976, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?",
+ "pregunta_faq": "¿Cuáles han sido las peores y mejores décadas de crecimiento económico en España?",
+ "resumen": "El PIB real de España ha crecido en la mayoría de los años desde 1976, con tres grandes recesiones: -1,0 % en 1993, hasta -3,8 % en 2009 (crisis financiera) y un desplome histórico del -10,9 % en 2020 por la pandemia, seguido de una recuperación con subidas del 6,7 % en 2021 y el 6,4 % en 2022.",
+ "aviso": "Tasa de variación anual del PIB real de España, recopilada por datosmacro.expansion.com a partir de la Contabilidad Nacional (INE) y, para los años más recientes, el Banco de España; no es una tabla descargada directamente del INE. La propia fuente avisa de que los datos de 1980 hacia atrás proceden de estimaciones de la OCDE y los posteriores de Eurostat, con una posible disparidad entre ambos tramos. Las bandas de color solo señalan quién gobernaba en cada momento: el crecimiento depende del ciclo económico global, las crisis externas (financiera, COVID) y muchos otros factores, no solo de qué partido gobierna.",
+ "fuente": "datosmacro.expansion.com (Contabilidad Nacional, INE/Banco de España)",
+ "fuenteUrl": "https://datosmacro.expansion.com/pib/espana",
+ "actualizado": "2026-11-24",
+ "unidad": "%",
+ "yMax": 10,
+ "yMin": -15,
+ "yPaso": 5,
+ "colTabla": "Var. PIB (%)",
+ "enlaces": [
+  {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "PIB, paro, IPC y otros indicadores, actualizados cada mes."},
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Variación anual del PIB real",
+   "datos": {
+    "1976": 3.3, "1977": 2.8, "1978": 1.5, "1979": 0.0, "1980": 2.2,
+    "1981": -0.1, "1982": 1.2, "1983": 1.8, "1984": 1.8, "1985": 2.3,
+    "1986": 3.3, "1987": 5.5, "1988": 5.1, "1989": 4.8, "1990": 3.8,
+    "1991": 2.5, "1992": 0.9, "1993": -1.0, "1994": 2.4, "1995": 5.0,
+    "1996": 2.7, "1997": 3.6, "1998": 4.3, "1999": 4.4, "2000": 5.2,
+    "2001": 3.9, "2002": 2.8, "2003": 2.9, "2004": 3.1, "2005": 3.6,
+    "2006": 4.0, "2007": 3.5, "2008": 0.8, "2009": -3.8, "2010": 0.1,
+    "2011": -0.6, "2012": -2.9, "2013": -1.4, "2014": 1.5, "2015": 4.1,
+    "2016": 2.9, "2017": 2.9, "2018": 2.4, "2019": 2.0, "2020": -10.9,
+    "2021": 6.7, "2022": 6.4, "2023": 2.5, "2024": 3.5, "2025": 2.6
+   }
+  }
+ }
+}
