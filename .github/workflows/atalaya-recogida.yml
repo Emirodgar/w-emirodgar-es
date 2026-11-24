@@ -37,6 +37,11 @@ jobs:
       - name: Archivo histórico (solo añade; nunca borra)
         run: python3 scripts/atalaya/archivo.py
 
+      - name: Panel de tendencias (menciones por partido y político)
+        # Solo lee el archivo y noticias.json; si falla, el resto de la recogida sigue.
+        continue-on-error: true
+        run: python3 scripts/atalaya/build_tendencias_vivo.py
+
       - name: Comprobar que los datos son razonables
         # Si falla, NO se hace commit: mejor datos anteriores que datos rotos.
         run: python3 scripts/atalaya/check_data.py

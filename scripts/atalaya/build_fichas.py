@@ -53,7 +53,7 @@ li{margin:.3em 0}table{display:block;max-width:100%;overflow-x:auto}table.cal td
 def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, shell=False, lang="es", alt=None, pie=None):
     url = f"{BASE}/atalaya/fichas/{ruta}"
     css_extra = '<link rel="stylesheet" href="/atalaya/assets/shell.css">' if shell else ""
-    js_extra = '<script src="/atalaya/assets/shell.js?v=2"></script>' if shell else ""
+    js_extra = '<script src="/atalaya/assets/shell.js?v=3"></script>' if shell else ""
     pad = "body{max-width:none;padding-left:calc(var(--sbp) + 24px)}main{max-width:820px}" if shell else ""
     alternates = "" if not alt else "".join(f'<link rel="alternate" hreflang="{l}" href="{BASE}/atalaya/fichas/{r}">' for l, r in ({lang: ruta, **(alt or {})}).items())
     pie = pie or f'Elaborado por <a href="https://emirodgar.es/sobre-mi">Emilio Rodríguez García</a> con el panel <a href="/atalaya/">Atalaya</a>. Última actualización: {fecha_es(FECHA)}. Contenido basado en datos públicos citados en cada apartado; no es una encuesta ni una predicción oficial. <a href="/atalaya/privacidad/">Política de privacidad</a>.'

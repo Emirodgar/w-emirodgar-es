@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tendencias | Atalaya</title>
+<meta name="description" content="De qué partidos y políticos se habla más en la prensa, hora a hora: menciones, cuota, variación y tono, por comunidad autónoma o provincia.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/tendencias/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--warn:#fbbf24;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+button,select,input{font:inherit;color:inherit}
+a{color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.live{margin-left:auto;font-family:var(--mono);font-size:12px;color:var(--mut);display:flex;align-items:center;gap:6px}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 3px rgba(52,211,153,.18)}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;padding:12px 16px 0}
+.bar label{display:block;font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.bar select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:150px}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.seg button{background:var(--panel2);border:0;border-right:1px solid var(--line);padding:7px 12px;cursor:pointer;color:var(--mut)}
+.seg button:last-child{border:0}
+.seg button[aria-pressed=true]{background:var(--acc);color:#04222a;font-weight:600}
+.bar select:focus-visible,.seg button:focus-visible,tr.r:focus-visible,.tr:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;min-width:0}
+.kpi b{display:block;font-family:var(--mono);font-size:22px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.kpi small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(300px,1fr);gap:12px;padding:12px 16px;align-items:start}
+.grid>div{min-width:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.card>h2 em{font-style:normal;color:var(--acc)}
+.body{padding:12px 14px}
+.tw{overflow-x:auto}
+.cv{position:relative;height:300px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:7px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+tr.r{cursor:pointer}tr.r:hover,tr.r.on{background:var(--panel2)}
+tr.foco td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:-1px}
+.tag{display:inline-block;font-size:11px;padding:1px 6px;border-radius:10px;border:1px solid var(--line);color:var(--mut);margin-left:6px}
+.stk{display:flex;height:10px;width:110px;border-radius:5px;overflow:hidden;background:var(--panel2)}
+.stk i{display:block;height:100%}
+.up{color:var(--ok)}.dn{color:var(--bad)}.nd{color:var(--mut)}
+.tr{display:grid;grid-template-columns:1fr 90px 40px;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);cursor:pointer;font-size:13px}
+.tr:last-child{border:0}.tr:hover .nm{color:var(--acc)}
+.tr .bb{height:8px;border-radius:4px;background:var(--panel2);overflow:hidden}.tr .bb i{display:block;height:100%;background:var(--acc)}
+.tr .v{font-family:var(--mono);text-align:right}
+.hl{list-style:none}
+.hl li{padding:8px 14px;border-bottom:1px solid var(--line);display:flex;gap:10px}
+.hl a{text-decoration:none}.hl a:hover{text-decoration:underline}
+.hl .t{font-family:var(--mono);font-size:12px;flex:none;width:44px;color:var(--mut)}
+.hl small{display:block;color:var(--mut);font-size:12px}
+.note{color:var(--mut);font-size:12px;margin-top:10px}
+.empty{padding:18px 14px;color:var(--mut)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.live{margin-left:0}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=3"></script>
+<header class="top">
+  <h1 class="pt">Tendencias <small>de quién se habla en la prensa</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+  <span class="live"><i aria-hidden="true"></i><span id="live">cargando…</span></span>
+</header>
+
+<div class="bar" role="group" aria-label="Filtros">
+  <div><label id="lper">Periodo</label><div class="seg" role="group" aria-labelledby="lper" id="sper">
+    <button type="button" data-v="24" aria-pressed="false">24 h</button><button type="button" data-v="168" aria-pressed="true">7 días</button><button type="button" data-v="720" aria-pressed="false">30 días</button></div></div>
+  <div><label id="ltip">Quién</label><div class="seg" role="group" aria-labelledby="ltip" id="stip">
+    <button type="button" data-v="partido" aria-pressed="true">Partidos</button><button type="button" data-v="politico" aria-pressed="false">Políticos</button></div></div>
+  <div><label id="lmet">Medida</label><div class="seg" role="group" aria-labelledby="lmet" id="smet">
+    <button type="button" data-v="n" aria-pressed="true">Menciones</button><button type="button" data-v="q" aria-pressed="false">Cuota %</button></div></div>
+  <div><label for="fter">Territorio</label><select id="fter"></select></div>
+</div>
+
+<section class="kpis" id="kpis" aria-label="Resumen"></section>
+
+<main class="grid">
+  <div>
+    <section class="card">
+      <h2><span>Evolución <em id="ctit"></em></span><span id="cnote"></span></h2>
+      <div class="body"><div class="cv"><canvas id="cv" role="img" aria-label="Evolución de las menciones de las entidades seleccionadas"></canvas></div></div>
+    </section>
+    <section class="card">
+      <h2><span>Ranking <em id="rtit"></em></span><span>pulsa para comparar (máx. 6)</span></h2>
+      <div class="tw"><table id="tb"></table></div>
+    </section>
+  </div>
+  <div>
+    <section class="card" id="terr"><h2><span>Dónde se habla más <em id="ttit"></em></span></h2><div class="body" id="tbody"></div></section>
+    <section class="card"><h2><span>Últimos titulares <em id="htit"></em></span></h2><ul class="hl" id="hl"></ul></section>
+    <section class="card"><h2><span>Cómo leerlo</span></h2><div class="body"><p class="note" style="margin:0" id="aviso"></p>
+      <p class="note">«Cuota» es el porcentaje de menciones que se lleva cada uno entre los de su grupo (partidos o políticos): ajusta los cambios de volumen de prensa recogida.
+      Con un territorio elegido solo cuentan los titulares geolocalizados (prensa local o que citan el lugar). Un partido cuenta cuando aparece su nombre o siglas; un político, por su apellido o nombre.</p></div></section>
+  </div>
+</main>
+
+<script src="/atalaya/assets/vendor/chartjs/chart.umd.min.js"></script>
+<script>
+(function(){
+var H=3600e3, PAL=['#22d3ee','#fbbf24','#f472b6','#a3e635','#c084fc','#fb923c'], MAXSEL=6;
+var D, EV=[], ENT={}, C2P={}, NOW, COV, chart;
+var S={per:168,tip:'partido',met:'n',ter:'',sel:[],foco:null};
+var $=function(i){return document.getElementById(i)};
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+function fmt(n){return n.toLocaleString('es-ES')}
+function pct(x){return (x<10?x.toFixed(1):Math.round(x)).toString().replace('.',',')+'%'}
+
+fetch('../data/tendencias_vivo.json').then(function(r){return r.json()}).then(init).catch(function(){
+  $('live').textContent='sin datos'; $('kpis').innerHTML='<p class="empty">No se han podido cargar los datos.</p>';
+});
+
+function init(d){
+  D=d; NOW=Date.parse(d.generado); var base=Date.parse(d.base);
+  d.entidades.forEach(function(e,i){ENT[i]=e;e.i=i});
+  Object.keys(d.ccaa).forEach(function(c){d.ccaa[c].forEach(function(p){C2P[p]=c})});
+  EV=d.eventos.map(function(e){return {t:base+e[0]*H,e:e[1],p:(e[2]||'').match(/../g)||[],tn:e[3],ti:e[4],n:e[5]}});
+  // el histórico empieza cuando la recogida ya era razonable (≥100 titulares/día): antes no hay base para comparar
+  var dias=Object.keys(d.totales).sort().filter(function(k){return d.totales[k]>=100});
+  COV=dias.length?Date.parse(dias[0]+'T00:00:00Z'):base;
+  var ago=Math.round((Date.now()-NOW)/60000);
+  $('live').textContent='actualizado '+(ago<60?'hace '+Math.max(ago,1)+' min':ago<1440?'hace '+Math.round(ago/60)+' h':new Date(NOW).toLocaleDateString('es-ES'));
+  $('aviso').textContent=d.aviso;
+  var o='<option value="">España (todo)</option><optgroup label="Comunidades autónomas">';
+  Object.keys(d.ccaa).sort(function(a,b){return a.localeCompare(b,'es')}).forEach(function(c){o+='<option value="c:'+esc(c)+'">'+esc(c)+'</option>'});
+  o+='</optgroup><optgroup label="Provincias">';
+  Object.keys(d.provincias).sort(function(a,b){return d.provincias[a].localeCompare(d.provincias[b],'es')}).forEach(function(p){o+='<option value="p:'+p+'">'+esc(d.provincias[p])+'</option>'});
+  $('fter').innerHTML=o+'</optgroup>';
+  [['sper','per',Number],['stip','tip',String],['smet','met',String]].forEach(function(g){
+    $(g[0]).addEventListener('click',function(ev){var b=ev.target.closest('button'); if(!b)return;
+      S[g[1]]=g[2](b.dataset.v); if(g[1]==='tip'){S.sel=[];S.foco=null}
+      Array.prototype.forEach.call($(g[0]).children,function(x){x.setAttribute('aria-pressed',String(x===b))}); render()});
+  });
+  $('fter').addEventListener('change',function(){S.ter=this.value;render()});
+  render();
+}
+
+function enTerr(e){
+  if(!S.ter) return true;
+  if(S.ter[0]==='p') return e.p.indexOf(S.ter.slice(2))>=0;
+  var ps=D.ccaa[S.ter.slice(2)]; return e.p.some(function(p){return ps.indexOf(p)>=0});
+}
+function ids(){return D.entidades.filter(function(e){return e.tipo===S.tip}).map(function(e){return e.i})}
+
+function agrega(ini,fin,idl){   // menciones y tono por entidad en [ini,fin)
+  var r={}; idl.forEach(function(i){r[i]={n:0,p:0,z:0,g:0}});
+  EV.forEach(function(e){ if(e.t<ini||e.t>=fin||!enTerr(e)) return;
+    e.e.forEach(function(i){var a=r[i]; if(!a)return; a.n+=e.n; if(e.tn===1)a.p+=e.n; else if(e.tn===0)a.z+=e.n; else if(e.tn===-1)a.g+=e.n});
+  });
+  return r;
+}
+
+function colorOf(i){
+  var e=ENT[i]; if(S.tip==='partido') return e.c;
+  var k=S.sel.indexOf(i); return k>=0?PAL[k]:'#4b5563';
+}
+
+function render(){
+  var idl=ids(), ini=NOW-S.per*H, cur=agrega(ini,NOW+H,idl), hasPrev=(ini-S.per*H)>=COV, prev=hasPrev?agrega(ini-S.per*H,ini,idl):null;
+  var rows=idl.map(function(i){return {i:i,c:cur[i],p:prev?prev[i].n:null}}).sort(function(a,b){return b.c.n-a.c.n});
+  var tot=rows.reduce(function(s,r){return s+r.c.n},0);
+  if(!S.sel.length) S.sel=rows.filter(function(r){return r.c.n>0}).slice(0,4).map(function(r){return r.i});
+  S.sel=S.sel.filter(function(i){return idl.indexOf(i)>=0});
+  if(S.foco===null||S.sel.indexOf(S.foco)<0) S.foco=S.sel[0]===undefined?null:S.sel[0];
+  var ter=S.ter?(S.ter[0]==='p'?D.provincias[S.ter.slice(2)]:S.ter.slice(2)):'España';
+  $('rtit').textContent='· '+ter; $('ctit').textContent='· '+ter;
+
+  // KPIs
+  var top=rows[0], sube=null;
+  if(prev) rows.forEach(function(r){ if(r.p>=10&&r.c.n>=10){var v=(r.c.n-r.p)/r.p; if(!sube||v>sube.v) sube={r:r,v:v}} });
+  var nTit=0; EV.forEach(function(e){if(e.t>=ini&&e.t<NOW+H&&enTerr(e)) nTit+=e.n});
+  var cl=rows.reduce(function(s,r){return s+r.c.p+r.c.z+r.c.g},0);
+  $('kpis').innerHTML=
+    kpi('Titulares con mención',fmt(nTit),'en '+perTxt()+' · '+esc(ter))+
+    kpi('Más nombrado',top&&top.c.n?esc(ENT[top.i].n):'—',top&&top.c.n?fmt(top.c.n)+' menciones · '+pct(top.c.n/tot*100)+' de cuota':'sin datos')+
+    kpi('Mayor subida',sube?esc(ENT[sube.r.i].n):'—',sube?'+'+Math.round(sube.v*100)+'% frente al periodo anterior':hasPrev?'sin cambios relevantes (mín. 10 menciones)':'sin histórico suficiente para comparar')+
+    kpi('Con tono clasificado',tot?pct(cl/tot*100):'—','el tono es automático y solo cubre parte de los titulares');
+
+  // Tabla
+  var h='<thead><tr><th>'+(S.tip==='partido'?'Partido':'Político')+'</th><th class="n">Menciones</th><th class="n">Cuota</th><th class="n">Variación</th><th>Tono</th></tr></thead><tbody>';
+  rows.forEach(function(r){
+    var e=ENT[r.i], on=S.sel.indexOf(r.i)>=0, c=r.c, k=c.p+c.z+c.g, v;
+    if(r.p===null) v='<span class="nd" title="Sin histórico suficiente">—</span>';
+    else if(r.p===0) v=c.n>0?'<span class="up">nuevo</span>':'<span class="nd">—</span>';
+    else {var x=Math.round((c.n-r.p)/r.p*100); v='<span class="'+(x>0?'up':x<0?'dn':'nd')+'">'+(x>0?'▲ +':x<0?'▼ ':'')+x+'%</span>'}
+    var tono=k>=5?'<div class="stk" title="'+c.p+' positivos · '+c.z+' neutros · '+c.g+' negativos (de '+k+' clasificados)"><i style="width:'+c.p/k*100+'%;background:var(--ok)"></i><i style="width:'+c.z/k*100+'%;background:#4b5563"></i><i style="width:'+c.g/k*100+'%;background:var(--bad)"></i></div>':'<span class="nd" title="Menos de 5 titulares clasificados">—</span>';
+    h+='<tr class="r'+(on?' on':'')+(r.i===S.foco?' foco':'')+'" tabindex="0" data-i="'+r.i+'" aria-pressed="'+on+'"><td><span class="dot" style="background:'+colorOf(r.i)+'"></span>'+esc(e.n)+(e.p?'<span class="tag">'+esc(e.p)+'</span>':'')+'</td><td class="n">'+fmt(c.n)+'</td><td class="n">'+(tot?pct(c.n/tot*100):'—')+'</td><td class="n">'+v+'</td><td>'+tono+'</td></tr>';
+  });
+  $('tb').innerHTML=h+'</tbody>';
+  Array.prototype.forEach.call($('tb').querySelectorAll('tr.r'),function(tr){
+    var f=function(){toggle(+tr.dataset.i)}; tr.addEventListener('click',f);
+    tr.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();f()}});
+  });
+  grafico(); territorios(); titulares();
+}
+function kpi(a,b,c){return '<div class="kpi"><span>'+a+'</span><b>'+b+'</b><small>'+c+'</small></div>'}
+function perTxt(){return S.per===24?'las últimas 24 h':S.per===168?'los últimos 7 días':'los últimos 30 días'}
+
+function toggle(i){
+  var k=S.sel.indexOf(i);
+  if(k>=0){S.sel.splice(k,1); if(S.foco===i) S.foco=S.sel[0]===undefined?null:S.sel[0]}
+  else {if(S.sel.length>=MAXSEL) S.sel.shift(); S.sel.push(i); S.foco=i}
+  render();
+}
+
+function grafico(){
+  var horas=S.per===24, nb, t0, paso, lab=[];
+  if(horas){nb=24; paso=H; t0=Math.floor(NOW/H)*H-23*H; for(var k=0;k<nb;k++) lab.push(new Date(t0+k*paso).getHours()+':00')}
+  else {var nd=S.per/24; var hoy=new Date(NOW); hoy.setHours(0,0,0,0); paso=864e5; nb=nd; t0=hoy.getTime()-(nd-1)*paso;
+    for(var j=0;j<nb;j++){var dd=new Date(t0+j*paso+H); lab.push(dd.getDate()+'/'+(dd.getMonth()+1))}}
+  var idl=ids(), ser={}, totb=[]; for(var z=0;z<nb;z++) totb.push(0);
+  idl.forEach(function(i){ser[i]=totb.map(function(){return 0})});
+  EV.forEach(function(e){ if(e.t<t0||!enTerr(e)) return; var b=Math.floor((e.t-t0)/paso); if(b<0||b>=nb) return;
+    e.e.forEach(function(i){if(ser[i]){ser[i][b]+=e.n; totb[b]+=e.n}}); });
+  var q=S.met==='q';
+  var ds=S.sel.map(function(i,k){var c=colorOf(i);
+    return {label:ENT[i].n,data:ser[i].map(function(v,b){return q?(totb[b]?Math.round(v/totb[b]*1000)/10:0):v}),borderColor:c,backgroundColor:c,borderWidth:2,tension:.3,pointRadius:nb<=24?0:2,pointHoverRadius:4,fill:false,segment:{borderDash:function(x){return x.p1DataIndex===nb-1?[4,4]:undefined}}}});
+  $('cnote').textContent=horas?'por hora · la última, incompleta':'por día · hoy (discontinuo) está incompleto'+(S.per>=720&&COV>t0?' · datos desde '+new Date(COV).toLocaleDateString('es-ES',{day:'numeric',month:'short'}):'');
+  var cfg={type:'line',data:{labels:lab,datasets:ds},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},animation:false,
+    plugins:{legend:{labels:{color:'#e5e9f0',boxWidth:12,usePointStyle:true}},tooltip:{callbacks:{label:function(c){return c.dataset.label+': '+(q?String(c.parsed.y).replace('.',',')+'%':fmt(c.parsed.y))}}}},
+    scales:{x:{ticks:{color:'#8b97a8',maxTicksLimit:10},grid:{color:'#1f2937'}},y:{beginAtZero:true,ticks:{color:'#8b97a8',callback:function(v){return q?v+'%':v}},grid:{color:'#1f2937'}}}}};
+  if(chart){chart.data=cfg.data;chart.options=cfg.options;chart.update()} else chart=new Chart($('cv'),cfg);
+}
+
+function territorios(){
+  var box=$('tbody'), f=S.foco;
+  if(f===null){box.innerHTML='<p class="empty" style="padding:0">Selecciona una fila del ranking.</p>';$('ttit').textContent='';return}
+  $('ttit').textContent='· '+ENT[f].n;
+  if(S.ter&&S.ter[0]==='p'){box.innerHTML='<p class="empty" style="padding:0">Has elegido una provincia: no hay más desglose territorial.</p>';return}
+  var ini=NOW-S.per*H, cnt={}, ps=S.ter?D.ccaa[S.ter.slice(2)]:null;
+  EV.forEach(function(e){ if(e.t<ini||e.t>=NOW+H||e.e.indexOf(f)<0) return;
+    var seen={}; e.p.forEach(function(p){ if(ps&&ps.indexOf(p)<0) return; var k=ps?p:(C2P[p]||p); if(!seen[k]){seen[k]=1;cnt[k]=(cnt[k]||0)+e.n} }); });
+  var l=Object.keys(cnt).map(function(k){return [k,cnt[k]]}).sort(function(a,b){return b[1]-a[1]}).slice(0,8);
+  if(!l.length){box.innerHTML='<p class="empty" style="padding:0">Sin titulares geolocalizados en este periodo.</p>';return}
+  var mx=l[0][1];
+  box.innerHTML=l.map(function(x){var nm=ps?D.provincias[x[0]]:x[0], val=(ps?'p:':'c:')+x[0].replace(/^p:|^c:/,'');
+    if(ps) val='p:'+x[0]; else val='c:'+x[0];
+    return '<div class="tr" tabindex="0" role="button" data-t="'+esc(val)+'"><span class="nm">'+esc(nm)+'</span><span class="bb"><i style="width:'+x[1]/mx*100+'%"></i></span><span class="v">'+fmt(x[1])+'</span></div>'}).join('')+
+    '<p class="note">'+(ps?'Provincias de '+esc(S.ter.slice(2)):'Comunidades autónomas')+' · pulsa para filtrar</p>';
+  Array.prototype.forEach.call(box.querySelectorAll('.tr'),function(el){
+    var g=function(){S.ter=el.dataset.t; $('fter').value=S.ter; render()};
+    el.addEventListener('click',g); el.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();g()}});
+  });
+}
+
+function titulares(){
+  var f=S.foco, ul=$('hl');
+  if(f===null){ul.innerHTML='<li class="empty">Selecciona una fila del ranking.</li>';$('htit').textContent='';return}
+  $('htit').textContent='· '+ENT[f].n+' · últimas 24 h';
+  var l=EV.filter(function(e){return e.ti>=0&&e.e.indexOf(f)>=0&&enTerr(e)}).sort(function(a,b){return b.t-a.t}).slice(0,8);
+  if(!l.length){ul.innerHTML='<li class="empty">Sin titulares en las últimas 24 h con este filtro.</li>';return}
+  ul.innerHTML=l.map(function(e){var t=D.titulares[e.ti], hh=new Date(t.f), u=/^https?:\/\//.test(t.u)?t.u:'#';
+    return '<li><span class="t">'+hh.getHours()+':'+('0'+hh.getMinutes()).slice(-2)+'</span><div><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(t.t)+'</a><small>'+esc(t.m)+'</small></div></li>'}).join('');
+}
+})();
+</script>
+</body>
+</html>
