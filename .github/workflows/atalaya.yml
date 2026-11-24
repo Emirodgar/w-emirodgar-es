@@ -115,6 +115,13 @@ jobs:
         if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/build_fichas.py
 
+      - name: Fichas de político (Promesas vs. Hechos / Discurso vs. Votos) y de histórico macro
+        if: steps.hoy.outputs.ejecutar == 'true'
+        run: |
+          python3 scripts/atalaya/ficha_politico_autonomico.py
+          python3 scripts/atalaya/ficha_discurso_votos.py
+          python3 scripts/atalaya/ficha_macro.py
+
       - name: Comprobar que los datos son razonables
         if: steps.hoy.outputs.ejecutar == 'true'
         # Si falla, NO se hace commit: mejor datos de ayer que datos rotos.

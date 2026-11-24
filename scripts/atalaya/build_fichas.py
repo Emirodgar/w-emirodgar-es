@@ -386,10 +386,28 @@ def main():
                                      nacional=nacional, nsond=nsond, fsond=fsond))
     urls += urls_extra
 
+    # fichas de político (Promesas vs. Hechos / Discurso vs. Votos) y de histórico macro: cada una la genera
+    # su propio script aparte (ficha_politico_autonomico.py, ficha_discurso_votos.py, ficha_macro.py); aquí
+    # solo se enlazan en el hub y en el sitemap, para que sobrevivan a cada regeneración de esta página.
+    FICHAS_POLITICO = [
+        ("politico/manueco/", "¿Qué prometió Mañueco en su investidura de 2022 y qué ha cumplido?"),
+        ("politico/ayuso/", "¿Qué prometió Ayuso en su investidura de 2023 y qué ha cumplido?"),
+        ("politico/feijoo/", "¿Qué prometió Feijóo en su investidura de 2016 y qué ha cumplido?"),
+        ("politico/abascal/", "¿Es coherente Abascal con los votos de Vox en el Congreso?"),
+    ]
+    FICHAS_MACRO = [
+        ("macro/presion-fiscal/", "¿Cómo ha evolucionado la presión fiscal en España desde 1995?"),
+    ]
+    extra_politico = "<h2>Gestión autonómica y coherencia parlamentaria</h2><ul>" + "".join(
+        f"<li><a href='/atalaya/fichas/{r}'>{E(t)}</a></li>" for r, t in FICHAS_POLITICO) + "</ul>"
+    extra_macro = "<h2>Histórico macroeconómico</h2><ul>" + "".join(
+        f"<li><a href='/atalaya/fichas/{r}'>{E(t)}</a></li>" for r, t in FICHAS_MACRO) + "</ul>"
+    urls += [f"{BASE}/atalaya/fichas/{r}" for r, _ in FICHAS_POLITICO + FICHAS_MACRO]
+
     # hub
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/cambio/'>¿Qué provincias pueden cambiar de partido en las elecciones generales?</a></li><li><a href='/atalaya/fichas/cambio/ciudades/'>¿Qué ciudades pueden cambiar de partido más votado?</a></li><li><a href='/atalaya/fichas/rey/'>¿Quién es el rey de España y qué papel tiene en las elecciones?</a></li><li><a href='/atalaya/fichas/escrutinio/'>¿Cuándo se conocen los resultados y cómo funciona el escrutinio?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li><li><a href='/atalaya/fichas/en/spanish-politics-parties/' hreflang='en' lang='en'>How does Spain's political system work and who are the main parties? (English)</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{hub_parl}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/cambio/'>¿Qué provincias pueden cambiar de partido en las elecciones generales?</a></li><li><a href='/atalaya/fichas/cambio/ciudades/'>¿Qué ciudades pueden cambiar de partido más votado?</a></li><li><a href='/atalaya/fichas/rey/'>¿Quién es el rey de España y qué papel tiene en las elecciones?</a></li><li><a href='/atalaya/fichas/escrutinio/'>¿Cuándo se conocen los resultados y cómo funciona el escrutinio?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li><li><a href='/atalaya/fichas/en/spanish-politics-parties/' hreflang='en' lang='en'>How does Spain's political system work and who are the main parties? (English)</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{extra_politico}{extra_macro}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")

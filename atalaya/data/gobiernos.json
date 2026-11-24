@@ -1,0 +1,13 @@
+{
+ "aviso": "Presidentes del Gobierno de España desde 1976, por año de toma de posesión y cese (hechos públicos, La Moncloa/Wikipedia). Pensado para superponer periodos de gobierno sobre series históricas; no implica que un indicador dependa solo de quién gobernaba.",
+ "periodos": [
+  {"presidente": "Adolfo Suárez", "partido": "UCD", "desde": 1976, "hasta": 1981},
+  {"presidente": "Leopoldo Calvo-Sotelo", "partido": "UCD", "desde": 1981, "hasta": 1982},
+  {"presidente": "Felipe González", "partido": "PSOE", "desde": 1982, "hasta": 1996},
+  {"presidente": "José María Aznar", "partido": "PP", "desde": 1996, "hasta": 2004},
+  {"presidente": "José Luis Rodríguez Zapatero", "partido": "PSOE", "desde": 2004, "hasta": 2011},
+  {"presidente": "Mariano Rajoy", "partido": "PP", "desde": 2011, "hasta": 2018},
+  {"presidente": "Pedro Sánchez", "partido": "PSOE", "desde": 2018, "hasta": null}
+ ],
+ "colorPartido": {"UCD": "#f59e0b", "PSOE": "#e11d48", "PP": "#2563eb"}
+}
