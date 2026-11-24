@@ -24,7 +24,7 @@ BASE = "https://emirodgar.es"
 HOY = datetime.now(timezone.utc)
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
-INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json", "autonomos.json", "pib_per_capita.json"]
+INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json", "autonomos.json", "pib_per_capita.json", "deficit.json"]
 
 
 def fecha_es(iso):

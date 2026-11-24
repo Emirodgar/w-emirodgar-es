@@ -1,0 +1,35 @@
+{
+ "slug": "deficit",
+ "titulo_pagina": "Déficit público de España: evolución desde 1995, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el déficit público en España desde 1995?",
+ "pregunta_faq": "¿Ha tenido España superávit alguna vez, y cuál fue su peor déficit?",
+ "resumen": "España tuvo superávit público entre 2005 y 2007 (máximo del +2,1 % del PIB en 2006), antes de entrar en déficit con la crisis financiera hasta un máximo histórico del -11,5 % en 2012, y de nuevo un repunte del -9,9 % en 2020 por la pandemia; en 2025 el déficit se situaba en el -2,4 % del PIB.",
+ "aviso": "Capacidad (+) o necesidad (-) de financiación de las Administraciones Públicas, en porcentaje del PIB, con metodología ESA2010 consistente desde 1995 (Eurostat, el mismo criterio que usa la Comisión Europea para vigilar el déficit excesivo). Es la misma familia de datos que la ficha de presión fiscal, así que ambas son directamente comparables. Las bandas de color solo señalan quién gobernaba en cada momento: el déficit depende del ciclo económico, de las crisis (financiera, COVID) y de las decisiones de ingresos y gasto de cada año, no solo de qué partido gobierna.",
+ "fuente": "Eurostat, dataset gov_10dd_edpt1 (capacidad/necesidad de financiación de las Administraciones Públicas, % PIB)",
+ "fuenteUrl": "https://ec.europa.eu/eurostat/databrowser/product/view/gov_10dd_edpt1",
+ "actualizado": "2026-11-24",
+ "unidad": "%",
+ "yMax": 3,
+ "yMin": -12,
+ "yPaso": 3,
+ "colTabla": "Déficit (-) / superávit (+), % PIB",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la otra cara de la misma cuenta: los ingresos públicos."},
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "el déficit sube cuando el PIB cae, y viceversa."},
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Déficit (-) / superávit (+) público",
+   "datos": {
+    "1995": -6.8, "1996": -5.9, "1997": -3.9, "1998": -2.6, "1999": -1.2,
+    "2000": -1.2, "2001": -0.5, "2002": -0.3, "2003": -0.4, "2004": -0.1,
+    "2005": 1.2, "2006": 2.1, "2007": 1.9, "2008": -4.6, "2009": -11.2,
+    "2010": -9.5, "2011": -9.7, "2012": -11.5, "2013": -7.5, "2014": -6.0,
+    "2015": -5.3, "2016": -4.2, "2017": -3.1, "2018": -2.6, "2019": -3.1,
+    "2020": -9.9, "2021": -6.7, "2022": -4.6, "2023": -3.3, "2024": -3.2,
+    "2025": -2.4
+   }
+  }
+ }
+}
