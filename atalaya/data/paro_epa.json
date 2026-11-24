@@ -1,0 +1,31 @@
+{
+ "slug": "paro",
+ "titulo_pagina": "Paro en España: evolución desde 2006, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?",
+ "pregunta_faq": "¿Cómo ha evolucionado el paro en España en las últimas dos décadas?",
+ "resumen": "La tasa de paro en España (EPA) pasó del 8,2 % en 2007 al 26,1 % en 2013, en el peor momento de la crisis financiera, y ha bajado hasta el 10,5 % en 2025, el nivel más bajo de toda la serie.",
+ "aviso": "Tasa de paro anual media (EPA, INE, tabla 66056), con metodología consistente desde 2006. Antes de esa fecha solo hay estimaciones sueltas cada 5 años (Banco de España, citando EPA): el paro rondó el 22,9 % en 1995 y el 17,8 % en 1985, pero no forman una serie anual continua y comparable con la actual, así que no se mezclan en el gráfico. Las bandas de color solo señalan quién gobernaba en cada momento: el paro depende del ciclo económico, de crisis externas (financiera, COVID) y de muchos otros factores, no solo de qué partido gobierna.",
+ "fuente": "INE, Encuesta de Población Activa (EPA), tabla 66056",
+ "fuenteUrl": "https://www.ine.es/jaxiT3/Tabla.htm?t=66056",
+ "actualizado": "2026-11-24",
+ "unidad": "%",
+ "yMax": 30,
+ "yPaso": 5,
+ "colTabla": "Tasa de paro (%)",
+ "enlaces": [
+  {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "paro EPA y registrado, PIB y otros indicadores, actualizados cada mes."},
+  {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "prometió entre 80.000 y 100.000 empleos en Galicia; se crearon unos 33.600."},
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Tasa de paro (EPA)",
+   "datos": {
+    "2006": 8.45, "2007": 8.23, "2008": 11.25, "2009": 17.86, "2010": 19.86,
+    "2011": 21.39, "2012": 24.79, "2013": 26.09, "2014": 24.44, "2015": 22.06,
+    "2016": 19.63, "2017": 17.22, "2018": 15.25, "2019": 14.10, "2020": 15.53,
+    "2021": 14.91, "2022": 13.03, "2023": 12.18, "2024": 11.34, "2025": 10.50
+   }
+  }
+ }
+}

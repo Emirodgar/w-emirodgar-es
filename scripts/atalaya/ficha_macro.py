@@ -6,9 +6,9 @@
                                   periodo de gobierno (atalaya/data/gobiernos.json) de fondo.
                                   Las bandas señalan quién gobernaba, nunca implican causalidad.
 
-Primera serie: presión fiscal (atalaya/data/presion_fiscal.json). Pensado para añadir más
-indicadores (PIB, paro, autónomos...) como nuevas entradas en MACROS, reutilizando el mismo
-renderizador de gráfico y de bandas de gobierno.
+Genérico: cada indicador es un fichero en INDICADORES, con una o dos series (principal y,
+opcionalmente, secundaria). Para añadir uno nuevo (PIB, autónomos...): crear su JSON siguiendo
+la forma de atalaya/data/presion_fiscal.json y añadir su nombre de fichero a INDICADORES.
 
 Uso (raíz del repo): python3 scripts/atalaya/ficha_macro.py
 """
@@ -23,6 +23,8 @@ OUT = RAIZ / "atalaya/fichas"
 BASE = "https://emirodgar.es"
 HOY = datetime.now(timezone.utc)
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+
+INDICADORES = ["presion_fiscal.json", "paro_epa.json"]
 
 
 def fecha_es(iso):
@@ -105,8 +107,9 @@ def pagina(ruta, titulo, desc, h1, cuerpo, jsonld, bc, pie):
     return url
 
 
-def grafico(serie_principal, serie_secundaria, gobiernos, anio_min, anio_max, y_max=40, y_paso=10):
-    """SVG sin JS: línea principal (tinta) + línea secundaria (gris), bandas de gobierno de fondo."""
+def grafico(ind, gobiernos, anio_min, anio_max):
+    """SVG sin JS: línea principal (tinta) + línea secundaria opcional (gris), bandas de gobierno de fondo."""
+    y_max, y_paso, unidad = ind["yMax"], ind["yPaso"], ind["unidad"]
     W, H = 760, 320
     ML, MR, MT, MB = 42, 70, 14, 28
     PW, PH = W - ML - MR, H - MT - MB
@@ -138,97 +141,106 @@ def grafico(serie_principal, serie_secundaria, gobiernos, anio_min, anio_max, y_
     while v <= y_max:
         yy = y(v)
         partes.append(f"<line class='grid' x1='{ML}' y1='{yy:.1f}' x2='{ML + PW}' y2='{yy:.1f}'/>")
-        partes.append(f"<text class='axis-label' x='{ML - 6}' y='{yy + 4:.1f}' text-anchor='end'>{v}%</text>")
+        partes.append(f"<text class='axis-label' x='{ML - 6}' y='{yy + 4:.1f}' text-anchor='end'>{v}{unidad}</text>")
         v += y_paso
-    # eje X: años cada 5
+    # eje X: años cada 5 (cada 10 si la serie pasa de 40 años, para no amontonar etiquetas)
+    paso_x = 10 if (anio_max - anio_min) > 40 else 5
     anio = anio_min
     while anio <= anio_max:
         partes.append(f"<text class='axis-label' x='{x(anio):.1f}' y='{H - 8}' text-anchor='middle'>{anio}</text>")
-        anio += 5
+        anio += paso_x
 
     def linea(serie, cls, grosor):
         anios = sorted(int(a) for a in serie["datos"])
         pts = " ".join(f"{x(a):.1f},{y(serie['datos'][str(a)]):.1f}" for a in anios)
         ult = anios[-1]
         xu, yu = x(ult), y(serie["datos"][str(ult)])
-        titulo = f"<title>{ult}: {nf(serie['datos'][str(ult)])} % del PIB</title>"
+        titulo = f"<title>{ult}: {nf(serie['datos'][str(ult)])} {unidad}</title>"
         return (f"<polyline class='{cls}' fill='none' stroke-width='{grosor}' stroke-linejoin='round' stroke-linecap='round' points='{pts}'>{titulo}</polyline>"
                 f"<circle cx='{xu:.1f}' cy='{yu:.1f}' r='6' class='ring'/>"
                 f"<circle cx='{xu:.1f}' cy='{yu:.1f}' r='4' class='{cls} dot'/>"
-                f"<text class='{cls} endlabel' x='{xu + 8:.1f}' y='{yu + 4:.1f}' font-size='13' font-weight='600'>{nf(serie['datos'][str(ult)])} %</text>")
+                f"<text class='{cls} endlabel' x='{xu + 8:.1f}' y='{yu + 4:.1f}' font-size='13' font-weight='600'>{nf(serie['datos'][str(ult)])} {unidad}</text>")
 
-    partes.append(linea(serie_secundaria, "ls-secundaria", 2))
-    partes.append(linea(serie_principal, "ls-principal", 2.5))
+    if "secundaria" in ind["series"]:
+        partes.append(linea(ind["series"]["secundaria"], "ls-secundaria", 2))
+    partes.append(linea(ind["series"]["principal"], "ls-principal", 2.5))
     inner = "".join(partes)
-    return f"<svg viewBox='0 0 {W} {H}' role='img' aria-label='Evolución de la presión fiscal en España, {anio_min}-{anio_max}'>{inner}</svg>"
+    etiqueta_principal = ind["series"]["principal"]["etiqueta"]
+    return f"<svg viewBox='0 0 {W} {H}' role='img' aria-label='Evolución de {E(etiqueta_principal)} en España, {anio_min}-{anio_max}'>{inner}</svg>"
 
 
-def tabla_datos(datos_json, gobiernos):
-    total, solo = datos_json["series"]["total"]["datos"], datos_json["series"]["soloImpuestos"]["datos"]
-    anios = sorted(int(a) for a in total)
+def tabla_datos(ind, gobiernos):
+    principal = ind["series"]["principal"]["datos"]
+    secundaria = ind["series"].get("secundaria", {}).get("datos")
+    anios = sorted(int(a) for a in principal)
 
     def gobierno_de(a):
         for per in gobiernos["periodos"]:
             if per["desde"] <= a < (per["hasta"] or 9999):
                 return per["presidente"]
         return "—"
+
+    cab_sec = f"<th>{E(ind['series']['secundaria']['etiqueta'])}</th>" if secundaria else ""
     filas = "".join(
-        f"<tr><td>{a}</td><td>{nf(total[str(a)])}</td><td>{nf(solo[str(a)])}</td><td>{E(gobierno_de(a))}</td></tr>"
+        f"<tr><td>{a}</td><td>{nf(principal[str(a)])}</td>"
+        + (f"<td>{nf(secundaria[str(a)])}</td>" if secundaria else "")
+        + f"<td>{E(gobierno_de(a))}</td></tr>"
         for a in anios)
     return (f"<details><summary>Ver los {len(anios)} años en tabla</summary>"
-            "<table class='datos'><thead><tr><th>Año</th><th>Total (% PIB)</th><th>Solo impuestos (% PIB)</th><th>Presidente</th></tr></thead>"
+            f"<table class='datos'><thead><tr><th>Año</th><th>{E(ind['colTabla'])}</th>{cab_sec}<th>Presidente</th></tr></thead>"
             f"<tbody>{filas}</tbody></table></details>")
 
 
-def main():
-    pf = J(D / "presion_fiscal.json")
-    gob = J(D / "gobiernos.json")
-    total, solo = pf["series"]["total"]["datos"], pf["series"]["soloImpuestos"]["datos"]
-    anios = sorted(int(a) for a in total)
+def construir(ind, gob):
+    principal = ind["series"]["principal"]["datos"]
+    anios = sorted(int(a) for a in principal)
     a0, a1 = anios[0], anios[-1]
-    v0, v1 = total[str(a0)], total[str(a1)]
-    minimo_anio = min(anios, key=lambda a: total[str(a)])
-    resumen = (f"La presión fiscal total en España (impuestos y cotizaciones sociales, sobre el PIB) pasó del {nf(v0)} % en {a0} "
-               f"al {nf(v1)} % en {a1}, con un mínimo del {nf(total[str(minimo_anio)])} % en {minimo_anio}, durante la crisis financiera.")
-    titulo = "Presión fiscal en España: evolución desde 1995, con los gobiernos de cada periodo"
-    h1 = f"¿Cómo ha evolucionado la presión fiscal en España desde {a0}?"
-    desc = resumen
-    chart = grafico(pf["series"]["total"], pf["series"]["soloImpuestos"], gob, a0, a1)
+    chart = grafico(ind, gob, a0, a1)
     leyenda_gob = " · ".join(f"<span><i style='background:{E(c)}'></i>{E(p)}</span>" for p, c in gob["colorPartido"].items())
-    cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(pf['actualizado'])}</p>"
-              f"<p class='ans'>{E(resumen)}</p>"
-              f"<p class='warn'>{E(pf['aviso'])}</p>"
-              "<h2>Evolución desde 1995</h2>"
+    leyenda_series = f"<span><i class='ls-principal'></i>{E(ind['series']['principal']['etiqueta'])}</span>"
+    if "secundaria" in ind["series"]:
+        leyenda_series += f"<span><i class='ls-secundaria'></i>{E(ind['series']['secundaria']['etiqueta'])}</span>"
+    enlaces = "".join(f"<li><a href='{E(e['url'])}'>{E(e['titulo'])}</a>: {E(e['desc'])}</li>" for e in ind.get("enlaces", []))
+    cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(ind['actualizado'])}</p>"
+              f"<p class='ans'>{E(ind['resumen'])}</p>"
+              f"<p class='warn'>{E(ind['aviso'])}</p>"
+              f"<h2>Evolución desde {a0}</h2>"
               "<div class='chart-wrap'>" + chart + "</div>"
-              "<p class='leyenda'><span><i class='ls-principal'></i>Presión fiscal total (impuestos + cotizaciones sociales)</span>"
-              "<span><i class='ls-secundaria'></i>Solo impuestos (sin cotizaciones sociales)</span></p>"
+              f"<p class='leyenda'>{leyenda_series}</p>"
               f"<p class='meta'>Bandas de color: quién gobernaba en cada periodo — {leyenda_gob}. "
-              "No implica que la presión fiscal dependa solo del partido en el Gobierno: el ciclo económico, las crisis y los pactos presupuestarios pesan tanto o más.</p>"
-              + tabla_datos(pf, gob)
-              + f"<p class='fu src'>Fuente: <a href='{E(pf['fuenteUrl'])}' rel='nofollow noopener'>{E(pf['fuente'])}</a>.</p>"
-              "<h2>Para seguir profundizando</h2><ul>"
-              "<li><a href='/macrodata-espana/'>MacroData España</a>: IPC, PIB, paro y otros indicadores económicos, actualizados cada mes.</li>"
-              "<li><a href='/atalaya/fichas/politico/manueco/'>¿Qué prometió Mañueco en su investidura de 2022?</a>: promesas de bajadas de impuestos, contrastadas con hechos.</li>"
-              "<li><a href='/atalaya/fichas/politico/ayuso/'>¿Qué prometió Ayuso en su investidura de 2023?</a>: lo mismo, en Madrid.</li>"
-              "</ul>")
-    faqs = [(f"¿Ha subido o bajado la presión fiscal en España desde {a0}?", resumen)]
-    ld = [{"@context": "https://schema.org", "@type": "Article", "headline": titulo, "description": desc, "inLanguage": "es",
-           "datePublished": pf["actualizado"], "dateModified": pf["actualizado"],
+              "No implica que este indicador dependa solo del partido en el Gobierno: el ciclo económico, las crisis y el contexto internacional pesan tanto o más.</p>"
+              + tabla_datos(ind, gob)
+              + f"<p class='fu src'>Fuente: <a href='{E(ind['fuenteUrl'])}' rel='nofollow noopener'>{E(ind['fuente'])}</a>.</p>"
+              "<h2>Para seguir profundizando</h2><ul>" + enlaces + "</ul>")
+    faqs = [(ind["pregunta_faq"], ind["resumen"])]
+    ruta = f"macro/{ind['slug']}/"
+    ld = [{"@context": "https://schema.org", "@type": "Article", "headline": ind["titulo_pagina"], "description": ind["resumen"], "inLanguage": "es",
+           "datePublished": ind["actualizado"], "dateModified": ind["actualizado"],
            "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"},
            "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
-           "mainEntityOfPage": f"{BASE}/atalaya/fichas/macro/presion-fiscal/"},
+           "mainEntityOfPage": f"{BASE}/atalaya/fichas/{ruta}"},
           {"@context": "https://schema.org", "@type": "FAQPage",
            "mainEntity": [{"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in faqs]},
           {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
               {"@type": "ListItem", "position": 1, "name": "Atalaya", "item": f"{BASE}/atalaya/"},
               {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
-              {"@type": "ListItem", "position": 3, "name": "Presión fiscal", "item": f"{BASE}/atalaya/fichas/macro/presion-fiscal/"}]}]
-    bc = "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Presión fiscal"
+              {"@type": "ListItem", "position": 3, "name": ind["titulo_pagina"].split(":")[0], "item": f"{BASE}/atalaya/fichas/{ruta}"}]}]
+    bc = f"<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › {E(ind['titulo_pagina'].split(':')[0])}"
     pie = (f"Elaborado por <a href=\"https://emirodgar.es/sobre-mi\">Emilio Rodríguez García</a> con el panel <a href=\"/atalaya/\">Atalaya</a>. "
-           f"Última actualización: {fecha_es(pf['actualizado'])}. Contenido basado en datos públicos citados en cada apartado; "
+           f"Última actualización: {fecha_es(ind['actualizado'])}. Contenido basado en datos públicos citados en cada apartado; "
            "no es una opinión política. <a href=\"/atalaya/privacidad/\">Política de privacidad</a>.")
-    url = pagina("macro/presion-fiscal/", titulo, desc, h1, cuerpo, ld, bc, pie)
-    print("Publicado:", url)
+    return pagina(ruta, ind["titulo_pagina"], ind["resumen"], ind["h1"], cuerpo, ld, bc, pie)
+
+
+def main():
+    gob = J(D / "gobiernos.json")
+    for nombre in INDICADORES:
+        ruta_datos = D / nombre
+        if not ruta_datos.exists():
+            print(f"Omitido (no existe todavía): {nombre}")
+            continue
+        url = construir(J(ruta_datos), gob)
+        print("Publicado:", url)
 
 
 if __name__ == "__main__":

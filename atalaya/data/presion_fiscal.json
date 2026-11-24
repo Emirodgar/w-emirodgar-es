@@ -1,10 +1,25 @@
 {
+ "slug": "presion-fiscal",
+ "titulo_pagina": "Presión fiscal en España: evolución desde 1995, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?",
+ "pregunta_faq": "¿Ha subido o bajado la presión fiscal en España desde 1995?",
+ "resumen": "La presión fiscal total en España (impuestos y cotizaciones sociales, sobre el PIB) pasó del 32,0 % en 1995 al 38,0 % en 2025, con un mínimo del 30,4 % en 2009, durante la crisis financiera.",
  "aviso": "Serie anual de ingresos públicos de España en porcentaje del PIB (sector Administraciones Públicas, S13), con metodología ESA2010 consistente para todo el periodo. No mezcla series con metodologías distintas: para antes de 1995 existen estimaciones con otra metodología (OCDE) que no empalman exactamente con esta y no se incluyen aquí. Las bandas de color solo señalan quién gobernaba en cada momento: la presión fiscal depende de muchos factores (ciclo económico, crisis, pactos presupuestarios, Europa), no solo de qué partido gobierna.",
  "fuente": "Eurostat, dataset gov_10a_taxag (ingresos tributarios y cotizaciones sociales de las Administraciones Públicas, % del PIB)",
  "fuenteUrl": "https://ec.europa.eu/eurostat/databrowser/product/view/gov_10a_taxag",
  "actualizado": "2026-11-24",
+ "unidad": "%",
+ "yMax": 40,
+ "yPaso": 10,
+ "colTabla": "% del PIB",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
+  {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "IPC, PIB, paro y otros indicadores económicos, actualizados cada mes."},
+  {"titulo": "¿Qué prometió Mañueco en su investidura de 2022?", "url": "/atalaya/fichas/politico/manueco/", "desc": "promesas de bajadas de impuestos, contrastadas con hechos."},
+  {"titulo": "¿Qué prometió Ayuso en su investidura de 2023?", "url": "/atalaya/fichas/politico/ayuso/", "desc": "lo mismo, en Madrid."}
+ ],
  "series": {
-  "total": {
+  "principal": {
    "etiqueta": "Presión fiscal total (impuestos + cotizaciones sociales)",
    "datos": {
     "1995": 32.0, "1996": 31.8, "1997": 32.7, "1998": 33.5, "1999": 33.9, "2000": 33.8,
@@ -15,7 +30,7 @@
     "2025": 38.0
    }
   },
-  "soloImpuestos": {
+  "secundaria": {
    "etiqueta": "Solo impuestos (sin cotizaciones sociales)",
    "datos": {
     "1995": 19.8, "1996": 19.8, "1997": 20.6, "1998": 21.3, "1999": 21.5, "2000": 21.4,
