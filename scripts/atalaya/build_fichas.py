@@ -394,6 +394,8 @@ def main():
         ("politico/ayuso/", "¿Qué prometió Ayuso en su investidura de 2023 y qué ha cumplido?"),
         ("politico/feijoo/", "¿Qué prometió Feijóo en su investidura de 2016 y qué ha cumplido?"),
         ("politico/abascal/", "¿Es coherente Abascal con los votos de Vox en el Congreso?"),
+        ("politico/sanchidrian/", "¿Quién es Cristina Sanchidrián, consejera de Movilidad de Castilla y León?"),
+        ("politico/garcia-carbayo/", "¿Quién es Carlos García Carbayo, alcalde de Salamanca?"),
     ]
     FICHAS_MACRO = [
         ("macro/presion-fiscal/", "¿Cómo ha evolucionado la presión fiscal en España desde 1995?"),

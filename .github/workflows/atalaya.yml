@@ -120,6 +120,7 @@ jobs:
         run: |
           python3 scripts/atalaya/ficha_politico_autonomico.py
           python3 scripts/atalaya/ficha_discurso_votos.py
+          python3 scripts/atalaya/ficha_perfil_politico.py
           python3 scripts/atalaya/ficha_macro.py
 
       - name: Comprobar que los datos son razonables

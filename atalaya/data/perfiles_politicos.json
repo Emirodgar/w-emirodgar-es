@@ -1,0 +1,49 @@
+{
+  "aviso": "Perfiles biográficos con datos públicos y fuente enlazada en cada hecho. Solo se incluye lo contrastado; lo no verificado se declara como tal. Nunca se borra: se amplía o se marca como histórico.",
+  "politicos": [
+    {
+      "slug": "sanchidrian",
+      "nombre": "Cristina Sanchidrián Blázquez",
+      "cargo": "Consejera de Movilidad, Transformación Digital e Inteligencia Artificial de la Junta de Castilla y León",
+      "partido": "PP",
+      "actualizado": "2026-11-24",
+      "resumen": "Cristina Sanchidrián Blázquez (PP) es consejera de Movilidad, Transformación Digital e Inteligencia Artificial de la Junta de Castilla y León desde el 15 de junio de 2026, en el tercer Gobierno de Alfonso Fernández Mañueco, y procuradora por Ávila en las Cortes de Castilla y León (XII Legislatura). Es arquitecta de profesión y funcionaria, y es una cara nueva en el Consejo de Gobierno.",
+      "hechos": [
+        {"fecha": "2026-06-15", "texto": "Toma posesión como consejera de Movilidad, Transformación Digital e Inteligencia Artificial en el Consejo de Gobierno formado tras las elecciones del 15 de marzo de 2026 (coalición PP-Vox). Es una de las cinco caras nuevas del Ejecutivo.", "fuentes": [["Democrata: ficha de Cristina Sanchidrián Blázquez", "https://www.democrata.es/politicos/cristina-sanchidrian-blazquez-7486"], ["¿Quién Gobierna CyL?", "/quien-gobierna-cyl/"]]},
+        {"fecha": "2026-04-14", "texto": "Procuradora en las Cortes de Castilla y León por el Grupo Parlamentario Popular (XII Legislatura), según el registro de cargos de Demócrata.", "fuentes": [["Democrata", "https://www.democrata.es/politicos/cristina-sanchidrian-blazquez-7486"]]},
+        {"fecha": "2026-01-29", "texto": "El PP la designa cabeza de lista por Ávila para las elecciones autonómicas. La prensa local la presenta como funcionaria del Ayuntamiento de Ávila, donde ejerció como arquitecta, y como jefa de servicio de Movilidad de la Junta antes de dar el salto a la política.", "fuentes": [["Ávilared: Cristina Sanchidrián, candidata del PP en Ávila", "https://avilared.com/art/89612/cristina-sanchidrian-candidata-pp-avila-compromiso-gestion"]]}
+      ],
+      "competencias": ["Infraestructuras y transporte", "Carreteras", "Administración electrónica", "Inteligencia artificial y digitalización"],
+      "no_verificado": "No hemos podido contrastar con una fuente primaria su formación académica ni su fecha de nacimiento, así que no se publican. Las fuentes consultadas discrepan sobre su trayectoria previa en la Junta (una la niega, otra la sitúa como jefa de servicio de Movilidad): se ofrece la versión de la prensa local con su fuente y queda pendiente de confirmar con el BOCYL. No consta ninguna controversia contrastada.",
+      "enlaces": [["¿Quién Gobierna CyL?", "/quien-gobierna-cyl/", "composición completa del Consejo de Gobierno de la Junta."], ["Panel Económico CyL", "/panel-economico-cyl/", "datos económicos de Castilla y León."]],
+      "faq": [
+        ["¿Quién es Cristina Sanchidrián?", "Es la consejera de Movilidad, Transformación Digital e Inteligencia Artificial de la Junta de Castilla y León desde el 15 de junio de 2026. Pertenece al PP, es arquitecta de profesión y procuradora por Ávila en las Cortes regionales."],
+        ["¿Qué competencias tiene su consejería?", "Infraestructuras y transporte, carreteras, administración electrónica, inteligencia artificial y digitalización."]
+      ]
+    },
+    {
+      "slug": "garcia-carbayo",
+      "nombre": "Carlos García Carbayo",
+      "cargo": "Alcalde de Salamanca y presidente del PP de Salamanca",
+      "partido": "PP",
+      "actualizado": "2026-11-24",
+      "resumen": "Carlos Manuel García Carbayo (Salamanca, 1 de noviembre de 1962) es alcalde de Salamanca desde el 20 de diciembre de 2018 y presidente del PP de Salamanca desde marzo de 2023. Licenciado en Derecho por la Universidad de Salamanca y funcionario de la Junta de Castilla y León, sustituyó a Alfonso Fernández Mañueco al frente del Ayuntamiento y revalidó la alcaldía con mayoría absoluta en 2023 (14 de 27 concejales).",
+      "hechos": [
+        {"fecha": "1984", "texto": "Se licencia en Derecho por la Universidad de Salamanca. Después aprueba una oposición y obtiene plaza de funcionario de la Junta de Castilla y León; desde 1996 fue profesor de Formación y Orientación Laboral en institutos de Zamora y Segovia.", "fuentes": [["Wikipedia (es)", "https://es.wikipedia.org/wiki/Carlos_Garc%C3%ADa_Carbayo"], ["Wikipedia (en)", "https://en.wikipedia.org/wiki/Carlos_Garc%C3%ADa_Carbayo"]]},
+        {"fecha": "2001", "texto": "Inicia su actividad política como miembro del PP. En la Junta fue jefe del Servicio de Estudios y Documentación de las consejerías de Presidencia y de Interior y Justicia, y trabajó con Mañueco cuando este fue consejero de Interior y Justicia (2007-2011).", "fuentes": [["Wikipedia (es)", "https://es.wikipedia.org/wiki/Carlos_Garc%C3%ADa_Carbayo"], ["ABC: Carbayo, sustituto de Mañueco", "https://www.abc.es/espana/castilla-leon/abci-carlos-garcia-carbayo-sustituto-manueco-leal-y-discreto-201812061253_noticia.html"]]},
+        {"fecha": "2011-06-11", "texto": "Concejal del Ayuntamiento de Salamanca (Fomento y Patrimonio, también urbanismo y tráfico). En 2015 pasa a ser primer teniente de alcalde.", "fuentes": [["Wikipedia (es)", "https://es.wikipedia.org/wiki/Carlos_Garc%C3%ADa_Carbayo"]]},
+        {"fecha": "2018-12-20", "texto": "Es investido alcalde de Salamanca tras la marcha de Mañueco, que dejó la alcaldía para presentarse a la presidencia de la Junta.", "fuentes": [["Wikipedia (es)", "https://es.wikipedia.org/wiki/Carlos_Garc%C3%ADa_Carbayo"]]},
+        {"fecha": "2019-06-15", "texto": "Reelegido alcalde con los votos de los 11 concejales del PP y los 4 de Ciudadanos, que entraron en el gobierno municipal.", "fuentes": [["El Norte de Castilla", "https://www.elnortedecastilla.es/salamanca/carbayo-nuevo-alcalde-20190615131706-nt.html"]]},
+        {"fecha": "2023-03-11", "texto": "Gana las primarias del PP de Salamanca (1.309 votos frente a 499, un 72,3 %) y preside el partido a nivel provincial, tras Francisco Javier Iglesias.", "fuentes": [["Diario de Castilla y León", "https://www.diariodecastillayleon.es/salamanca/230303/17031/garcia-carbayo-presidira-pp-salamanca-arrasar-primarias-72-3-votos.html"]]},
+        {"fecha": "2023-05-28", "texto": "Mayoría absoluta en las municipales: 14 de los 27 concejales, con Ciudadanos fuera del Ayuntamiento.", "fuentes": [["El Español", "https://www.elespanol.com/castilla-y-leon/region/salamanca/20230528/escrutado-garcia-carbayo-pp-alcanza-mayoria-absoluta/767173493_0.html"]]}
+      ],
+      "competencias": [],
+      "no_verificado": "No hemos podido contrastar su porcentaje de voto en 2019 y 2023 ni su participación en la FEMP u otros organismos. Los datos biográficos proceden de Wikipedia y de la prensa que esta cita. No consta ninguna controversia contrastada.",
+      "enlaces": [["Ficha de Salamanca en Atalaya", "/atalaya/fichas/salamanca/", "quién ganaría en la provincia en las elecciones generales."], ["¿Quién Gobierna CyL?", "/quien-gobierna-cyl/", "el Gobierno de la Junta, presidida por Mañueco."]],
+      "faq": [
+        ["¿Quién es Carlos García Carbayo?", "Es el alcalde de Salamanca desde diciembre de 2018 y presidente del PP de Salamanca desde marzo de 2023. Nació en Salamanca en 1962 y es licenciado en Derecho."],
+        ["¿Qué mayoría tiene Carbayo en el Ayuntamiento de Salamanca?", "Mayoría absoluta desde las municipales de mayo de 2023, con 14 de los 27 concejales."]
+      ]
+    }
+  ]
+}
