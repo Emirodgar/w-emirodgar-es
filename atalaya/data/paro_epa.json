@@ -13,6 +13,7 @@
  "yPaso": 5,
  "colTabla": "Tasa de paro (%)",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la misma metodología, con la deuda acumulada."},
   {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "cuando sube el paro, suele subir también el déficit."},
   {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "la misma metodología, en euros por persona."},
   {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},

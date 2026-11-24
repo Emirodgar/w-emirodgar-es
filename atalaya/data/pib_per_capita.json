@@ -19,7 +19,8 @@
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
   {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
   {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "PIB, paro, IPC y otros indicadores, actualizados cada mes."},
-  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "ingresos y gastos del Estado, la otra cara de la cuenta."}
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "ingresos y gastos del Estado, la otra cara de la cuenta."},
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la deuda acumulada, en porcentaje del PIB."}
  ],
  "series": {
   "principal": {

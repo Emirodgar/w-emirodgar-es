@@ -404,6 +404,7 @@ def main():
         ("macro/autonomos/", "¿Cómo ha evolucionado el número de autónomos en España desde 2013?"),
         ("macro/pib-per-capita/", "¿Cómo ha evolucionado el PIB per cápita en España desde 1976?"),
         ("macro/deficit/", "¿Cómo ha evolucionado el déficit público en España desde 1995?"),
+        ("macro/deuda/", "¿Cómo ha evolucionado la deuda pública en España desde 1995?"),
     ]
     extra_politico = "<h2>Gestión autonómica y coherencia parlamentaria</h2><ul>" + "".join(
         f"<li><a href='/atalaya/fichas/{r}'>{E(t)}</a></li>" for r, t in FICHAS_POLITICO) + "</ul>"

@@ -1,0 +1,35 @@
+{
+ "slug": "deuda",
+ "titulo_pagina": "Deuda pública de España: evolución desde 1995, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado la deuda pública en España desde 1995?",
+ "pregunta_faq": "¿Cuál ha sido el mínimo y el máximo histórico de la deuda pública española?",
+ "resumen": "La deuda pública de España tocó un mínimo del 35,7 % del PIB en 2007, justo antes de la crisis financiera, y se disparó hasta un máximo histórico del 119,3 % en 2020 por la pandemia; en 2025 se situaba en el 100,5 %, la tercera reducción anual consecutiva.",
+ "aviso": "Deuda pública consolidada de las Administraciones Públicas (deuda Maastricht), en porcentaje del PIB, con metodología ESA2010 consistente desde 1995 (Eurostat, el mismo criterio que usa la Comisión Europea para vigilar el déficit excesivo). Es la misma familia de datos que las fichas de presión fiscal y déficit público, así que las tres son directamente comparables. Las bandas de color solo señalan quién gobernaba en cada momento: la deuda depende de los déficits acumulados, del crecimiento económico y de los tipos de interés de cada momento, no solo de qué partido gobierna.",
+ "fuente": "Eurostat, dataset gov_10dd_edpt1 (deuda pública consolidada de las Administraciones Públicas, % PIB)",
+ "fuenteUrl": "https://ec.europa.eu/eurostat/databrowser/product/view/gov_10dd_edpt1",
+ "actualizado": "2026-11-24",
+ "unidad": "%",
+ "yMax": 125,
+ "yMin": 0,
+ "yPaso": 25,
+ "colTabla": "Deuda pública (% PIB)",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la deuda es la suma acumulada de los déficits de cada año."},
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."},
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "cuando el PIB cae, la deuda sobre el PIB sube aún más rápido."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Deuda pública (% PIB)",
+   "datos": {
+    "1995": 61.6, "1996": 65.4, "1997": 64.3, "1998": 62.4, "1999": 60.9,
+    "2000": 57.8, "2001": 54.1, "2002": 51.2, "2003": 47.7, "2004": 45.3,
+    "2005": 42.4, "2006": 39.0, "2007": 35.7, "2008": 39.6, "2009": 53.1,
+    "2010": 60.3, "2011": 69.5, "2012": 89.6, "2013": 100.0, "2014": 104.4,
+    "2015": 102.5, "2016": 102.0, "2017": 101.2, "2018": 99.8, "2019": 97.7,
+    "2020": 119.3, "2021": 115.7, "2022": 109.3, "2023": 105.3, "2024": 101.4,
+    "2025": 100.5
+   }
+  }
+ }
+}

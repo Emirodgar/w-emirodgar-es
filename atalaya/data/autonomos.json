@@ -19,7 +19,8 @@
   {"titulo": "¿Cómo ha evolucionado el PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma metodología, con el crecimiento económico."},
   {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."},
   {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "la misma metodología, en euros por persona."},
-  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la otra cara de la cuenta pública: ingresos y gastos del Estado."}
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la otra cara de la cuenta pública: ingresos y gastos del Estado."},
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la misma metodología, con la deuda acumulada."}
  ],
  "series": {
   "principal": {

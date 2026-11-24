@@ -13,6 +13,7 @@
  "yPaso": 10,
  "colTabla": "% del PIB",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la suma acumulada de los déficits de cada año."},
   {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la otra cara de la misma cuenta: cuánto se gasta frente a lo que se ingresa."},
   {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "la misma metodología, en euros por persona."},
   {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
