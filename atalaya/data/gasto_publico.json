@@ -1,0 +1,38 @@
+{
+ "slug": "gasto-publico",
+ "titulo_pagina": "Gasto público en España: evolución desde 1995, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el gasto público en España desde 1995?",
+ "pregunta_faq": "¿Cuánto gasta el Estado español y cuándo ha gastado más?",
+ "resumen": "El gasto público total de España (Administraciones Públicas, en porcentaje del PIB) bajó hasta un mínimo del 38,3 % en 2003, antes de dispararse con la crisis financiera hasta el 49,2 % en 2012, y alcanzó su máximo histórico del 51,4 % en 2020 por la pandemia; en 2025 se situaba en el 45,3 % del PIB.",
+ "aviso": "Gasto total de las Administraciones Públicas, en porcentaje del PIB, con metodología ESA2010 consistente desde 1995 (Eurostat, la misma fuente y sector que las fichas de presión fiscal, déficit y deuda, así que las cuatro son directamente comparables entre sí). El gasto menos los ingresos (presión fiscal) da aproximadamente el déficit o superávit de cada año. Las bandas de color solo señalan quién gobernaba en cada momento: el gasto público depende del ciclo económico, de crisis excepcionales (financiera, COVID) y de decisiones presupuestarias de cada año, no solo de qué partido gobierna.",
+ "fuente": "Eurostat, dataset gov_10a_main (gasto total de las Administraciones Públicas, % PIB)",
+ "fuenteUrl": "https://ec.europa.eu/eurostat/databrowser/product/view/gov_10a_main",
+ "actualizado": "2026-11-24",
+ "unidad": "%",
+ "yMax": 60,
+ "yPaso": 15,
+ "colTabla": "Gasto público total, % PIB",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la otra cara de la misma cuenta: los ingresos públicos."},
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "gasto menos ingresos: el resultado de cada año."},
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la deuda es la suma acumulada de los déficits de cada año."},
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "el gasto sube cuando sube el paro, por las prestaciones."},
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "el gasto en porcentaje del PIB sube cuando el PIB cae, aunque el gasto en euros no cambie."},
+  {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "la misma metodología, en euros por persona."},
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Gasto público total (Administraciones Públicas)",
+   "datos": {
+    "1995": 44.1, "1996": 42.9, "1997": 41.5, "1998": 41.0, "1999": 39.9,
+    "2000": 39.1, "2001": 38.4, "2002": 38.6, "2003": 38.3, "2004": 38.8,
+    "2005": 38.4, "2006": 38.4, "2007": 39.2, "2008": 41.3, "2009": 46.1,
+    "2010": 45.8, "2011": 45.9, "2012": 49.2, "2013": 46.2, "2014": 45.0,
+    "2015": 43.7, "2016": 42.1, "2017": 41.0, "2018": 41.5, "2019": 42.0,
+    "2020": 51.4, "2021": 49.5, "2022": 46.3, "2023": 45.5, "2024": 45.4,
+    "2025": 45.3
+   }
+  }
+ }
+}

@@ -15,6 +15,7 @@
  "colTabla": "Déficit (-) / superávit (+), % PIB",
  "enlaces": [
   {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la otra cara de la misma cuenta: los ingresos públicos."},
+  {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "gasto menos ingresos: el resultado de cada año."},
   {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "el déficit sube cuando el PIB cae, y viceversa."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
   {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la deuda es la suma acumulada de los déficits de cada año."}
