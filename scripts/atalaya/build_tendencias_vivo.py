@@ -3,6 +3,7 @@
 
 Entrada : atalaya/data/archivo/noticias/*.jsonl.gz (histórico) + atalaya/data/noticias.json (vivo) + clasificación de tono (sentimiento).
 Salida  : atalaya/data/tendencias_vivo.json  (eventos compactos de los últimos 30 días; la página agrega por periodo y territorio).
+"picos": entidades cuya cuota reciente se dispara sobre su nivel habitual (ver picos()); se archivan en picos_historial.json.
 Cada evento es [hora desde "base", [entidades], provincias (códigos INE de 2 cifras pegados: "3708"), tono (-1/0/1; 2 = sin clasificar), índice de titular o -1, nº de titulares].
 Solo lee: no modifica el archivo histórico. Solo librería estándar.
 Uso (raíz del repo): python3 scripts/atalaya/build_tendencias_vivo.py
@@ -74,6 +75,48 @@ def leer_gz(ruta):
         for l in f:
             if l.strip(): yield json.loads(l)
 
+# Detección de picos: se compara la CUOTA de una entidad en la ventana reciente con su cuota habitual de los 7 días anteriores.
+# Usar la cuota (y no el recuento) descuenta los cambios de volumen de la recogida; el esperado es cuota_habitual × titulares de la ventana,
+# y el pico exige a la vez un mínimo de menciones, una razón sobre lo esperado y una desviación significativa. La desviación usa una varianza
+# inflada (DISPERSION): un mismo hecho sale en muchos medios a la vez, así que los recuentos fluctúan mucho más que en un Poisson puro.
+# Ajustado con una prueba sobre los últimos 10 días para que avise en una minoría de ventanas (si suena siempre, no avisa de nada).
+# (ventana en horas, etiqueta, mínimo de menciones, razón mínima sobre lo esperado)
+VENTANAS = [(6, "6 h", 15, 2.2), (24, "24 h", 40, 3.0)]
+Z_MIN, BASE_MIN, DISPERSION = 3.0, 3000, 4.0
+
+def picos(eventos, th, hn, ents):
+    out = {}
+    for hrs, etq, min_n, ratio_min in VENTANAS:
+        w0, b1 = hn - hrs + 1, hn - hrs
+        b0 = max(0, b1 - 168 + 1)
+        tw, tb = sum(th[w0:hn + 1]), sum(th[b0:b1 + 1])
+        if tb < BASE_MIN or tw < 50: continue
+        ow, ob = {}, {}
+        for h, es, _p, _t, _ti, n in eventos:
+            if w0 <= h <= hn:
+                for e in es: ow[e] = ow.get(e, 0) + n
+            elif b0 <= h <= b1:
+                for e in es: ob[e] = ob.get(e, 0) + n
+        for e, obs in ow.items():
+            esp = max(ob.get(e, 0) / tb * tw, 3.0)   # suelo de 3: una entidad casi nueva no dispara razones infinitas
+            ratio, z = obs / esp, (obs - esp) / (DISPERSION * esp) ** 0.5
+            if obs >= min_n and ratio >= ratio_min and z >= Z_MIN and (e not in out or z > out[e]["z"]):
+                out[e] = {"e": e, "v": etq, "n": obs, "esp": round(esp, 1), "ratio": round(ratio, 2), "z": round(z, 1)}
+    return sorted(out.values(), key=lambda x: -x["z"])
+
+def registrar_picos(pk, ahora):
+    """Historial permanente (solo añade; nunca borra): un pico por entidad y ventana de 6 h."""
+    if not pk: return
+    f = D / "picos_historial.json"
+    h = json.loads(f.read_text(encoding="utf8")) if f.exists() else []
+    cubo = ahora.strftime("%Y-%m-%d") + f"T{ahora.hour // 6 * 6:02d}"
+    vistos = {(r["id"], r["v"], r["cubo"]) for r in h}
+    nuevos = [{"cubo": cubo, "f": ahora.isoformat(timespec="minutes"), "id": ENT_IDS[x["e"]], "v": x["v"], "n": x["n"], "esp": x["esp"], "ratio": x["ratio"], "z": x["z"]}
+              for x in pk if (ENT_IDS[x["e"]], x["v"], cubo) not in vistos]
+    if nuevos: f.write_text(json.dumps(h + nuevos, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
+
+ENT_IDS = [p[0] for p in PARTIDOS] + [x[0] for x in POLITICOS]   # índice de entidad → id (mismo orden que en main)
+
 def main():
     ahora = datetime.now(timezone.utc)
     base = (ahora - timedelta(days=DIAS)).replace(minute=0, second=0, microsecond=0)
@@ -95,12 +138,16 @@ def main():
     pat_x = [(idx[x[0]], re.compile(x[3]) if x[3] else None, re.compile(x[4]) if x[4] else None, x[5]) for x in POLITICOS]
 
     eventos, titulares, totales, agrupados = [], [], {}, {}
+    nh = DIAS * 24 + 2
+    totales_h = [0] * nh   # todos los titulares por hora (con o sin mención): base para medir la cuota de cada entidad
     limite_tit = ahora - timedelta(hours=HORAS_TITULARES)
     for n in sorted(filas.values(), key=lambda x: x["f"]):
         try: dt = datetime.fromisoformat(n["f"]).astimezone(timezone.utc)
         except Exception: continue
         if dt < base or dt > ahora + timedelta(hours=1): continue
         dia = dt.strftime("%Y-%m-%d"); totales[dia] = totales.get(dia, 0) + 1
+        hh = int((dt - base).total_seconds() // 3600)
+        if 0 <= hh < nh: totales_h[hh] += 1
         t = n["t"]; nt = norm(t); nacional = n.get("a") == "nacional"
         hit = {k for k, rx in pat_p if rx.search(nt)}
         if PODEMOS_RX.search(t): hit.add(idx["Podemos"])
@@ -118,13 +165,16 @@ def main():
             if k in agrupados: agrupados[k][5] += 1
             else: agrupados[k] = ev + [1]; eventos.append(agrupados[k])
 
+    hn = int((ahora - base).total_seconds() // 3600)
+    pk = picos(eventos, totales_h, hn, ents)
+    registrar_picos(pk, ahora)
     ind = json.loads((D / "indice.json").read_text(encoding="utf8"))["prov"]
     salida = {
         "generado": ahora.isoformat(), "base": base.isoformat(), "dias": DIAS,
         "aviso": "Cuenta titulares de prensa recogidos por RSS donde aparece el nombre del partido o político. Mide presencia mediática, no apoyo ni intención de voto. "
                  "El tono es una clasificación automática del titular y solo existe para parte de ellos.",
         "entidades": [{"id": e[0], "n": e[1], "tipo": e[2], "c": e[3], **({"p": e[4]} if e[4] else {})} for e in ents],
-        "provincias": ind, "ccaa": CCAA, "totales": totales, "titulares": titulares, "eventos": eventos,
+        "provincias": ind, "ccaa": CCAA, "totales": totales, "totales_h": totales_h, "titulares": titulares, "eventos": eventos, "picos": pk,
     }
     (D / "tendencias_vivo.json").write_text(json.dumps(salida, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(len(filas), "titulares leídos;", len(eventos), "con alguna mención;", len(titulares), "enlazables;", f"{(D / 'tendencias_vivo.json').stat().st_size // 1024} KB")
