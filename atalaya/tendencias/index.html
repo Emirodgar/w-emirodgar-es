@@ -93,6 +93,10 @@ tr.foco td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
       <h2><span>Evolución <em id="ctit"></em></span><span id="cnote"></span></h2>
       <div class="body"><div class="cv"><canvas id="cv" role="img" aria-label="Evolución de las menciones de las entidades seleccionadas"></canvas></div></div>
     </section>
+    <section class="card" id="gtr" hidden>
+      <h2><span>Google Trends · interés de búsqueda <em id="gtit"></em></span><span id="gnote"></span></h2>
+      <div class="body"><div class="cv"><canvas id="cg" role="img" aria-label="Interés de búsqueda en Google de las entidades seleccionadas"></canvas></div><p class="note" id="gmiss"></p></div>
+    </section>
     <section class="card">
       <h2><span>Ranking <em id="rtit"></em></span><span>pulsa para comparar (máx. 6)</span></h2>
       <div class="tw"><table id="tb"></table></div>
@@ -100,6 +104,8 @@ tr.foco td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
   </div>
   <div>
     <section class="card" id="terr"><h2><span>Dónde se habla más <em id="ttit"></em></span></h2><div class="body" id="tbody"></div></section>
+    <section class="card" id="gnw" hidden><h2><span>Google Noticias · ritmo <em id="gnt"></em></span><span>titulares/hora</span></h2><div class="body" id="gnb"></div><ul class="hl" id="gnl"></ul></section>
+    <section class="card" id="gre" hidden><h2><span>Trends · dónde se busca más <em id="grt"></em></span></h2><div class="body" id="grb"></div></section>
     <section class="card"><h2><span>Últimos titulares <em id="htit"></em></span></h2><ul class="hl" id="hl"></ul></section>
     <section class="card"><h2><span>Cómo leerlo</span></h2><div class="body"><p class="note" style="margin:0" id="aviso"></p>
       <p class="note">«Cuota» es el porcentaje de menciones que se lleva cada uno entre los de su grupo (partidos o políticos): ajusta los cambios de volumen de prensa recogida.
@@ -111,14 +117,17 @@ tr.foco td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
 <script>
 (function(){
 var H=3600e3, PAL=['#22d3ee','#fbbf24','#f472b6','#a3e635','#c084fc','#fb923c'], MAXSEL=6;
-var D, EV=[], ENT={}, C2P={}, NOW, COV, chart;
+var D, G=null, EV=[], ENT={}, C2P={}, NOW, COV, chart, chartG;
 var S={per:168,tip:'partido',met:'n',ter:'',sel:[],foco:null};
 var $=function(i){return document.getElementById(i)};
 function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function fmt(n){return n.toLocaleString('es-ES')}
 function pct(x){return (x<10?x.toFixed(1):Math.round(x)).toString().replace('.',',')+'%'}
 
-fetch('../data/tendencias_vivo.json').then(function(r){return r.json()}).then(init).catch(function(){
+fetch('../data/tendencias_vivo.json').then(function(r){return r.json()}).then(function(d){
+  // las señales de Google son opcionales: sin ellas el panel funciona igual
+  return fetch('../data/tendencias_google.json').then(function(r){return r.ok?r.json():null}).catch(function(){return null}).then(function(g){G=g;init(d)});
+}).catch(function(){
   $('live').textContent='sin datos'; $('kpis').innerHTML='<p class="empty">No se han podido cargar los datos.</p>';
 });
 
@@ -203,7 +212,53 @@ function render(){
     var f=function(){toggle(+tr.dataset.i)}; tr.addEventListener('click',f);
     tr.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();f()}});
   });
-  grafico(); territorios(); titulares();
+  grafico(); territorios(); titulares(); google();
+}
+function hace(iso){var m=Math.round((Date.now()-Date.parse(iso))/60000); return m<60?'hace '+Math.max(m,1)+' min':m<1440?'hace '+Math.round(m/60)+' h':'hace '+Math.round(m/1440)+' d'}
+function ocultaGoogle(){['gtr','gnw','gre'].forEach(function(i){$(i).hidden=true})}
+
+// ---- Google Noticias (ritmo) y Google Trends (interés de búsqueda); datos de tendencias_google.json
+function google(){
+  if(!G||(!G.gnews&&!G.trends)){ocultaGoogle();return}
+  var gn=G.gnews&&G.gnews.datos, tr=G.trends&&G.trends[S.tip];
+  var f=S.foco, ter=S.ter&&S.ter[0]==='c'?S.ter.slice(2):null;
+
+  // Google Noticias: ritmo de titulares por hora en las últimas 24 h
+  $('gnw').hidden=!gn;
+  if(gn){
+    var l=ids().filter(function(i){return gn[ENT[i].id]}).sort(function(a,b){return gn[ENT[b].id].ritmo-gn[ENT[a].id].ritmo}).slice(0,10), mx=l.length?gn[ENT[l[0]].id].ritmo||1:1;
+    $('gnt').textContent='· '+hace(G.gnews.fecha)+(G.gnews.ok===false?' (último dato válido)':'');
+    $('gnb').innerHTML=l.map(function(i){var g=gn[ENT[i].id];
+      return '<div class="tr" tabindex="0" role="button" data-i="'+i+'" title="'+g.n+(g.lim?'+':'')+' titulares · '+g.medios+' medios distintos"><span class="nm"><span class="dot" style="background:'+colorOf(i)+'"></span>'+esc(ENT[i].n)+'</span><span class="bb"><i style="width:'+g.ritmo/mx*100+'%"></i></span><span class="v">'+String(g.ritmo).replace('.',',')+'</span></div>'}).join('')+
+      '<p class="note">Ritmo sobre las últimas 24 h; Google devuelve un máximo de 100 titulares por consulta, así que en los más nombrados se mide sobre las horas que esos 100 cubren. Es otra fuente distinta de los RSS.</p>';
+    Array.prototype.forEach.call($('gnb').querySelectorAll('.tr'),function(el){var g=function(){toggle(+el.dataset.i)};
+      el.addEventListener('click',g);el.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault();g()}})});
+    var top=f!==null&&gn[ENT[f].id]?gn[ENT[f].id].top:[];
+    $('gnl').innerHTML=top.map(function(t){var u=/^https?:\/\//.test(t.u)?t.u:'#',hh=new Date(t.f);
+      return '<li><span class="t">'+hh.getHours()+':'+('0'+hh.getMinutes()).slice(-2)+'</span><div><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(t.t)+'</a><small>'+esc(t.m)+' · Google Noticias</small></div></li>'}).join('');
+  }
+
+  // Google Trends: serie de 7 días de las entidades seleccionadas
+  var okT=!!(tr&&G.trends[S.tip+'_horas']);
+  $('gtr').hidden=!okT; $('gre').hidden=!okT;
+  if(!okT) return;
+  var horas=G.trends[S.tip+'_horas'], con=S.sel.filter(function(i){return tr[ENT[i].id]}), sin=S.sel.filter(function(i){return !tr[ENT[i].id]});
+  $('gtit').textContent='· últimos 7 días'; $('gnote').textContent=hace(G.trends.fecha)+(G.trends.ok===false?' · Google no respondió: último dato válido':'');
+  $('gmiss').textContent=(sin.length?'Sin dato de Trends para: '+sin.map(function(i){return ENT[i].n}).join(', ')+'. ':'')+'Índice relativo de búsqueda en España (100 = el máximo del grupo en estos 7 días): compara entidades entre sí, no cuenta búsquedas. No depende del filtro de periodo ni de territorio.';
+  var lab=horas.map(function(h){var d=new Date(h);return d.getDate()+'/'+(d.getMonth()+1)+' '+d.getHours()+'h'});
+  var ds=con.map(function(i){var c=colorOf(i);return {label:ENT[i].n,data:tr[ENT[i].id].serie,borderColor:c,backgroundColor:c,borderWidth:2,tension:.3,pointRadius:0,pointHoverRadius:4,fill:false}});
+  var cfg={type:'line',data:{labels:lab,datasets:ds},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},animation:false,
+    plugins:{legend:{labels:{color:'#e5e9f0',boxWidth:12,usePointStyle:true}}},
+    scales:{x:{ticks:{color:'#8b97a8',maxTicksLimit:8},grid:{color:'#1f2937'}},y:{beginAtZero:true,max:100,ticks:{color:'#8b97a8'},grid:{color:'#1f2937'}}}}};
+  if(chartG){chartG.data=cfg.data;chartG.options=cfg.options;chartG.update()} else chartG=new Chart($('cg'),cfg);
+
+  // Trends por comunidad para la entidad en foco
+  var reg=f!==null&&tr[ENT[f].id]?tr[ENT[f].id].region:null;
+  $('grt').textContent=f!==null?'· '+ENT[f].n:'';
+  if(!reg||!Object.keys(reg).length){$('grb').innerHTML='<p class="empty" style="padding:0">Sin reparto territorial para esta entidad.</p>';return}
+  var r=Object.keys(reg).map(function(k){return [k,reg[k]]}).sort(function(a,b){return b[1]-a[1]}).slice(0,8);
+  $('grb').innerHTML=r.map(function(x){return '<div class="tr" style="cursor:default"><span class="nm"'+(x[0]===ter?' style="color:var(--acc)"':'')+'>'+esc(x[0])+'</span><span class="bb"><i style="width:'+x[1]+'%"></i></span><span class="v">'+Math.round(x[1])+'</span></div>'}).join('')+
+    '<p class="note">100 = la comunidad donde esa búsqueda pesa más sobre el total de búsquedas de la propia comunidad. Las pequeñas (Ceuta, Melilla, La Rioja) son más ruidosas.</p>';
 }
 function kpi(a,b,c){return '<div class="kpi"><span>'+a+'</span><b>'+b+'</b><small>'+c+'</small></div>'}
 function perTxt(){return S.per===24?'las últimas 24 h':S.per===168?'los últimos 7 días':'los últimos 30 días'}
