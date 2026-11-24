@@ -13,6 +13,7 @@
  "yPaso": 5,
  "colTabla": "Tasa de paro (%)",
  "enlaces": [
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
   {"titulo": "¿Cómo ha evolucionado el PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma metodología, con el crecimiento económico."},
   {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "paro EPA y registrado, PIB y otros indicadores, actualizados cada mes."},
   {"titulo": "¿Qué prometió Feijóo en su investidura de 2016?", "url": "/atalaya/fichas/politico/feijoo/", "desc": "prometió entre 80.000 y 100.000 empleos en Galicia; se crearon unos 33.600."},

@@ -1,0 +1,33 @@
+{
+ "slug": "autonomos",
+ "titulo_pagina": "Autónomos en España: evolución desde 2013, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el número de autónomos en España desde 2013?",
+ "pregunta_faq": "¿Cuántos autónomos hay en España y cómo ha evolucionado su número?",
+ "resumen": "El número de autónomos en España (afiliados al RETA, incluido el Régimen del Mar) ha subido casi sin interrupción desde 2013, de 3,05 millones a 3,43 millones en 2025, sin apenas verse afectado por la pandemia: en 2020 incluso creció ligeramente.",
+ "aviso": "Afiliados al RETA (Régimen Especial de Trabajadores Autónomos) más el Régimen Especial del Mar, a 31 de diciembre de cada año, según las notas mensuales de afiliación del Ministerio de Trabajo y Economía Social (MITES). No hay una tabla única descargable con la serie completa: cada año procede de la nota de diciembre correspondiente (algunas solo accesibles hoy a través de Wayback Machine, porque el Ministerio ha cambiado de URL varias veces). No se ha encontrado un dato comparable para 2008-2012 con esta misma métrica, así que la serie empieza en 2013. Desde 2024 el Ministerio publica además el dato de RETA sin el Régimen del Mar por separado; aquí se usa siempre la cifra combinada para no romper la comparabilidad con los años anteriores. Las bandas de color solo señalan quién gobernaba en cada momento: el número de autónomos depende del ciclo económico, de la fiscalidad y de la demografía, no solo de qué partido gobierna.",
+ "fuente": "Ministerio de Trabajo y Economía Social (MITES), notas mensuales de afiliación de trabajadores autónomos",
+ "fuenteUrl": "https://www.mites.gob.es/estadisticas/AUT/AUT_12_2025.pdf",
+ "actualizado": "2026-11-24",
+ "unidad": " M",
+ "yMax": 3.5,
+ "yMin": 3.0,
+ "yPaso": 0.1,
+ "decimales": 2,
+ "colTabla": "Autónomos (millones)",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo por cuenta ajena."},
+  {"titulo": "¿Cómo ha evolucionado el PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma metodología, con el crecimiento económico."},
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Autónomos (RETA + Régimen del Mar)",
+   "datos": {
+    "2013": 3.050341, "2014": 3.125806, "2015": 3.167999, "2016": 3.194210,
+    "2017": 3.204678, "2018": 3.254663, "2019": 3.269089, "2020": 3.271408,
+    "2021": 3.328398, "2022": 3.328403, "2023": 3.344368, "2024": 3.394261,
+    "2025": 3.431797
+   }
+  }
+ }
+}

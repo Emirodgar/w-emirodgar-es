@@ -24,7 +24,7 @@ BASE = "https://emirodgar.es"
 HOY = datetime.now(timezone.utc)
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
-INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json"]
+INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json", "autonomos.json"]
 
 
 def fecha_es(iso):
@@ -36,8 +36,8 @@ def J(p):
     return json.loads(Path(p).read_text(encoding="utf8"))
 
 
-def nf(v):
-    return f"{v:.1f}".replace(".", ",")
+def nf(v, decimales=1):
+    return f"{v:.{decimales}f}".replace(".", ",")
 
 
 CSS = """body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:0 auto;padding:24px 16px 64px;color:#1b2330;background:#fff}
@@ -111,6 +111,8 @@ def grafico(ind, gobiernos, anio_min, anio_max):
     """SVG sin JS: línea principal (tinta) + línea secundaria opcional (gris), bandas de gobierno de fondo."""
     y_max, y_paso, unidad = ind["yMax"], ind["yPaso"], ind["unidad"]
     y_min = ind.get("yMin", 0)
+    dec = ind.get("decimales", 1)
+    dec_eje = 0 if float(y_paso).is_integer() else len(str(y_paso).split(".")[-1])
     W, H = 760, 320
     ML, MR, MT, MB = 42, 70, 14, 28
     PW, PH = W - ML - MR, H - MT - MB
@@ -143,8 +145,8 @@ def grafico(ind, gobiernos, anio_min, anio_max):
         yy = y(v)
         cls = "grid cero" if v == 0 and y_min < 0 else "grid"
         partes.append(f"<line class='{cls}' x1='{ML}' y1='{yy:.1f}' x2='{ML + PW}' y2='{yy:.1f}'/>")
-        signo = "" if v == 0 else ("+" if v > 0 else "")
-        partes.append(f"<text class='axis-label' x='{ML - 6}' y='{yy + 4:.1f}' text-anchor='end'>{signo}{v}{unidad}</text>")
+        signo = "+" if (y_min < 0 and v > 0) else ""
+        partes.append(f"<text class='axis-label' x='{ML - 6}' y='{yy + 4:.1f}' text-anchor='end'>{signo}{nf(v, dec_eje)}{unidad}</text>")
         v += y_paso
     # eje X: años cada 5 (cada 10 si la serie pasa de 40 años, para no amontonar etiquetas)
     paso_x = 10 if (anio_max - anio_min) > 40 else 5
@@ -158,11 +160,11 @@ def grafico(ind, gobiernos, anio_min, anio_max):
         pts = " ".join(f"{x(a):.1f},{y(serie['datos'][str(a)]):.1f}" for a in anios)
         ult = anios[-1]
         xu, yu = x(ult), y(serie["datos"][str(ult)])
-        titulo = f"<title>{ult}: {nf(serie['datos'][str(ult)])} {unidad}</title>"
+        titulo = f"<title>{ult}: {nf(serie['datos'][str(ult)], dec)} {unidad}</title>"
         return (f"<polyline class='{cls}' fill='none' stroke-width='{grosor}' stroke-linejoin='round' stroke-linecap='round' points='{pts}'>{titulo}</polyline>"
                 f"<circle cx='{xu:.1f}' cy='{yu:.1f}' r='6' class='ring'/>"
                 f"<circle cx='{xu:.1f}' cy='{yu:.1f}' r='4' class='{cls} dot'/>"
-                f"<text class='{cls} endlabel' x='{xu + 8:.1f}' y='{yu + 4:.1f}' font-size='13' font-weight='600'>{nf(serie['datos'][str(ult)])} {unidad}</text>")
+                f"<text class='{cls} endlabel' x='{xu + 8:.1f}' y='{yu + 4:.1f}' font-size='13' font-weight='600'>{nf(serie['datos'][str(ult)], dec)} {unidad}</text>")
 
     if "secundaria" in ind["series"]:
         partes.append(linea(ind["series"]["secundaria"], "ls-secundaria", 2))
@@ -176,6 +178,7 @@ def tabla_datos(ind, gobiernos):
     principal = ind["series"]["principal"]["datos"]
     secundaria = ind["series"].get("secundaria", {}).get("datos")
     anios = sorted(int(a) for a in principal)
+    dec = ind.get("decimales", 1)
 
     def gobierno_de(a):
         for per in gobiernos["periodos"]:
@@ -185,8 +188,8 @@ def tabla_datos(ind, gobiernos):
 
     cab_sec = f"<th>{E(ind['series']['secundaria']['etiqueta'])}</th>" if secundaria else ""
     filas = "".join(
-        f"<tr><td>{a}</td><td>{nf(principal[str(a)])}</td>"
-        + (f"<td>{nf(secundaria[str(a)])}</td>" if secundaria else "")
+        f"<tr><td>{a}</td><td>{nf(principal[str(a)], dec)}</td>"
+        + (f"<td>{nf(secundaria[str(a)], dec)}</td>" if secundaria else "")
         + f"<td>{E(gobierno_de(a))}</td></tr>"
         for a in anios)
     return (f"<details><summary>Ver los {len(anios)} años en tabla</summary>"
@@ -199,7 +202,8 @@ def construir(ind, gob):
     anios = sorted(int(a) for a in principal)
     a0, a1 = anios[0], anios[-1]
     chart = grafico(ind, gob, a0, a1)
-    leyenda_gob = " · ".join(f"<span><i style='background:{E(c)}'></i>{E(p)}</span>" for p, c in gob["colorPartido"].items())
+    partidos_visibles = {per["partido"] for per in gob["periodos"] if (per["hasta"] or a1 + 1) > a0 and per["desde"] < a1 + 1}
+    leyenda_gob = " · ".join(f"<span><i style='background:{E(c)}'></i>{E(p)}</span>" for p, c in gob["colorPartido"].items() if p in partidos_visibles)
     leyenda_series = f"<span><i class='ls-principal'></i>{E(ind['series']['principal']['etiqueta'])}</span>"
     if "secundaria" in ind["series"]:
         leyenda_series += f"<span><i class='ls-secundaria'></i>{E(ind['series']['secundaria']['etiqueta'])}</span>"

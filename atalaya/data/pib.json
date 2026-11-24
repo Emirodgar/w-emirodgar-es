@@ -16,7 +16,8 @@
  "enlaces": [
   {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "PIB, paro, IPC y otros indicadores, actualizados cada mes."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
-  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."}
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la misma metodología, con los ingresos públicos."},
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."}
  ],
  "series": {
   "principal": {
