@@ -1,6 +1,6 @@
 ---
 title: Participé en "El impacto de la Inteligencia Artificial en las empresas y las administraciones", en Ávila
-description: Crónica de la jornada sobre IA en las empresas y las administraciones que Tribuna Grupo celebró el 23 de noviembre en Ávila: fotos, vídeo del directo, qué se dijo en la mesa redonda y enlaces a la cobertura oficial.
+description: Crónica de la jornada sobre IA en las empresas y las administraciones que Tribuna Grupo celebró el 23 de noviembre en Ávila, con fotos, vídeo del directo, qué se dijo en la mesa redonda y enlaces a la cobertura oficial.
 image: https://emirodgar.es/images/evento-impacto-ia-avila-mesa-redonda.webp
 author: Emirodgar
 lang: es_ES
