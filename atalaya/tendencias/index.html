@@ -40,6 +40,7 @@ a{color:inherit}
 .pk b.x{font-family:var(--mono);font-size:16px;color:var(--warn)}
 .pk small{display:block;color:var(--mut);font-size:12px}
 .pk .calmt{color:var(--mut)}
+.pk .sub{font-size:12px;color:var(--mut);margin:6px 0 4px}
 .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
 .kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px;min-width:0}
 .kpi b{display:block;font-family:var(--mono);font-size:22px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -181,12 +182,18 @@ function picos(){
         if(rec>=5&&rec/bas>=2) l.push({i:ix[id],k:rec/bas,t:'búsquedas',tx:'interés de búsqueda en las últimas 6 h'})})});
   }
   l.sort(function(a,b){return b.k-a.k}); l=l.slice(0,6);
-  box.hidden=false; box.classList.toggle('calm',!l.length);
-  if(!l.length){box.innerHTML='<h2><span>Picos ahora</span></h2><p class="calmt">Nada se sale de lo habitual en este momento (ni en prensa ni en búsquedas).</p>';return}
-  box.innerHTML='<h2><span>Picos ahora <em>· '+l.length+'</em></span><span>sobre su nivel habitual de 7 días · toda España</span></h2><div class="ch">'+l.map(function(p){
-    return '<button type="button" data-i="'+p.i+'"><b class="x">×'+x(p.k)+'</b><span>'+esc(ENT[p.i].n)+'<small>'+esc(p.tx)+' · '+p.t+'</small></span></button>'}).join('')+'</div>';
+  // por comunidad: titulares de esa comunidad frente a su propio nivel habitual (solo prensa; Trends no baja a ese detalle fiable)
+  var r=(D.picos_ccaa||[]).map(function(p){return {i:p.e,c:p.c,k:p.ratio,tx:p.n+' menciones en '+p.v+' · lo habitual serían '+Math.round(p.esp)}})
+    .sort(function(a,b){return b.k-a.k}).slice(0,8);
+  box.hidden=false; box.classList.toggle('calm',!l.length&&!r.length);
+  if(!l.length&&!r.length){box.innerHTML='<h2><span>Picos ahora</span></h2><p class="calmt">Nada se sale de lo habitual en este momento (ni en prensa ni en búsquedas, ni por comunidad).</p>';return}
+  var chip=function(p,k,reg){return '<button type="button" data-i="'+p.i+'"'+(reg?' data-c="'+esc(p.c)+'"':'')+'><b class="x">×'+x(p.k)+'</b><span>'+esc(ENT[p.i].n)+(reg?' · '+esc(p.c):'')+'<small>'+esc(p.tx)+(reg?' · prensa local':' · '+p.t)+'</small></span></button>'};
+  box.innerHTML='<h2><span>Picos ahora <em>· '+(l.length+r.length)+'</em></span><span>sobre su nivel habitual de 7 días</span></h2>'+
+    (l.length?'<p class="sub">Toda España</p><div class="ch">'+l.map(function(p){return chip(p)}).join('')+'</div>':'')+
+    (r.length?'<p class="sub">Por comunidad autónoma</p><div class="ch">'+r.map(function(p){return chip(p,0,1)}).join('')+'</div>':'');
   Array.prototype.forEach.call(box.querySelectorAll('button'),function(b){b.addEventListener('click',function(){
-    var i=+b.dataset.i, tip=ENT[i].tipo; S.tip=tip; S.sel=[i]; S.foco=i;
+    var i=+b.dataset.i, tip=ENT[i].tipo; S.tip=tip; S.sel=[i]; S.foco=i; S.ter=b.dataset.c?'c:'+b.dataset.c:S.ter;
+    if(b.dataset.c) $('fter').value=S.ter;
     Array.prototype.forEach.call($('stip').children,function(c){c.setAttribute('aria-pressed',String(c.dataset.v===tip))});
     render(); $('cv').scrollIntoView({behavior:'smooth',block:'center'})})});
 }
