@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-23",
-  "generado_en": "2026-11-23T15:48:45+00:00",
-  "titular": "El Supremo aplica la amnistía a Puigdemont mientras el CIS pronostica un \"arrase\" del PSOE en elecciones",
+  "fecha": "2026-11-24",
+  "generado_en": "2026-11-24T15:40:11+00:00",
+  "titular": "Bruselas amenaza a España con un expediente por gasto público mientras el Gobierno intensifica medidas preelectorales",
   "por_medio": {
-    "El Mundo": 24,
-    "The Objective": 161
+    "El Mundo": 30,
+    "The Objective": 201
   },
   "temas": [
     {
-      "tema": "Amnistía y reacciones políticas",
-      "categoria": "Política",
-      "descripcion": "El Tribunal Supremo aplica la amnistía a Carles Puigdemont, archivando la causa del procés, lo que genera reacciones diversas en el ámbito político."
+      "tema": "Advertencia de Bruselas por gasto público y medidas preelectorales",
+      "categoria": "Economía",
+      "descripcion": "Bruselas amenaza a España con un expediente por exceso de gasto público en 2026, mientras el Gobierno aprueba diversas medidas en campaña electoral."
     },
     {
-      "tema": "Encuesta del CIS y campaña electoral",
+      "tema": "Campaña electoral y tensiones políticas",
       "categoria": "Política",
-      "descripcion": "El CIS pronostica una victoria \"arrasadora\" del PSOE en las elecciones, lo que provoca reacciones de sorpresa y burla entre los partidos."
+      "descripcion": "La campaña electoral se caracteriza por las respuestas de Sánchez a González, la intervención de Iglesias en apoyo a Podemos y las denuncias del PP por incidentes en mítines."
     },
     {
-      "tema": "Tensiones internacionales y conflictos",
+      "tema": "Decisiones judiciales y seguridad electoral",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo autoriza el voto con DNI digital y se despliegan más de 100.000 agentes para garantizar la seguridad en las elecciones."
+    },
+    {
+      "tema": "Conflictos internacionales y derechos humanos",
       "categoria": "Internacional",
-      "descripcion": "Alertas sobre el posible despliegue de armas nucleares rusas en el espacio y la extensión de la guerra de Ucrania al Mediterráneo."
-    },
-    {
-      "tema": "Investigaciones de corrupción y sucesos",
-      "categoria": "Sucesos",
-      "descripcion": "Declaraciones en el 'caso Koldo' y el 'caso Kitchen', así como otros incidentes de seguridad y violencia."
+      "descripcion": "Irán flagela a una cantante por mostrar su pelo, el Ejército israelí mata al jefe de seguridad de Hamás, y Ucrania reivindica ataques a corbetas rusas."
     }
   ]
 }

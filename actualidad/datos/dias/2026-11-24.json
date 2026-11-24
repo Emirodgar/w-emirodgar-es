@@ -1,0 +1,1975 @@
+{
+  "fecha": "2026-11-24",
+  "generado_en": "2026-11-24T15:40:11+00:00",
+  "modelo": "gemini-2.5-flash",
+  "titular": "Bruselas amenaza a España con un expediente por gasto público mientras el Gobierno intensifica medidas preelectorales",
+  "resumen": "La Comisión Europea ha advertido a España sobre la posibilidad de abrir un expediente por exceso de gasto público en 2026, basándose en los datos oficiales de primavera. Esta amenaza surge en un contexto donde el Gobierno de Pedro Sánchez ha intensificado la aprobación de medidas sociales y económicas en los Consejos de Ministros previos a las elecciones, incluyendo rebajas del IRPF para autónomos, simplificación del IVA y anuncios de inversión en vivienda.\n\nEn el ámbito político, la campaña electoral se calienta con Pedro Sánchez respondiendo a Felipe González sobre su voto, y Pablo Iglesias saliendo en apoyo de Podemos. El PP ha denunciado incidentes en un mitin en Guipúzcoa, donde radicales increparon a miembros del partido. Además, el Tribunal Supremo ha autorizado el uso del DNI digital para votar en las próximas elecciones. En el plano judicial, se ha conocido la condena a 16 años de prisión para un exentrenador de fútbol por abuso sexual a menores en Logroño, y Cintia Rocho ha ratificado ante el juez Pedraz que un miembro del PSOE le pidió causar daño físico a una jueza.\n\nEn el ámbito internacional, el TAS ha dado la razón a Senegal, confirmando su victoria en la Copa África de Naciones. Irán ha flagelado a una cantante con 74 latigazos por mostrar su pelo, y el Ejército israelí ha matado al jefe de seguridad interna de Hamás en Gaza. Ucrania ha reivindicado un ataque a una corbeta rusa, mientras Rusia intensifica sus ataques con drones a reacción en el oeste de Ucrania. Otros temas incluyen la limitación de vehículos en Mallorca y Menorca a partir de 2027, y la detención de dos hombres por presunta entrada en la casa de campo de los príncipes de Gales.",
+  "temas": [
+    {
+      "tema": "Advertencia de Bruselas por gasto público y medidas preelectorales",
+      "categoria": "Economía",
+      "descripcion": "Bruselas amenaza a España con un expediente por exceso de gasto público en 2026, mientras el Gobierno aprueba diversas medidas en campaña electoral.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Bruselas amenaza a España con abrir un expediente por exceso de gasto público mientras Sánchez acumula promesas electorales",
+          "url": "https://www.elmundo.es/economia/2026/11/24/6b059b66fc6c837c2b8b4585.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Sánchez exprime su último Consejo de Ministros en campaña con una lluvia de medidas para las familias, mujeres y más millones para construir vivienda...",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b058aa3fc6c83f00a8b4582.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "El Gobierno rebaja el IRPF a 2,6 millones de autónomos y simplifica la declaración del IVA",
+          "url": "https://www.elmundo.es/economia/2026/11/24/6b05811ae9cf4a280b8b4593.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Bruselas amenaza con sancionar a España por exceso de gasto público en 2026",
+          "url": "https://theobjective.com/economia/2026-11-24/bruselas-sancion-espana-gasto-publico/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Junqueras reprocha al Gobierno aprobar medidas sociales a tres días del 29-N",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/junqueras-gobierno-29-n/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Gobierno echa el resto antes del 29-N: aborto, impuesto bancario y permisos laborales",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/gobierno-aborto-impuesto-bancario-permisos/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Podemos acusa al Gobierno de aprobar «derechos» solo cuando hay campaña electoral",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/podemos-gobierno-aprobar-derechos-campana-electoral/"
+        }
+      ]
+    },
+    {
+      "tema": "Campaña electoral y tensiones políticas",
+      "categoria": "Política",
+      "descripcion": "La campaña electoral se caracteriza por las respuestas de Sánchez a González, la intervención de Iglesias en apoyo a Podemos y las denuncias del PP por incidentes en mítines.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Sánchez responde a González tras su decisión de no votar al PSOE: \"La ultraderecha se frena con el rojo, no con el blanco\"",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b054e7fe9cf4a54648b458c.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Radicales increpan a Ester Muñoz y a miembros del PP en un mitin en Guipúzcoa",
+          "url": "https://www.elmundo.es/espana/2026/11/24/6b057cd9e9cf4a3f6b8b457e.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Pablo Iglesias sale al rescate de Podemos para evitar que Irene Montero se quede sin escaño",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b054b58e85eceb17f8b459a.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "El momento en que la candidata del PSOE por Huesca utiliza el teléfono móvil durante el debate electoral",
+          "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b047e1821efa0e4258b4584-video.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "EN DIRECTO | Pedro Sánchez en un mitin electoral en Huesca",
+          "url": "https://theobjective.com/videos/espana/2026-11-24/en-directo-pedro-sanchez-mitin-electoral-huesca/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Pablo Bellido (PSOE) rapea en el pleno: «Hagamos los discursos rapeando, bro»",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/pablo-bellido-psoe-rapea-pleno-bro/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Sánchez repetirá la estrategia del cara a cara con Feijóo en el último debate electoral",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/sanchez-estrategia-feijoo-debate/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Tellado exige protección para el candidato del PP en Guipúzcoa tras los nuevos incidentes",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/tellado-proteccion-candidato-pp-guipuzcoa-incidentes/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Los ‘influencers’ entran en campaña con una guerra abierta entre Laura Escanes, Matamoros y María Pombo: «Ojalá poder decir a quién vas a votar sin que te linchen»",
+          "url": "https://theobjective.com/gente/2026-11-24/influencers-campana-guerra-abierta-laura-escanes-matamoros-maria-pombo/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Gobierno tilda de «intolerable» cuestionar el sistema electoral: «Hay que saber perder»",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/gobierno-intolerable-sistema-electoral-perder/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Ester Muñoz acusa a Bildu de enviar a sus «cachorros» a increpar al PP en Guipúzcoa",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/ester-munoz-cachorros-bildu-pp-guipuzcoa/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Montero elogia a Rufián por ser «implacable» con la derecha durante el debate electoral",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/montero-rufian-derecha-debate-electoral/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "VÍDEO | Los zascas del debate a ocho entre los portavoces de los principales partidos",
+          "url": "https://theobjective.com/videos/espana/2026-11-24/zascas-debate-portavoces-partidos/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Radicales increpan a Jon Echeverría y a Ester Muñoz en un mitin del PP en Guipúzcoa",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/radicales-increpan-echeverria-ester-munoz/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Frente Amplio cerrará su campaña en Madrid con la actuación de Zahara y Samantha Hudson",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/zahara-samantha-hudson-colau-ministros/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Marlaska contrapone la gestión del PSOE a la «mala educación» de la derecha ante el 29-N",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/marlaska-gestion-psoe-mala-educacion-derecha-29-n/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Feijóo critica el «silencio sepulcral» de Sánchez sobre la final del Mundial de fútbol",
+          "url": "https://theobjective.com/espana/politica/2026-11-24/feijoo-silencio-sanchez-final-mundial/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Cuáles serán las consecuencias para Silvia Intxaurrondo tras el expediente sancionador que le ha abierto la Junta Electoral",
+          "url": "https://theobjective.com/gente/2026-11-24/consecuencias-silvia-intxaurrondo-expediente-abierto-junta-electoral/"
+        }
+      ]
+    },
+    {
+      "tema": "Decisiones judiciales y seguridad electoral",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo autoriza el voto con DNI digital y se despliegan más de 100.000 agentes para garantizar la seguridad en las elecciones.",
+      "medios": [
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "The Objective",
+          "titulo": "El Supremo permite votar el 29-N con el DNI digital al ver un «riesgo residual asumible»",
+          "url": "https://theobjective.com/espana/2026-11-24/supremo-permite-votar-dni-digital/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Supremo tumba un recurso sobre las urnas de cartón para los ‘nietos’ en los consulados",
+          "url": "https://theobjective.com/espana/tribunales/2026-11-24/supremo-tumba-recurso-urnas-carton-nietos/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Pedraz ve insuficiente la información del PSOE sobre sus relaciones con abogados y pide más",
+          "url": "https://theobjective.com/espana/tribunales/2026-11-24/pedraz-informacion-psoe-abogados/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "La Audiencia avala extender la prisión al exjefe de la UDEF que tenía millones emparedados",
+          "url": "https://theobjective.com/espana/tribunales/2026-11-24/audiencia-prision-exjefe-udef/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Cintia Rocho confirma que un miembro de la ‘cloaca’ del PSOE le pidió «eliminar» a Biedma",
+          "url": "https://theobjective.com/espana/tribunales/2026-11-24/cintia-rocho-miembro-cloaca-biedma/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Interior desplegará más de 100.000 agentes para garantizar la seguridad el 29-N",
+          "url": "https://theobjective.com/espana/2026-11-24/interior-100-000-agentes-seguridad-29-n/"
+        }
+      ]
+    },
+    {
+      "tema": "Conflictos internacionales y derechos humanos",
+      "categoria": "Internacional",
+      "descripcion": "Irán flagela a una cantante por mostrar su pelo, el Ejército israelí mata al jefe de seguridad de Hamás, y Ucrania reivindica ataques a corbetas rusas.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Irán flagela con 74 latigazos a una cantante por mostrar su pelo",
+          "url": "https://www.elmundo.es/internacional/2026/11/24/6b058debfdddff3f1d8b4572.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "El Ejército israelí mata al jefe de seguridad interna de Hamas en Gaza",
+          "url": "https://www.elmundo.es/internacional/2026/11/24/6b058471e4d4d82d0c8b4583.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Gisèle Pelicot \"en shock\" por el uso de fotos suyas desnuda para promocionar un libro",
+          "url": "https://www.elmundo.es/internacional/2026/11/24/6b057016e85ece05188b4599.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Abelardo de la Espriella, ante el último atentado en Colombia: \"Juro que se lo haré pagar a los narcoterroristas\"",
+          "url": "https://www.elmundo.es/internacional/2026/11/24/6b056607e4d4d84c4c8b4598.html"
+        },
+        {
+          "medio": "El Mundo",
+          "titulo": "Los drones a reacción trasladan la guerra al oeste de Ucrania",
+          "url": "https://www.elmundo.es/internacional/2026/11/24/6b0432efe9cf4a96248b4583.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Ucrania reivindica su ataque a una corbeta de Rusia y recalca que no «traslada» la guerra",
+          "url": "https://theobjective.com/internacional/2026-11-24/ucrania-ataque-corbeta-rusia-no-traslada-guerra/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Dos detenidos por una presunta entrada en la casa de campo de los príncipes de Gales",
+          "url": "https://theobjective.com/internacional/2026-11-24/dos-detenidos-presunta-entrada-casa-campo-principes-gales/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "Las autoridades de Gaza declaran la «alerta epidémica» por meningitis y culpan a Israel",
+          "url": "https://theobjective.com/internacional/2026-11-24/autoridades-gaza-meningitis-israel/"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "EEUU y Qatar insisten en garantizar la libertad de navegación por el paso de Ormuz",
+          "url": "https://theobjective.com/internacional/2026-11-24/eeuu-qatar-libertad-navegacion-ormuz/"
+        }
+      ]
+    },
+    {
+      "tema": "Sentencia por abuso sexual a menores",
+      "categoria": "Sucesos",
+      "descripcion": "Un exentrenador de fútbol en Logroño es condenado a 16 años de prisión por abuso sexual a menores.",
+      "medios": [
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "The Objective",
+          "titulo": "Condenado a 16 años un exentrenador de fútbol en Logroño por abuso sexual a menores",
+          "url": "https://theobjective.com/espana/tribunales/2026-11-24/condenado-16-anos-exentrenador-logrono-abuso-sexual-menores/"
+        }
+      ]
+    },
+    {
+      "tema": "Dimisión de Miguel Ángel Gil Marín en LaLiga",
+      "categoria": "Deportes",
+      "descripcion": "Miguel Ángel Gil Marín dimite como vicepresidente de LaLiga tras seis años en el cargo, alegando incompatibilidad de agenda.",
+      "medios": [
+        "El Mundo"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "Miguel Ángel Gil Marín dimite como vicepresidente de LaLiga",
+          "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/11/24/6b059319fdddfffa3e8b45cb.html"
+        }
+      ]
+    },
+    {
+      "tema": "Copa África de Naciones: victoria de Senegal",
+      "categoria": "Deportes",
+      "descripcion": "El Tribunal de Arbitraje Deportivo (TAS) da la razón a Senegal y confirma su victoria en la Copa África de Naciones.",
+      "medios": [
+        "El Mundo",
+        "The Objective"
+      ],
+      "fuentes": [
+        {
+          "medio": "El Mundo",
+          "titulo": "El TAS da la razón a Senegal y confirma su victoria en la Copa África de Naciones",
+          "url": "https://www.elmundo.es/deportes/2026/11/24/6b05a4a3fdddff57228b4578.html"
+        },
+        {
+          "medio": "The Objective",
+          "titulo": "El Tribunal de Arbitraje Deportivo da la razón a Senegal y arrebata la Copa África a Marruecos",
+          "url": "https://theobjective.com/deportes/futbol/2026-11-24/tas-razon-senegal-copa-africa-marruecos/"
+        }
+      ]
+    }
+  ],
+  "enfoques": "Ambos medios coinciden en destacar la advertencia de Bruselas a España por el exceso de gasto público y la confirmación de la victoria de Senegal en la Copa África por el TAS. El Mundo pone un énfasis particular en las medidas preelectorales del Gobierno y las declaraciones de Pedro Sánchez en campaña, así como en los incidentes en el mitin del PP en Guipúzcoa. The Objective, por su parte, también cubre los incidentes en el mitin del PP y las medidas preelectorales, pero añade un enfoque en decisiones judiciales como la autorización del voto con DNI digital y la condena por abuso sexual en Logroño, además de profundizar en la seguridad electoral.",
+  "por_medio": {
+    "El Mundo": 30,
+    "The Objective": 201
+  },
+  "por_categoria": {
+    "Política": 2,
+    "Deportes": 2,
+    "Economía": 1,
+    "Internacional": 1,
+    "Sucesos": 1
+  },
+  "hitos": [
+    {
+      "fecha": "2026-11-24",
+      "edicion": "2026-11-24",
+      "titulo": "Bruselas amenaza a España con expediente por exceso de gasto público",
+      "categoria": "Economía",
+      "descripcion": "La Comisión Europea advierte que podría abrir un expediente a España en primavera de 2026 por superar el límite de gasto acordado, basándose en datos oficiales.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Bruselas amenaza a España con abrir un expediente por exceso de gasto público mientras Sánchez acumula promesas electorales",
+        "url": "https://www.elmundo.es/economia/2026/11/24/6b059b66fc6c837c2b8b4585.html"
+      }
+    },
+    {
+      "fecha": "2026-11-24",
+      "edicion": "2026-11-24",
+      "titulo": "El TAS confirma a Senegal como campeón de la Copa África de Naciones",
+      "categoria": "Deportes",
+      "descripcion": "El Tribunal de Arbitraje Deportivo (TAS) ratifica la victoria de Senegal, confirmando a su selección como campeona continental.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El TAS da la razón a Senegal y confirma su victoria en la Copa África de Naciones",
+        "url": "https://www.elmundo.es/deportes/2026/11/24/6b05a4a3fdddff57228b4578.html"
+      }
+    },
+    {
+      "fecha": "2026-11-24",
+      "edicion": "2026-11-24",
+      "titulo": "Condenado a 16 años un exentrenador de fútbol por abuso sexual a menores",
+      "categoria": "Sucesos",
+      "descripcion": "La Audiencia Provincial de La Rioja condena a un exentrenador de fútbol del Club Deportivo Varea de Logroño a 15 años y 10 meses de prisión por abuso sexual a menores.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "The Objective",
+        "titulo": "Condenado a 16 años un exentrenador de fútbol en Logroño por abuso sexual a menores",
+        "url": "https://theobjective.com/espana/tribunales/2026-11-24/condenado-16-anos-exentrenador-logrono-abuso-sexual-menores/"
+      }
+    }
+  ],
+  "noticias": [
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Condenado a 16 años un exentrenador de fútbol en Logroño por abuso sexual a menores",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/condenado-16-anos-exentrenador-logrono-abuso-sexual-menores/",
+      "fecha": "2026-11-24T15:37:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Baleares aprueba limitar la entrada de vehículos en Mallorca y Menorca a partir de 2027",
+      "url": "https://theobjective.com/economia/transporte/2026-11-24/baleares-aprueba-limitar-entrada-vehiculos-mallorca-menorca-2027/",
+      "fecha": "2026-11-24T15:31:47+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "El TAS da la razón a Senegal y confirma su victoria en la Copa África de Naciones",
+      "url": "https://www.elmundo.es/deportes/2026/11/24/6b05a4a3fdddff57228b4578.html",
+      "fecha": "2026-11-24T15:26:55+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Bruselas amenaza a España con abrir un expediente por exceso de gasto público mientras Sánchez acumula promesas electorales",
+      "url": "https://www.elmundo.es/economia/2026/11/24/6b059b66fc6c837c2b8b4585.html",
+      "fecha": "2026-11-24T15:25:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Bruselas amenaza con sancionar a España por exceso de gasto público en 2026",
+      "url": "https://theobjective.com/economia/2026-11-24/bruselas-sancion-espana-gasto-publico/",
+      "fecha": "2026-11-24T15:22:16+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Sánchez responde a González tras su decisión de no votar al PSOE: \"La ultraderecha se frena con el rojo, no con el blanco\"",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b054e7fe9cf4a54648b458c.html",
+      "fecha": "2026-11-24T15:19:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Radicales increpan a Ester Muñoz y a miembros del PP en un mitin en Guipúzcoa",
+      "url": "https://www.elmundo.es/espana/2026/11/24/6b057cd9e9cf4a3f6b8b457e.html",
+      "fecha": "2026-11-24T15:17:47+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "El Gobierno rebaja el IRPF a 2,6 millones de autónomos y simplifica la declaración del IVA",
+      "url": "https://www.elmundo.es/economia/2026/11/24/6b05811ae9cf4a280b8b4593.html",
+      "fecha": "2026-11-24T15:16:36+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Sánchez exprime su último Consejo de Ministros en campaña con una lluvia de medidas para las familias, mujeres y más millones para construir vivienda...",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b058aa3fc6c83f00a8b4582.html",
+      "fecha": "2026-11-24T15:15:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "El Tribunal de Arbitraje Deportivo da la razón a Senegal y arrebata la Copa África a Marruecos",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-24/tas-razon-senegal-copa-africa-marruecos/",
+      "fecha": "2026-11-24T15:14:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Ucrania reivindica su ataque a una corbeta de Rusia y recalca que no «traslada» la guerra",
+      "url": "https://theobjective.com/internacional/2026-11-24/ucrania-ataque-corbeta-rusia-no-traslada-guerra/",
+      "fecha": "2026-11-24T15:12:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Supremo permite votar el 29-N con el DNI digital al ver un «riesgo residual asumible»",
+      "url": "https://theobjective.com/espana/2026-11-24/supremo-permite-votar-dni-digital/",
+      "fecha": "2026-11-24T14:59:52+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PSOE lleva a juicio a Hazte Oír por un autobús que representaba a Sánchez como Hitler",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/psoe-lleva-juicio-hazte-oir-autobus-representaba-sanchez-hitler/",
+      "fecha": "2026-11-24T14:59:23+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "El hijo de Tomás y Valiente, el día de la libertad del asesino de su padre: \"Jamás se ha arrepentido. Pedro Sánchez ha traicionado a la democracia\"",
+      "url": "https://www.elmundo.es/espana/2026/11/24/6b058de621efa0c3348b45a0.html",
+      "fecha": "2026-11-24T14:40:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Dos detenidos por una presunta entrada en la casa de campo de los príncipes de Gales",
+      "url": "https://theobjective.com/internacional/2026-11-24/dos-detenidos-presunta-entrada-casa-campo-principes-gales/",
+      "fecha": "2026-11-24T14:35:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "EN DIRECTO | Pedro Sánchez en un mitin electoral en Huesca",
+      "url": "https://theobjective.com/videos/espana/2026-11-24/en-directo-pedro-sanchez-mitin-electoral-huesca/",
+      "fecha": "2026-11-24T14:35:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Dcoop: «Tenemos que intentar doblar las ventas de Deoleo en los próximos cinco años»",
+      "url": "https://theobjective.com/economia/2026-11-24/dcoop-ventas-deoleo/",
+      "fecha": "2026-11-24T14:31:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Supremo tumba un recurso sobre las urnas de cartón para los ‘nietos’ en los consulados",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/supremo-tumba-recurso-urnas-carton-nietos/",
+      "fecha": "2026-11-24T14:27:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "tecnologia",
+      "titulo": "IBM gana un contrato de 26 millones para actualizar un ‘software’ de Defensa hasta 2029",
+      "url": "https://theobjective.com/tecnologia/2026-11-24/ibm-contrato-software-defensa/",
+      "fecha": "2026-11-24T14:26:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sanidad",
+      "titulo": "La Fundación PharmaMar premia a referentes que redefinen la investigación en cáncer",
+      "url": "https://theobjective.com/sanidad/2026-11-24/fundacion-pharmamar-premia-referentes-redefinen-investigacion-cancer/",
+      "fecha": "2026-11-24T14:14:10+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Felipe VI conoce cómo España se prepara para defender sus intereses en el espacio: \"Ya forma parte de las acciones híbridas, es un dominio de combate\"",
+      "url": "https://www.elmundo.es/espana/2026/11/24/6b0585b3e9cf4ac7348b4579.html",
+      "fecha": "2026-11-24T14:11:27+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "Miguel Ángel Gil Marín dimite como vicepresidente de LaLiga",
+      "url": "https://www.elmundo.es/deportes/futbol/primera-division/2026/11/24/6b059319fdddfffa3e8b45cb.html",
+      "fecha": "2026-11-24T14:06:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Vodafone ficha a un exdirectivo de Nabiax para acelerar su estrategia de ‘data centers’",
+      "url": "https://theobjective.com/economia/telecomunicaciones/2026-11-24/vodafone-ficha-exdirectivo-nabiax-data-centers/",
+      "fecha": "2026-11-24T14:05:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Pedraz ve insuficiente la información del PSOE sobre sus relaciones con abogados y pide más",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/pedraz-informacion-psoe-abogados/",
+      "fecha": "2026-11-24T14:04:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sanidad",
+      "titulo": "Nueve de cada diez médicos de familia abogan por las bajas autojustificadas hasta tres días",
+      "url": "https://theobjective.com/sanidad/2026-11-24/medicos-familia-abogan-bajas-autojustificadas/",
+      "fecha": "2026-11-24T14:04:23+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Conocemos Montón, el pequeño pueblo de Zaragoza donde fue monaguillo Jon Echeverría: 89 vecinos, historia y recuerdos de infancia",
+      "url": "https://theobjective.com/gente/2026-11-24/monton-pueblo-zaragoza-monaguillo-jon-echeverria-historia-recuerdos-infancia/",
+      "fecha": "2026-11-24T14:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Pablo Bellido (PSOE) rapea en el pleno: «Hagamos los discursos rapeando, bro»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/pablo-bellido-psoe-rapea-pleno-bro/",
+      "fecha": "2026-11-24T13:59:28+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Irán flagela con 74 latigazos a una cantante por mostrar su pelo",
+      "url": "https://www.elmundo.es/internacional/2026/11/24/6b058debfdddff3f1d8b4572.html",
+      "fecha": "2026-11-24T13:54:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez repetirá la estrategia del cara a cara con Feijóo en el último debate electoral",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/sanchez-estrategia-feijoo-debate/",
+      "fecha": "2026-11-24T13:50:21+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Junqueras reprocha al Gobierno aprobar medidas sociales a tres días del 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/junqueras-gobierno-29-n/",
+      "fecha": "2026-11-24T13:42:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Ibex 35 pone en riesgo los 19.000 puntos pese al impulso de Nvidia en los mercados",
+      "url": "https://theobjective.com/economia/2026-11-24/ibex-35-19-000-impulso-nvidia/",
+      "fecha": "2026-11-24T13:37:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Tellado exige protección para el candidato del PP en Guipúzcoa tras los nuevos incidentes",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/tellado-proteccion-candidato-pp-guipuzcoa-incidentes/",
+      "fecha": "2026-11-24T13:23:35+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "El Ejército israelí mata al jefe de seguridad interna de Hamas en Gaza",
+      "url": "https://www.elmundo.es/internacional/2026/11/24/6b058471e4d4d82d0c8b4583.html",
+      "fecha": "2026-11-24T13:16:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Aldo Comas defiende a Macarena Gómez y lanza un aviso a Fernando Tejero por haber faltado el respeto a su esposa: «Si va por lo público, yo también»",
+      "url": "https://theobjective.com/gente/2026-11-24/aldo-comas-defiende-a-macarena-gomez-y-lanza-un-aviso-a-fernando-tejero-por-haber-faltado-el-respeto-a-su-esposa-si-va-por-lo-publico-yo-tambien/",
+      "fecha": "2026-11-24T13:16:23+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Detenido un joven por lanzar un adoquín de 13 kilos a la cabeza de otro en Valencia",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-24/detenido-joven-adoquin-13-kilos-cabeza-valencia/",
+      "fecha": "2026-11-24T13:05:38+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Los ‘influencers’ entran en campaña con una guerra abierta entre Laura Escanes, Matamoros y María Pombo: «Ojalá poder decir a quién vas a votar sin que te linchen»",
+      "url": "https://theobjective.com/gente/2026-11-24/influencers-campana-guerra-abierta-laura-escanes-matamoros-maria-pombo/",
+      "fecha": "2026-11-24T13:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "La vida personal de Pepa Millán (Vox): la muerte de su padre cuando ella tenía 6 años, sus dos hermanos, las oposiciones que abandonó, su situación sentimental y su pasión por los toros",
+      "url": "https://theobjective.com/gente/2026-11-24/la-vida-personal-de-pepa-millan-vox-la-muerte-de-su-padre-cuando-ella-tenia-6-anos-sus-dos-hermanos-las-oposiciones-que-abandono-su-situacion-sentimental-y-su-pasion-por-los-toros/",
+      "fecha": "2026-11-24T12:57:15+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno tilda de «intolerable» cuestionar el sistema electoral: «Hay que saber perder»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/gobierno-intolerable-sistema-electoral-perder/",
+      "fecha": "2026-11-24T12:56:36+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Govern defiende que la amnistía se aprobó «a favor de Cataluña» y no en contra de algo",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/govern-defiende-amnistia-a-favor-cataluna/",
+      "fecha": "2026-11-24T12:51:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Audiencia avala extender la prisión al exjefe de la UDEF que tenía millones emparedados",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/audiencia-prision-exjefe-udef/",
+      "fecha": "2026-11-24T12:49:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Ester Muñoz acusa a Bildu de enviar a sus «cachorros» a increpar al PP en Guipúzcoa",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/ester-munoz-cachorros-bildu-pp-guipuzcoa/",
+      "fecha": "2026-11-24T12:47:48+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno echa el resto antes del 29-N: aborto, impuesto bancario y permisos laborales",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/gobierno-aborto-impuesto-bancario-permisos/",
+      "fecha": "2026-11-24T12:46:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Montero elogia a Rufián por ser «implacable» con la derecha durante el debate electoral",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/montero-rufian-derecha-debate-electoral/",
+      "fecha": "2026-11-24T12:39:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Cataluña permitirá a las familias solicitar el acogimiento y la adopción de forma simultánea",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/cataluna-familias-acogimiento-adopcion/",
+      "fecha": "2026-11-24T12:31:45+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Podemos acusa al Gobierno de aprobar «derechos» solo cuando hay campaña electoral",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/podemos-gobierno-aprobar-derechos-campana-electoral/",
+      "fecha": "2026-11-24T12:24:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Marlaska anuncia que el informe sobre la actuación policial del 11-N estará listo pronto",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/marlaska-informe-actuacion-policial-11-n-pronto/",
+      "fecha": "2026-11-24T12:22:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Los zascas del debate a ocho entre los portavoces de los principales partidos",
+      "url": "https://theobjective.com/videos/espana/2026-11-24/zascas-debate-portavoces-partidos/",
+      "fecha": "2026-11-24T12:18:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Radicales increpan a Jon Echeverría y a Ester Muñoz en un mitin del PP en Guipúzcoa",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/radicales-increpan-echeverria-ester-munoz/",
+      "fecha": "2026-11-24T12:09:11+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "La bolsa acaba de ponerle precio a un hombre y a su bragueta",
+      "url": "https://www.elmundo.es/economia/empresas/2026/11/24/6b0577b321efa05e5a8b458e.html",
+      "fecha": "2026-11-24T11:54:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Mazón pide año y medio de prisión para una mujer investigada por amenazarle en redes",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/mazon-prision-mujer-amenazarle-redes/",
+      "fecha": "2026-11-24T11:50:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Las autoridades de Gaza declaran la «alerta epidémica» por meningitis y culpan a Israel",
+      "url": "https://theobjective.com/internacional/2026-11-24/autoridades-gaza-meningitis-israel/",
+      "fecha": "2026-11-24T11:45:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Aena destina 2,2 millones a su Plan Invierno 2026-2027 en 21 aeropuertos",
+      "url": "https://theobjective.com/economia/transporte/2026-11-24/aena-destina-22-millones-a-su-plan-invierno-2026-2027-en-21-aeropuertos/",
+      "fecha": "2026-11-24T11:44:39+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "madrid",
+      "titulo": "Una cámara grabó una discusión vecinal que acabó con un herido por disparo, su pitbull asesinado y cuatro detenidos",
+      "url": "https://www.elmundo.es/madrid/2026/11/24/6b057813fdddffdf2f8b457b-video.html",
+      "fecha": "2026-11-24T11:42:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "EEUU y Qatar insisten en garantizar la libertad de navegación por el paso de Ormuz",
+      "url": "https://theobjective.com/internacional/2026-11-24/eeuu-qatar-libertad-navegacion-ormuz/",
+      "fecha": "2026-11-24T11:40:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Casi la mitad de las mujeres LTBI+ ha sido víctima de algún acto de odio",
+      "url": "https://theobjective.com/sociedad/2026-11-24/mitad-mujeres-ltbi-odio/",
+      "fecha": "2026-11-24T11:35:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Frente Amplio cerrará su campaña en Madrid con la actuación de Zahara y Samantha Hudson",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/zahara-samantha-hudson-colau-ministros/",
+      "fecha": "2026-11-24T11:32:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "El CEO de Nvidia comparecerá la próxima semana ante el Senado de EEUU",
+      "url": "https://theobjective.com/internacional/2026-11-24/ceo-nvidia-senado-eeuu/",
+      "fecha": "2026-11-24T11:30:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Marlaska contrapone la gestión del PSOE a la «mala educación» de la derecha ante el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/marlaska-gestion-psoe-mala-educacion-derecha-29-n/",
+      "fecha": "2026-11-24T11:23:26+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Gisèle Pelicot \"en shock\" por el uso de fotos suyas desnuda para promocionar un libro",
+      "url": "https://www.elmundo.es/internacional/2026/11/24/6b057016e85ece05188b4599.html",
+      "fecha": "2026-11-24T11:20:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo critica el «silencio sepulcral» de Sánchez sobre la final del Mundial de fútbol",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/feijoo-silencio-sanchez-final-mundial/",
+      "fecha": "2026-11-24T11:14:47+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "espana",
+      "titulo": "Cintia Rocho, ante Pedraz: está \"muy segura\" de que fue el ex juez Sáenz de Tejada quien contactó con ella para causar \"daño físico\" a la juez del 'hermanísimo'",
+      "url": "https://www.elmundo.es/espana/2026/11/24/6b056e6ce85ece73128b456e.html",
+      "fecha": "2026-11-24T11:03:27+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Abelardo de la Espriella, ante el último atentado en Colombia: \"Juro que se lo haré pagar a los narcoterroristas\"",
+      "url": "https://www.elmundo.es/internacional/2026/11/24/6b056607e4d4d84c4c8b4598.html",
+      "fecha": "2026-11-24T11:02:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Cuáles serán las consecuencias para Silvia Intxaurrondo tras el expediente sancionador que le ha abierto la Junta Electoral",
+      "url": "https://theobjective.com/gente/2026-11-24/consecuencias-silvia-intxaurrondo-expediente-abierto-junta-electoral/",
+      "fecha": "2026-11-24T11:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Cintia Rocho confirma que un miembro de la ‘cloaca’ del PSOE le pidió «eliminar» a Biedma",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/cintia-rocho-miembro-cloaca-biedma/",
+      "fecha": "2026-11-24T10:57:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Hallan a un marroquí escondido en los bajos del autobús del Almería tras su partido en Ceuta",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-24/marroqui-escondido-almeria-ceuta/",
+      "fecha": "2026-11-24T10:53:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Interior desplegará más de 100.000 agentes para garantizar la seguridad el 29-N",
+      "url": "https://theobjective.com/espana/2026-11-24/interior-100-000-agentes-seguridad-29-n/",
+      "fecha": "2026-11-24T10:50:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Blanca Romero y Quique Sánchez Flores rompen tras un año de amor marcado por los celos y las idas y venidas: «sentía que volvía con sus ex»",
+      "url": "https://theobjective.com/gente/2026-11-24/blanca-romero-quique-sanchez-flores-rompen-celos-volvia-ex/",
+      "fecha": "2026-11-24T10:45:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez denuncia que han instalado «cámaras» en la casa de sus padres para investigarles",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/sanchez-camaras-casa-padres-investigarles/",
+      "fecha": "2026-11-24T10:38:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Mónica García anuncia medidas sobre el aborto y confirma el recurso contra la ley de Ayuso",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/monica-garcia-medidas-aborto-ayuso/",
+      "fecha": "2026-11-24T10:35:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Paula, hija de Almudena Ariza: «Mi madre ha visto barbaridades y ha estado en lugares donde hay sufrimiento; siempre volvía a casa con una sonrisa»",
+      "url": "https://theobjective.com/gente/2026-11-24/paula-hija-almudena-ariza-madre-barbaridades-lugares-sufrimiento-sonrisa/",
+      "fecha": "2026-11-24T10:15:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "José Bono responde a Felipe González: prefiere ser «probono» antes que «pro-PP»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/bono-felipe-gonzalez-probono-propp/",
+      "fecha": "2026-11-24T10:13:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Armengol afirma que le da «asco la corrupción» pero defiende la respuesta del PSOE",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/armengol-asco-corrupcion-psoe/",
+      "fecha": "2026-11-24T10:11:38+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "salud",
+      "titulo": "Cómo cambia la densidad de las mamas tras adelgazar con la familia 'Ozempic': \"Cuanto mayor es la pérdida de peso, mayor será el incremento\"",
+      "url": "https://www.elmundo.es/salud/2026/11/24/6aff2f46e9cf4aeb368b45cb.html",
+      "fecha": "2026-11-24T10:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "El plato que no falta en la comida de Navidad en casa de Nuria Roca: es valenciano, no es fácil de preparar y tiene unos trucos que conoce su familia",
+      "url": "https://theobjective.com/gente/2026-11-24/plato-comida-navidad-casa-nuria-roca-valenciano-facil-trucos-familia/",
+      "fecha": "2026-11-24T10:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP se adhiere al pacto de Estado ferroviario impulsado por las víctimas de Adamuz",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/el-pp-se-adhiere-al-pacto-de-estado-ferroviario-impulsado-por-las-victimas-de-adamuz/",
+      "fecha": "2026-11-24T09:59:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "La Policía entrega a Ecuador al líder de ‘Los Tiguerones’ tras su detención en Sitges",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-24/policia-ecuador-tiguerones-detencion/",
+      "fecha": "2026-11-24T09:58:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez defiende a TVE tras las críticas de Feijóo: «No veo yo que esto sea Pyongyang»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/sanchez-tve-feijoo-pyongyang/",
+      "fecha": "2026-11-24T09:55:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Vance, investigado por posibles favores a un donante en el negocio petrolero en Venezuela",
+      "url": "https://theobjective.com/internacional/2026-11-24/vance-favores-donante-petrolero-venezuela/",
+      "fecha": "2026-11-24T09:43:34+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez responde a Felipe González: «Con el voto en blanco no se frena a la ultraderecha»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/sanchez-felipe-gonzalez-voto-blanco-ultraderecha/",
+      "fecha": "2026-11-24T09:38:54+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Entramos en la casa de Aravaca que Amelia Bono ha vendido por dos millones de euros: cocina con papel pintado, un gran jardín y techos altos",
+      "url": "https://theobjective.com/gente/2026-11-24/entramos-casa-aravaca-amelia-bono-vendido-jardin-techos-altos/",
+      "fecha": "2026-11-24T09:32:57+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo estudia todavía si acudir a la entrevista con Intxaurrondo en la «televisión norcoreana»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/feijoo-acudir-entrevista-intxaurrondo-television-norcoreana/",
+      "fecha": "2026-11-24T09:31:28+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "album",
+      "titulo": "De Melania Trump con el abrigo de cuadros más llamativo al Gucci de Simone Ashley, estos son los looks del día en el que triunfaron las transparencias",
+      "url": "https://www.elmundo.es/album/yodona/moda/2026/11/24/6b054f6b21efa083768b4596.html",
+      "fecha": "2026-11-24T09:31:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Interrumpida la circulación en la R4 de Rodalies por una incidencia en la infraestructura",
+      "url": "https://theobjective.com/economia/transporte/2026-11-24/interrumpida-circulacion-r4-rodalies/",
+      "fecha": "2026-11-24T09:24:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno aprueba la ampliación del permiso por nacimiento a 20 semanas",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/gobierno-ampliacion-permiso-nacimiento-20-semanas/",
+      "fecha": "2026-11-24T09:19:46+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "economia",
+      "titulo": "Los principales partidos políticos firman la propuesta de un Pacto de Estado por la Seguridad Ferroviaria a instancias de las víctimas de Adamuz",
+      "url": "https://www.elmundo.es/economia/2026/11/24/6b055027e4d4d852258b45a8.html",
+      "fecha": "2026-11-24T09:10:08+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "Intxaurrondo a la JEC: «¿Es neutral la Junta Electoral entre el fascismo y la democracia?»",
+      "url": "https://theobjective.com/medios/television/2026-11-24/intxaurrondo-jec-junta-electoral/",
+      "fecha": "2026-11-24T09:01:08+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "La desconocida vida personal de Oskar Matute: «Desde que soy ‘aita’, mi mayor miedo es que mis hijos no tengan la vida que se merecen»",
+      "url": "https://theobjective.com/gente/2026-11-24/desconocida-vida-personal-oskar-matute-aita-miedo-hijos-vida-merecen/",
+      "fecha": "2026-11-24T09:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Pablo Iglesias participará en el mitin de cierre de campaña de Podemos en Madrid",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/pablo-iglesias-mitin-podemos-madrid/",
+      "fecha": "2026-11-24T08:59:33+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El Hierro recibe tres nuevos cayucos con 604 personas en la madrugada de este martes",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-24/el-hierro-tres-nuevos-cayucos/",
+      "fecha": "2026-11-24T08:53:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez asegura que PP y Vox no aceptarán el resultado electoral si no suman mayoría",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/sanchez-pp-vox-resultado-electoral-mayoria/",
+      "fecha": "2026-11-24T08:52:31+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cronica",
+      "titulo": "De Cuenca a Moscú: Puente de Rus, la bodega golpeada por los hackers rusos que quieren contaminar el agua de España",
+      "url": "https://www.elmundo.es/cronica/2026/11/24/6b005378e4d4d847288b4577.html",
+      "fecha": "2026-11-24T08:43:44+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cronica",
+      "titulo": "Hotel de lujo en Sitges y dos anillos de seguridad: así fue la caída del 'Negro Willy', el narcoterrorista más buscado de Ecuador",
+      "url": "https://www.elmundo.es/cronica/2026/11/24/6b048dd6e4d4d8db1c8b4589.html",
+      "fecha": "2026-11-24T08:43:13+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Estabilizado el incendio de Formentor (Mallorca) tras quemar 268 hectáreas",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-24/estabilizado-incendio-formentor-quemar-hectareas/",
+      "fecha": "2026-11-24T08:41:15+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "Pablo Iglesias sale al rescate de Podemos para evitar que Irene Montero se quede sin escaño",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b054b58e85eceb17f8b459a.html",
+      "fecha": "2026-11-24T08:40:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno llevará al Constitucional la ley del ‘concebido no nacido’ de Madrid",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/gobierno-constitucional-ley-madrid/",
+      "fecha": "2026-11-24T08:33:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | Los sospechosos vuelos de Cerdán a Suiza y la soledad de Felipe",
+      "url": "https://theobjective.com/podcasts/podcast-objetivo-al-dia/podcast-los-sospechosos-vuelos-de-cerdan-a-suiza-y-la-soledad-de-felipe/",
+      "fecha": "2026-11-24T08:33:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Rufián: «Hace 22 años que no voy al médico, no tengo ni tarjeta sanitaria pública»",
+      "url": "https://theobjective.com/gente/2026-11-24/rufian-22-anos-no-voy-medico-no-tengo-tarjeta-sanitaria-publica/",
+      "fecha": "2026-11-24T08:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El debate a ocho reúne a casi 3,5 millones de espectadores y logra un 26,9% de cuota",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/debate-ocho-35-millones-espectadores-cuota/",
+      "fecha": "2026-11-24T08:26:29+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "OBJETIVO AL DÍA | Los sospechosos vuelos de Cerdán a Suiza y la soledad de Felipe",
+      "url": "https://theobjective.com/opinion/2026-11-24/objetivo-dia-24-noviembre-vuelos-cerdan-soledad-felipe/",
+      "fecha": "2026-11-24T08:25:59+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Detenidos en Algeciras dos estibadores al extraer 53 kilos de cocaína de un contenedor",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-24/dos-estibadores-detenidos-algeciras-53-kilos-cocaina/",
+      "fecha": "2026-11-24T08:21:56+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "España se queda sin premios en los Emmy Internacionales pese a sus cinco nominaciones",
+      "url": "https://theobjective.com/internacional/2026-11-24/espasna-premios-emmy-internacionales-cinco-nominaciones/",
+      "fecha": "2026-11-24T08:06:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Entramos en el refugio de José Bono en Tánger: de tradición mediterránea, con estanque en el patio interior y varias terrazas con vistas al mar",
+      "url": "https://theobjective.com/gente/2026-11-24/refugio-jose-bono-tanger-tradicion-mediterranea-jardin-terrazas/",
+      "fecha": "2026-11-24T08:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Una veintena de exministros de Zapatero firman un manifiesto en apoyo a Sánchez ante el 29-N",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/veintena-exministros-zapatero-manifiesto-sanchez-29-n/",
+      "fecha": "2026-11-24T07:54:16+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "comunidad-valenciana",
+      "titulo": "El agitador Vito Quiles va a Valencia para reclamar que la universidad \"no es sólo de perroflautas\"",
+      "url": "https://www.elmundo.es/comunidad-valenciana/2026/11/24/6b054290e85eceb8588b4586-video.html",
+      "fecha": "2026-11-24T07:54:04+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "la-lectura",
+      "titulo": "El fenómeno editorial Caroline Wahl, éxito, polémicas y lucha contra la opresión: \"La literatura no está obligada a cumplir ninguna norma moral\"",
+      "url": "https://www.elmundo.es/la-lectura/2026/11/24/6afc66fafc6c83f5438b45c0.html",
+      "fecha": "2026-11-24T07:49:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Clavijo pide al Gobierno blindar el traslado de menas ante la crisis en Canarias",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/clavijo-gobierno-traslado-menas-crisis-canarias/",
+      "fecha": "2026-11-24T07:23:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Aragonès celebra la amnistía, pero advierte de que «las causas de fondo siguen intactas»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/aragones-amnistia-causas-fondo-intactas/",
+      "fecha": "2026-11-24T07:12:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Al menos 23 heridos en un atentado terrorista en Villavicencio (Colombia)",
+      "url": "https://theobjective.com/internacional/2026-11-24/23-heridos-atentado-terrorista-colombia/",
+      "fecha": "2026-11-24T07:04:07+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "El refugio marítimo de Mario Vaquerizo está a cinco horas y media de su casa de Madrid: «Era el Salinas de Cambrils; lo que era imposible de parar, lo paraba»",
+      "url": "https://theobjective.com/gente/2026-11-24/refugio-maritimo-mario-vaquerizo-casa-madrid-salinas-cambrils/",
+      "fecha": "2026-11-24T07:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Carmen Romero, la exmujer de Felipe González a la que le cambió la vida dejar Moncloa: «Recuperamos la privacidad; el tiempo pone un poco de olvido en lo malo»",
+      "url": "https://theobjective.com/gente/2026-11-24/carmen-romero-exmujer-felipe-gonzalez-cambio-moncloa-privacidad-olvido/",
+      "fecha": "2026-11-24T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "No es falta de tiempo: una de cada tres mujeres en España no hace deporte por este motivo",
+      "url": "https://theobjective.com/lifestyle/2026-11-24/no-es-falta-de-tiempo-una-de-cada-tres-mujeres-en-espana-no-hace-deporte-por-este-motivo/",
+      "fecha": "2026-11-24T06:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Maduro celebra su 64 cumpleaños desde prisión: «Hasta aquí me llegaron sus cantos»",
+      "url": "https://theobjective.com/internacional/2026-11-24/maduro-cumpleanos-prision-cantos/",
+      "fecha": "2026-11-24T06:20:37+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Doctor Javier Cuevas, especialista en Cirugía Plástica, Estética y Reparadora: «Lo que le ocurrió a Jennifer Lawrence después de su segundo embarazo tiene una explicación»",
+      "url": "https://theobjective.com/lifestyle/belleza/2026-11-24/doctor-javier-cuevas-especialista-en-cirugia-plastica-estetica-y-reparadora-lo-que-le-ocurrio-a-jennifer-lawrence-despues-de-su-segundo-embarazo-tiene-una-explicacion/",
+      "fecha": "2026-11-24T05:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "Comprar Lotería de Navidad 2026 en Ávila: números y décimos por administración para el sorteo",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-24/comprar-loteria-de-navidad-2026-en-avila-numeros-y-decimos-por-administracion-para-el-sorteo/",
+      "fecha": "2026-11-24T04:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "Comprar Lotería de Navidad 2026 en Cáceres: números y décimos por administración para el sorteo",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-24/comprar-loteria-de-navidad-2026-en-caceres-numeros-y-decimos-por-administracion-para-el-sorteo/",
+      "fecha": "2026-11-24T04:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | Entrevista a José Luis Garci",
+      "url": "https://theobjective.com/podcasts/dejate-de-peliculas-podcast/jose-luis-garci-guerra-civil-casablanca/",
+      "fecha": "2026-11-24T04:25:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | Don Huang Tenorio",
+      "url": "https://theobjective.com/podcasts/el-gris-importa/podcast-gris-importa-don-huang-tenorio/",
+      "fecha": "2026-11-24T04:25:14+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Alternancia o involución",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/alternancia-involucion-articulo-jf-martin-seco/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Contra la tiranía",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/contra-la-tirania-articulo-antonio-elorza/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "‘The great bullshitter’",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/the-great-bullshitter-articulo-marta-martin/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "La falta de presupuestos mata",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/falta-presupuestos-mata-articulo-juan-iranzo/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "El programa oculto de Sánchez",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/programa-oculto-sanchez-articulo-paulino-guerra/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Greguerías de campaña",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/greguerias-de-campana-articulo-ramon-gomez-urna/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Tezanos vuelve a liarla",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/tezanos-lio-articulo-santi-gonzalez/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Platón, Pedro Sánchez y Aristóteles",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/platon-pedro-sanchez-aristoteles-articulo-errasti/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "En defensa de los diletantes",
+      "url": "https://theobjective.com/elsubjetivo/al-mismo-tiempo/2026-11-24/defensa-diletantes-articulo-ricardo-dudda/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Por el cambio",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/por-el-cambio-articulo-francisco-camps/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "elsubjetivo",
+      "titulo": "Que nadie lo olvide el 29-N",
+      "url": "https://theobjective.com/elsubjetivo/opinion/2026-11-24/nadie-olvide-29-n-articulo-francisco-sierra/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Antoine de Saint-Exupéry, escritor de ‘El principito’, sobre la felicidad: «Una buena vida es aquella que se llena de cosas, pero no de las que cuestan, sino de las que tienen valor para ti»",
+      "url": "https://theobjective.com/lifestyle/2026-11-24/antoine-de-saint-exupery-escritor-de-el-principito-sobre-la-felicidad-una-buena-vida-es-aquella-que-se-llena-de-cosas-pero-no-de-las-que-cuestan-sino-de-las-que-tienen-valor-para-ti/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Garci: «A España le falta una película sobre la Guerra Civil como ‘Casablanca’, sin orejeras»",
+      "url": "https://theobjective.com/cultura/cine/2026-11-24/jose-luis-garci-guerra-civil-casablanca/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "La Lotería de Navidad 2026 frente a la Lotería de Navidad 2025: los cambios que hay, ‘El Gordo’ y el resto de premios",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-24/la-loteria-de-navidad-2026-frente-a-la-loteria-de-navidad-2025-los-cambios-que-hay-el-gordo-y-el-resto-de-premios/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "loterias",
+      "titulo": "¿Tienen reintegro los quintos premios del sorteo de Lotería de Navidad?",
+      "url": "https://theobjective.com/loterias/loteria-navidad/2026-11-24/tienen-reintegro-los-quintos-premios-del-sorteo-de-loteria-de-navidad/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Cuánto cobra el presidente del Gobierno en España: comparativa con presidentes de comunidades autónomas como Ayuso o Illa",
+      "url": "https://theobjective.com/espana/2026-11-24/cuanto-cobra-presidente-gobierno-espana-comparativa-presidentes-comunidades-autonomas/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Exteriores se niega a desglosar por países las nacionalizaciones de la ‘ley de nietos’",
+      "url": "https://theobjective.com/espana/2026-11-24/ley-nietos-exteriores-solicitudes-por-pais/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Al Pacino (86 años), ganador de un premio Oscar: «En ‘El Padrino’ estuvieron a punto de despedirme dos semanas después de empezar»",
+      "url": "https://theobjective.com/gente/2026-11-24/al-pacino-86-anos-ganador-de-un-premio-oscar-en-el-padrino-estuvieron-a-punto-de-despedirme-dos-semanas-despues-de-empezar/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "tecnologia",
+      "titulo": "Buzos españoles sacan proyectiles centenarios del fondo del mar en Albania pero hay miles más",
+      "url": "https://theobjective.com/tecnologia/2026-11-24/buzos-espanoles-sacan-proyectiles-centenarios-fondo-mar-albania/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Médicos y entrenadores coinciden: «A partir de los 45 años andar está bien, pero no sirve si no lo acompañas de, al menos, dos días de entrenamiento de fuerza a la semana»",
+      "url": "https://theobjective.com/lifestyle/fitness/2026-11-24/medicos-y-entrenadores-coinciden-a-partir-de-los-45-anos-andar-esta-bien-pero-no-sirve-si-no-lo-acompanas-de-al-menos-dos-dias-de-entrenamiento-de-fuerza-a-la-semana/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "medios",
+      "titulo": "Bronca en la tele de Iglesias en México bajo denuncias de supuestos abusos laborales",
+      "url": "https://theobjective.com/medios/2026-11-24/bronca-tele-iglesias-mexico-abusos-laborales/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Cintia Rocho, ante Pedraz: declara la líder del clan a la que ofrecieron eliminar a la juez Biedma",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-24/cintia-rocho-pedraz-lider-clan-juez-biedma/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La UCO investiga si Cerdán llevó dinero a Suiza en el avión que el PSOE alquila para Sánchez",
+      "url": "https://theobjective.com/espana/2026-11-24/uco-cerdan-suiza-avion-psoe-sanchez/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El CIS andaluz anticipa el desgaste del PSOE y el avance de Vox en el tablero nacional",
+      "url": "https://theobjective.com/espana/andalucia/2026-11-24/cis-andaluz-desgaste-psoe-avance-vox/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Niño Becerra, economista, sobre la natalidad y migración: «España no necesita más tasa de actividad ni de productividad, sino modificar la estructura de PIB para crear más valor añadido»",
+      "url": "https://theobjective.com/economia/2026-11-24/nino-becerra-economista-sobre-la-natalidad-y-migracion-espana-no-necesita-mas-tasa-de-actividad-ni-de-productividad-sino-modificar-la-estructura-de-pib-para-crear-mas-valor-anadido/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gastronomia",
+      "titulo": "Jordi Cruz, chef catalán: «El puré de patata más cremoso y sedoso para acompañar un guiso de ternera se hace con 250 g de mantequilla, 25 cl de leche y un kg de patata cocida Ratte»",
+      "url": "https://theobjective.com/gastronomia/2026-11-24/jordi-cruz-chef-catalan-el-pure-de-patata-mas-cremoso-y-sedoso-para-acompanar-un-guiso-de-ternera-se-hace-con-250-g-de-mantequilla-25-cl-de-leche-y-un-kg-de-patata-cocida-ratte/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Un sorprendente hallazgo revela cómo el ADN neandertal podría influir en la salud mental actual",
+      "url": "https://theobjective.com/sociedad/ciencia/2026-11-24/un-sorprendente-hallazgo-revela-como-el-adn-neandertal-podria-influir-en-la-salud-mental-actual/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El dinero acelera su huida a Luxemburgo por miedo a un pucherazo y a nuevos impuestos",
+      "url": "https://theobjective.com/economia/2026-11-24/dinero-huida-luxemburgo-pucherazo-impuestos/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP valenciano ve a Diana Morant como la nueva Óscar Puente del PSOE",
+      "url": "https://theobjective.com/espana/comunidad-valenciana/2026-11-24/pp-diana-morant-nueva-oscar-puente-psoe/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Bruselas destina otros 165 millones a preparar cinco fábricas de vacunas para pandemias",
+      "url": "https://theobjective.com/economia/2026-11-24/bruselas-destina-165-millones-preparar-cinco-fabricas-vacunas-ante-pandemias/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Mike Tyson (60 años), sobre su juventud: «Uno de mis problemas, por el que no quiero volver a pasar, es que sentía que podía caminar por la calle y hacer lo que quisiera. Que era invencible»",
+      "url": "https://theobjective.com/gente/2026-11-24/mike-tyson-60-anos-sobre-su-juventud-uno-de-mis-problemas-por-el-que-no-quiero-volver-a-pasar-es-que-sentia-que-podia-caminar-por-la-calle-y-hacer-lo-que-quisiera-que-era-invencible/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "La voracidad fiscal del Gobierno impide que mejore el poder adquisitivo de los españoles",
+      "url": "https://theobjective.com/economia/2026-11-24/voracidad-fiscal-gobierno-poder-adquisitivo-espanoles/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "La agridulce Kazajistán de María Omar",
+      "url": "https://theobjective.com/cultura/literatura/2026-11-24/la-agridulce-kazajistan-de-maria-omar/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Euforia contenida en el PSOE: «Vamos a ganar las elecciones, pero la izquierda no suma»",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/euforia-psoe-elecciones-izquierda-suma/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "No es de Luis Zahera, pero sí es gallega: esta miniserie de solo 3 episodios es top 1 de Netflix España, pero se estrenó solo hace 10 días",
+      "url": "https://theobjective.com/cultura/series/2026-11-24/no-es-de-luis-zahera-pero-si-es-gallega-esta-miniserie-de-solo-3-episodios-es-top-1-de-netflix-espana-pero-se-estreno-solo-hace-10-dias/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "lifestyle",
+      "titulo": "Alberto Zamora, nutricionista, sobre congelar el marisco de Nochebuena: «Noviembre es el mejor mes para comprarlo, pero para no tirar el dinero hay que congelarlo así»",
+      "url": "https://theobjective.com/lifestyle/nutricion/2026-11-24/alberto-zamora-nutricionista-sobre-congelar-el-marisco-de-nochebuena-noviembre-es-el-mejor-mes-para-comprarlo-pero-para-no-tirar-el-dinero-hay-que-congelarlo-asi/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El ‘holding’ de Forestalia sale de pérdidas en plena investigación en el ‘caso SEPI’",
+      "url": "https://theobjective.com/economia/2026-11-24/holding-forestalia-sale-perdidas-caso-sepi/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Las cotizaciones ya solo financian dos de cada tres euros de las pensiones de jubilación",
+      "url": "https://theobjective.com/economia/2026-11-24/cotizaciones-financian-pensiones-jubilacion/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Transparencia exige al Gobierno que detalle el control que hizo en los años del fraude del fuel",
+      "url": "https://theobjective.com/economia/energia/2026-11-24/transparencia-gobierno-control-anos-fraude-fuel/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El alcalde del PSC de Tarragona despidió a un denunciante protegido del Consorcio de Aguas",
+      "url": "https://theobjective.com/espana/cataluna/2026-11-24/alcaldes-tarragona-reus-despido-denunciante-consorcio-aguas/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Plus Ultra le retira a Air Zimbabwe un avión que le tenía alquilado y deja tirados a sus pasajeros",
+      "url": "https://theobjective.com/economia/2026-11-24/plus-ultra-retira-avion-alquilado-air-zimbabwe-pasajeros/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "María Ventura, mallorquina trabajando en Islandia en restauración: «Gano 3.154 euros netos con el salario mínimo, los fines de semana pagan un 35% más; usamos el método 2-2-3»",
+      "url": "https://theobjective.com/economia/empleo/2026-11-24/maria-ventura-mallorquina-trabajando-en-islandia-en-restauracion-gano-3-154-euros-netos-con-el-salario-minimo-los-fines-de-semana-pagan-un-35-mas-usamos-el-metodo-2-2-3/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "El Estado deja en manos privadas más del 90% de la inversión necesaria para construir vivienda",
+      "url": "https://theobjective.com/economia/2026-11-24/estado-deja-manos-privadas-90-inversion-necesaria-construir-vivienda/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Prisiones sanciona al funcionario que denunció anomalías en contratos de la cárcel de Ceuta",
+      "url": "https://theobjective.com/espana/2026-11-24/prisiones-sanciona-funcionario-anomalias-carcel-ceuta/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Denuncian ante el Supremo el «circuito de votación paralela» de las urnas de cartón",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/urnas-carton-nietos-denuncia-supremo/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Plus Ultra lucha por mantener su licencia de vuelo para ser rescatada por otra aerolínea",
+      "url": "https://theobjective.com/espana/2026-11-24/plus-ultra-lucha-mantener-licencia-vuelo-rescate/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El CSIC gasta 300.000 euros en estudiar el rechazo a la igualdad de los «hombres blancos»",
+      "url": "https://theobjective.com/espana/2026-11-24/csic-gasta-300000-euros-igualdad-hombres-blancos/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "deportes",
+      "titulo": "Vinicius y 10 más contra el PSV: Mourinho cierra el debate de su titularidad en la Champions",
+      "url": "https://theobjective.com/deportes/futbol/2026-11-24/vinicius-psv-mourinho-titularidad-champions/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Miriam González se llama en realidad Miryan en el DNI… por un error en el Registro",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/miriam-gonzalez-miryan-dni/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PP mantiene su ventaja con el PSOE movilizando los resquicios de la izquierda",
+      "url": "https://theobjective.com/espana/politica/2026-11-24/observatorio-electoral-pp-ventaja-psoe-izquierda/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "opinion",
+      "titulo": "Bono, tonto es el que hace tonterías",
+      "url": "https://theobjective.com/opinion/2026-11-24/bono-tonterias-hastio-y-estio/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Don Huang Tenorio",
+      "url": "https://theobjective.com/economia/2026-11-24/gris-importa-don-huang-tenorio/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Gastar con las Cortes disueltas: 40.000 millones que nadie ha votado",
+      "url": "https://theobjective.com/economia/2026-11-24/grafico-de-la-semana-gasto-cortes-disueltas/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "La ventana de Moscú",
+      "url": "https://theobjective.com/internacional/2026-11-24/enfoque-global-ventana-moscu/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | El fin de Plus Ultra demuestra que el rescate nunca se debió dar",
+      "url": "https://theobjective.com/videos/espana/2026-11-24/video-plus-ultra-aerolinea-rescate-cierre-gobierno-analisis/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Denuncian ante el Supremo el «circuito de votación paralela» de las urnas de cartón",
+      "url": "https://theobjective.com/videos/espana/tribunales/2026-11-24/denuncian-ante-supremo-circuito-votacion-paralela-urnas-carton/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Garci: «A España le falta una película de la Guerra Civil como Casablanca» | DÉJATE DE PELICULAS",
+      "url": "https://theobjective.com/videos/cultura/cine/2026-11-24/video-jose-luis-garci-guerra-civil-pelicula-espana/",
+      "fecha": "2026-11-24T04:25:00+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "yodona",
+      "titulo": "Ana Turull, la 'runner' que inspira a las mujeres: \"Dejé mi trabajo porque estaba amargada, pero no se lo recomendaría a todo el mundo\"",
+      "url": "https://www.elmundo.es/yodona/vida-saludable/2026/11/24/6b040d11fdddffec338b4574.html",
+      "fecha": "2026-11-23T23:08:50+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "internacional",
+      "titulo": "Los drones a reacción trasladan la guerra al oeste de Ucrania",
+      "url": "https://www.elmundo.es/internacional/2026/11/24/6b0432efe9cf4a96248b4583.html",
+      "fecha": "2026-11-23T23:07:16+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "El truco del mejor instituto de Castilla-La Mancha que mejoraría la educación",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/24/6b045c09fdddff87468b4591.html",
+      "fecha": "2026-11-23T23:07:11+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "cultura",
+      "titulo": "¿Y qué es una familia?",
+      "url": "https://www.elmundo.es/cultura/2026/11/24/6b0482e0e4d4d8444b8b45a4.html",
+      "fecha": "2026-11-23T23:06:58+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "actualidad",
+      "titulo": "Así es cómo el cerebro sabe que tu mano es tuya",
+      "url": "https://theobjective.com/actualidad/2026-11-23/asi-es-como-el-cerebro-sabe-que-tu-mano-es-tuya/",
+      "fecha": "2026-11-23T22:46:25+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "¿Quién ha ganado el debate a ocho?",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/encuesta-debate-ocho-portavoces/",
+      "fecha": "2026-11-23T22:36:08+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La izquierda carga en bloque contra PP y Vox en un tenso debate electoral a ocho",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/izquierda-carga-contra-pp-vox-tenso-debate-electoral/",
+      "fecha": "2026-11-23T22:30:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El PSOE repunta en la recta final, pero la derecha mantiene al menos 193 escaños",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/votometro-sanchez-recorta-pp-vox-mayoria/",
+      "fecha": "2026-11-23T22:26:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Hallan restos de las explosiones volcánicas submarinas más profundas conocidas",
+      "url": "https://theobjective.com/sociedad/ciencia/2026-11-23/hallan-restos-explosiones-volcanicas-submarinas-mas-profundas-conocidas/",
+      "fecha": "2026-11-23T22:23:27+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Sánchez cree que Andalucía dará la victoria al PSOE el 29-N: «Me siento garrapatero»",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/sanchez-cree-andalucia-victoria-psoe-29n/",
+      "fecha": "2026-11-23T22:05:01+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "deportes",
+      "titulo": "El récord imbatible del superpiloto John Surtees: el único campeón mundial de motociclismo y Fórmula 1",
+      "url": "https://www.elmundo.es/deportes/2026/11/23/6b01d236e9cf4a97458b456d.html",
+      "fecha": "2026-11-23T21:51:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Burnham insiste que volver a la UE «no está sobre la mesa», pero sí una relación práctica",
+      "url": "https://theobjective.com/internacional/2026-11-23/burnham-volver-ue-relacion-practica/",
+      "fecha": "2026-11-23T21:31:44+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Feijóo, sobre la inmigración: «Regular la que necesitemos, irregular y descontrolada no»",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/feijoo-inmigracion-regular-la-que-necesitemos-irregular-no/",
+      "fecha": "2026-11-23T21:11:49+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "España y 13 países exigen a Birmania que acate el fallo de la Corte Internacional de Justicia",
+      "url": "https://theobjective.com/internacional/2026-11-23/espana-13-paises-birmania-cij/",
+      "fecha": "2026-11-23T20:58:09+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Irán ve inviable el bloqueo terrestre de EEUU y pide a Washington que negocie un acuerdo",
+      "url": "https://theobjective.com/internacional/2026-11-23/iran-bloqueo-terrestre-eeuu-negociacion/",
+      "fecha": "2026-11-23T20:46:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Paraguay ordena la detención del hermano de Santiago Peña por el caso Ueno Bank",
+      "url": "https://theobjective.com/internacional/2026-11-23/paraguay-detencion-hermano-santiago-pena/",
+      "fecha": "2026-11-23T20:23:55+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El Rey preside el homenaje a Francisco de Vitoria en la Academia de Ciencias Morales",
+      "url": "https://theobjective.com/sociedad/2026-11-23/rey-homenaje-francisco-vitoria-ciencias-morales/",
+      "fecha": "2026-11-23T19:47:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "tecnologia",
+      "titulo": "El nuevo escudo antimisiles europeo supera otra certificación para la variante italiana",
+      "url": "https://theobjective.com/tecnologia/2026-11-23/escudo-antimisiles-europeo-italiana/",
+      "fecha": "2026-11-23T19:35:17+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "La Guardia Civil localiza sin vida a un alpinista italiano en uno de los picos del Pirineo",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-23/guardia-civil-fallecido-alpinista-italiano/",
+      "fecha": "2026-11-23T19:35:10+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "La vida personal de Ester Muñoz (PP), su familia, su carrera, sus intereses y su pareja: «Mi novio es el amor de mi vida, lo tengo claro; además nuestra primera cita fue muy original y especial»",
+      "url": "https://theobjective.com/gente/2026-11-23/la-vida-personal-de-ester-munoz-pp-su-familia-su-carrera-sus-intereses-y-su-pareja-mi-novio-es-el-amor-de-mi-vida-lo-tengo-claro-ademas-nuestra-primera-cita-fue-muy-original-y-especial/",
+      "fecha": "2026-11-23T19:30:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Podcast | La extraña confianza de Sánchez en la victoria",
+      "url": "https://theobjective.com/podcasts/objetivo-directo-podcast/podcast-objetivo-directo-confianza-sanchez-victoria/",
+      "fecha": "2026-11-23T19:29:02+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Detenido el gobernador de Murmansk (Rusia) tras una investigación por fraude a gran escala",
+      "url": "https://theobjective.com/internacional/2026-11-23/detenido-gobernador-murmansk-investigacion-fraude-gran-escala/",
+      "fecha": "2026-11-23T19:25:42+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | La extraña confianza de Sánchez en la victoria | OBJETIVO DIRECTO",
+      "url": "https://theobjective.com/videos/espana/2026-11-23/video-extrana-confianza-sanchez-victoria/",
+      "fecha": "2026-11-23T19:18:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "podcasts",
+      "titulo": "Las noticias del 23 de noviembre de 2026",
+      "url": "https://theobjective.com/podcasts/sumario-de-tarde-podcast/sumario-tarde-23-noviembre-2026/",
+      "fecha": "2026-11-23T19:17:16+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El Papa recibe a Indurain y destaca la bicicleta como ejemplo de vida saludable",
+      "url": "https://theobjective.com/sociedad/2026-11-23/papa-indurain-bicicleta-vida-saludable/",
+      "fecha": "2026-11-23T19:13:32+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "cultura",
+      "titulo": "Más de 200 figuras de la cultura ‘abandonan’ al PSOE y piden el voto para Frente Amplio",
+      "url": "https://theobjective.com/cultura/2026-11-23/mas-de-200-figuras-cultura-firman-manifiesto-pedir-voto-frente-amplio/",
+      "fecha": "2026-11-23T19:02:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "En Sumario de tarde: del punto final al ‘procés’ a las últimas encuestas para el 29-N",
+      "url": "https://theobjective.com/espana/2026-11-23/sumario-tarde-punto-final-proces-ultimas-encuestas/",
+      "fecha": "2026-11-23T18:58:47+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno recurrirá ante el Constitucional las limitaciones en ayudas al cine de Castilla y León",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-23/gobierno-recurrira-constitucional-limitaciones-ayudas-cine-castilla-leon/",
+      "fecha": "2026-11-23T18:39:48+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno ha aprobado 26.000 millones en Defensa desde que convocó las elecciones",
+      "url": "https://theobjective.com/espana/2026-11-23/gobierno-millones-defensa-elecciones/",
+      "fecha": "2026-11-23T18:31:28+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Gobierno aprobará este martes un permiso de diez días por la muerte de un familiar",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/gobierno-aprobara-permiso-diez-dias-muerte-familiar/",
+      "fecha": "2026-11-23T18:28:35+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "El Parlament de Cataluña hará a Puigdemont un «recibimiento institucional» tras la amnistía",
+      "url": "https://theobjective.com/espana/cataluna/2026-11-23/parlament-cataluna-puigdemont-recibimiento-institucional-amnistia/",
+      "fecha": "2026-11-23T18:19:22+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Junta Electoral abre expediente a Bolaños y Bustinduy por hacer partidismo desde Moncloa",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/junta-electoral-expediente-bolanos-partidismo-moncloa/",
+      "fecha": "2026-11-23T18:06:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Gisèle Pelicot estalla por el uso de fotografías íntimas sin permiso para promocionar un libro",
+      "url": "https://theobjective.com/internacional/2026-11-23/pelicot-uso-fotografias-intimas-promocion/",
+      "fecha": "2026-11-23T18:03:22+00:00"
+    },
+    {
+      "medio": "El Mundo",
+      "seccion": "elecciones",
+      "titulo": "El momento en que la candidata del PSOE por Huesca utiliza el teléfono móvil durante el debate electoral",
+      "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b047e1821efa0e4258b4584-video.html",
+      "fecha": "2026-11-23T17:55:40+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Más de 812 inmigrantes desembarcan en Canarias a bordo de siete embarcaciones",
+      "url": "https://theobjective.com/sociedad/suceso/2026-11-23/812-inmigrantes-canarias-siete-embarcaciones/",
+      "fecha": "2026-11-23T17:45:51+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Junta Electoral ordena retirar los carteles que aluden a Vox en la Universidad de Almería",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/junta-electoral-ordena-retirar-carteles-aluden-vox-universidad-almeria/",
+      "fecha": "2026-11-23T17:45:06+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Las víctimas de Adamuz piden al PP sumarse al Pacto de Estado de seguridad ferroviaria",
+      "url": "https://theobjective.com/espana/2026-11-23/victimas-adamuz-pp-pacto-estado/",
+      "fecha": "2026-11-23T17:28:03+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La extraña confianza de Sánchez en la victoria",
+      "url": "https://theobjective.com/espana/2026-11-23/objetivo-directo-confianza-sanchez-victoria/",
+      "fecha": "2026-11-23T17:27:43+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Defensa cierra las urgencias pediátricas del hospital Gómez Ulla por falta de personal",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/defensa-pediatricas-gomez-ulla/",
+      "fecha": "2026-11-23T17:25:11+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Justicia de Madrid rechaza suspender los servicios mínimos de la huelga docente",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-23/justicia-madrid-rechaza-suspender-servicios-minimos-huelga-docente/",
+      "fecha": "2026-11-23T17:23:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Junta Electoral acepta las denuncias de PSPV y Compromís contra una lona de Vox",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/junta-electoral-acepta-denuncias-pspv-compromis-lona-vox/",
+      "fecha": "2026-11-23T17:19:24+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Vox pide a la Junta Electoral Central conocer diariamente los datos del voto exterior",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/vox-junta-electoral-datos-voto-exterior/",
+      "fecha": "2026-11-23T17:11:01+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "economia",
+      "titulo": "Zurich aflora la venta de un 2% del Sabadell y deja de ser accionista significativo",
+      "url": "https://theobjective.com/economia/banca/2026-11-23/zurich-venta-sabadell-accionista-significativo/",
+      "fecha": "2026-11-23T17:04:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Encuesta | ¿Le sorprende el entusiasmo con el que José Bono está defendiendo el sanchismo?",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/encuesta-bono-defensa-sanchismo/",
+      "fecha": "2026-11-23T17:03:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Un imputado en el ‘caso Koldo’ dice que Aldama llevó a la exdirectora de la Benemérita a Georgia",
+      "url": "https://theobjective.com/espana/tribunales/2026-11-23/koldo-aldama-benemerita-georgia/",
+      "fecha": "2026-11-23T17:01:41+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "Bustinduy reclama el voto católico y acusa a Vox de ser «profundamente insolidario»",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/bustinduy-voto-catolico-vox-profundamente-insolidario/",
+      "fecha": "2026-11-23T16:54:53+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Trump y Sheinbaum se reunirán en Florida durante la celebración de la cumbre del G20",
+      "url": "https://theobjective.com/internacional/2026-11-23/trump-sheinbaum-florida-cumbre-g20/",
+      "fecha": "2026-11-23T16:48:12+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Cientos de colegios de Alemania y Dinamarca reciben este lunes amenazas falsas de bomba",
+      "url": "https://theobjective.com/internacional/2026-11-23/cientos-colegios-alemania-dinamarca-reciben-amenazas-falsas-bomba/",
+      "fecha": "2026-11-23T16:43:50+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Rutte reitera la intención de Ucrania de ingresar en la OTAN mientras Zelenski reclama garantías",
+      "url": "https://theobjective.com/internacional/2026-11-23/rutte-intencion-ucrania-ingresar-otan-zelenski-garantias/",
+      "fecha": "2026-11-23T16:37:18+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "Madrid apoya la neutralidad en las aulas frente al Gobierno y recuerda su obligación legal",
+      "url": "https://theobjective.com/sociedad/educacion/2026-11-23/madrid-aulas-gobierno-obligacion-legal/",
+      "fecha": "2026-11-23T16:31:19+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "sociedad",
+      "titulo": "El tiroteado en Madrid es ‘el Coletas’, uno de los enlaces del narco entre Colombia y España",
+      "url": "https://theobjective.com/sociedad/2026-11-23/tiroteado-madrid-el-coletas-enlaces-narco-colombia-espana/",
+      "fecha": "2026-11-23T16:29:20+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "videos",
+      "titulo": "VÍDEO | Seis de cada diez hipotecados necesitan financiación adicional para pagar la entrada",
+      "url": "https://theobjective.com/videos/economia/2026-11-23/video-hipotecas-financiacion-vivienda-economia-jovenes/",
+      "fecha": "2026-11-23T16:25:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "espana",
+      "titulo": "La Junta Electoral Central sanciona a Silvia Intxaurrondo por sus ataques a Vox en TVE",
+      "url": "https://theobjective.com/espana/politica/2026-11-23/junta-electoral-sanciona-silvia-intxaurrondo-ataques-vox-tve/",
+      "fecha": "2026-11-23T16:19:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "La UE sanciona a Rinaldo Nazzaro, fundador del grupo de extrema derecha ‘The Base’",
+      "url": "https://theobjective.com/internacional/2026-11-23/ue-sanciona-rinaldo-nazzaro-fundador-the-base/",
+      "fecha": "2026-11-23T16:06:31+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "La vida de Xabier Fortes entre Pontevedra y Madrid: «Cobro lo que marca la tabla salarial y con el ‘plus’ de TVE pago mi alquiler»",
+      "url": "https://theobjective.com/gente/2026-11-23/xabier-fortes-pontevedra-madrid-cobro-plus-tve-alquiler/",
+      "fecha": "2026-11-23T16:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "gente",
+      "titulo": "Marc Márquez habla sobre su patrimonio: «Mi casa en Pozuelo de Alarcón vale alrededor de 10 millones de euros»",
+      "url": "https://theobjective.com/gente/2026-11-23/marc-marquez-patrimonio-casa-pozuelo-alarcon-10-millones-euros/",
+      "fecha": "2026-11-23T16:00:00+00:00"
+    },
+    {
+      "medio": "The Objective",
+      "seccion": "internacional",
+      "titulo": "Musk celebra el regreso de Huang como CEO de Nvidia: «Se ha rectificado el error»",
+      "url": "https://theobjective.com/internacional/2026-11-23/musk-regreso-huang-ceo-nvidia-rectificado-error/",
+      "fecha": "2026-11-23T15:58:02+00:00"
+    }
+  ]
+}
