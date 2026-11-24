@@ -1,0 +1,40 @@
+{
+ "slug": "pib-per-capita",
+ "titulo_pagina": "PIB per cápita de España: evolución desde 1976, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el PIB per cápita en España desde 1976?",
+ "pregunta_faq": "¿Cuánto ha subido el PIB per cápita en España desde la Transición?",
+ "resumen": "El PIB per cápita de España, en euros corrientes, ha pasado de 2.918 € en 1976 a 34.240 € en 2025, con caídas notables en la crisis financiera (de 24.190 € en 2008 a 22.518 € en 2013) y de nuevo en 2020, por la pandemia.",
+ "aviso": "Cifra en euros corrientes (nominales), sin ajustar por inflación: buena parte de la subida hasta los años 90, cuando la inflación en España era muy alta, refleja también la pérdida de valor del dinero, no solo crecimiento económico real. Serie compilada por datosmacro.expansion.com a partir de la Contabilidad Nacional (INE) y el Banco de España; la propia fuente avisa de que los datos de 1980 hacia atrás proceden de estimaciones de la OCDE y los posteriores de Eurostat, con una posible disparidad entre ambos tramos. Las bandas de color solo señalan quién gobernaba en cada momento: el PIB per cápita depende del crecimiento económico, de la población y de la inflación, no solo de qué partido gobierna.",
+ "fuente": "datosmacro.expansion.com (Contabilidad Nacional, INE/Banco de España)",
+ "fuenteUrl": "https://datosmacro.expansion.com/pib/espana",
+ "actualizado": "2026-11-24",
+ "unidad": "€",
+ "yMax": 35000,
+ "yMin": 0,
+ "yPaso": 5000,
+ "decimales": 0,
+ "colTabla": "PIB per cápita (€)",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma serie, en tasa de variación anual en vez de en euros por persona."},
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
+  {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "PIB, paro, IPC y otros indicadores, actualizados cada mes."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "PIB per cápita (euros corrientes)",
+   "datos": {
+    "1976": 2918, "1977": 3157, "1978": 3410, "1979": 4190, "1980": 4400,
+    "1981": 4809, "1982": 5263, "1983": 5044, "1984": 5660, "1985": 6153,
+    "1986": 6577, "1987": 7083, "1988": 8097, "1989": 9572, "1990": 10742,
+    "1991": 11834, "1992": 12332, "1993": 11422, "1994": 11276, "1995": 11830,
+    "1996": 12690, "1997": 13000, "1998": 13750, "1999": 14740, "2000": 15970,
+    "2001": 17190, "2002": 18100, "2003": 19020, "2004": 20070, "2005": 21260,
+    "2006": 22650, "2007": 23820, "2008": 24190, "2009": 23140, "2010": 23130,
+    "2011": 22870, "2012": 22562, "2013": 22518, "2014": 22780, "2015": 23440,
+    "2016": 24190, "2017": 25160, "2018": 25950, "2019": 26620, "2020": 23850,
+    "2021": 26090, "2022": 28790, "2023": 30950, "2024": 32710, "2025": 34240
+   }
+  }
+ }
+}

@@ -24,7 +24,7 @@ BASE = "https://emirodgar.es"
 HOY = datetime.now(timezone.utc)
 MESES = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
-INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json", "autonomos.json"]
+INDICADORES = ["presion_fiscal.json", "paro_epa.json", "pib.json", "autonomos.json", "pib_per_capita.json"]
 
 
 def fecha_es(iso):
@@ -37,7 +37,9 @@ def J(p):
 
 
 def nf(v, decimales=1):
-    return f"{v:.{decimales}f}".replace(".", ",")
+    """Formatea en estilo español: punto de millar, coma decimal (p. ej. 34.240 o 2,6)."""
+    s = f"{v:,.{decimales}f}"
+    return s.replace(",", "§").replace(".", ",").replace("§", ".")
 
 
 CSS = """body{font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:860px;margin:0 auto;padding:24px 16px 64px;color:#1b2330;background:#fff}

@@ -13,6 +13,7 @@
  "yPaso": 5,
  "colTabla": "Tasa de paro (%)",
  "enlaces": [
+  {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "la misma metodología, en euros por persona."},
   {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
   {"titulo": "¿Cómo ha evolucionado el PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma metodología, con el crecimiento económico."},
   {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "paro EPA y registrado, PIB y otros indicadores, actualizados cada mes."},
