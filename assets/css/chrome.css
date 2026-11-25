@@ -78,7 +78,7 @@
 }
 
 /* ---- Pie ---- */
-.sg-footer{margin-top:40px;color:var(--sg-text)}
+.sg-footer{margin-top:40px;color:var(--sg-text);background:var(--sg-bg)}
 .sg-footer__inner{display:grid;grid-template-columns:1.2fr 1.6fr 1fr;gap:32px;align-items:start;max-width:1332px;margin:0 auto;padding:60px 32px;border-top:1px solid var(--sg-border);border-bottom:1px solid var(--sg-border)}
 .sg-footer .sg-logo{margin-bottom:12px}
 .sg-footer__about{max-width:320px;margin:0;font-size:15px;color:var(--sg-text-alt)}
