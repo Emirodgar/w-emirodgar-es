@@ -14,7 +14,7 @@ permalink: emilio
 
 # Sobre mí
 
-*Actualizado el 21 de noviembre de 2026*
+*Actualizado el 25 de noviembre de 2026*
 
 La inteligencia artificial (IA) está transformando radicalmente la manera en que operan las administraciones públicas. Desde la optimización de procesos burocráticos hasta la mejora en la toma de decisiones estratégicas, la IA se ha convertido en un aliado clave para la modernización del sector.
 
@@ -87,7 +87,7 @@ Mi publicación más vista hasta la fecha ha sido *Cómo la Transformación Digi
 ## Ponencias y clases
 
 <ul>
-  <li><code>Noviembre 2026</code> - Tribuna Eventos - Mesa redonda / El impacto de la Inteligencia Artificial en las empresas y las administraciones. Participo junto a Luis Collado (Google España), Juan Zafra (CEPYME) y la periodista Sara Martín como moderadora, con Cristina Sanchidrián Blázquez (Junta de Castilla y León) y Miguel López-Valverde Argüeso (Comunidad de Madrid).</li>
+  <li><code>Noviembre 2026</code> - Tribuna Eventos - Mesa redonda / <a href="/evento-impacto-ia-empresas-administraciones-avila">El impacto de la Inteligencia Artificial en las empresas y las administraciones</a> (23 de noviembre, Ávila). Participo junto a Luis Collado (Google España), Juan Zafra (CEPYME) y la periodista Sara Martín como moderadora, con Cristina Sanchidrián Blázquez (Junta de Castilla y León) y Miguel López-Valverde Argüeso (Comunidad de Madrid).</li>
   <li><code>Noviembre 2025</code> - EITB / GEO para Medios Digitales: el nuevo escenario (privada)</li>
   <li><code>Noviembre 2025</code> - SEGITTUR / <a href="https://es.slideshare.net/slideshow/smartup-_-formacion-segittur-ia-seo-a-geo-pdf/284474183">El SEO del futuro en el sector turismo</a> - <a href="https://www.youtube.com/watch?v=Imvyzi7TJko">Grabación en Youtube del evento</a></li>
   <li><code>Noviembre 2025</code> - Universidad Europea / <a href="https://es.slideshare.net/slideshow/202511-sc7-medicion-de-contenidos-generativos-y-modelos-de-atribucion-en-2025-pptx/284474359">Medición de contenidos generativos y campañas + Modelos de atribución en 2025: evolución y desafíos</a></li>
@@ -115,6 +115,7 @@ Mi publicación más vista hasta la fecha ha sido *Cómo la Transformación Digi
 ## En medios
 
 <ul>
+  <li><code>Noviembre 2026</code> - Onda Cero Valladolid / <a href="/entrevista-onda-cero-castilla-y-leon-en-la-onda">Entrevista en Castilla y León en la Onda</a> (desde el minuto 5:30) - <a href="https://www.ondacero.es/emisoras/castilla-y-leon/valladolid/audios-podcast/castilla-leon-onda/castilla-leon-onda-2311202_202611236b044894f6da642efef8d2c0.html">Escuchar en Onda Cero</a></li>
   <li><code>Enero 2026</code> - Participación como experto / <a href="https://estudio.soycarlosgonzalez.com/#/experts/emilio-rodriguez-garcia">Estudio Sector SEO 2026</a></li>
   <li><code>Noviembre 2025</code> - SEO Office Hours en Español / <a href="https://www.youtube.com/live/2zjdeoHraok">SOH Español: Natzir Turrado, Josep M Felip y Emilio Rodríguez García</a></li>
   <li><code>Junio 2025</code> - Tribuna Salamanca / <a href="https://www.tribunasalamanca.com/blogs/conectados/posts/407199/la-ia-anestesia-la-mente">La IA anestesia la mente</a></li>
