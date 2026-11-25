@@ -1,5 +1,5 @@
 ---
-title: Entrevista en Onda Cero, en "Castilla y León en la Onda": escúchala desde el minuto 5:30
+title: Mi entrevista en Onda Cero, en "Castilla y León en la Onda", desde el minuto 5:30
 description: Estuve en Castilla y León en la Onda, el programa de Onda Cero Valladolid, el 23 de noviembre de 2026. Aquí tienes el enlace al audio, el minuto en el que empieza mi intervención (5:30) y más contexto.
 author: Emirodgar
 lang: es_ES
