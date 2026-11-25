@@ -925,7 +925,7 @@
         "titulo": "El Supremo aplica la amnistía a Puigdemont y archiva definitivamente la causa del procés",
         "url": "https://www.elmundo.es/espana/2026/11/23/6b042ed9e4d4d8872c8b4579.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-23",
@@ -994,6 +994,48 @@
         "medio": "The Objective",
         "titulo": "Condenado a 16 años un exentrenador de fútbol en Logroño por abuso sexual a menores",
         "url": "https://theobjective.com/espana/tribunales/2026-11-24/condenado-16-anos-exentrenador-logrono-abuso-sexual-menores/"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-25",
+      "edicion": "2026-11-25",
+      "titulo": "EEUU impone nuevos aranceles a 14 economías",
+      "categoria": "Economía",
+      "descripcion": "Estados Unidos anuncia aranceles de hasta el 20% a países como China, Japón y la Unión Europea, tras una investigación sobre prácticas comerciales.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "EEUU anuncia nuevos aranceles a la UE, China o Japón tras una investigación formal sobre presuntos subsidios y exceso de capacidad industrial",
+        "url": "https://www.elmundo.es/economia/2026/11/25/6b06ef89e4d4d8ad388b45b2.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-25",
+      "edicion": "2026-11-25",
+      "titulo": "Puigdemont anuncia su regreso a España el 12 de diciembre",
+      "categoria": "Política",
+      "descripcion": "Carles Puigdemont declara que volverá a Cataluña el 12 de diciembre, afirmando el \"fracaso\" del Estado.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Puigdemont volverá a España el 12 de diciembre: \"El Estado ha fracasado, regresaré a mi país, a Cataluña, sin tener que pedir perdón\"",
+        "url": "https://www.elmundo.es/espana/2026/11/25/6b06b417fc6c83ba038b458e.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-25",
+      "edicion": "2026-11-25",
+      "titulo": "Revocación del tercer grado al etarra Henri Parot",
+      "categoria": "Política",
+      "descripcion": "La Audiencia Nacional revoca el tercer grado al etarra Henri Parot y propone una reforma legal para el recurso de las víctimas.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "La Audiencia Nacional revoca el tercer grado al etarra Henri Parot y plantea una reforma legal para que las víctimas puedan recurrir",
+        "url": "https://www.elmundo.es/espana/2026/11/25/6b06cf7a21efa0f96d8b457e.html"
       },
       "destacado": false
     }

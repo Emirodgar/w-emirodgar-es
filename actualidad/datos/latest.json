@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-24",
-  "generado_en": "2026-11-24T15:40:11+00:00",
-  "titular": "Bruselas amenaza a España con un expediente por gasto público mientras el Gobierno intensifica medidas preelectorales",
+  "fecha": "2026-11-25",
+  "generado_en": "2026-11-25T15:24:31+00:00",
+  "titular": "EEUU impone nuevos aranceles a la UE, China y Japón; Puigdemont anuncia su regreso a España el 12 de diciembre",
   "por_medio": {
-    "El Mundo": 30,
-    "The Objective": 201
+    "El Mundo": 29,
+    "The Objective": 233
   },
   "temas": [
     {
-      "tema": "Advertencia de Bruselas por gasto público y medidas preelectorales",
+      "tema": "Nuevos aranceles de EEUU a economías clave",
       "categoria": "Economía",
-      "descripcion": "Bruselas amenaza a España con un expediente por exceso de gasto público en 2026, mientras el Gobierno aprueba diversas medidas en campaña electoral."
+      "descripcion": "Estados Unidos ha anunciado aranceles de hasta el 20% a 14 economías, incluyendo la UE, China y Japón, por presuntos subsidios y exceso de capacidad industrial."
     },
     {
-      "tema": "Campaña electoral y tensiones políticas",
+      "tema": "Regreso de Carles Puigdemont a España",
       "categoria": "Política",
-      "descripcion": "La campaña electoral se caracteriza por las respuestas de Sánchez a González, la intervención de Iglesias en apoyo a Podemos y las denuncias del PP por incidentes en mítines."
+      "descripcion": "Carles Puigdemont ha anunciado su regreso a España el 12 de diciembre, generando reacciones diversas en el panorama político nacional."
     },
     {
-      "tema": "Decisiones judiciales y seguridad electoral",
-      "categoria": "Política",
-      "descripcion": "El Tribunal Supremo autoriza el voto con DNI digital y se despliegan más de 100.000 agentes para garantizar la seguridad en las elecciones."
-    },
-    {
-      "tema": "Conflictos internacionales y derechos humanos",
+      "tema": "Crisis migratoria en Canarias",
       "categoria": "Internacional",
-      "descripcion": "Irán flagela a una cantante por mostrar su pelo, el Ejército israelí mata al jefe de seguridad de Hamás, y Ucrania reivindica ataques a corbetas rusas."
+      "descripcion": "El Gobierno español ha solicitado el regreso de Frontex a África Occidental para contener la llegada de cayucos a Canarias, mientras el presidente canario pide una reunión urgente con la Comisión Europea."
+    },
+    {
+      "tema": "Medidas económicas para autónomos y energía",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno ha aprobado una rebaja fiscal para autónomos y ha adjudicado 56 millones de euros a proyectos de almacenamiento energético."
     }
   ]
 }
