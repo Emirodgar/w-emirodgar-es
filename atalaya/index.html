@@ -35,6 +35,11 @@ button,select,input{font:inherit;color:inherit}
 .kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
 .kpi b{display:block;font-family:var(--mono);font-size:24px;font-weight:600}
 .kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+button.kpi{font:inherit;color:inherit;text-align:left;cursor:pointer;display:block;width:100%}
+button.kpi:hover{border-color:var(--acc)}
+button.kpi:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+button.kpi[aria-pressed=true]{border-color:currentColor;background:var(--panel2)}
+.kpi small{display:block;color:var(--mut);font-size:11px;margin-top:2px}
 .grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(320px,1fr);gap:10px;padding:10px 16px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .card h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px}
@@ -179,9 +184,9 @@ button,select,input{font:inherit;color:inherit}
 </header>
 
 <section class="kpis" aria-label="Resumen del territorio">
-  <div class="kpi"><b id="k1">–</b><span id="k1l">Provincias</span></div>
-  <div class="kpi"><b id="k2" style="color:var(--bad)">–</b><span>En alarma (riesgo ≥ 60)</span></div>
-  <div class="kpi"><b id="k3" style="color:var(--warn)">–</b><span>Volátiles</span></div>
+  <button type="button" class="kpi" data-f="" id="kb1" title="Quitar el resaltado y volver al mapa original" aria-pressed="false"><b id="k1">–</b><span id="k1l">Provincias</span></button>
+  <button type="button" class="kpi" data-f="alarm" id="kb2" style="color:var(--bad)" title="Resaltar en el mapa las zonas en alarma" aria-pressed="false"><b id="k2" style="color:var(--bad)">–</b><span style="color:var(--mut)">En alarma (riesgo ≥ 60)</span></button>
+  <button type="button" class="kpi" data-f="vol" id="kb3" style="color:var(--warn)" title="Resaltar en el mapa las zonas volátiles" aria-pressed="false"><b id="k3" style="color:var(--warn)">–</b><span style="color:var(--mut)">Volátiles</span></button>
   <div class="kpi"><b id="k4">–</b><span>Titulares con territorio (real)</span></div>
 </section>
 
@@ -278,6 +283,9 @@ let DEMO=null,SENT=null,RS={},PAD=null,PP_={prov:{}},lastDCode=null,DPEOPLE={},c
 const PA={},MA={};
 let nPv={},nMun={};
 let curProv=null,selMun=null,mode='winner',newsTab='all';
+/* resaltado desde los indicadores: todo en gris salvo las zonas en alarma (rojo) o volátiles (ámbar), colores distintos a los de los partidos */
+let focus='';
+const FOC={alarm:{col:'#f87171',lab:'En alarma (riesgo ≥ 60)',test:a=>a.risk>=60},vol:{col:'#fbbf24',lab:'Volátiles',test:a=>a.type==='Volátil'}};
 let map,provLayer,munLayer,chart;
 const cache={};
 /* ---------- resultados reales 2023 (Ministerio del Interior) sobre el modelo ---------- */
@@ -345,6 +353,10 @@ function colorFor(a,c){
   const rs=realSent(c);return rs?{fill:ramp(SENTR,(rs.v+50)/100),op:.9}:{fill:ramp(SENTR,(a.sent+50)/100),op:SENT?.3:.85};
 }
 function styleFor(c,tbl){
+  if(focus&&((tbl===PA&&!curProv)||(tbl===MA&&curProv))){
+    const f=FOC[focus],hit=f.test(tbl[c]),on=(tbl===MA&&selMun===c);
+    return hit?{fillColor:f.col,fillOpacity:.92,color:'#fff',weight:on?2.5:1.6}:{fillColor:'#475569',fillOpacity:.25,color:on?'#fff':'#0b0f15',weight:on?2.5:.5};
+  }
   const k=colorFor(tbl[c],c),on=(tbl===MA&&selMun===c),dim=tbl===MA&&selMun&&!on;
   return {fillColor:k.fill,fillOpacity:dim?k.op*.35:k.op,color:on?'#fff':'#0b0f15',weight:on?2.5:tbl===PA?.8:.5};
 }
@@ -355,6 +367,11 @@ function restyle(){
 }
 function legend(){
   let h='';
+  if(focus){
+    const f=FOC[focus];
+    $('legend').innerHTML=`<div><span class="sw" style="background:${f.col}"></span>${f.lab}</div><div><span class="sw" style="background:#475569;opacity:.5"></span>Resto</div><div style="margin-top:4px">Resaltado activo: pulsa de nuevo el indicador (o el total) para volver al mapa original.</div>`;
+    return;
+  }
   if(mode==='mun')h='<div>Partido más votado en las municipales de mayo de 2023 (por municipio; entra el nivel de municipio al abrir una provincia).</div><div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
   else if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox','Cs'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
   else{
@@ -421,7 +438,17 @@ function renderAll(){
   $('k3').textContent=selMun?(MA[selMun].type==='Volátil'?1:0):ar.filter(a=>a.type==='Volátil').length;
   $('k4').textContent=newsFor().length;
   ficha();renderNews();renderRisks();renderRank();renderAgents();if(drawerOpen)renderDrawer();
+  markKpis();if(focus)restyle();
 }
+function markKpis(){
+  [['kb2','alarm'],['kb3','vol']].forEach(([id,f])=>$(id).setAttribute('aria-pressed',String(focus===f)));
+  $('kb1').setAttribute('aria-pressed','false');
+}
+function setFocus(f){
+  focus=(f&&focus!==f)?f:'';   // pulsar de nuevo el mismo indicador (o el total) quita el resaltado
+  markKpis();restyle();
+}
+['kb1','kb2','kb3'].forEach(id=>$(id).addEventListener('click',()=>setFocus($(id).dataset.f)));
 function bar(v,col){return `<div class="bar"><i style="width:${Math.max(0,Math.min(100,v))}%;background:${col}"></i></div>`}
 function ficha(){
   let c,a,name,sub,nc;
