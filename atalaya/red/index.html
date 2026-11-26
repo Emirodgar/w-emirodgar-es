@@ -94,7 +94,7 @@ var f0=function(x){return Math.round(x).toLocaleString('es-ES')};
 var NS='http://www.w3.org/2000/svg';
 var PE=window.PE;
 var PKEY={PP:'PP',PSOE:'PSOE',VOX:'Vox',SUMAR:'Sumar',FA:'Sumar','FA/PODEMOS':'Sumar',PODEMOS:'Podemos'};
-var COL={PP:'#3b9cff',PSOE:'#ef4444',Vox:'#7ac943',Sumar:'#d6246e',Podemos:'#9b59d0',Cs:'#f59e0b'};
+var COL={PP:'#3b9cff',PSOE:'#ef4444',Vox:'#7ac943',Sumar:'#d6246e',Podemos:'#9b59d0'};
 var MCOL='#e879f9';
 var TYPES={mp:{n:'Medio → partido',c:MCOL},mc:{n:'Medio → candidato',c:'#a78bfa'},pr:{n:'Partido ↔ partido',c:'#2dd4bf'}};
 var on={mp:true,mc:true,pr:true};
@@ -172,7 +172,7 @@ function draw(){
   var defs=el('defs',{},svg);
   /* posiciones */
   var pos={},CX=410,CY=350,RX=185,RY=200;
-  var order=['PP','PSOE','Vox','Sumar','Podemos','Cs'].filter(function(p){return G.parties.indexOf(p)>=0});
+  var order=['PP','PSOE','Vox','Sumar','Podemos'].filter(function(p){return G.parties.indexOf(p)>=0});
   order.forEach(function(p,i){
     var ang=-Math.PI/2+i*2*Math.PI/order.length+0.35;
     pos['p:'+p]={x:CX+RX*Math.cos(ang),y:CY+RY*Math.sin(ang),r:26+Math.min(14,Math.sqrt(G.nodeN['p:'+p])*0.9),ang:ang};

@@ -336,7 +336,7 @@ function render(){
   h+='<div class="kpis" style="margin:14px 0 0"><div class="m"><span>Primer partido más probable</span><b>'+PARTS[top][0]+'</b><small>'+Math.round(M.pfirst[top]*100)+' % de probabilidad</small></div>'+
      (M.A[0]&&M.A[1]?'<div class="m"><span>PP por delante del PSOE</span><b>'+Math.round(M.ppAhead*100)+' %</b><small>en voto</small></div>':'')+
      '<div class="m"><span>PP + Vox vs. izquierda</span><b>'+sg(M.gap.m)+'</b><small>puntos · '+Math.round(M.rightAhead*100)+' % PP+Vox</small></div></div>';
-  h+='<p class="disc">Banda = intervalo del 80 % ('+N.toLocaleString('es-ES')+' simulaciones). Marca = media ponderada. Partidos simulados con independencia entre sí y sin Otros ni Cs; no se proyectan escaños (fase siguiente).</p>';
+  h+='<p class="disc">Banda = intervalo del 80 % ('+N.toLocaleString('es-ES')+' simulaciones). Marca = media ponderada. Partidos simulados con independencia entre sí y sin Otros; no se proyectan escaños (fase siguiente).</p>';
   $('forecast').innerHTML=h;
   $('insFor').textContent=PARTS[+$('mine').value][0];$('insights').innerHTML=insights(M);
   $('house').innerHTML=house(M)||'<p class="empty">Sin datos.</p>';

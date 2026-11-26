@@ -69,7 +69,7 @@ button,select,input{font:inherit;color:inherit}
       <label for="spre">Tipo de evento</label><select id="spre"></select>
       <label for="sactor">Protagonista (texto libre)</label><input type="text" id="sactor" maxlength="60">
       <label for="sp">Partido afectado</label>
-      <select id="sp"><option>PP</option><option>PSOE</option><option>Vox</option><option>Cs</option><option>Sumar</option><option>Podemos</option></select>
+      <select id="sp"><option>PP</option><option>PSOE</option><option>Vox</option><option>Sumar</option><option>Podemos</option></select>
       <label for="sd">Efecto</label><select id="sd"><option value="-1">Negativo para el partido</option><option value="1">Positivo para el partido</option></select>
       <label for="sg"><span class="rl"><span>Gravedad del hecho</span><output id="sgo"></output></span></label><input type="range" id="sg" min="0" max="100">
       <label for="sa"><span class="rl"><span>Alcance mediático</span><output id="sao"></output></span></label><input type="range" id="sa" min="0" max="100">
@@ -197,7 +197,7 @@ function renderResults(){
   }
   var qn=function(k,pc){return runs.map(function(r){return r[k]}).sort(function(a,b){return a-b})[Math.floor(pc*(runs.length-1))]};
   var mean=function(f){return cs.reduce(function(s,c){return s+f(SC[c].e)},0)/cs.length};
-  var keys=['PP','PSOE','Vox','Cs','Sumar','Podemos','Otros'];
+  var keys=['PP','PSOE','Vox','Sumar','Podemos','Otros'];
   var rows=keys.map(function(k){var b=mean(function(e){return e.before[k]}),a=mean(function(e){return e.after[k]});return {k:k,b:b,a:a,d:a-b}});
   var flips=cs.filter(function(c){return SC[c].flip}).sort(function(a,b){return Math.abs(SC[b].dx)-Math.abs(SC[a].dx)});
   var u0=mean(function(e){return e.und0}),u1=mean(function(e){return e.und1}),unit=scope==='ES'?'provincias':'municipios';

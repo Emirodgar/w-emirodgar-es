@@ -1,8 +1,8 @@
 /* Núcleo de simulación de Atalaya (datos de ejemplo + motor de escenarios). Expone window.AT. */
 (function () {
-  var PARTIES = [['PP', '#3b9cff'], ['PSOE', '#ef4444'], ['Vox', '#7ac943'], ['Cs', '#fb923c'], ['Sumar', '#d6246e'], ['Podemos', '#9b59d0'], ['Otros', '#94a3b8']];
+  var PARTIES = [['PP', '#3b9cff'], ['PSOE', '#ef4444'], ['Vox', '#7ac943'], ['Sumar', '#d6246e'], ['Podemos', '#9b59d0'], ['Otros', '#94a3b8']];
   var COL = {}; PARTIES.forEach(function (p) { COL[p[0]] = p[1]; });
-  var POS = { Vox: 9, PP: 7, Cs: 5.5, Otros: 5, PSOE: 3.5, Sumar: 2, Podemos: 1.5 };   // eje ideológico 0-10 (supuesto del modelo)
+  var POS = { Vox: 9, PP: 7, Otros: 5, PSOE: 3.5, Sumar: 2, Podemos: 1.5 };   // eje ideológico 0-10 (supuesto del modelo)
   var ID2P = { PP: 'PP', PSOE: 'PSOE', VOX: 'Vox', SUMAR: 'Sumar', PODEMOS: 'Podemos' };
   var YEARS = [2011, 2015, 2019, 2023], CAPITAL = '37274';
 
@@ -20,12 +20,13 @@
       ['PP', 'PSOE', 'Vox', 'Cs'].forEach(function (k) { s[k] = Math.max(0, s[k]); tot += s[k]; });
       s.Otros = Math.max(2, 6 + r() * 12); tot += s.Otros;
       for (var k in s) s[k] = +(s[k] / tot * 100).toFixed(1);
+      s.Otros = +(s.Otros + s.Cs).toFixed(1); delete s.Cs;   // Ciudadanos ya no se presenta: su peso pasa a Otros
       hist.push(s);
     });
     var sent = Math.round((r() - .5) * 24 * (scale ? 1.6 : 1));
     if (code === CAPITAL) {
       [[44.8, 29.1, 6.2, 12.1], [41.2, 28.4, 7.5, 17.0], [43.3, 31.0, 8.8, 10.2], [45.9, 27.5, 10.4, 2.5]].forEach(function (v, i) {
-        var s = { PP: v[0], PSOE: v[1], Vox: v[2], Cs: v[3] }; s.Otros = +(100 - v[0] - v[1] - v[2] - v[3]).toFixed(1); hist[i] = s;
+        var s = { PP: v[0], PSOE: v[1], Vox: v[2] }; s.Otros = +(100 - v[0] - v[1] - v[2]).toFixed(1); hist[i] = s;
       });
       sent = -38;
     }
@@ -33,7 +34,7 @@
   }
 
   function analyse(sim) {
-    var h = sim.hist, K = ['PP', 'PSOE', 'Vox', 'Cs'];
+    var h = sim.hist, K = ['PP', 'PSOE', 'Vox'];
     var win = h.map(function (s) { return K.slice().sort(function (a, b) { return s[b] - s[a]; })[0]; });
     var last = h[h.length - 1], ord = K.slice().sort(function (a, b) { return last[b] - last[a]; });
     var margin = +(last[ord[0]] - last[ord[1]]).toFixed(1), ped = 0;
@@ -70,7 +71,7 @@
     var top = function (o) { return keys.filter(function (k) { return k !== 'Otros'; }).sort(function (a, b) { return o[b] - o[a]; })[0]; };
     return { before: shares, after: sh, und0: und, und1: u, abst: abst, I: I, winB: top(shares), winA: top(sh) };
   }
-  function terrShares(a) { var s = a.last, o = s.Otros; return { PP: s.PP, PSOE: s.PSOE, Vox: s.Vox, Cs: s.Cs, Sumar: o * .45, Podemos: o * .15, Otros: o * .40 }; }
+  function terrShares(a) { var s = a.last, o = s.Otros; return { PP: s.PP, PSOE: s.PSOE, Vox: s.Vox, Sumar: o * .45, Podemos: o * .15, Otros: o * .40 }; }
 
   /* media de encuestas real (como /elecciones-espana: sondeos de los últimos 30 días, sin CIS) */
   function nationalFromPolls(enc) {
@@ -79,7 +80,7 @@
     var rec = s.filter(function (x) { return (last - new Date(x.fecha)) / 864e5 <= 30; }), sm = {}, ct = {};
     rec.forEach(function (x) { var w = Math.sqrt(x.muestra || 1000); for (var k in x.voto) { var p = ID2P[k]; if (!p) continue; sm[p] = (sm[p] || 0) + x.voto[k] * w; ct[p] = (ct[p] || 0) + w; } });
     var shares = {}, tot = 0; for (var p in sm) { shares[p] = sm[p] / ct[p]; tot += shares[p]; }
-    shares.Cs = 0; shares.Otros = Math.max(0, 100 - tot);
+    shares.Otros = Math.max(0, 100 - tot);
     return { shares: shares, n: rec.length, fecha: s[0].fecha };
   }
 

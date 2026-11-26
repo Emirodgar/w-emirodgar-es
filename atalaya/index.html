@@ -296,8 +296,8 @@ function regCol(k){return COL[k]||'#a78bfa'}
 function realAnalysis(sim,v,extra){
   /* v: {sigla:votos} con votos válidos; sustituye 2023 por el dato real y recalcula; conserva ganador real aunque sea regional */
   const tot=Object.values(v).reduce((a,b)=>a+b,0);if(!tot)return analyse(sim);
-  const pc=k=>+((v[k]||0)/tot*100).toFixed(1),sh={PP:pc('PP'),PSOE:pc('PSOE'),Vox:pc('VOX'),Cs:pc('Cs')};
-  sh.Otros=+(100-sh.PP-sh.PSOE-sh.Vox-sh.Cs).toFixed(1);
+  const pc=k=>+((v[k]||0)/tot*100).toFixed(1),sh={PP:pc('PP'),PSOE:pc('PSOE'),Vox:pc('VOX')};
+  sh.Otros=+(100-sh.PP-sh.PSOE-sh.Vox).toFixed(1);
   sim.hist[sim.hist.length-1]=sh;
   const a=analyse(sim),ord=Object.keys(v).sort((x,y)=>v[y]-v[x]),w=sg(ord[0]);
   a.real={top:ord.slice(0,5).map(k=>[sg(k),pc(k)]),extra:extra||{}};
@@ -373,7 +373,7 @@ function legend(){
     return;
   }
   if(mode==='mun')h='<div>Partido más votado en las municipales de mayo de 2023 (por municipio; entra el nivel de municipio al abrir una provincia).</div><div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
-  else if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox','Cs'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
+  else if(mode==='winner')h=PARTIES.filter(p=>['PP','PSOE','Vox'].includes(p[0])).map(p=>`<div><span class="sw" style="background:${p[1]}"></span>${p[0]}</div>`).join('')+'<div style="margin-top:4px">Más opaco = mayor ventaja.</div>';
   else{
     const s=mode==='vol'?VOLR:mode==='risk'?RISKR:SENTR;
     const e=mode==='vol'?['Estable','Muy volátil']:mode==='risk'?['Seguro','Alarma']:['Negativo','Positivo'];
@@ -455,7 +455,7 @@ function ficha(){
   if(selMun){c=selMun;a=MA[c];name=munNames[c];nc=nMun[c]||0;sub=`${provNames[curProv]} · INE ${c}`}
   else if(curProv){c=curProv;a=PA[c];name=provNames[c];nc=nPv[c]||0;sub=`Provincia · ${cache[c].features.length} municipios`}
   else{
-    const ar=Object.values(PA),K=['PP','PSOE','Vox','Cs','Otros'];
+    const ar=Object.values(PA),K=['PP','PSOE','Vox','Otros'];
     const hist=YEARS.map((y,i)=>Object.fromEntries(K.map(k=>[k,+(ar.reduce((s,x)=>s+x.hist[i][k],0)/ar.length).toFixed(1)])));
     const top=Object.keys(PA).sort((x,y)=>PA[y].risk-PA[x].risk).slice(0,3).map(x=>provNames[x]).join(', ');
     const cnt={};ar.forEach(x=>cnt[x.winner]=(cnt[x.winner]||0)+1);
@@ -514,11 +514,11 @@ function realBlock(a){
 }
 function drawChart(a){
   if(chart)chart.destroy();
-  chart=new Chart($('ch'),{type:'line',data:{labels:YEARS,datasets:['PP','PSOE','Vox','Cs'].map(k=>({label:k,data:a.hist.map(h=>h[k]),borderColor:COL[k],backgroundColor:COL[k],tension:.3,pointRadius:3,borderWidth:2}))},
+  chart=new Chart($('ch'),{type:'line',data:{labels:YEARS,datasets:['PP','PSOE','Vox'].map(k=>({label:k,data:a.hist.map(h=>h[k]),borderColor:COL[k],backgroundColor:COL[k],tension:.3,pointRadius:3,borderWidth:2}))},
     options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10,font:{size:11}}}},scales:{x:{ticks:{color:'#8b97a8'},grid:{color:'#1a2230'}},y:{ticks:{color:'#8b97a8',callback:v=>v+'%'},grid:{color:'#1a2230'}}}}});
 }
 function briefing(a,n,k){
-  const K=['PP','PSOE','Vox','Cs'],ord=K.slice().sort((x,y)=>a.last[y]-a.last[x]),sec=ord[1];let t='';
+  const K=['PP','PSOE','Vox'],ord=K.slice().sort((x,y)=>a.last[y]-a.last[x]),sec=ord[1];let t='';
   if(a.type==='Bastión'&&a.sent<-20)t=`<b>${esc(n)} ha votado ${a.winner} en las cuatro elecciones</b>, pero la tendencia de sentimiento de los últimos 90 días es ${a.sent}. Es el patrón de bastión que se agrieta: histórico estable, ánimo en caída. Recomendación: priorizar agenda local, revisar la respuesta a los temas que concentran las críticas y vigilar a ${sec}, que está a ${a.margin} puntos.`;
   else if(a.risk>=60)t=`${esc(n)} combina ${a.type==='Volátil'?'alta volatilidad histórica':'una ventaja corta'} (${a.margin} pts sobre ${sec}) con sentimiento ${a.sent<0?'a la baja':'poco favorable'}. Plaza decisiva: concentrar esfuerzos aquí antes que en plazas con ventaja holgada.`;
   else if(a.type==='Bastión')t=`${esc(n)} es una plaza estable de ${a.winner} (ventaja ${a.margin} pts, volatilidad ${a.vol}). Mantener presencia sin sobreinvertir y revisar solo si el sentimiento cae por debajo de −20.`;
@@ -530,7 +530,7 @@ function renderNews(){
   let list=newsFor(),note='';
   if(newsTab!=='all')list=list.filter(n=>n.a===newsTab);
   if((curProv||selMun)&&!list.length){list=(selMun?news.filter(n=>n.pv.includes(curProv)):news).filter(n=>newsTab==='all'||n.a===newsTab).slice(0,12);note=`<div class="empty">Sin titulares etiquetados para este territorio. Mostrando prensa más cercana.</div>`}
-  $('news').innerHTML=note+(list.slice(0,40).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}${n.p.map(p=>`<span class="tag ${p}">${p}</span>`).join('')}</div></div>`).join('')||'<div class="empty">Sin titulares.</div>');
+  $('news').innerHTML=note+(list.slice(0,40).map(n=>`<div class="item"><a href="${esc(n.u)}" target="_blank" rel="noopener">${esc(cleanTitle(n.t))}</a><div class="meta"><span>${esc(n.m)}</span><span>hace ${timeAgo(n.f)}</span>${tags(n)}${n.p.filter(p=>p!=='Cs').map(p=>`<span class="tag ${p}">${p}</span>`).join('')}</div></div>`).join('')||'<div class="empty">Sin titulares.</div>');
 }
 function renderRisks(){
   let list=newsFor().filter(isRisk);
