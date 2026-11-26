@@ -14,6 +14,7 @@
  "yPaso": 3,
  "colTabla": "Déficit (-) / superávit (+), % PIB",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la inflación en España desde 1976?", "url": "/atalaya/fichas/macro/inflacion/", "desc": "la inflación alta de los años 70 y 80 convivió con fuertes déficits públicos."},
   {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "el desplome de la vivienda y la banca dispararon el déficit en la crisis financiera."},
   {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la otra cara de la misma cuenta: los ingresos públicos."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "gasto menos ingresos: el resultado de cada año."},

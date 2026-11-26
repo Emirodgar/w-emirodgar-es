@@ -13,6 +13,7 @@
  "yPaso": 10,
  "colTabla": "% del PIB",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la inflación en España desde 1976?", "url": "/atalaya/fichas/macro/inflacion/", "desc": "la inflación también eleva la recaudación nominal de impuestos."},
   {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "los impuestos ligados a la vivienda (IBI, ITP) dependen en parte de estos precios."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "la otra cara de la misma cuenta: lo que gasta el Estado."},
   {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "más población activa también afecta a los ingresos públicos."},

@@ -13,6 +13,7 @@
  "yPaso": 5,
  "colTabla": "Tasa de paro (%)",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la inflación en España desde 1976?", "url": "/atalaya/fichas/macro/inflacion/", "desc": "la inflación y el paro, juntos, miden el verdadero coste de una crisis para los hogares."},
   {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "el paro disparado por la crisis golpeó la demanda de vivienda e hipotecas."},
   {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "la misma metodología, con la población."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "el gasto sube cuando sube el paro, por las prestaciones."},

@@ -14,6 +14,7 @@
  "yPaso": 5,
  "colTabla": "Var. anual del precio de la vivienda (%)",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la inflación en España desde 1976?", "url": "/atalaya/fichas/macro/inflacion/", "desc": "el precio de la vivienda puede subir más o menos que la inflación general."},
   {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "los impuestos ligados a la vivienda (IBI, ITP) dependen en parte de estos precios."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "el paro disparado por la crisis golpeó la demanda de vivienda e hipotecas."},
   {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la vivienda se dispara o se hunde con el ciclo económico, aún más que el PIB."},

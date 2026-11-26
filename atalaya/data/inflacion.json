@@ -1,0 +1,45 @@
+{
+ "slug": "inflacion",
+ "titulo_pagina": "Inflación en España: evolución del IPC desde 1976, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado la inflación en España desde 1976?",
+ "pregunta_faq": "¿Cuál ha sido la inflación más alta y más baja en España desde la Transición?",
+ "resumen": "La inflación en España (IPC, variación interanual de diciembre) alcanzó un máximo histórico del 26,4 % en 1977, bajó de forma sostenida hasta estabilizarse en torno al 2-3 % desde los años 2000, llegó a ser negativa en 2009, 2014-2015 y 2020, y subió hasta el 6,5 % en 2021 y el 5,7 % en 2022 por la crisis energética, antes de moderarse hasta el 2,9 % en 2025.",
+ "aviso": "Variación interanual del Índice de Precios de Consumo (IPC) general, dato de diciembre de cada año, según la serie enlazada oficial del INE (que mantiene la comparabilidad del dato pese a los sucesivos cambios de base del índice: 1976, 1983, 1992, 2001, 2006, 2011, 2016 y 2021). El INE conserva esta misma serie enlazada hasta enero de 1962, con valores aún más altos en los años 60 (más del 9-13 % en varios años); no se incluyen aquí por quedar fuera del periodo democrático que cubren las bandas de color de este panel, que empieza como el resto del histórico macroeconómico en 1976, el año de la Transición. Las bandas de color solo señalan quién gobernaba en cada momento: la inflación depende sobre todo de factores globales (precio del petróleo y la energía, políticas del Banco Central Europeo desde 1999, crisis como la financiera, la pandemia o la guerra de Ucrania), no solo de qué partido gobierna.",
+ "fuente": "INE, Índice de Precios de Consumo (IPC), variación anual, serie enlazada",
+ "fuenteUrl": "https://www.ine.es/jaxiT3/Tabla.htm?t=50902",
+ "actualizado": "2026-11-26",
+ "unidad": "%",
+ "yMax": 30,
+ "yMin": -10,
+ "yPaso": 10,
+ "colTabla": "Inflación (IPC, variación anual en diciembre)",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la inflación también eleva la recaudación nominal de impuestos."},
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la inflación y el paro, juntos, miden el verdadero coste de una crisis para los hogares."},
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "el PIB nominal crece más rápido que el real cuando sube la inflación."},
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la inflación encarece los costes de los autónomos tanto como los de cualquier otro trabajador."},
+  {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "el PIB per cápita en euros corrientes sube en parte solo por la inflación, no por crecimiento real."},
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la inflación alta de los años 70 y 80 convivió con fuertes déficits públicos."},
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "una inflación alta reduce el peso real de la deuda acumulada."},
+  {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "el gasto público también sube con la inflación, aunque no cambie en términos reales."},
+  {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "la inflación afecta por igual a toda la población, nacida aquí o fuera."},
+  {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "el precio de la vivienda puede subir más o menos que la inflación general."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Inflación (IPC, variación anual en diciembre)",
+   "datos": {
+    "1976": 19.8, "1977": 26.4, "1978": 16.5, "1979": 15.6, "1980": 15.2,
+    "1981": 14.4, "1982": 14.0, "1983": 12.2, "1984": 9.0, "1985": 8.2,
+    "1986": 8.3, "1987": 4.6, "1988": 5.8, "1989": 6.9, "1990": 6.5,
+    "1991": 5.5, "1992": 5.3, "1993": 4.9, "1994": 4.3, "1995": 4.3,
+    "1996": 3.2, "1997": 2.0, "1998": 1.4, "1999": 2.9, "2000": 4.0,
+    "2001": 2.7, "2002": 4.0, "2003": 2.6, "2004": 3.2, "2005": 3.7,
+    "2006": 2.7, "2007": 4.2, "2008": 1.4, "2009": 0.8, "2010": 3.0,
+    "2011": 2.4, "2012": 2.9, "2013": 0.3, "2014": -1.0, "2015": 0.0,
+    "2016": 1.6, "2017": 1.1, "2018": 1.2, "2019": 0.8, "2020": -0.5,
+    "2021": 6.5, "2022": 5.7, "2023": 3.1, "2024": 2.8, "2025": 2.9
+   }
+  }
+ }
+}

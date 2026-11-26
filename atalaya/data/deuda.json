@@ -14,6 +14,7 @@
  "yPaso": 25,
  "colTabla": "Deuda pública (% PIB)",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la inflación en España desde 1976?", "url": "/atalaya/fichas/macro/inflacion/", "desc": "una inflación alta reduce el peso real de la deuda acumulada."},
   {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "el rescate bancario tras el desplome inmobiliario elevó la deuda pública."},
   {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la deuda es la suma acumulada de los déficits de cada año."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "la otra mitad de la cuenta: cuánto gasta el Estado cada año."},
