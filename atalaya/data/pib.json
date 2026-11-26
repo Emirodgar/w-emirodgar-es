@@ -15,6 +15,7 @@
  "colTabla": "Var. PIB (%)",
  "enlaces": [
   {"titulo": "MacroData España", "url": "/macrodata-espana/", "desc": "PIB, paro, IPC y otros indicadores, actualizados cada mes."},
+  {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "la vivienda se dispara o se hunde con el ciclo económico, aún más que el PIB."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "el gasto en porcentaje del PIB sube cuando el PIB cae."},
   {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "la población y el PIB crecen juntos cuando hay más inmigración."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},

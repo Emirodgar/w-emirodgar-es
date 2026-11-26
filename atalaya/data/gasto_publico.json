@@ -13,6 +13,7 @@
  "yPaso": 15,
  "colTabla": "Gasto público total, % PIB",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "el rescate del sistema financiero tras el desplome de la vivienda elevó el gasto público."},
   {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "la otra cara de la misma cuenta: los ingresos públicos."},
   {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "gasto menos ingresos: el resultado de cada año."},
   {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la deuda es la suma acumulada de los déficits de cada año."},

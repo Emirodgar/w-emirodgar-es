@@ -1,0 +1,38 @@
+{
+ "slug": "vivienda",
+ "titulo_pagina": "Precio de la vivienda en España: evolución desde 2007, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?",
+ "pregunta_faq": "¿Cuánto ha subido o bajado el precio de la vivienda en España?",
+ "resumen": "El precio de la vivienda en España se desplomó entre 2008 y 2013, con una caída anual máxima del -13,7 % en 2012, tras el pico del boom inmobiliario (+9,8 % en 2007); desde 2015 ha subido casi todos los años, hasta un máximo histórico del +12,7 % en 2025.",
+ "aviso": "Variación interanual del Índice de Precios de Vivienda (IPV, todo tipo de vivienda), INE. El IPV arranca en 2007, casi en el pico de la burbuja inmobiliaria: no existe una serie anterior con metodología estrictamente comparable (las series más largas del Banco de España o el antiguo Ministerio de Fomento empalman tres fuentes distintas con criterios de tasación diferentes), así que aquí se publica solo el tramo 2007-2025, de fuente única. Es una variación de precio nominal, sin descontar la inflación. Las bandas de color solo señalan quién gobernaba en cada momento: el precio de la vivienda depende del ciclo económico, del crédito hipotecario y de la oferta y la demanda de cada momento, no solo de qué partido gobierna.",
+ "fuente": "INE, Índice de Precios de Vivienda (IPV), variación anual, España",
+ "fuenteUrl": "https://www.ine.es/jaxiT3/Tabla.htm?t=79540",
+ "actualizado": "2026-11-26",
+ "unidad": "%",
+ "yMax": 15,
+ "yMin": -15,
+ "yPaso": 5,
+ "colTabla": "Var. anual del precio de la vivienda (%)",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "los impuestos ligados a la vivienda (IBI, ITP) dependen en parte de estos precios."},
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "el paro disparado por la crisis golpeó la demanda de vivienda e hipotecas."},
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la vivienda se dispara o se hunde con el ciclo económico, aún más que el PIB."},
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la construcción y la venta de vivienda dan trabajo a muchos autónomos."},
+  {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "una vivienda más cara exige más renta por persona para poder comprarla."},
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "el desplome de la vivienda y la banca dispararon el déficit en la crisis financiera."},
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "el rescate bancario tras el desplome inmobiliario elevó la deuda pública."},
+  {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "el rescate del sistema financiero tras el desplome de la vivienda elevó el gasto público."},
+  {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "más población también presiona la demanda de vivienda."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Precio de la vivienda (variación interanual)",
+   "datos": {
+    "2007": 9.8, "2008": -1.5, "2009": -6.7, "2010": -2.0, "2011": -7.4,
+    "2012": -13.7, "2013": -10.6, "2014": 0.3, "2015": 3.6, "2016": 4.7,
+    "2017": 6.2, "2018": 6.7, "2019": 5.1, "2020": 2.1, "2021": 3.7,
+    "2022": 7.4, "2023": 4.0, "2024": 8.4, "2025": 12.7
+   }
+  }
+ }
+}

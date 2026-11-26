@@ -407,6 +407,7 @@ def main():
         ("macro/deuda/", "¿Cómo ha evolucionado la deuda pública en España desde 1995?"),
         ("macro/gasto-publico/", "¿Cómo ha evolucionado el gasto público en España desde 1995?"),
         ("macro/poblacion-extranjera/", "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?"),
+        ("macro/vivienda/", "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?"),
     ]
     extra_politico = "<h2>Gestión autonómica y coherencia parlamentaria</h2><ul>" + "".join(
         f"<li><a href='/atalaya/fichas/{r}'>{E(t)}</a></li>" for r, t in FICHAS_POLITICO) + "</ul>"

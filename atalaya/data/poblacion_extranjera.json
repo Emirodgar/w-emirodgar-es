@@ -13,6 +13,7 @@
  "yPaso": 3,
  "colTabla": "Población extranjera, % del total",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "más población también presiona la demanda de vivienda."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
   {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
   {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la población y el PIB crecen juntos cuando hay más inmigración."},

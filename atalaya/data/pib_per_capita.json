@@ -16,6 +16,7 @@
  "colTabla": "PIB per cápita (€)",
  "enlaces": [
   {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma serie, en tasa de variación anual en vez de en euros por persona."},
+  {"titulo": "¿Cómo ha evolucionado el precio de la vivienda en España desde 2007?", "url": "/atalaya/fichas/macro/vivienda/", "desc": "una vivienda más cara exige más renta por persona para poder comprarla."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "la misma metodología, con el gasto de las Administraciones Públicas."},
   {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "el PIB per cápita reparte el mismo PIB entre más o menos población."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
