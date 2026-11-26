@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
-date_modified: 2026-10-28
+date_modified: 2026-11-26
 folder: ia
 permalink: deepfakes-desinformacion-ia
 ---
@@ -39,6 +39,12 @@ Aquí hay un vacío que sorprende: en España **no existe un delito llamado "dee
 ## La respuesta que llega desde Europa
 
 Aquí es donde entra el [Reglamento Europeo de IA (AI Act)](https://emirodgar.es/reglamento-europeo-ia-act), que desde el 2 de agosto de 2026 obliga a etiquetar como tal cualquier contenido sintético generado por IA, deepfakes incluidos. No es una solución mágica —una etiqueta no impide que alguien caiga en una estafa si no la ve o no la entiende—, pero sí es la primera vez que existe una obligación legal clara a nivel europeo de identificar este tipo de contenido en origen, en lugar de perseguirlo solo después del daño.
+
+## La propaganda que ya no se anuncia
+
+La manipulación política no necesita un vídeo falso. Desde octubre de 2025, Meta y Google no aceptan anuncios políticos en la UE por el reglamento de transparencia, y la IA abarata la producción de contenido. El resultado, según [La Vanguardia](https://www.lavanguardia.com/politica/20261108/11678632/como-partidos-infiltran-algoritmo.html), es que parte de la propaganda llega ya disfrazada: de la mano de creadores que se presentan como independientes, o de cuentas con aspecto de canal de noticias o de iniciativa ciudadana que en realidad alimentan los partidos. Iago Moreno, del Future of Technology Institute, habla de tres anillos: infraestructura gobernada desde los partidos, creadores satélite a los que se cuida durante toda la legislatura y perfiles afines que operan en las mismas campañas. Son testimonios de profesionales del sector, no una auditoría, pero describen un problema real: el seguidor casi nunca puede saber si detrás hay un acuerdo.
+
+Y hay un segundo nivel que ya vimos con el GEO. Ricardo Baeza-Yates, de la Universitat Pompeu Fabra, apunta que fabricar información falsa es ahora más fácil y barato, y eso sesga lo que encuentran después los chatbots: intoxicar deja de ser solo un modo de engañar a las personas y pasa a ser también una forma de contaminar la fuente de la IA que luego responderá a esas personas. Lo explicamos en [cómo la IA ya recomienda partidos y por qué los partidos quieren influirla](https://emirodgar.es/geo).
 
 ## No hace falta un vídeo: basta una estadística falsa
 

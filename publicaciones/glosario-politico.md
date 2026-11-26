@@ -7,6 +7,7 @@ sitemap: 1
 feed: 1
 folder: politica
 date: 2025-04-15
+date_modified: 2026-11-26
 image: 
 permalink: glosario-politico
 
@@ -51,4 +52,6 @@ Ejemplo: Parte del ideario del PP, Ciudadanos o Vox.
 - **Intervencionismo estatal**: Cuando el Estado regula y participa activamente en la economía para corregir fallos del mercado.
 - **Soberanismo**: Variante del nacionalismo que pone énfasis en la capacidad de un territorio para autogobernarse plenamente.
 - **Financiación de partidos**: sistema mixto de subvenciones públicas y aportaciones privadas limitadas con el que se sostienen los partidos españoles. Lo explicamos con detalle en [cómo se financian los partidos políticos en España](https://emirodgar.es/financiacion-partidos-politicos-espana).
+- **Lado B digital**: infraestructura de cuentas y medios que no lleva las siglas de un partido pero está controlada por él o depende de él. Es la expresión que usa Iago Moreno, del Future of Technology Institute, para describir los ecosistemas que los partidos construyen durante toda una legislatura.
+- **Propaganda encubierta**: contenido político que no se presenta como tal, por ejemplo cuentas con apariencia de medio de comunicación o creadores cuyo vínculo con un partido no se declara. Desde octubre de 2025 Meta y Google no aceptan anuncios políticos en la UE, y parte de la campaña se ha desplazado hacia este terreno. Más en [propaganda y desinformación con IA](https://emirodgar.es/deepfakes-desinformacion-ia).
 

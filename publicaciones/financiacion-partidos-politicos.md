@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
+date_modified: 2026-11-26
 folder: politica
 permalink: financiacion-partidos-politicos-espana
 ---
@@ -43,6 +44,12 @@ Junto a los partidos, existen las **fundaciones vinculadas** a cada formación, 
 ## Quién controla que todo esto se cumpla
 
 El artículo 16.1 de la LOFPP atribuye **al Tribunal de Cuentas, en exclusiva**, el control de la actividad económico-financiera de los partidos políticos. Es el organismo que revisa las cuentas anuales de cada formación y puede detectar irregularidades en el uso de las subvenciones o en el origen de las donaciones. Es, junto con la propia limitación legal a las donaciones, el principal mecanismo con el que cuenta el sistema para evitar que la financiación se convierta en una vía de influencia opaca sobre la política española.
+
+## Un punto ciego nuevo: los creadores de contenido
+
+Desde octubre de 2025, Meta y Google no aceptan anuncios políticos en la UE, y una parte de la comunicación de campaña se ha desplazado hacia creadores de contenido. Según los profesionales que cita [La Vanguardia](https://www.lavanguardia.com/politica/20261108/11678632/como-partidos-infiltran-algoritmo.html), no siempre se les paga en dinero (a veces es una invitación a dar charlas), y cuando hay pago no deja un rastro evidente: un creador con cierto volumen suele tener su propia empresa y factura servicios de comunicación, y a los pequeños se les paga a través de una agencia que contrata el partido. En las cuentas que fiscaliza el Tribunal de Cuentas no aparece una partida de «pago a influencer», sino gastos de comunicación y relaciones públicas.
+
+Conviene no pasarse de frenada: lo que describen no implica por sí mismo ninguna irregularidad contable, y la cifra de cuántos creadores cobran de los partidos es una afirmación de uno de los expertos consultados, no un dato medido. Pero señala un límite del sistema: el control del Tribunal de Cuentas ve el gasto, y el seguidor, que es quien necesita saberlo, no ve el vínculo.
 
 ## Un sistema con reglas claras, pero con puntos ciegos
 

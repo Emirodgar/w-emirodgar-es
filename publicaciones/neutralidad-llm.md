@@ -7,6 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2025-05-21
+date_modified: 2026-11-26
 folder: ia
 permalink: neutralidad-llm
 ---
@@ -85,6 +86,16 @@ Los hallazgos plantean preguntas fundamentales sobre si la **neutralidad políti
 ### Consecuencias sociopolíticas
 
 El sesgo político persistente en los LLMs tiene implicaciones significativas dado su creciente uso como fuentes de información. Un estudio de 2024 encontró que la interacción con LLMs sesgados políticamente puede **influir en las preferencias de voto** de los usuarios. Con 935 votantes registrados estadounidenses interactuando con Claude-3, Llama-3 y GPT-4, los investigadores documentaron cambios medibles en las [intenciones de voto](https://emirodgar.es/encuestas-intencion-voto). Este tipo de influencia resulta aún más relevante en un país con un mapa de [ideologías políticas](https://emirodgar.es/ideologias-politicas) tan fragmentado como España.
+
+### Qué pasa cuando se les pregunta por los partidos españoles
+
+Casi todo lo anterior se midió con test políticos o con votantes estadounidenses. En España hay ya datos más cercanos al uso real: el estudio de la UOC y Science4Insights de octubre de 2026 (61 preguntas, seis asistentes, cuatro lenguas, 1.464 respuestas) muestra que **lo habitual es que la IA no se moje**: en el 89,2% de los casos no recomendó ningún partido, y Claude y Gemini lo hicieron solo en dos de 244 respuestas. Grok, en cambio, eligió en el 40,6% y ChatGPT en el 14,3%.
+
+Cuando sí eligen, el PSOE es el más recomendado (23,6%), seguido de Sumar (16,1%) y el PP (15,7%). Pero si se pondera por lo que más preocupa a los españoles, el PP pasa delante (21,8% frente al 20,5% del PSOE), porque las IA lo señalan como mejor opción en economía, paro e inmigración. En inmigración, PP y Vox se llevan cada uno el 29% de las recomendaciones. Es un resultado que **no encaja del todo con la etiqueta de «sesgo de centro-izquierda»**: el sesgo depende de la pregunta, del asistente y de las fuentes que consulta en ese momento.
+
+Que no recomienden no significa que no orienten. ChatGPT ofreció en una de cada cinco respuestas un partido distinto según las prioridades del usuario, y el 87,6% de las respuestas incluía un aviso de imparcialidad que no siempre se cumplía: Grok llegó a decir que no hay un partido objetivamente mejor y, unos párrafos después, que el PP tenía el planteamiento más detallado. Según Lalueza, esa resistencia inicial hace al asistente más persuasivo, porque genera una confianza que no da un amigo del que ya sabes de qué pie cojea.
+
+El contexto de uso explica por qué importa. Según el INE, el 54,8% de los españoles de 16 a 74 años ha usado asistentes de IA en los últimos tres meses, y el 83,3% entre los de 16 a 24 años, que son también quienes tienen el voto menos atado. Ninguna encuesta pública mide todavía cuántos piden consejo electoral a un chatbot y ni OpenAI ni Anthropic publican esa cifra; en las *midterms* de Estados Unidos, la National Conference on Citizenship calculó que en torno a uno de cada cuatro votantes había consultado a una IA sobre algún candidato. Lo cuenta [La Vanguardia](https://www.lavanguardia.com/politica/20261115/11683658/hola-ia-voto.html), y la parte que más nos toca es la última: como el asistente construye su respuesta con lo que encuentra en la web, quien trabaje mejor sus fuentes puede acabar inclinándola. Lo desarrollamos en [el GEO político](https://emirodgar.es/geo).
 
 ### Direcciones futuras
 

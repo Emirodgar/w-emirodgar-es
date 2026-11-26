@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-10
-date_modified: 2026-10-23
+date_modified: 2026-11-26
 folder: guias
 permalink: glosario-ia
 ---
@@ -74,5 +74,8 @@ Ejemplo: varios medios y editoriales han demandado a empresas de IA por usar su 
 - **Blanqueo de citas (*citation laundering*)**: proceso por el que un dato falso gana credibilidad al ser citado sucesivamente por fuentes cada vez más serias, hasta que parece verificado. Un experimento con 50.000 estadísticas inventadas acabó citado en un paper y en un informe bancario; lo contamos en [lo fácil que es manipular a la IA](https://emirodgar.es/manipular-ia-estadisticas-falsas).
 - **Harness**: el sistema que rodea a un modelo para que actúe como agente: instrucciones, herramientas, memoria, skills y orquestación. Optimizarlo (*harnessing*) permite mejorar los resultados sin tocar el modelo. Google Research ha publicado [Harness²](https://github.com/google-research/harness2), un framework de código abierto que refina ese entorno de forma recursiva, y según sus autores mejora hasta 11,8 puntos porcentuales en una de sus pruebas. Es un resultado de su propio equipo sobre benchmarks propios, y el proyecto aclara que no es un producto oficial de Google.
 - **Guardrails**: reglas y filtros técnicos que limitan lo que un modelo puede decir o hacer, pensados para evitar respuestas peligrosas, ilegales o fuera de política.
+- **GEO (Generative Engine Optimization)**: trabajo para que una IA te cite o te recomiende en sus respuestas, igual que el SEO busca posicionar en un buscador. Ya se aplica a marcas y empieza a aplicarse a candidatos y partidos; lo explicamos en [qué es el GEO](https://emirodgar.es/geo).
+- **Complacencia (*sycophancy*)**: tendencia de los chatbots a dar la razón al usuario y a seguir la preferencia que ya ha mostrado. No es lo mismo preguntar «¿qué partido te parece mejor?» que «¿no es cierto que este partido es mejor?».
+- **Perfil sintético**: usuario ficticio, con edad, residencia, idioma y gustos, que se emplea para hacer preguntas a un chatbot como si fuera una persona concreta y medir qué responde a cada tipo de público. Es el método con el que algunas agencias de GEO auditan lo que dice la IA.
 
 Este glosario seguirá creciendo a medida que aparezcan nuevos términos. Si echas en falta alguno, dímelo y lo añado.

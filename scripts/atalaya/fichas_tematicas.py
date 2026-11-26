@@ -73,6 +73,18 @@ def generar(c):
                     {"@type": "ListItem", "position": 2, "name": "Fichas", "item": f"{BASE}/atalaya/fichas/"},
                     {"@type": "ListItem", "position": 3, "name": nivel2, "item": f"{BASE}/atalaya/fichas/{ruta}"}]}]
 
+    def fq(faqs):
+        """FAQ visible (espejo exacto del FAQPage JSON-LD)."""
+        return "<h2>Preguntas frecuentes</h2>" + "".join(f"<details><summary>{E(a)}</summary><p>{E(b)}</p></details>" for a, b in faqs)
+
+    def lista_pos(a):
+        """«PP a favor, PSOE en contra…» para una afirmación."""
+        g = {}
+        for pt in partidos:
+            x = a["posiciones"].get(pt["id"]) or a["posiciones"].get(pt["siglas"])
+            if x and x["posicion"] in POS and x["posicion"] != "sin_posicion": g.setdefault(POS[x["posicion"]].lower(), []).append(pt["siglas"])
+        return "; ".join(f"{', '.join(v)} {k}" for k, v in g.items()) or "ningún partido tiene una posición clara documentada"
+
     aviso = ("<p class='warn'>Las posiciones proceden de programas anteriores, votaciones y declaraciones públicas recientes, cada una con su fuente. "
              "Los programas electorales de 2026 aún no se han publicado y pueden cambiarlas. Si no hay evidencia clara, figura «Sin posición».</p>")
 
@@ -114,6 +126,14 @@ def generar(c):
         faqs = [(f"¿Qué dicen las encuestas sobre {sig}?", (f"La media de encuestas le da un {enc} %." if enc else "No hay media de encuestas disponible para este partido.")),
                 (f"¿Quién es el candidato de {sig} en 2026?", (f"{cd['nombre']} ({cd.get('cargo') or 'cabeza de lista anunciado'})." if cd.get("nombre") else "Aún no hay un candidato anunciado con los datos disponibles.")),
                 (f"¿Cuántos escaños tiene {sig} en el Congreso?", (f"{esc_act} escaños en el Congreso disuelto." if esc_act else "No tiene representación en el Congreso disuelto según los datos cargados."))]
+        for tm in sorted({a["tema"] for a in afs}):
+            sub_ = [a for a in afs if a["tema"] == tm]
+            cn_ = Counter((a["posiciones"].get(pt["id"]) or a["posiciones"].get(sig) or {}).get("posicion") for a in sub_)
+            det_ = ", ".join(f"{POS[k].lower()} en {v}" for k, v in cn_.items() if k in POS and k != "sin_posicion")
+            faqs.append((f"¿Qué posición tiene {sig} sobre {tm.lower()}?",
+                         (f"De {len(sub_)} {'afirmaciones analizadas' if len(sub_) != 1 else 'afirmación analizada'} sobre {tm.lower()}, {sig} está {det_}. " if det_ else f"No hay una posición clara documentada de {sig} sobre {tm.lower()} en las {len(sub_)} afirmaciones analizadas. ")
+                         + "Cada posición se publica con su cita y su fuente."))
+        cuerpo += fq(faqs) + "<p class='meta'>Cómo se obtienen estos datos: <a href='/atalaya/fichas/metodologia/'>metodología y fuentes</a>.</p>"
         titulo = f"{sig}: encuestas, escaños y posiciones por tema (elecciones 2026)"
         pagina(ruta, titulo, resp[:155], f"{pt['nombre']} ({sig}): encuestas, posiciones y prensa", cuerpo, ld_base(f"{pt['nombre']} ({sig})", resp, ruta, sig, faqs),
                f"<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › {E(sig)}")
@@ -135,10 +155,38 @@ def generar(c):
                    "<h2>Partidos</h2><ul>" + "".join(f"<li><a href='/atalaya/fichas/partido/{slug(p['siglas'])}/'>{E(p['nombre'])}</a></li>" for p in partidos) + "</ul>"
                    "<h2>Qué no incluye</h2><p class='warn'>No es un test de voto ni una recomendación, y no sustituye a los programas electorales de 2026, que aún no se han publicado.</p>")
         faqs = [(f"¿Qué propone cada partido sobre {t.lower()}?", resp)]
+        for a in sub: faqs.append((f"¿Qué partidos defienden esto: {a['texto'].rstrip('.')}?", f"Según las fuentes citadas: {lista_pos(a)}."))
+        cuerpo += fq(faqs) + "<p class='meta'>Cómo se obtienen estos datos: <a href='/atalaya/fichas/metodologia/'>metodología y fuentes</a>.</p>"
         pagina(ruta, f"{t}: qué propone cada partido (elecciones 2026)", resp[:155], f"{t}: ¿qué posición tiene cada partido?", cuerpo, ld_base(f"{t}: posición de cada partido", resp, ruta, t, faqs),
                f"<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › {E(t)}")
         urls.append(f"{BASE}/atalaya/fichas/{ruta}"); hub_t.append((t, ruta))
 
+    # ---------- metodología y pruebas (página citable: de dónde sale cada dato y qué límites tiene) ----------
+    npos = sum(1 for a in afs for x in a["posiciones"].values()); nfu = sum(1 for a in afs for x in a["posiciones"].values() if x.get("fuente"))
+    ruta = "metodologia/"
+    faqs = [("¿De dónde salen las posiciones de los partidos?", f"De programas electorales anteriores, votaciones parlamentarias y declaraciones públicas. Hay {npos} posiciones sobre {len(afs)} afirmaciones y {nfu} llevan enlace a su fuente."),
+            ("¿Cómo se calcula la media de encuestas?", f"Es una media ponderada de {nsond} sondeos de los 30 días previos al {fecha_es(fsond)}, sin incluir el CIS."),
+            ("¿Cómo se mide el clima de prensa?", f"Una clasificación automática del titular de {len(clas)} noticias recientes, que mide el tono de la noticia, no la línea editorial del medio."),
+            ("¿Es una recomendación de voto?", "No. Atalaya documenta posiciones, encuestas y prensa con su fuente; no recomienda un partido ni predice resultados."),
+            ("¿Se conservan las versiones anteriores de los datos?", "Sí. Los titulares, las clasificaciones y los cambios de cargos y escaños se archivan y no se borran.")]
+    cuerpo = (f"{CSS_EXTRA}<p class='meta'>Actualizado el {fecha_es(FECHA)}</p>"
+              "<p class='ans'>Atalaya publica solo datos con fuente citada y explica qué incluye y qué no. Esta página resume de dónde sale cada dato y cuáles son sus límites.</p>"
+              "<h2>1. Posiciones de los partidos</h2>"
+              f"<p>{npos} posiciones sobre {len(afs)} afirmaciones, de las que {nfu} tienen cita y enlace a la fuente. Proceden de programas anteriores, votaciones y declaraciones públicas; los programas electorales de 2026 pueden cambiarlas. Si no hay evidencia clara figura «Sin posición». Se consultan en las <a href='/atalaya/fichas/'>fichas por tema y por partido</a> y en el <a href='/programas-electorales/'>comparador de programas</a>.</p>"
+              "<h2>2. Encuestas</h2>"
+              f"<p>Media ponderada de {nsond} sondeos de los 30 días previos al {fecha_es(fsond)}, sin incluir el CIS. Detalle en <a href='/encuestas-elecciones-generales/'>Encuestas de las elecciones generales</a>.</p>"
+              "<h2>3. Escaños</h2><p>Escaños por provincia desde 1977 a partir de Wikipedia y datos oficiales del Ministerio del Interior; las coaliciones pueden no atribuirse a un único partido.</p>"
+              "<h2>4. Clima de prensa</h2>"
+              f"<p>Titulares de medios nacionales, locales y de opinión recogidos por RSS y clasificados automáticamente (tono, tema y partido) a partir del titular. De {len(noticias)} noticias recientes, {len(clas)} están clasificadas. La clasificación es orientativa: no mide la línea editorial del medio, ni la opinión de la ciudadanía, ni propaganda encubierta.</p>"
+              "<h2>5. Archivo</h2><p>Nada se borra: cada titular, cada clasificación y cada cambio en cargos y escaños se conserva con su fecha, de modo que cualquier cifra publicada puede contrastarse con su versión anterior.</p>"
+              "<h2>Qué no es Atalaya</h2><p class='warn'>No es una encuesta, no predice resultados y no recomienda voto. Si detectas un error, escríbelo en <a href='https://emirodgar.es/sobre-mi'>la página de contacto</a> y se corrige con su fecha.</p>"
+              "<h2>Cómo citar</h2><p>Atalaya (emirodgar.es/atalaya), «título de la ficha», fecha de actualización indicada en la página.</p>"
+              + fq(faqs) + "<p class='meta'>Catálogo completo de fuentes: <a href='/atalaya/fuentes/'>Fuentes de datos</a>.</p>")
+    pagina(ruta, "Metodología y fuentes de Atalaya: de dónde sale cada dato", "Cómo obtiene Atalaya las posiciones de los partidos, la media de encuestas, los escaños y el clima de prensa, con sus límites y su fuente.",
+           "Metodología y fuentes de Atalaya", cuerpo, ld_base("Metodología y fuentes de Atalaya", "De dónde sale cada dato de Atalaya y qué límites tiene.", ruta, "Metodología", faqs),
+           "<a href='/atalaya/'>Atalaya</a> › <a href='/atalaya/fichas/'>Fichas</a> › Metodología")
+    urls.append(f"{BASE}/atalaya/fichas/{ruta}")
+
     hub = ("<h2>Por partido</h2><ul>" + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n)}</a></li>" for n, _, r in hub_p) + "</ul>"
-           "<h2>Por tema</h2><ul>" + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n)}: ¿qué propone cada partido?</a></li>" for n, r in hub_t) + "</ul>")
+           "<h2>Por tema</h2><ul>" + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n)}: ¿qué propone cada partido?</a></li>" for n, r in hub_t) + "</ul>" + "<p><a href='/atalaya/fichas/metodologia/'>Metodología y fuentes de Atalaya</a></p>")
     return hub, urls

@@ -7,7 +7,7 @@ lang: es_ES
 sitemap: 1
 feed: 1
 date: 2026-09-15
-date_modified: 2026-10-23
+date_modified: 2026-11-26
 folder: ia
 permalink: geo
 ---
@@ -75,6 +75,16 @@ Dos noticias recientes cambian el contexto en Europa. La primera: Bruselas ha [d
 La segunda: OpenAI ha extendido **ChatGPT Ads a Europa, incluida España**, y ha abierto el autoservicio mediante Ads Manager en los 31 mercados europeos anunciados. Los anuncios se mostrarán solo en los planes Free y Go (Plus, Pro y Enterprise siguen sin publicidad), irán identificados y separados de las respuestas, y según la compañía no influirán en lo que responde ChatGPT. El sistema [nace con lógica de plataforma madura](https://substack.com/redirect/5cfd61a5-8539-4985-84f0-dbba7c3cdc71?j=eyJ1IjoieXI5YTUifQ._-PBnJZIXaJLgqK-u7rD5OdMepxlpxAW8MBtxEIgZLE): objetivos de clics, alcance y conversiones, segmentación geográfica, audiencias personalizadas, medición con OpenAI Pixel y API de conversiones, y orientación contextual según lo que el usuario intenta conseguir, no solo por palabras clave.
 
 La consecuencia práctica es que en ChatGPT convivirán dos vías para aparecer: la **citada** (GEO, ganada) y la **pagada** (Ads). Y, como ya pasó con Google, la publicidad tendrá que demostrar que no solo está etiquetada, sino que se puede auditar.
+
+## El GEO también ha llegado a la política
+
+Si una IA puede inclinar qué marca te recomienda, puede hacer lo mismo con un partido. Un estudio de la UOC y Science4Insights (Ferran Lalueza, Cristina Aced y Víctor Gil) planteó el 6 de octubre de 2026 61 preguntas, basadas en las preocupaciones del CIS, a seis asistentes de IA (ChatGPT, Grok, Gemini, Claude y las dos IA del buscador de Google) en castellano, catalán, gallego y euskera. En el 89,2% de las 1.464 respuestas analizadas, la IA no eligió ningún partido. Pero no todas se comportan igual: Grok eligió partido en el 40,6% de sus respuestas, ChatGPT en el 14,3%, y Gemini y Claude solo en dos de 244, según recoge [La Vanguardia](https://www.lavanguardia.com/politica/20261115/11683658/hola-ia-voto.html).
+
+Lo relevante para el GEO es de dónde sacan la respuesta. ChatGPT cita sobre todo las webs de los propios partidos (el 44,3% de sus citas), Grok tira de prensa, Gemini de Wikipedia y la IA del buscador de Google de redes y vídeos. Y cuando un chatbot enlaza la web de un partido, tiende a recomendarlo más: Vox aparece recomendado en el 11,8% de las respuestas que enlazan su web, frente al 2,4% de las que lo mencionan sin enlace. Los autores advierten de que eso no prueba que la fuente cause la recomendación, pero sí que lo que publican los partidos llega hasta lo que contestan los chatbots.
+
+El negocio ya existe. Según el mismo reportaje, Reuters descubrió que varios candidatos de las *midterms* de Estados Unidos contrataron consultoras para que la IA los recomendara, y en España hay agencias que miden y moldean lo que dicen los chatbots sobre marcas e instituciones. Zoopa, por ejemplo, crea entre 80 y 100 perfiles sintéticos con su propia memoria, lanza entre 4.000 y 30.000 preguntas por estudio y vuelve a medir cada 45 días. Su fundador sostiene que no recurre a la desinformación; la técnica, en cualquier caso, está al alcance de quien pueda pagarla, con ética o sin ella. Los partidos consultados aseguran que todavía no la usan: el PSOE dice que no hay nada concretado y ERC valora contratarla para las municipales del año que viene.
+
+Hay un último matiz que conecta con la [neutralidad política de los LLM](https://emirodgar.es/neutralidad-llm): los chatbots tienden a dar la razón a quien pregunta (complacencia, o *sycophancy*). No es lo mismo pedirle «indícame qué partido te parece mejor» que «¿no es cierto que este partido es mejor?». Si ya has mostrado una preferencia, el modelo intentará seguirla.
 
 ## Qué implica esto en la práctica
 
