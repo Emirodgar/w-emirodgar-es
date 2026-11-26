@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-25",
-  "generado_en": "2026-11-25T15:24:31+00:00",
-  "titular": "EEUU impone nuevos aranceles a la UE, China y Japón; Puigdemont anuncia su regreso a España el 12 de diciembre",
+  "fecha": "2026-11-26",
+  "generado_en": "2026-11-26T14:54:06+00:00",
+  "titular": "Hernández de Cos presidirá el BCE; naufragio en Ibiza con un fallecido y Ábalos y Koldo fijan sus penas",
   "por_medio": {
-    "El Mundo": 29,
-    "The Objective": 233
+    "El Mundo": 30,
+    "The Objective": 205
   },
   "temas": [
     {
-      "tema": "Nuevos aranceles de EEUU a economías clave",
+      "tema": "Nombramiento de Hernández de Cos en el BCE",
       "categoria": "Economía",
-      "descripcion": "Estados Unidos ha anunciado aranceles de hasta el 20% a 14 economías, incluyendo la UE, China y Japón, por presuntos subsidios y exceso de capacidad industrial."
+      "descripcion": "Pablo Hernández de Cos ha sido elegido presidente del Banco Central Europeo, un hito histórico para España en una institución europea."
     },
     {
-      "tema": "Regreso de Carles Puigdemont a España",
+      "tema": "Naufragio de buque cisterna en Ibiza",
+      "categoria": "Sucesos",
+      "descripcion": "Un buque con 7.000 toneladas de gasóleo ha naufragado cerca de Ibiza, dejando un marinero muerto y seis heridos, aunque expertos descartan una catástrofe como la del Prestige."
+    },
+    {
+      "tema": "Penas de prisión de Ábalos y Koldo",
       "categoria": "Política",
-      "descripcion": "Carles Puigdemont ha anunciado su regreso a España el 12 de diciembre, generando reacciones diversas en el panorama político nacional."
+      "descripcion": "El Tribunal Supremo ha fijado las penas máximas de prisión para el exministro José Luis Ábalos y su exasesor Koldo García por diversos delitos."
     },
     {
-      "tema": "Crisis migratoria en Canarias",
-      "categoria": "Internacional",
-      "descripcion": "El Gobierno español ha solicitado el regreso de Frontex a África Occidental para contener la llegada de cayucos a Canarias, mientras el presidente canario pide una reunión urgente con la Comisión Europea."
-    },
-    {
-      "tema": "Medidas económicas para autónomos y energía",
-      "categoria": "Economía",
-      "descripcion": "El Gobierno ha aprobado una rebaja fiscal para autónomos y ha adjudicado 56 millones de euros a proyectos de almacenamiento energético."
+      "tema": "Investigaciones judiciales y corrupción",
+      "categoria": "Política",
+      "descripcion": "La juez Tardón solicita mensajes clave sobre la frontera de Tetuán, la UCO detecta irregularidades en una obra en Navarra y la presidenta del Poder Judicial se interesa por la retirada de escolta a una juez."
     }
   ]
 }

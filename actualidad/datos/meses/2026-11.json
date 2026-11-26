@@ -1023,7 +1023,7 @@
         "titulo": "Puigdemont volverá a España el 12 de diciembre: \"El Estado ha fracasado, regresaré a mi país, a Cataluña, sin tener que pedir perdón\"",
         "url": "https://www.elmundo.es/espana/2026/11/25/6b06b417fc6c83ba038b458e.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-25",
@@ -1036,6 +1036,48 @@
         "medio": "El Mundo",
         "titulo": "La Audiencia Nacional revoca el tercer grado al etarra Henri Parot y plantea una reforma legal para que las víctimas puedan recurrir",
         "url": "https://www.elmundo.es/espana/2026/11/25/6b06cf7a21efa0f96d8b457e.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-26",
+      "edicion": "2026-11-26",
+      "titulo": "Pablo Hernández de Cos, presidente del BCE",
+      "categoria": "Economía",
+      "descripcion": "Pablo Hernández de Cos ha sido elegido presidente del Banco Central Europeo (BCE), convirtiéndose en el primer español en ocupar este cargo de gran relevancia europea.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Hernández de Cos será el próximo presidente del BCE y consigue el puesto europeo de mayor poder en la historia de España",
+        "url": "https://www.elmundo.es/economia/2026/11/26/6b083332fdddff741f8b4595.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-26",
+      "edicion": "2026-11-26",
+      "titulo": "Naufragio de buque cisterna en Ibiza con un fallecido",
+      "categoria": "Sucesos",
+      "descripcion": "Un buque cargado con 7.000 toneladas de gasóleo naufraga cerca de Ibiza, resultando en la muerte de un marinero y seis tripulantes heridos.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Un buque cargado con 7.000 toneladas de gasóleo naufraga cerca de Ibiza: hay un marinero muerto y seis tripulantes heridos",
+        "url": "https://www.elmundo.es/baleares/ibiza/2026/11/26/6b07cf2ee4d4d8cb118b4592.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-26",
+      "edicion": "2026-11-26",
+      "titulo": "Supremo fija penas máximas de Ábalos y Koldo",
+      "categoria": "Política",
+      "descripcion": "El Tribunal Supremo ha comunicado las liquidaciones de pena para José Luis Ábalos y Koldo García, fijando sus condenas máximas en prisión hasta 2042 y 2040 respectivamente.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Supremo fija el final de la pena de Ábalos en mayo de 2042 y en noviembre de 2040 la de Koldo",
+        "url": "https://www.elmundo.es/espana/2026/11/26/6b08386ee85eced9618b456e.html"
       },
       "destacado": false
     }
