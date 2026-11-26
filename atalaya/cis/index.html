@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CIS | Atalaya</title>
+<meta name="description" content="Barómetros del CIS de 2026: estimación de voto, indecisión, problemas que más preocupan, confianza en los líderes y cuánto de eso aparece en la prensa.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/cis/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--bad:#f87171;--warn:#fbbf24;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+select{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.kpi b{display:block;font-family:var(--mono);font-size:24px;font-weight:600}
+.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.kpi small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:12px;padding:12px 16px 24px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.body{padding:12px 14px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+.cv{position:relative;height:280px}
+.bar{display:block;height:10px;border-radius:3px;background:var(--acc);opacity:.85}
+.bar.p{background:#a78bfa}
+.pos{color:var(--ok)}.neg{color:var(--bad)}.neu{color:var(--mut)}
+.stk{display:flex;height:16px;border-radius:4px;overflow:hidden;margin:4px 0 10px}
+.stk i{display:block;height:100%}
+.leg{display:flex;gap:10px;flex-wrap:wrap;font-size:12px;color:var(--mut)}
+.leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:middle}
+.lst{list-style:none}.lst li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}
+.lst li:last-child{border:0}.lst b{font-family:var(--mono)}
+.note{color:var(--mut);font-size:12px;margin-top:10px}
+.sel{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:12px;text-transform:none;letter-spacing:0}
+.empty{padding:18px 14px;color:var(--mut)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=3"></script>
+<script src="/atalaya/assets/vendor/chartjs/chart.umd.min.js"></script>
+<header class="top">
+  <h1 class="pt">CIS <small>barómetros de 2026</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<section class="kpis" id="kpis" aria-label="Resumen del último barómetro"></section>
+
+<main class="grid">
+  <div>
+    <section class="card">
+      <h2><span>Estimación de voto del CIS</span><span id="est-sub"></span></h2>
+      <div class="body"><div class="cv"><canvas id="cv" role="img" aria-label="Estimación de voto del CIS por barómetro"></canvas></div><p class="note" id="est-nt"></p></div>
+    </section>
+    <section class="card">
+      <h2><span>Lo que preocupa frente a lo que cuenta la prensa</span><span id="gap-sub"></span></h2>
+      <div class="tw"><table id="gap"></table></div>
+      <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="gap-nt"></p></div>
+    </section>
+  </div>
+  <div>
+    <section class="card">
+      <h2><span>Problemas principales</span><span><select class="sel" id="sm" aria-label="Medida"><option value="total">Total (hasta 3 menciones)</option><option value="primero">Primer problema</option></select></span></h2>
+      <div class="tw"><table id="pr"></table></div>
+    </section>
+    <section class="card"><h2><span>Confianza en los líderes</span></h2><div class="body" id="conf"></div></section>
+    <section class="card"><h2><span>Presidente preferido</span></h2><div class="body" id="pref"></div></section>
+    <section class="card"><h2><span>Cómo leerlo</span></h2><div class="body"><p class="note" style="margin:0" id="aviso"></p></div></section>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var f1=function(x){return x==null?'—':x.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})};
+var sg=function(x){return (x>0?'+':x<0?'−':'')+Math.abs(x).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})};
+var COL={PSOE:'#ef4444',PP:'#3b9cff',Vox:'#7ac943','Sumar / Frente Amplio':'#d6246e',Podemos:'#9b59d0'};
+// Barómetro del CIS: nombre del partido en cada mes -> clave estable
+function key(n){n=n.toLowerCase();if(/^psoe/.test(n))return 'PSOE';if(/^pp$/.test(n))return 'PP';if(/^vox$/.test(n))return 'Vox';if(/sumar|frente amplio/.test(n)&&!/ampli|aram/.test(n))return 'Sumar / Frente Amplio';if(/^podemos$/.test(n))return 'Podemos';return null}
+// Problema del CIS -> tema del clasificador de prensa de Atalaya (solo los que se corresponden con claridad)
+var MAPA=[[/vivienda/i,'vivienda'],[/crisis econ|problemas de índole económica/i,'economía'],[/calidad del empleo|^el paro$/i,'empleo'],[/inmigraci/i,'inmigración'],[/^la sanidad/i,'sanidad'],[/corrupci/i,'corrupción y justicia'],[/^la educaci/i,'educación'],[/inseguridad ciudadana/i,'seguridad'],[/cambio clim/i,'medio ambiente']];
+function tema(p){for(var i=0;i<MAPA.length;i++)if(MAPA[i][0].test(p))return MAPA[i][1];return null}
+var D=null,NEWS=null,SENT=null,chart=null;
+
+Promise.all([
+  fetch('../data/cis.json',{cache:'no-cache'}).then(function(r){return r.json()}),
+  fetch('../data/noticias.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return {noticias:[]}}),
+  fetch('../data/sentimiento.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}})
+]).then(function(r){
+  D=r[0];NEWS=r[1].noticias||[];SENT=r[2].items||{};
+  D.barometros=D.barometros.filter(function(b){return b.estimacion&&b.estimacion.length});
+  $('sm').addEventListener('change',problemas);
+  $('aviso').textContent=D.aviso+' La estimación del CIS usa un modelo propio y puede diferir de la de otras encuestadoras: Atalaya la muestra aparte y la excluye de su media de encuestas.';
+  kpis();grafico();problemas();confianza();brecha();
+}).catch(function(){$('kpis').innerHTML='<p class="empty">No se pudieron leer los datos del CIS.</p>'});
+
+function ultimo(){return D.barometros[D.barometros.length-1]}
+function previo(){return D.barometros[D.barometros.length-2]}
+function suma(arr,res){return arr.filter(function(x){return res.test(x.respuesta)}).reduce(function(a,x){return a+x.pct},0)}
+function kpis(){
+  var b=ultimo(),p=previo(),ns=b.voto_directo_otros.no_sabe,nsp=p&&p.voto_directo_otros.no_sabe;
+  var camp=b.cuando_decide?suma(b.cuando_decide,/comienzo de la campa|última semana|jornada de reflexi|mismo día/i):null;
+  var fid=b.fidelidad?suma(b.fidelidad,/^Votan siempre|^Por lo general suele votar/i):null;
+  var ps=b.estimacion.filter(function(e){return key(e.partido)==='PSOE'})[0],pp=b.estimacion.filter(function(e){return key(e.partido)==='PP'})[0];
+  $('kpis').innerHTML=
+    k(ps&&pp?f1(ps.estimacion-pp.estimacion):'—','Ventaja PSOE sobre PP','pts de estimación · '+esc(b.mes)+' · N='+(b.n||0).toLocaleString('es-ES'))+
+    k(ns==null?'—':f1(ns)+' %','«No sabe» el voto',(nsp!=null?'barómetro anterior '+f1(nsp)+' %':'sobre el censo')+' · sobre el censo')+
+    k(b.prob_voto&&b.prob_voto.pct_10!=null?f1(b.prob_voto.pct_10)+' %':'—','Irá a votar con seguridad','escala 0-10, respuesta 10')+
+    k(camp==null?'—':f1(camp)+' %','Decide en campaña',fid==null?'':f1(fid)+' % vota siempre o casi siempre lo mismo');
+}
+function k(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
+
+function grafico(){
+  var L=D.barometros,labs=L.map(function(b){return b.mes.split(' ')[0].slice(0,3)});
+  var ks=Object.keys(COL);
+  var ds=ks.map(function(kk){return {label:kk,data:L.map(function(b){var e=b.estimacion.filter(function(x){return key(x.partido)===kk})[0];return e?e.estimacion:null}),borderColor:COL[kk],backgroundColor:COL[kk],tension:.25,pointRadius:3,borderWidth:2,spanGaps:true}});
+  if(chart)chart.destroy();
+  chart=new Chart($('cv'),{type:'line',data:{labels:labs,datasets:ds},options:{maintainAspectRatio:false,plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10,font:{size:11}}}},scales:{x:{ticks:{color:'#8b97a8'},grid:{color:'#1a2230'}},y:{ticks:{color:'#8b97a8',callback:function(v){return v+'%'}},grid:{color:'#1a2230'}}}}});
+  $('est-sub').textContent=L.length+' barómetros';
+  $('est-nt').textContent='Estimación del CIS en % sobre el voto válido (modelo de escenarios). «Sumar / Frente Amplio» agrupa el nombre con el que el CIS recoge esa candidatura cada mes; en noviembre es «Frente Amplio». Ver «Cómo leerlo».';
+}
+
+function problemas(){
+  var m=$('sm').value,b=ultimo(),p=previo();
+  var pm={};if(p&&p.problemas)p.problemas.forEach(function(x){pm[x.problema]=x[m]});
+  var L=(b.problemas||[]).slice().sort(function(x,y){return y[m]-x[m]}).slice(0,14),mx=Math.max.apply(null,L.map(function(x){return x[m]}).concat([1]));
+  var h='<thead><tr><th>Problema</th><th class="n">%</th><th></th><th class="n">vs anterior</th></tr></thead><tbody>';
+  L.forEach(function(x){var d=pm[x.problema]==null?null:x[m]-pm[x.problema];
+    h+='<tr><td style="white-space:normal;max-width:240px">'+esc(x.problema)+'</td><td class="n">'+f1(x[m])+'</td><td style="width:90px"><span class="bar" style="width:'+(x[m]*100/mx).toFixed(0)+'%"></span></td><td class="n '+(d==null?'neu':d>0?'neg':d<0?'pos':'neu')+'">'+(d==null?'—':sg(d))+'</td></tr>'});
+  $('pr').innerHTML=h+'</tbody>';
+}
+
+function confianza(){
+  var b=ultimo(),c=b.confianza||{};
+  var col={'Mucha confianza':'#34d399','Bastante confianza':'#86efac','Poca confianza':'#fbbf24','Ninguna confianza':'#f87171'};
+  var nom={sanchez:'Pedro Sánchez',feijoo:'Alberto Núñez Feijóo'};
+  $('conf').innerHTML=Object.keys(c).map(function(q){var o=c[q];
+    return '<div><b>'+nom[q]+'</b><div class="stk">'+Object.keys(col).map(function(l){return o[l]?'<i style="width:'+o[l]+'%;background:'+col[l]+'" title="'+l+' '+f1(o[l])+' %"></i>':''}).join('')+'</div><div class="mut" style="font-size:12px;color:var(--mut)">Mucha o bastante: <b style="color:var(--txt)">'+f1((o['Mucha confianza']||0)+(o['Bastante confianza']||0))+' %</b> · Poca o ninguna: <b style="color:var(--txt)">'+f1((o['Poca confianza']||0)+(o['Ninguna confianza']||0))+' %</b></div></div>'}).join('<div style="height:10px"></div>')||'<p class="note" style="margin:0">Sin datos.</p>';
+  $('conf').insertAdjacentHTML('beforeend','<div class="leg" style="margin-top:10px">'+Object.keys(col).map(function(l){return '<span><i style="background:'+col[l]+'"></i>'+l.replace(' confianza','')+'</span>'}).join('')+'</div>');
+  $('pref').innerHTML='<ul class="lst">'+(b.presidente_preferido||[]).filter(function(x){return !/^(N\.S|N\.C|Otro)/.test(x.nombre)}).slice(0,8).map(function(x){return '<li><span>'+esc(x.nombre)+'</span><b>'+f1(x.pct)+' %</b></li>'}).join('')+'</ul><p class="note">Respuesta espontánea sobre toda la muestra. «Ninguno de ellos» y «No sabe» no se muestran.</p>';
+}
+
+function brecha(){
+  var b=ultimo(),cis={};
+  (b.problemas||[]).forEach(function(x){var t=tema(x.problema);if(t)cis[t]=(cis[t]||0)+x.total});
+  var last=NEWS.reduce(function(a,n){return n.f>a?n.f:a},''),corte=new Date(new Date(last).getTime()-30*864e5).toISOString();
+  var pr={},tot=0;
+  NEWS.forEach(function(n){var s=SENT[n.i];if(!s||n.f<corte)return;var t=s.tema;if(cis[t]==null)return;pr[t]=(pr[t]||0)+1;tot++});
+  var temas=Object.keys(cis),sc=temas.reduce(function(a,t){return a+cis[t]},0);
+  var rows=temas.map(function(t){return {t:t,c:cis[t]*100/sc,p:tot?(pr[t]||0)*100/tot:0,n:pr[t]||0}}).sort(function(a,b){return (b.c-b.p)-(a.c-a.p)});
+  var mx=Math.max.apply(null,rows.map(function(r){return Math.max(r.c,r.p)}).concat([1]));
+  var h='<thead><tr><th>Tema</th><th class="n">CIS</th><th></th><th class="n">Prensa</th><th></th><th class="n">Diferencia</th></tr></thead><tbody>';
+  rows.forEach(function(r){var d=r.p-r.c;
+    h+='<tr><td>'+esc(r.t)+'</td><td class="n">'+f1(r.c)+'</td><td style="width:90px"><span class="bar" style="width:'+(r.c*100/mx).toFixed(0)+'%"></span></td><td class="n">'+f1(r.p)+'</td><td style="width:90px"><span class="bar p" style="width:'+(r.p*100/mx).toFixed(0)+'%"></span></td><td class="n '+(d>5?'neg':d<-5?'pos':'neu')+'" title="Positivo: la prensa le dedica más atención que la ciudadanía">'+sg(d)+'</td></tr>'});
+  $('gap').innerHTML=h+'</tbody>';
+  $('gap-sub').textContent='CIS '+b.mes+' · prensa: '+tot.toLocaleString('es-ES')+' titulares clasificados, últimos 30 días';
+  $('gap-nt').textContent='CIS: parte de las menciones a cada problema (total de hasta tres respuestas) entre los nueve temas que tienen equivalente en la prensa. Prensa: parte de los titulares clasificados por Atalaya en cada tema entre esos mismos nueve (se dejan fuera «elecciones y partidos», gestión municipal, infraestructuras y sucesos). Una diferencia positiva significa que la prensa dedica a ese tema más atención de la que le da la ciudadanía. El tema de cada titular lo asigna un modelo a partir del titular y es orientativo; la prensa incluye mucha local.';
+}
+})();
+</script>
+</body>
+</html>

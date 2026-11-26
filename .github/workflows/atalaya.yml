@@ -88,6 +88,15 @@ jobs:
         timeout-minutes: 5
         run: python3 scripts/atalaya/build_verificaciones.py
 
+      - name: Barómetros del CIS (documentos públicos; solo añade)
+        # Lee los PDF de resultados y de estimación de voto de cada barómetro mensual con pdftotext. Idempotente: no repite los ya guardados.
+        if: steps.hoy.outputs.ejecutar == 'true'
+        continue-on-error: true
+        timeout-minutes: 10
+        run: |
+          command -v pdftotext >/dev/null || sudo apt-get install -y -qq poppler-utils
+          python3 scripts/atalaya/build_cis.py
+
       - name: Visitas de Wikipedia a partidos y candidatos (diario)
         # API pública de estadísticas de Wikimedia, una petición por entidad. Si falla, el resto del workflow sigue.
         if: steps.hoy.outputs.ejecutar == 'true'
