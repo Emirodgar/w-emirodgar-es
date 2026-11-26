@@ -98,7 +98,17 @@ def ccaa_de(nombre):
 
 def bloque_trends():
     from pytrends.request import TrendReq
-    pt = TrendReq(hl="es-ES", tz=-60, timeout=(10, 30), retries=2, backoff_factor=3)
+    # Sin retries/backoff de pytrends: con urllib3 ≥ 2 (el de GitHub Actions) revienta con «Retry.__init__() got an unexpected keyword
+    # argument 'method_whitelist'». Los reintentos y las esperas (429) se hacen aquí.
+    pt = TrendReq(hl="es-ES", tz=-60, timeout=(10, 30))
+    def con_reintentos(f, *a, **k):
+        for espera in (0, 15, 45):
+            time.sleep(espera)
+            try: return f(*a, **k)
+            except Exception as e:
+                ultimo = e
+                if "429" not in str(e) and "TooManyRequests" not in type(e).__name__: raise
+        raise ultimo
     res = {}
     for grupo, terminos in TRENDS.items():
         ancla = terminos[0]; resto = terminos[1:]
@@ -107,9 +117,9 @@ def bloque_trends():
         horas = None
         for k, tanda in enumerate(tandas):
             kws = [t[1] for t in tanda]
-            pt.build_payload(kws, timeframe="now 7-d", geo="ES")
-            df = pt.interest_over_time(); time.sleep(3)
-            rg = pt.interest_by_region(resolution="REGION", inc_low_vol=True); time.sleep(3)
+            con_reintentos(pt.build_payload, kws, timeframe="now 7-d", geo="ES")
+            df = con_reintentos(pt.interest_over_time); time.sleep(3)
+            rg = con_reintentos(pt.interest_by_region, resolution="REGION", inc_low_vol=True); time.sleep(3)
             if horas is None: horas = [d.to_pydatetime().replace(tzinfo=timezone.utc).isoformat() for d in df.index]
             sa = float(df[ancla[1]].sum()); ra = float(rg[ancla[1]].sum())
             if k == 0: sa0, ra0 = sa, ra
