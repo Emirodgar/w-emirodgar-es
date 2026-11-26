@@ -1,0 +1,225 @@
+{
+  "actualizado": "2026-11-26",
+  "aviso": "Catálogo de canales de mensajería de los partidos. 'enlazado_web' indica que la web oficial del partido enlaza ese canal; 'hallado_por_nombre' que existe y parece oficial pero la web no lo enlaza (o no se pudo leer) y hay que confirmarlo. Los seguidores son los que muestra Telegram en la fecha de captura. Pendiente de revisar las condiciones de uso antes de automatizar la lectura.",
+  "metodo_lectura": {
+    "telegram": "Vista web pública t.me/s/<canal>: devuelve unos 20 mensajes por petición con fecha, texto, formato y visualizaciones. Histórico con ?before=<id>. No hay clave ni cuenta.",
+    "whatsapp": "Los canales de WhatsApp no tienen API ni RSS públicos: solo seguimiento manual (catálogo con enlace y seguidores)."
+  },
+  "canales": [
+    {
+      "partido": "PP",
+      "plataforma": "telegram",
+      "handle": "Partido_Popular",
+      "url": "https://t.me/Partido_Popular",
+      "nombre": "Partido Popular",
+      "seguidores": 5740,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-05-25",
+      "ultimo_visible": "2026-11-22",
+      "ritmo": "bajo (unos pocos a la semana)",
+      "visualizaciones_ultimo": "855"
+    },
+    {
+      "partido": "Podemos",
+      "plataforma": "telegram",
+      "handle": "ahorapodemos",
+      "url": "https://t.me/ahorapodemos",
+      "nombre": "PODEMOS.",
+      "seguidores": 18800,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-10-25",
+      "ultimo_visible": "2026-11-20",
+      "ritmo": "medio (20 mensajes en 26 días)",
+      "visualizaciones_ultimo": "3,16K"
+    },
+    {
+      "partido": "Junts",
+      "plataforma": "telegram",
+      "handle": "juntsxcat",
+      "url": "https://t.me/juntsxcat",
+      "nombre": "Junts per Catalunya",
+      "seguidores": 3940,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-11-20",
+      "ultimo_visible": "2026-11-25",
+      "ritmo": "alto (20 mensajes en 5 días)",
+      "visualizaciones_ultimo": "413"
+    },
+    {
+      "partido": "PNV",
+      "plataforma": "telegram",
+      "handle": "eajpnveus",
+      "url": "https://t.me/eajpnveus",
+      "nombre": "EAJ-PNV",
+      "seguidores": 542,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 13,
+      "primer_visible": "2026-11-24",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "alto (13 mensajes en 2 días)",
+      "visualizaciones_ultimo": "48"
+    },
+    {
+      "partido": "EH Bildu",
+      "plataforma": "telegram",
+      "handle": "ehbildu",
+      "url": "https://t.me/ehbildu",
+      "nombre": "EH Bildu",
+      "seguidores": 2830,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 9,
+      "primer_visible": "2026-11-24",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "alto (9 mensajes en 2 días)",
+      "visualizaciones_ultimo": "361"
+    },
+    {
+      "partido": "BNG",
+      "plataforma": "telegram",
+      "handle": "bloquenacionalistagalego",
+      "url": "https://t.me/bloquenacionalistagalego",
+      "nombre": "BNG - Bloque Nacionalista Galego",
+      "seguidores": 1390,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-11-23",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "muy alto (20 mensajes en 3 días: sondear al menos cada 12 h)",
+      "visualizaciones_ultimo": "73"
+    },
+    {
+      "partido": "UPN",
+      "plataforma": "telegram",
+      "handle": "upn_org",
+      "url": "https://t.me/upn_org",
+      "nombre": "Unión del Pueblo Navarro (oficial)",
+      "seguidores": 80,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-10-19",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "medio (20 mensajes en 38 días)",
+      "visualizaciones_ultimo": "1"
+    },
+    {
+      "partido": "Sumar",
+      "plataforma": "telegram",
+      "handle": "sumar_oficial",
+      "url": "https://t.me/sumar_oficial",
+      "nombre": "Sumar",
+      "seguidores": 5130,
+      "origen": "hallado_por_nombre",
+      "lectura": "automatica",
+      "nota": "No lo enlaza ninguna web de Sumar consultada, pero sus mensajes enlazan los dominios del partido y de la coalición (sumar.ink, famplio.info). Parece oficial; conviene confirmarlo con el partido.",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-11-19",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "alto (20 mensajes en 7 días)",
+      "visualizaciones_ultimo": "478"
+    },
+    {
+      "partido": "PSOE",
+      "plataforma": "telegram",
+      "handle": "canalPSOE",
+      "url": "https://t.me/canalPSOE",
+      "nombre": "PSOE",
+      "seguidores": 6830,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-11-20",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "alto (20 mensajes en 6 días)"
+    },
+    {
+      "partido": "ERC",
+      "plataforma": "telegram",
+      "handle": "esquerrarepublicana",
+      "url": "https://t.me/esquerrarepublicana",
+      "nombre": "Esquerra Republicana",
+      "seguidores": 3200,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "mensajes_visibles": 20,
+      "primer_visible": "2026-11-22",
+      "ultimo_visible": "2026-11-26",
+      "ritmo": "alto (20 mensajes en 4 días)"
+    },
+    {
+      "partido": "Vox",
+      "plataforma": "telegram",
+      "handle": "VOXTelegram",
+      "url": "https://t.me/VOXTelegram",
+      "nombre": "VOX España",
+      "seguidores": 919,
+      "origen": "enlazado_web",
+      "lectura": "automatica",
+      "nota": "Lo enlaza voxespana.es, pero la vista pública solo muestra un mensaje (7/11/2025) y 919 seguidores: puede estar casi inactivo o limitado. Si empieza a publicar, aparecerá en el panel.",
+      "mensajes_visibles": 1,
+      "ultimo_visible": "2025-11-07"
+    },
+    {
+      "partido": "PNV",
+      "plataforma": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029Va8Vp1T2UPBGAcxMBz32",
+      "origen": "enlazado_web",
+      "lectura": "manual"
+    },
+    {
+      "partido": "EH Bildu",
+      "plataforma": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029VaETvrgKLaHr4JYmrl3V",
+      "origen": "enlazado_web",
+      "lectura": "manual"
+    },
+    {
+      "partido": "UPN",
+      "plataforma": "whatsapp",
+      "url": "https://whatsapp.com/channel/0029VaCZqO3L7UVMJV6ELX0l",
+      "origen": "enlazado_web",
+      "lectura": "manual"
+    },
+    {
+      "partido": "Vox",
+      "plataforma": "whatsapp",
+      "url": "https://www.whatsapp.com/channel/0029VaDCD1UJJhzPmDOnRy2E",
+      "origen": "enlazado_web",
+      "lectura": "manual"
+    },
+    {
+      "partido": "ERC",
+      "plataforma": "whatsapp",
+      "url": "https://www.whatsapp.com/channel/0029VaEe6Y6FCCoOpegXkQ3h",
+      "origen": "enlazado_web",
+      "lectura": "manual"
+    }
+  ],
+  "sin_canal_confirmado": [
+    {
+      "partido": "PSOE",
+      "motivo": "Tiene canal de Telegram (canalPSOE), pero psoe.es no enlaza ningún canal de WhatsApp."
+    },
+    {
+      "partido": "CC",
+      "motivo": "La web no enlaza ningún canal de Telegram ni de WhatsApp."
+    },
+    {
+      "partido": "Podemos y Sumar (WhatsApp)",
+      "motivo": "Sus webs no enlazan canal de WhatsApp. El análisis de David Álvarez cita los de Podemos y Frente Amplio, que no se pueden leer automáticamente."
+    },
+    {
+      "partido": "Frente Amplio y Democracia21",
+      "motivo": "No se encontró ningún canal de Telegram con los nombres probados."
+    }
+  ]
+}

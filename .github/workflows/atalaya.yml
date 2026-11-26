@@ -73,6 +73,14 @@ jobs:
         if: steps.hoy.outputs.ejecutar == 'true'
         run: python3 scripts/atalaya/build_encuestas.py
 
+      - name: Mensajería, canales públicos de Telegram de los partidos (diario; solo añade)
+        # Lee t.me/s/<canal> de los canales del catálogo con lectura automática (atalaya/data/canales_mensajeria.json): una petición cada 2 s,
+        # pocas páginas, y se detiene ante un 403/429. Si falla, el resto del workflow sigue.
+        if: steps.hoy.outputs.ejecutar == 'true'
+        continue-on-error: true
+        timeout-minutes: 10
+        run: python3 scripts/atalaya/build_mensajeria.py
+
       - name: Congreso y Senado (solo añade; el Senado se completa por tandas si limita el acceso)
         if: steps.hoy.outputs.ejecutar == 'true'
         continue-on-error: true
