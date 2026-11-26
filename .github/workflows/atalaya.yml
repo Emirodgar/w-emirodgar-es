@@ -81,6 +81,13 @@ jobs:
         timeout-minutes: 10
         run: python3 scripts/atalaya/build_mensajeria.py
 
+      - name: Visitas de Wikipedia a partidos y candidatos (diario)
+        # API pública de estadísticas de Wikimedia, una petición por entidad. Si falla, el resto del workflow sigue.
+        if: steps.hoy.outputs.ejecutar == 'true'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python3 scripts/atalaya/build_wikipedia.py
+
       - name: Congreso y Senado (solo añade; el Senado se completa por tandas si limita el acceso)
         if: steps.hoy.outputs.ejecutar == 'true'
         continue-on-error: true

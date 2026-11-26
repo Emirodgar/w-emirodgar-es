@@ -111,6 +111,11 @@ tr.foco td:first-child{box-shadow:inset 3px 0 0 var(--acc)}
       <h2><span>Google Trends · interés de búsqueda <em id="gtit"></em></span><span id="gnote"></span></h2>
       <div class="body"><div class="cv"><canvas id="cg" role="img" aria-label="Interés de búsqueda en Google de las entidades seleccionadas"></canvas></div><p class="note" id="gmiss"></p></div>
     </section>
+    <section class="card" id="wkp" hidden>
+      <h2><span>Wikipedia · lecturas <em id="wkt"></em></span><span><select id="wks" aria-label="Qué mostrar" style="background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:12px;color:inherit"><option value="candidato">Candidatos</option><option value="partido">Partidos</option></select></span></h2>
+      <div class="tw"><table id="wkb"></table></div>
+      <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="wkn"></p></div>
+    </section>
     <section class="card">
       <h2><span>Ranking <em id="rtit"></em></span><span>pulsa para comparar (máx. 6)</span></h2>
       <div class="tw"><table id="tb"></table></div>
@@ -361,6 +366,31 @@ function titulares(){
   ul.innerHTML=l.map(function(e){var t=D.titulares[e.ti], hh=new Date(t.f), u=/^https?:\/\//.test(t.u)?t.u:'#';
     return '<li><span class="t">'+hh.getHours()+':'+('0'+hh.getMinutes()).slice(-2)+'</span><div><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(t.t)+'</a><small>'+esc(t.m)+'</small></div></li>'}).join('');
 }
+})();
+
+/* ---------- Wikipedia: lecturas diarias de las fichas de partidos y candidatos (wikipedia.json) ---------- */
+(function(){
+  var $=function(id){return document.getElementById(id)},W=null;
+  var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+  var f0=function(x){return Math.round(x).toLocaleString('es-ES')};
+  fetch('../data/wikipedia.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    if(!d||!d.entidades)return;W=d;$('wkp').hidden=false;$('wks').addEventListener('change',draw);draw();
+  }).catch(function(){});
+  function spark(s){
+    var v=s.slice(-30).map(function(x){return x[1]}),mx=Math.max.apply(null,v.concat([1])),w=v.length*5;
+    return '<svg viewBox="0 0 '+w+' 22" width="120" height="22" preserveAspectRatio="none" aria-hidden="true">'+v.map(function(y,i){var h=Math.max(1,y/mx*20);return '<rect x="'+(i*5)+'" y="'+(22-h)+'" width="3.4" height="'+h+'" fill="#22d3ee" opacity=".8"/>'}).join('')+'</svg>';
+  }
+  function draw(){
+    var tipo=$('wks').value,L=W.entidades.filter(function(e){return e.tipo===tipo}).sort(function(a,b){return b.v7-a.v7});
+    $('wkt').textContent='· hasta el '+W.hasta;
+    var h='<thead><tr><th>'+(tipo==='partido'?'Partido':'Candidato')+'</th><th class="n" style="text-align:right">7 días</th><th class="n" style="text-align:right">Frente a los 7 previos</th><th>Últimos 30 días</th><th>Pico</th></tr></thead><tbody>';
+    L.forEach(function(e){
+      var c=e.cambio,col=c==null?'var(--mut)':c>0?'var(--ok,#34d399)':'var(--bad,#f87171)';
+      h+='<tr><td>'+esc(e.nombre)+'</td><td style="text-align:right;font-family:var(--mono)">'+f0(e.v7)+'</td><td style="text-align:right;font-family:var(--mono);color:'+col+'">'+(c==null?'—':(c>0?'+':'')+c.toLocaleString('es-ES')+' %')+'</td><td>'+spark(e.serie)+'</td><td>'+(e.pico?esc(e.pico.f.slice(5))+' · '+f0(e.pico.v):'—')+'</td></tr>';
+    });
+    $('wkb').innerHTML=h+'</tbody>';
+    $('wkn').textContent='Lecturas diarias de la ficha de cada partido o candidato en la Wikipedia en español (tráfico de usuarios, estadísticas de Wikimedia). Mide interés, no apoyo ni intención de voto, y un pico suele responder a un hecho puntual (debate, escándalo, programa de televisión). El pico es el máximo de la serie guardada.';
+  }
 })();
 </script>
 </body>
