@@ -57,6 +57,10 @@ tr.low td{color:var(--mut)}
 .note{color:var(--mut);font-size:12px;margin-top:10px}
 .tm{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:2px}.tm span{font-size:12px;border:1px solid var(--line);border-radius:10px;padding:2px 8px}.tm b{font-family:var(--mono);font-weight:600}
 .gcol h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;margin:10px 0 4px}.gcol ul{list-style:none}.gcol li{padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}.gcol li:last-child{border:0}.gcol a{text-decoration:none}.gcol a:hover{text-decoration:underline}.gcol small{color:var(--mut)}
+#mtb td.c,#mtb th.c{text-align:center;font-family:var(--mono)}
+#mtb td.c small{display:block;color:var(--mut);font-size:10px}
+#mtb td.g{color:var(--mut)}
+#fv{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:12px;text-transform:none;letter-spacing:0}
 .hl{list-style:none}
 .hl li{padding:8px 14px;border-bottom:1px solid var(--line);display:flex;gap:10px}
 .hl a{text-decoration:none}.hl a:hover{text-decoration:underline}
@@ -93,6 +97,11 @@ tr.low td{color:var(--mut)}
     <section class="card">
       <h2><span>Medios <em id="tt"></em></span><span id="cnt"></span></h2>
       <div class="tw"><table id="tb"></table></div>
+    </section>
+    <section class="card" id="mat">
+      <h2><span>Cómo cubre cada medio a cada partido</span><span><select id="fv" aria-label="Qué mostrar en la matriz"><option value="cob">Cobertura</option><option value="ton">Tono</option></select></span></h2>
+      <div class="tw"><table id="mtb"></table></div>
+      <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="mnote"></p></div>
     </section>
     <section class="card" id="det" hidden>
       <h2><span>Titulares <em id="dt"></em></span></h2>
@@ -272,10 +281,50 @@ function render(){
   if(sel&&st.by[sel.toLowerCase()])headlines(st.by[sel.toLowerCase()],party);else $('det').hidden=true;
 
   affinity(L,party,min,st);
+  matriz(rows);
   gobierno(rows);
   politicos(rows);
   quality(rows,L,clas);
 }
+/* ---------- Matriz medio × partido ---------- */
+// Cobertura: de las noticias de un medio clasificadas como afectando a uno de los cinco partidos, qué parte corresponde a cada uno.
+// Tono: balance suavizado (positivas − negativas) ÷ (n + K) de esas noticias. Solo prensa; ámbito según el filtro.
+var MM=10,MC=5,MROWS=15;   // mín. noticias por medio, mín. por celda para no ir en gris, filas mostradas
+function matriz(rows){
+  var ton=$('fv').value==='ton',by={},tot={n:0,p:{}};
+  rows.forEach(function(n){
+    if(n.tipo!=='prensa'||!n.s||PARTS.indexOf(n.s.partido)<0)return;
+    var o=by[n.k]||(by[n.k]={m:n.m,n:0,p:{}}),c=o.p[n.s.partido]||(o.p[n.s.partido]={n:0,pos:0,neg:0});
+    var t=tot.p[n.s.partido]||(tot.p[n.s.partido]={n:0,pos:0,neg:0});
+    [c,t].forEach(function(x){x.n++;if(n.s.tono>0)x.pos++;else if(n.s.tono<0)x.neg++});
+    o.n++;tot.n++;
+  });
+  var L=Object.keys(by).map(function(k){return by[k]}).filter(function(o){return o.n>=MM}).sort(function(a,b){return b.n-a.n}).slice(0,MROWS);
+  var cell=function(o){
+    return PARTS.map(function(p){
+      var c=o.p[p]||{n:0,pos:0,neg:0},g=c.n<MC?' g':'';
+      if(!ton){
+        var s=o.n?c.n*100/o.n:0;
+        return '<td class="c'+g+'" style="background:rgba(34,211,238,'+(g?0:(s/100*0.55).toFixed(2))+')" title="'+c.n+' de '+o.n+' noticias">'+Math.round(s)+'%<small>n='+c.n+'</small></td>';
+      }
+      if(!c.n)return '<td class="c g">·<small>n=0</small></td>';
+      var b=(c.pos-c.neg)/(c.n+K)*100,a=Math.min(Math.abs(b)/100*0.8,0.45).toFixed(2);
+      return '<td class="c'+g+'" style="background:'+(g?'transparent':(b>0?'rgba(52,211,153,':'rgba(248,113,113,')+a+')')+'" title="'+c.pos+' positivas · '+c.neg+' negativas · '+(c.n-c.pos-c.neg)+' neutras">'+sg(b)+'<small>n='+c.n+'</small></td>';
+    }).join('');
+  };
+  var h='<thead><tr><th>Medio</th><th class="n">Noticias</th>'+PARTS.map(function(p){return '<th class="c">'+p+'</th>'}).join('')+'</tr></thead><tbody>';
+  if(!L.length)h+='<tr><td colspan="'+(PARTS.length+2)+'" class="empty">Ningún medio llega a '+MM+' noticias clasificadas sobre estos partidos con este filtro.</td></tr>';
+  else{
+    L.forEach(function(o){h+='<tr><td>'+esc(o.m)+'</td><td class="n">'+o.n+'</td>'+cell(o)+'</tr>'});
+    h+='<tr style="border-top:2px solid var(--line)"><td><b>Todos los medios</b></td><td class="n">'+tot.n+'</td>'+cell(tot)+'</tr>';
+  }
+  $('mtb').innerHTML=h+'</tbody>';
+  $('mnote').textContent=(ton
+    ?'Tono: balance de −100 a +100 de los titulares clasificados como afectando a cada partido, suavizado con '+K+' noticias neutras ficticias. '
+    :'Cobertura: de las noticias de cada medio que afectan a uno de los cinco partidos, qué parte es de cada uno (cada fila suma 100 %). ')+
+    'Solo prensa, con al menos '+MM+' noticias clasificadas; se muestran los '+MROWS+' mayores. Las celdas en gris tienen menos de '+MC+' noticias y no son fiables. Es el tono del titular, no la línea editorial, y no mide propaganda encubierta ni cuentas que imitan a un medio.';
+}
+$('fv').addEventListener('change',render);
 function kpi(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
 function cls(x){return Math.round(x)>0?'pos':Math.round(x)<0?'neg':'neu'}
 
