@@ -81,6 +81,13 @@ jobs:
         timeout-minutes: 10
         run: python3 scripts/atalaya/build_mensajeria.py
 
+      - name: Verificaciones políticas por RSS (Maldita, Newtral, EFE Verifica, Verificat; solo añade)
+        # Los feeds públicos solo guardan las piezas más recientes: el archivo acumula el histórico. Si falla, el resto del workflow sigue.
+        if: steps.hoy.outputs.ejecutar == 'true'
+        continue-on-error: true
+        timeout-minutes: 5
+        run: python3 scripts/atalaya/build_verificaciones.py
+
       - name: Visitas de Wikipedia a partidos y candidatos (diario)
         # API pública de estadísticas de Wikimedia, una petición por entidad. Si falla, el resto del workflow sigue.
         if: steps.hoy.outputs.ejecutar == 'true'

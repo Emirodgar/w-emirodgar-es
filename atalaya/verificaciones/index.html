@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Verificaciones | Atalaya</title>
+<meta name="description" content="Qué verifican Maldita, Newtral, EFE Verifica y Verificat sobre partidos, candidatos y elecciones: piezas por partido y por verificador, con enlace a cada una.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/verificaciones/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+button,select,input{font:inherit;color:inherit}
+a{color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;padding:12px 16px 0}
+.bar label{display:block;font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.bar select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:150px}
+.bar select:focus-visible,.bar input:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.chk{display:flex;align-items:center;gap:6px;padding-bottom:8px;color:var(--mut)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.kpi b{display:block;font-family:var(--mono);font-size:24px;font-weight:600}
+.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.kpi small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.grid{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,1fr);gap:12px;padding:12px 16px 24px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.body{padding:12px 14px}
+.hl{list-style:none}.hl li{padding:10px 14px;border-bottom:1px solid var(--line)}.hl li:last-child{border:0}
+.hl a{text-decoration:none;font-size:14px}.hl a:hover{text-decoration:underline}
+.meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-top:5px;font-size:12px;color:var(--mut)}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:10px;border:1px solid var(--line);color:var(--mut)}
+.tag.p{color:var(--txt)}
+.row{display:grid;grid-template-columns:110px 1fr 36px;gap:8px;align-items:center;padding:5px 0;font-size:13px}
+.row i{display:block;height:10px;border-radius:3px;background:var(--acc);opacity:.8}
+.row b{font-family:var(--mono);text-align:right}
+.note{color:var(--mut);font-size:12px;margin-top:10px}
+.empty{padding:18px 14px;color:var(--mut)}
+@media (max-width:900px){.grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=3"></script>
+<header class="top">
+  <h1 class="pt">Verificaciones <small>lo que desmienten o explican los verificadores</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<div class="bar" role="group" aria-label="Filtros">
+  <div><label for="fp">Partido</label><select id="fp"></select></div>
+  <div><label for="fm">Verificador</label><select id="fm"></select></div>
+  <label class="chk"><input type="checkbox" id="fe"> Solo electorales</label>
+</div>
+
+<section class="kpis" id="kpis" aria-label="Resumen"></section>
+
+<main class="grid">
+  <section class="card"><h2><span>Piezas <em id="ptit" style="font-style:normal;color:var(--acc)"></em></span><span id="cnt"></span></h2><ul class="hl" id="hl"></ul></section>
+  <div>
+    <section class="card"><h2><span>Por partido</span></h2><div class="body" id="bp"></div></section>
+    <section class="card"><h2><span>Por verificador</span></h2><div class="body" id="bm"></div></section>
+    <section class="card"><h2><span>Cómo leerlo</span></h2><div class="body"><p class="note" style="margin:0" id="aviso"></p></div></section>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var D=null;
+fetch('../data/verificaciones.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(d){
+  D=d;
+  var ps=Object.keys(d.por_partido),ms=Object.keys(d.por_medio);
+  $('fp').innerHTML='<option value="">Todos</option>'+ps.map(function(p){return '<option>'+esc(p)+'</option>'}).join('');
+  $('fm').innerHTML='<option value="">Todos</option>'+ms.map(function(p){return '<option>'+esc(p)+'</option>'}).join('');
+  ['fp','fm','fe'].forEach(function(id){$(id).addEventListener('change',render)});
+  $('aviso').textContent=d.aviso+' Los feeds públicos solo conservan las piezas más recientes de cada verificador, así que el histórico se va acumulando desde la primera captura.';
+  render();
+}).catch(function(){$('hl').innerHTML='<li class="empty">No se pudieron leer los datos.</li>'});
+
+function fecha(f){var d=new Date(f);return d.toLocaleDateString('es-ES',{day:'2-digit',month:'short'})}
+function render(){
+  var p=$('fp').value,m=$('fm').value,e=$('fe').checked;
+  var L=D.piezas.filter(function(x){return (!p||x.p.indexOf(p)>=0)&&(!m||x.m===m)&&(!e||x.e)});
+  var cp={},cm={};L.forEach(function(x){x.p.forEach(function(k){cp[k]=(cp[k]||0)+1});cm[x.m]=(cm[x.m]||0)+1});
+  var top=Object.keys(cp).sort(function(a,b){return cp[b]-cp[a]})[0];
+  $('kpis').innerHTML=k(L.length,'Piezas','últimos '+D.dias+' días')+k(Object.keys(cm).length,'Verificadores','Maldita, Newtral, EFE Verifica, Verificat')+
+    k(L.filter(function(x){return x.e}).length,'Sobre elecciones','campaña, voto, debates o encuestas')+k(top||'—','Más nombrado',top?cp[top]+' piezas':'');
+  $('ptit').textContent=(p?'· '+p:'')+(m?' · '+m:'');
+  $('cnt').textContent=L.length+' piezas';
+  $('hl').innerHTML=L.length?L.slice(0,60).map(function(x){var u=/^https?:\/\//.test(x.u)?x.u:'#';
+    return '<li><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(x.t)+'</a><div class="meta"><span>'+fecha(x.f)+'</span><span class="tag">'+esc(x.m)+'</span>'+x.p.map(function(q){return '<span class="tag p">'+esc(q)+'</span>'}).join('')+(x.e?'<span class="tag">electoral</span>':'')+'</div></li>'}).join(''):'<li class="empty">Sin piezas con este filtro.</li>';
+  var bar=function(o,tot){var ks=Object.keys(o).sort(function(a,b){return o[b]-o[a]}),mx=Math.max.apply(null,ks.map(function(q){return o[q]}).concat([1]));
+    return ks.map(function(q){return '<div class="row"><span>'+esc(q)+'</span><span><i style="width:'+(o[q]*100/mx).toFixed(0)+'%"></i></span><b>'+o[q]+'</b></div>'}).join('')||'<p class="note" style="margin:0">Sin datos.</p>'};
+  $('bp').innerHTML=bar(cp);$('bm').innerHTML=bar(cm);
+}
+function k(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
+})();
+</script>
+</body>
+</html>
