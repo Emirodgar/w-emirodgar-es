@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Red de menciones | Atalaya</title>
+<meta name="description" content="Quién nombra a quién: mapa de los medios, los partidos y los candidatos que aparecen juntos en los titulares de campaña.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/red/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--bad:#f87171;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+button,select{font:inherit;color:inherit}
+a{color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.bar{display:flex;gap:14px;flex-wrap:wrap;align-items:center;padding:12px 16px 0}
+.bar .g{display:flex;align-items:center;gap:8px}
+.bar .l{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:var(--panel)}
+.seg button{background:none;border:0;padding:6px 12px;cursor:pointer;color:var(--mut)}
+.seg button[aria-pressed=true]{background:#e5e9f0;color:#0b0f15;font-weight:600}
+.seg button:focus-visible,.leg button:focus-visible,.fl button:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:0;margin:12px 16px 24px;border:1px solid var(--line);border-radius:10px;background:var(--panel);overflow:hidden}
+#map{width:100%;height:auto;display:block;background:radial-gradient(ellipse at 40% 45%,#111a2b 0%,#0a0f18 70%)}
+.side{border-left:1px solid var(--line);padding:16px;overflow:auto;max-height:760px}
+.side h2{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);margin:16px 0 6px}
+.side h2:first-child{margin-top:0}
+.big{font-family:var(--mono);font-size:26px;font-weight:700}
+.mut{color:var(--mut);font-size:12px}
+.leg{list-style:none}.leg li{display:flex;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line)}
+.leg button{display:flex;width:100%;justify-content:space-between;gap:8px;background:none;border:0;padding:5px 0;cursor:pointer;text-align:left}
+.leg i{display:inline-block;width:18px;height:3px;border-radius:2px;margin-right:8px;vertical-align:middle}
+.leg button[aria-pressed=false]{opacity:.4;text-decoration:line-through}
+.leg b{font-family:var(--mono)}
+.fl{list-style:none}.fl li{padding:5px 0;border-bottom:1px solid var(--line);font-size:13px}
+.fl button{background:none;border:0;cursor:pointer;text-align:left;width:100%;padding:0}
+.fl button:hover{color:var(--acc)}
+.hl{list-style:none}.hl li{padding:6px 0;border-bottom:1px solid var(--line);font-size:13px}
+.hl a{text-decoration:none}.hl a:hover{text-decoration:underline}
+.hl small{color:var(--mut)}
+.note{color:var(--mut);font-size:12px;margin-top:10px}
+.edge{cursor:pointer;transition:opacity .15s}
+.node{cursor:pointer}
+.dim{opacity:.08!important}
+.lab{font-size:11px;fill:#e5e9f0;text-anchor:middle;pointer-events:none;paint-order:stroke;stroke:#0a0f18;stroke-width:3px}
+.sub{font-size:9px;fill:#8b97a8}
+.empty{padding:40px 16px;color:var(--mut)}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr}.side{border-left:0;border-top:1px solid var(--line);max-height:none}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=3"></script>
+<script src="/atalaya/assets/personas.js"></script>
+<header class="top">
+  <h1 class="pt">Red de menciones <small>quién aparece junto a quién en los titulares</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<div class="bar" role="group" aria-label="Controles del mapa">
+  <div class="g"><span class="l">Ámbito</span><span class="seg" id="sa"><button type="button" data-v="" aria-pressed="true">Todos</button><button type="button" data-v="nacional" aria-pressed="false">Nacional</button><button type="button" data-v="local" aria-pressed="false">Local</button></span></div>
+  <div class="g"><span class="l">Grosor</span><span class="seg" id="sg"><button type="button" data-v="share" aria-pressed="true">% de lo que publica</button><button type="button" data-v="n" aria-pressed="false">Titulares</button></span></div>
+  <div class="g"><span class="l">Líneas</span><span class="seg" id="sl"><button type="button" data-v="top" aria-pressed="true">Principales</button><button type="button" data-v="all" aria-pressed="false">Todas</button></span></div>
+  <div class="g"><span class="l">Color</span><span class="seg" id="sc"><button type="button" data-v="src" aria-pressed="true">Emisor</button><button type="button" data-v="neg" aria-pressed="false">Tono negativo</button></span></div>
+</div>
+
+<div class="wrap">
+  <svg id="map" viewBox="0 0 1000 700" role="img" aria-label="Mapa de menciones entre medios, partidos y candidatos"></svg>
+  <aside class="side" aria-live="polite">
+    <h2>Resumen del periodo</h2>
+    <div class="big" id="tot">—</div>
+    <p class="mut" id="totx">titulares que nombran a algún partido o candidato</p>
+    <ul class="leg" id="leg"></ul>
+    <p class="note" style="margin-top:8px">Clic en un tipo para ocultarlo o mostrarlo; clic en un nodo o en una línea para ver los titulares.</p>
+    <div id="sel"></div>
+    <h2>Flujos más intensos</h2><ul class="fl" id="fl"></ul>
+    <h2>Más nombrado</h2><ul class="fl" id="mn"></ul>
+    <p class="note" id="nt"></p>
+  </aside>
+</div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var NORM=function(t){return t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+var f0=function(x){return Math.round(x).toLocaleString('es-ES')};
+var NS='http://www.w3.org/2000/svg';
+var PE=window.PE;
+var PKEY={PP:'PP',PSOE:'PSOE',VOX:'Vox',SUMAR:'Sumar',FA:'Sumar','FA/PODEMOS':'Sumar',PODEMOS:'Podemos'};
+var COL={PP:'#3b9cff',PSOE:'#ef4444',Vox:'#7ac943',Sumar:'#d6246e',Podemos:'#9b59d0',Cs:'#f59e0b'};
+var MCOL='#e879f9';
+var TYPES={mp:{n:'Medio → partido',c:MCOL},mc:{n:'Medio → candidato',c:'#a78bfa'},pr:{n:'Partido ↔ partido',c:'#2dd4bf'}};
+var on={mp:true,mc:true,pr:true};
+var ST={a:'',g:'share',l:'top',c:'src'},sel=null;
+var NM=10,MINM=8;     // medios mostrados y mínimo de titulares con mención para entrar
+var D=null;
+
+function tipo(m){
+  if(/^(vox españa|pp de |psoe|partido popular|podemos|sumar)/i.test(m))return 'partido';
+  if(/^(mi )?ayuntamiento|^diputaci|^junta de|^gobierno/i.test(m))return 'institución';
+  return 'prensa';
+}
+function medio(m){return String(m||'').replace(/^[\s|]+|[\s.|]+$/g,'')||'(sin medio)'}
+function rxOf(a){return new RegExp('(?<!\\w)'+NORM(a).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'(?!\\w)')}
+
+Promise.all([
+  fetch('../data/noticias.json').then(function(r){return r.json()}),
+  fetch('../data/sentimiento.json').then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}}),
+  fetch('../data/politicos.json').then(function(r){return r.json()})
+]).then(function(r){
+  var S=r[1].items||{};
+  var cands=(r[2].politicos||[]).filter(function(p){return p.ambito==='nacional'&&p.estado==='candidato'}).map(function(p){
+    var al=PE.aliasesOf({nombre:p.nombre,wiki:p.wiki}).concat(p.alias||[]);
+    al=al.filter(function(a,i){return al.indexOf(a)===i});
+    var nat=p.nombre==='Pedro Sánchez'?rxOf('Sánchez'):null;
+    return {id:'c:'+p.id,kind:'c',name:p.nombre,short:p.nombre.split(' ').slice(-1)[0],pk:PKEY[String(p.partidoId).toUpperCase()]||null,wiki:p.wiki,rx:al.map(rxOf),nat:nat};
+  });
+  D={cands:cands,rows:(r[0].noticias||[]).map(function(n){
+    var m=medio(n.m);return {i:n.i,t:n.t,u:n.u,f:n.f,m:m,a:n.a,tipo:tipo(m),p:(n.p||[]).filter(function(x){return COL[x]}),s:S[n.i]||null,nt:NORM(n.t)};
+  })};
+  ['sa','sg','sl','sc'].forEach(function(id){
+    var key={sa:'a',sg:'g',sl:'l',sc:'c'}[id];
+    $(id).addEventListener('click',function(e){
+      var b=e.target.closest('button');if(!b)return;
+      ST[key]=b.dataset.v;Array.prototype.forEach.call($(id).children,function(x){x.setAttribute('aria-pressed',String(x===b))});
+      sel=null;draw();
+    });
+  });
+  draw();
+}).catch(function(){$('map').outerHTML='<p class="empty">No se pudieron leer los datos.</p>'});
+
+/* ---------- construcción del grafo ---------- */
+function build(){
+  var rows=D.rows.filter(function(n){return n.tipo==='prensa'&&(!ST.a||n.a===ST.a)});
+  var E={},mTot={},nodeN={};
+  var add=function(type,a,b,n){
+    var k=type+'|'+a+'|'+b,e=E[k]||(E[k]={type:type,a:a,b:b,n:0,neg:0,cls:0,items:[]});
+    e.n++;e.items.push(n);
+    if(n.s){e.cls++;if(n.s.tono<0)e.neg++}
+  };
+  rows.forEach(function(n){
+    var ps=n.p,cs=D.cands.filter(function(c){return c.rx.some(function(r){return r.test(n.nt)})||(c.nat&&n.a==='nacional'&&c.nat.test(n.nt))});
+    if(!ps.length&&!cs.length)return;
+    mTot[n.m]=(mTot[n.m]||0)+1;
+    ps.forEach(function(p){add('mp','m:'+n.m,'p:'+p,n);nodeN['p:'+p]=(nodeN['p:'+p]||0)+1});
+    cs.forEach(function(c){add('mc','m:'+n.m,c.id,n);nodeN[c.id]=(nodeN[c.id]||0)+1});
+    for(var i=0;i<ps.length;i++)for(var j=i+1;j<ps.length;j++){var a=ps[i]<ps[j]?ps[i]:ps[j],b=ps[i]<ps[j]?ps[j]:ps[i];add('pr','p:'+a,'p:'+b,n)}
+  });
+  // medios que entran: los NM con más titulares con mención (mínimo MINM)
+  var ms=Object.keys(mTot).filter(function(m){return mTot[m]>=MINM}).sort(function(a,b){return mTot[b]-mTot[a]}).slice(0,NM);
+  var keepM={};ms.forEach(function(m){keepM['m:'+m]=1});
+  var edges=Object.keys(E).map(function(k){return E[k]}).filter(function(e){return e.type==='pr'||keepM[e.a]});
+  edges.forEach(function(e){e.share=e.type==='pr'?0:e.n*100/mTot[e.a.slice(2)]});
+  var parties=Object.keys(COL).filter(function(p){return nodeN['p:'+p]>=3});
+  var cands=D.cands.filter(function(c){return nodeN[c.id]>=3});
+  return {edges:edges,ms:ms,mTot:mTot,parties:parties,cands:cands,nodeN:nodeN};
+}
+
+function el(n,a,p){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(p)p.appendChild(e);return e}
+function lerp(a,b,t){return Math.round(a+(b-a)*t)}
+
+function draw(){
+  var G=build(),svg=$('map');svg.innerHTML='';
+  if(!G.edges.length){svg.outerHTML='<p class="empty">Sin menciones suficientes con este filtro.</p>';return}
+  var defs=el('defs',{},svg);
+  /* posiciones */
+  var pos={},CX=410,CY=350,RX=185,RY=200;
+  var order=['PP','PSOE','Vox','Sumar','Podemos','Cs'].filter(function(p){return G.parties.indexOf(p)>=0});
+  order.forEach(function(p,i){
+    var ang=-Math.PI/2+i*2*Math.PI/order.length+0.35;
+    pos['p:'+p]={x:CX+RX*Math.cos(ang),y:CY+RY*Math.sin(ang),r:26+Math.min(14,Math.sqrt(G.nodeN['p:'+p])*0.9),ang:ang};
+  });
+  var free=0;
+  G.cands.forEach(function(c){
+    var pp=c.pk&&pos['p:'+c.pk];
+    if(pp){var off=pp.r+34;pos[c.id]={x:pp.x+Math.cos(pp.ang)*off,y:pp.y+Math.sin(pp.ang)*off,r:22}}
+    else{pos[c.id]={x:60+(free%2)*70,y:560+Math.floor(free/2)*70,r:20};free++}
+  });
+  var n=G.ms.length;
+  G.ms.forEach(function(m,i){pos['m:'+m]={x:925,y:(n>1?70+i*(560/(n-1)):350),r:22}});
+  /* grosor y color */
+  var maxN=Math.max.apply(null,G.edges.map(function(e){return e.n}));
+  var vis=G.edges.filter(function(e){return on[e.type]});
+  vis.forEach(function(e){e.w=e.type==='pr'?1.5+Math.sqrt(e.n)*1.1:(ST.g==='share'?1+Math.min(e.share,40)*0.32:1+Math.sqrt(e.n)*1.1);
+    e.v=e.type==='pr'?e.n:(ST.g==='share'?e.share:e.n)});
+  vis.sort(function(a,b){return b.v-a.v});
+  var shown=ST.l==='top'?vis.slice(0,Math.max(40,Math.round(vis.length*0.45))):vis;
+  var gE=el('g',{},svg),gS=el('g',{},svg),gN=el('g',{},svg);
+  /* líneas estructurales candidato — partido */
+  G.cands.forEach(function(c){var a=pos[c.id],b=c.pk&&pos['p:'+c.pk];if(a&&b)el('line',{x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:'#475569','stroke-width':2,opacity:.7},gS)});
+  var paths=[];
+  shown.slice().reverse().forEach(function(e){
+    var a=pos[e.a],b=pos[e.b];if(!a||!b)return;
+    var mx=(a.x+b.x)/2,my=(a.y+b.y)/2,dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy)||1,k=e.type==='pr'?0.12:0.16;
+    var cx=mx-dy/len*len*k,cy=my+dx/len*len*k;
+    var d='M'+a.x+','+a.y+' Q'+cx+','+cy+' '+b.x+','+b.y;
+    var col;
+    if(ST.c==='neg'){
+      if(e.cls<3)col='#64748b';else{var t=Math.min(1,e.neg/e.cls/0.6);col='rgb('+lerp(100,248,t)+','+lerp(116,113,t)+','+lerp(139,113,t)+')'}
+    }else col=e.type==='pr'?TYPES.pr.c:(e.type==='mc'?TYPES.mc.c:MCOL);
+    var p=el('path',{d:d,fill:'none',stroke:col,'stroke-width':e.w.toFixed(1),'stroke-linecap':'round',opacity:.55,class:'edge'},gE);
+    var h=el('path',{d:d,fill:'none',stroke:'transparent','stroke-width':Math.max(10,e.w),'pointer-events':'stroke',class:'edge'},gE);
+    h.style.cursor='pointer';
+    h.addEventListener('click',function(){sel={e:e};draw()});
+    h.addEventListener('mouseenter',function(){p.setAttribute('opacity',1)});
+    h.addEventListener('mouseleave',function(){p.setAttribute('opacity',.55)});
+    paths.push({p:p,e:e});
+  });
+  /* nodos */
+  var drawNode=function(id,label,sub,col,r,photo,initials,nodeKind){
+    var q=pos[id];if(!q)return;
+    var g=el('g',{class:'node',tabindex:0,role:'button','aria-label':label},gN);
+    var cid='cp'+id.replace(/\W/g,'_');
+    var cp=el('clipPath',{id:cid},defs);el('circle',{cx:q.x,cy:q.y,r:r-2},cp);
+    el('circle',{cx:q.x,cy:q.y,r:r,fill:'#0f1623',stroke:col,'stroke-width':3},g);
+    var im=null;
+    if(photo){im=el('image',{x:q.x-r+2,y:q.y-r+2,width:(r-2)*2,height:(r-2)*2,'clip-path':'url(#'+cid+')',preserveAspectRatio:'xMidYMid slice'},g);
+      photo.then(function(u){if(u)im.setAttribute('href',u);else im.remove()}).catch(function(){im.remove()})}
+    var tx=el('text',{x:q.x,y:q.y+(nodeKind==='p'?5:4),'text-anchor':'middle','font-size':nodeKind==='p'?12:11,'font-weight':700,fill:col,'pointer-events':'none'},g);
+    tx.textContent=initials;
+    if(photo)tx.setAttribute('opacity',0.0);
+    var lb=el('text',{x:nodeKind==='m'?q.x:q.x,y:q.y+r+13,class:'lab'},g);lb.textContent=label;
+    if(sub){var sb=el('text',{x:q.x,y:q.y+r+24,class:'lab sub'},g);sb.textContent=sub}
+    var go=function(){sel={node:id};draw()};
+    g.addEventListener('click',go);g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}});
+    g.addEventListener('mouseenter',function(){paths.forEach(function(o){var hit=o.e.a===id||o.e.b===id;o.p.classList.toggle('dim',!hit)})});
+    g.addEventListener('mouseleave',function(){paths.forEach(function(o){o.p.classList.remove('dim')})});
+  };
+  order.forEach(function(p){drawNode('p:'+p,p,'partido',COL[p],pos['p:'+p].r,null,p,'p')});
+  G.cands.forEach(function(c){var q=pos[c.id];drawNode(c.id,c.short,'candidato',(c.pk&&COL[c.pk])||'#94a3b8',q.r,c.wiki?PE.photoUrl(c.wiki):null,PE.initials(c.name),'c')});
+  G.ms.forEach(function(m){drawNode('m:'+m,m,G.mTot[m]+' titulares',MCOL,22,null,PE.initials(m)||m.slice(0,2),'m')});
+  side(G,vis,shown);
+}
+
+function nameOf(id,G){
+  if(id.indexOf('m:')===0)return id.slice(2);
+  if(id.indexOf('p:')===0)return id.slice(2);
+  var c=D.cands.filter(function(x){return x.id===id})[0];return c?c.name:id;
+}
+function side(G,vis,shown){
+  var tot=0,cnt={mp:0,mc:0,pr:0},seen={};
+  G.edges.forEach(function(e){cnt[e.type]+=e.n;e.items.forEach(function(n){seen[n.i]=1})});
+  tot=Object.keys(seen).length;
+  $('tot').textContent=f0(tot);
+  $('leg').innerHTML=Object.keys(TYPES).map(function(k){return '<li><button type="button" data-k="'+k+'" aria-pressed="'+on[k]+'"><span><i style="background:'+TYPES[k].c+'"></i>'+TYPES[k].n+'</span><b>'+f0(cnt[k])+'</b></button></li>'}).join('');
+  Array.prototype.forEach.call($('leg').querySelectorAll('button'),function(b){b.onclick=function(){on[b.dataset.k]=!on[b.dataset.k];sel=null;draw()}});
+  /* selección */
+  var S=$('sel'),items=[],title='';
+  if(sel&&sel.e){items=sel.e.items;title=nameOf(sel.e.a,G)+(sel.e.type==='pr'?' ↔ ':' → ')+nameOf(sel.e.b,G)}
+  else if(sel&&sel.node){var m={};G.edges.forEach(function(e){if(e.a===sel.node||e.b===sel.node)e.items.forEach(function(n){m[n.i]=n})});items=Object.keys(m).map(function(k){return m[k]});title=nameOf(sel.node,G)}
+  if(items.length){
+    items=items.slice().sort(function(a,b){return String(b.f).localeCompare(String(a.f))});
+    S.innerHTML='<h2>'+esc(title)+' · '+items.length+' titulares</h2><ul class="hl">'+items.slice(0,10).map(function(n){var u=/^https?:\/\//.test(n.u)?n.u:'#';return '<li><a href="'+esc(u)+'" target="_blank" rel="noopener noreferrer">'+esc(n.t)+'</a> <small>· '+esc(n.m)+'</small></li>'}).join('')+'</ul><p class="note"><button type="button" id="clr" style="background:none;border:0;color:var(--acc);cursor:pointer">Quitar selección</button></p>';
+    $('clr').onclick=function(){sel=null;draw()};
+  }else S.innerHTML='';
+  /* flujos */
+  var mp=G.edges.filter(function(e){return e.type==='mp'||e.type==='mc'}).sort(function(a,b){return b.share-a.share}).slice(0,5);
+  $('fl').innerHTML=mp.map(function(e){return '<li><button type="button" data-i="'+G.edges.indexOf(e)+'"><b>'+esc(nameOf(e.a,G))+'</b> → '+esc(nameOf(e.b,G))+': '+Math.round(e.share)+' % de lo que publica ('+e.n+')</button></li>'}).join('')||'<li class="mut">Sin datos</li>';
+  Array.prototype.forEach.call($('fl').querySelectorAll('button'),function(b){b.onclick=function(){sel={e:G.edges[+b.dataset.i]};draw()}});
+  var names=Object.keys(G.nodeN).sort(function(a,b){return G.nodeN[b]-G.nodeN[a]}).slice(0,5);
+  $('mn').innerHTML=names.map(function(id){return '<li><button type="button" data-n="'+esc(id)+'">'+esc(nameOf(id,G))+' <span class="mut">· '+G.nodeN[id]+' titulares</span></button></li>'}).join('');
+  Array.prototype.forEach.call($('mn').querySelectorAll('button'),function(b){b.onclick=function(){sel={node:b.dataset.n};draw()}});
+  $('nt').textContent='Cada titular cuenta una vez por cada partido o candidato que nombra. Se muestran los '+NM+' medios con más titulares con mención (mínimo '+MINM+'). «Partido ↔ partido» une partidos que aparecen en el mismo titular; no indica quién ataca a quién. No hay datos de redes sociales ni de lo que publican los propios partidos: solo prensa. Los partidos pequeños (ERC, Junts, PNV…) no tienen aún detección propia en los titulares.';
+}
+})();
+</script>
+</body>
+</html>

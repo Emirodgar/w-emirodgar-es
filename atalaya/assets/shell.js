@@ -10,6 +10,7 @@
     ['Debates', '/atalaya/debates/', I('<path d="M4 5h11a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H9l-4 3v-3H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1z"/><path d="M19 9h1a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1v3l-4-3h-4"/>')],
     ['Tendencias', '/atalaya/tendencias/', I('<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>')],
     ['Medios', '/atalaya/medios/', I('<path d="M4 5h13a1 1 0 0 1 1 1v13H6a2 2 0 0 1-2-2zM18 9h2a1 1 0 0 1 1 1v7a2 2 0 0 1-2 2M8 9h6M8 13h6M8 16h4"/>')],
+    ['Red', '/atalaya/red/', I('<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="9" cy="18" r="2.5"/><path d="M8 7l8 1M7 8l2 8M17 10l-6 7"/>')],
     ['Encuestas', '/atalaya/encuestas/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')],
     ['Congreso', '/atalaya/congreso/', I('<path d="M3 20h18M5 20V10M9.5 20V10M14.5 20V10M19 20V10M3 10l9-6 9 6z"/>')],
     ['Senado', '/atalaya/senado/', I('<path d="M4 20h16M6 20v-8a6 6 0 0 1 12 0v8M12 6V3M9 20v-6M15 20v-6"/>')],
