@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Embudo | Atalaya</title>
+<meta name="description" content="Esfuerzo, respuesta y eco de cada partido: lo que publica en su canal de Telegram, lo que se ve y cuánto lo nombra la prensa.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/embudo/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+button,select{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.bar{display:flex;gap:12px;flex-wrap:wrap;align-items:end;padding:12px 16px 0}
+.bar label{display:block;font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em;margin-bottom:3px}
+.bar select{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:7px 10px;min-width:150px}
+.bar select:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.intro{padding:12px 16px 0;color:var(--mut);max-width:980px}
+.intro b{color:var(--txt)}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:12px 16px 0}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:8px}
+.body{padding:12px 14px}
+.row{display:grid;grid-template-columns:150px minmax(0,1fr) 120px;gap:14px;align-items:center;padding:12px 14px;border-bottom:1px solid var(--line)}
+.row:last-child{border:0}
+.row h3{font-size:14px}.row h3 small{display:block;color:var(--mut);font-weight:400;font-size:12px}
+.row .dot{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:8px}
+.bars{display:grid;gap:5px}
+.b{display:grid;grid-template-columns:78px 1fr 44px;gap:8px;align-items:center;font-size:12px;color:var(--mut)}
+.b i{display:block;height:12px;border-radius:3px;min-width:2px}
+.b b{font-family:var(--mono);color:var(--txt);text-align:right;font-weight:600}
+.ratio{text-align:right}
+.ratio b{display:block;font-family:var(--mono);font-size:22px;font-weight:700}
+.ratio span{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.05em}
+.off{opacity:.55}
+.note{color:var(--mut);font-size:12px}
+.empty{padding:18px 14px;color:var(--mut)}
+.foot{padding:12px 16px 28px}
+@media (max-width:760px){.row{grid-template-columns:1fr}.ratio{text-align:left}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=3"></script>
+<header class="top">
+  <h1 class="pt">Embudo <small>esfuerzo, respuesta y eco por partido</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<div class="bar" role="group" aria-label="Filtros">
+  <div><label for="fa">Prensa</label><select id="fa"><option value="">Nacional y local</option><option value="nacional">Solo nacional</option><option value="local">Solo local</option></select></div>
+  <div><label for="fo">Ordenar por</label><select id="fo"><option value="eco">Eco en prensa</option><option value="esf">Esfuerzo</option><option value="res">Respuesta</option><option value="rat">Eco / esfuerzo</option></select></div>
+</div>
+
+<p class="intro"><b>Esfuerzo:</b> mensajes que publica el partido en su canal de Telegram. <b>Respuesta:</b> visualizaciones que reciben. <b>Eco:</b> titulares de prensa que lo nombran. Cada barra es la parte de ese partido entre los comparados. El cociente eco/esfuerzo dice si la prensa habla de un partido más (&gt; 1) o menos (&lt; 1) de lo que él publica en este canal.</p>
+
+<section class="card">
+  <h2><span>Partidos con canal de Telegram y detección en prensa</span><span id="cnt"></span></h2>
+  <div id="rows"></div>
+  <div class="body" style="border-top:1px solid var(--line)"><p class="note" id="nt"></p></div>
+</section>
+<div class="foot"></div>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var f0=function(x){return Math.round(x).toLocaleString('es-ES')};
+var NORM=function(t){return t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()};
+var COL={PP:'#3b9cff',PSOE:'#ef4444',Vox:'#7ac943',Podemos:'#9b59d0',Sumar:'#d6246e',Junts:'#00c3b2',PNV:'#4ade80','EH Bildu':'#2dd4bf',BNG:'#76b2e1',UPN:'#f59e0b',ERC:'#f95838'};
+var MINMSG=3,D=null;   // los partidos de cada titular los etiqueta el recolector de prensa (build_news.py)
+
+function tipo(m){
+  if(/^(vox españa|pp de |psoe|partido popular|podemos|sumar)/i.test(m))return 'partido';
+  if(/^(mi )?ayuntamiento|^diputaci|^junta de|^gobierno/i.test(m))return 'institución';
+  return 'prensa';
+}
+
+Promise.all([
+  fetch('../data/mensajeria.json',{cache:'no-cache'}).then(function(r){return r.json()}),
+  fetch('../data/noticias.json',{cache:'no-cache'}).then(function(r){return r.json()})
+]).then(function(r){
+  D={m:r[0],n:(r[1].noticias||[]).map(function(n){return {a:n.a,f:n.f,m:String(n.m||''),p:n.p||[],nt:NORM(n.t||'')}})};
+  $('fa').addEventListener('change',render);$('fo').addEventListener('change',render);render();
+}).catch(function(){$('rows').innerHTML='<p class="empty">No se pudieron leer los datos.</p>'});
+
+function render(){
+  var a=$('fa').value,last=D.n.reduce(function(x,n){return n.f>x?n.f:x},'');
+  var corte=new Date(new Date(last).getTime()-30*864e5).toISOString();
+  var rows=D.n.filter(function(n){return tipo(n.m)==='prensa'&&n.f>=corte&&(!a||n.a===a)});
+  var eco={};
+  rows.forEach(function(n){
+    n.p.forEach(function(p){eco[p]=(eco[p]||0)+1});
+  });
+  var L=D.m.canales.filter(function(c){return eco[c.partido]!=null||c.ventana.mensajes>0}).map(function(c){
+    return {p:c.partido,h:c.handle,msg:c.ventana.mensajes,vis:c.ventana.vistas_total||0,eco:eco[c.partido]||0,sin:c.origen!=='enlazado_web'};
+  });
+  var ok=L.filter(function(x){return x.msg>=MINMSG}),off=L.filter(function(x){return x.msg<MINMSG});
+  var T=function(k){return ok.reduce(function(s,x){return s+x[k]},0)||1};
+  var tm=T('msg'),tv=T('vis'),te=T('eco');
+  ok.forEach(function(x){x.esf=x.msg*100/tm;x.res=x.vis*100/tv;x.ec=x.eco*100/te;x.rat=x.esf?x.ec/x.esf:0});
+  var key=$('fo').value,kk={eco:'ec',esf:'esf',res:'res',rat:'rat'}[key];
+  ok.sort(function(x,y){return y[kk]-x[kk]});
+  var bar=function(lbl,v,c){return '<div class="b"><span>'+lbl+'</span><span><i style="width:'+Math.max(0.5,Math.min(100,v))+'%;background:'+c+'"></i></span><b>'+Math.round(v)+'%</b></div>'};
+  var h=ok.map(function(x){
+    var c=COL[x.p]||'#94a3b8';
+    return '<div class="row"><h3><span class="dot" style="background:'+c+'"></span>'+esc(x.p)+'<small>@'+esc(x.h)+(x.sin?' · sin confirmar':'')+'</small></h3>'+
+      '<div class="bars">'+bar('Esfuerzo',x.esf,c)+bar('Respuesta',x.res,c)+bar('Eco',x.ec,c)+'</div>'+
+      '<div class="ratio"><b>'+(x.esf?x.rat.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1}):'—')+'</b><span>eco / esfuerzo</span>'+(x.msg<10?'<div class="note" style="color:#fbbf24">poco fiable: menos de 10 mensajes</div>':'')+'<div class="note" style="margin-top:4px">'+f0(x.msg)+' msj · '+f0(x.vis)+' vistas · '+f0(x.eco)+' titulares</div></div></div>';
+  }).join('');
+  h+=off.map(function(x){
+    return '<div class="row off"><h3><span class="dot" style="background:'+(COL[x.p]||'#94a3b8')+'"></span>'+esc(x.p)+'<small>@'+esc(x.h)+'</small></h3><div class="note">Sin actividad suficiente en Telegram ('+x.msg+' mensajes en 30 días): no es comparable. Eco en prensa: '+f0(x.eco)+' titulares.</div><div></div></div>';
+  }).join('');
+  $('rows').innerHTML=h||'<p class="empty">Sin datos suficientes.</p>';
+  $('cnt').textContent=ok.length+' partidos · prensa: '+f0(rows.length)+' titulares de los últimos 30 días';
+  $('nt').textContent='Solo Telegram, que no es el canal principal de todos los partidos: un partido con poco esfuerzo aquí puede estar muy activo en X, Instagram o TikTok, y el cociente solo mide Telegram frente a prensa. Las visualizaciones son las de la primera captura de cada mensaje. El eco cuenta titulares que nombran al partido o a sus dirigentes más conocidos (PP incluye a Feijóo y Mañueco; PSOE incluye cualquier «Sánchez») y no distingue si la noticia es favorable. ERC, Junts, PNV, EH Bildu, BNG y UPN se detectan por el nombre del partido y el de sus portavoces más conocidos. Cada barra es la parte entre los partidos mostrados, no del total de la política.';
+}
+})();
+</script>
+</body>
+</html>

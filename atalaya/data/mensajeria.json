@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T15:16:40+00:00",
+ "actualizado": "2026-11-26T15:35:35+00:00",
  "ventana_dias": 30,
  "aviso": "Solo canales públicos de Telegram enlazados por la web de cada partido (o confirmados). Las visualizaciones son las de la primera captura de cada mensaje; los mensajes recientes pueden estar infravalorados. No es una medida de apoyo ni de alcance total. Los partidos sin canal confirmado no aparecen.",
  "canales": [
@@ -23,6 +23,7 @@
     "dias": 30,
     "mensajes": 3,
     "por_dia": 0.1,
+    "vistas_total": 5710,
     "vistas_mediana": 2270,
     "vistas_por_seguidor": 0.4,
     "formatos": {
@@ -109,6 +110,7 @@
     "dias": 30,
     "mensajes": 16,
     "por_dia": 0.5,
+    "vistas_total": 102190,
     "vistas_mediana": 6830,
     "vistas_por_seguidor": 0.36,
     "formatos": {
@@ -237,6 +239,7 @@
     "dias": 30,
     "mensajes": 72,
     "por_dia": 2.4,
+    "vistas_total": 64423,
     "vistas_mediana": 879,
     "vistas_por_seguidor": 0.22,
     "formatos": {
@@ -404,6 +407,7 @@
     "dias": 18,
     "mensajes": 123,
     "por_dia": 6.8,
+    "vistas_total": 13330,
     "vistas_mediana": 112,
     "vistas_por_seguidor": 0.21,
     "formatos": {
@@ -555,6 +559,7 @@
     "dias": 15,
     "mensajes": 68,
     "por_dia": 4.5,
+    "vistas_total": 59688,
     "vistas_mediana": 868,
     "vistas_por_seguidor": 0.31,
     "formatos": {
@@ -694,6 +699,7 @@
     "dias": 30,
     "mensajes": 84,
     "por_dia": 2.8,
+    "vistas_total": 33183,
     "vistas_mediana": 394,
     "vistas_por_seguidor": 0.28,
     "formatos": {
@@ -894,6 +900,7 @@
     "dias": 21,
     "mensajes": 15,
     "por_dia": 0.7,
+    "vistas_total": 393,
     "vistas_mediana": 30,
     "vistas_por_seguidor": 0.38,
     "formatos": {
@@ -1010,6 +1017,7 @@
     "dias": 30,
     "mensajes": 84,
     "por_dia": 2.8,
+    "vistas_total": 96685,
     "vistas_mediana": 1145,
     "vistas_por_seguidor": 0.22,
     "formatos": {
@@ -1202,6 +1210,7 @@
     "dias": 30,
     "mensajes": 62,
     "por_dia": 2.1,
+    "vistas_total": 83983,
     "vistas_mediana": 1360,
     "vistas_por_seguidor": 0.2,
     "formatos": {
@@ -1370,6 +1379,7 @@
     "dias": 26,
     "mensajes": 67,
     "por_dia": 2.6,
+    "vistas_total": 43934,
     "vistas_mediana": 637,
     "vistas_por_seguidor": 0.2,
     "formatos": {
@@ -1534,6 +1544,7 @@
     "dias": 1,
     "mensajes": 0,
     "por_dia": 0.0,
+    "vistas_total": 0,
     "vistas_mediana": null,
     "vistas_por_seguidor": null,
     "formatos": {},

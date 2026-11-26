@@ -149,7 +149,7 @@ def main():
         salida.append({"partido": c["partido"], "handle": h, "url": c["url"], "nombre": titulo or c.get("nombre"), "origen": c["origen"],
                        "seguidores": subs or (hist[-1]["n"] if hist else c.get("seguidores")), "historial_seguidores": hist,
                        "mensajes_archivados": len(ms), "primero": ms[0]["f"][:10] if ms else None, "ultimo": ms[-1]["f"][:10] if ms else None,
-                       "ventana": {"dias": dias, "mensajes": len(rec), "por_dia": round(len(rec) / dias, 1),
+                       "ventana": {"dias": dias, "mensajes": len(rec), "por_dia": round(len(rec) / dias, 1), "vistas_total": sum(vs),
                                    "vistas_mediana": int(statistics.median(vs)) if vs else None,
                                    "vistas_por_seguidor": round(statistics.median(vs) / (subs or c.get("seguidores") or 1), 2) if vs else None,
                                    "formatos": dict(fm.most_common()), "reenviados": sum(1 for m in rec if m["fw"]),

@@ -4,7 +4,7 @@ Prototipo. Solo librería estándar. Salida: atalaya/data/noticias.json
 Requiere haber ejecutado build_geo.py (usa atalaya/data/indice.json).
 Uso (raíz del repo): python3 scripts/atalaya/build_news.py
 """
-import hashlib, json, os, re, unicodedata, urllib.request, xml.etree.ElementTree as ET
+import hashlib, json, os, re, sys, unicodedata, urllib.request, xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
@@ -29,7 +29,22 @@ ALIAS = {"Araba": "Álava", "Alacant": "Alicante", "Castelló": "Castellón", "I
          "Gipuzkoa": "Guipúzcoa", "Bizkaia": "Vizcaya", "Asturias": "Asturias"}
 PARTIDOS = {"PP": r"\bPP\b|Partido Popular|Feijóo|Mañueco", "PSOE": r"\bPSOE\b|socialist|Sánchez",
             "Vox": r"\bVox\b|Abascal", "Sumar": r"\bSumar\b|Yolanda Díaz", "Podemos": r"Podemos",
-            "UPL": r"\bUPL\b|Unión del Pueblo Leonés", "Cs": r"Ciudadanos"}
+            "UPL": r"\bUPL\b|Unión del Pueblo Leonés", "Cs": r"Ciudadanos",
+            # partidos con canal de Telegram en el catálogo de mensajería: nombre del partido y de sus portavoces más conocidos
+            "ERC": r"\bERC\b|Esquerra Republicana|Rufián|Junqueras", "Junts": r"\bJunts\b|Puigdemont|Nogueras",
+            "PNV": r"\bPNV\b|\bEAJ\b|Nacionalista Vasco|Aitor Esteban", "EH Bildu": r"Bildu|Otegi",
+            "BNG": r"\bBNG\b|Bloque Nacionalista|Ana Pontón", "UPN": r"\bUPN\b|Unión del Pueblo Navarro"}
+
+def retag():
+    """Vuelve a etiquetar los partidos de los titulares ya guardados, sin red (uso: build_news.py --retag)."""
+    f = RAIZ / "atalaya/data/noticias.json"
+    d = json.loads(f.read_text(encoding="utf8"))
+    cambios = 0
+    for n in d["noticias"]:
+        p = [k for k, rx in PARTIDOS.items() if re.search(rx, n["t"], re.I)]
+        if p != n.get("p"): n["p"] = p; cambios += 1
+    f.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")), encoding="utf8")
+    print(cambios, "titulares reetiquetados de", len(d["noticias"]))
 RIESGO = r"detenid|detención|imputad|investigad|corrupci|dimisi|accidente|incendio|fallec|muert|querella|escándalo|dana|inundaci|huelga|protesta"
 
 def norm(s): return unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode().lower()
@@ -71,6 +86,7 @@ def items_cualquiera(xml):
 def wb(n): return re.compile(r"(?<!\w)" + re.escape(norm(n)) + r"(?!\w)")
 
 def main():
+    if "--retag" in sys.argv: return retag()
     ind = json.load(open(RAIZ / "atalaya/data/indice.json", encoding="utf8"))
     provs = ind["prov"]; muns_by_prov = {}
     for c, n in [m for m in ind["mun"] if m[0][:2] in provs]: muns_by_prov.setdefault(c[:2], []).append((c, n))
@@ -134,6 +150,7 @@ def main():
         ensure_ascii=False, separators=(",", ":")), encoding="utf8")
     print(len(out), "titulares;", sum(1 for x in out if x["a"] == "local"), "locales;", sum(1 for x in out if x["mun"]), "con municipio;", sum(1 for x in out if x["r"]), "de riesgo")
 main()
+if "--retag" in sys.argv: sys.exit(0)   # el reetiquetado no marca «noticias» como actualizado
 # El recolector frecuente (atalaya-recogida.yml) define SIN_MARCA=1: no debe marcar «noticias» como actualizado hoy, porque el workflow
 # diario usa esa fecha para decidir si ya hizo su trabajo (Congreso, Senado, encuestas…).
 if not os.environ.get("SIN_MARCA"):
