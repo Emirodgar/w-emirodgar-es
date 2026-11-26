@@ -19,7 +19,8 @@
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "el gasto sube cuando sube el paro, por las prestaciones."},
   {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "el gasto en porcentaje del PIB sube cuando el PIB cae, aunque el gasto en euros no cambie."},
   {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "la misma metodología, en euros por persona."},
-  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."}
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
+  {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "más población también afecta al gasto público total."}
  ],
  "series": {
   "principal": {

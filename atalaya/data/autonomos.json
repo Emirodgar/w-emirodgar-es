@@ -15,6 +15,7 @@
  "decimales": 2,
  "colTabla": "Autónomos (millones)",
  "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?", "url": "/atalaya/fichas/macro/poblacion-extranjera/", "desc": "la misma metodología, con la población."},
   {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "la misma metodología, con el gasto de las Administraciones Públicas."},
   {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo por cuenta ajena."},
   {"titulo": "¿Cómo ha evolucionado el PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la misma metodología, con el crecimiento económico."},

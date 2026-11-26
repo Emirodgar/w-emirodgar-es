@@ -1,0 +1,38 @@
+{
+ "slug": "poblacion-extranjera",
+ "titulo_pagina": "Población extranjera en España: evolución desde 1998, con los gobiernos de cada periodo",
+ "h1": "¿Cómo ha evolucionado el porcentaje de población extranjera en España desde 1998?",
+ "pregunta_faq": "¿Qué porcentaje de la población en España es de nacionalidad extranjera?",
+ "resumen": "El porcentaje de población con nacionalidad extranjera en España subió del 1,6 % en 1998 a un máximo del 12,2 % en 2010, bajó hasta el 9,8 % en 2017 (con la crisis financiera, cuando muchos extranjeros emigraron o se nacionalizaron), y desde entonces ha vuelto a subir hasta un máximo histórico del 14,1 % en 2025.",
+ "aviso": "Porcentaje de personas con nacionalidad extranjera sobre el total de la población, a 1 de enero de cada año. De 1998 a 2022 el dato procede de la Estadística del Padrón Continuo; de 2023 a 2025, de la nueva operación Censo Anual de Población, que sustituyó al Padrón Continuo tras la revisión censal de 2021 (ambas del INE, con una metodología de recuento equivalente, pero no idéntica, por lo que el empalme entre 2022 y 2023 debe leerse con esa salvedad). Esta cifra mide la nacionalidad, no el país de nacimiento: una persona que se nacionaliza española deja de contar aquí como extranjera aunque haya nacido fuera, lo que explica parte de la caída entre 2010 y 2017, junto con la salida de extranjeros residentes durante la crisis. Las bandas de color solo señalan quién gobernaba en cada momento: el peso de la población extranjera depende de los flujos migratorios, del ciclo económico y de las nacionalizaciones de cada periodo, no solo de qué partido gobierna.",
+ "fuente": "INE, Estadística del Padrón Continuo (1998-2022) y Censo Anual de Población (2023-2025)",
+ "fuenteUrl": "https://www.ine.es/jaxi/Tabla.htm?path=/t20/e245/p08/l0/&file=01001.px",
+ "actualizado": "2026-11-26",
+ "unidad": "%",
+ "yMax": 15,
+ "yPaso": 3,
+ "colTabla": "Población extranjera, % del total",
+ "enlaces": [
+  {"titulo": "¿Cómo ha evolucionado la tasa de paro en España desde 2006?", "url": "/atalaya/fichas/macro/paro/", "desc": "la misma metodología, con el empleo."},
+  {"titulo": "¿Cuántos autónomos hay en España?", "url": "/atalaya/fichas/macro/autonomos/", "desc": "la misma metodología, con el trabajo por cuenta propia."},
+  {"titulo": "¿Cómo ha evolucionado el crecimiento del PIB en España desde 1976?", "url": "/atalaya/fichas/macro/pib/", "desc": "la población y el PIB crecen juntos cuando hay más inmigración."},
+  {"titulo": "¿Cuánto ha subido el PIB per cápita en España desde 1976?", "url": "/atalaya/fichas/macro/pib-per-capita/", "desc": "el PIB per cápita reparte el mismo PIB entre más o menos población."},
+  {"titulo": "¿Cómo ha evolucionado la presión fiscal en España desde 1995?", "url": "/atalaya/fichas/macro/presion-fiscal/", "desc": "más población activa también afecta a los ingresos públicos."},
+  {"titulo": "¿Cómo ha evolucionado el gasto público en España desde 1995?", "url": "/atalaya/fichas/macro/gasto-publico/", "desc": "más población también afecta al gasto público total."},
+  {"titulo": "¿Cómo ha evolucionado el déficit público en España desde 1995?", "url": "/atalaya/fichas/macro/deficit/", "desc": "la otra cara de la cuenta pública: ingresos y gastos del Estado."},
+  {"titulo": "¿Cómo ha evolucionado la deuda pública en España desde 1995?", "url": "/atalaya/fichas/macro/deuda/", "desc": "la misma metodología, con la deuda acumulada."}
+ ],
+ "series": {
+  "principal": {
+   "etiqueta": "Población con nacionalidad extranjera, % del total",
+   "datos": {
+    "1998": 1.60, "1999": 1.86, "2000": 2.28, "2001": 3.33, "2002": 4.73,
+    "2003": 6.24, "2004": 7.02, "2005": 8.46, "2006": 9.27, "2007": 10.00,
+    "2008": 11.41, "2009": 12.08, "2010": 12.22, "2011": 12.19, "2012": 12.14,
+    "2013": 11.77, "2014": 10.74, "2015": 10.14, "2016": 9.92, "2017": 9.82,
+    "2018": 10.13, "2019": 10.71, "2020": 11.45, "2021": 11.48, "2022": 11.68,
+    "2023": 12.7, "2024": 13.4, "2025": 14.1
+   }
+  }
+ }
+}
