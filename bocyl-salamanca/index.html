@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOCYL en Salamanca | Qué publica el Boletín de Castilla y León sobre la provincia</title>
+    <meta name="description" content="Panel que lee cada día el Boletín Oficial de Castilla y León, separa lo que afecta a Salamanca y lo explica en lenguaje llano: empleo público, medio ambiente, urbanismo, impuestos y más.">
+    <link rel="canonical" href="https://emirodgar.es/bocyl-salamanca/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:site_name" content="Emirodgar">
+    <meta property="og:title" content="BOCYL en Salamanca | Qué publica el Boletín de Castilla y León sobre la provincia">
+    <meta property="og:description" content="El Boletín Oficial de Castilla y León filtrado para Salamanca y explicado en lenguaje llano.">
+    <meta property="og:url" content="https://emirodgar.es/bocyl-salamanca/">
+    <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                fontFamily: { sans: ['Inter', 'sans-serif'] },
+                colors: { brand: { 50: '#f0fdfa', 100: '#ccfbf1', 500: '#14b8a6', 600: '#0d9488', 700: '#0f766e', 900: '#134e4a' } }
+            } }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+    </style>
+<script>try{if(localStorage.getItem("theme")==="dark"){document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}catch(e){}</script>
+<link rel="stylesheet" href="/assets/css/chrome.css?v=20261028">
+<link rel="stylesheet" href="/assets/css/project-doc.css?v=20261029">
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen flex flex-col antialiased">
+<header class="sg-header" role="banner">
+  <div class="sg-header__inner">
+    <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+    <button class="sg-hamburger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="sg-nav"><span></span></button>
+    <nav class="sg-nav" id="sg-nav" aria-label="Navegación principal">
+      <ul class="sg-nav__list">
+        <li><a class="sg-nav__link" href="/datos/">Dashboards</a></li>
+        <li><a class="sg-nav__link" href="/elecciones/">Elecciones</a></li>
+        <li><a class="sg-nav__link" href="/castilla-y-leon/">Castilla y León</a></li>
+        <li><a class="sg-nav__link" href="/actualidad/">Actualidad</a></li>
+        <li class="sg-dropdown">
+          <button class="sg-nav__link sg-dropdown__toggle" type="button" aria-expanded="false">Publicaciones</button>
+          <div class="sg-dropdown__menu">
+            <a href="/publicaciones-inteligencia-artificial">Inteligencia artificial</a>
+            <a href="/publicaciones-analisis">Análisis</a>
+            <a href="/mapa">Todas las publicaciones</a>
+          </div>
+        </li>
+      </ul>
+      <div class="sg-nav__tools">
+        <a class="sg-icon-btn sg-search" href="/buscar/" aria-label="Buscar en el sitio"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><span>Buscar</span></a>
+        <button class="sg-icon-btn sg-theme" type="button" aria-label="Activar modo oscuro">
+          <span class="sg-moon" aria-hidden="true"><svg viewBox="0 0 1472 1536"><path fill="currentColor" d="M1464 1090q-94 203-283 323.5T768 1536q-157-1-299-62t-244.5-163.5T61 1066T0 768q0-205 97.5-378t267-276.5T738 2q43-2 62 38q17 42-16 72q-176 164-176 400q0 111 43 211.5t115 173t172.5 116T1151 1056q119 0 228-51q41-18 72 13t13 72"/></svg>Oscuro</span>
+          <span class="sg-sun" aria-hidden="true"><svg viewBox="0 0 48 48"><g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="4"><path stroke-linecap="round" d="m9.15 9.15l2.228 2.228M3 24h3.15m3 14.85l2.228-2.228M38.85 38.85l-2.228-2.228M45 24h-3.15m-3-14.85l-2.228 2.228M24 3v3.15"/><path fill="currentColor" d="M24 36c6.627 0 12-5.373 12-12s-5.373-12-12-12s-12 5.373-12 12s5.373 12 12 12Z"/><path stroke-linecap="round" d="M24 45v-3.15"/></g></svg>Claro</span>
+        </button>
+        <a class="sg-btn" href="/emilio">Sobre mí</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="bg-slate-950 text-slate-400 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center gap-2 flex-wrap">
+        <a href="/proyectos" class="hover:text-white transition">Proyectos</a>
+        <span>/</span>
+        <span class="text-slate-300">BOCYL en Salamanca</span>
+        <a href="#como-funciona" class="ml-auto hover:text-white transition">Cómo funciona</a>
+    </div>
+</div>
+
+<header class="bg-slate-900 text-white shadow-md border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center space-x-3">
+        <div class="p-2.5 bg-brand-600 rounded-xl shadow-lg"><i class="fa-solid fa-scroll text-xl text-white"></i></div>
+        <div>
+            <h1 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">BOCYL en Salamanca</h1>
+            <p class="text-xs text-slate-400 flex items-center gap-1.5 mt-0.5">
+                <span class="inline-block w-2 h-2 rounded-full bg-emerald-500"></span>
+                Último boletín analizado: <span id="lastUpdatedLabel" class="font-medium text-slate-300">--</span>
+            </p>
+        </div>
+    </div>
+</header>
+
+<main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+
+    <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+        <h2 class="text-lg font-semibold text-slate-900">Lo que publica la Junta y te afecta, en lenguaje llano</h2>
+        <p class="text-xs text-slate-500 mt-0.5">Cada día se lee el Boletín Oficial de Castilla y León, se separa lo que toca a Salamanca y se traduce el lenguaje administrativo a algo que se entienda.</p>
+    </div>
+
+    <section id="kpis" class="grid grid-cols-2 lg:grid-cols-5 gap-4" aria-label="Cifras clave"></section>
+
+    <div id="loadError" class="hidden bg-amber-50 border border-amber-200 text-amber-800 text-sm rounded-xl p-4">
+        No se han podido cargar los datos. Vuelve a intentarlo en unos minutos.
+    </div>
+
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        <div class="lg:col-span-2 bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-slate-800">Entradas por día</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-4">Disposiciones que afectan a Salamanca en cada boletín, por tipo de contenido</p>
+            <div class="relative h-64 w-full"><canvas id="diasChart"></canvas></div>
+        </div>
+        <div class="bg-white p-5 rounded-xl shadow-sm border border-slate-200">
+            <h3 class="font-bold text-slate-800">De qué trata</h3>
+            <p class="text-xs text-slate-500 mt-1 mb-4">Reparto por tema en el periodo</p>
+            <div class="relative h-64 w-full"><canvas id="catChart"></canvas></div>
+        </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+        <div class="px-5 py-4 border-b border-slate-100 bg-slate-50/50 space-y-3">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+                <h3 class="font-bold text-slate-800 flex items-center gap-2"><i class="fa-solid fa-list text-slate-400"></i> Disposiciones</h3>
+                <span id="countLabel" class="text-xs bg-slate-100 text-slate-600 font-medium px-2.5 py-1 rounded-full border border-slate-200"></span>
+            </div>
+            <div class="flex flex-col md:flex-row gap-3">
+                <input id="q" type="search" placeholder="Buscar por palabra, municipio u organismo…" aria-label="Buscar"
+                       class="flex-1 text-sm border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-brand-500 bg-white text-slate-800">
+                <select id="alcance" aria-label="Alcance" class="text-sm border border-slate-300 rounded-lg px-3 py-2 bg-white text-slate-800">
+                    <option value="sal">Solo Salamanca</option>
+                    <option value="salcyl" selected>Salamanca y toda Castilla y León</option>
+                    <option value="todo">Incluir menciones dudosas</option>
+                </select>
+            </div>
+            <div id="chips" class="flex flex-wrap gap-2" role="group" aria-label="Filtrar por tema"></div>
+        </div>
+        <ul id="feed" class="divide-y divide-slate-100"></ul>
+        <div class="p-4 text-center border-t border-slate-100">
+            <button id="more" type="button" class="hidden text-sm font-semibold text-brand-700 hover:text-brand-900 border border-brand-500/40 rounded-lg px-4 py-2">Mostrar más</button>
+            <p id="emptyMsg" class="hidden text-sm text-slate-500">No hay disposiciones con esos filtros.</p>
+        </div>
+    </section>
+
+    <section id="como-funciona" class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 space-y-4">
+        <h2 class="text-lg font-bold text-slate-900">Cómo funciona</h2>
+        <ol class="list-decimal pl-5 text-sm text-slate-600 space-y-1.5">
+            <li>Cada día hábil se descarga el sumario del <a class="text-brand-700 underline" href="https://bocyl.jcyl.es/" target="_blank" rel="noopener">BOCYL</a> y el texto de cada disposición.</li>
+            <li>Se queda con lo que nombra a Salamanca, su provincia o sus entidades, y con las normas que afectan a toda la comunidad.</li>
+            <li>Se clasifica por tema y se redacta un resumen corto en lenguaje llano.</li>
+            <li>Cada resumen enlaza al texto oficial, que es el único con validez jurídica.</li>
+        </ol>
+        <div class="text-xs text-slate-500 border-t border-slate-200 pt-4 space-y-1.5">
+            <p><strong>Resúmenes.</strong> Son una ayuda para entender el contenido, no sustituyen al texto oficial. Las entradas marcadas «Sin resumen todavía» muestran el título oficial tal cual.</p>
+            <p><strong>Alcance.</strong> «Salamanca» significa que el título la nombra. «Toda Castilla y León» son normas o listados que la incluyen entre otras provincias. «Mención dudosa» son textos donde Salamanca aparece de pasada y puede no afectar a la provincia.</p>
+            <p><strong>Datos personales.</strong> Los resúmenes no recogen nombres de personas. Si buscas a alguien concreto, consulta el texto oficial.</p>
+            <p><strong>Prototipo.</strong> Cubre del 28 de octubre al 27 de noviembre de 2026. Tampoco incluye el BOP de Salamanca, donde se publican otros anuncios, como la mayoría de las sanciones y las ordenanzas fiscales.</p>
+        </div>
+    </section>
+</main>
+
+<script>
+(function () {
+    'use strict';
+    const COLORES = {
+        empleo: '#2563eb', ambiente: '#059669', urbanismo: '#d97706', ayudas: '#7c3aed',
+        impuestos: '#dc2626', sanciones: '#be123c', subastas: '#0891b2', laboral: '#db2777', otros: '#64748b'
+    };
+    const ALCANCES = { provincia: 'Salamanca', comunidad: 'Toda Castilla y León', mencion: 'Mención dudosa' };
+    const PAGINA = 20;
+    let D = null, tema = 'todos', visibles = PAGINA, charts = {};
+
+    const $ = id => document.getElementById(id);
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const num = n => Number(n).toLocaleString('es-ES');
+    const clave = f => f.split('/').reverse().join('');
+    const corta = f => { const [d, m] = f.split('/'); return d + '/' + m; };
+    const largo = f => { const [d, m, y] = f.split('/'); return new Date(+y, m - 1, +d).toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' }); };
+
+    function ambito() {
+        const v = $('alcance').value;
+        return v === 'sal' ? ['provincia'] : v === 'salcyl' ? ['provincia', 'comunidad'] : ['provincia', 'comunidad', 'mencion'];
+    }
+    function filtrados(conTema) {
+        const q = $('q').value.trim().toLowerCase(), a = ambito();
+        return D.items.filter(i => a.includes(i.alcance)
+            && (!conTema || tema === 'todos' || i.categoria === tema)
+            && (!q || (i.titulo + ' ' + (i.resumen || '')).toLowerCase().includes(q)));
+    }
+
+    function kpis() {
+        const dias = Object.values(D.dias);
+        const total = dias.reduce((s, d) => s + d.total, 0);
+        const sal = D.items.filter(i => i.alcance === 'provincia').length;
+        const cyl = D.items.filter(i => i.alcance === 'comunidad').length;
+        const res = D.items.filter(i => i.resumen && i.alcance !== 'mencion').length;
+        const card = (ico, col, valor, titulo, sub) => `<div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200">
+            <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 uppercase tracking-wide"><i class="fa-solid ${ico} ${col}"></i>${esc(titulo)}</div>
+            <div class="text-3xl font-bold text-slate-900 mt-2">${valor}</div><div class="text-xs text-slate-500 mt-1">${esc(sub)}</div></div>`;
+        $('kpis').innerHTML =
+            card('fa-newspaper', 'text-blue-600', num(dias.length), 'Boletines', 'Analizados en el periodo') +
+            card('fa-file-lines', 'text-slate-500', num(total), 'Disposiciones', 'Revisadas en total') +
+            card('fa-location-dot', 'text-emerald-600', num(sal), 'Salamanca', total ? Math.round(100 * sal / total) + ' % del total' : '') +
+            card('fa-map', 'text-amber-600', num(cyl), 'Toda Castilla y León', 'Normas y listados generales') +
+            card('fa-comment-dots', 'text-violet-600', num(res), 'Con resumen', 'En lenguaje llano');
+        $('lastUpdatedLabel').textContent = D.actualizado ? largo(D.actualizado) + (D.dias[D.actualizado].boletin ? ' · nº ' + D.dias[D.actualizado].boletin : '') : '--';
+    }
+
+    function chips() {
+        const cuenta = {};
+        filtrados(false).forEach(i => cuenta[i.categoria] = (cuenta[i.categoria] || 0) + 1);
+        const todos = Object.values(cuenta).reduce((a, b) => a + b, 0);
+        const claves = Object.keys(cuenta).sort((a, b) => cuenta[b] - cuenta[a]);
+        const chip = (k, txt, n) => `<button type="button" data-t="${k}" aria-pressed="${tema === k}" class="text-xs font-medium px-3 py-1.5 rounded-full border transition ${tema === k ? 'bg-slate-900 text-white border-slate-900' : 'bg-white text-slate-600 border-slate-300 hover:border-slate-500'}">${esc(txt)} <span class="opacity-60">${n}</span></button>`;
+        $('chips').innerHTML = chip('todos', 'Todos', todos) + claves.map(k => chip(k, D.categorias[k] || k, cuenta[k])).join('');
+        if (tema !== 'todos' && !cuenta[tema]) tema = 'todos';
+    }
+
+    function feed() {
+        const lista = filtrados(true);
+        $('countLabel').textContent = num(lista.length) + (lista.length === 1 ? ' disposición' : ' disposiciones');
+        $('emptyMsg').classList.toggle('hidden', lista.length > 0);
+        $('more').classList.toggle('hidden', lista.length <= visibles);
+        let ultimo = '';
+        $('feed').innerHTML = lista.slice(0, visibles).map(i => {
+            const cab = i.fecha !== ultimo ? `<div class="px-5 pt-4 pb-1 text-xs font-semibold text-slate-500 uppercase tracking-wide">${esc(largo(i.fecha))}${i.boletin ? ' · BOCYL nº ' + esc(i.boletin) : ''}</div>` : '';
+            ultimo = i.fecha;
+            const col = COLORES[i.categoria] || COLORES.otros;
+            const cuerpo = i.resumen
+                ? `<p class="text-sm text-slate-800 leading-relaxed">${esc(i.resumen)}</p>
+                   <details class="mt-2"><summary class="text-xs text-slate-500 cursor-pointer hover:text-slate-700">Ver título oficial</summary><p class="text-xs text-slate-500 mt-1 leading-relaxed">${esc(i.titulo)}</p></details>`
+                : `<p class="text-sm text-slate-600 leading-relaxed clamp-3" title="${esc(i.titulo)}">${esc(i.titulo)}</p>
+                   <p class="text-[11px] text-slate-500 mt-1">Sin resumen todavía</p>`;
+            return `<li>${cab}<article class="px-5 py-3">
+                <div class="flex flex-wrap items-center gap-2 mb-1.5">
+                    <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold px-2 py-0.5 rounded-full text-white" style="background:${col}">${esc(D.categorias[i.categoria] || i.categoria)}</span>
+                    <span class="text-[11px] font-medium px-2 py-0.5 rounded-full border ${i.alcance === 'provincia' ? 'border-emerald-300 text-emerald-700' : i.alcance === 'comunidad' ? 'border-amber-300 text-amber-700' : 'border-slate-300 text-slate-500'}">${esc(ALCANCES[i.alcance])}</span>
+                    <a href="${esc(i.url)}" target="_blank" rel="noopener" class="ml-auto text-xs text-brand-700 hover:underline">Texto oficial <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i></a>
+                </div>${cuerpo}</article></li>`;
+        }).join('');
+    }
+
+    function graficos() {
+        const lista = filtrados(false);
+        const dias = Object.keys(D.dias).sort((a, b) => clave(a).localeCompare(clave(b)));
+        const cats = [...new Set(lista.map(i => i.categoria))];
+        const cuenta = {};
+        lista.forEach(i => { (cuenta[i.fecha] = cuenta[i.fecha] || {})[i.categoria] = ((cuenta[i.fecha] || {})[i.categoria] || 0) + 1; });
+        const ejes = { grid: { color: 'rgba(148,163,184,.2)' }, ticks: { color: '#94a3b8', font: { size: 10 } } };
+        if (charts.d) charts.d.destroy();
+        charts.d = new Chart($('diasChart'), {
+            type: 'bar',
+            data: { labels: dias.map(corta), datasets: cats.map(k => ({ label: D.categorias[k] || k, backgroundColor: COLORES[k] || COLORES.otros, data: dias.map(f => (cuenta[f] || {})[k] || 0) })) },
+            options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, color: '#94a3b8', font: { size: 11 } } } },
+                scales: { x: { ...ejes, stacked: true }, y: { ...ejes, stacked: true, beginAtZero: true, ticks: { ...ejes.ticks, precision: 0 } } } }
+        });
+        const tot = {};
+        lista.forEach(i => tot[i.categoria] = (tot[i.categoria] || 0) + 1);
+        const ks = Object.keys(tot).sort((a, b) => tot[b] - tot[a]);
+        if (charts.c) charts.c.destroy();
+        charts.c = new Chart($('catChart'), {
+            type: 'doughnut',
+            data: { labels: ks.map(k => D.categorias[k] || k), datasets: [{ data: ks.map(k => tot[k]), backgroundColor: ks.map(k => COLORES[k] || COLORES.otros), borderWidth: 0 }] },
+            options: { responsive: true, maintainAspectRatio: false, cutout: '60%', plugins: { legend: { position: 'bottom', labels: { boxWidth: 10, color: '#94a3b8', font: { size: 11 } } } } }
+        });
+    }
+
+    function refrescar(reinicia) {
+        if (reinicia) visibles = PAGINA;
+        chips(); feed(); graficos();
+    }
+
+    async function init() {
+        try {
+            const r = await fetch('data.json', { cache: 'no-store' });
+            if (!r.ok) throw new Error(r.status);
+            D = await r.json();
+        } catch (e) {
+            $('loadError').classList.remove('hidden');
+            return;
+        }
+        kpis();
+        refrescar(true);
+        $('q').addEventListener('input', () => refrescar(true));
+        $('alcance').addEventListener('change', () => refrescar(true));
+        $('chips').addEventListener('click', e => { const b = e.target.closest('button[data-t]'); if (b) { tema = b.dataset.t; refrescar(true); } });
+        $('more').addEventListener('click', () => { visibles += PAGINA; feed(); });
+    }
+    document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
+<footer class="sg-footer">
+  <div class="sg-footer__inner">
+    <div>
+      <a class="sg-logo" href="/" aria-label="Emirodgar, inicio">Emirodgar<i aria-hidden="true"></i></a>
+      <p class="sg-footer__about">Datos e inteligencia artificial responsable para la gestión pública, las organizaciones y los ciudadanos.</p>
+    </div>
+    <nav class="sg-footer__nav" aria-label="Pie de página">
+      <a href="/datos/">Dashboards</a>
+      <a href="/elecciones/">Elecciones</a>
+      <a href="/castilla-y-leon/">Castilla y León</a>
+      <a href="/actualidad/">Actualidad</a>
+      <a href="/publicaciones-inteligencia-artificial">IA</a>
+      <a href="/publicaciones-analisis">Análisis</a>
+      <a href="/servicios/">Servicios</a>
+      <a href="/emilio">Sobre mí</a>
+      <a href="/buscar/">Buscar</a>
+      <a href="/mapa">Mapa web</a>
+    </nav>
+    <div class="sg-footer__social">
+      <a href="https://www.linkedin.com/in/emirodgar/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg></a>
+      <a href="mailto:emirodgar@gmail.com" aria-label="Correo electrónico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></a>
+    </div>
+  </div>
+  <div class="sg-copyright">© 2026 <a href="/">Emirodgar</a> · Emilio Rodríguez García</div>
+</footer>
+<script src="/assets/js/theme.js?v=20261028" defer></script>
+</body>
+</html>
