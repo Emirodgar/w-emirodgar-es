@@ -1,0 +1,68 @@
+name: BOCYL en Salamanca · actualización diaria
+
+# Descarga los boletines recientes del BOCYL, filtra lo que afecta a Salamanca y
+# redacta con Gemini el resumen en lenguaje llano de las disposiciones nuevas.
+#
+# El BOCYL sale de lunes a viernes por la mañana. El script es idempotente (revisa
+# los últimos 7 días y solo resume lo que aún no tiene resumen), así que repetir el
+# disparo a lo largo del día no duplica nada y cubre los retrasos de GitHub con los
+# triggers `schedule`. Sin GEMINI_API_KEY (o si Gemini falla) los datos se actualizan
+# igualmente y las entradas quedan «sin resumen» hasta la siguiente ejecución.
+
+on:
+  schedule:
+    # 08:23, 11:23 y 14:23 UTC (9:23-10:23, 12:23-13:23 y 15:23-16:23 en Madrid).
+    - cron: '23 8,11,14 * * 1-5'
+  workflow_dispatch:
+    inputs:
+      desde:
+        description: 'Recuperar desde esta fecha (dd/mm/aaaa). Vacío = últimos 7 días'
+        type: string
+        default: ''
+      hasta:
+        description: 'Hasta esta fecha (dd/mm/aaaa). Vacío = hoy'
+        type: string
+        default: ''
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bocyl-salamanca
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Descargar, filtrar y resumir
+        id: build
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY || vars.GEMINI_API_KEY }}
+          DESDE: ${{ inputs.desde }}
+          HASTA: ${{ inputs.hasta }}
+        run: |
+          args=()
+          [ -n "$DESDE" ] && args+=(--desde "$DESDE")
+          [ -n "$HASTA" ] && args+=(--hasta "$HASTA")
+          python3 scripts/bocyl/build.py "${args[@]}"
+
+      - name: Commit y push de lo que haya cambiado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add bocyl-salamanca/data.json scripts/bocyl/resumenes.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios."
+            exit 0
+          fi
+          git commit -m "Actualiza BOCYL en Salamanca (${{ steps.build.outputs.periodo }})"
+          git pull --rebase
+          git push
