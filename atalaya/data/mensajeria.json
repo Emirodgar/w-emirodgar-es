@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T08:27:32+00:00",
+ "actualizado": "2026-11-27T19:06:42+00:00",
  "ventana_dias": 30,
  "aviso": "Solo canales públicos de Telegram enlazados por la web de cada partido (o confirmados). Las visualizaciones son las de la primera captura de cada mensaje; los mensajes recientes pueden estar infravalorados. No es una medida de apoyo ni de alcance total. Los partidos sin canal confirmado no aparecen.",
  "canales": [
@@ -9,11 +9,15 @@
    "url": "https://t.me/Partido_Popular",
    "nombre": "Partido Popular",
    "origen": "enlazado_web",
-   "seguidores": 5740,
+   "seguidores": 5750,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
      "n": 5740
+    },
+    {
+     "f": "2026-11-27",
+     "n": 5750
     }
    ],
    "mensajes_archivados": 154,
@@ -25,7 +29,7 @@
     "por_dia": 0.1,
     "vistas_total": 5710,
     "vistas_mediana": 2270,
-    "vistas_por_seguidor": 0.4,
+    "vistas_por_seguidor": 0.39,
     "temas": {},
     "con_tema": 0,
     "formatos": {
@@ -98,11 +102,15 @@
    "url": "https://t.me/ahorapodemos",
    "nombre": "PODEMOS.",
    "origen": "enlazado_web",
-   "seguidores": 18800,
+   "seguidores": 18700,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
      "n": 18800
+    },
+    {
+     "f": "2026-11-27",
+     "n": 18700
     }
    ],
    "mensajes_archivados": 157,
@@ -114,7 +122,7 @@
     "por_dia": 0.5,
     "vistas_total": 85730,
     "vistas_mediana": 6470,
-    "vistas_por_seguidor": 0.34,
+    "vistas_por_seguidor": 0.35,
     "temas": {
      "seguridad": 1
     },
@@ -225,24 +233,28 @@
    "partido": "Junts",
    "handle": "juntsxcat",
    "url": "https://t.me/juntsxcat",
-   "nombre": "Junts per Catalunya",
+   "nombre": "Junts per Catalunya🎗",
    "origen": "enlazado_web",
-   "seguidores": 3940,
+   "seguidores": 3930,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
      "n": 3940
+    },
+    {
+     "f": "2026-11-27",
+     "n": 3930
     }
    ],
-   "mensajes_archivados": 147,
+   "mensajes_archivados": 154,
    "primero": "2026-09-22",
-   "ultimo": "2026-11-25",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 28,
-    "mensajes": 71,
-    "por_dia": 2.5,
-    "vistas_total": 62893,
-    "vistas_mediana": 878,
+    "mensajes": 78,
+    "por_dia": 2.8,
+    "vistas_total": 65653,
+    "vistas_mediana": 864,
     "vistas_por_seguidor": 0.22,
     "temas": {
      "sanidad": 1,
@@ -250,9 +262,9 @@
     },
     "con_tema": 2,
     "formatos": {
-     "imagen": 40,
-     "enlace": 17,
-     "texto": 14
+     "imagen": 43,
+     "enlace": 18,
+     "texto": 17
     },
     "reenviados": 0,
     "serie": [
@@ -339,53 +351,61 @@
      {
       "f": "2026-11-25",
       "n": 2
+     },
+     {
+      "f": "2026-11-26",
+      "n": 4
+     },
+     {
+      "f": "2026-11-27",
+      "n": 3
      }
     ]
    },
    "ultimos": [
     {
-     "f": "2026-11-25T23:39:06+00:00",
-     "t": "📺 Miriam Nogueras al Debat de TV3 👇🏼 🗣\"Aquestes eleccions no van de Sánchez o Feijóo. Van de Catalunya, dels catalans, de la nostra nació i de la nostra llengua. Necessitem una veu forta a Madrid per defensar Catalunya i",
-     "u": "https://t.me/juntsxcat/6051",
-     "v": 438,
-     "fmt": [
-      "texto"
-     ]
-    },
-    {
-     "f": "2026-11-25T16:32:29+00:00",
-     "t": "Demà, a partir de les 19.30 hores, no et perdis l’acte final de campanya a Tarragona amb la cap de llista per Barcelona Miriam Nogueras, el president Puigdemont, el secretari general, Jordi Turull, el cap de llista de Ta",
-     "u": "https://t.me/juntsxcat/6050",
-     "v": 557,
+     "f": "2026-11-27T11:54:04+00:00",
+     "t": "🎉 ACTE FINAL DE CAMPANYA · CATALUNYA AL CENTRE! Aquest divendres 27 de novembre posem el punt final a la campanya electoral amb un gran acte final a Barcelona! 📍Mediapro · Av. Diagonal, 177, Barcelona 🕕 18.00 h – Obertur",
+     "u": "https://t.me/juntsxcat/6059",
+     "v": 361,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-24T20:50:59+00:00",
-     "t": "🔛 AVUI, GIRONA AL CENTRE. CATALUNYA AL CENTRE. ❗️ Nogueras: “Us heu equivocat de gent i us heu equivocat de poble” La candidata de Junts posa en valor «la victòria dels qui heu aguantat les porres, els insults, els tribu",
-     "u": "https://t.me/juntsxcat/6049",
-     "v": 685,
+     "f": "2026-11-27T11:37:16+00:00",
+     "t": "Miriam Nogueras, cap de llista a les eleccions del 29N👇 🗣\"Ens diuen que aquestes eleccions van d'escollir entre Sánchez i Feijóo, que els catalans hem d'escollir un dels dos i callar. Aquestes eleccions van de Catalunya,",
+     "u": "https://t.me/juntsxcat/6058",
+     "v": 367,
      "fmt": [
       "texto"
      ]
     },
     {
-     "f": "2026-11-24T20:50:59+00:00",
-     "t": "",
-     "u": "https://t.me/juntsxcat/6048",
-     "v": 616,
+     "f": "2026-11-27T07:33:41+00:00",
+     "t": "Junts per Catalunya🎗 pinned a photo",
+     "u": "https://t.me/juntsxcat/6057",
+     "v": null,
+     "fmt": [
+      "texto"
+     ]
+    },
+    {
+     "f": "2026-11-26T21:05:49+00:00",
+     "t": "🎉 ACTE FINAL DE CAMPANYA · CATALUNYA AL CENTRE! Aquest divendres 27 de novembre posem el punt final a la campanya electoral amb un gran acte final a Barcelona! 📍Mediapro · Av. Diagonal, 177, Barcelona 🕕 18.00 h – Obertur",
+     "u": "https://t.me/juntsxcat/6056",
+     "v": 533,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-24T16:04:37+00:00",
-     "t": "▶ A partir de les 19:30 h, no et perdis l'acte de campanya a Girona amb la cap de llista, Miriam Nogueras, el president, Carles Puigdemont, el secretari general, Jordi Turull, la cap de llista per Girona, Marta Madrenas,",
-     "u": "https://t.me/juntsxcat/6047",
-     "v": 662,
+     "f": "2026-11-26T20:56:11+00:00",
+     "t": "🔛 AVUI, TARRAGONA AL CENTRE. CATALUNYA AL CENTRE. ❗️ Nogueras: “Aquestes eleccions van d’una sola cosa: si Catalunya hi és o no hi és. Si Catalunya té veu a Madrid o queda muda” La candidata reivindica des de Tarragona l",
+     "u": "https://t.me/juntsxcat/6055",
+     "v": 502,
      "fmt": [
-      "enlace"
+      "texto"
      ]
     }
    ]
@@ -396,23 +416,27 @@
    "url": "https://t.me/eajpnveus",
    "nombre": "EAJ-PNV",
    "origen": "enlazado_web",
-   "seguidores": 542,
+   "seguidores": 541,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
      "n": 542
+    },
+    {
+     "f": "2026-11-27",
+     "n": 541
     }
    ],
-   "mensajes_archivados": 123,
+   "mensajes_archivados": 137,
    "primero": "2026-11-09",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 19,
-    "mensajes": 123,
-    "por_dia": 6.5,
-    "vistas_total": 13330,
-    "vistas_mediana": 112,
-    "vistas_por_seguidor": 0.21,
+    "mensajes": 137,
+    "por_dia": 7.2,
+    "vistas_total": 14432,
+    "vistas_mediana": 108,
+    "vistas_por_seguidor": 0.2,
     "temas": {
      "economía": 9,
      "empleo": 7,
@@ -423,9 +447,9 @@
     },
     "con_tema": 18,
     "formatos": {
-     "vídeo": 87,
-     "imagen": 35,
-     "texto": 1
+     "vídeo": 94,
+     "imagen": 41,
+     "texto": 2
     },
     "reenviados": 0,
     "serie": [
@@ -499,54 +523,58 @@
      },
      {
       "f": "2026-11-26",
-      "n": 6
+      "n": 12
+     },
+     {
+      "f": "2026-11-27",
+      "n": 8
      }
     ]
    },
    "ultimos": [
     {
-     "f": "2026-11-26T14:45:12+00:00",
-     "t": "📺 Aitor Esteban EBBren presidenteari egingo dioten elkarrizketa La Séptima telebistan zuzenean ikus dezakezu. 16:00etatik aurrera. https://youtube.com/live/eOBiMdMGmcI",
-     "u": "https://t.me/eajpnveus/9851",
-     "v": 10,
+     "f": "2026-11-27T18:45:20+00:00",
+     "t": "📡 Kanpaina itxiera zuzenean ikus dezakezu. Aitor Esteban EBBren presidentea, Imanol Pradales Lehendakaria, Maribel Vaquero Gipuzkoako zerrendaburua, Idoia Sagastizabal Bizkaiko zerrendaburua eta Gorka Urtaran Arabako zer",
+     "u": "https://t.me/eajpnveus/9880",
+     "v": 13,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-26T14:15:13+00:00",
-     "t": "📺 Maribel Vaquero Kongresurako Gipuzkoako zerrendaburuari egingo dioten elkarrizketa ETB2n zuzenean ikus dezakezu. 15:30ean. https://youtube.com/live/lW53-xejieI",
-     "u": "https://t.me/eajpnveus/9850",
-     "v": 27,
+     "f": "2026-11-27T11:43:11+00:00",
+     "t": "🟣 Bilbon gertatutako hilketa matxistaren aurreran, gure gaitzespen irmoena. La violencia machista no tiene lugar en Euskadi. Ezta bat gehiago ere ez!",
+     "u": "https://t.me/eajpnveus/9875",
+     "v": 61,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-26T11:27:34+00:00",
-     "t": "🕊️ Joseba Goikoetxea eta Mikel Zabalza gogoan, gure konpromisoa giza eskubide eta memoriarekin. Idoia Sagastizabal, Kongresurako Bizkaiko zerrendaburua: “Una democracia se fortalece cuando abre sus archivos, reconoce a s",
-     "u": "https://t.me/eajpnveus/9849",
-     "v": 59,
+     "f": "2026-11-27T11:34:50+00:00",
+     "t": "🟣 Indarkeria matxistaren azken hilketaren aurrean, erabateko gaitzespena eta emakumeon defentsa osoa. Emakumeon eskubideak ez dira negoziatzen!",
+     "u": "https://t.me/eajpnveus/9874",
+     "v": 79,
      "fmt": [
       "vídeo"
      ]
     },
     {
-     "f": "2026-11-26T09:36:18+00:00",
-     "t": "Desde el cuartel de la Guardia Civil de Intxaurrondo, el último lugar que vio con vida a Mikel Zabalza hace 41 años, le recordamos a Pedro Sánchez que ha incumplido su compromiso de aprobar una nueva ley de secretos ofic",
-     "u": "https://t.me/eajpnveus/9848",
-     "v": 75,
+     "f": "2026-11-27T10:01:01+00:00",
+     "t": "EAJ-PNV pinned a photo",
+     "u": "https://t.me/eajpnveus/9873",
+     "v": null,
      "fmt": [
-      "vídeo"
+      "texto"
      ]
     },
     {
-     "f": "2026-11-26T07:54:49+00:00",
-     "t": "Mikel Zabalza, gogoan zaitugu! Zure familiak eta Euskadi osoak egia ezagutzea merezi dugu. Corría el año 1985. Mikel Zabalza, un joven navarro de Orbaitzeta, fue detenido en el cuartel de la Guardia Civil de Intxaurrondo",
-     "u": "https://t.me/eajpnveus/9847",
-     "v": 80,
+     "f": "2026-11-27T09:59:26+00:00",
+     "t": "💬 Estamos contentos porque nuestro mensaje está calando en la ciudadanía vasca. Aitor Esteban: “Una voz vasca fuerte en Madrid, una voz independiente y que no está atada a un bloque ni va a ponerse al servicio de ningún ",
+     "u": "https://t.me/eajpnveus/9872",
+     "v": 89,
      "fmt": [
-      "imagen"
+      "vídeo"
      ]
     }
    ]
@@ -562,28 +590,33 @@
     {
      "f": "2026-11-26",
      "n": 2830
+    },
+    {
+     "f": "2026-11-27",
+     "n": 2830
     }
    ],
-   "mensajes_archivados": 68,
+   "mensajes_archivados": 76,
    "primero": "2026-11-12",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 16,
-    "mensajes": 68,
-    "por_dia": 4.2,
-    "vistas_total": 59688,
-    "vistas_mediana": 868,
-    "vistas_por_seguidor": 0.31,
+    "mensajes": 76,
+    "por_dia": 4.8,
+    "vistas_total": 65371,
+    "vistas_mediana": 863,
+    "vistas_por_seguidor": 0.3,
     "temas": {
-     "empleo": 2,
-     "vivienda": 1,
-     "economía": 1
+     "empleo": 3,
+     "vivienda": 2,
+     "economía": 2
     },
-    "con_tema": 2,
+    "con_tema": 3,
     "formatos": {
-     "imagen": 36,
-     "vídeo": 18,
-     "enlace": 14
+     "imagen": 39,
+     "vídeo": 20,
+     "enlace": 15,
+     "texto": 2
     },
     "reenviados": 0,
     "serie": [
@@ -645,54 +678,58 @@
      },
      {
       "f": "2026-11-26",
+      "n": 8
+     },
+     {
+      "f": "2026-11-27",
       "n": 4
      }
     ]
    },
    "ultimos": [
     {
-     "f": "2026-11-26T10:16:55+00:00",
-     "t": "Ezinezkoa zirudiena posible egiteko prest gaude! ⚾️ Azken tantura arte partida dago eta irabaziko dugu!",
-     "u": "https://t.me/ehbildu/10719",
-     "v": 423,
+     "f": "2026-11-27T09:50:21+00:00",
+     "t": "",
+     "u": "https://t.me/ehbildu/10736",
+     "v": 614,
+     "fmt": [
+      "imagen"
+     ]
+    },
+    {
+     "f": "2026-11-27T09:21:41+00:00",
+     "t": "⚫️ EH Bildu ha decidido suspender todos sus actos de campaña previstos para este viernes como muestra de denuncia y duelo por el asesinato machista ocurrido esta madrugada en Bilbo. Por este motivo, queda suspendido el a",
+     "u": "https://t.me/ehbildu/10735",
+     "v": 789,
+     "fmt": [
+      "texto"
+     ]
+    },
+    {
+     "f": "2026-11-27T09:21:35+00:00",
+     "t": "⚫️ EH Bilduk ostiral honetarako aurreikusita zituen kanpaina ekitaldi guztiak bertan behera uztea erabaki du, gaur goizaldean Bilbon gertatutako hilketa matxista salatzeko eta dolua adierazteko. Horregatik, bertan behera",
+     "u": "https://t.me/ehbildu/10734",
+     "v": 865,
+     "fmt": [
+      "texto"
+     ]
+    },
+    {
+     "f": "2026-11-27T07:10:38+00:00",
+     "t": "Azaroaren 25etik bi egunera, indarkeria matxistaren aurpegirik krudelena ezagutu du gure herriak, beste behin. Bilbon jazotako erailketa matxistaren aurrean, ezkerreko subiranismoaren haserrea eta sumindura adierazi nahi",
+     "u": "https://t.me/ehbildu/10731",
+     "v": 664,
+     "fmt": [
+      "imagen"
+     ]
+    },
+    {
+     "f": "2026-11-26T20:56:12+00:00",
+     "t": "Igandean mobilizazio orokor herritarra. El domingo movilización popular masiva.",
+     "u": "https://t.me/ehbildu/10729",
+     "v": 679,
      "fmt": [
       "vídeo"
-     ]
-    },
-    {
-     "f": "2026-11-26T08:03:50+00:00",
-     "t": "KANPAINA AMAIERAKO EKITALDIA Bihar Iruñeko Labrit pilotalekua eta igandean hautetsontsiak itxaropenez betetzera goaz. Ez dugu hutsik egingo! Historia egingo dugu! POSIBLE EGIN. Garantía y derechos.",
-     "u": "https://t.me/ehbildu/10717",
-     "v": 524,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-26T06:45:09+00:00",
-     "t": "🗳 AZAROAK 26 | KANPAINAKO AGENDA 8:30 | Entrevista a Oskar Matute en Radio Popular. 8:30 | Entrevista a Mikel Otero en Radio Vitoria 8:30 | Idurre Bidegureni elkarrizketa Bizkaia Irratian. 11:00 | Oskar Matuteren adieraz",
-     "u": "https://t.me/ehbildu/10716",
-     "v": 535,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-26T06:18:33+00:00",
-     "t": "Emakumeen Aurkako Indarkeriaren Nazioarteko Egunean, protagonismo osoa eman diogu gure agendan borroka feministari. Igande honetan emakumeok erabakigarriak izango gara. Indarkeria matxista ukatzen dutenen eta emakumeon e",
-     "u": "https://t.me/ehbildu/10706",
-     "v": 516,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-25T15:35:04+00:00",
-     "t": "FEMINISTOK POSIBLE EGIN | Emakumeen aurkako indarkeriaren nazioarteko egunaren harira, kafe tertulia Donostian Oihana Etxebarrieta, Mertxe Aizpurua, Nerea Kortajarena eta Olaia Duarterekin. ZUZENEAN | EN DIRECTO",
-     "u": "https://t.me/ehbildu/10705",
-     "v": 675,
-     "fmt": [
-      "enlace"
      ]
     }
    ]
@@ -708,17 +745,21 @@
     {
      "f": "2026-11-26",
      "n": 1390
+    },
+    {
+     "f": "2026-11-27",
+     "n": 1390
     }
    ],
-   "mensajes_archivados": 157,
+   "mensajes_archivados": 161,
    "primero": "2026-06-18",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 30,
-    "mensajes": 83,
-    "por_dia": 2.8,
-    "vistas_total": 32614,
-    "vistas_mediana": 390,
+    "mensajes": 87,
+    "por_dia": 2.9,
+    "vistas_total": 33204,
+    "vistas_mediana": 386,
     "vistas_por_seguidor": 0.28,
     "temas": {
      "economía": 2,
@@ -726,11 +767,12 @@
     },
     "con_tema": 3,
     "formatos": {
-     "imagen": 52,
-     "vídeo": 30,
-     "texto": 1
+     "imagen": 53,
+     "vídeo": 32,
+     "texto": 1,
+     "enlace": 1
     },
-    "reenviados": 0,
+    "reenviados": 1,
     "serie": [
      {
       "f": "2026-10-28",
@@ -846,52 +888,56 @@
      },
      {
       "f": "2026-11-26",
-      "n": 5
+      "n": 6
+     },
+     {
+      "f": "2026-11-27",
+      "n": 3
      }
     ]
    },
    "ultimos": [
     {
+     "f": "2026-11-27T16:34:52+00:00",
+     "t": "ACTO DE PECHE DE CAMPAÑA DAS XERAIS 2026 Sigue o acto público a través da nosa canle de Youtube. 🔗 https://youtube.com/live/FDxT10Rsv3M?feature=share",
+     "u": "https://t.me/bloquenacionalistagalego/2905",
+     "v": 112,
+     "fmt": [
+      "enlace"
+     ]
+    },
+    {
+     "f": "2026-11-27T13:22:52+00:00",
+     "t": "Se concentramos todo o voto galego no BNG, este domingo teremos moitos motivos para sorrir 🩵",
+     "u": "https://t.me/bloquenacionalistagalego/2904",
+     "v": 192,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-27T11:16:31+00:00",
+     "t": "O 29N, as mulleres imos parar ese machismo ramplón de Feijóo collendo con orgullo a papeleta do BNG. MISIÓN! 🔥🔥🔥 DÁLLE A GÚSTAME E COMPARTE, TAMÉN A TRAVÉS DE WHATSAPP! X https://x.com/anaponton/status/212626794612965825",
+     "u": "https://t.me/bloquenacionalistagalego/2903",
+     "v": 206,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-26T19:39:44+00:00",
+     "t": "VOTA CON ORGULLO GALEGO MOI IMPORTANTE!!! MISIÓN DE CAMPAÑA EN REDES. Hoxe xoves, á noite, sube ás túas redes sociais unha publicación cunha foto da papeleta electoral do BNG. Podes saír ti na foto, ti con máis xente, si",
+     "u": "https://t.me/bloquenacionalistagalego/2902",
+     "v": 80,
+     "fmt": [
+      "imagen"
+     ]
+    },
+    {
      "f": "2026-11-26T12:11:41+00:00",
      "t": "⚡ O #29N toca escoller entre os intereses das eléctricas ou defender Galiza! Somos produtores de enerxía e é de sentido común termos unha Tarifa Eléctrica Galega para abaratar a factura da luz. Vota BNG para poñer os nos",
      "u": "https://t.me/bloquenacionalistagalego/2901",
      "v": 117,
-     "fmt": [
-      "vídeo"
-     ]
-    },
-    {
-     "f": "2026-11-26T10:52:50+00:00",
-     "t": "ACTO PÚBLICO ABERTO NA CORUÑA - Palexco - 26 de novembro - 20 horas #EnGalizaBNG",
-     "u": "https://t.me/bloquenacionalistagalego/2900",
-     "v": 135,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-26T10:45:04+00:00",
-     "t": "VOTA CON ORGULLO GALEGO MOI IMPORTANTE!!! MISIÓN DE CAMPAÑA EN REDES. Hoxe xoves, á noite, sube ás túas redes sociais unha publicación cunha foto da papeleta electoral do BNG. Podes saír ti na foto, ti con máis xente, si",
-     "u": "https://t.me/bloquenacionalistagalego/2899",
-     "v": 134,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-26T09:26:52+00:00",
-     "t": "En Galiza tes a quen votar. Podes votar con orgullo e cabeza alta, co voto seguro e que non falla na defensa de Galiza e da vida digna das persoas. #EnGalizaBNG COMPARTE E DÁLLE A GÚSTAME!! X https://x.com/obloque/status",
-     "u": "https://t.me/bloquenacionalistagalego/2898",
-     "v": 161,
-     "fmt": [
-      "vídeo"
-     ]
-    },
-    {
-     "f": "2026-11-26T08:00:50+00:00",
-     "t": "✊ Hai 25 anos milleiros de mozas e mozos saíron ás rúas contra a LOU para defender o ensino público! Hoxe, a mocidade galega segue en pé polos seus dereitos, liberdades e por unha sociedade máis xusta. Ningún paso atrás:",
-     "u": "https://t.me/bloquenacionalistagalego/2897",
-     "v": 170,
      "fmt": [
       "vídeo"
      ]
@@ -908,6 +954,10 @@
    "historial_seguidores": [
     {
      "f": "2026-11-26",
+     "n": 80
+    },
+    {
+     "f": "2026-11-27",
      "n": 80
     }
    ],
@@ -1030,31 +1080,36 @@
     {
      "f": "2026-11-26",
      "n": 5130
+    },
+    {
+     "f": "2026-11-27",
+     "n": 5130
     }
    ],
-   "mensajes_archivados": 160,
+   "mensajes_archivados": 169,
    "primero": "2026-09-28",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 30,
-    "mensajes": 79,
-    "por_dia": 2.6,
-    "vistas_total": 88856,
-    "vistas_mediana": 1140,
+    "mensajes": 88,
+    "por_dia": 2.9,
+    "vistas_total": 93274,
+    "vistas_mediana": 1110,
     "vistas_por_seguidor": 0.22,
     "temas": {
      "vivienda": 7,
-     "economía": 6,
+     "economía": 7,
      "empleo": 5,
      "educación": 2,
-     "inmigración": 2
+     "inmigración": 2,
+     "corrupción y justicia": 1
     },
-    "con_tema": 17,
+    "con_tema": 18,
     "formatos": {
-     "texto": 36,
-     "enlace": 34,
-     "imagen": 8,
-     "vídeo": 1
+     "texto": 38,
+     "enlace": 37,
+     "imagen": 11,
+     "vídeo": 2
     },
     "reenviados": 0,
     "serie": [
@@ -1164,54 +1219,58 @@
      },
      {
       "f": "2026-11-26",
-      "n": 1
+      "n": 2
+     },
+     {
+      "f": "2026-11-27",
+      "n": 8
      }
     ]
    },
    "ultimos": [
     {
-     "f": "2026-11-26T08:15:57+00:00",
-     "t": "👋 ¡Hola, hola! Os contamos algunas novedades sobre el cierre de campaña del Frente Amplio Venimos con novedades para el cierre de campaña 🙂 ➕ La vicepresidenta segunda del Gobierno y ministra de Trabajo, Yolanda Díaz, es",
-     "u": "https://t.me/Sumar_Oficial/4977",
-     "v": 526,
+     "f": "2026-11-27T19:06:56+00:00",
+     "t": "🙌 Llenazo en La Nave para el cierre de campaña del Frente Amplio. ¡Muchas gracias a todas y todos por el apoyo durante toda la campaña! 🫶 Gracias, gracias y gracias a las que os habéis quedado fuera. Arranca el cierre aq",
+     "u": "https://t.me/Sumar_Oficial/4986",
+     "v": 1,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-25T18:02:56+00:00",
-     "t": "👋¡Hola! ¿Cómo estáis? Os dejamos la agenda de mañana: 📣 📆 Jueves, 26 de noviembre ⏰ 09:00. Los diputados y diputadas del Grupo Parlamentario Plurinacional Sumar que forman parte de la Diputación Permanente asisten a la s",
-     "u": "https://t.me/Sumar_Oficial/4976",
-     "v": 688,
+     "f": "2026-11-27T18:03:53+00:00",
+     "t": "👋¡Hola! ¿Cómo estáis? Os dejamos la agenda del fin de semana: 📣 📆 Domingo, 29 de diciembre. ⏰ 18:00. Frente Amplio celebra la noche electoral en el Espacio Larra, desde donde se realizará la rueda de prensa de valoración",
+     "u": "https://t.me/Sumar_Oficial/4985",
+     "v": 233,
      "fmt": [
       "texto"
      ]
     },
     {
-     "f": "2026-11-25T15:59:13+00:00",
-     "t": "El lunes eran 200. Hoy son ya 650 voces de la cultura pidiendo el voto para el Frente Amplio 🙂. Eduard Fernández, Antonio de la Torre, Tristán Ulloa, Nathalie Poza y Melani Olivares se suman a Javier Bardem, Rosa Montero",
-     "u": "https://t.me/Sumar_Oficial/4975",
-     "v": 746,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-25T11:56:16+00:00",
-     "t": "¡Hola! 👋 🗞️ Os dejamos la entrevista a la candidata de Frente Amplio por Cádiz al Congreso, Esther Gil de Reboleño, para Diario de Cádiz. 🗣️ ”El voto a Frente Amplio vale el triple: para seguir gobernando y seguir empuja",
-     "u": "https://t.me/Sumar_Oficial/4974",
-     "v": 767,
+     "f": "2026-11-27T13:01:34+00:00",
+     "t": "🗞 Manuel Lago conoce desde hace mucho al candidato Feijóo y sabe que la gestión no es uno de sus fuertes. Las cifras, tampoco. Este viernes publica en HuffPost la tribuna 'La insolvencia fiscal de Feijóo': 🗣 \"Entre las m",
+     "u": "https://t.me/Sumar_Oficial/4984",
+     "v": 532,
      "fmt": [
       "enlace"
      ]
     },
     {
-     "f": "2026-11-24T18:03:56+00:00",
-     "t": "⏰ 18:00. La candidata de Frente Amplio Violeta Márquez participa en la manifestación por el 25N 'contra la violencia de género'. 📍Calle Consistorio (Jerez, Cádiz). ⏰ 18:30. El candidato de Frente Amplio Pedro Pablo Santa",
-     "u": "https://t.me/Sumar_Oficial/4973",
-     "v": 811,
+     "f": "2026-11-27T12:00:50+00:00",
+     "t": "Por si aún no lo tienes claro...🦮🐕🐩🐕‍🦺",
+     "u": "https://t.me/Sumar_Oficial/4983",
+     "v": 582,
      "fmt": [
-      "texto"
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-27T11:23:04+00:00",
+     "t": "¡Hola otra vez! 🗞 Vamos con otra entrevista. Esta vez a nuestra eurodiputada Estrella Galán en 20 Minutos, sobre las elecciones del domingo y como afectan a nuestras relaciones dentro de la UE. 🗣 \"Esperamos que España si",
+     "u": "https://t.me/Sumar_Oficial/4982",
+     "v": 572,
+     "fmt": [
+      "enlace"
      ]
     }
    ]
@@ -1227,17 +1286,21 @@
     {
      "f": "2026-11-26",
      "n": 6830
+    },
+    {
+     "f": "2026-11-27",
+     "n": 6830
     }
    ],
-   "mensajes_archivados": 149,
+   "mensajes_archivados": 153,
    "primero": "2026-09-09",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 30,
-    "mensajes": 60,
-    "por_dia": 2.0,
-    "vistas_total": 79153,
-    "vistas_mediana": 1325,
+    "mensajes": 64,
+    "por_dia": 2.1,
+    "vistas_total": 81841,
+    "vistas_mediana": 1305,
     "vistas_por_seguidor": 0.19,
     "temas": {
      "educación": 7,
@@ -1251,8 +1314,8 @@
     },
     "con_tema": 12,
     "formatos": {
-     "vídeo": 36,
-     "imagen": 20,
+     "vídeo": 39,
+     "imagen": 21,
      "texto": 3,
      "enlace": 1
     },
@@ -1340,11 +1403,51 @@
      },
      {
       "f": "2026-11-26",
+      "n": 4
+     },
+     {
+      "f": "2026-11-27",
       "n": 1
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T00:43:56+00:00",
+     "t": "🗓️ ¡Buenas noches! Compartimos la agenda de la Comisión Ejecutiva Federal para mañana, viernes 27 de noviembre. https://www.psoe.es/agenda/previsiones-cef-27-de-noviembre-de-2026/",
+     "u": "https://t.me/canalPSOE/11496",
+     "v": 605,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-26T23:51:16+00:00",
+     "t": "Ni un paso atrás, todo al rojo. #LaFuerzaDeLaGente #VotaPSOE",
+     "u": "https://t.me/canalPSOE/11495",
+     "v": 672,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-26T22:59:30+00:00",
+     "t": "Al Perro no le engañas, Abascal. #LaPeterLoPeta ❤️",
+     "u": "https://t.me/canalPSOE/11494",
+     "v": 697,
+     "fmt": [
+      "imagen"
+     ]
+    },
+    {
+     "f": "2026-11-26T22:32:20+00:00",
+     "t": "En el debate a 4 hay cuatro atriles, pero el próximo domingo va a haber 2 caminos muy diferentes. El FUTURO lo decidimos ENTRE TODOS. #LaFuerzaDeLaGente ❤️",
+     "u": "https://t.me/canalPSOE/11493",
+     "v": 714,
+     "fmt": [
+      "vídeo"
+     ]
+    },
     {
      "f": "2026-11-26T08:32:23+00:00",
      "t": "Queda muy poco para #MásQueUnMitin, donde se unen la cultura y nuestros principios. Ven a vivir el cierre de campaña: el futuro está en tu decisión. #LaFuerzaDeLaGente #VotaPSOE",
@@ -1352,42 +1455,6 @@
      "v": 457,
      "fmt": [
       "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-25T21:28:00+00:00",
-     "t": "🗓️ ¡Buenas noches! Os compartimos la agenda de la Ejecutiva del PSOE del 26 de noviembre. https://www.psoe.es/agenda/previsiones-cef-26-de-noviembre-2/",
-     "u": "https://t.me/canalPSOE/11491",
-     "v": 645,
-     "fmt": [
-      "vídeo"
-     ]
-    },
-    {
-     "f": "2026-11-24T22:41:08+00:00",
-     "t": "🗓️ ¡Buenas noches! Compartimos la agenda de la Comisión Ejecutiva Federal para mañana, miércoles 25 de noviembre. https://www.psoe.es/agenda/previsiones-cef-25-de-noviembre-de-2026/",
-     "u": "https://t.me/canalPSOE/11490",
-     "v": 876,
-     "fmt": [
-      "vídeo"
-     ]
-    },
-    {
-     "f": "2026-11-24T21:35:05+00:00",
-     "t": "27N #MÁSQUEUNMITIN",
-     "u": "https://t.me/canalPSOE/11489",
-     "v": 905,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-24T20:40:04+00:00",
-     "t": "Barcelona es una ciudad de paz. Cataluña es tierra de paz. Y España es un país de paz. Por eso, en la próxima legislatura modificaremos la Ley de Seguridad Nacional para garantizar que España nunca participe en una guerr",
-     "u": "https://t.me/canalPSOE/11488",
-     "v": 858,
-     "fmt": [
-      "vídeo"
      ]
     }
    ]
@@ -1398,30 +1465,34 @@
    "url": "https://t.me/esquerrarepublicana",
    "nombre": "Esquerra Republicana",
    "origen": "enlazado_web",
-   "seguidores": 3200,
+   "seguidores": 3210,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
      "n": 3200
+    },
+    {
+     "f": "2026-11-27",
+     "n": 3210
     }
    ],
-   "mensajes_archivados": 139,
+   "mensajes_archivados": 145,
    "primero": "2026-03-12",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-27",
    "ventana": {
     "dias": 27,
-    "mensajes": 67,
-    "por_dia": 2.5,
-    "vistas_total": 43934,
-    "vistas_mediana": 637,
-    "vistas_por_seguidor": 0.2,
+    "mensajes": 73,
+    "por_dia": 2.7,
+    "vistas_total": 46297,
+    "vistas_mediana": 625,
+    "vistas_por_seguidor": 0.19,
     "temas": {
-     "sanidad": 2
+     "sanidad": 3
     },
-    "con_tema": 2,
+    "con_tema": 3,
     "formatos": {
-     "vídeo": 32,
-     "imagen": 21,
+     "vídeo": 36,
+     "imagen": 23,
      "enlace": 8,
      "texto": 6
     },
@@ -1509,54 +1580,58 @@
      },
      {
       "f": "2026-11-26",
-      "n": 2
+      "n": 5
+     },
+     {
+      "f": "2026-11-27",
+      "n": 3
      }
     ]
    },
    "ultimos": [
     {
-     "f": "2026-11-26T10:10:48+00:00",
-     "t": "Cada vot serà decisiu! Que no es quedi cap vot a casa. El 29N, vota Esquerra Republicana.",
-     "u": "https://t.me/esquerrarepublicana/3294",
-     "v": 252,
+     "f": "2026-11-27T12:04:55+00:00",
+     "t": "Finalitzem la campanya a Sant Andreu de la Barca ✊🏻🧡 Us hi esperem!",
+     "u": "https://t.me/esquerrarepublicana/3300",
+     "v": 312,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-26T10:10:30+00:00",
-     "t": "Tres escons en disputa! El 29N, vota Esquerra Republicana ✊🏻🧡",
-     "u": "https://t.me/esquerrarepublicana/3293",
-     "v": 252,
+     "f": "2026-11-27T12:02:14+00:00",
+     "t": "L'Hospitalet, ens veiem aquesta tarda ✊🏻🧡",
+     "u": "https://t.me/esquerrarepublicana/3299",
+     "v": 320,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-25T22:29:23+00:00",
-     "t": "“Generem més riquesa que mai, però està pitjor repartida que mai. Per culpa d’unes esquerres espanyoles que no han estat valentes. Proposem impostos als grans beneficis i no a la feina i al treball de la gent.”",
-     "u": "https://t.me/esquerrarepublicana/3292",
-     "v": 355,
+     "f": "2026-11-27T09:19:55+00:00",
+     "t": "Gabriel Rufián, al debat de Catalunya Ràdio: “Les famílies han de deixar de competir amb especuladors, grans fons d'inversió i acumuladors per aconseguir un habitatge. I això es fa via impostos, com ha passat a altres ll",
+     "u": "https://t.me/esquerrarepublicana/3298",
+     "v": 356,
      "fmt": [
       "vídeo"
      ]
     },
     {
-     "f": "2026-11-25T22:29:05+00:00",
-     "t": "“Aznar, Rato i el PP van provocar una bombolla immobiliària que va ‘putejar' a tota la meva generació”.",
-     "u": "https://t.me/esquerrarepublicana/3291",
-     "v": 334,
+     "f": "2026-11-26T22:21:46+00:00",
+     "t": "Cada cop som més. Avui, doble sessió a Rubí. Gràcies a tothom per venir, i molt especialment tots els que us heu hagut de quedar fora per desbordament de l'aforament! 🧡",
+     "u": "https://t.me/esquerrarepublicana/3297",
+     "v": 414,
      "fmt": [
       "vídeo"
      ]
     },
     {
-     "f": "2026-11-25T15:18:38+00:00",
-     "t": "Aquesta nit!",
-     "u": "https://t.me/esquerrarepublicana/3290",
-     "v": 448,
+     "f": "2026-11-26T19:31:50+00:00",
+     "t": "",
+     "u": "https://t.me/esquerrarepublicana/3296",
+     "v": 452,
      "fmt": [
-      "imagen"
+      "vídeo"
      ]
     }
    ]
@@ -1565,13 +1640,17 @@
    "partido": "Vox",
    "handle": "VOXTelegram",
    "url": "https://t.me/VOXTelegram",
-   "nombre": "VOX España",
+   "nombre": "VOX España 🇪🇸",
    "origen": "enlazado_web",
-   "seguidores": 919,
+   "seguidores": 927,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
      "n": 919
+    },
+    {
+     "f": "2026-11-27",
+     "n": 927
     }
    ],
    "mensajes_archivados": 1,
