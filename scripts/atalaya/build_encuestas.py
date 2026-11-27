@@ -32,7 +32,7 @@ def leer_fuentes():
     if MANUAL.exists():
         for s in json.loads(MANUAL.read_text(encoding="utf8")):
             yield {"fecha": s["fecha"], "empresa": s["empresa"], "medio": s.get("medio"), "muestra": s.get("muestra") or s.get("n"), "tipo": s.get("tipo", "manual"),
-                   "ambito": s.get("ambito", "ES"), "convocatoria": s.get("convocatoria", ""), "voto": s["voto"], "fuente": "manual"}
+                   "ambito": s.get("ambito", "ES"), "convocatoria": s.get("convocatoria", ""), "voto": s["voto"], "fuente": s.get("url") or "manual", **({"nota": s["nota"]} if s.get("nota") else {})}
 
 def main():
     viejo = json.loads(OUT.read_text(encoding="utf8")) if OUT.exists() else {"encuestas": []}

@@ -263,13 +263,69 @@
           "Choque entre «genocidio» (Sánchez) y «masacre» (Feijóo) sobre Gaza.",
           "Feijóo se comprometió a dimitir y dejar el acta y el aforamiento si no preside el Gobierno, y retó a Sánchez a hacer lo mismo.",
           "Sánchez y Colau se trataron de tú y compartieron argumentos; Feijóo y Abascal evitaron debatir entre sí (EFE)."
-        ]
+        ],
+        "votaciones_lectores": {
+          "aviso": "Votaciones abiertas en webs de medios: no son representativas, no tienen ficha técnica y reflejan la audiencia de cada medio. Recogidas por El Plural el 27-nov; las votaciones originales no estaban enlazadas.",
+          "resultados": [
+            {
+              "origen": "ABC",
+              "feijoo": 58,
+              "abascal": 17,
+              "colau": 14,
+              "sanchez": 11
+            },
+            {
+              "origen": "La Razón",
+              "feijoo": 54,
+              "abascal": 17,
+              "colau": 13,
+              "sanchez": 15
+            },
+            {
+              "origen": "Demócrata",
+              "feijoo": 46,
+              "abascal": 12,
+              "colau": 12,
+              "sanchez": 30
+            },
+            {
+              "origen": "20minutos",
+              "feijoo": 41.84,
+              "abascal": 13.25,
+              "colau": 16.24,
+              "sanchez": 15.94,
+              "nota": "Además: ninguno de los cuatro 4,87 %, no lo tiene claro 7,82 %."
+            },
+            {
+              "origen": "HuffPost",
+              "feijoo": 29,
+              "abascal": 10,
+              "colau": 30,
+              "sanchez": 31
+            },
+            {
+              "origen": "elDiario.es",
+              "feijoo": 29,
+              "abascal": 6,
+              "colau": 35,
+              "sanchez": 29
+            },
+            {
+              "origen": "El Plural",
+              "feijoo": 23,
+              "abascal": 5,
+              "colau": 24,
+              "sanchez": 48
+            }
+          ],
+          "url": "https://www.elplural.com/politica/espana/quien-gano-debate-cuatro-segun-encuestas-medios-comunicacion-hacemos-repaso_805498102"
+        }
       },
       "efecto_electoral": {
         "estado": "pendiente",
         "nota": "Hay prohibición de publicar encuestas en los días previos al 29-N: no habrá medición del efecto antes de la votación. Referencia previa (promedio de Roberto Benito, El Mundo, vía COPE): PP 32 %, PSOE 28,5 %, Vox 18,1 %, Frente Amplio cerca del 7 %."
       },
-      "lectura": "Las crónicas coinciden en que el debate escenificó los dos bloques (PSOE y Frente Amplio frente a PP y Vox) y en que hubo más interrupciones y tono más duro que en el cara a cara Sánchez · Feijóo. No hay sondeos posteriores ni verificaciones publicadas en las fuentes leídas, y las valoraciones de ganador son de analistas concretos. Atalaya no declara ganador.",
+      "lectura": "Las crónicas coinciden en que el debate escenificó los dos bloques (PSOE y Frente Amplio frente a PP y Vox) y en que hubo más interrupciones y tono más duro que en el cara a cara Sánchez · Feijóo. Las únicas mediciones sobre quién ganó son votaciones abiertas de lectores (Feijóo gana en cuatro, Sánchez en dos —HuffPost y El Plural— y Colau en una —elDiario.es—; Abascal en ninguna), sin valor representativo. No hay sondeos con muestra posteriores ni verificaciones publicadas en las fuentes leídas, y las valoraciones de ganador son de analistas concretos. Atalaya no declara ganador.",
       "fuentes": [
         {
           "titulo": "Telecinco: previa y formato",
@@ -295,15 +351,312 @@
           "titulo": "COPE La Linterna: así te contamos el debate",
           "url": "https://www.cope.es/programas/la-linterna/al-minuto/contamos-debate-cuatro-sanchez-feijoo-abascal-colau-elecciones-generales-29n-20261126_3483264.html",
           "tipo": "cronica"
+        },
+        {
+          "titulo": "El Plural: votaciones de medios tras el debate a cuatro",
+          "url": "https://www.elplural.com/politica/espana/quien-gano-debate-cuatro-segun-encuestas-medios-comunicacion-hacemos-repaso_805498102",
+          "tipo": "sondeo"
         }
       ],
       "pendiente": [
-        "Sondeos de quién ganó (Telecinco, Diario de Pontevedra «Vota y opina») y verificaciones de Newtral, Maldita, EFE Verifica, Verificat y RTVE Verifica.",
         "Transcripción oficial para contar tiempos de intervención.",
         "Discrepancia de fuentes: la frase «soy del Atlético…» sobre el Mundial se atribuye a Feijóo (Diario de Pontevedra) y a Sánchez (RTVE, COPE); no se incluye.",
-        "Efecto en encuestas tras el 29-N."
+        "Efecto en encuestas tras el 29-N.",
+        "Sondeos con muestra representativa sobre quién ganó (no hay ninguno publicado en las fuentes leídas; El Debate publicó una votación abierta, no leída: 404 al consultarla)."
       ],
-      "promesas_ref": {}
+      "promesas_ref": {},
+      "interacciones": {
+        "eventos": [
+          {
+            "de": "colau",
+            "a": "abascal",
+            "tipo": "reto",
+            "bloque": "Apertura",
+            "t": "Pidió condenar el último crimen machista."
+          },
+          {
+            "de": "colau",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Apertura",
+            "t": "Pidió condenar el último crimen machista (lo hizo)."
+          },
+          {
+            "de": "abascal",
+            "a": "colau",
+            "tipo": "ataque",
+            "bloque": "Apertura",
+            "t": "Dijo que no admitía «órdenes» y que el machismo es el que «la izquierda ha importado»."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Apertura",
+            "t": "Le reprochó las preguntas sin contestar del cara a cara."
+          },
+          {
+            "de": "sanchez",
+            "a": "colau",
+            "tipo": "apoyo",
+            "bloque": "Apertura",
+            "t": "Se trataron de tú y compartieron argumentos contra la derecha."
+          },
+          {
+            "de": "colau",
+            "a": "sanchez",
+            "tipo": "apoyo",
+            "bloque": "Apertura",
+            "t": "Se trataron de tú y compartieron argumentos contra la derecha."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Vivienda",
+            "t": "Criticó el ático de la presidenta de Madrid y que Feijóo lo minimizara."
+          },
+          {
+            "de": "colau",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Vivienda",
+            "t": "Le preguntó cómo cumpliría su millón de viviendas."
+          },
+          {
+            "de": "abascal",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Vivienda",
+            "t": "Atribuyó la escasez de vivienda a la inmigración y criticó al Gobierno."
+          },
+          {
+            "de": "sanchez",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Le reprochó su propuesta de recortar 112.000 millones de gasto público."
+          },
+          {
+            "de": "sanchez",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Le acusó de querer «cargarse» el Ingreso Mínimo Vital y de cobrar el bono social térmico; Abascal lo negó («bulo»)."
+          },
+          {
+            "de": "abascal",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Replicó que lo del bono era un «bulo»."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Dijo que sus «matemáticas» son como su nivel de inglés."
+          },
+          {
+            "de": "colau",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Economía y fiscalidad",
+            "t": "Le preguntó de dónde sacaría el dinero sin subir impuestos a los ricos."
+          },
+          {
+            "de": "colau",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Le acusó de votar contra ampliar derechos de las familias numerosas."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Le reprochó no haber presentado Presupuestos en casi cuatro años."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Servicios públicos",
+            "t": "Le citó los accidentes de Adamuz y Urda («170 fallos») y los fallos de las pulseras."
+          },
+          {
+            "de": "feijoo",
+            "a": "colau",
+            "tipo": "ataque",
+            "bloque": "Servicios públicos",
+            "t": "A Sánchez y Colau: «115 muertos en un año y ni palabra»."
+          },
+          {
+            "de": "sanchez",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "Servicios públicos",
+            "t": "Le acusó de proponer un sistema mixto de pensiones, es decir, privatizar."
+          },
+          {
+            "de": "abascal",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Servicios públicos",
+            "t": "Dijo que «ha destruido todo lo que funcionaba» (apagón, PISA)."
+          },
+          {
+            "de": "colau",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Servicios públicos",
+            "t": "Criticó la gestión de la derecha en las comunidades que gobierna."
+          },
+          {
+            "de": "colau",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Corrupción",
+            "t": "Le sacó casos del PP y le preguntó si iba a «dar lecciones»."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "reto",
+            "bloque": "Corrupción",
+            "t": "Le pidió explicar la financiación de sus primarias."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Corrupción",
+            "t": "Retó a PP y Vox a mostrar la misma «tolerancia cero» y recordó el ático de Ayuso."
+          },
+          {
+            "de": "sanchez",
+            "a": "abascal",
+            "tipo": "reto",
+            "bloque": "Corrupción",
+            "t": "Retó a PP y Vox a mostrar la misma «tolerancia cero»."
+          },
+          {
+            "de": "abascal",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Corrupción",
+            "t": "Afirmó que «la corrupción de Sánchez ha matado españoles»."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Migración",
+            "t": "«No voy a olvidar lo que ha pasado en Ceuta»: acusó al Gobierno de mirar para otro lado."
+          },
+          {
+            "de": "abascal",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Migración",
+            "t": "Habló de «invasión» en Ceuta y lo llamó «candidato marroquí»."
+          },
+          {
+            "de": "colau",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "Migración",
+            "t": "Rechazó hablar de «invasión», le acusó de bulos y le dijo que el Gobierno de Israel le señala como su portavoz."
+          },
+          {
+            "de": "colau",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Migración",
+            "t": "Le acusó de bulos sobre la inmigración."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Migración",
+            "t": "Le pidió que dijera «genocidio» sobre Gaza; Feijóo habló de «masacre»."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Migración",
+            "t": "A PP y Vox: «van de patriotas y el único que hizo la mili soy yo»; les reprochó su apoyo a Netanyahu, Trump y Milei."
+          },
+          {
+            "de": "sanchez",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "Migración",
+            "t": "A PP y Vox: «van de patriotas y el único que hizo la mili soy yo»; les reprochó su apoyo a Netanyahu, Trump y Milei."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "reto",
+            "bloque": "General",
+            "t": "Se comprometió a dimitir y dejar el acta y el aforamiento si no gobierna, y le retó a hacer lo mismo (tras preguntarle Sánchez si reconocería el resultado)."
+          },
+          {
+            "de": "feijoo",
+            "a": "colau",
+            "tipo": "ataque",
+            "bloque": "General",
+            "t": "«Y usted, calladita», tras criticar a Sánchez por la DANA."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "General",
+            "t": "Dijo que salió huyendo de Paiporta y que manipulaba sus palabras."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "General",
+            "t": "«¿Qué machismo es esto? Un poco de respeto», en defensa de Colau."
+          },
+          {
+            "de": "sanchez",
+            "a": "colau",
+            "tipo": "apoyo",
+            "bloque": "General",
+            "t": "Salió en defensa de Colau ante el «calladita»."
+          },
+          {
+            "de": "abascal",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "General",
+            "t": "Lo llamó «gran buitre» y «sinvergüenza»."
+          },
+          {
+            "de": "abascal",
+            "a": "colau",
+            "tipo": "ataque",
+            "bloque": "General",
+            "t": "Preguntó a Sánchez si había traído a «esta señora» para hacerle «el juego sucio»."
+          },
+          {
+            "de": "sanchez",
+            "a": "abascal",
+            "tipo": "ataque",
+            "bloque": "General",
+            "t": "«A otro perro con ese hueso», sobre el bono social térmico."
+          }
+        ],
+        "nota": "No es un recuento de tiempo ni de palabras: son los cruces dirigidos que mencionan las crónicas leídas (Diario de Pontevedra, COPE, Infobae/EFE), así que pueden faltar intercambios. Cada cruce se clasifica como ataque (crítica o acusación), reto (pregunta o desafío directo) o apoyo. Clasificación hecha por Atalaya a partir de lo narrado. Feijóo y Abascal apenas se cruzaron entre sí, como señala la crónica de EFE."
+      }
     },
     {
       "id": "2026-11-19-sanchez-feijoo",

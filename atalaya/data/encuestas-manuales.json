@@ -1,0 +1,2100 @@
+[
+ {
+  "fecha": "2026-11-23",
+  "empresa": "SocioMétrica",
+  "medio": "El Español",
+  "muestra": 7781,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.0,
+   "PSOE": 29.0,
+   "VOX": 18.1,
+   "SUMAR": 6.1,
+   "PODEMOS": 1.0,
+   "SALF": 2.1
+  },
+  "url": "https://www.elespanol.com/espana/politica/20261123/ultimo-sondeo-feijoo-sanchez-alza-puntos-escanos-favor-pp-mayoria-absoluta-derecha/1003744469260_0.html"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 5252,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.9,
+   "PSOE": 28.6,
+   "VOX": 17.8,
+   "SUMAR": 7.1,
+   "PODEMOS": 0.6
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/23/6b048219e9cf4a411a8b4580.html"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 13000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.1,
+   "PSOE": 32.9,
+   "VOX": 15.3,
+   "SUMAR": 6.8,
+   "PODEMOS": 1.5,
+   "SALF": 2.1
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n19-23nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 9456,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 28.9,
+   "VOX": 17.9,
+   "SUMAR": 7.7,
+   "PODEMOS": 0.9,
+   "SALF": 2.2
+  },
+  "url": "https://electomania.es/tracking-electopanel-23-nov-la-prohibicion-de-publicar-sondeos-entra-en-vigor-con-pp-y-psoe-en-empate-tecnico-y-un-vox-en-descenso/"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "AtlasIntel",
+  "medio": "PollsterGraph",
+  "muestra": 1045,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.1,
+   "PSOE": 29.8,
+   "VOX": 17.8,
+   "SUMAR": 7.4,
+   "PODEMOS": 1.2,
+   "SALF": 2.1
+  },
+  "url": "https://web.archive.org/web/20261123222750/https://pollstergraph.com/uploads/reports/atlas/atlas-pollstergraph-es-20261123-f8115c808c94.pdf"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 27.8,
+   "VOX": 16.4,
+   "SUMAR": 8.9,
+   "PODEMOS": 1.5,
+   "SALF": 1.7
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/23/ultima-encuesta-sondaxe-feijoo-logra-mejor-resultado-tracking-gobernar-vox/00031795453504723384652.htm"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 3000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.7,
+   "PSOE": 27.3,
+   "VOX": 19.1,
+   "SUMAR": 6.5,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/derecha-aguanta-empuje-sanchez-pp-vox-sumarian-194-escanos-mayoria-absoluta-holgada-seis-dias-del-29-n-21244630"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Target Point",
+  "medio": "El Debate",
+  "muestra": 1206,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 28.8,
+   "VOX": 17.4,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.0,
+   "SALF": 1.8
+  },
+  "url": "https://www.eldebate.com/espana/20261123/feijoo-sanchez-crecen-pelean-primer-puesto-mayoria-absoluta-derecha-sigue-solida_483831.html"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "GESOP",
+  "medio": "Prensa Ibérica",
+  "muestra": 905,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.9,
+   "PSOE": 29.0,
+   "VOX": 17.5,
+   "SUMAR": 6.7,
+   "PODEMOS": 0.7,
+   "SALF": 1.3
+  },
+  "url": "https://www.elperiodico.com/es/politica/20261123/encuesta-elecciones-generales-espana-2026-sondeo-29n-136693938"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Convergent Opinion",
+  "medio": null,
+  "muestra": 6848,
+  "tipo": "modelo",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.0,
+   "PSOE": 29.0,
+   "VOX": 17.0
+  },
+  "url": "https://convergentopinion.substack.com/p/convergents-mrp-of-spain-finds-pp",
+  "nota": "MRP: modelo de estimación, no encuesta directa."
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Cluster17",
+  "medio": "Agenda Pública",
+  "muestra": 1358,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.2,
+   "PSOE": 32.6,
+   "VOX": 16.9,
+   "SUMAR": 5.2,
+   "PODEMOS": 1.0,
+   "SALF": 1.4
+  },
+  "url": "https://agendapublica.es/noticia/21726/encuesta-29n-mayoria-absoluta-de-pp-y-vox-con-un-psoe-lider-a-costa-de-su-izquierda"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 7500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 30.9,
+   "VOX": 17.3,
+   "SUMAR": 5.7,
+   "PODEMOS": 1.1,
+   "SALF": 1.3
+  },
+  "url": "https://ep00.epimg.net/infografias/encuestas40db/2026/11-preelectoral2/PE2-cbe680f8658575bfec9654dda53767bbd334f392/2026_11_preelectoral2_voto.pdf"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "NC Report",
+  "medio": "La Razón",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.9,
+   "PSOE": 27.2,
+   "VOX": 19.0,
+   "SUMAR": 7.3,
+   "PODEMOS": 0.8
+  },
+  "url": "https://www.larazon.es/espana/sanchez-remonta-alterar-mayoria-ppvox_202611236b032823c0d5c85b96c4a76e.html"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Celeste-Tel",
+  "medio": "Onda Cero",
+  "muestra": 1100,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 28.1,
+   "VOX": 18.9,
+   "SUMAR": 7.0,
+   "PODEMOS": 0.8,
+   "SALF": 1.8
+  },
+  "url": "https://www.celeste-tel.es/wp-content/uploads/2026/11/Bar%C3%B3metro-Electoral-Elecciones-29-N-23-Noviembre-2026.pdf"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Ateneo del Dato",
+  "medio": "elDiario.es",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.1,
+   "PSOE": 30.8,
+   "VOX": 17.6,
+   "SUMAR": 6.0,
+   "PODEMOS": 0.7,
+   "SALF": 1.2
+  },
+  "url": "https://x.com/Ateneodeldato/status/2124966971066183788"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "Winston",
+  "medio": "Artículo14",
+  "muestra": 1482,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.1,
+   "PSOE": 28.2,
+   "VOX": 17.7,
+   "SUMAR": 6.4,
+   "PODEMOS": 1.6,
+   "SALF": 2.6
+  },
+  "url": "https://www.articulo14.es/politica/sanchez-recorta-distancias-a-feijoo-pero-la-mayoria-de-pp-y-vox-supera-los-190-escanos-20261123.html"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "IMOP Insights",
+  "medio": "El Confidencial",
+  "muestra": 1200,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.7,
+   "PSOE": 27.4,
+   "VOX": 18.3,
+   "SUMAR": 7.4,
+   "PODEMOS": 0.7,
+   "SALF": 1.9
+  },
+  "url": "https://www.elconfidencial.com/espana/2026-11-23/pp-vox-recta-final-margen-19-escanos-investidura-2023_4470100/"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "CIS",
+  "medio": "CIS",
+  "muestra": 8034,
+  "tipo": "oficial",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 24.7,
+   "PSOE": 34.4,
+   "VOX": 15.6,
+   "SUMAR": 8.2,
+   "PODEMOS": 0.8,
+   "SALF": 1.8
+  },
+  "url": "https://www.cis.es/es/w/avance-de-resultados-del-estudio-3587-bar%C3%B3metro-de-noviembre-2026-"
+ },
+ {
+  "fecha": "2026-11-23",
+  "empresa": "InvyMark",
+  "medio": "laSexta",
+  "muestra": null,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 28.7,
+   "VOX": 18.6,
+   "SUMAR": 6.5
+  },
+  "url": "https://www.lasexta.com/elecciones/generales/barometro-lasexta-vox-mantienen-solida-mayoria-absoluta-29n_202611236b0410dd50b7057c6d1423f2.html"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "SocioMétrica",
+  "medio": "El Español",
+  "muestra": 7266,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.7,
+   "PSOE": 28.7,
+   "VOX": 18.4,
+   "SUMAR": 5.9,
+   "PODEMOS": 1.0,
+   "SALF": 2.2
+  },
+  "url": "https://www.elespanol.com/espana/politica/20261122/penultimo-sondeo-pp-aventaja-psoe-puntos-escanos-oposicion-semana/1003744468035_0.html"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 12000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.7,
+   "PSOE": 32.5,
+   "VOX": 15.8,
+   "SUMAR": 6.8,
+   "PODEMOS": 1.6,
+   "SALF": 2.1
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n18-21nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 7982,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.2,
+   "PSOE": 28.4,
+   "VOX": 18.3,
+   "SUMAR": 7.6,
+   "PODEMOS": 0.9,
+   "SALF": 2.1
+  },
+  "url": "https://electomania.es/tracking-electopanel-22-nov-psoe-y-pp-meten-el-turbo-en-la-recta-final-de-campana-con-mas-escanos-cojos-que-nunca/"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 3000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.1,
+   "PSOE": 27.0,
+   "VOX": 19.0,
+   "SUMAR": 6.6,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/psoe-recorta-distancias-pero-pp-sigue-cinco-puntos-delante-socialistas-suma-vox-roza-200-escanos-21240493"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.0,
+   "PSOE": 27.7,
+   "VOX": 18.8,
+   "SUMAR": 8.2,
+   "PODEMOS": 1.2,
+   "SALF": 1.6
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/21/psoe-solo-impondria-escanos-cuatro-provincias-pp-lidera-19/00031795288775954890565.htm"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "Ipsos",
+  "medio": "La Vanguardia",
+  "muestra": 1999,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.3,
+   "PSOE": 29.8,
+   "VOX": 17.9,
+   "SUMAR": 5.8,
+   "PODEMOS": 1.1,
+   "SALF": 1.9
+  },
+  "url": "https://www.lavanguardia.com/politica/20261122/11689982/derecha-suma-mayoria-absoluta-psoe-acerca-pp.html"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "Hamalgama Métrica",
+  "medio": "Vozpópuli",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 25.4,
+   "VOX": 20.6,
+   "SUMAR": 6.5,
+   "PODEMOS": 1.2,
+   "SALF": 1.7
+  },
+  "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-se-disparan-a-210-escanos-y-frenan-en-seco-el-espiritu-de-remontada-del-psoe.html"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "GAD3",
+  "medio": "ABC (Vocento)",
+  "muestra": 1501,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.1,
+   "PSOE": 28.4,
+   "VOX": 18.1,
+   "SUMAR": 8.0,
+   "PODEMOS": 1.1,
+   "SALF": 1.3
+  },
+  "url": "https://www.gad3.com/barometro-abc-i-estimacion-de-voto-nacional-noviembre-2026-ii/"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "DYM",
+  "medio": null,
+  "muestra": 1010,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 33.0,
+   "PSOE": 28.0,
+   "VOX": 18.0,
+   "SUMAR": 6.9,
+   "PODEMOS": 1.3,
+   "SALF": 1.0
+  },
+  "url": "https://www.diariodenavarra.es/noticias/actualidad/nacional/2026/11/22/pp-vox-consolidan-ventaja-semana-elecciones-843312-28.html"
+ },
+ {
+  "fecha": "2026-11-22",
+  "empresa": "Cluster17",
+  "medio": "El Grand Continent",
+  "muestra": null,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.4,
+   "PSOE": 29.9,
+   "VOX": 18.4,
+   "SUMAR": 5.8
+  },
+  "url": "https://legrandcontinent.eu/es/2026/11/22/en-espane-vox-esta-a-las-puertas-del-poder/"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "SocioMétrica",
+  "medio": "El Español",
+  "muestra": 6842,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 28.5,
+   "VOX": 18.8,
+   "SUMAR": 5.9,
+   "PODEMOS": 1.0,
+   "SALF": 2.2
+  },
+  "url": "https://www.elespanol.com/espana/politica/20261121/tracking-semana-feijoo-sanchez-ganan-escanos-costa-aliados-oposicion-mantiene-debate/1003744467538_0.html"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.9,
+   "PSOE": 31.6,
+   "VOX": 16.9,
+   "SUMAR": 5.3,
+   "PODEMOS": 1.0,
+   "SALF": 1.4
+  },
+  "url": "https://ep00.epimg.net/infografias/encuestas40db/2026/11-tracking-electoral/D10-8f4c9a2b7e61d035a8c4f290b73e6d12/informe_tracking_dia10.pdf"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 4511,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 28.0,
+   "VOX": 18.3,
+   "SUMAR": 7.1,
+   "PODEMOS": 0.7
+  },
+  "url": "https://www.elmundo.es/espana/encuestas/2026/11/21/6b01d96dfc6c83e5298b4592.html"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 11500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.7,
+   "PSOE": 32.5,
+   "VOX": 15.9,
+   "SUMAR": 6.8,
+   "PODEMOS": 1.6,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n17-20nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 7109,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.0,
+   "PSOE": 27.9,
+   "VOX": 18.5,
+   "SUMAR": 7.3,
+   "PODEMOS": 0.9,
+   "SALF": 2.1
+  },
+  "url": "https://electomania.es/tracking-electopanel-21-nov-psoe-y-vox-al-alza-con-34-escanos-en-disputa/"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 3000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.3,
+   "PSOE": 26.6,
+   "VOX": 19.0,
+   "SUMAR": 6.7,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/debate-impulsa-pp-hasta-135-escanos-costa-vox-psoe-que-retrocede-4-diputados-21236645"
+ },
+ {
+  "fecha": "2026-11-21",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.5,
+   "PSOE": 27.9,
+   "VOX": 19.8,
+   "SUMAR": 7.1,
+   "PODEMOS": 0.9,
+   "SALF": 2.0
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/20/pp-concentra-voto-util-minimiza-fugas-partidos-galicia/00031795200518832464353.htm"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 750,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.5,
+   "PSOE": 26.5,
+   "VOX": 18.8,
+   "SUMAR": 6.8,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/feijoo-roba-70-000-votantes-sanchez-debate-rescata-150-000-abstencion-pp-sube-8-escanos-21232736"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.9,
+   "PSOE": 31.2,
+   "VOX": 17.1,
+   "SUMAR": 5.5,
+   "PODEMOS": 1.1,
+   "SALF": 1.5
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia09.pdf"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 4561,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.2,
+   "PSOE": 27.6,
+   "VOX": 18.9,
+   "SUMAR": 8.9,
+   "PODEMOS": 0.8
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/20/6b00981ffdddffc8218b4590.html"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 11000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.4,
+   "PSOE": 32.1,
+   "VOX": 16.3,
+   "SUMAR": 6.9,
+   "PODEMOS": 1.6,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n16-19nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "More in Common",
+  "medio": null,
+  "muestra": 2315,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.9,
+   "PSOE": 28.0,
+   "VOX": 19.8,
+   "SUMAR": 7.1,
+   "PODEMOS": 1.7,
+   "SALF": 2.3
+  },
+  "url": "https://moreincommon.es/pdfs/pulso-electoral/pulso-electoral-noviembre-2026.pdf"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 6559,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.0,
+   "PSOE": 27.6,
+   "VOX": 18.2,
+   "SUMAR": 7.6,
+   "PODEMOS": 0.9,
+   "SALF": 2.3
+  },
+  "url": "https://electomania.es/tracking-electopanel-20-nov-el-pp-sale-reforzado-del-cara-a-cara/"
+ },
+ {
+  "fecha": "2026-11-20",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.3,
+   "PSOE": 27.8,
+   "VOX": 19.7,
+   "SUMAR": 7.0,
+   "PODEMOS": 0.9,
+   "SALF": 2.2
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/19/feijoo-repunta-primera-vez-campana-debate-sanchez/00031795116567415444664.htm"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 2600,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 26.9,
+   "VOX": 19.4,
+   "SUMAR": 6.5,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/feijoo-llega-debate-46-puntos-ventaja-sobre-sanchez-historica-mayoria-absoluta-vox-21189868"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.2,
+   "PSOE": 30.2,
+   "VOX": 17.6,
+   "SUMAR": 5.3,
+   "PODEMOS": 1.1,
+   "SALF": 1.7
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia08.pdf"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 4491,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.0,
+   "PSOE": 27.1,
+   "VOX": 19.4,
+   "SUMAR": 8.9,
+   "PODEMOS": 0.8
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/19/6aff2a9afc6c83886c8b459b.html"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 10500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.2,
+   "PSOE": 31.8,
+   "VOX": 16.4,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.6,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n15-18nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 5704,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.4,
+   "PSOE": 27.6,
+   "VOX": 18.7,
+   "SUMAR": 7.4,
+   "PODEMOS": 1.1,
+   "SALF": 2.4
+  },
+  "url": "https://electomania.es/tracking-electopanel-19-nov-sanchez-mete-el-turbo-a-costa-de-su-izquierda-con-la-derecha-en-187-escanos/"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.5,
+   "PSOE": 27.8,
+   "VOX": 19.6,
+   "SUMAR": 7.4,
+   "PODEMOS": 1.0,
+   "SALF": 2.7
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/18/psoe-roza-empate-votos-pp-superaria-holgura-absoluta-vox/00031795030786200396610.htm"
+ },
+ {
+  "fecha": "2026-11-19",
+  "empresa": "Public First",
+  "medio": "POLITICO",
+  "muestra": 1375,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.5,
+   "PSOE": 27.2,
+   "VOX": 19.6,
+   "SUMAR": 5.9,
+   "PODEMOS": 2.2,
+   "SALF": 2.0
+  },
+  "url": "https://www.politico.eu/article/spanish-election-race-tightens-final-week-poll/"
+ },
+ {
+  "fecha": "2026-11-18",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 2300,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.6,
+   "PSOE": 26.5,
+   "VOX": 19.4,
+   "SUMAR": 6.7,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/pp-saca-5-puntos-psoe-ecuador-primera-semana-campana-tendria-vox-mayoria-196-escanos-21117119"
+ },
+ {
+  "fecha": "2026-11-18",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 4511,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.7,
+   "PSOE": 26.7,
+   "VOX": 19.7,
+   "SUMAR": 8.7,
+   "PODEMOS": 0.8
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/18/6afdd75c21efa083408b45b2.html"
+ },
+ {
+  "fecha": "2026-11-18",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 10000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.1,
+   "PSOE": 31.9,
+   "VOX": 16.4,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.6,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n14-17nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-18",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 4927,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.8,
+   "PSOE": 27.0,
+   "VOX": 18.9,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.3,
+   "SALF": 2.2
+  },
+  "url": "https://electomania.es/tracking-electopanel-18-nov-avance-de-eh-bildu-y-adelante-andalucia/"
+ },
+ {
+  "fecha": "2026-11-18",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.2,
+   "PSOE": 30.7,
+   "VOX": 17.0,
+   "SUMAR": 5.2,
+   "PODEMOS": 1.2,
+   "SALF": 1.7
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia06.pdf"
+ },
+ {
+  "fecha": "2026-11-18",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.0,
+   "PSOE": 27.0,
+   "VOX": 19.4,
+   "SUMAR": 7.5,
+   "PODEMOS": 1.2,
+   "SALF": 3.1
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/17/pp-psoe-lanzan-llamada-voto-util-diferencia-estrecha/00031794944189590370512.htm"
+ },
+ {
+  "fecha": "2026-11-17",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 3759,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.7,
+   "PSOE": 26.4,
+   "VOX": 19.8,
+   "SUMAR": 6.7,
+   "PODEMOS": 1.2
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/17/6afca438e9cf4a7d7a8b459c.html"
+ },
+ {
+  "fecha": "2026-11-17",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 9500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.9,
+   "PSOE": 31.9,
+   "VOX": 16.5,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/wp-content/uploads/2026/11/barometro-n13-16nov2026.pdf"
+ },
+ {
+  "fecha": "2026-11-17",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 4446,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.8,
+   "PSOE": 27.0,
+   "VOX": 18.8,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.3,
+   "SALF": 2.2
+  },
+  "url": "https://electomania.es/tracking-electopanel-17-nov-el-pp-sube-y-junto-al-psoe-arrebatan-varios-escanos-a-un-vox-en-torno-al-19/"
+ },
+ {
+  "fecha": "2026-11-17",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 30.6,
+   "VOX": 17.5,
+   "SUMAR": 5.4,
+   "PODEMOS": 1.1,
+   "SALF": 1.6
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia05.pdf"
+ },
+ {
+  "fecha": "2026-11-17",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.7,
+   "PSOE": 26.7,
+   "VOX": 18.0,
+   "SUMAR": 7.7,
+   "PODEMOS": 2.1,
+   "SALF": 3.0
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/16/bloque-derecha-mantiene-distancia-sobre-absoluta-pese-subida-psoe/00031794858982187381508.htm"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 3002,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.8,
+   "PSOE": 26.1,
+   "VOX": 19.8,
+   "SUMAR": 8.3,
+   "PODEMOS": 1.4
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/16/6afb2ef1fc6c834a4a8b4589.html"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 9000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.6,
+   "PSOE": 31.8,
+   "VOX": 16.8,
+   "SUMAR": 7.4,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-12-%c2%b7-15-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 3294,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.5,
+   "PSOE": 26.9,
+   "VOX": 18.9,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.2,
+   "SALF": 2.2
+  },
+  "url": "https://electomania.es/tracking-electopanel-16-nov-el-psoe-avanza-con-la-suma-de-pp-y-vox-en-189-escanos/"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 30.3,
+   "VOX": 18.0,
+   "SUMAR": 5.4,
+   "PODEMOS": 1.1,
+   "SALF": 1.7
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia04.pdf"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.2,
+   "PSOE": 26.7,
+   "VOX": 17.6,
+   "SUMAR": 7.9,
+   "PODEMOS": 2.2
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/galicia/2026/11/16/psoe-recorta-tres-escanos-pp-sigue-primera-fuerza/0003_202611G16P5991.htm"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "IMOP Insights",
+  "medio": "El Confidencial",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 26.9,
+   "VOX": 19.0,
+   "SUMAR": 6.9,
+   "PODEMOS": 0.9,
+   "SALF": 1.6
+  },
+  "url": "https://www.elconfidencial.com/espana/2026-11-16/encuesta-imop-cuarta-oleada-derecha-ventaja-izquierdas-territoriales-frente-amplio-podemos-cbtr_4464610/"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "Target Point",
+  "medio": "El Debate",
+  "muestra": 1013,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.6,
+   "PSOE": 27.0,
+   "VOX": 18.7,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.6,
+   "SALF": 2.1
+  },
+  "url": "https://www.eldebate.com/espana/20261116/psoe-activa-medio-millon-votantes-recorta-no-pone-riesgo-mayoria-absoluta-pp-vox_480764.html"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "NC Report",
+  "medio": "La Razón",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.1,
+   "PSOE": 26.1,
+   "VOX": 19.0,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.5
+  },
+  "url": "https://www.larazon.es/espana/mayoria-vox-resiste-arranque-campana-205-diputados_202611166afa6889ea8d89799786d4d1.html"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 1500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.7,
+   "PSOE": 25.5,
+   "VOX": 20.4,
+   "SUMAR": 6.7,
+   "PODEMOS": 2.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/campana-sanchez-contra-okdiario-no-da-frutos-psoe-queda-104-escanos-frente-holgada-mayoria-pp-vox-20904749"
+ },
+ {
+  "fecha": "2026-11-16",
+  "empresa": "InvyMark",
+  "medio": "laSexta",
+  "muestra": null,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.2,
+   "PSOE": 28.2,
+   "VOX": 19.1,
+   "SUMAR": 6.4
+  },
+  "url": "https://www.lasexta.com/elecciones/generales/barometro-lasexta-vox-mantienen-encima-51-votos-frente-bloque-izquierda-que-remonta_202611166afad474ea8d897997870c83.html"
+ },
+ {
+  "fecha": "2026-11-15",
+  "empresa": "SocioMétrica",
+  "medio": "El Español",
+  "muestra": 5923,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.6,
+   "PSOE": 27.8,
+   "VOX": 19.1,
+   "SUMAR": 6.0,
+   "PODEMOS": 1.2,
+   "SALF": 2.2
+  },
+  "url": "https://www.elespanol.com/espana/politica/20261115/sondeo-semanas-psoe-recorta-medio-punto-pp-derecha-mantiene-escanos-frente-sanchez-socios/1003744459132_0.html"
+ },
+ {
+  "fecha": "2026-11-15",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 8500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.4,
+   "PSOE": 31.7,
+   "VOX": 16.9,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-11-%c2%b7-14-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-15",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 2617,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.7,
+   "PSOE": 26.7,
+   "VOX": 19.0,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.4,
+   "SALF": 2.1
+  },
+  "url": "https://electomania.es/tracking-electopanel-15-nov-vox-recupera-el-19-y-arana-escanos-a-pp-y-psoe/"
+ },
+ {
+  "fecha": "2026-11-15",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.4,
+   "PSOE": 29.9,
+   "VOX": 18.3,
+   "SUMAR": 5.4,
+   "PODEMOS": 1.3,
+   "SALF": 1.8
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia03.pdf"
+ },
+ {
+  "fecha": "2026-11-15",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.8,
+   "PSOE": 26.4,
+   "VOX": 18.2,
+   "SUMAR": 7.6,
+   "PODEMOS": 2.2
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/14/suma-pp-vox-superaria-absoluta-195-escanos-frente-106-psoe/00031794683613056404784.htm"
+ },
+ {
+  "fecha": "2026-11-15",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 5370,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.0,
+   "PSOE": 25.6,
+   "VOX": 19.7,
+   "SUMAR": 7.2,
+   "PODEMOS": 1.4
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/15/6af8afeae9cf4ab47b8b4586.html"
+ },
+ {
+  "fecha": "2026-11-14",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 8000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.3,
+   "PSOE": 31.7,
+   "VOX": 17.1,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-10-%c2%b7-13-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-14",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 2348,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.6,
+   "PSOE": 26.5,
+   "VOX": 18.8,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.4,
+   "SALF": 2.2
+  },
+  "url": "https://electomania.es/tracking-electopanel-14-nov-pp-y-psoe-avanzan-con-vox-a-la-baja/"
+ },
+ {
+  "fecha": "2026-11-14",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 1500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.1,
+   "PSOE": 29.8,
+   "VOX": 18.5,
+   "SUMAR": 5.2,
+   "PODEMOS": 1.3,
+   "SALF": 1.6
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/informe_tracking_dia02.pdf"
+ },
+ {
+  "fecha": "2026-11-14",
+  "empresa": "YouGov",
+  "medio": "Ara",
+  "muestra": 1221,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.6,
+   "PSOE": 25.9,
+   "VOX": 20.3,
+   "SUMAR": 9.2,
+   "PODEMOS": 1.8
+  },
+  "url": "https://www.ara.cat/politica/eleccions-generales/fort-ascens-vox-garanteix-majoria-absoluta-dretes-29-n_1_5907814.html"
+ },
+ {
+  "fecha": "2026-11-13",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 4620,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.0,
+   "PSOE": 25.4,
+   "VOX": 19.7,
+   "SUMAR": 8.8,
+   "PODEMOS": 1.4
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/13/6af73a35fdddffb36c8b45a0.html"
+ },
+ {
+  "fecha": "2026-11-13",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 7500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.5,
+   "PSOE": 31.6,
+   "VOX": 17.1,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.7,
+   "SALF": 2.1
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-9-%c2%b7-12-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-13",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 1901,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.4,
+   "PSOE": 26.1,
+   "VOX": 19.0,
+   "SUMAR": 7.8,
+   "PODEMOS": 1.5,
+   "SALF": 2.3
+  },
+  "url": "https://electomania.es/electopanel-13-nov-el-pp-mejora-y-vox-baja-ligeramente/"
+ },
+ {
+  "fecha": "2026-11-13",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 29.4,
+   "VOX": 18.8,
+   "SUMAR": 5.1,
+   "PODEMOS": 1.3,
+   "SALF": 1.7
+  },
+  "url": "https://elpais.com/infografias/encuestas40db/2026/11-tracking-electoral/Informe_tracking_dia01.pdf"
+ },
+ {
+  "fecha": "2026-11-13",
+  "empresa": "Winston",
+  "medio": "Artículo14",
+  "muestra": 1501,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.1,
+   "PSOE": 26.4,
+   "VOX": 18.7,
+   "SUMAR": 8.4,
+   "PODEMOS": 1.6,
+   "SALF": 2.5
+  },
+  "url": "https://www.articulo14.es/politica/el-pp-arranca-la-campana-con-25-escanos-de-ventaja-sobre-el-psoe-y-una-mayoria-holgada-con-vox-20261113.html"
+ },
+ {
+  "fecha": "2026-11-12",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 3120,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.8,
+   "PSOE": 25.3,
+   "VOX": 19.6,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.4
+  },
+  "url": "https://www.elmundo.es/elecciones/elecciones-generales/2026/11/12/6af60b3ee4d4d8845c8b4577.html"
+ },
+ {
+  "fecha": "2026-11-12",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 7000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.4,
+   "PSOE": 31.5,
+   "VOX": 17.2,
+   "SUMAR": 7.3,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-8-%c2%b7-11-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-12",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 1475,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.2,
+   "PSOE": 26.2,
+   "VOX": 19.2,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.6,
+   "SALF": 2.1
+  },
+  "url": "https://electomania.es/electopanel-12-nov-el-pp-pierde-fuelle-pero-su-suma-con-vox-sigue-con-amplia-ventaja/"
+ },
+ {
+  "fecha": "2026-11-12",
+  "empresa": "CIS",
+  "medio": "CIS",
+  "muestra": 45074,
+  "tipo": "oficial",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 25.5,
+   "PSOE": 33.3,
+   "VOX": 18.4,
+   "SUMAR": 6.9,
+   "PODEMOS": 1.1,
+   "SALF": 1.4
+  },
+  "url": "https://www.cis.es/es/w/avance-de-resultados-del-estudio-3584-preelectoral-elecciones-generales-2026-"
+ },
+ {
+  "fecha": "2026-11-11",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 6500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.1,
+   "PSOE": 31.4,
+   "VOX": 17.5,
+   "SUMAR": 7.4,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-7-%c2%b7-10-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-10",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 6000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.3,
+   "PSOE": 31.2,
+   "VOX": 17.5,
+   "SUMAR": 7.5,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-6-%c2%b7-9-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-10",
+  "empresa": "DYM",
+  "medio": "20minutos",
+  "muestra": 1025,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 33.1,
+   "PSOE": 27.3,
+   "VOX": 18.6,
+   "SUMAR": 5.6,
+   "PODEMOS": 1.9,
+   "SALF": 0.4
+  },
+  "url": "https://www.20minutos.es/nacional/pp-vox-conservan-mayoria-absoluta-mientras-psoe-apenas-se-deja-un-punto-tras-tragedia-urda_7058765_0.html"
+ },
+ {
+  "fecha": "2026-11-09",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 5500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.3,
+   "PSOE": 31.1,
+   "VOX": 17.3,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-5-%c2%b7-8-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-09",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 2531,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 30.5,
+   "PSOE": 25.9,
+   "VOX": 19.0,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.7,
+   "SALF": 2.0
+  },
+  "url": "https://electomania.es/electopanel-9-nov-la-distancia-entre-pp-y-psoe-se-reduce-ligeramente/"
+ },
+ {
+  "fecha": "2026-11-09",
+  "empresa": "NC Report",
+  "medio": "La Razón",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.6,
+   "PSOE": 25.6,
+   "VOX": 19.3,
+   "SUMAR": 6.9,
+   "PODEMOS": 2.4
+  },
+  "url": "https://www.larazon.es/espana/gana-7-puntos-psoe-que-cae-100-escanos_202611096af1319903bbf30bb045239e.html"
+ },
+ {
+  "fecha": "2026-11-09",
+  "empresa": "GAD3",
+  "medio": "ABC (Vocento)",
+  "muestra": 1502,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.9,
+   "PSOE": 25.9,
+   "VOX": 18.6,
+   "SUMAR": 7.5,
+   "PODEMOS": 1.4,
+   "SALF": 1.3
+  },
+  "url": "https://www.gad3.com/barometro-abc-i-estimacion-de-voto-nacional-noviembre-2026/"
+ },
+ {
+  "fecha": "2026-11-09",
+  "empresa": "40dB",
+  "medio": "El País / Cadena SER",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.9,
+   "PSOE": 29.9,
+   "VOX": 18.0,
+   "SUMAR": 5.0,
+   "PODEMOS": 1.2,
+   "SALF": 2.0
+  },
+  "url": "https://ep00.epimg.net/infografias/encuestas40db/2026/11-preelectoral/2026_11_preelectoral_informe.pdf"
+ },
+ {
+  "fecha": "2026-11-09",
+  "empresa": "Data10",
+  "medio": "OKDiario",
+  "muestra": 1500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.4,
+   "PSOE": 24.7,
+   "VOX": 19.8,
+   "SUMAR": 6.9,
+   "PODEMOS": 3.1,
+   "SALF": 1.5
+  },
+  "url": "https://okdiario.com/espana/psoe-paga-tragedia-urda-hunde-hasta-97-escanos-mientras-pp-vox-suman-203-20728358"
+ },
+ {
+  "fecha": "2026-11-08",
+  "empresa": "SocioMétrica",
+  "medio": "El Español",
+  "muestra": 5460,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.0,
+   "PSOE": 27.7,
+   "VOX": 18.9,
+   "SUMAR": 5.9,
+   "PODEMOS": 1.2,
+   "SALF": 2.2
+  },
+  "url": "https://www.elespanol.com/espana/politica/20261108/pp-vox-suman-escanos-sanchez-recupera-perdio-urda-dimision-puente-sondeo-noche/1003744450645_0.html"
+ },
+ {
+  "fecha": "2026-11-08",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 5000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.5,
+   "PSOE": 31.0,
+   "VOX": 17.3,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.7,
+   "SALF": 2.1
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-4-%c2%b7-7-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-08",
+  "empresa": "IMOP Insights",
+  "medio": "El Confidencial",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.8,
+   "PSOE": 25.9,
+   "VOX": 19.9,
+   "SUMAR": 8.1,
+   "PODEMOS": 1.2,
+   "SALF": 1.7
+  },
+  "url": "https://www.elconfidencial.com/espana/2026-11-08/derecha-recupera-seis-escanos-izquierda-castigo-psoe-urda-cbtr_4460900/"
+ },
+ {
+  "fecha": "2026-11-08",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 1860,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.1,
+   "PSOE": 25.3,
+   "VOX": 19.2,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.8,
+   "SALF": 1.9
+  },
+  "url": "https://electomania.es/electopanel-8-nov-el-bipartidismo-cede-terreno-vox-sube-en-escanos-y-eh-bildu-se-distancia-del-pnv/"
+ },
+ {
+  "fecha": "2026-11-08",
+  "empresa": "Ateneo del Dato",
+  "medio": "elDiario.es",
+  "muestra": 2000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 28.6,
+   "VOX": 18.6,
+   "SUMAR": 6.1,
+   "PODEMOS": 1.5,
+   "SALF": 1.7
+  },
+  "url": "https://www.eldiario.es/politica/psoe-crece-dimision-oscar-puente-pp-vox-mantienen-mayoria-absoluta_1_13643551.html"
+ },
+ {
+  "fecha": "2026-11-08",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1200,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.7,
+   "PSOE": 27.3,
+   "VOX": 18.6,
+   "SUMAR": 7.1,
+   "PODEMOS": 2.2,
+   "SALF": 1.6
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/06/feijoo-adelanta-pedro-sanchez-candidato-preferido-gobernar/00031793992905957222982.htm"
+ },
+ {
+  "fecha": "2026-11-07",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 4500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.6,
+   "PSOE": 30.8,
+   "VOX": 17.2,
+   "SUMAR": 7.7,
+   "PODEMOS": 1.8,
+   "SALF": 2.1
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-3-%c2%b7-6-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-06",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 4000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.3,
+   "PSOE": 31.0,
+   "VOX": 17.2,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.2,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-n-o-2-%c2%b7-5-de-noviembre-de-2026/"
+ },
+ {
+  "fecha": "2026-11-06",
+  "empresa": "Celeste-Tel",
+  "medio": "Onda Cero",
+  "muestra": 1100,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.4,
+   "PSOE": 25.7,
+   "VOX": 19.2,
+   "SUMAR": 8.0,
+   "PODEMOS": 1.9,
+   "SALF": 1.6
+  },
+  "url": "https://www.celeste-tel.es/wp-content/uploads/2026/11/Bar%C3%B3metro-Electoral-Elecciones-29-N-4-Noviembre-2026-1.pdf"
+ },
+ {
+  "fecha": "2026-11-05",
+  "empresa": "SW Demoscopia",
+  "medio": "La Séptima",
+  "muestra": 3500,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.6,
+   "PSOE": 30.9,
+   "VOX": 17.0,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.2,
+   "SALF": 2.0
+  },
+  "url": "https://laseptima.com/barometro-electoral-1-4-noviembre-2026/"
+ },
+ {
+  "fecha": "2026-11-05",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 1422,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.3,
+   "PSOE": 25.5,
+   "VOX": 19.2,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.8,
+   "SALF": 1.8
+  },
+  "url": "https://electomania.es/electopanel-5-nov-salf-y-podemos-en-solitario-empatan-en-la-parte-baja-mientras-pp-y-psoe-pierden-fuelle/"
+ },
+ {
+  "fecha": "2026-11-03",
+  "empresa": "More in Common",
+  "medio": null,
+  "muestra": 2210,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 28.3,
+   "PSOE": 27.6,
+   "VOX": 20.8,
+   "SUMAR": 7.8,
+   "PODEMOS": 2.6,
+   "SALF": 2.4
+  },
+  "url": "https://moreincommon.es/pdfs/pulso-electoral/pulso-electoral-octubre-2026.pdf"
+ },
+ {
+  "fecha": "2026-11-02",
+  "empresa": "Target Point",
+  "medio": "El Debate",
+  "muestra": 1024,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.8,
+   "PSOE": 25.5,
+   "VOX": 19.9,
+   "SUMAR": 6.6,
+   "PODEMOS": 2.4,
+   "SALF": 2.6
+  },
+  "url": "https://www.eldebate.com/espana/20261102/accidente-frena-psoe-amplia-apoyo-pp-mayoria-absolutisima-derecha_475640.html"
+ },
+ {
+  "fecha": "2026-11-02",
+  "empresa": "NC Report",
+  "medio": "La Razón",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.6,
+   "PSOE": 25.6,
+   "VOX": 19.3,
+   "SUMAR": 6.9,
+   "PODEMOS": 2.4
+  },
+  "url": "https://www.larazon.es/espana/psoe-frena-efecto-remontada-derecha-consolida-mayoria-absoluta_202611026ae783220250123215703bb1.html"
+ },
+ {
+  "fecha": "2026-11-02",
+  "empresa": "Hamalgama Métrica",
+  "medio": "Vozpópuli",
+  "muestra": 1000,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.0,
+   "PSOE": 26.4,
+   "VOX": 19.9,
+   "SUMAR": 5.4,
+   "PODEMOS": 2.2,
+   "SALF": 1.8
+  },
+  "url": "https://www.vozpopuli.com/espana/politica/pp-y-vox-suman-ya-un-techo-historico-de-127-millones-de-votos-y-lograrian-205-escanos.html"
+ },
+ {
+  "fecha": "2026-11-01",
+  "empresa": "SocioMétrica",
+  "medio": "El Español",
+  "muestra": 4893,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 32.3,
+   "PSOE": 26.6,
+   "VOX": 19.1,
+   "SUMAR": 6.1,
+   "PODEMOS": 1.7,
+   "SALF": 2.5
+  },
+  "url": "https://www.elespanol.com/espana/politica/20261101/primer-sondeo-tragedia-pp-vox-amplian-ventaja-sanchez-sigue-cayendo-pese-vaciar-frente-amplio/1003744442810_0.html"
+ },
+ {
+  "fecha": "2026-11-01",
+  "empresa": "Sigma Dos",
+  "medio": "El Mundo",
+  "muestra": 2505,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.1,
+   "PSOE": 24.6,
+   "VOX": 19.3,
+   "SUMAR": 8.4,
+   "PODEMOS": 1.9
+  },
+  "url": "https://www.sigmados.com/noticia?id=sa0OT7jgxEjay6E"
+ },
+ {
+  "fecha": "2026-11-01",
+  "empresa": "EM-Analytics",
+  "medio": "Electomanía",
+  "muestra": 1527,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 31.5,
+   "PSOE": 25.8,
+   "VOX": 19.2,
+   "SUMAR": 7.6,
+   "PODEMOS": 1.7,
+   "SALF": 1.6
+  },
+  "url": "https://electomania.es/electopanel-1-nov-el-psoe-baja-y-vuelve-a-minimos/"
+ },
+ {
+  "fecha": "2026-11-01",
+  "empresa": "Sondaxe",
+  "medio": "La Voz de Galicia",
+  "muestra": 1200,
+  "tipo": "privada",
+  "ambito": "ES",
+  "convocatoria": "2026-11-29",
+  "voto": {
+   "PP": 29.2,
+   "PSOE": 26.9,
+   "VOX": 19.2,
+   "SUMAR": 7.2,
+   "PODEMOS": 2.0,
+   "SALF": 2.4
+  },
+  "url": "https://www.lavozdegalicia.es/noticia/espana/2026/11/01/pp-ganaria-elecciones-23-puntos-ventaja-sobre-psoe/0003_202611G1P26991.htm"
+ }
+]

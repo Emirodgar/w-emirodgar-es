@@ -15,6 +15,7 @@
     ['Embudo', '/atalaya/embudo/', I('<path d="M3 5h18l-7 8v5l-4 2v-7z"/>')],
     ['Verificaciones', '/atalaya/verificaciones/', I('<path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/>')],
     ['CIS', '/atalaya/cis/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/><circle cx="19" cy="6" r="2"/>')],
+    ['Preocupaciones', '/atalaya/preocupaciones/', I('<path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17h0"/>')],
     ['Encuestas', '/atalaya/encuestas/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')],
     ['Congreso', '/atalaya/congreso/', I('<path d="M3 20h18M5 20V10M9.5 20V10M14.5 20V10M19 20V10M3 10l9-6 9 6z"/>')],
     ['Senado', '/atalaya/senado/', I('<path d="M4 20h16M6 20v-8a6 6 0 0 1 12 0v8M12 6V3M9 20v-6M15 20v-6"/>')],

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preocupaciones | Atalaya</title>
+<meta name="description" content="Qué preocupa a los españoles desde 2010, cómo ha cambiado y qué pasaba entonces: gobiernos, huelgas generales, crisis, hitos migratorios y medidas del Gobierno sobre la serie del CIS.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/preocupaciones/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+:root{--bg:#07090d;--panel:#0e1219;--panel2:#131a24;--line:#1f2937;--txt:#e5e9f0;--mut:#8b97a8;--acc:#22d3ee;--ok:#34d399;--bad:#f87171;--warn:#fbbf24;--mono:'JetBrains Mono',ui-monospace,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:Inter,system-ui,sans-serif;font-size:14px;line-height:1.45}
+select,button{font:inherit;color:inherit}
+.top{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:10px 16px;min-height:56px;border-bottom:1px solid var(--line);background:#05070a;position:sticky;top:0;z-index:1000}
+.pt{font-size:18px;font-weight:700}.pt small{font-size:13px;font-weight:400;color:var(--mut);margin-left:8px}
+.tagline{font-family:var(--mono);font-size:12px;color:var(--mut);letter-spacing:.04em}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px 16px 0}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:10px 14px}
+.kpi b{display:block;font-family:var(--mono);font-size:22px;font-weight:600}
+.kpi span{color:var(--mut);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.kpi small{display:block;color:var(--mut);font-size:12px;margin-top:2px}
+.main{padding:12px 16px 24px}
+.grid2{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(300px,1fr);gap:12px;align-items:start}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;margin-bottom:12px}
+.card>h2{font-family:var(--mono);font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);padding:10px 14px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+.body{padding:12px 14px}
+.tw{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-size:11px;font-weight:600;color:var(--mut);text-transform:uppercase;letter-spacing:.06em}
+td.n,th.n{text-align:right;font-family:var(--mono)}
+td.w{white-space:normal;min-width:240px}
+.cv{position:relative;height:380px}
+.bar{display:block;height:10px;border-radius:3px;background:var(--acc);opacity:.85}
+.bar.p{background:#a78bfa}
+.pos{color:var(--ok)}.neg{color:var(--bad)}.neu{color:var(--mut)}
+.note{color:var(--mut);font-size:12px;margin-top:10px}
+.sel{background:var(--panel2);border:1px solid var(--line);border-radius:6px;padding:2px 6px;font-size:12px;text-transform:none;letter-spacing:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--panel2);border:1px solid var(--line);border-radius:999px;padding:3px 10px;font-size:12px;cursor:pointer;color:var(--mut)}
+.chip i{width:9px;height:9px;border-radius:50%;background:var(--c)}
+.chip[aria-pressed=true]{color:var(--txt);border-color:var(--c)}
+.chip[aria-pressed=false] i{opacity:.35}
+.chip:focus-visible,.row:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.tg{display:flex;gap:14px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-bottom:8px}
+.tg label{display:inline-flex;align-items:center;gap:5px;cursor:pointer}
+.tip{position:absolute;pointer-events:none;background:#05070a;border:1px solid var(--line);border-radius:6px;padding:6px 9px;font-size:12px;max-width:260px;display:none;z-index:5}
+.tip b{display:block;font-size:12px}.tip span{color:var(--mut)}
+.row{cursor:pointer}.row:hover td,.row.on td{background:var(--panel2)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;border-radius:3px;padding:1px 5px;border:1px solid var(--line);color:var(--mut)}
+.tag.h{color:#fbbf24;border-color:#fbbf2466}.tag.a{color:#22d3ee;border-color:#22d3ee66}
+.empty{padding:18px 14px;color:var(--mut)}
+.legb{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:8px}
+.legb i{display:inline-block;width:10px;height:10px;margin-right:4px;vertical-align:middle;border-radius:2px}
+@media (max-width:900px){.grid2{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.cv{height:320px}}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=4"></script>
+<script src="/atalaya/assets/vendor/chartjs/chart.umd.min.js"></script>
+<header class="top">
+  <h1 class="pt">Preocupaciones <small>qué inquieta a la ciudadanía y qué pasaba entonces</small></h1>
+  <span class="tagline">Inteligencia social</span>
+</header>
+
+<section class="kpis" id="kpis" aria-label="Resumen del último barómetro"></section>
+
+<main class="main">
+  <section class="card">
+    <h2><span>Evolución de las preocupaciones</span><span><select class="sel" id="med" aria-label="Medida"><option value="total">Total (hasta 3 menciones)</option><option value="primero">Primer problema</option></select> <select class="sel" id="amb" aria-label="Ámbito"><option value="nacional">Problema de España</option><option value="personal">Problema que me afecta</option></select></span></h2>
+    <div class="body">
+      <div class="chips" id="chips" role="group" aria-label="Temas"></div>
+      <div class="tg">
+        <label><input type="checkbox" id="t-gob" checked> Franjas de gobierno</label>
+        <label><input type="checkbox" id="t-hit" checked> Hitos (huelgas, crisis, migración…)</label>
+        <label><input type="checkbox" id="t-acc" checked> Acciones del Gobierno</label>
+      </div>
+      <div class="cv"><canvas id="cv" role="img" aria-label="Evolución mensual de las preocupaciones según el CIS"></canvas><div class="tip" id="tip"></div></div>
+      <div class="legb" id="legb"></div>
+      <p class="note" id="nt"></p>
+    </div>
+  </section>
+
+  <div class="grid2">
+    <section class="card">
+      <h2><span>Acción y reacción</span><span><select class="sel" id="ft" aria-label="Filtro"><option value="">Hitos y acciones</option><option value="hito">Solo hitos</option><option value="accion">Solo acciones del Gobierno</option></select></span></h2>
+      <div class="tw"><table id="imp"></table></div>
+      <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="imp-nt"></p></div>
+    </section>
+    <div>
+      <section class="card">
+        <h2><span>Lo que preocupa a España y lo que afecta a cada uno</span></h2>
+        <div class="tw"><table id="np"></table></div>
+        <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="np-nt"></p></div>
+      </section>
+      <section class="card"><h2><span>Cómo leerlo</span></h2><div class="body"><p class="note" style="margin:0" id="aviso"></p></div></section>
+    </div>
+  </div>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var f1=function(x){return x==null?'—':x.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})};
+var sg=function(x){return (x>0?'+':x<0?'−':'')+Math.abs(x).toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})};
+var MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+
+// Categorías del CIS (cambian de nombre con los años) -> tema estable
+var TEMAS=[
+ {k:'paro',n:'Paro',c:'#f87171',re:/^el paro$/i},
+ {k:'economia',n:'Economía',c:'#fbbf24',re:/índole económica|crisis económica/i},
+ {k:'empleo',n:'Calidad del empleo',c:'#fb923c',re:/calidad del empleo|reforma laboral/i},
+ {k:'vivienda',n:'Vivienda',c:'#22d3ee',re:/^la vivienda$/i},
+ {k:'inmigracion',n:'Inmigración',c:'#a78bfa',re:/inmigraci/i},
+ {k:'sanidad',n:'Sanidad',c:'#34d399',re:/^la sanidad/i},
+ {k:'educacion',n:'Educación',c:'#60a5fa',re:/^la educaci/i},
+ {k:'corrupcion',n:'Corrupción y fraude',c:'#e879f9',re:/corrupci|fraude/i},
+ {k:'politica',n:'Política y partidos',c:'#94a3b8',max:1,re:/clase pol|partidos|pol[ií]ticos|problemas pol|funcionamiento de la democracia|falta de acuerdos|falta de confianza/i},
+ {k:'pensiones',n:'Pensiones',c:'#f472b6',re:/pensiones/i},
+ {k:'terrorismo',n:'Terrorismo / ETA',c:'#a3a3a3',re:/terrorismo|ETA\b/},
+ {k:'inseguridad',n:'Inseguridad ciudadana',c:'#facc15',re:/inseguridad ciudadana/i},
+ {k:'cataluna',n:'Cataluña y territorio',c:'#2dd4bf',re:/catalu|estatuto|nacionalismos/i},
+ {k:'sociales',n:'Problemas sociales',c:'#c084fc',re:/índole social|desigualdades/i},
+ {k:'medioambiente',n:'Medio ambiente',c:'#86efac',re:/medio ?ambient|medio ambiente|clim[aá]tic|sequ/i},
+ {k:'energia',n:'Energía y tarifas',c:'#fde047',re:/tarifas energ/i},
+ {k:'covid',n:'COVID-19',c:'#38bdf8',re:/covid|coronavirus/i}
+];
+var BY={};TEMAS.forEach(function(t){BY[t.k]=t});
+var DEF=['paro','economia','vivienda','inmigracion','sanidad','politica','corrupcion'];
+var SEL={};DEF.forEach(function(k){SEL[k]=true});
+function tema(lbl){for(var i=0;i<TEMAS.length;i++)if(TEMAS[i].re.test(lbl))return TEMAS[i].k;return null}
+var GOBCOL={PSOE:'rgba(225,29,72,.10)',PP:'rgba(37,99,235,.12)'};
+
+var D=null,H=null,S=[],chart=null,sel=null,tipEl=$('tip');
+
+Promise.all([
+  fetch('../data/preocupaciones.json',{cache:'no-cache'}).then(function(r){return r.json()}),
+  fetch('../data/hitos.json',{cache:'no-cache'}).then(function(r){return r.json()})
+]).then(function(r){
+  D=r[0];H=r[1];
+  S=D.barometros.map(function(b){var p=b.fecha.split('-'),y=+p[0],m=+p[1];return {b:b,y:y,m:m,x:y+(m-1)/12,bx:y+(m-1+.15)/12,lab:MES[m-1]+' '+String(y).slice(2)}});
+  ['nacional','personal'].forEach(function(a){S.forEach(function(s){['total','primero'].forEach(function(me){s[a+'_'+me]=agrega(s.b[a+'_'+me])})})});
+  H.items=H.hitos.map(function(h){return mk(h,'hito')}).concat(H.acciones.map(function(h){return mk(h,'accion')})).filter(function(h){return h.x>=S[0].x}).sort(function(a,b){return a.x-b.x});
+  $('aviso').textContent=D.aviso+' '+H.aviso+' Los temas agrupan categorías del CIS (los temas con varias formulaciones suman sus menciones; «Política y partidos» toma la más citada, porque el CIS la desglosó en siete categorías a partir de 2020 y sumarlas inflaría la serie). Faltan algunos meses cuyo PDF no se puede leer (septiembre de 2013, abril de 2020 y 2021, mayo de 2023 y 2024, julio y diciembre de 2024).';
+  ['med','amb','t-gob','t-hit','t-acc'].forEach(function(i){$(i).addEventListener('change',function(){grafico();kpis()})});
+  $('ft').addEventListener('change',impacto);
+  chips();kpis();grafico();impacto();nacper();
+}).catch(function(e){$('kpis').innerHTML='<p class="empty">No se pudieron leer los datos de preocupaciones.</p>';if(window.console)console.error(e)});
+
+function mk(h,t){var p=h.fecha.split('-'),y=+p[0],m=+p[1],d=+p[2];return {t:t,fecha:h.fecha,titulo:h.titulo,tipo:h.tipo||'',gob:h.gobierno||'',temas:h.temas||[],x:y+(m-1+(d-1)/30)/12,y:y,m:m,d:d}}
+function agrega(o){var r={};if(!o)return r;Object.keys(o).forEach(function(l){var k=tema(l);if(k)r[k]=BY[k].max?Math.max(r[k]||0,o[l]):Math.min(100,(r[k]||0)+o[l])});return r}
+function medida(){return $('amb').value+'_'+$('med').value}
+function val(s,k,m){var v=s[m||medida()];return v&&v[k]!=null?v[k]:null}
+function last(){return S[S.length-1]}
+function fdate(h){return h.d+' '+MES[h.m-1]+' '+h.y}
+
+function chips(){
+  $('chips').innerHTML=TEMAS.map(function(t){return '<button type="button" class="chip" style="--c:'+t.c+'" data-k="'+t.k+'" aria-pressed="'+(!!SEL[t.k])+'"><i></i>'+esc(t.n)+'</button>'}).join('');
+  $('chips').addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;var k=b.getAttribute('data-k');SEL[k]=!SEL[k];b.setAttribute('aria-pressed',String(!!SEL[k]));grafico()});
+}
+function syncChips(){var n=$('chips').children;for(var i=0;i<n.length;i++)n[i].setAttribute('aria-pressed',String(!!SEL[n[i].getAttribute('data-k')]))}
+
+function kpis(){
+  var m=medida(),L=last(),Y=S.filter(function(s){return Math.abs(s.x-(L.x-1))<0.05})[0]||S[S.length-13]||S[0];
+  var ks=TEMAS.map(function(t){var v=val(L,t.k),w=val(Y,t.k);return {t:t,v:v,d:v!=null&&w!=null?v-w:null}}).filter(function(x){return x.v!=null});
+  var top=ks.slice().sort(function(a,b){return b.v-a.v})[0],up=ks.filter(function(x){return x.d!=null}).sort(function(a,b){return b.d-a.d})[0],dn=ks.filter(function(x){return x.d!=null}).sort(function(a,b){return a.d-b.d})[0];
+  var pk=null;S.forEach(function(s){var v=val(s,top.t.k);if(v!=null&&(!pk||v>pk.v))pk={v:v,s:s}});
+  $('kpis').innerHTML=
+    k(esc(top.t.n),'Primera preocupación',f1(top.v)+' % · '+esc(L.lab))+
+    k(up?esc(up.t.n):'—','Mayor subida en un año',up?sg(up.d)+' pts':'')+
+    k(dn?esc(dn.t.n):'—','Mayor caída en un año',dn?sg(dn.d)+' pts':'')+
+    k(f1(pk.v)+' %','Máximo de «'+esc(top.t.n.toLowerCase())+'»','en '+esc(pk.s.lab)+' · serie desde '+esc(S[0].lab));
+}
+function k(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
+
+// Franjas de gobierno y marcas de hitos/acciones sobre el gráfico
+var capas={id:'capas',beforeDatasetsDraw:function(c){
+  if(!$('t-gob').checked)return;var x=c.scales.x,a=c.chartArea,ctx=c.ctx;
+  H.gobiernos.forEach(function(g){var d=+g.desde.slice(0,4)+(+g.desde.slice(5,7)-1)/12,h=g.hasta?+g.hasta.slice(0,4)+(+g.hasta.slice(5,7)-1)/12:1e9;
+    var x0=Math.max(a.left,x.getPixelForValue(d)),x1=Math.min(a.right,x.getPixelForValue(h));if(x1<=x0)return;
+    ctx.fillStyle=GOBCOL[g.partido]||'rgba(120,120,120,.1)';ctx.fillRect(x0,a.top,x1-x0,a.bottom-a.top);
+    ctx.fillStyle='#8b97a8';ctx.font='11px Inter,sans-serif';var nm=g.presidente.split(' ').slice(-1)[0],w=x1-x0;ctx.fillText(w>110?nm+' ('+g.partido+')':w>52?nm:'',x0+6,a.top+12)})
+},afterDatasetsDraw:function(c){
+  var x=c.scales.x,a=c.chartArea,ctx=c.ctx;c.$m=[];
+  H.items.forEach(function(h){
+    if(h.t==='hito'?!$('t-hit').checked:!$('t-acc').checked)return;
+    var px=x.getPixelForValue(h.x);if(px<a.left||px>a.right)return;
+    var on=sel===h,col=h.t==='hito'?'#fbbf24':'#22d3ee';
+    ctx.save();ctx.strokeStyle=col;ctx.globalAlpha=on?1:.38;ctx.lineWidth=on?2:1;ctx.setLineDash(h.t==='hito'?[3,3]:[]);
+    ctx.beginPath();ctx.moveTo(px,a.top+(h.t==='hito'?16:0));ctx.lineTo(px,a.bottom);ctx.stroke();ctx.setLineDash([]);ctx.globalAlpha=1;ctx.fillStyle=col;
+    ctx.beginPath();
+    if(h.t==='hito'){ctx.arc(px,a.top+10,on?5:3.5,0,7)}else{ctx.moveTo(px-4,a.bottom);ctx.lineTo(px+4,a.bottom);ctx.lineTo(px,a.bottom-8)}
+    ctx.fill();ctx.restore();
+    c.$m.push({px:px,h:h,py:h.t==='hito'?a.top+10:a.bottom-4});
+  })
+}};
+
+function grafico(){
+  var m=medida(),ds=TEMAS.filter(function(t){return SEL[t.k]}).map(function(t){
+    return {label:t.n,data:S.map(function(s){var v=val(s,t.k,m);return v==null?null:{x:s.x,y:v}}).filter(Boolean),borderColor:t.c,backgroundColor:t.c,tension:.25,pointRadius:0,pointHoverRadius:4,borderWidth:2,spanGaps:true}});
+  var o=sel?sel:null;
+  if(chart)chart.destroy();
+  chart=new Chart($('cv'),{type:'line',data:{datasets:ds},plugins:[capas],options:{maintainAspectRatio:false,parsing:false,interaction:{mode:'nearest',axis:'x',intersect:false},
+    plugins:{legend:{display:false},tooltip:{callbacks:{title:function(it){var s=nearest(it[0].parsed.x);return s?s.lab:''},label:function(c){return c.dataset.label+': '+f1(c.parsed.y)+' %'}}}},
+    scales:{x:{type:'linear',min:Math.floor(S[0].x),max:Math.ceil(last().x+.05),ticks:{stepSize:1,color:'#8b97a8',callback:function(v){return Math.round(v)===v?v:''}},grid:{color:'#1a2230'}},
+            y:{beginAtZero:true,ticks:{color:'#8b97a8',callback:function(v){return v+'%'}},grid:{color:'#1a2230'}}}}});
+  var cv=$('cv');
+  cv.onmousemove=function(e){var r=cv.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top,best=null,bd=9;
+    (chart.$m||[]).forEach(function(q){var d=Math.abs(q.px-mx);if(d<bd&&Math.abs(q.py-my)<14){bd=d;best=q}});
+    if(best){var h=best.h;tipEl.innerHTML='<b>'+esc(h.titulo)+'</b><span>'+fdate(h)+' · '+(h.t==='hito'?'hito':'acción '+esc(h.gob))+'</span>';tipEl.style.display='block';tipEl.style.left=Math.min(mx+12,r.width-270)+'px';tipEl.style.top=Math.max(my-10,0)+'px';cv.style.cursor='pointer'}else{tipEl.style.display='none';cv.style.cursor=''}};
+  cv.onmouseleave=function(){tipEl.style.display='none'};
+  $('legb').innerHTML='<span><i style="background:rgba(225,29,72,.5)"></i>Gobierno del PSOE</span><span><i style="background:rgba(37,99,235,.6)"></i>Gobierno del PP</span><span><i style="background:#fbbf24;border-radius:50%"></i>Hito</span><span><i style="background:#22d3ee"></i>Acción del Gobierno</span>';
+  $('nt').textContent=($('amb').value==='nacional'?'«¿Cuál es el principal problema que existe actualmente en España?»':'«¿Y cuál es el problema que a Ud., personalmente, le afecta más?»')+' Porcentaje de personas que citan el tema entre sus tres respuestas (o solo la primera). '+S.length+' barómetros mensuales del CIS desde '+S[0].lab+'. Pulsa una fila de «Acción y reacción» para ver el momento en el gráfico.';
+}
+function nearest(x){var b=null,d=9;S.forEach(function(s){if(Math.abs(s.x-x)<d){d=Math.abs(s.x-x);b=s}});return b}
+
+// Media de un tema en los tres barómetros anteriores y los tres posteriores a un hecho
+function ventana(h,k){
+  var m=medida(),ant=S.filter(function(s){return s.bx<h.x}).slice(-3),des=S.filter(function(s){return s.bx>=h.x}).slice(0,3);
+  var med=function(a){var v=a.map(function(s){return val(s,k,m)}).filter(function(x){return x!=null});return v.length?v.reduce(function(p,q){return p+q},0)/v.length:null};
+  return {a:med(ant),d:med(des),na:ant.length,nd:des.length,aL:ant.length?ant[0].lab+(ant.length>1?'–'+ant[ant.length-1].lab:''):'',dL:des.length?des[0].lab+(des.length>1?'–'+des[des.length-1].lab:''):''};
+}
+function impacto(){
+  var f=$('ft').value,L=H.items.filter(function(h){return !f||h.t===f});
+  var hd='<thead><tr><th>Fecha</th><th></th><th>Qué pasó</th><th>Tema</th><th class="n">Antes</th><th class="n">Después</th><th class="n">Δ pts</th></tr></thead><tbody>';
+  var rows=L.map(function(h){
+    var ks=h.temas.filter(function(k){return BY[k]}),k1=ks[0],w=k1?ventana(h,k1):null,d=w&&w.a!=null&&w.d!=null?w.d-w.a:null;
+    var cls=d==null?'neu':Math.abs(d)<1.5?'neu':d>0?'neg':'pos';
+    return '<tr class="row'+(sel===h?' on':'')+'" tabindex="0" data-i="'+H.items.indexOf(h)+'"><td>'+fdate(h)+'</td><td><span class="tag '+(h.t==='hito'?'h':'a')+'">'+(h.t==='hito'?'hito':h.gob||'acción')+'</span></td><td class="w">'+esc(h.titulo)+'</td><td>'+(k1?esc(BY[k1].n):'—')+'</td>'+
+      '<td class="n" title="'+(w?esc(w.aL):'')+'">'+(w?f1(w.a):'—')+'</td><td class="n" title="'+(w?esc(w.dL):'')+'">'+(w?f1(w.d):'—')+'</td><td class="n '+cls+'">'+(d==null?'—':sg(d))+'</td></tr>'}).join('');
+  $('imp').innerHTML=hd+rows+'</tbody>';
+  $('imp-nt').textContent='Antes y Después: media del tema en los tres barómetros anteriores y posteriores al hecho (el CIS no hace barómetro en agosto); mide la «'+($('amb').value==='nacional'?'preocupación por España':'afección personal')+'» según la medida elegida arriba. Rojo: la preocupación sube; verde: baja; gris: menos de 1,5 puntos. Es una coincidencia temporal, no una causa: en esos meses pasaron otras cosas y las medidas de gobierno tardan en notarse. Con la columna «Tema» solo se mira el primer tema ligado al hecho.';
+  var t=$('imp');t.onclick=t.onkeydown=function(e){if(e.type==='keydown'&&e.key!=='Enter'&&e.key!==' ')return;var tr=e.target.closest('tr.row');if(!tr)return;e.preventDefault();selecciona(H.items[+tr.getAttribute('data-i')])};
+}
+function selecciona(h){
+  sel=sel===h?null:h;
+  if(sel){sel.temas.forEach(function(k){if(BY[k])SEL[k]=true});syncChips();
+    if(sel.t==='hito'&&!$('t-hit').checked)$('t-hit').checked=true;if(sel.t==='accion'&&!$('t-acc').checked)$('t-acc').checked=true}
+  grafico();impacto();
+}
+
+function nacper(){
+  var L=last(),a=L.nacional_total,p=L.personal_total;
+  var rows=TEMAS.map(function(t){return {t:t,n:a[t.k],p:p?p[t.k]:null}}).filter(function(r){return r.n!=null||r.p!=null}).sort(function(x,y){return (y.n||0)-(x.n||0)}).slice(0,12);
+  var mx=Math.max.apply(null,rows.map(function(r){return Math.max(r.n||0,r.p||0)}).concat([1]));
+  var h='<thead><tr><th>Tema</th><th class="n">España</th><th></th><th class="n">Personal</th><th></th></tr></thead><tbody>';
+  rows.forEach(function(r){h+='<tr><td>'+esc(r.t.n)+'</td><td class="n">'+f1(r.n)+'</td><td style="width:70px"><span class="bar" style="width:'+((r.n||0)*100/mx).toFixed(0)+'%"></span></td><td class="n">'+f1(r.p)+'</td><td style="width:70px"><span class="bar p" style="width:'+((r.p||0)*100/mx).toFixed(0)+'%"></span></td></tr>'});
+  $('np').innerHTML=h+'</tbody>';
+  $('np-nt').textContent='Barómetro de '+L.lab+', total de hasta tres menciones. «España»: el principal problema del país; «Personal»: el que más afecta a la persona entrevistada, es decir, la queja de cada hogar. Cuando ambas cifras se separan, el problema se vive más (o menos) de lo que se percibe como asunto del país.';
+}
+})();
+</script>
+</body>
+</html>

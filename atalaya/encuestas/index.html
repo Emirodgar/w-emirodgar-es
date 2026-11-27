@@ -50,7 +50,7 @@ button,select,input,textarea{font:inherit;color:inherit}
 .br .t i{position:absolute;top:0;bottom:0;border-radius:4px;background:var(--c);opacity:.28}
 .br .t u{position:absolute;top:3px;bottom:3px;width:3px;margin-left:-1px;background:var(--c);border-radius:2px}
 .br .v{font-family:var(--mono);font-size:12px;color:var(--mut);text-align:right}.br .v b{color:var(--txt)}
-.chartbox{height:260px;position:relative}
+.chartbox{height:320px;position:relative}
 .ins{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px}
 .in{background:var(--panel2);border-left:3px solid var(--k);border-radius:4px;padding:10px 12px;font-size:13px}
 .in small{display:block;color:var(--k);font-family:var(--mono);font-size:12px;letter-spacing:.08em;margin-bottom:4px;text-transform:uppercase}
@@ -75,7 +75,7 @@ tr.arch td{opacity:.55}
 </style>
 </head>
 <body>
-<script src="/atalaya/assets/shell.js?v=3"></script>
+<script src="/atalaya/assets/shell.js?v=4"></script>
 <header class="top">
   <h1 class="pt">Encuestas <small>media, rangos y puntos débiles</small></h1>
   <span class="tagline">Inteligencia electoral</span>
@@ -351,14 +351,38 @@ function list(){
     return '<tr'+(p.arch?' class="arch"':'')+'><td class="l"><input type="checkbox" data-k="'+esc(p.k)+'" '+(p.on!==false&&!p.arch?'checked':'')+(p.arch?' disabled':'')+' aria-label="Incluir '+esc(p.empresa)+' '+p.fecha+' en la media"></td><td class="l">'+p.fecha+'</td><td class="l">'+esc(p.empresa)+(p.arch?'<span class="tag">archivada</span>':'')+'</td><td>'+p.n+'</td>'+p.v.map(function(x){return '<td>'+(x==null?'<span class="x">·</span>':f1(x))+'</td>'}).join('')+'<td><button class="btn sm" disabled style="cursor:not-allowed;opacity:.55" aria-label="'+(p.arch?'Restaurar ':'Archivar ')+esc(p.empresa)+' '+p.fecha+' (deshabilitado)">'+(p.arch?'Restaurar':'Archivar')+'</button></td></tr>'}).join('')+'</tbody></table><p class="disc">Archivar está deshabilitado: las encuestas no se pueden quitar desde aquí.</p>';
 }
 
+var MES=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+var endLabels={id:'endLabels',afterDatasetsDraw:function(c){
+  var ctx=c.ctx,out=[];
+  c.data.datasets.forEach(function(d,i){if(!d.endLabel||!d.data.length)return;var pt=d.data[d.data.length-1],m=c.getDatasetMeta(i);if(!m.data.length)return;out.push({y:m.data[m.data.length-1].y,d:d,v:pt.y})});
+  out.sort(function(a,b){return a.y-b.y});
+  for(var k=1;k<out.length;k++)if(out[k].y-out[k-1].y<14)out[k].y=out[k-1].y+14; /* evita que se pisen las etiquetas */
+  ctx.save();ctx.font='700 12px system-ui,sans-serif';ctx.textBaseline='middle';
+  out.forEach(function(o){ctx.fillStyle=o.d.borderColor;ctx.fillText(o.d.label+' '+o.v.toFixed(1).replace('.',',')+' %',c.chartArea.right+8,o.y)});
+  ctx.restore()}};
 function drawChart(M){
   if(chart){chart.destroy();chart=null}
   if(!M||typeof Chart==='undefined')return;
-  var dates=[];polls.forEach(function(p){if(used(p)&&dates.indexOf(p.fecha)<0)dates.push(p.fecha)});dates.sort();
-  if(dates.length<2){return}
-  var hl=+$('hl').value,series=dates.map(function(d){return agg(dt(d),hl,30)});
-  chart=new Chart($('ch'),{type:'line',data:{labels:dates,datasets:PARTS.map(function(p,i){return {label:p[0],borderColor:p[1],backgroundColor:p[1],data:series.map(function(s){return s[i]?Math.round(s[i].m*10)/10:null}),tension:.25,pointRadius:2,borderWidth:2,spanGaps:true}})},
-    options:{responsive:true,maintainAspectRatio:false,animation:false,interaction:{mode:'index',intersect:false},plugins:{legend:{labels:{color:'#8b97a8',boxWidth:10}}},scales:{x:{ticks:{color:'#8b97a8',maxTicksLimit:8},grid:{color:'#1f2937'}},y:{ticks:{color:'#8b97a8',callback:function(v){return v+' %'}},grid:{color:'#1f2937'}}}}});
+  var act=polls.filter(used);if(act.length<2)return;
+  var t0=Math.min.apply(null,act.map(function(p){return +dt(p.fecha)})),t1=Math.max.apply(null,act.map(function(p){return +dt(p.fecha)}));
+  if(t1-t0<DAY){return}
+  var hl=+$('hl').value,step=3*DAY,ds=[];
+  PARTS.forEach(function(pt,i){
+    var pts=act.filter(function(p){return p.v[i]!=null}).map(function(p){return {x:+dt(p.fecha),y:p.v[i],e:p.empresa,f:p.fecha}});
+    ds.push({type:'scatter',label:pt[0],data:pts,backgroundColor:pt[1]+'66',borderColor:'transparent',pointRadius:3.5,pointHoverRadius:5,order:2});
+  });
+  PARTS.forEach(function(pt,i){
+    var ln=[],bw=Math.max(hl,10)*DAY; /* suavizado gaussiano centrado en cada fecha (ambos lados), peso ∝ √muestra */
+    var at=function(t){var S=0,W=0;act.forEach(function(q){if(q.v[i]==null)return;var z=(t-dt(q.fecha))/bw,w=Math.exp(-z*z/2)*Math.sqrt(q.n);S+=w*q.v[i];W+=w});return W>1e-6?{x:t,y:Math.round(S/W*10)/10}:null};
+    for(var t=t0;t<t1;t+=4*DAY){var q=at(t);if(q)ln.push(q)}
+    var qe=at(t1);if(qe)ln.push(qe);
+    ds.push({type:'line',label:pt[0],data:ln,borderColor:pt[1],backgroundColor:pt[1],borderWidth:3,pointRadius:0,pointHoverRadius:0,tension:.4,endLabel:true,order:1});
+  });
+  chart=new Chart($('ch'),{data:{datasets:ds},plugins:[endLabels],
+    options:{responsive:true,maintainAspectRatio:false,animation:false,layout:{padding:{right:92,top:6}},interaction:{mode:'nearest',intersect:true},
+      plugins:{legend:{display:false},tooltip:{filter:function(it){return it.dataset.type==='scatter'},callbacks:{title:function(it){return it[0].raw.e+' · '+it[0].raw.f},label:function(it){return it.dataset.label+': '+it.raw.y.toFixed(1).replace('.',',')+' %'}}}},
+      scales:{x:{type:'linear',min:t0-3*DAY,max:t1+3*DAY,ticks:{color:'#8b97a8',maxTicksLimit:8,callback:function(v){var d=new Date(v);return MES[d.getMonth()]+(d.getMonth()===0?' '+d.getFullYear():'')}},grid:{display:false}},
+        y:{ticks:{color:'#8b97a8',callback:function(v){return v+' %'}},grid:{color:'#1f2937'}}}}});
 }
 
 /* Mapas comparables: estimación provincial orientativa a partir de una encuesta nacional (ver nota bajo los mapas) */
