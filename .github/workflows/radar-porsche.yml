@@ -1,0 +1,60 @@
+name: Radar Porsche
+
+on:
+  schedule:
+    # Dos veces al día (UTC). Los datos de origen se actualizan en mejorimposible.es
+    # (noticias cada pocas horas, precios el día 1, opiniones cuando hay hilos nuevos).
+    # Si no hay datos nuevos la página no cambia y no se hace commit.
+    - cron: '10 7 * * *'
+    - cron: '10 19 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: radar-porsche
+  cancel-in-progress: false
+
+env:
+  ORIGEN: https://raw.githubusercontent.com/Emirodgar/w-mejor-imposible/main/porsche
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Descargar los datos de mejorimposible.es
+        run: |
+          set -euo pipefail
+          mkdir -p "$RUNNER_TEMP/porsche"
+          for f in analisis-reddit precios-anuncios noticias-historico menciones-historico tendencias-semanas; do
+            curl -fsSL --retry 3 --retry-delay 5 "$ORIGEN/$f.json" -o "$RUNNER_TEMP/porsche/$f.json"
+            # Si algo llega roto, falla aquí y no se toca nada de lo ya publicado
+            python -c "import json,sys; json.load(open(sys.argv[1], encoding='utf-8'))" "$RUNNER_TEMP/porsche/$f.json"
+          done
+          cp "$RUNNER_TEMP"/porsche/*.json radar-porsche/data/
+
+      - name: Regenerar la página
+        run: python scripts/radar_porsche/build.py
+
+      - name: Commit y push si hay cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add radar-porsche
+          if git diff --cached --quiet; then
+            echo "Sin cambios, no se hace commit."
+            exit 0
+          fi
+          git commit -m "Actualiza Radar Porsche"
+          git pull --rebase
+          git push

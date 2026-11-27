@@ -9,7 +9,6 @@ Cabecera, pie y estilos de la web se toman de ibex35/index.html para no duplicar
 Solo librería estándar.   Uso:  python scripts/radar_porsche/build.py
 """
 import html, json, os, re
-from datetime import datetime
 from urllib.parse import urlparse
 
 ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
@@ -290,8 +289,7 @@ def bloque_faq(preguntas):
     return "".join(f'<details class="rp-faq"><summary>{e(q)}</summary><p>{e(a)}</p></details>' for q, a in preguntas)
 
 
-def jsonld(an, pr, preguntas):
-    ahora = datetime.now().strftime("%Y-%m-%d")
+def jsonld(an, pr, preguntas, ahora):
     dataset = {
         "@context": "https://schema.org", "@type": "Dataset",
         "name": "Radar Porsche: opinión de propietarios, precios y noticias",
@@ -363,7 +361,8 @@ def main():
     an, pr, fams, modelos, precios, noticias, menciones, sem_id, sem = preparar()
     preguntas = faqs(an, fams, modelos, precios, pr)
     header, footer, ver = chrome()
-    hoy = datetime.now().strftime("%Y-%m-%d")
+    # Fecha derivada de los datos (no del reloj): sin datos nuevos la página no cambia y no hay commit.
+    hoy = max([an["generated"], pr["actualizado"][:10]] + [n["published"][:10] for n in noticias])
     titulo = "Radar Porsche | Opinión de propietarios, precios y noticias"
     desc = ("Panel con la valoración de propietarios de Porsche por modelo y generación, los precios de anuncio en España y las noticias "
             "de la marca, con metodología y fuentes.")
@@ -390,7 +389,7 @@ def main():
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script>try{{if(localStorage.getItem("theme")==="dark"){{document.documentElement.setAttribute("dark","");document.documentElement.classList.add("dark-mode")}}}}catch(e){{}}</script>
 <link rel="stylesheet" href="/assets/css/chrome.css?v={ver}">
-{jsonld(an, pr, preguntas)}<style>body{{margin:0;background:#0f1418}}{CSS}</style>
+{jsonld(an, pr, preguntas, hoy)}<style>body{{margin:0;background:#0f1418}}{CSS}</style>
 </head>
 <body>
 {header}
@@ -398,7 +397,7 @@ def main():
 <p class="rp-crumb"><a href="/">Inicio</a> › <a href="/datos/">Dashboards</a> › Radar Porsche</p>
 <h1>Radar Porsche: qué opinan los propietarios, cuánto cuesta y qué se cuenta</h1>
 <p class="lead">Tres fuentes en un solo panel: la opinión de propietarios y conductores en Reddit, los precios de anuncio en España y las noticias de la marca.</p>
-<p class="rp-meta">Opiniones actualizadas el {e(fecha(an["generated"]))} · Precios de {e(ult_precio)} · Página generada el {e(fecha(hoy))}</p>
+<p class="rp-meta">Opiniones actualizadas el {e(fecha(an["generated"]))} · Precios de {e(ult_precio)} · Datos al {e(fecha(hoy))}</p>
 
 <div class="rp-kpis">{bloque_kpis(an, pr)}</div>
 
