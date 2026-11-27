@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-26",
-  "generado_en": "2026-11-26T14:54:06+00:00",
-  "titular": "Hernández de Cos presidirá el BCE; naufragio en Ibiza con un fallecido y Ábalos y Koldo fijan sus penas",
+  "fecha": "2026-11-27",
+  "generado_en": "2026-11-27T14:51:09+00:00",
+  "titular": "La campaña electoral se intensifica con cruces de acusaciones y el debate sobre la violencia de género, mientras se revelan detalles de la c",
   "por_medio": {
-    "El Mundo": 30,
-    "The Objective": 205
+    "El Mundo": 31,
+    "The Objective": 233
   },
   "temas": [
     {
-      "tema": "Nombramiento de Hernández de Cos en el BCE",
-      "categoria": "Economía",
-      "descripcion": "Pablo Hernández de Cos ha sido elegido presidente del Banco Central Europeo, un hito histórico para España en una institución europea."
+      "tema": "Debate electoral y violencia de género",
+      "categoria": "Política",
+      "descripcion": "El comentario de Feijóo a Colau en el debate ha generado controversia y ha sido utilizado por otros partidos para movilizar el voto femenino, mientras Abascal ha condenado la violencia contra la mujer."
     },
     {
-      "tema": "Naufragio de buque cisterna en Ibiza",
+      "tema": "Crisis migratoria y seguridad en Ceuta",
+      "categoria": "Internacional",
+      "descripcion": "Testimonios revelan que la policía marroquí avisó y facilitó la oleada migratoria en Ceuta, mientras se registran muertes de inmigrantes en cayucos y se busca puerto para un buque naufragado."
+    },
+    {
+      "tema": "Elecciones generales y denuncias",
+      "categoria": "Política",
+      "descripcion": "El PP ha denunciado irregularidades en el voto por correo y en la propaganda electoral, mientras el Gobierno confirma la subida de pensiones a días de las elecciones."
+    },
+    {
+      "tema": "Sucesos y violencia",
       "categoria": "Sucesos",
-      "descripcion": "Un buque con 7.000 toneladas de gasóleo ha naufragado cerca de Ibiza, dejando un marinero muerto y seis heridos, aunque expertos descartan una catástrofe como la del Prestige."
-    },
-    {
-      "tema": "Penas de prisión de Ábalos y Koldo",
-      "categoria": "Política",
-      "descripcion": "El Tribunal Supremo ha fijado las penas máximas de prisión para el exministro José Luis Ábalos y su exasesor Koldo García por diversos delitos."
-    },
-    {
-      "tema": "Investigaciones judiciales y corrupción",
-      "categoria": "Política",
-      "descripcion": "La juez Tardón solicita mensajes clave sobre la frontera de Tetuán, la UCO detecta irregularidades en una obra en Navarra y la presidenta del Poder Judicial se interesa por la retirada de escolta a una juez."
+      "descripcion": "Se reportan la muerte del alcalde de Tombrío de Abajo en una cacería, el asesinato de una mujer en Bilbao por su pareja con orden de alejamiento, y la desarticulación de una estafa a inmigrantes."
     }
   ]
 }

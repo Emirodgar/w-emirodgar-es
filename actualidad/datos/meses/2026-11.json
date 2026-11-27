@@ -1080,6 +1080,48 @@
         "url": "https://www.elmundo.es/espana/2026/11/26/6b08386ee85eced9618b456e.html"
       },
       "destacado": false
+    },
+    {
+      "fecha": "2026-11-27",
+      "edicion": "2026-11-27",
+      "titulo": "Confirmación de la subida de pensiones",
+      "categoria": "Economía",
+      "descripcion": "El Gobierno confirma que subirá las pensiones un 3,5% a dos días de las elecciones, lo que representa 775 euros más al año de media para los jubilados.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "El Gobierno confirma que subirá las pensiones un 3,5% a dos días de las elecciones: 775 euros más al año de media para los jubilados",
+        "url": "https://www.elmundo.es/economia/2026/11/27/6b0935cb21efa0364f8b45a2.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-27",
+      "edicion": "2026-11-27",
+      "titulo": "Anuncio de retirada de Marc Márquez",
+      "categoria": "Deportes",
+      "descripcion": "El piloto Marc Márquez anuncia su retirada del motociclismo, confesando haber empezado a sentir miedo.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Marc Márquez, en su adiós: \"Empecé a sentir miedo\"",
+        "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/27/6b097e1ffdddff48178b45b1.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-27",
+      "edicion": "2026-11-27",
+      "titulo": "Fallecimiento del alcalde de Tombrío de Abajo",
+      "categoria": "Sucesos",
+      "descripcion": "El alcalde de Tombrío de Abajo (León) muere tras recibir un disparo en una cacería de jabalíes, y se detiene a un varón como presunto autor de homicidio imprudente.",
+      "relevancia": 3,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Muere el alcalde de Tombrío de Abajo (León) tras recibir un disparo en una cacería de jabalíes",
+        "url": "https://www.elmundo.es/espana/2026/11/27/6b0924a9fc6c83d45e8b456d.html"
+      },
+      "destacado": false
     }
   ]
 }
