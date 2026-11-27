@@ -245,19 +245,24 @@ def main():
                    f"Es una estimación orientativa: el modelo solo ve el titular y esto no equivale a una encuesta de opinión.</p>")
         limites = ("<h2>Qué podría cambiar el resultado</h2><ul><li>Un cambio de tendencia nacional en las semanas finales de campaña.</li><li>Un hecho que afecte a la imagen de los candidatos locales o nacionales (imputaciones, dimisiones, crisis de gestión).</li>"
                    "<li>La participación y el reparto de los indecisos, que en provincias con pocos escaños pueden mover el último diputado.</li></ul>"
-                   "<h2>Lo que este análisis no incluye</h2><p class='warn'>Todavía no usa encuestas provinciales, resultados municipales ni análisis de sentimiento en redes. Es una estimación razonada con datos públicos, no una encuesta ni una previsión oficial.</p>")
+                   "<h2>Lo que este análisis no incluye</h2><p class='warn'>Todavía no usa encuestas provinciales ni análisis de sentimiento en redes. Los resultados municipales de 2023 se muestran como contexto, no entran en la estimación. Es una estimación razonada con datos públicos, no una encuesta ni una previsión oficial.</p>")
         dl = sorted(dips.get(pc, []))
         dipsec = (f"<h2>Diputados de {E(nombre)} en el Congreso</h2><p>Diputados vigentes en la XV Legislatura (Cortes disueltas el 6 de octubre de 2026):</p><ul>"
                   + "".join(f"<li><a href='/atalaya/fichas/{r}'>{E(n_)}</a> <span class='meta'>({E(pt_)})</span></li>" for n_, r, pt_ in dl) + "</ul>") if dl else ""
+        from ficha_provincia_extra import bloques as bloques_prov
+        extra_h, extra_faqs, extra_fu = bloques_prov(dict(E=E, J=J, D=D, nes=nes), pc, nombre)
+        dipsec += extra_h
         fesc = ("<a href='" + v["url"] + "'>Wikipedia</a> (que recoge datos oficiales de resultados)") if v else "pendiente"
         fuentes = (f"<h2>Fuentes y método</h2><ul><li>Escaños por provincia: {fesc}.</li>"
                    f"<li>Encuestas: sondeos publicados por empresas y medios, ponderados por antigüedad y tamaño de muestra, en <a href='/elecciones-espana/'>Elecciones en España</a>.</li>"
                    "<li>Noticias: titulares por RSS de medios nacionales y de Google Noticias para prensa local, etiquetados por provincia.</li>"
+                   + "".join(f"<li>{x}</li>" for x in extra_fu) +
                    "<li>Método: el partido con más escaños en 2023 y su regularidad en las últimas seis convocatorias, contrastados con la tendencia nacional de encuestas.</li></ul>"
                    f"<p>Explora el territorio en el <a href='/atalaya/#{pc}'>panel Atalaya</a>.</p>")
         faqs = [(q, resp)]
         faqs.append((f"¿Puede cambiar de partido {nombre} en las elecciones del 29N?", frase_cambio(VOL['P'][pc])))
         if faq_hist: faqs.append((f"¿Quién ganó en {nombre} en las elecciones generales de 2023?", faq_hist))
+        faqs += extra_faqs
         faqs.append((f"¿Cuándo son las próximas elecciones generales?", f"Las elecciones generales se celebran el 29 de noviembre de 2026."))
         if tot: faqs.append((f"¿Cuántos diputados elige {nombre} al Congreso?", f"{nombre} elige {tot} diputados al Congreso de los Diputados."))
         if pob: faqs.append((f"¿Cuántos habitantes tiene {nombre}?", f"{nombre} tiene {nes(pob)} habitantes según el padrón del INE a 1 de enero de {anio_pad}."))
@@ -382,9 +387,14 @@ def main():
 
     # fichas de partido y de tema (módulo aparte)
     from fichas_tematicas import generar
+    import ficha_promesas
+    pidx = ficha_promesas.indice(J, D)
     extra, urls_extra = generar(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, slug=slug, nes=nes, pagina=pagina, J=J, D=D, RAIZ=RAIZ,
-                                     nacional=nacional, nsond=nsond, fsond=fsond))
+                                     nacional=nacional, nsond=nsond, fsond=fsond, promesas_idx=pidx))
     urls += urls_extra
+    urls_prom, _, _ = ficha_promesas.generar(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, slug=slug, pagina=pagina, J=J, D=D), pidx)
+    urls += urls_prom
+    print("Fichas partido×tema:", len(urls_prom))
 
     # fichas de político (Promesas vs. Hechos / Discurso vs. Votos) y de histórico macro: cada una la genera
     # su propio script aparte (ficha_politico_autonomico.py, ficha_discurso_votos.py, ficha_macro.py); aquí

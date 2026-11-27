@@ -29,6 +29,7 @@ def generar(c):
     nacional, nsond, fsond = c["nacional"], c["nsond"], c["fsond"]
     orden = sorted(nacional, key=lambda p: -nacional[p])
     urls, hub_p, hub_t = [], [], []
+    pidx = c.get("promesas_idx") or {}   # (siglas, tema) -> promesas; ver ficha_promesas.py
     seguro = lambda u: u if re.match(r"https?://", u or "") else "#"
 
     clas = []   # noticias con clasificación: (noticia, clasificación)
@@ -114,6 +115,9 @@ def generar(c):
                 filas += f"<tr><td>{E(a['texto'])}</td><td><span class='chip'>{POS.get(x['posicion'], x['posicion'])}</span></td><td>{E(x.get('cita') or '')}{fu} <span class='meta'>{E(x.get('fecha') or '')}</span></td></tr>"
             if filas: pos_html += f"<h3><a href='/atalaya/fichas/tema/{slug(t)}/'>{E(t)}</a></h3><table class='pos'><thead><tr><th>Afirmación</th><th>Posición</th><th>Cita y fuente</th></tr></thead><tbody>{filas}</tbody></table>"
         pr = prensa(lambda s, sig=sig: s["partido"] == sig)
+        prop = sorted((tm, len(v)) for (s_, tm), v in pidx.items() if s_ == sig)
+        prop_html = ("<h2>5. Propuestas de su programa electoral, por tema</h2><ul>" + "".join(
+            f"<li><a href='/atalaya/fichas/partido/{slug(sig)}/{slug(tm)}/'>{E(tm)}</a> <span class='meta'>({n} propuestas con cita y página)</span></li>" for tm, n in prop) + "</ul>") if prop else ""
         cuerpo = (f"{CSS_EXTRA}<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p><p class='ans'>{E(resp)}</p>"
                   f"<h2>1. Encuestas</h2><p>" + (f"Media ponderada de {nsond} sondeos de los 30 días previos al {fecha_es(fsond)} (sin CIS): {E(sig)} {enc} %. " if enc else "No hay media de encuestas disponible para este partido. ") +
                   "Detalle en <a href='/elecciones-espana/'>Elecciones en España</a>.</p>"
@@ -122,7 +126,8 @@ def generar(c):
                   f"<h2>3. Qué posición tiene en cada tema</h2>{aviso}"
                   f"<p>De {len(afs)} afirmaciones analizadas: a favor en {pos_cnt.get('favor', 0)}, en contra en {pos_cnt.get('contra', 0)}, matizada en {pos_cnt.get('matizada', 0)} y sin posición clara en {pos_cnt.get('sin_posicion', 0)}.</p>{pos_html}"
                   f"<h2>4. Clima de prensa</h2>{bloque_prensa(pr, sig)}"
-                  "<h2>Qué no incluye</h2><p class='warn'>No es un test de voto ni una recomendación. No usa todavía el programa electoral de 2026 ni encuestas provinciales.</p>")
+                  + prop_html +
+                  "<h2>Qué no incluye</h2><p class='warn'>No es un test de voto ni una recomendación. No usa todavía encuestas provinciales.</p>")
         faqs = [(f"¿Qué dicen las encuestas sobre {sig}?", (f"La media de encuestas le da un {enc} %." if enc else "No hay media de encuestas disponible para este partido.")),
                 (f"¿Quién es el candidato de {sig} en 2026?", (f"{cd['nombre']} ({cd.get('cargo') or 'cabeza de lista anunciado'})." if cd.get("nombre") else "Aún no hay un candidato anunciado con los datos disponibles.")),
                 (f"¿Cuántos escaños tiene {sig} en el Congreso?", (f"{esc_act} escaños en el Congreso disuelto." if esc_act else "No tiene representación en el Congreso disuelto según los datos cargados."))]
@@ -151,6 +156,10 @@ def generar(c):
         if k:
             pr = prensa(lambda s, k=k: s["tema"] == k, n_min=10)
             cuerpo += f"<h2>2. Presencia en prensa</h2>{bloque_prensa(pr, t.lower(), False)}"
+        pt_ = sorted((s_, len(v)) for (s_, tm), v in pidx.items() if tm == t)
+        if pt_:
+            cuerpo += (f"<h2>Propuestas de los programas electorales</h2><ul>" + "".join(
+                f"<li><a href='/atalaya/fichas/partido/{slug(s_)}/{slug(t)}/'>Qué propone {E(s_)} sobre {E(t.lower())}</a> <span class='meta'>({n} propuestas con cita y página)</span></li>" for s_, n in pt_) + "</ul>")
         cuerpo += ("<h2>Otros temas</h2><ul>" + "".join(f"<li><a href='/atalaya/fichas/tema/{slug(x)}/'>{E(x)}</a></li>" for x in sorted({a['tema'] for a in afs}) if x != t) + "</ul>"
                    "<h2>Partidos</h2><ul>" + "".join(f"<li><a href='/atalaya/fichas/partido/{slug(p['siglas'])}/'>{E(p['nombre'])}</a></li>" for p in partidos) + "</ul>"
                    "<h2>Qué no incluye</h2><p class='warn'>No es un test de voto ni una recomendación, y no sustituye a los programas electorales de 2026, que aún no se han publicado.</p>")
