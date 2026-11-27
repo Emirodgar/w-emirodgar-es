@@ -97,6 +97,12 @@ jobs:
           command -v pdftotext >/dev/null || sudo apt-get install -y -qq poppler-utils
           python3 scripts/atalaya/build_cis.py
 
+      - name: Serie histórica de preocupaciones (CIS; solo añade los barómetros nuevos)
+        if: steps.hoy.outputs.ejecutar == 'true'
+        continue-on-error: true
+        timeout-minutes: 10
+        run: python3 scripts/atalaya/build_preocupaciones.py
+
       - name: Visitas de Wikipedia a partidos y candidatos (diario)
         # API pública de estadísticas de Wikimedia, una petición por entidad. Si falla, el resto del workflow sigue.
         if: steps.hoy.outputs.ejecutar == 'true'

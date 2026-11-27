@@ -2152,6 +2152,109 @@
           "cita": "Derogaremos la ley de vivienda, que ha generado inseguridad jurídica y no resuelve ninguno de los problemas de fondo del mercado de la vivienda.",
           "url_documento": "https://www.pp.es/wp-content/uploads/2023/07/programa_electoral_pp_23j_feijoo_2023.pdf"
         }
+      },
+      "interacciones": {
+        "eventos": [
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Vivienda",
+            "t": "Le acusó de no ejecutar la mitad del presupuesto de vivienda y pidió no culpar a las comunidades autónomas."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Vivienda",
+            "t": "Pidió un gran acuerdo por la vivienda y recordó que las competencias son autonómicas."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Le acusó de recaudar en exceso y habló de la subida de precios y de la deuda."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Economía y fiscalidad",
+            "t": "Defendió su gestión (PIB, pensiones, salario mínimo) frente a las críticas de Feijóo."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "reto",
+            "bloque": "Política social y servicios públicos",
+            "t": "Le retó a pedir perdón a las víctimas del accidente ferroviario de Urda."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Política social y servicios públicos",
+            "t": "Le reprochó asistir a un mitin tras el funeral de Estado."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "reto",
+            "bloque": "Política social y servicios públicos",
+            "t": "Ofreció un pacto de Estado para blindar las pensiones y le preguntó si privatizaría el sistema público."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Corrupción y regeneración democrática",
+            "t": "Dijo que el PSOE tiene más imputados que diputados."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "reto",
+            "bloque": "Corrupción y regeneración democrática",
+            "t": "Le preguntó quién pagó sus primarias (insinuación no verificada)."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Corrupción y regeneración democrática",
+            "t": "Afirmó que Sánchez está imputado por financiación irregular (Maldita y Verificat: falso)."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Corrupción y regeneración democrática",
+            "t": "Calificó al PP de «formación más corrupta del sistema»."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "ataque",
+            "bloque": "Migración y política exterior",
+            "t": "Criticó la gestión de Ceuta y habló de efecto llamada."
+          },
+          {
+            "de": "feijoo",
+            "a": "sanchez",
+            "tipo": "reto",
+            "bloque": "Migración y política exterior",
+            "t": "Le preguntó qué debe a Marruecos."
+          },
+          {
+            "de": "sanchez",
+            "a": "feijoo",
+            "tipo": "ataque",
+            "bloque": "Migración y política exterior",
+            "t": "Negó que haya pruebas de que Marruecos esté detrás y citó un informe del CNI."
+          }
+        ],
+        "nota": "No es un recuento de tiempo ni de palabras: son los cruces dirigidos que se desprenden del resumen por bloques de este debate (Infobae, El Mirador de Madrid, verificadores), así que pueden faltar intercambios. Cada cruce se clasifica como ataque (crítica o acusación), reto (pregunta o desafío directo) o apoyo. Clasificación hecha por Atalaya a partir de lo narrado."
       }
     }
   ]
