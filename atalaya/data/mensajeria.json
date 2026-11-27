@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-26T15:35:35+00:00",
+ "actualizado": "2026-11-27T08:27:32+00:00",
  "ventana_dias": 30,
  "aviso": "Solo canales públicos de Telegram enlazados por la web de cada partido (o confirmados). Las visualizaciones son las de la primera captura de cada mensaje; los mensajes recientes pueden estar infravalorados. No es una medida de apoyo ni de alcance total. Los partidos sin canal confirmado no aparecen.",
  "canales": [
@@ -26,6 +26,8 @@
     "vistas_total": 5710,
     "vistas_mediana": 2270,
     "vistas_por_seguidor": 0.4,
+    "temas": {},
+    "con_tema": 0,
     "formatos": {
      "enlace": 2,
      "vídeo": 1
@@ -108,23 +110,23 @@
    "ultimo": "2026-11-20",
    "ventana": {
     "dias": 30,
-    "mensajes": 16,
+    "mensajes": 14,
     "por_dia": 0.5,
-    "vistas_total": 102190,
-    "vistas_mediana": 6830,
-    "vistas_por_seguidor": 0.36,
+    "vistas_total": 85730,
+    "vistas_mediana": 6470,
+    "vistas_por_seguidor": 0.34,
+    "temas": {
+     "seguridad": 1
+    },
+    "con_tema": 1,
     "formatos": {
-     "vídeo": 6,
+     "vídeo": 5,
      "texto": 4,
      "enlace": 4,
-     "imagen": 2
+     "imagen": 1
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-27",
-      "n": 2
-     },
      {
       "f": "2026-10-28",
       "n": 1
@@ -223,7 +225,7 @@
    "partido": "Junts",
    "handle": "juntsxcat",
    "url": "https://t.me/juntsxcat",
-   "nombre": "Junts per Catalunya🎗",
+   "nombre": "Junts per Catalunya",
    "origen": "enlazado_web",
    "seguidores": 3940,
    "historial_seguidores": [
@@ -236,23 +238,24 @@
    "primero": "2026-09-22",
    "ultimo": "2026-11-25",
    "ventana": {
-    "dias": 30,
-    "mensajes": 72,
-    "por_dia": 2.4,
-    "vistas_total": 64423,
-    "vistas_mediana": 879,
+    "dias": 28,
+    "mensajes": 71,
+    "por_dia": 2.5,
+    "vistas_total": 62893,
+    "vistas_mediana": 878,
     "vistas_por_seguidor": 0.22,
+    "temas": {
+     "sanidad": 1,
+     "economía": 1
+    },
+    "con_tema": 2,
     "formatos": {
-     "imagen": 41,
+     "imagen": 40,
      "enlace": 17,
      "texto": 14
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-27",
-      "n": 1
-     },
      {
       "f": "2026-10-31",
       "n": 1
@@ -404,12 +407,21 @@
    "primero": "2026-11-09",
    "ultimo": "2026-11-26",
    "ventana": {
-    "dias": 18,
+    "dias": 19,
     "mensajes": 123,
-    "por_dia": 6.8,
+    "por_dia": 6.5,
     "vistas_total": 13330,
     "vistas_mediana": 112,
     "vistas_por_seguidor": 0.21,
+    "temas": {
+     "economía": 9,
+     "empleo": 7,
+     "vivienda": 6,
+     "seguridad": 4,
+     "inmigración": 1,
+     "corrupción y justicia": 1
+    },
+    "con_tema": 18,
     "formatos": {
      "vídeo": 87,
      "imagen": 35,
@@ -556,12 +568,18 @@
    "primero": "2026-11-12",
    "ultimo": "2026-11-26",
    "ventana": {
-    "dias": 15,
+    "dias": 16,
     "mensajes": 68,
-    "por_dia": 4.5,
+    "por_dia": 4.2,
     "vistas_total": 59688,
     "vistas_mediana": 868,
     "vistas_por_seguidor": 0.31,
+    "temas": {
+     "empleo": 2,
+     "vivienda": 1,
+     "economía": 1
+    },
+    "con_tema": 2,
     "formatos": {
      "imagen": 36,
      "vídeo": 18,
@@ -697,23 +715,23 @@
    "ultimo": "2026-11-26",
    "ventana": {
     "dias": 30,
-    "mensajes": 84,
+    "mensajes": 83,
     "por_dia": 2.8,
-    "vistas_total": 33183,
-    "vistas_mediana": 394,
+    "vistas_total": 32614,
+    "vistas_mediana": 390,
     "vistas_por_seguidor": 0.28,
+    "temas": {
+     "economía": 2,
+     "empleo": 1
+    },
+    "con_tema": 3,
     "formatos": {
      "imagen": 52,
      "vídeo": 30,
-     "enlace": 1,
      "texto": 1
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-27",
-      "n": 1
-     },
      {
       "f": "2026-10-28",
       "n": 1
@@ -897,12 +915,16 @@
    "primero": "2025-11-12",
    "ultimo": "2026-11-26",
    "ventana": {
-    "dias": 21,
+    "dias": 22,
     "mensajes": 15,
     "por_dia": 0.7,
     "vistas_total": 393,
     "vistas_mediana": 30,
     "vistas_por_seguidor": 0.38,
+    "temas": {
+     "corrupción y justicia": 1
+    },
+    "con_tema": 1,
     "formatos": {
      "vídeo": 6,
      "imagen": 4,
@@ -1015,23 +1037,27 @@
    "ultimo": "2026-11-26",
    "ventana": {
     "dias": 30,
-    "mensajes": 84,
-    "por_dia": 2.8,
-    "vistas_total": 96685,
-    "vistas_mediana": 1145,
+    "mensajes": 79,
+    "por_dia": 2.6,
+    "vistas_total": 88856,
+    "vistas_mediana": 1140,
     "vistas_por_seguidor": 0.22,
+    "temas": {
+     "vivienda": 7,
+     "economía": 6,
+     "empleo": 5,
+     "educación": 2,
+     "inmigración": 2
+    },
+    "con_tema": 17,
     "formatos": {
-     "enlace": 38,
-     "texto": 37,
+     "texto": 36,
+     "enlace": 34,
      "imagen": 8,
      "vídeo": 1
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-27",
-      "n": 5
-     },
      {
       "f": "2026-10-28",
       "n": 1
@@ -1208,23 +1234,30 @@
    "ultimo": "2026-11-26",
    "ventana": {
     "dias": 30,
-    "mensajes": 62,
-    "por_dia": 2.1,
-    "vistas_total": 83983,
-    "vistas_mediana": 1360,
-    "vistas_por_seguidor": 0.2,
+    "mensajes": 60,
+    "por_dia": 2.0,
+    "vistas_total": 79153,
+    "vistas_mediana": 1325,
+    "vistas_por_seguidor": 0.19,
+    "temas": {
+     "educación": 7,
+     "economía": 4,
+     "vivienda": 3,
+     "seguridad": 2,
+     "sanidad": 2,
+     "empleo": 2,
+     "corrupción y justicia": 1,
+     "inmigración": 1
+    },
+    "con_tema": 12,
     "formatos": {
-     "vídeo": 37,
-     "imagen": 21,
+     "vídeo": 36,
+     "imagen": 20,
      "texto": 3,
      "enlace": 1
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-27",
-      "n": 2
-     },
      {
       "f": "2026-10-28",
       "n": 2
@@ -1376,12 +1409,16 @@
    "primero": "2026-03-12",
    "ultimo": "2026-11-26",
    "ventana": {
-    "dias": 26,
+    "dias": 27,
     "mensajes": 67,
-    "por_dia": 2.6,
+    "por_dia": 2.5,
     "vistas_total": 43934,
     "vistas_mediana": 637,
     "vistas_por_seguidor": 0.2,
+    "temas": {
+     "sanidad": 2
+    },
+    "con_tema": 2,
     "formatos": {
      "vídeo": 32,
      "imagen": 21,
@@ -1528,7 +1565,7 @@
    "partido": "Vox",
    "handle": "VOXTelegram",
    "url": "https://t.me/VOXTelegram",
-   "nombre": "VOX España 🇪🇸",
+   "nombre": "VOX España",
    "origen": "enlazado_web",
    "seguidores": 919,
    "historial_seguidores": [
@@ -1547,6 +1584,8 @@
     "vistas_total": 0,
     "vistas_mediana": null,
     "vistas_por_seguidor": null,
+    "temas": {},
+    "con_tema": 0,
     "formatos": {},
     "reenviados": 0,
     "serie": []

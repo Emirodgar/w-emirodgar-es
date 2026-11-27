@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CIS | Atalaya</title>
-<meta name="description" content="Barómetros del CIS de 2026: estimación de voto, indecisión, problemas que más preocupan, confianza en los líderes y cuánto de eso aparece en la prensa.">
+<meta name="description" content="Barómetros del CIS de 2025 y 2026: estimación de voto, indecisión, problemas que más preocupan, confianza en los líderes y cuánto de eso aparece en la prensa.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="canonical" href="https://emirodgar.es/atalaya/cis/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -34,7 +34,7 @@ th{font-size:11px;font-weight:600;color:var(--mut);text-transform:uppercase;lett
 td.n,th.n{text-align:right;font-family:var(--mono)}
 .cv{position:relative;height:280px}
 .bar{display:block;height:10px;border-radius:3px;background:var(--acc);opacity:.85}
-.bar.p{background:#a78bfa}
+.bar.p{background:#a78bfa}.bar.q{background:#fbbf24}
 .pos{color:var(--ok)}.neg{color:var(--bad)}.neu{color:var(--mut)}
 .stk{display:flex;height:16px;border-radius:4px;overflow:hidden;margin:4px 0 10px}
 .stk i{display:block;height:100%}
@@ -52,7 +52,7 @@ td.n,th.n{text-align:right;font-family:var(--mono)}
 <script src="/atalaya/assets/shell.js?v=3"></script>
 <script src="/atalaya/assets/vendor/chartjs/chart.umd.min.js"></script>
 <header class="top">
-  <h1 class="pt">CIS <small>barómetros de 2026</small></h1>
+  <h1 class="pt">CIS <small>barómetros de 2025 y 2026</small></h1>
   <span class="tagline">Inteligencia electoral</span>
 </header>
 
@@ -65,7 +65,7 @@ td.n,th.n{text-align:right;font-family:var(--mono)}
       <div class="body"><div class="cv"><canvas id="cv" role="img" aria-label="Estimación de voto del CIS por barómetro"></canvas></div><p class="note" id="est-nt"></p></div>
     </section>
     <section class="card">
-      <h2><span>Lo que preocupa frente a lo que cuenta la prensa</span><span id="gap-sub"></span></h2>
+      <h2><span>Lo que preocupa, lo que cuenta la prensa y lo que dicen los partidos</span><span><select class="sel" id="gp" aria-label="Partido de Telegram"><option value="">Todos los partidos</option></select></span></h2>
       <div class="tw"><table id="gap"></table></div>
       <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="gap-nt"></p></div>
     </section>
@@ -94,16 +94,19 @@ function key(n){n=n.toLowerCase();if(/^psoe/.test(n))return 'PSOE';if(/^pp$/.tes
 // Problema del CIS -> tema del clasificador de prensa de Atalaya (solo los que se corresponden con claridad)
 var MAPA=[[/vivienda/i,'vivienda'],[/crisis econ|problemas de índole económica/i,'economía'],[/calidad del empleo|^el paro$/i,'empleo'],[/inmigraci/i,'inmigración'],[/^la sanidad/i,'sanidad'],[/corrupci/i,'corrupción y justicia'],[/^la educaci/i,'educación'],[/inseguridad ciudadana/i,'seguridad'],[/cambio clim/i,'medio ambiente']];
 function tema(p){for(var i=0;i<MAPA.length;i++)if(MAPA[i][0].test(p))return MAPA[i][1];return null}
-var D=null,NEWS=null,SENT=null,chart=null;
+var D=null,NEWS=null,SENT=null,MSJ=null,chart=null;
 
 Promise.all([
   fetch('../data/cis.json',{cache:'no-cache'}).then(function(r){return r.json()}),
   fetch('../data/noticias.json',{cache:'no-cache'}).then(function(r){return r.json()}).catch(function(){return {noticias:[]}}),
-  fetch('../data/sentimiento.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}})
+  fetch('../data/sentimiento.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():{items:{}}}).catch(function(){return {items:{}}}),
+  fetch('../data/mensajeria.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})
 ]).then(function(r){
-  D=r[0];NEWS=r[1].noticias||[];SENT=r[2].items||{};
+  D=r[0];NEWS=r[1].noticias||[];SENT=r[2].items||{};MSJ=r[3];
   D.barometros=D.barometros.filter(function(b){return b.estimacion&&b.estimacion.length});
   $('sm').addEventListener('change',problemas);
+  if(MSJ&&MSJ.canales){$('gp').innerHTML='<option value="">Todos los partidos</option>'+MSJ.canales.filter(function(c){return c.ventana&&c.ventana.mensajes>0}).map(function(c){return '<option>'+esc(c.partido)+'</option>'}).join('')}
+  $('gp').addEventListener('change',brecha);
   $('aviso').textContent=D.aviso+' La estimación del CIS usa un modelo propio y puede diferir de la de otras encuestadoras: Atalaya la muestra aparte y la excluye de su media de encuestas.';
   kpis();grafico();problemas();confianza();brecha();
 }).catch(function(){$('kpis').innerHTML='<p class="empty">No se pudieron leer los datos del CIS.</p>'});
@@ -125,7 +128,7 @@ function kpis(){
 function k(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
 
 function grafico(){
-  var L=D.barometros,labs=L.map(function(b){return b.mes.split(' ')[0].slice(0,3)});
+  var L=D.barometros,labs=L.map(function(b){return b.mes.split(' ')[0].slice(0,3)+' '+String(b.anio).slice(2)});
   var ks=Object.keys(COL);
   var ds=ks.map(function(kk){return {label:kk,data:L.map(function(b){var e=b.estimacion.filter(function(x){return key(x.partido)===kk})[0];return e?e.estimacion:null}),borderColor:COL[kk],backgroundColor:COL[kk],tension:.25,pointRadius:3,borderWidth:2,spanGaps:true}});
   if(chart)chart.destroy();
@@ -160,15 +163,24 @@ function brecha(){
   var last=NEWS.reduce(function(a,n){return n.f>a?n.f:a},''),corte=new Date(new Date(last).getTime()-30*864e5).toISOString();
   var pr={},tot=0;
   NEWS.forEach(function(n){var s=SENT[n.i];if(!s||n.f<corte)return;var t=s.tema;if(cis[t]==null)return;pr[t]=(pr[t]||0)+1;tot++});
+  // Partidos: menciones de cada tema en sus mensajes de Telegram (últimos 30 días), de todos o de un partido
+  var sel=$('gp').value,tl={},tt=0;
+  if(MSJ&&MSJ.canales)MSJ.canales.forEach(function(c){if(sel&&c.partido!==sel)return;var tm=(c.ventana&&c.ventana.temas)||{};Object.keys(cis).forEach(function(k){if(tm[k]){tl[k]=(tl[k]||0)+tm[k];tt+=tm[k]}})});
   var temas=Object.keys(cis),sc=temas.reduce(function(a,t){return a+cis[t]},0);
-  var rows=temas.map(function(t){return {t:t,c:cis[t]*100/sc,p:tot?(pr[t]||0)*100/tot:0,n:pr[t]||0}}).sort(function(a,b){return (b.c-b.p)-(a.c-a.p)});
-  var mx=Math.max.apply(null,rows.map(function(r){return Math.max(r.c,r.p)}).concat([1]));
-  var h='<thead><tr><th>Tema</th><th class="n">CIS</th><th></th><th class="n">Prensa</th><th></th><th class="n">Diferencia</th></tr></thead><tbody>';
-  rows.forEach(function(r){var d=r.p-r.c;
-    h+='<tr><td>'+esc(r.t)+'</td><td class="n">'+f1(r.c)+'</td><td style="width:90px"><span class="bar" style="width:'+(r.c*100/mx).toFixed(0)+'%"></span></td><td class="n">'+f1(r.p)+'</td><td style="width:90px"><span class="bar p" style="width:'+(r.p*100/mx).toFixed(0)+'%"></span></td><td class="n '+(d>5?'neg':d<-5?'pos':'neu')+'" title="Positivo: la prensa le dedica más atención que la ciudadanía">'+sg(d)+'</td></tr>'});
+  var rows=temas.map(function(t){return {t:t,c:cis[t]*100/sc,p:tot?(pr[t]||0)*100/tot:0,m:tt?(tl[t]||0)*100/tt:0,nm:tl[t]||0}}).sort(function(a,b){return (b.c-b.p)-(a.c-a.p)});
+  var mx=Math.max.apply(null,rows.map(function(r){return Math.max(r.c,r.p,r.m)}).concat([1]));
+  var cl=function(d){return d>5?'neg':d<-5?'pos':'neu'};
+  var h='<thead><tr><th>Tema</th><th class="n">CIS</th><th></th><th class="n">Prensa</th><th></th><th class="n">Partidos</th><th></th><th class="n">Prensa − CIS</th><th class="n">Partidos − CIS</th></tr></thead><tbody>';
+  rows.forEach(function(r){var d=r.p-r.c,e=tt?r.m-r.c:null;
+    var bar=function(v,c){return '<td style="width:70px"><span class="bar'+c+'" style="width:'+(v*100/mx).toFixed(0)+'%"></span></td>'};
+    h+='<tr><td>'+esc(r.t)+'</td><td class="n">'+f1(r.c)+'</td>'+bar(r.c,'')+'<td class="n">'+f1(r.p)+'</td>'+bar(r.p,' p')+'<td class="n">'+(tt?f1(r.m):'—')+'</td>'+bar(tt?r.m:0,' q')+
+      '<td class="n '+cl(d)+'" title="Positivo: la prensa le dedica más atención que la ciudadanía">'+sg(d)+'</td><td class="n '+(e==null?'neu':cl(e))+'" title="Positivo: los partidos le dedican más atención que la ciudadanía">'+(e==null?'—':sg(e))+'</td></tr>'});
   $('gap').innerHTML=h+'</tbody>';
-  $('gap-sub').textContent='CIS '+b.mes+' · prensa: '+tot.toLocaleString('es-ES')+' titulares clasificados, últimos 30 días';
-  $('gap-nt').textContent='CIS: parte de las menciones a cada problema (total de hasta tres respuestas) entre los nueve temas que tienen equivalente en la prensa. Prensa: parte de los titulares clasificados por Atalaya en cada tema entre esos mismos nueve (se dejan fuera «elecciones y partidos», gestión municipal, infraestructuras y sucesos). Una diferencia positiva significa que la prensa dedica a ese tema más atención de la que le da la ciudadanía. El tema de cada titular lo asigna un modelo a partir del titular y es orientativo; la prensa incluye mucha local.';
+  var low=tt<20;
+  $('gap-nt').textContent='CIS '+b.mes+': parte de las menciones a cada problema (total de hasta tres respuestas) entre los nueve temas que tienen equivalente en la prensa y en los mensajes. '
+    +'Prensa: parte de los '+tot.toLocaleString('es-ES')+' titulares clasificados por Atalaya en los últimos 30 días en esos mismos nueve temas (se dejan fuera «elecciones y partidos», gestión municipal, infraestructuras y sucesos); el tema lo asigna un modelo a partir del titular y la prensa incluye mucha local. '
+    +'Partidos: parte de las '+tt+' menciones temáticas en los mensajes de Telegram de '+(sel||'los canales de todos los partidos')+' (últimos 30 días), por palabras clave; solo un 10 % de los mensajes toca alguno de estos temas, así que la muestra es muy pequeña'+(low?' y esta cifra no es fiable':'')+'. '
+    +'Una diferencia positiva significa que se le dedica más atención de la que le da la ciudadanía; no dice si se habla a favor o en contra.';
 }
 })();
 </script>

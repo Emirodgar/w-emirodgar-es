@@ -14,7 +14,7 @@ Salida viva:
 Cortesía: una petición cada 2 s, identificada, pocas páginas por canal y parada ante cualquier 429/403.
 Uso (raíz del repo): python3 scripts/atalaya/build_mensajeria.py [--paginas N] [--canal handle]
 """
-import argparse, html, json, re, statistics, sys, time, urllib.error, urllib.request
+import argparse, html, json, re, statistics, sys, time, unicodedata, urllib.error, urllib.request
 from collections import Counter
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -31,6 +31,24 @@ CARP = D / "archivo" / "mensajeria"
 UA = "Mozilla/5.0 (compatible; EmirodgarBot/1.0; +https://emirodgar.es/atalaya)"
 PAUSA = 2.0
 VENTANA_DIAS = 30
+
+
+# Temas del mensaje por palabras clave (sin acentos), con los mismos nombres que el clasificador de prensa de Atalaya y los problemas del CIS.
+# Un mensaje puede tocar varios temas. Es una clasificación transparente y burda: no distingue si se habla a favor o en contra.
+TEMAS = {"vivienda": r"vivienda|alquiler|hipoteca|desahuci|inquilin|casero|okupa|ocupacion ilegal",
+         "empleo": r"empleo|desempleo|\bparo\b|salario|sueldo|laboral|trabajador|jornada de|\bsmi\b|autonomos",
+         "inmigración": r"inmigra|migrante|migratori|frontera|extranjer|regulariza|asilo|menores no acompanados",
+         "sanidad": r"sanidad|sanitari|hospital|medico|listas de espera|salud publica|atencion primaria",
+         "educación": r"educacion|escuela|colegio|universidad|profesor|docente|estudiante|becas",
+         "medio ambiente": r"clima|ambiental|renovable|sequia|incendio forestal|contaminacion",
+         "corrupción y justicia": r"corrupci|fraude|\bjuez|justicia|imputad|fiscal(?:ia)?\b|\buco\b|trama|malversaci|mordida",
+         "economía": r"econom|impuesto|pension|inflacion|precios|deuda|presupuesto|banca|\bpib\b",
+         "seguridad": r"seguridad|delincuen|policia|guardia civil|crimen|terroris"}
+
+
+def temas_de(texto):
+    t = unicodedata.normalize("NFKD", texto).encode("ascii", "ignore").decode().lower()
+    return [k for k, rx in TEMAS.items() if re.search(rx, t)]
 
 
 def pedir(handle, antes=None):
@@ -111,6 +129,7 @@ def archivados():
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--paginas", type=int, default=None); ap.add_argument("--canal")
+    ap.add_argument("--sin-red", action="store_true", help="no consulta Telegram: recalcula mensajeria.json solo con lo archivado")
     a = ap.parse_args()
     cat = json.loads(CATALOGO.read_text(encoding="utf8"))
     canales = [c for c in cat["canales"] if c["plataforma"] == "telegram" and c.get("lectura") == "automatica" and (not a.canal or c["handle"] == a.canal)]
@@ -119,7 +138,7 @@ def main():
     hist_prev = {c["handle"]: c.get("historial_seguidores", []) for c in previo["canales"]}
     ahora = datetime.now(timezone.utc); hoy = ahora.strftime("%Y-%m-%d")
     nuevos_total = []; info = {}
-    for c in canales:
+    for c in ([] if a.sin_red else canales):
         h = c["handle"]
         primera = not any(k.lower().startswith(h.lower() + "/") for k in vistos)   # Telegram devuelve el id con su mayúscula canónica
         titulo, subs, nuevos = leer_canal(h, a.paginas or (8 if primera else 3), vistos)
@@ -152,6 +171,7 @@ def main():
                        "ventana": {"dias": dias, "mensajes": len(rec), "por_dia": round(len(rec) / dias, 1), "vistas_total": sum(vs),
                                    "vistas_mediana": int(statistics.median(vs)) if vs else None,
                                    "vistas_por_seguidor": round(statistics.median(vs) / (subs or c.get("seguidores") or 1), 2) if vs else None,
+                                   "temas": dict(Counter(t for m in rec for t in temas_de(m["t"])).most_common()), "con_tema": sum(1 for m in rec if temas_de(m["t"])),
                                    "formatos": dict(fm.most_common()), "reenviados": sum(1 for m in rec if m["fw"]),
                                    "serie": [{"f": d, "n": pd[d]} for d in sorted(pd)]},
                        "ultimos": [{"f": m["f"], "t": m["t"][:220], "u": "https://t.me/" + m["i"], "v": m["v"], "fmt": m["fmt"]} for m in ms[-5:][::-1]]})

@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-20",
+  "actualizado": "2026-11-27",
   "aviso": "Repositorio de debates y entrevistas. Nunca se borra nada: lo obsoleto se marca (estado). Cada dato lleva fuente enlazada; los veredictos de verificación son de cada verificador, no de Atalaya, y las valoraciones se atribuyen a su origen.",
   "esquema": {
     "tipos": [
@@ -22,6 +22,289 @@
     ]
   },
   "debates": [
+    {
+      "id": "2026-11-26-debate-a-cuatro",
+      "estado": "vigente",
+      "tipo": "debate",
+      "titulo": "Debate a cuatro Sánchez · Feijóo · Abascal · Colau (29-N)",
+      "fecha": "2026-11-26",
+      "hora": "22:00",
+      "contexto": "Último debate televisado de la campaña de las elecciones generales del 29 de noviembre de 2026; primera vez desde noviembre de 2019 que coinciden los cuatro candidatos.",
+      "organiza": "Academia de la Televisión",
+      "moderacion": "María Casado",
+      "lugar": "Plató A de Madrid Content City (Tres Cantos)",
+      "emision": "22 cadenas, entre ellas La 1, Antena 3, Cuatro, Telecinco y laSexta",
+      "participantes": [
+        {
+          "id": "sanchez",
+          "nombre": "Pedro Sánchez",
+          "partido": "PSOE",
+          "color": "#e5484d"
+        },
+        {
+          "id": "feijoo",
+          "nombre": "Alberto Núñez Feijóo",
+          "partido": "PP",
+          "color": "#2f7fd8"
+        },
+        {
+          "id": "abascal",
+          "nombre": "Santiago Abascal",
+          "partido": "Vox",
+          "color": "#63be21"
+        },
+        {
+          "id": "colau",
+          "nombre": "Ada Colau",
+          "partido": "Frente Amplio",
+          "color": "#a855f7"
+        }
+      ],
+      "formato": {
+        "bloques": 5,
+        "minutos_por_bloque": 20,
+        "inicio": "Intervención inicial de unos 90 segundos por candidato; atriles y sin dispositivos electrónicos (según Telecinco y Diario de Pontevedra).",
+        "orden": "Por sorteo: abre Colau y cierra Feijóo con el minuto de oro. Atriles, de izquierda a derecha: Abascal, Sánchez, Feijóo y Colau.",
+        "excluidos": "Participaron los cuatro candidatos invitados."
+      },
+      "audiencia": {
+        "espectadores": 10200000,
+        "cuota": 70.5,
+        "nota": "Media según Barlovento Comunicación; 16,2 millones de espectadores únicos. La 1 fue la más vista (3,35 millones, 23,1 %).",
+        "fuente": "https://www.infobae.com/espana/2026/11/27/la-resaca-del-debate-a-cuatro-y-el-final-de-la-campana-en-directo-ultima-hora-de-las-elecciones-generales-en-espana-29-n/"
+      },
+      "bloques": [
+        {
+          "tema": "Apertura (90 segundos)",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Planteó el choque entre el modelo de izquierdas y el de derechas."
+            },
+            {
+              "p": "feijoo",
+              "t": "Reprochó a Sánchez las preguntas sin contestar del cara a cara."
+            },
+            {
+              "p": "abascal",
+              "t": "No condenó el último crimen machista a petición de Colau; dijo que no admitía «órdenes» y que el principal machismo es el que «la izquierda ha importado». Hizo un balance muy duro del Gobierno."
+            },
+            {
+              "p": "colau",
+              "t": "Abrió condenando el último crimen machista y pidió a los otros tres que lo condenaran; Sánchez y Feijóo lo hicieron."
+            }
+          ]
+        },
+        {
+          "tema": "Vivienda",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Defendió las medidas del Gobierno y pidió ir más allá. Criticó el ático de la presidenta de Madrid, pagado con unos 7 millones de dinero público."
+            },
+            {
+              "p": "feijoo",
+              "t": "Reiteró el millón de viviendas y anunció una vicepresidencia de vivienda."
+            },
+            {
+              "p": "abascal",
+              "t": "Atribuyó la escasez de vivienda a la inmigración."
+            },
+            {
+              "p": "colau",
+              "t": "Pidió más medidas y preguntó a Feijóo cómo cumpliría su promesa del millón de viviendas."
+            }
+          ]
+        },
+        {
+          "tema": "Economía y fiscalidad",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Reprochó a Abascal su propuesta de recortar 112.000 millones de gasto público y le atacó por el Ingreso Mínimo Vital y el bono social térmico. A Feijóo le dijo que sus «matemáticas» son como su inglés."
+            },
+            {
+              "p": "feijoo",
+              "t": "Habló de presión fiscal e inflación, propuso ayudas «vitalicias» para familias numerosas y le replicó que presume de economía pero no presentó Presupuestos en casi cuatro años."
+            },
+            {
+              "p": "abascal",
+              "t": "Habló de inflación y presión fiscal; dijo que el Ingreso Mínimo Vital «debe ser sólo para los españoles». Negó cobrar el bono social térmico («bulo»)."
+            },
+            {
+              "p": "colau",
+              "t": "Preguntó a Feijóo de dónde sacaría el dinero si no sube los impuestos a los ricos y acusó a Abascal de votar contra ampliar derechos de las familias numerosas."
+            }
+          ]
+        },
+        {
+          "tema": "Política social y servicios públicos",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Defendió las pensiones públicas y acusó a Abascal de proponer un sistema mixto, es decir, privatizar."
+            },
+            {
+              "p": "feijoo",
+              "t": "Citó los accidentes ferroviarios de Adamuz y Urda («170 fallos» de seguridad en Madrid-Sevilla en dos años) y los fallos de las pulseras antimaltrato; dijo «115 muertos en un año y ni palabra»."
+            },
+            {
+              "p": "abascal",
+              "t": "Dijo que Sánchez «ha destruido todo lo que funcionaba»; citó el apagón eléctrico y los resultados de PISA."
+            },
+            {
+              "p": "colau",
+              "t": "Criticó la gestión de la derecha en las comunidades que gobierna."
+            }
+          ]
+        },
+        {
+          "tema": "Corrupción y calidad democrática",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Dijo que España «ha mejorado en los rankings internacionales», retó a PP y Vox a mostrar la misma «tolerancia cero» y recordó el ático de Ayuso."
+            },
+            {
+              "p": "feijoo",
+              "t": "Defendió su gestión en la Xunta, anunció una auditoría «de arriba abajo» del gasto de Sánchez y le pidió explicar la financiación de sus primarias."
+            },
+            {
+              "p": "abascal",
+              "t": "Afirmó que «la corrupción de Sánchez ha matado españoles»."
+            },
+            {
+              "p": "colau",
+              "t": "Insistió en casos de corrupción del PP y preguntó a Feijóo si iba a «dar lecciones»."
+            }
+          ]
+        },
+        {
+          "tema": "Migración y política exterior",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "Dijo que parte de la prosperidad depende de los inmigrantes («basta ya de bulos»). Pidió a Feijóo que dijera «genocidio» sobre Gaza; Feijóo habló de «masacre»."
+            },
+            {
+              "p": "feijoo",
+              "t": "Dijo «no voy a olvidar lo que ha pasado en Ceuta», pidió «inmigración legal y ordenada» y preguntó a los demás si apoyaban la final del Mundial 2030 en España."
+            },
+            {
+              "p": "abascal",
+              "t": "Habló de «invasión» en Ceuta alentada por Rabat, llamó a Sánchez «candidato marroquí» y reclamó «prioridad nacional» en las ayudas."
+            },
+            {
+              "p": "colau",
+              "t": "Rechazó hablar de «invasión», pidió tratar la inmigración como emergencia humanitaria y acusó a Feijóo y Abascal de bulos."
+            }
+          ]
+        },
+        {
+          "tema": "Minuto de oro",
+          "resumen": [
+            {
+              "p": "sanchez",
+              "t": "«Durante unas horas, el próximo domingo, tú vas a tener mucho más poder que Abascal y Feijóo juntos». Cerró con «ni un paso atrás»."
+            },
+            {
+              "p": "feijoo",
+              "t": "«El domingo voten con memoria y voten esperanza, porque el cambio es necesario para todos»."
+            },
+            {
+              "p": "abascal",
+              "t": "Pidió el voto «para que España reconquiste su futuro», centrado en fronteras y prioridad nacional."
+            },
+            {
+              "p": "colau",
+              "t": "«Me comprometo a escuchar a esa ciudadanía que está en las calles diciendo basta»; pidió viviendas «para vivir, no para especular»."
+            }
+          ]
+        }
+      ],
+      "afirmaciones": [],
+      "verificacion_meta": {
+        "texto": "Las crónicas leídas no recogen todavía veredictos de Newtral, Maldita, EFE Verifica, Verificat ni RTVE Verifica sobre este debate. Una cifra contrastada por Infobae por su cuenta (no es un verificador): Feijóo dijo que la oferta de alquiler ha bajado por la okupación y la normativa; Infobae cita un estudio del Ministerio de Consumo según el que el parque de alquiler de particulares creció un 25,6 % entre 2018 y 2024, y 14.875 denuncias por okupación en 2025 (−9,4 %), y concluye que los datos disponibles contradicen esa versión. No indica si lo dijo en el debate.",
+        "fuente": "https://www.infobae.com/espana/2026/11/27/la-resaca-del-debate-a-cuatro-y-el-final-de-la-campana-en-directo-ultima-hora-de-las-elecciones-generales-en-espana-29-n/",
+        "sesgo": "Sin veredictos propios: las afirmaciones sin contrastar (170 fallos ferroviarios, 115 muertos, ático de 7 millones, IMV) se recogen en los bloques como lo dicho por cada candidato, no como hechos. Se añadirán cuando los verificadores publiquen."
+      },
+      "valoracion": {
+        "sondeos": [],
+        "reacciones": [
+          {
+            "quien": "Equipo de Sánchez",
+            "t": "Dijo que el bloque progresista ganó «por goleada» (Infobae)."
+          },
+          {
+            "quien": "Borja Sémper (PP)",
+            "t": "Dijo que Feijóo ya es visto como próximo presidente (Infobae)."
+          },
+          {
+            "quien": "Diario de Pontevedra",
+            "t": "Sánchez «recuperó iniciativa y firmeza»; Colau fue «la revelación de la noche»; Feijóo estuvo «muy incisivo»; Abascal intervino menos."
+          },
+          {
+            "quien": "Antonio San José (COPE)",
+            "t": "Vio a Sánchez mejor que en el primer debate, pero sin propuestas claras."
+          },
+          {
+            "quien": "Julián Quirós (COPE)",
+            "t": "«Es un debate que deja todo igual»."
+          },
+          {
+            "quien": "Diego Garrocho (COPE)",
+            "t": "Vio a Feijóo «menos fresco» que en el cara a cara."
+          }
+        ],
+        "tensiones": [
+          "Abascal no quiso condenar la violencia machista a petición de Colau.",
+          "Feijóo dijo a Colau «y usted, calladita» tras criticar a Sánchez por la DANA; Sánchez respondió «¿qué machismo es esto?». Al día siguiente Feijóo dijo en COPE que no era una orden.",
+          "Abascal llamó a Sánchez «gran buitre» y «sinvergüenza»; Sánchez le contestó «a otro perro con ese hueso».",
+          "Choque entre «genocidio» (Sánchez) y «masacre» (Feijóo) sobre Gaza.",
+          "Feijóo se comprometió a dimitir y dejar el acta y el aforamiento si no preside el Gobierno, y retó a Sánchez a hacer lo mismo.",
+          "Sánchez y Colau se trataron de tú y compartieron argumentos; Feijóo y Abascal evitaron debatir entre sí (EFE)."
+        ]
+      },
+      "efecto_electoral": {
+        "estado": "pendiente",
+        "nota": "Hay prohibición de publicar encuestas en los días previos al 29-N: no habrá medición del efecto antes de la votación. Referencia previa (promedio de Roberto Benito, El Mundo, vía COPE): PP 32 %, PSOE 28,5 %, Vox 18,1 %, Frente Amplio cerca del 7 %."
+      },
+      "lectura": "Las crónicas coinciden en que el debate escenificó los dos bloques (PSOE y Frente Amplio frente a PP y Vox) y en que hubo más interrupciones y tono más duro que en el cara a cara Sánchez · Feijóo. No hay sondeos posteriores ni verificaciones publicadas en las fuentes leídas, y las valoraciones de ganador son de analistas concretos. Atalaya no declara ganador.",
+      "fuentes": [
+        {
+          "titulo": "Telecinco: previa y formato",
+          "url": "https://www.telecinco.es/noticias/espana/20261126/debate-cuatro-candidatos-presidencia-gobierno-elecciones-generales-2026-29n_18_020818440.html",
+          "tipo": "formato"
+        },
+        {
+          "titulo": "Infobae: la resaca del debate (directo)",
+          "url": "https://www.infobae.com/espana/2026/11/27/la-resaca-del-debate-a-cuatro-y-el-final-de-la-campana-en-directo-ultima-hora-de-las-elecciones-generales-en-espana-29-n/",
+          "tipo": "cronica"
+        },
+        {
+          "titulo": "Infobae/EFE: el debate escenifica los dos bloques",
+          "url": "https://www.infobae.com/espana/agencias/2026/11/27/el-debate-a-cuatro-escenifica-los-dos-bloques-enfrentados-el-29n/",
+          "tipo": "cronica"
+        },
+        {
+          "titulo": "Diario de Pontevedra: directo del debate",
+          "url": "https://www.diariodepontevedra.es/elecciones-generales-29n/debate-cuatro-elecciones-generales-29n-directo-sanchez-feijoo-abascal-colau-confrontan-propuestas/202611261644471478810.html",
+          "tipo": "cronica"
+        },
+        {
+          "titulo": "COPE La Linterna: así te contamos el debate",
+          "url": "https://www.cope.es/programas/la-linterna/al-minuto/contamos-debate-cuatro-sanchez-feijoo-abascal-colau-elecciones-generales-29n-20261126_3483264.html",
+          "tipo": "cronica"
+        }
+      ],
+      "pendiente": [
+        "Sondeos de quién ganó (Telecinco, Diario de Pontevedra «Vota y opina») y verificaciones de Newtral, Maldita, EFE Verifica, Verificat y RTVE Verifica.",
+        "Transcripción oficial para contar tiempos de intervención.",
+        "Discrepancia de fuentes: la frase «soy del Atlético…» sobre el Mundial se atribuye a Feijóo (Diario de Pontevedra) y a Sánchez (RTVE, COPE); no se incluye.",
+        "Efecto en encuestas tras el 29-N."
+      ],
+      "promesas_ref": {}
+    },
     {
       "id": "2026-11-19-sanchez-feijoo",
       "estado": "vigente",

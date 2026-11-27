@@ -140,17 +140,17 @@ function detalle(d){
 
   h+='<h3>Verificación de datos</h3><p class="note">'+esc(d.verificacion_meta.texto)+' '+lnk(d.verificacion_meta.fuente,'Fuente')+'<br><b>Ojo:</b> '+esc(d.verificacion_meta.sesgo)+'</p>';
   if(d.verificacion_meta.recuentos)h+='<article class="card pad"><div class="k">Qué comprobó cada verificador</div><table class="tbl" style="margin-top:8px"><tr><th>Verificador</th><th>Afirmaciones</th><th>Desglose</th></tr>'+d.verificacion_meta.recuentos.map(function(r){return '<tr><td>'+lnk(r.url,r.verificador)+'<div class="mut">'+esc(r.tipo)+'</div></td><td>'+r.total+'</td><td>'+esc(r.desglose)+'<div class="mut">'+esc(r.nota)+'</div></td></tr>'}).join('')+'</table></article>';
-  h+='<article class="card">';
+  if(d.afirmaciones.length)h+='<article class="card">';
   d.afirmaciones.forEach(function(a){
     var p=P[a.p];
     h+='<div class="af"><div class="who" style="color:'+esc(p.color)+'">'+esc(p.nombre)+' · '+esc(a.tema)+'</div><div style="margin:3px 0"><b>'+esc(a.afirmacion)+'</b></div><div class="mut">'+esc(a.contraste)+'</div><div style="margin-top:6px">'+
       a.veredictos.map(function(v){return '<span class="v v-'+esc(v.veredicto)+'" title="'+esc(v.verificador)+'">'+esc(v.verificador)+': '+esc(v.etiqueta)+'</span>'}).join('')+'</div>'+(a.nota?'<div class="mut" style="margin-top:4px">'+esc(a.nota)+'</div>':'')+prom(d,a.promesas)+'</div>';
   });
-  h+='</article>';
+  if(d.afirmaciones.length)h+='</article>';
 
   var v=d.valoracion;
   h+='<h3>Cómo se valoró</h3>';
-  v.sondeos.forEach(function(s){
+  (v.sondeos||[]).forEach(function(s){
     h+='<article class="card pad"><div class="k">Sondeo · '+esc(s.origen)+'</div><div class="mut" style="margin:4px 0 10px">'+esc(s.ficha)+' '+lnk(s.url,'Fuente')+(s.calidad==='sin_ficha'?' <b>(sin ficha técnica completa)</b>':'')+'</div>'+
       '<div class="leg"><span><i style="background:'+A.color+'"></i>'+esc(A.nombre)+'</span><span><i style="background:'+B.color+'"></i>'+esc(B.nombre)+'</span></div>'+
       '<div class="row"><b>¿Quién ganó?</b>'+bar(s.ganador[A.id],s.ganador[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'+
@@ -158,8 +158,9 @@ function detalle(d){
       (s.atributos?'<h3 style="margin-top:12px">Atributos</h3>'+s.atributos.map(function(b){return '<div class="row"><span>'+esc(b.atributo)+'</span>'+bar(b[A.id],b[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join(''):'')+'</article>';
   });
   var vl=v.votaciones_lectores;
-  h+='<article class="card pad"><div class="k">Votaciones de lectores</div><div class="mut" style="margin:4px 0 10px">'+esc(vl.aviso)+' '+lnk(vl.url,'Fuente')+'</div>'+
+  if(vl)h+='<article class="card pad"><div class="k">Votaciones de lectores</div><div class="mut" style="margin:4px 0 10px">'+esc(vl.aviso)+' '+lnk(vl.url,'Fuente')+'</div>'+
     vl.resultados.map(function(r){return '<div class="row"><span>'+esc(r.origen)+'</span>'+bar(r[A.id],r[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join('')+'</article>';
+  if(v.tensiones)h+='<article class="card pad"><div class="k">Momentos de tensión</div><ul class="l" style="margin-top:8px">'+v.tensiones.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul></article>';
   h+='<article class="card pad"><div class="k">Reacciones</div><ul class="l" style="margin-top:8px">'+v.reacciones.map(function(r){return '<li><b>'+esc(r.quien)+'</b>: '+esc(r.t)+'</li>'}).join('')+'</ul></article>';
 
   h+='<h3>Efecto electoral</h3><article class="card pad"><span class="v v-sin_veredicto">'+esc(d.efecto_electoral.estado)+'</span> '+esc(d.efecto_electoral.nota)+'</article>';
