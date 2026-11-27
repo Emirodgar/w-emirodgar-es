@@ -159,9 +159,11 @@ function detalle(d){
   var v=d.valoracion;
   h+='<h3>Cómo se valoró</h3>';
   (v.sondeos||[]).forEach(function(s){
+    var multi=d.participantes.length>2;
     h+='<article class="card pad"><div class="k">Sondeo · '+esc(s.origen)+'</div><div class="mut" style="margin:4px 0 10px">'+esc(s.ficha)+' '+lnk(s.url,'Fuente')+(s.calidad==='sin_ficha'?' <b>(sin ficha técnica completa)</b>':'')+'</div>'+
-      '<div class="leg"><span><i style="background:'+A.color+'"></i>'+esc(A.nombre)+'</span><span><i style="background:'+B.color+'"></i>'+esc(B.nombre)+'</span></div>'+
-      '<div class="row"><b>¿Quién ganó?</b>'+bar(s.ganador[A.id],s.ganador[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'+
+      (s.ganador?'<div class="leg">'+(multi?d.participantes:[A,B]).map(function(q){return '<span><i style="background:'+q.color+'"></i>'+esc(q.nombre)+'</span>'}).join('')+'</div>'+
+      '<div class="row"><b>¿Quién ganó?</b>'+(multi?bar4(d.participantes,s.ganador):bar(s.ganador[A.id],s.ganador[B.id],A.nombre,B.nombre,A.color,B.color))+'</div>':'')+
+      (s.extra?'<ul class="l" style="margin-top:8px">'+s.extra.map(function(t){return '<li>'+esc(t)+'</li>'}).join('')+'</ul>':'')+
       (s.por_bloque?'<h3 style="margin-top:12px">Por bloque</h3>'+s.por_bloque.map(function(b){return '<div class="row"><span>'+esc(b.tema)+'</span>'+bar(b[A.id],b[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join(''):'')+
       (s.atributos?'<h3 style="margin-top:12px">Atributos</h3>'+s.atributos.map(function(b){return '<div class="row"><span>'+esc(b.atributo)+'</span>'+bar(b[A.id],b[B.id],A.nombre,B.nombre,A.color,B.color)+'</div>'}).join(''):'')+'</article>';
   });

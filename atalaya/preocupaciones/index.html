@@ -54,6 +54,7 @@ td.w{white-space:normal;min-width:240px}
 .tag{display:inline-block;font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;border-radius:3px;padding:1px 5px;border:1px solid var(--line);color:var(--mut)}
 .tag.h{color:#fbbf24;border-color:#fbbf2466}.tag.a{color:#22d3ee;border-color:#22d3ee66}
 .empty{padding:18px 14px;color:var(--mut)}
+.card[hidden]{display:none}
 .legb{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--mut);margin-top:8px}
 .legb i{display:inline-block;width:10px;height:10px;margin-right:4px;vertical-align:middle;border-radius:2px}
 @media (max-width:900px){.grid2{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,1fr)}.cv{height:320px}}
@@ -100,6 +101,12 @@ td.w{white-space:normal;min-width:240px}
       <section class="card"><h2><span>Cómo leerlo</span></h2><div class="body"><p class="note" style="margin:0" id="aviso"></p></div></section>
     </div>
   </div>
+
+  <section class="card" id="prm-card" hidden>
+    <h2><span>Promesas de los programas frente a lo que preocupa</span><span><select class="sel" id="pa" aria-label="Programa"></select> <select class="sel" id="pp" aria-label="Partido"></select></span></h2>
+    <div class="tw"><table id="prm"></table></div>
+    <div class="body" style="border-top:1px solid var(--line)"><p class="note" style="margin:0" id="prm-nt"></p></div>
+  </section>
 </main>
 
 <script>
@@ -137,20 +144,21 @@ var SEL={};DEF.forEach(function(k){SEL[k]=true});
 function tema(lbl){for(var i=0;i<TEMAS.length;i++)if(TEMAS[i].re.test(lbl))return TEMAS[i].k;return null}
 var GOBCOL={PSOE:'rgba(225,29,72,.10)',PP:'rgba(37,99,235,.12)'};
 
-var D=null,H=null,S=[],chart=null,sel=null,tipEl=$('tip');
+var D=null,H=null,PR=null,S=[],chart=null,sel=null,tipEl=$('tip');
 
 Promise.all([
   fetch('../data/preocupaciones.json',{cache:'no-cache'}).then(function(r){return r.json()}),
-  fetch('../data/hitos.json',{cache:'no-cache'}).then(function(r){return r.json()})
+  fetch('../data/hitos.json',{cache:'no-cache'}).then(function(r){return r.json()}),
+  fetch('../data/promesas_por_tema.json',{cache:'no-cache'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})
 ]).then(function(r){
-  D=r[0];H=r[1];
+  D=r[0];H=r[1];PR=r[2];
   S=D.barometros.map(function(b){var p=b.fecha.split('-'),y=+p[0],m=+p[1];return {b:b,y:y,m:m,x:y+(m-1)/12,bx:y+(m-1+.15)/12,lab:MES[m-1]+' '+String(y).slice(2)}});
   ['nacional','personal'].forEach(function(a){S.forEach(function(s){['total','primero'].forEach(function(me){s[a+'_'+me]=agrega(s.b[a+'_'+me])})})});
   H.items=H.hitos.map(function(h){return mk(h,'hito')}).concat(H.acciones.map(function(h){return mk(h,'accion')})).filter(function(h){return h.x>=S[0].x}).sort(function(a,b){return a.x-b.x});
   $('aviso').textContent=D.aviso+' '+H.aviso+' Los temas agrupan categorías del CIS (los temas con varias formulaciones suman sus menciones; «Política y partidos» toma la más citada, porque el CIS la desglosó en siete categorías a partir de 2020 y sumarlas inflaría la serie). Faltan algunos meses cuyo PDF no se puede leer (septiembre de 2013, abril de 2020 y 2021, mayo de 2023 y 2024, julio y diciembre de 2024).';
   ['med','amb','t-gob','t-hit','t-acc'].forEach(function(i){$(i).addEventListener('change',function(){grafico();kpis()})});
   $('ft').addEventListener('change',impacto);
-  chips();kpis();grafico();impacto();nacper();
+  chips();kpis();grafico();impacto();nacper();promesas();
 }).catch(function(e){$('kpis').innerHTML='<p class="empty">No se pudieron leer los datos de preocupaciones.</p>';if(window.console)console.error(e)});
 
 function mk(h,t){var p=h.fecha.split('-'),y=+p[0],m=+p[1],d=+p[2];return {t:t,fecha:h.fecha,titulo:h.titulo,tipo:h.tipo||'',gob:h.gobierno||'',temas:h.temas||[],x:y+(m-1+(d-1)/30)/12,y:y,m:m,d:d}}
@@ -243,6 +251,31 @@ function selecciona(h){
   if(sel){sel.temas.forEach(function(k){if(BY[k])SEL[k]=true});syncChips();
     if(sel.t==='hito'&&!$('t-hit').checked)$('t-hit').checked=true;if(sel.t==='accion'&&!$('t-acc').checked)$('t-acc').checked=true}
   grafico();impacto();
+}
+
+// Promesas de los programas (recuentos de promesas.json) frente a la preocupación del último barómetro
+var PNOM={PSOE:'PSOE',PP:'PP',FA:'Frente Amplio',SUMAR:'Sumar',VOX:'Vox'};
+function promesas(){
+  if(!PR||!PR.programas)return;
+  var anios=[];Object.keys(PR.programas).forEach(function(k){var a=k.split('-')[1];if(anios.indexOf(a)<0)anios.push(a)});anios.sort().reverse();
+  $('prm-card').hidden=false;
+  $('pa').innerHTML=anios.map(function(a){return '<option value="'+a+'">Programas de '+a+'</option>'}).join('');
+  var fill=function(){var a=$('pa').value,ps=Object.keys(PR.programas).filter(function(k){return k.split('-')[1]===a}).map(function(k){return k.split('-')[0]});
+    $('pp').innerHTML='<option value="">Todos los partidos</option>'+ps.map(function(p){return '<option value="'+p+'">'+esc(PNOM[p]||p)+'</option>'}).join('')};
+  fill();$('pa').addEventListener('change',function(){fill();prm()});$('pp').addEventListener('change',prm);prm();
+}
+function prm(){
+  var a=$('pa').value,pp=$('pp').value,L=last(),cis=L.nacional_total,agg={},cob=[];
+  Object.keys(PR.programas).forEach(function(k){var p=k.split('-');if(p[1]!==a||(pp&&p[0]!==pp))return;cob.push((PNOM[p[0]]||p[0])+' '+(PR.total_por_programa[k]||0));
+    Object.keys(PR.programas[k]).forEach(function(tk){var o=PR.programas[k][tk],g=agg[tk]||(agg[tk]={n:0,m:0});g.n+=o.n;g.m+=o.medibles})});
+  var ks=Object.keys(agg).filter(function(k){return BY[k]&&cis[k]!=null}),sc=ks.reduce(function(s,k){return s+cis[k]},0),sp=ks.reduce(function(s,k){return s+agg[k].n},0);
+  var rows=ks.map(function(k){return {k:k,c:cis[k],cs:cis[k]*100/sc,n:agg[k].n,ps:sp?agg[k].n*100/sp:0,m:agg[k].n?agg[k].m*100/agg[k].n:null}}).sort(function(x,y){return y.c-x.c});
+  var mx=Math.max.apply(null,rows.map(function(r){return Math.max(r.cs,r.ps)}).concat([1]));
+  var h='<thead><tr><th>Tema</th><th class="n">Preocupa (%)</th><th class="n">Peso</th><th></th><th class="n">Promesas</th><th class="n">Peso</th><th></th><th class="n">Medibles</th><th class="n">Promesas − preocupación</th></tr></thead><tbody>';
+  rows.forEach(function(r){var d=r.ps-r.cs,cl=Math.abs(d)<3?'neu':d>0?'pos':'neg';
+    h+='<tr><td>'+esc(BY[r.k].n)+'</td><td class="n">'+f1(r.c)+'</td><td class="n">'+f1(r.cs)+'</td><td style="width:70px"><span class="bar" style="width:'+(r.cs*100/mx).toFixed(0)+'%"></span></td><td class="n">'+r.n+'</td><td class="n">'+f1(r.ps)+'</td><td style="width:70px"><span class="bar p" style="width:'+(r.ps*100/mx).toFixed(0)+'%"></span></td><td class="n">'+(r.m==null?'—':f1(r.m)+' %')+'</td><td class="n '+cl+'" title="Positivo: los programas le dedican más espacio del que le da la ciudadanía">'+sg(d)+'</td></tr>'});
+  $('prm').innerHTML=h+'</tbody>';
+  $('prm-nt').textContent='Preocupación: barómetro de '+L.lab+' (problema de España, total de menciones), repartida entre los '+rows.length+' temas que tienen promesas equivalentes. Promesas: las extraídas de los programas de '+a+' ('+cob.join(', ')+' promesas en total), repartidas entre esos mismos temas. «Empleo» cuenta en Paro y en Calidad del empleo, y «Modelo territorial» en Cataluña y territorio; quedan fuera las promesas de justicia, infraestructuras, política exterior, impuestos, defensa y derechos. «Medibles»: promesas con un objetivo cuantificable. Una diferencia positiva (verde) indica que los programas dedican más espacio al tema que el que le da la ciudadanía. No mide cumplimiento: todas las promesas están aún sin evidencia. Los programas de Vox solo recogen un puñado de promesas y su lectura es parcial.';
 }
 
 function nacper(){

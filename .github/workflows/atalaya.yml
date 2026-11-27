@@ -143,6 +143,7 @@ jobs:
           command -v pdftotext >/dev/null || sudo apt-get install -y -qq poppler-utils
           python3 scripts/atalaya/descargar_programas.py
           python3 scripts/atalaya/build_promesas.py
+          python3 scripts/atalaya/build_promesas_temas.py
 
       - name: Archivo histórico (solo añade; nunca borra)
         if: steps.hoy.outputs.ejecutar == 'true'

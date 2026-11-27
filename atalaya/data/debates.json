@@ -229,7 +229,35 @@
         "sesgo": "Sin veredictos propios: las afirmaciones sin contrastar (170 fallos ferroviarios, 115 muertos, ático de 7 millones, IMV) se recogen en los bloques como lo dicho por cada candidato, no como hechos. Se añadirán cuando los verificadores publiquen."
       },
       "valoracion": {
-        "sondeos": [],
+        "sondeos": [
+          {
+            "id": "sociometro-bilbaohiria",
+            "origen": "Sociómetro, publicado por BilbaoHiria",
+            "calidad": "sin_ficha",
+            "ficha": "Consulta online cerrada con 2.821 votos validados (26-27 nov). El medio declara muestreo estratificado sobre IP de España, mayores de 18, ponderado por edad y comunidad, margen ±5 % al 95 %; no nombra a la empresa y es una consulta de participación voluntaria, por lo que no es una encuesta probabilística. Resultado provisional de la noche: Sánchez 49, Feijóo 36, Abascal 11, Colau 4.",
+            "ganador": {
+              "sanchez": 44,
+              "feijoo": 31,
+              "abascal": 11,
+              "colau": 14
+            },
+            "extra": [
+              "Sánchez + Colau suman el 58 % y Feijóo + Abascal el 42 %, según el medio."
+            ],
+            "url": "https://bilbaohiria.com/actualidad/quien-ha-ganado-debate-a-cuatro-sanchez-feijoo-encuesta"
+          },
+          {
+            "id": "ncreport-elpespunte",
+            "origen": "NC Report (vía El Pespunte)",
+            "calidad": "sin_ficha",
+            "ficha": "600 entrevistados según El Pespunte, que no enlaza la fuente original ni da método ni fecha de campo. No consta el porcentaje por candidato: solo que ninguno reúne una tercera parte como vencedor.",
+            "extra": [
+              "El 83,2 % dice que el debate ha reafirmado su decisión de voto, el 6,2 % la ha cambiado, el 6,8 % sigue indeciso y el 3,8 % NS/otras.",
+              "El 23,3 % no se pronunció o quedó en otras categorías."
+            ],
+            "url": "https://www.elpespunte.es/otros/quien-gano-debate-electoral-anoche-encuestas-reacciones-enfrentamiento-entre-sanchez-feijoo-abascal-colau/20261127074417164958.html"
+          }
+        ],
         "reacciones": [
           {
             "quien": "Equipo de Sánchez",
@@ -275,6 +303,14 @@
               "sanchez": 11
             },
             {
+              "origen": "El Debate",
+              "feijoo": 64.0,
+              "abascal": 22.3,
+              "colau": 8.1,
+              "sanchez": 5.6,
+              "nota": "Recuentos: Feijóo 18.052, Abascal 6.280, Colau 2.290, Sánchez 1.578 (porcentajes calculados por Atalaya sobre 28.200; la página dice 27.839 votantes y no publica porcentajes)."
+            },
+            {
               "origen": "La Razón",
               "feijoo": 54,
               "abascal": 17,
@@ -318,14 +354,17 @@
               "sanchez": 48
             }
           ],
-          "url": "https://www.elplural.com/politica/espana/quien-gano-debate-cuatro-segun-encuestas-medios-comunicacion-hacemos-repaso_805498102"
+          "url": "https://www.elplural.com/politica/espana/quien-gano-debate-cuatro-segun-encuestas-medios-comunicacion-hacemos-repaso_805498102",
+          "fuentes_extra": [
+            "https://www.eldebate.com/espana/20261126/encuesta-quien-ganado-debate-cuatro-entre-sanchez-feijoo-abascal-colau-cns_484958.html"
+          ]
         }
       },
       "efecto_electoral": {
         "estado": "pendiente",
         "nota": "Hay prohibición de publicar encuestas en los días previos al 29-N: no habrá medición del efecto antes de la votación. Referencia previa (promedio de Roberto Benito, El Mundo, vía COPE): PP 32 %, PSOE 28,5 %, Vox 18,1 %, Frente Amplio cerca del 7 %."
       },
-      "lectura": "Las crónicas coinciden en que el debate escenificó los dos bloques (PSOE y Frente Amplio frente a PP y Vox) y en que hubo más interrupciones y tono más duro que en el cara a cara Sánchez · Feijóo. Las únicas mediciones sobre quién ganó son votaciones abiertas de lectores (Feijóo gana en cuatro, Sánchez en dos —HuffPost y El Plural— y Colau en una —elDiario.es—; Abascal en ninguna), sin valor representativo. No hay sondeos con muestra posteriores ni verificaciones publicadas en las fuentes leídas, y las valoraciones de ganador son de analistas concretos. Atalaya no declara ganador.",
+      "lectura": "Las mediciones sobre quién ganó discrepan según quién vote: las votaciones de lectores de medios de derecha dan ventaja a Feijóo, las de medios progresistas a Sánchez o Colau, y la consulta online de Sociómetro-BilbaoHiria da a Sánchez 44 % y a Feijóo 31 %. Ninguna es una encuesta representativa con ficha completa, y NC Report solo dice que nadie llega a un tercio. El 83 % afirma que el debate reafirma su voto. Atalaya no declara ganador: recoge mediciones y atribuye cada valoración a su origen.",
       "fuentes": [
         {
           "titulo": "Telecinco: previa y formato",
@@ -356,13 +395,29 @@
           "titulo": "El Plural: votaciones de medios tras el debate a cuatro",
           "url": "https://www.elplural.com/politica/espana/quien-gano-debate-cuatro-segun-encuestas-medios-comunicacion-hacemos-repaso_805498102",
           "tipo": "sondeo"
+        },
+        {
+          "titulo": "BilbaoHiria: Sociómetro, quién ganó el debate",
+          "url": "https://bilbaohiria.com/actualidad/quien-ha-ganado-debate-a-cuatro-sanchez-feijoo-encuesta",
+          "tipo": "sondeo"
+        },
+        {
+          "titulo": "El Pespunte: encuestas y reacciones (NC Report)",
+          "url": "https://www.elpespunte.es/otros/quien-gano-debate-electoral-anoche-encuestas-reacciones-enfrentamiento-entre-sanchez-feijoo-abascal-colau/20261127074417164958.html",
+          "tipo": "sondeo"
+        },
+        {
+          "titulo": "El Debate: votación de lectores",
+          "url": "https://www.eldebate.com/espana/20261126/encuesta-quien-ganado-debate-cuatro-entre-sanchez-feijoo-abascal-colau-cns_484958.html",
+          "tipo": "sondeo"
         }
       ],
       "pendiente": [
         "Transcripción oficial para contar tiempos de intervención.",
         "Discrepancia de fuentes: la frase «soy del Atlético…» sobre el Mundial se atribuye a Feijóo (Diario de Pontevedra) y a Sánchez (RTVE, COPE); no se incluye.",
         "Efecto en encuestas tras el 29-N.",
-        "Sondeos con muestra representativa sobre quién ganó (no hay ninguno publicado en las fuentes leídas; El Debate publicó una votación abierta, no leída: 404 al consultarla)."
+        "Sondeo con muestra representativa y ficha técnica completa sobre quién ganó (hasta ahora solo hay consultas online y un NC Report sin cifras por candidato). Hay veda de sondeos hasta el 29-N; volver a buscar después.",
+        "NC Report: localizar la fuente original con porcentajes por candidato."
       ],
       "promesas_ref": {},
       "interacciones": {
