@@ -252,6 +252,9 @@ def main():
         from ficha_provincia_extra import bloques as bloques_prov
         extra_h, extra_faqs, extra_fu = bloques_prov(dict(E=E, J=J, D=D, nes=nes), pc, nombre)
         dipsec += extra_h
+        from ficha_ccaa import ccaa_de
+        cc_ = ccaa_de(pc)
+        if cc_: dipsec += f"<p>Comunidad autónoma: <a href='/atalaya/fichas/{cc_[1]}'>{E(cc_[0])}</a>, con todas sus provincias.</p>"
         fesc = ("<a href='" + v["url"] + "'>Wikipedia</a> (que recoge datos oficiales de resultados)") if v else "pendiente"
         fuentes = (f"<h2>Fuentes y método</h2><ul><li>Escaños por provincia: {fesc}.</li>"
                    f"<li>Encuestas: sondeos publicados por empresas y medios, ponderados por antigüedad y tamaño de muestra, en <a href='/elecciones-espana/'>Elecciones en España</a>.</li>"
@@ -279,6 +282,13 @@ def main():
         cuerpo = f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p>{cab}{ev}{dipsec}{bloque_cambio(pc)}{limites}{faq_html}{fuentes}"
         pagina(ruta, f"¿Quién ganará las elecciones en {nombre}? Análisis y datos (29N 2026)", desc, q, cuerpo, ld, bc)
         urls.append(f"{BASE}/atalaya/fichas/{ruta}"); items.append((nombre, ruta, nivel, resp))
+
+    # comunidades autónomas (módulo aparte)
+    import ficha_ccaa
+    urls_cc, hub_cc = ficha_ccaa.generar(dict(E=E, BASE=BASE, FECHA=FECHA, fecha_es=fecha_es, nes=nes, pagina=pagina, J=J, D=D, VOL=VOL, ps=ps_, clima=clima,
+                                              nom=volatilidad.nom, titulares=titulares, nacional=nacional, RC=RC))
+    urls += urls_cc
+    print("Fichas de comunidades:", len(urls_cc))
 
     # España: ficha nacional «¿Quién ganaría hoy?» (módulo aparte)
     from ficha_nacional import construir
@@ -427,9 +437,10 @@ def main():
     urls += [f"{BASE}/atalaya/fichas/{r}" for r, _ in FICHAS_POLITICO + FICHAS_MACRO]
 
     # hub
+    filas_cc = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {k} diputados</span></li>" for n, r, k in hub_cc)
     filas = "".join(f"<li><a href='/atalaya/fichas/{r}'>¿Quién ganará en {E(n)}?</a> <span class='meta'>— {E(niv)}</span></li>" for n, r, niv, _ in items)
     cuerpo = (f"<p>Respuestas razonadas, con fuentes y fecha, sobre las elecciones generales del 29 de noviembre de 2026. Cada ficha usa solo datos públicos verificables (escaños desde 1977, encuestas y noticias) y explica qué incluye y qué no.</p>"
-              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/cambio/'>¿Qué provincias pueden cambiar de partido en las elecciones generales?</a></li><li><a href='/atalaya/fichas/cambio/ciudades/'>¿Qué ciudades pueden cambiar de partido más votado?</a></li><li><a href='/atalaya/fichas/rey/'>¿Quién es el rey de España y qué papel tiene en las elecciones?</a></li><li><a href='/atalaya/fichas/escrutinio/'>¿Cuándo se conocen los resultados y cómo funciona el escrutinio?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li><li><a href='/atalaya/fichas/en/spanish-politics-parties/' hreflang='en' lang='en'>How does Spain's political system work and who are the main parties? (English)</a></li></ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{extra_politico}{extra_macro}{hub_parl}")
+              f"<h2>España</h2><ul><li><a href='/atalaya/fichas/espana/'>¿Quién ganaría hoy las elecciones generales de 2026?</a></li><li><a href='/atalaya/fichas/presidente/'>¿Quién es el presidente de España y cómo se elige?</a></li><li><a href='/atalaya/fichas/calendario/'>¿Cuándo son las elecciones generales y cómo se vota?</a></li><li><a href='/atalaya/fichas/comparar/psoe-pp/'>¿Qué diferencias hay entre el PSOE y el PP?</a></li><li><a href='/atalaya/fichas/circunscripciones/'>¿Cuántas circunscripciones hay y cuántos escaños elige la mía?</a></li><li><a href='/atalaya/fichas/cambio/'>¿Qué provincias pueden cambiar de partido en las elecciones generales?</a></li><li><a href='/atalaya/fichas/cambio/ciudades/'>¿Qué ciudades pueden cambiar de partido más votado?</a></li><li><a href='/atalaya/fichas/rey/'>¿Quién es el rey de España y qué papel tiene en las elecciones?</a></li><li><a href='/atalaya/fichas/escrutinio/'>¿Cuándo se conocen los resultados y cómo funciona el escrutinio?</a></li><li><a href='/atalaya/fichas/en/prime-minister-of-spain/' hreflang='en' lang='en'>Who is the Prime Minister of Spain? (English)</a></li><li><a href='/atalaya/fichas/en/spanish-politics-parties/' hreflang='en' lang='en'>How does Spain's political system work and who are the main parties? (English)</a></li></ul><h2>Por comunidades autónomas</h2><ul>{filas_cc}</ul><h2>Por provincias</h2><ul>{filas}</ul>{extra}{extra_politico}{extra_macro}{hub_parl}")
     ld = [{"@context": "https://schema.org", "@type": "CollectionPage", "name": "Fichas electorales por provincia", "url": f"{BASE}/atalaya/fichas/", "inLanguage": "es"}]
     pagina("", "Fichas electorales por provincia: ¿quién ganará? | Atalaya", "Quién ganará las elecciones generales de 2026 en cada provincia de España, con datos de escaños, encuestas y noticias.", "Fichas electorales por provincia", cuerpo, ld, "<a href='/atalaya/'>Atalaya</a> › Fichas", shell=True)
     urls.insert(0, f"{BASE}/atalaya/fichas/")
