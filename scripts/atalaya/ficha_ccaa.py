@@ -57,6 +57,18 @@ def generar(c):
     pol = J(D / "politicos_prov.json")["prov"]
     orden_n = sorted(nacional.items(), key=lambda x: -x[1]); lider_n = orden_n[0][0]
     urls, hub = [], []
+    # voto CERA por comunidad: suma de las provincias, generales 2016 (INE, atalaya/data/cera.json)
+    CERA = {}
+    try:
+        cj = J(D / "cera.json"); cprov = cj["ine"]["provincias"]; cnac = cj["ine"]["nacional"].get("generales-2016", {})
+        for n_, (_, _, cd_) in CCAA.items():
+            vs = [cprov[x]["generales-2016"] for x in cd_.split() if cprov.get(x, {}).get("generales-2016")]
+            if vs and len(vs) == len(cd_.split()):
+                ce = sum(v["cera"] for v in vs); tot = sum(v["total"] for v in vs)
+                CERA[n_] = {"cera": ce, "pct": 100 * ce / tot, "part": sum(v["cera"] * v["part"] for v in vs) / ce}
+        CERA_ORDEN = sorted(CERA, key=lambda k: -CERA[k]["cera"])
+    except (OSError, KeyError, ValueError):
+        CERA, CERA_ORDEN, cnac = {}, [], {}
 
     for nombre, (sl, en_, cods) in CCAA.items():
         pcs = cods.split(); ruta = f"comunidad/{sl}/"
@@ -131,6 +143,18 @@ def generar(c):
                     f"La edad media es de {_c1(w(0))} años (España, {_c1(es_[0])}); un {_c1(w(2))} % tiene 65 años o más. La renta neta media por persona es de {nes(round(w(3)))} euros ({nes(round(es_[3]))} en España), "
                     f"según el Atlas de renta de los hogares del INE de {dem['anio']}. Medias de sus provincias ponderadas por población.</p>")
 
+        # voto CERA
+        cera_h = ""
+        if nombre in CERA:
+            cc = CERA[nombre]; pos = CERA_ORDEN.index(nombre) + 1
+            media = f" (media nacional: {_c1(cnac['part'])} %)" if cnac.get("part") is not None else ""
+            cera_h = (f"<h2>Voto CERA {E(en_)}</h2>"
+                      "<p>El voto CERA es el de los españoles que viven en el extranjero. Su recuento llega unos días después de la noche electoral y ha cambiado escaños en 1993, 2019 y 2023. "
+                      f"En las elecciones generales de 2016, según el INE, {E(nombre)} sumaba {nes(int(cc['cera']))} electores CERA, el {_c1(cc['pct'])} % de su censo, y es la {pos}.ª comunidad de {len(CERA)} por número de electores CERA. "
+                      f"Votó el {_c1(cc['part'])} % de ellos{media}.</p>"
+                      "<p class='meta'>Fuente: <a href='https://ine.es/jaxiPx/Tabla.htm?L=0&amp;tpx=32091'>INE, tabla 32091</a>; suma de las provincias, con la participación ponderada por electores. "
+                      "Más cifras y la evolución desde 2008 en el <a href='/atalaya/cera/'>panel del voto CERA</a>.</p>")
+
         # prensa: agregado y titulares recientes
         cl = {"n": 0, "neg": 0, "pos": 0, "riesgo": 0, "temas": {}}
         for pc in pcs:
@@ -168,17 +192,18 @@ def generar(c):
                 (f"¿Puede cambiar de partido {nombre} en las elecciones del 29N?", (f"Con la proyección de sondeos recientes, el partido más votado cambiaría en {len(cambian)} de {len(P)} provincias." if cambian else "Con la proyección de sondeos recientes, ninguna provincia cambiaría de partido más votado. Es una proyección orientativa, no una previsión.")),
                 ("¿Cuándo son las próximas elecciones generales?", "Las elecciones generales se celebran el 29 de noviembre de 2026.")]
         if pres: faqs.insert(2, (f"¿Quién preside {nombre}?", f"{pres['nombre']}" + (f" ({pres['partido']})" if pres.get("partido") else "") + ", según Wikidata y Wikipedia."))
+        if nombre in CERA: faqs.append((f"¿Cuántos electores CERA hay {en_}?", f"En las elecciones generales de 2016, según el INE, {nombre} sumaba {nes(int(CERA[nombre]['cera']))} electores CERA (españoles residentes en el extranjero), el {_c1(CERA[nombre]['pct'])} % de su censo electoral."))
         if pt_: faqs.append((f"¿Cuántos habitantes tiene {nombre}?", f"{nombre} tiene {nes(pt_)} habitantes según el padrón del INE a 1 de enero de {anio_pad}."))
         faq_html = "<h2>Preguntas frecuentes</h2>" + "".join(f"<details><summary>{E(a)}</summary><p>{E(b)}</p></details>" for a, b in faqs)
         q = f"¿Quién ganará las elecciones generales {en_}?"
         cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p><p class='ans'>{E(resp)}</p>"
                   f"<h2>1. Provincias y diputados</h2>{uni}{tabla}"
                   f"<p class='meta'>«Más votado con sondeos»: se aplica a los votos de 2023 de cada provincia el cambio proporcional de la media de sondeos nacionales y se reparten los escaños con D'Hondt y barrera del 3 %. Ventaja = puntos entre el primero y el segundo.</p>"
-                  f"{votos}{gob}{cab}{dtxt}{prensa}{senal}"
+                  f"{votos}{gob}{cab}{dtxt}{cera_h}{prensa}{senal}"
                   "<h2>Lo que este análisis no incluye</h2><p class='warn'>No hay encuestas autonómicas: la proyección supone que el cambio nacional se repite igual en todas las provincias. Es un ejercicio orientativo, no una encuesta ni una previsión oficial.</p>"
                   f"{faq_html}<h2>Otras comunidades</h2><ul>{otras}</ul>"
                   "<h2>Fuentes y método</h2><ul><li>Escaños y votos de 2023: Ministerio del Interior y Wikipedia.</li><li>Sondeos: media ponderada en <a href='/elecciones-espana/'>Elecciones en España</a>.</li>"
-                  "<li>Población y renta: INE.</li><li>Cargos y candidaturas: Wikidata y Wikipedia.</li><li>Prensa: titulares por RSS clasificados automáticamente.</li></ul>"
+                  "<li>Población, renta y voto CERA: INE.</li><li>Cargos y candidaturas: Wikidata y Wikipedia.</li><li>Prensa: titulares por RSS clasificados automáticamente.</li></ul>"
                   "<p class='meta'><a href='/atalaya/fichas/metodologia/'>Metodología y fuentes de Atalaya</a></p>")
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": desc, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
                "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
