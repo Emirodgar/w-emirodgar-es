@@ -81,7 +81,7 @@ details.g>summary{list-style:none;cursor:pointer}details.g>summary::-webkit-deta
   </div>
   <div class="upd" id="upd" role="status"></div>
   <div id="cmpv" hidden></div>
-  <details class="mp" id="mp"><summary>Mapa de provincias · clic para filtrar</summary><div id="map"></div><div class="mpl" id="mpl"></div></details>
+  <details class="mp" id="mp" open><summary>Mapa de provincias · clic para filtrar</summary><div id="map"></div><div class="mpl" id="mpl"></div></details>
   <div id="out"></div>
   <p class="foot" id="foot"></p>
 </main>
@@ -276,6 +276,7 @@ function initMap(){
   });
 }
 $('mp').addEventListener('toggle',function(){if($('mp').open){initMap();setTimeout(function(){if(map)map.invalidateSize()},50)}});
+initMap();
 /* ---------- comparador ---------- */
 function cbar(){$('cbar').classList.toggle('on',sel.length>0);$('cn').textContent=sel.length+' seleccionado'+(sel.length===1?'':'s')+' (máx. 3)';$('cgo').disabled=sel.length<2}
 function cmpView(){
