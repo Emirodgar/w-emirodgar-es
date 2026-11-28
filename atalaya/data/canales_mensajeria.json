@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-26",
+  "actualizado": "2026-11-28",
   "aviso": "Catálogo de canales de mensajería de los partidos. 'enlazado_web' indica que la web oficial del partido enlaza ese canal; 'hallado_por_nombre' que existe y parece oficial pero la web no lo enlaza (o no se pudo leer) y hay que confirmarlo. Los seguidores son los que muestra Telegram en la fecha de captura. Pendiente de revisar las condiciones de uso antes de automatizar la lectura.",
   "metodo_lectura": {
     "telegram": "Vista web pública t.me/s/<canal>: devuelve unos 20 mensajes por petición con fecha, texto, formato y visualizaciones. Histórico con ?before=<id>. No hay clave ni cuenta.",
@@ -167,6 +167,16 @@
       "nota": "Lo enlaza voxespana.es, pero la vista pública solo muestra un mensaje (7/11/2025) y 919 seguidores: puede estar casi inactivo o limitado. Si empieza a publicar, aparecerá en el panel.",
       "mensajes_visibles": 1,
       "ultimo_visible": "2025-11-07"
+    },
+    {
+      "partido": "SALF",
+      "plataforma": "telegram",
+      "handle": "AlvisePerez",
+      "url": "https://t.me/AlvisePerez",
+      "nombre": "Alvise Pérez",
+      "origen": "hallado_por_nombre",
+      "lectura": "automatica",
+      "nota": "Canal personal del líder de Se Acabó La Fiesta, el que el partido usa como vector central de comunicación. No hay web oficial del partido que lo enlace: confirmar. El canal t.me/SALF_oficial existe pero tiene 2 suscriptores y apenas contenido."
     },
     {
       "partido": "PNV",

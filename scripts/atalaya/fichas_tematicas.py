@@ -90,17 +90,34 @@ def generar(c):
              "Los programas electorales de 2026 aún no se han publicado y pueden cambiarlas. Si no hay evidencia clara, figura «Sin posición».</p>")
 
     # ---------- partidos ----------
-    for pt in partidos:
+    # Partidos sin programa analizado pero con encuestas (SALF): ficha propia sin bloque de posiciones, con su canal de Telegram
+    sin_prog = [{"id": x["id"], "siglas": x["siglas"], "nombre": x["nombre"]} for x in pinfo.values()
+                if x["siglas"] == "SALF" and x["siglas"] not in {p["siglas"] for p in partidos}]
+    canales = {k["partido"]: k for k in J(D / "mensajeria.json")["canales"]} if (D / "mensajeria.json").exists() else {}
+    def media_reciente(clave):
+        """Media ponderada (raíz de la muestra) de los sondeos de ámbito estatal sin CIS, 30 días hasta el último que incluye al partido, de atalaya/data/encuestas.json."""
+        s_ = [x for x in J(D / "encuestas.json")["encuestas"] if x.get("convocatoria") == "2026-11-29" and x.get("ambito") == "ES" and "cis" not in x["empresa"].lower() and clave in x["voto"]]
+        if not s_: return None, 0, None
+        ult = max(x["fecha"] for x in s_)
+        r_ = [x for x in s_ if (datetime.fromisoformat(ult) - datetime.fromisoformat(x["fecha"])).days <= 30]
+        w_ = [(x["voto"][clave], (x.get("muestra") or 1000) ** 0.5) for x in r_]
+        return sum(v * w for v, w in w_) / sum(w for _, w in w_), len(r_), ult
+
+    for pt in partidos + sin_prog:
+        sin_pos = pt in sin_prog
         sig = pt["siglas"]; ruta = f"partido/{slug(sig)}/"
         esc_act = (pinfo.get(pt["id"]) or {}).get("escanosActuales")
         prov_primero = sum(1 for v in esc.values() if v["partidos"].get(sig) and v["partidos"][sig][-1] == max(s[-1] for s in v["partidos"].values()) and v["partidos"][sig][-1] > 0)
         pos_enc = orden.index(sig) + 1 if sig in nacional else None
         enc = f"{nacional[sig]:.1f}".replace(".", ",") if sig in nacional else None
+        n_enc, f_enc = nsond, fsond
+        if sin_pos:
+            m_, n_enc, f_enc = media_reciente(sig); enc = f"{m_:.1f}".replace(".", ",") if m_ is not None else None
         cd = cand.get(pt["id"]) or {}
         pos_cnt = Counter((a["posiciones"].get(pt["id"]) or a["posiciones"].get(sig) or {}).get("posicion") for a in afs)
         # respuesta
         partes = []
-        if enc: partes.append(f"la media de encuestas le da un {enc} % ({pos_enc}.º puesto)")
+        if enc: partes.append(f"la media de encuestas le da un {enc} %" + (f" ({pos_enc}.º puesto)" if pos_enc and not sin_pos else ""))
         if esc_act: partes.append(f"tiene {esc_act} escaños en el Congreso disuelto")
         resp = f"{pt['nombre']}: " + ("; ".join(partes) if partes else "sin datos de encuesta suficientes") + "."
         if cd.get("nombre"): resp += f" Su candidato anunciado es {cd['nombre']}."
@@ -118,20 +135,25 @@ def generar(c):
         prop = sorted((tm, len(v)) for (s_, tm), v in pidx.items() if s_ == sig)
         prop_html = ("<h2>5. Propuestas de su programa electoral, por tema</h2><ul>" + "".join(
             f"<li><a href='/atalaya/fichas/partido/{slug(sig)}/{slug(tm)}/'>{E(tm)}</a> <span class='meta'>({n} propuestas con cita y página)</span></li>" for tm, n in prop) + "</ul>") if prop else ""
+        tg = canales.get(sig)
+        tg_html = (f"<h2>Canal de Telegram</h2><p>Su comunicación se concentra en <a href='{E(seguro(tg['url']))}' rel='nofollow noopener'>{E(tg['nombre'])}</a>, un canal público con {nes(tg['seguidores'])} seguidores. "
+                   f"Atalaya archiva sus mensajes ({nes(tg.get('mensajes_archivados', 0))} desde el {fecha_es(tg['primero'])}); más datos en <a href='/atalaya/mensajeria/'>mensajería de los partidos</a>.</p>") if tg and tg.get("primero") else ""
         cuerpo = (f"{CSS_EXTRA}<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p><p class='ans'>{E(resp)}</p>"
-                  f"<h2>1. Encuestas</h2><p>" + (f"Media ponderada de {nsond} sondeos de los 30 días previos al {fecha_es(fsond)} (sin CIS): {E(sig)} {enc} %. " if enc else "No hay media de encuestas disponible para este partido. ") +
+                  f"<h2>1. Encuestas</h2><p>" + (f"Media ponderada de {n_enc} sondeos de los 30 días previos al {fecha_es(f_enc)} (sin CIS): {E(sig)} {enc} %. " if enc else "No hay media de encuestas disponible para este partido. ") +
                   "Detalle en <a href='/elecciones-espana/'>Elecciones en España</a>.</p>"
                   f"<h2>2. Escaños en el Congreso</h2><p>" + (f"{E(sig)} cuenta con {esc_act} escaños en el Congreso disuelto (Congreso de los Diputados). " if esc_act else "") +
+                  (f"{E(sig)} no tiene escaños en el Congreso disuelto: es un partido extraparlamentario. " if not esc_act else "") +
                   (f"En las generales de 2023 fue el partido con más escaños en {prov_primero} provincias (datos por provincia de <a href='https://es.wikipedia.org/wiki/Elecciones_generales_de_Espa%C3%B1a_de_2023'>Wikipedia</a>; las coaliciones pueden no atribuirse al partido)." if prov_primero else "") + "</p>"
+                  + ("<h2>3. Qué posición tiene en cada tema</h2><p>Todavía no hay posiciones por tema de este partido: no ha publicado programa y no está entre los partidos analizados. Se añadirán cuando haya programa o declaraciones citables.</p>" if sin_pos else
                   f"<h2>3. Qué posición tiene en cada tema</h2>{aviso}"
-                  f"<p>De {len(afs)} afirmaciones analizadas: a favor en {pos_cnt.get('favor', 0)}, en contra en {pos_cnt.get('contra', 0)}, matizada en {pos_cnt.get('matizada', 0)} y sin posición clara en {pos_cnt.get('sin_posicion', 0)}.</p>{pos_html}"
+                  f"<p>De {len(afs)} afirmaciones analizadas: a favor en {pos_cnt.get('favor', 0)}, en contra en {pos_cnt.get('contra', 0)}, matizada en {pos_cnt.get('matizada', 0)} y sin posición clara en {pos_cnt.get('sin_posicion', 0)}.</p>{pos_html}") +
                   f"<h2>4. Clima de prensa</h2>{bloque_prensa(pr, sig)}"
-                  + prop_html +
+                  + prop_html + tg_html +
                   "<h2>Qué no incluye</h2><p class='warn'>No es un test de voto ni una recomendación. No usa todavía encuestas provinciales.</p>")
         faqs = [(f"¿Qué dicen las encuestas sobre {sig}?", (f"La media de encuestas le da un {enc} %." if enc else "No hay media de encuestas disponible para este partido.")),
                 (f"¿Quién es el candidato de {sig} en 2026?", (f"{cd['nombre']} ({cd.get('cargo') or 'cabeza de lista anunciado'})." if cd.get("nombre") else "Aún no hay un candidato anunciado con los datos disponibles.")),
                 (f"¿Cuántos escaños tiene {sig} en el Congreso?", (f"{esc_act} escaños en el Congreso disuelto." if esc_act else "No tiene representación en el Congreso disuelto según los datos cargados."))]
-        for tm in sorted({a["tema"] for a in afs}):
+        for tm in ([] if sin_pos else sorted({a["tema"] for a in afs})):
             sub_ = [a for a in afs if a["tema"] == tm]
             cn_ = Counter((a["posiciones"].get(pt["id"]) or a["posiciones"].get(sig) or {}).get("posicion") for a in sub_)
             det_ = ", ".join(f"{POS[k].lower()} en {v}" for k, v in cn_.items() if k in POS and k != "sin_posicion")

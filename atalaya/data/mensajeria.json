@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-28T17:41:23+00:00",
+ "actualizado": "2026-11-28T20:06:11+00:00",
  "ventana_dias": 30,
  "aviso": "Solo canales públicos de Telegram enlazados por la web de cada partido (o confirmados). Las visualizaciones son las de la primera captura de cada mensaje; los mensajes recientes pueden estar infravalorados. No es una medida de apoyo ni de alcance total. Los partidos sin canal confirmado no aparecen.",
  "canales": [
@@ -235,7 +235,7 @@
    "partido": "Junts",
    "handle": "juntsxcat",
    "url": "https://t.me/juntsxcat",
-   "nombre": "Junts per Catalunya🎗",
+   "nombre": "Junts per Catalunya",
    "origen": "enlazado_web",
    "seguidores": 3930,
    "historial_seguidores": [
@@ -1671,7 +1671,7 @@
    "partido": "Vox",
    "handle": "VOXTelegram",
    "url": "https://t.me/VOXTelegram",
-   "nombre": "VOX España 🇪🇸",
+   "nombre": "VOX España",
    "origen": "enlazado_web",
    "seguidores": 935,
    "historial_seguidores": [
@@ -1712,6 +1712,216 @@
      "v": null,
      "fmt": [
       "texto"
+     ]
+    }
+   ]
+  },
+  {
+   "partido": "SALF",
+   "handle": "AlvisePerez",
+   "url": "https://t.me/AlvisePerez",
+   "nombre": "Alvise Pérez",
+   "origen": "hallado_por_nombre",
+   "seguidores": 601000,
+   "historial_seguidores": [
+    {
+     "f": "2026-11-28",
+     "n": 601000
+    }
+   ],
+   "mensajes_archivados": 148,
+   "primero": "2026-10-29",
+   "ultimo": "2026-11-28",
+   "ventana": {
+    "dias": 30,
+    "mensajes": 148,
+    "por_dia": 4.9,
+    "vistas_total": 15529360,
+    "vistas_mediana": 104000,
+    "vistas_por_seguidor": 0.17,
+    "temas": {
+     "corrupción y justicia": 13,
+     "seguridad": 11,
+     "empleo": 8,
+     "economía": 3,
+     "inmigración": 3,
+     "vivienda": 2,
+     "sanidad": 1,
+     "educación": 1
+    },
+    "con_tema": 29,
+    "formatos": {
+     "vídeo": 66,
+     "imagen": 55,
+     "texto": 16,
+     "enlace": 6,
+     "documento": 5,
+     "audio": 1
+    },
+    "reenviados": 0,
+    "serie": [
+     {
+      "f": "2026-10-29",
+      "n": 4
+     },
+     {
+      "f": "2026-10-30",
+      "n": 5
+     },
+     {
+      "f": "2026-10-31",
+      "n": 4
+     },
+     {
+      "f": "2026-11-01",
+      "n": 3
+     },
+     {
+      "f": "2026-11-02",
+      "n": 3
+     },
+     {
+      "f": "2026-11-03",
+      "n": 10
+     },
+     {
+      "f": "2026-11-04",
+      "n": 6
+     },
+     {
+      "f": "2026-11-05",
+      "n": 8
+     },
+     {
+      "f": "2026-11-06",
+      "n": 2
+     },
+     {
+      "f": "2026-11-08",
+      "n": 1
+     },
+     {
+      "f": "2026-11-10",
+      "n": 8
+     },
+     {
+      "f": "2026-11-11",
+      "n": 2
+     },
+     {
+      "f": "2026-11-12",
+      "n": 3
+     },
+     {
+      "f": "2026-11-13",
+      "n": 4
+     },
+     {
+      "f": "2026-11-14",
+      "n": 5
+     },
+     {
+      "f": "2026-11-15",
+      "n": 7
+     },
+     {
+      "f": "2026-11-16",
+      "n": 5
+     },
+     {
+      "f": "2026-11-17",
+      "n": 7
+     },
+     {
+      "f": "2026-11-18",
+      "n": 7
+     },
+     {
+      "f": "2026-11-19",
+      "n": 5
+     },
+     {
+      "f": "2026-11-20",
+      "n": 3
+     },
+     {
+      "f": "2026-11-21",
+      "n": 6
+     },
+     {
+      "f": "2026-11-22",
+      "n": 3
+     },
+     {
+      "f": "2026-11-23",
+      "n": 7
+     },
+     {
+      "f": "2026-11-24",
+      "n": 8
+     },
+     {
+      "f": "2026-11-25",
+      "n": 5
+     },
+     {
+      "f": "2026-11-26",
+      "n": 7
+     },
+     {
+      "f": "2026-11-27",
+      "n": 7
+     },
+     {
+      "f": "2026-11-28",
+      "n": 3
+     }
+    ]
+   },
+   "ultimos": [
+    {
+     "f": "2026-11-28T19:57:25+00:00",
+     "t": "Día de reflexión. Hasta mañana, familia.",
+     "u": "https://t.me/Alviseperez/15213",
+     "v": 3560,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-28T17:23:02+00:00",
+     "t": "¿El Español intenta atacar a SALF en pleno día de reflexión?",
+     "u": "https://t.me/Alviseperez/15212",
+     "v": 26600,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-28T09:20:47+00:00",
+     "t": "Feliz día de reflexión, familia.",
+     "u": "https://t.me/Alviseperez/15211",
+     "v": 50500,
+     "fmt": [
+      "imagen"
+     ]
+    },
+    {
+     "f": "2026-11-27T22:56:15+00:00",
+     "t": "La rutina del esclavo se ha acabado. Somos familia. Somos patria. Somos SE ACABÓ LA FIESTA",
+     "u": "https://t.me/Alviseperez/15210",
+     "v": 60200,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-27T21:06:37+00:00",
+     "t": "Solo sirve para vivir quien vive para servir. #SeAcabóLaFiesta",
+     "u": "https://t.me/Alviseperez/15209",
+     "v": 63100,
+     "fmt": [
+      "vídeo"
      ]
     }
    ]
