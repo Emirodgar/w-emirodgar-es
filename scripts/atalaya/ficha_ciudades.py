@@ -60,6 +60,12 @@ def generar(c):
     noticias = J(D / "noticias.json")["noticias"]
     cod_ccaa = c["ccaa_de"]
     urls, hub = [], []
+    # voto CERA: el INE solo lo publica por provincia (generales 2016, atalaya/data/cera.json)
+    try:
+        cj = J(D / "cera.json"); cprov = cj["ine"]["provincias"]; cnac = cj["ine"]["nacional"].get("generales-2016", {})
+        cera_orden = sorted((x["generales-2016"]["cera"] for x in cprov.values() if x.get("generales-2016")), reverse=True)
+    except (OSError, KeyError, ValueError):
+        cprov, cnac, cera_orden = {}, {}, []
 
     for pc, (code, nombre) in CAPITALES.items():
         ruta = f"ciudad/{_slug(nombre)}/"
@@ -136,6 +142,16 @@ def generar(c):
         tit = [x for x in noticias if pc in x["pv"] and k in _nrm(x["t"])][:6]
         s6 = ("<h2>6. Señales recientes</h2><ul>" + "".join(
             f"<li><a href='{E(x['u'])}' rel='nofollow noopener'>{E(re.sub(chr(32)+'-'+chr(32)+'[^-]{3,60}$', '', x['t']))}</a> <span class='meta'>({E(x['m'])}, {fecha_es(x['f'])})</span></li>" for x in tit) + "</ul>") if tit else ""
+        # 7. voto CERA (dato provincial)
+        s7, cv = "", (cprov.get(pc) or {}).get("generales-2016")
+        if cv and cv.get("cera") and cv.get("total"):
+            pos = cera_orden.index(cv["cera"]) + 1; pct_c = 100 * cv["cera"] / cv["total"]
+            media = f" (media nacional: {_c1(cnac['part'])} %)" if cnac.get("part") is not None else ""
+            s7 = (f"<h2>7. Voto CERA</h2><p>El voto CERA es el de los españoles que viven en el extranjero y su recuento llega unos días después de la noche electoral. "
+                  f"El INE lo publica por provincia, no por municipio. En la provincia de {E(prov_n)}, en las generales de 2016, había {nes(int(cv['cera']))} electores CERA, "
+                  f"el {_c1(pct_c)} % de su censo (puesto {pos} de {len(cera_orden)} provincias), y votó el {_c1(cv['part'])} % de ellos{media}. "
+                  f"Más cifras en la <a href='/atalaya/fichas/{prov_r}'>ficha de la provincia</a> y en el <a href='/atalaya/cera/'>panel del voto CERA</a>.</p>"
+                  "<p class='meta'>Fuente: <a href='https://ine.es/jaxiPx/Tabla.htm?L=0&amp;tpx=32091'>INE, tabla 32091</a>.</p>")
         # enlaces
         enl = f"<li><a href='/atalaya/fichas/{prov_r}'>Provincia de {E(prov_n)}: ¿quién ganará las elecciones?</a></li>"
         if cc: enl += f"<li><a href='/atalaya/fichas/{cc[1]}'>{E(cc[0])}: ¿quién ganará las elecciones?</a></li>"
@@ -145,14 +161,15 @@ def generar(c):
                 (f"¿Qué partido ganó en {nombre} en las elecciones municipales de 2023?", f"{_art(lm_, True)} fue la lista más votada con el {_c1(pm)} % de los votos válidos. Más votado no significa alcalde: depende de los pactos."),
                 (f"¿Qué partido ganó en {nombre} en las generales de 2023?", f"{_art(lg, True)} con el {_c1(pg)} % de los votos válidos."),
                 (f"¿Puede cambiar de partido {nombre} en las elecciones del 29N?", (f"Con la proyección de los sondeos recientes, {_art(l_proy)} superaría a {_art(lg)}." if cambia else f"Con la proyección de los sondeos recientes, {_art(lg)} seguiría siendo el partido más votado. Es orientativo, no una previsión."))]
+        if s7: faqs.append((f"¿Cuántos electores CERA hay en la provincia de {prov_n}?", f"En las elecciones generales de 2016, según el INE, la provincia de {prov_n} tenía {nes(int(cv['cera']))} electores CERA (españoles residentes en el extranjero), el {_c1(pct_c)} % de su censo. El INE no publica este dato por municipio."))
         if alc: faqs.insert(1, (f"¿Quién es el alcalde de {nombre}?", f"{alc['nombre']}" + (f" ({alc['partido']})" if alc.get("partido") else "") + ", según Wikidata y Wikipedia."))
         faq_html = "<h2>Preguntas frecuentes</h2>" + "".join(f"<details><summary>{E(a)}</summary><p>{E(b)}</p></details>" for a, b in faqs)
         q = f"¿Qué vota {nombre} y quién la gobierna?"
         cuerpo = (f"<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p><p class='ans'>{E(resp)}</p>"
-                  f"{s1}{s2}{s3}{s4}{s5}{s6}"
+                  f"{s1}{s2}{s3}{s4}{s5}{s6}{s7}"
                   "<h2>Lo que este análisis no incluye</h2><p class='warn'>No hay encuestas municipales: la proyección supone que el cambio nacional se repite igual en la ciudad. Es un ejercicio orientativo, no una encuesta ni una previsión oficial.</p>"
                   f"<h2>Más fichas</h2><ul>{enl}</ul>{faq_html}"
-                  "<h2>Fuentes y método</h2><ul><li>Votos de 2023: Ministerio del Interior.</li><li>Población y renta: INE.</li><li>Cargos: Wikidata y Wikipedia.</li><li>Sondeos: media ponderada en <a href='/elecciones-espana/'>Elecciones en España</a>.</li><li>Titulares: RSS de medios que nombran la ciudad.</li></ul>"
+                  "<h2>Fuentes y método</h2><ul><li>Votos de 2023: Ministerio del Interior.</li><li>Población, renta y voto CERA (por provincia): INE.</li><li>Cargos: Wikidata y Wikipedia.</li><li>Sondeos: media ponderada en <a href='/elecciones-espana/'>Elecciones en España</a>.</li><li>Titulares: RSS de medios que nombran la ciudad.</li></ul>"
                   "<p class='meta'><a href='/atalaya/fichas/metodologia/'>Metodología y fuentes de Atalaya</a></p>")
         ld = [{"@context": "https://schema.org", "@type": "Article", "headline": q, "description": desc, "inLanguage": "es", "datePublished": FECHA, "dateModified": FECHA,
                "author": {"@type": "Person", "name": "Emilio Rodríguez García", "url": f"{BASE}/sobre-mi"}, "publisher": {"@type": "Person", "name": "Emilio Rodríguez García"},
