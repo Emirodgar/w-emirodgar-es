@@ -1051,7 +1051,7 @@
         "titulo": "Hernández de Cos será el próximo presidente del BCE y consigue el puesto europeo de mayor poder en la historia de España",
         "url": "https://www.elmundo.es/economia/2026/11/26/6b083332fdddff741f8b4595.html"
       },
-      "destacado": true
+      "destacado": false
     },
     {
       "fecha": "2026-11-26",
@@ -1120,6 +1120,34 @@
         "medio": "El Mundo",
         "titulo": "Muere el alcalde de Tombrío de Abajo (León) tras recibir un disparo en una cacería de jabalíes",
         "url": "https://www.elmundo.es/espana/2026/11/27/6b0924a9fc6c83d45e8b456d.html"
+      },
+      "destacado": false
+    },
+    {
+      "fecha": "2026-11-27",
+      "edicion": "2026-11-28",
+      "titulo": "Marc Márquez anuncia su retirada del motociclismo",
+      "categoria": "Deportes",
+      "descripcion": "El piloto español Marc Márquez ha anunciado su retirada del motociclismo, marcando un hito en la historia de este deporte.",
+      "relevancia": 5,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Las lágrimas de Marc Márquez durante el anuncio de su retirada: \"El único que lo sabía era mi hermano Álex\"",
+        "url": "https://www.elmundo.es/deportes/motociclismo/2026/11/27/6b09a1a7e9cf4ad0358b457f-video.html"
+      },
+      "destacado": true
+    },
+    {
+      "fecha": "2026-11-28",
+      "edicion": "2026-11-28",
+      "titulo": "Ataque israelí mata a dos empleados de Médicos Sin Fronteras en Gaza",
+      "categoria": "Internacional",
+      "descripcion": "Un ataque directo en Gaza ha causado la muerte de dos empleados de Médicos Sin Fronteras, según ha denunciado la organización.",
+      "relevancia": 4,
+      "fuente": {
+        "medio": "El Mundo",
+        "titulo": "Un ataque israelí mata a dos empleados de Médicos Sin Fronteras en Gaza",
+        "url": "https://www.elmundo.es/internacional/2026/11/28/6b0aa1fce85ece86398b4574.html"
       },
       "destacado": false
     }

@@ -1,31 +1,31 @@
 {
-  "fecha": "2026-11-27",
-  "generado_en": "2026-11-27T14:51:09+00:00",
-  "titular": "La campaña electoral se intensifica con cruces de acusaciones y el debate sobre la violencia de género, mientras se revelan detalles de la c",
+  "fecha": "2026-11-28",
+  "generado_en": "2026-11-28T13:59:39+00:00",
+  "titular": "Jornada de reflexión electoral marcada por la actividad de los líderes y la crisis migratoria en Canarias y Ceuta",
   "por_medio": {
-    "El Mundo": 31,
-    "The Objective": 233
+    "El Mundo": 24,
+    "The Objective": 124
   },
   "temas": [
     {
-      "tema": "Debate electoral y violencia de género",
+      "tema": "Jornada de reflexión electoral",
       "categoria": "Política",
-      "descripcion": "El comentario de Feijóo a Colau en el debate ha generado controversia y ha sido utilizado por otros partidos para movilizar el voto femenino, mientras Abascal ha condenado la violencia contra la mujer."
+      "descripcion": "Los líderes políticos aprovechan la jornada de reflexión para actividades personales y gestos simbólicos, mientras se ultiman los preparativos para las elecciones del 29-N."
     },
     {
-      "tema": "Crisis migratoria y seguridad en Ceuta",
-      "categoria": "Internacional",
-      "descripcion": "Testimonios revelan que la policía marroquí avisó y facilitó la oleada migratoria en Ceuta, mientras se registran muertes de inmigrantes en cayucos y se busca puerto para un buque naufragado."
+      "tema": "Crisis migratoria en Canarias y Ceuta",
+      "categoria": "Sociedad",
+      "descripcion": "La llegada de migrantes a las costas españolas sigue siendo un foco de atención, con El Hierro registrando un récord de ingresos y detenciones en Ceuta, y la lamentable cifra de fallecidos en el trayecto."
     },
     {
-      "tema": "Elecciones generales y denuncias",
-      "categoria": "Política",
-      "descripcion": "El PP ha denunciado irregularidades en el voto por correo y en la propaganda electoral, mientras el Gobierno confirma la subida de pensiones a días de las elecciones."
-    },
-    {
-      "tema": "Sucesos y violencia",
+      "tema": "Agresión a concejala de Vox en Jaca",
       "categoria": "Sucesos",
-      "descripcion": "Se reportan la muerte del alcalde de Tombrío de Abajo en una cacería, el asesinato de una mujer en Bilbao por su pareja con orden de alejamiento, y la desarticulación de una estafa a inmigrantes."
+      "descripcion": "Una joven de 22 años ha sido detenida en Jaca por agredir a una concejala de Vox, lo que ha llevado al partido a pedir la condena de la agresión por parte de otras fuerzas políticas."
+    },
+    {
+      "tema": "Copa Davis: España avanza a la final",
+      "categoria": "Deportes",
+      "descripcion": "España se encuentra a un paso de la final de la Copa Davis tras la destacada actuación de Jódar, dejando la clasificación en manos de Alcaraz."
     }
   ]
 }
