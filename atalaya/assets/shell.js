@@ -19,7 +19,8 @@
     ['Encuestas', '/atalaya/encuestas/', I('<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>')],
     ['Congreso', '/atalaya/congreso/', I('<path d="M3 20h18M5 20V10M9.5 20V10M14.5 20V10M19 20V10M3 10l9-6 9 6z"/>')],
     ['Senado', '/atalaya/senado/', I('<path d="M4 20h16M6 20v-8a6 6 0 0 1 12 0v8M12 6V3M9 20v-6M15 20v-6"/>')],
-    ["Ley d'Hondt", '/atalaya/ley-dhont/', I('<path d="M4 20V9M10 20V4M16 20v-6M22 20H2"/><path d="M13 8l3-3 3 3"/>')]
+    ["Ley d'Hondt", '/atalaya/ley-dhont/', I('<path d="M4 20V9M10 20V4M16 20v-6M22 20H2"/><path d="M13 8l3-3 3 3"/>')],
+    ['Voto CERA', '/atalaya/cera/', I('<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3 3 3 15 0 18M12 3c-3 3-3 15 0 18"/>')]
   ];
   var small = window.matchMedia && matchMedia('(max-width:700px)').matches, saved = null;
   try { saved = localStorage.getItem(KEY); } catch (e) {}

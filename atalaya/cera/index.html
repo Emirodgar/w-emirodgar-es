@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voto CERA | Atalaya</title>
+<meta name="description" content="Voto CERA, el de los españoles residentes en el extranjero: cuántos votan, cómo ha evolucionado desde 2008 y en qué elecciones ha cambiado un escaño. Solo cifras con fuente.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://emirodgar.es/atalaya/cera/">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/atalaya/assets/shell.css">
+<link rel="stylesheet" href="/atalaya/assets/parlamento.css">
+<link rel="stylesheet" href="/atalaya/assets/fonts.css">
+<style>
+.prose p{margin-bottom:10px;color:#c3ccd9;font-size:13px}.prose h3{font-size:14px;margin:14px 0 6px}
+.prose ul{margin:0 0 10px 18px;color:#c3ccd9;font-size:13px}.prose li{margin-bottom:4px}
+.prose a,.src a,.disc a,.chg a,.warn a{color:var(--acc)}
+.g2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px;align-items:start}
+@media(max-width:900px){.g2{grid-template-columns:minmax(0,1fr)}}
+.k{background:var(--panel2);border-radius:8px;padding:10px 12px}.k b{display:block;font:700 22px var(--mono);color:var(--txt)}.k span{font-size:12px;color:var(--mut)}
+.tw{overflow:auto}
+table.t{border-collapse:collapse;width:100%;font-size:13px}
+table.t th,table.t td{padding:5px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+table.t th:first-child,table.t td:first-child{text-align:left}
+table.t th{font:600 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);position:sticky;top:0;background:var(--panel);cursor:pointer}
+table.t td.n{color:#8a94a6}
+.bars{display:grid;gap:8px}
+.br{display:grid;grid-template-columns:150px 1fr 70px;gap:8px;align-items:center;font-size:13px}
+.br .bg{background:var(--panel2);border-radius:4px;height:18px;overflow:hidden}.br .bg i{display:block;height:100%;background:var(--acc)}
+.br .v{font-family:var(--mono);text-align:right}
+.warn{border-left:3px solid #e0b341;background:rgba(224,179,65,.08);padding:8px 12px;border-radius:4px;color:#d9c48a;font-size:12.5px;margin:10px 0}
+.chg{display:grid;gap:8px}.chg div{background:var(--panel2);border-radius:8px;padding:10px 12px;font-size:13px}
+.chg b{color:var(--txt)}
+</style>
+</head>
+<body>
+<script src="/atalaya/assets/shell.js?v=5"></script>
+<header class="top">
+  <h1 class="pt">Voto CERA <small>españoles residentes en el extranjero</small></h1>
+  <span class="tagline">Inteligencia electoral</span>
+</header>
+
+<main class="wrap">
+
+<section class="card">
+  <h2>Qué es y qué esperar el 29N</h2>
+  <div class="body prose">
+    <p><b>CERA</b> es el Censo Electoral de Residentes Ausentes: los <b>españoles que viven fuera de España</b>. No incluye a extranjeros. Su voto llega por correo o en consulados y <b>no entra en el escrutinio de la noche electoral</b>: en 2023 el recuento CERA empezó el viernes 28 de julio, cinco días después de la votación. Por eso puede mover un escaño en una provincia muy ajustada cuando el resultado ya parecía cerrado.</p>
+    <p>Este panel recoge solo cifras con fuente enlazada. Donde las fuentes no coinciden, se dice. <b>No he localizado una cifra oficial del censo CERA de 2026</b>; sí consta que el censo exterior ha crecido en 461.858 personas desde 2022, con la ley de nietos (<a href="https://elordenmundial.com/voto-exterior-espana-y-que-diferencias-europa/" rel="noopener">El Orden Mundial</a>).</p>
+  </div>
+</section>
+
+<div class="kpis" id="kp"></div>
+
+<div class="g2">
+<section class="card">
+  <h2>Participación del CERA <em>generales</em></h2>
+  <div class="body">
+    <div class="bars" id="bar"></div>
+    <div class="warn" id="warn"></div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Cuándo ha decidido un escaño</h2>
+  <div class="body">
+    <div class="chg" id="chg"></div>
+    <p class="disc">Solo tres elecciones generales en las que el recuento CERA cambió el reparto de escaños, según las fuentes citadas. La de 2019 solo consta en una fuente.</p>
+  </div>
+</section>
+</div>
+
+<section class="card">
+  <h2>Electores CERA por elección <em>INE y Ministerio de Inclusión</em></h2>
+  <div class="body tw"><table class="t" id="tb"></table><p class="disc src" id="srcTb"></p></div>
+</section>
+
+<section class="card">
+  <h2>Por provincia, generales 2016 <em>último dato provincial del INE para generales</em></h2>
+  <div class="body">
+    <p class="sub">Pulsa una cabecera para ordenar. «Votos estimados» = electores CERA × participación CERA del INE; es un cálculo propio, no un dato oficial.</p>
+    <div class="tw" style="max-height:560px"><table class="t" id="tp"></table></div>
+    <p class="disc">Fuente: <a href="https://ine.es/jaxiPx/Tabla.htm?L=0&amp;tpx=32091" rel="noopener">INE, tabla 32091</a>. El CERA pesa más sobre el censo en Galicia, Asturias o Canarias que en Madrid, pero participa menos.</p>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Qué falta</h2>
+  <div class="body prose">
+    <ul>
+      <li>Los votos CERA por provincia y partido de cada elección están en Infoelectoral (Ministerio del Interior), que no ha permitido la descarga automática. Sin ellos no se puede calcular cuánto pesó el CERA en cada provincia en 2019 y 2023 ni su resultado por partido.</li>
+      <li>La serie provincial del INE llega solo a Europeas 2014, municipales 2015 y 2019 y generales 2016.</li>
+      <li>La participación de 2019 aparece como 6,85 % (Ministerio de Inclusión) y como 5,7 % en otra fuente: aquí se usa la oficial.</li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(id){return document.getElementById(id)};
+var esc=function(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
+var nf=function(x){return x==null?'—':Math.round(x).toLocaleString('es-ES')};
+var pf=function(x){return x==null?'—':x.toLocaleString('es-ES',{minimumFractionDigits:2,maximumFractionDigits:2})+' %'};
+fetch('../data/cera.json').then(function(r){return r.json()}).then(function(d){
+  var S={};d.serie.forEach(function(s){S[s.id]=s});
+  var s23=S['2023'],s19=S['2019n'];
+  $('kp').innerHTML=[[nf(s23.electores_cera),'Electores CERA, jul 2023'],[nf(s23.votos_cera),'Votos CERA, jul 2023'],[pf(s23.participacion_cera_pct),'Participación CERA 2023'],
+    [nf(s19.votos_cera),'Votos CERA, nov 2019']].map(function(k){return '<div class="k"><b>'+k[0]+'</b><span>'+k[1]+'</span></div>'}).join('');
+  var rows=['2008','2011','2016','2019n','2023'].map(function(id){return S[id]}).filter(function(s){return s.participacion_cera_pct!=null});
+  var mx=Math.max.apply(null,rows.map(function(s){return s.participacion_cera_pct}));
+  $('bar').innerHTML=rows.map(function(s){return '<div class="br"><span>'+esc(s.eleccion)+'</span><div class="bg"><i style="width:'+(s.participacion_cera_pct/mx*100)+'%"></i></div><span class="v">'+pf(s.participacion_cera_pct)+'</span></div>'}).join('');
+  $('warn').innerHTML='2008 fue antes del voto rogado y 2011 la primera elección con él. La reforma de 2022 lo eliminó y 2023 fue la primera sin él. 2008 y 2011 vienen de fuentes secundarias (<a href="'+esc(S['2008'].fuente)+'" rel="noopener">UNED</a>, <a href="'+esc(S['2011'].fuente)+'" rel="noopener">El Orden Mundial</a>); 2016 es del INE; 2019 y 2023, del Ministerio de Inclusión.';
+  $('chg').innerHTML=d.escanos.map(function(e){return '<div><b>'+esc(e.eleccion)+' · '+esc(e.provincia)+'</b><br>Un escaño pasó de '+esc(e.de)+' a '+esc(e.a)+' tras el recuento CERA. <a href="'+esc(e.fuente)+'" rel="noopener">Fuente</a>'+(e.nota?'<br><span class="sub">'+esc(e.nota)+'</span>':'')+'</div>'}).join('');
+  var N=d.ine.nacional,EL=d.ine.elecciones,tr=[];
+  ['europeas-2014','municipales-2015','generales-2016','municipales-2019'].forEach(function(k){var v=N[k];if(v)tr.push([EL[k],v.cera,v.total?v.cera/v.total*100:null,v.part,null,'INE'])});
+  tr.push(['Generales abril 2019',null,null,null,S['2019a'].solicitudes,'Maldita']);
+  tr.push(['Generales nov 2019',s19.electores_cera,null,s19.participacion_cera_pct,s19.solicitudes,'Inclusión']);
+  tr.push(['Generales jul 2023',s23.electores_cera,null,s23.participacion_cera_pct,null,'Inclusión']);
+  $('tb').innerHTML='<thead><tr><th>Elección</th><th>Electores CERA</th><th>% del censo</th><th>Participación CERA</th><th>Solicitudes voto CERA</th><th>Fuente</th></tr></thead><tbody>'+
+    tr.map(function(r){return '<tr><td>'+esc(r[0])+'</td><td>'+nf(r[1])+'</td><td class="n">'+pf(r[2])+'</td><td>'+pf(r[3])+'</td><td>'+nf(r[4])+'</td><td class="n">'+r[5]+'</td></tr>'}).join('')+'</tbody>';
+  $('srcTb').innerHTML='Fuentes: <a href="'+esc(d.ine.fuente)+'" rel="noopener">INE</a>, <a href="'+esc(s23.fuente)+'" rel="noopener">Ministerio de Inclusión</a> y <a href="'+esc(S['2019a'].fuente)+'" rel="noopener">Maldita</a>. Las solicitudes son de voto CERA (voto rogado, que ya no existe desde 2022); el INE las publica mezcladas con las del voto por correo de residentes en España, por eso no se muestran.';
+  fetch('../data/indice.json').then(function(r){return r.json()}).then(function(ix){
+    var P=[];Object.keys(d.ine.provincias).forEach(function(c){var v=d.ine.provincias[c]['generales-2016'];if(!v)return;P.push({n:ix.prov[c]||c,cera:v.cera,pct:v.total?v.cera/v.total*100:null,part:v.part,vot:v.cera*v.part/100})});
+    var col='cera',asc=false;
+    function draw(){
+      P.sort(function(a,b){var x=a[col],y=b[col];if(col==='n')return asc?x.localeCompare(y,'es'):y.localeCompare(x,'es');return asc?x-y:y-x});
+      var H=[['n','Provincia'],['cera','Electores CERA'],['pct','% del censo'],['part','Participación'],['vot','Votos estimados']];
+      $('tp').innerHTML='<thead><tr>'+H.map(function(h){return '<th data-c="'+h[0]+'">'+h[1]+(h[0]===col?(asc?' ▲':' ▼'):'')+'</th>'}).join('')+'</tr></thead><tbody>'+
+        P.map(function(r){return '<tr><td>'+esc(r.n)+'</td><td>'+nf(r.cera)+'</td><td>'+pf(r.pct)+'</td><td>'+pf(r.part)+'</td><td class="n">'+nf(r.vot)+'</td></tr>'}).join('')+'</tbody>';
+      $('tp').querySelectorAll('th').forEach(function(t){t.onclick=function(){var c=t.dataset.c;if(c===col)asc=!asc;else{col=c;asc=c==='n'}draw()}});
+    }
+    draw();
+  });
+}).catch(function(){document.querySelector('main').insertAdjacentHTML('afterbegin','<div class="warn">No se han podido cargar los datos del voto CERA.</div>')});
+})();
+</script>
+</body>
+</html>
