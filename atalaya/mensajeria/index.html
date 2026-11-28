@@ -84,7 +84,7 @@ var $=function(id){return document.getElementById(id)};
 var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})};
 var f0=function(x){return x==null?'—':Math.round(x).toLocaleString('es-ES')};
 var f1=function(x){return x==null?'—':x.toLocaleString('es-ES',{minimumFractionDigits:1,maximumFractionDigits:1})};
-var COL={PP:'#3b9cff',PSOE:'#ef4444',Vox:'#7ac943',Podemos:'#9b59d0',Sumar:'#d6246e',Junts:'#00c3b2',PNV:'#4ade80','EH Bildu':'#2dd4bf',BNG:'#76b2e1',UPN:'#f59e0b',ERC:'#f95838'};
+var COL={PP:'#3b9cff',PSOE:'#ef4444',Vox:'#7ac943',Podemos:'#9b59d0',Sumar:'#d6246e',Junts:'#00c3b2',PNV:'#4ade80','EH Bildu':'#2dd4bf',BNG:'#76b2e1',UPN:'#f59e0b',ERC:'#f95838',SALF:'#e11d48'};
 var FC={'imagen':'#22d3ee','vídeo':'#a78bfa','texto':'#94a3b8','enlace':'#fbbf24','audio':'#34d399','encuesta':'#f472b6','documento':'#fb923c'};
 var FMT=['imagen','vídeo','enlace','texto','audio','encuesta','documento'];
 var sel=null,D=null;
@@ -122,7 +122,7 @@ function render(){
     tr.onclick=go;tr.onkeydown=function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}};
   });
   $('leg').innerHTML=FMT.map(function(f){return '<span><i style="background:'+FC[f]+'"></i>'+f+'</span>'}).join('');
-  $('nt').textContent='Solo canales públicos de Telegram que enlaza la web de cada partido. Las visualizaciones son las de la primera captura de cada mensaje, así que los más recientes pueden estar infravalorados. Un mensaje puede tener más de un formato. No mide apoyo ni alcance total, y la ausencia de un partido aquí significa que no hay canal confirmado, no que no comunique por Telegram.';
+  $('nt').textContent='Canales públicos de Telegram que enlaza la web de cada partido, más los marcados «sin confirmar» (como el de Alvise Pérez, líder de SALF: es un canal personal que el partido usa como vía principal). Las visualizaciones son las de la primera captura de cada mensaje, así que los más recientes pueden estar infravalorados. Un mensaje puede tener más de un formato. No mide apoyo ni alcance total, y la ausencia de un partido aquí significa que no hay canal confirmado, no que no comunique por Telegram.';
   if(sel)detail();else $('det').hidden=true;
 }
 function k(b,s,sm){return '<div class="kpi"><b>'+b+'</b><span>'+s+'</span><small>'+sm+'</small></div>'}
