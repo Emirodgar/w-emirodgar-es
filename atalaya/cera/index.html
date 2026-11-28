@@ -46,7 +46,7 @@ table.t td.n{color:#8a94a6}
   <h2>Qué es y qué esperar el 29N</h2>
   <div class="body prose">
     <p><b>CERA</b> es el Censo Electoral de Residentes Ausentes: los <b>españoles que viven fuera de España</b>. No incluye a extranjeros. Su voto llega por correo o en consulados y <b>no entra en el escrutinio de la noche electoral</b>: en 2023 el recuento CERA empezó el viernes 28 de julio, cinco días después de la votación. Por eso puede mover un escaño en una provincia muy ajustada cuando el resultado ya parecía cerrado.</p>
-    <p>Este panel recoge solo cifras con fuente enlazada. Donde las fuentes no coinciden, se dice. <b>No he localizado una cifra oficial del censo CERA de 2026</b>; sí consta que el censo exterior ha crecido en 461.858 personas desde 2022, con la ley de nietos (<a href="https://elordenmundial.com/voto-exterior-espana-y-que-diferencias-europa/" rel="noopener">El Orden Mundial</a>).</p>
+    <p>Este panel recoge solo cifras con fuente enlazada. Donde las fuentes no coinciden, se dice. El censo exterior ha crecido en 461.858 personas desde 2022, con la ley de nietos (<a href="https://elordenmundial.com/voto-exterior-espana-y-que-diferencias-europa/" rel="noopener">El Orden Mundial</a>).</p>
   </div>
 </section>
 
@@ -84,17 +84,6 @@ table.t td.n{color:#8a94a6}
   </div>
 </section>
 
-<section class="card">
-  <h2>Qué falta</h2>
-  <div class="body prose">
-    <ul>
-      <li>Los votos CERA por provincia y partido de cada elección están en Infoelectoral (Ministerio del Interior), que no ha permitido la descarga automática. Sin ellos no se puede calcular cuánto pesó el CERA en cada provincia en 2019 y 2023 ni su resultado por partido.</li>
-      <li>La serie provincial del INE llega solo a Europeas 2014, municipales 2015 y 2019 y generales 2016.</li>
-      <li>La participación de 2019 aparece como 6,85 % (Ministerio de Inclusión) y como 5,7 % en otra fuente: aquí se usa la oficial.</li>
-    </ul>
-  </div>
-</section>
-
 </main>
 
 <script>
@@ -112,7 +101,7 @@ fetch('../data/cera.json').then(function(r){return r.json()}).then(function(d){
   var rows=['2008','2011','2016','2019n','2023'].map(function(id){return S[id]}).filter(function(s){return s.participacion_cera_pct!=null});
   var mx=Math.max.apply(null,rows.map(function(s){return s.participacion_cera_pct}));
   $('bar').innerHTML=rows.map(function(s){return '<div class="br"><span>'+esc(s.eleccion)+'</span><div class="bg"><i style="width:'+(s.participacion_cera_pct/mx*100)+'%"></i></div><span class="v">'+pf(s.participacion_cera_pct)+'</span></div>'}).join('');
-  $('warn').innerHTML='2008 fue antes del voto rogado y 2011 la primera elección con él. La reforma de 2022 lo eliminó y 2023 fue la primera sin él. 2008 y 2011 vienen de fuentes secundarias (<a href="'+esc(S['2008'].fuente)+'" rel="noopener">UNED</a>, <a href="'+esc(S['2011'].fuente)+'" rel="noopener">El Orden Mundial</a>); 2016 es del INE; 2019 y 2023, del Ministerio de Inclusión.';
+  $('warn').innerHTML='2008 fue antes del voto rogado y 2011 la primera elección con él. La reforma de 2022 lo eliminó y 2023 fue la primera sin él. 2008 y 2011 vienen de fuentes secundarias (<a href="'+esc(S['2008'].fuente)+'" rel="noopener">UNED</a>, <a href="'+esc(S['2011'].fuente)+'" rel="noopener">El Orden Mundial</a>); 2016 es del INE; 2019 y 2023, del Ministerio de Inclusión (otra fuente da 5,7 % para 2019; se usa la cifra oficial).';
   $('chg').innerHTML=d.escanos.map(function(e){return '<div><b>'+esc(e.eleccion)+' · '+esc(e.provincia)+'</b><br>Un escaño pasó de '+esc(e.de)+' a '+esc(e.a)+' tras el recuento CERA. <a href="'+esc(e.fuente)+'" rel="noopener">Fuente</a>'+(e.nota?'<br><span class="sub">'+esc(e.nota)+'</span>':'')+'</div>'}).join('');
   var N=d.ine.nacional,EL=d.ine.elecciones,tr=[];
   ['europeas-2014','municipales-2015','generales-2016','municipales-2019'].forEach(function(k){var v=N[k];if(v)tr.push([EL[k],v.cera,v.total?v.cera/v.total*100:null,v.part,null,'INE'])});
