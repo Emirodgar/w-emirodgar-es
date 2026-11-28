@@ -34,7 +34,7 @@ table.t td.n{color:#8a94a6}
 </style>
 </head>
 <body>
-<script src="/atalaya/assets/shell.js?v=5"></script>
+<script src="/atalaya/assets/shell.js?v=6"></script>
 <header class="top">
   <h1 class="pt">Voto CERA <small>españoles residentes en el extranjero</small></h1>
   <span class="tagline">Inteligencia electoral</span>
@@ -123,7 +123,7 @@ fetch('../data/cera.json').then(function(r){return r.json()}).then(function(d){
     }
     draw();
   });
-}).catch(function(){document.querySelector('main').insertAdjacentHTML('afterbegin','<div class="warn">No se han podido cargar los datos del voto CERA.</div>')});
+}).catch(function(){});
 })();
 </script>
 </body>
