@@ -91,4 +91,25 @@ def bloques(c, pc, nombre):
                          f"Sumando todos los municipios de {nombre}, {lid[0]} fue la lista con más votos ({_c1(100 * lid[1] / validos)} % de los votos válidos). "
                          "Es un agregado de votos de todos los municipios; no indica quién gobierna cada ayuntamiento."))
             fuentes.append("Municipales 2023: <a href='https://infoelectoral.interior.gob.es/'>Ministerio del Interior</a>.")
+    # voto CERA (españoles residentes en el extranjero): datos del INE por provincia, generales 2016 (atalaya/data/cera.json)
+    try:
+        cj = J(D / "cera.json")
+        v = cj["ine"]["provincias"].get(pc, {}).get("generales-2016")
+        nac = cj["ine"]["nacional"].get("generales-2016", {})
+        if v and v.get("cera") and v.get("total"):
+            orden = sorted((x["generales-2016"]["cera"] for x in cj["ine"]["provincias"].values() if x.get("generales-2016")), reverse=True)
+            pos = orden.index(v["cera"]) + 1
+            pct = 100 * v["cera"] / v["total"]
+            media = f" (media nacional: {_c1(nac['part'])} %)" if nac.get("part") is not None else ""
+            html += (f"<h2>Voto CERA en {E(nombre)}</h2>"
+                     f"<p>El voto CERA es el de los españoles que viven en el extranjero. Su recuento llega unos días después de la noche electoral y ha cambiado escaños en 1993, 2019 y 2023. "
+                     f"En las elecciones generales de 2016, según el INE, {E(nombre)} tenía {nes(int(v['cera']))} electores CERA, el {_c1(pct)} % de su censo, y es la {pos}.ª provincia de {len(orden)} por número de electores CERA. "
+                     f"Votó el {_c1(v['part'])} % de ellos{media}.</p>"
+                     "<p class='meta'>Fuente: <a href='https://ine.es/jaxiPx/Tabla.htm?L=0&amp;tpx=32091'>INE, tabla 32091</a>. "
+                     "Más cifras y la evolución desde 2008 en el <a href='/atalaya/cera/'>panel del voto CERA</a>.</p>")
+            faqs.append((f"¿Cuántos electores CERA hay en {nombre}?",
+                         f"En las elecciones generales de 2016, según el INE, {nombre} tenía {nes(int(v['cera']))} electores CERA (españoles residentes en el extranjero), el {_c1(pct)} % de su censo electoral."))
+            fuentes.append("Voto CERA: <a href='https://ine.es/jaxiPx/Tabla.htm?L=0&amp;tpx=32091'>INE, tabla 32091</a>.")
+    except (OSError, KeyError, ValueError):
+        pass
     return html, faqs, fuentes
