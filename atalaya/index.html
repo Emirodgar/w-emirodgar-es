@@ -228,6 +228,14 @@ button.kpi[aria-pressed=true]{border-color:currentColor;background:var(--panel2)
   </div>
 </section>
 
+<section class="card cera" style="margin:0 16px 10px" aria-label="Voto CERA">
+  <h2><span>Voto CERA <em>españoles residentes en el extranjero</em></span><a href="/atalaya/cera/" style="color:var(--acc);text-decoration:none;font-size:12px">Ver panel →</a></h2>
+  <div class="body" style="padding:12px 14px">
+    <div class="kpis" id="ceraK" style="padding:0"></div>
+    <p class="sub" style="margin-top:8px;color:var(--mut);font-size:12px">Su recuento llega días después de la noche electoral y ha cambiado escaños en 1993, 2019 y 2023. Fuentes: INE y Ministerio de Inclusión.</p>
+  </div>
+</section>
+
 <h2 class="sr">Agentes de IA</h2>
 <section class="agents" id="agents"></section>
 
@@ -636,6 +644,7 @@ function markSel(){
   document.querySelectorAll('#dBody .pc').forEach(c=>{const e=DPEOPLE[c.dataset.pid];c.classList.toggle('sel',!!(p2Open&&curPerson&&e&&e.p.nombre===curPerson.p.nombre))});
 }
 const fyear=t=>t?String(t).replace(/^[+-]/,'').slice(0,4):'';
+fetch('data/cera.json').then(r=>r.json()).then(d=>{const S={};d.serie.forEach(x=>{S[x.id]=x});const n=x=>Math.round(x).toLocaleString('es-ES');const k=[[n(S['2023'].electores_cera),'Electores CERA, 2023'],[n(S['2023'].votos_cera),'Votos CERA, 2023'],[S['2023'].participacion_cera_pct.toLocaleString('es-ES',{minimumFractionDigits:2})+' %','Participación 2023'],[S['2011'].participacion_cera_pct.toLocaleString('es-ES',{minimumFractionDigits:1})+' % → '+S['2023'].participacion_cera_pct.toLocaleString('es-ES',{minimumFractionDigits:1})+' %','Participación 2011 → 2023']];document.getElementById('ceraK').innerHTML=k.map(x=>'<div class="kpi"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>').join('')}).catch(()=>{});
 async function jget(u){const r=await fetch(u);if(!r.ok)throw new Error(r.status);return r.json()}
 async function loadBio(p){
   const key=p.wiki||'';if(!key)return null;if(bioCache[key]!==undefined)return bioCache[key];
