@@ -94,6 +94,8 @@ def generar(c):
     sin_prog = [{"id": x["id"], "siglas": x["siglas"], "nombre": x["nombre"]} for x in pinfo.values()
                 if x["siglas"] == "SALF" and x["siglas"] not in {p["siglas"] for p in partidos}]
     canales = {k["partido"]: k for k in J(D / "mensajeria.json")["canales"]} if (D / "mensajeria.json").exists() else {}
+    try: cera_esc = J(D / "cera.json")["escanos"]   # escaños que el recuento CERA cambió de un partido a otro (con fuente)
+    except (OSError, KeyError, ValueError): cera_esc = []
     def media_reciente(clave):
         """Media ponderada (raíz de la muestra) de los sondeos de ámbito estatal sin CIS, 30 días hasta el último que incluye al partido, de atalaya/data/encuestas.json."""
         s_ = [x for x in J(D / "encuestas.json")["encuestas"] if x.get("convocatoria") == "2026-11-29" and x.get("ambito") == "ES" and "cis" not in x["empresa"].lower() and clave in x["voto"]]
@@ -138,6 +140,19 @@ def generar(c):
         tg = canales.get(sig)
         tg_html = (f"<h2>Canal de Telegram</h2><p>Su comunicación se concentra en <a href='{E(seguro(tg['url']))}' rel='nofollow noopener'>{E(tg['nombre'])}</a>, un canal público con {nes(tg['seguidores'])} seguidores. "
                    f"Atalaya archiva sus mensajes ({nes(tg.get('mensajes_archivados', 0))} desde el {fecha_es(tg['primero'])}); más datos en <a href='/atalaya/mensajeria/'>mensajería de los partidos</a>.</p>") if tg and tg.get("primero") else ""
+        cera_html = ""
+        if cera_esc:
+            gan = [e for e in cera_esc if e["a"] == sig]; per = [e for e in cera_esc if e["de"] == sig]
+            frase = lambda e: f"en las generales de {e['eleccion'].replace('Generales ', '').replace(' 2', ' de 2')} en {e['provincia']}" + (" (una sola fuente consultada)" if 'sola fuente' in (e.get('nota') or '') else '')
+            if gan or per:
+                det = ""
+                if gan: det += f"{E(sig)} ganó un escaño con el recuento CERA " + "; ".join(E(frase(e)) + (f" (a costa de {E(e['de'])})") for e in gan) + ". "
+                if per: det += f"{E(sig)} perdió un escaño con el recuento CERA " + "; ".join(E(frase(e)) + (f" (a favor de {E(e['a'])})") for e in per) + ". "
+            else:
+                det = f"Ninguno de esos tres casos afecta a {E(sig)}. "
+            cera_html = ("<h2>El voto CERA y " + E(sig) + "</h2><p>El voto CERA es el de los españoles que viven en el extranjero y su recuento llega unos días después de la noche electoral. "
+                         "Según las fuentes consultadas, solo en tres elecciones generales (1993, 2019 y 2023) el recuento CERA ha cambiado el reparto de escaños de una provincia. " + det +
+                         "Más datos en el <a href='/atalaya/cera/'>panel del voto CERA</a>.</p>")
         cuerpo = (f"{CSS_EXTRA}<p class='meta'>Actualizado el {fecha_es(FECHA)} · Elecciones generales del 29 de noviembre de 2026</p><p class='ans'>{E(resp)}</p>"
                   f"<h2>1. Encuestas</h2><p>" + (f"Media ponderada de {n_enc} sondeos de los 30 días previos al {fecha_es(f_enc)} (sin CIS): {E(sig)} {enc} %. " if enc else "No hay media de encuestas disponible para este partido. ") +
                   "Detalle en <a href='/elecciones-espana/'>Elecciones en España</a>.</p>"
@@ -148,7 +163,7 @@ def generar(c):
                   f"<h2>3. Qué posición tiene en cada tema</h2>{aviso}"
                   f"<p>De {len(afs)} afirmaciones analizadas: a favor en {pos_cnt.get('favor', 0)}, en contra en {pos_cnt.get('contra', 0)}, matizada en {pos_cnt.get('matizada', 0)} y sin posición clara en {pos_cnt.get('sin_posicion', 0)}.</p>{pos_html}") +
                   f"<h2>4. Clima de prensa</h2>{bloque_prensa(pr, sig)}"
-                  + prop_html + tg_html +
+                  + prop_html + tg_html + cera_html +
                   "<h2>Qué no incluye</h2><p class='warn'>No es un test de voto ni una recomendación. No usa todavía encuestas provinciales.</p>")
         faqs = [(f"¿Qué dicen las encuestas sobre {sig}?", (f"La media de encuestas le da un {enc} %." if enc else "No hay media de encuestas disponible para este partido.")),
                 (f"¿Quién es el candidato de {sig} en 2026?", (f"{cd['nombre']} ({cd.get('cargo') or 'cabeza de lista anunciado'})." if cd.get("nombre") else "Aún no hay un candidato anunciado con los datos disponibles.")),
