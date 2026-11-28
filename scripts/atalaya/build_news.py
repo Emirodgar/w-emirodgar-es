@@ -24,6 +24,18 @@ NACIONAL = [
     # (medio, feed, páginas, filtrar por política): feed general de WordPress que solo guarda unas horas por página; se recorren
     # hasta 5 páginas (~un día) y se conservan solo los titulares políticos.
     ("The Objective", "https://theobjective.com/feed/", 5, True),
+    # Segunda tanda (nov 2026), feeds validados con descubrir_rss.py / a mano. Los de sección política van enteros; los generales, filtrados.
+    ("ABC", "https://www.abc.es/rss/feeds/abc_EspanaEspana.xml"),
+    ("La Vanguardia", "https://www.lavanguardia.com/rss/politica.xml"),
+    ("El Confidencial", "https://rss.elconfidencial.com/espana/"),
+    ("El Español", "https://www.elespanol.com/rss/espana/"),
+    ("infoLibre", "https://www.infolibre.es/rss/", 1, True),
+    ("El Independiente", "https://www.elindependiente.com/feed/", 1, True),
+    ("OKDiario", "https://okdiario.com/feed", 1, True),
+    ("Newtral", "https://www.newtral.es/feed/", 1, True),
+    ("Maldita", "https://maldita.es/feed/", 1, True),
+    ("RTVE", "https://api2.rtve.es/rss/temas_noticias.xml", 1, True),
+    ("The Guardian", "https://www.theguardian.com/world/spain/rss"),
 ]
 ALIAS = {"Araba": "Álava", "Alacant": "Alicante", "Castelló": "Castellón", "Illes Balears": "Baleares", "València": "Valencia",
          "Gipuzkoa": "Guipúzcoa", "Bizkaia": "Vizcaya", "Asturias": "Asturias"}

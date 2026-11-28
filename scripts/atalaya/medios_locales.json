@@ -457,8 +457,8 @@
   {
    "prov": "03",
    "medio": "Alicante Plaza",
-   "url": "https://alicanteplaza.es/feed",
-   "items": 87
+   "url": "https://alicanteplaza.es/noticias/rss/alicanteplaza",
+   "items": 20
   },
   {
    "prov": "02",
@@ -547,14 +547,298 @@
   {
    "prov": "38",
    "medio": "Diario de Avisos",
-   "url": "https://diariodeavisos.elespanol.com/politica/feed",
-   "items": 12
+   "url": "https://diariodeavisos.elespanol.com/rss",
+   "items": 20
   },
   {
    "prov": "05",
    "medio": "El Norte de Castilla (Ávila)",
    "url": "https://www.elnortedecastilla.es/rss/2.0/?section=avila",
    "items": 100
+  },
+  {
+   "prov": "39",
+   "medio": "Cantabria Liberal",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Acantabrialiberal.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "39",
+   "medio": "Europa Press Cantabria",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aeuropapress.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "48",
+   "medio": "Deia",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Adeia.eus%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "48",
+   "medio": "Naiz",
+   "url": "https://www.naiz.eus/es/rss/news.rss",
+   "items": 30
+  },
+  {
+   "prov": "20",
+   "medio": "Noticias de Gipuzkoa",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Anoticiasdegipuzkoa.eus%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "20",
+   "medio": "El Diario Vasco Política",
+   "url": "https://www.diariovasco.com/rss/2.0/?section=politica",
+   "items": 100
+  },
+  {
+   "prov": "01",
+   "medio": "Noticias de Álava",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Anoticiasdealava.eus%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "01",
+   "medio": "Gasteiz Hoy",
+   "url": "https://www.gasteizhoy.com/feed/",
+   "items": 10
+  },
+  {
+   "prov": "31",
+   "medio": "Noticias de Navarra",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Anoticiasdenavarra.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "31",
+   "medio": "Pamplona Actual",
+   "url": "https://pamplonaactual.com/feed/",
+   "items": 25
+  },
+  {
+   "prov": "31",
+   "medio": "Navarra.com",
+   "url": "https://navarra.okdiario.com/rss/",
+   "items": 20
+  },
+  {
+   "prov": "26",
+   "medio": "Rioja2",
+   "url": "https://www.rioja2.com/rss/politica",
+   "items": 20
+  },
+  {
+   "prov": "26",
+   "medio": "NueveCuatroUno",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Anuevecuatrouno.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "13",
+   "medio": "Lanza Digital",
+   "url": "https://www.lanzadigital.com/feed/",
+   "items": 15
+  },
+  {
+   "prov": "13",
+   "medio": "Encastillalamancha Ciudad Real",
+   "url": "https://www.encastillalamancha.es/feed/",
+   "items": 7
+  },
+  {
+   "prov": "16",
+   "medio": "Voces de Cuenca",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Avocesdecuenca.com%20when%3A3d",
+   "items": 84,
+   "via": "google-site"
+  },
+  {
+   "prov": "45",
+   "medio": "Toledo Diario",
+   "url": "https://toledodiario.es/feed/",
+   "items": 10
+  },
+  {
+   "prov": "06",
+   "medio": "Canal Extremadura",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Acanalextremadura.es%20when%3A3d",
+   "items": 95,
+   "via": "google-site"
+  },
+  {
+   "prov": "06",
+   "medio": "Región Digital",
+   "url": "http://www.regiondigital.com/rss/1-portada/",
+   "items": 30
+  },
+  {
+   "prov": "10",
+   "medio": "Extremadura 7 días",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aextremadura7dias.com%20when%3A3d",
+   "items": 88,
+   "via": "google-site"
+  },
+  {
+   "prov": "25",
+   "medio": "La Mañana Lleida",
+   "url": "https://lamanyana.cat/feed/",
+   "items": 10
+  },
+  {
+   "prov": "25",
+   "medio": "Lleida Diari",
+   "url": "https://www.lleida.com/feed/",
+   "items": 10
+  },
+  {
+   "prov": "43",
+   "medio": "Diari Més",
+   "url": "https://www.diarimes.com/ca/rss/home.xml",
+   "items": 73
+  },
+  {
+   "prov": "43",
+   "medio": "Reus Digital",
+   "url": "https://www.reusdigital.cat/rss",
+   "items": 10
+  },
+  {
+   "prov": "51",
+   "medio": "El Pueblo de Ceuta",
+   "url": "https://elpueblodeceuta.es/rss",
+   "items": 98
+  },
+  {
+   "prov": "51",
+   "medio": "Ceuta Actualidad",
+   "url": "https://www.ceutaactualidad.com/rss/",
+   "items": 50
+  },
+  {
+   "prov": "52",
+   "medio": "Melilla Hoy",
+   "url": "https://melillahoy.es/feed/",
+   "items": 50
+  },
+  {
+   "prov": "36",
+   "medio": "Galiciapress",
+   "url": "https://www.galiciapress.es/feed/all",
+   "items": 50
+  },
+  {
+   "prov": "32",
+   "medio": "Nós Diario",
+   "url": "https://www.nosdiario.gal/rss/",
+   "items": 20
+  },
+  {
+   "prov": "33",
+   "medio": "Asturias24",
+   "url": "https://asturias24.es/feed/",
+   "items": 10
+  },
+  {
+   "prov": "33",
+   "medio": "El Comercio Política",
+   "url": "https://www.elcomercio.es/rss/2.0/?section=politica",
+   "items": 100
+  },
+  {
+   "prov": "07",
+   "medio": "Periódico de Ibiza",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aperiodicodeibiza.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "07",
+   "medio": "Menorca",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Amenorca.info%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "11",
+   "medio": "Diario de Jerez",
+   "url": "https://www.diariodejerez.es/rss",
+   "items": 135
+  },
+  {
+   "prov": "21",
+   "medio": "Huelva24",
+   "url": "https://www.huelva24.com/rss/2.0/portada/",
+   "items": 25
+  },
+  {
+   "prov": "41",
+   "medio": "Andalucía Información",
+   "url": "https://www.andaluciainformacion.es/rss/",
+   "items": 40
+  },
+  {
+   "prov": "18",
+   "medio": "Granada Digital",
+   "url": "https://www.granadadigital.es/rss",
+   "items": 15
+  },
+  {
+   "prov": "46",
+   "medio": "Valencia Plaza",
+   "url": "https://valenciaplaza.com/noticias/rss/valenciaplaza",
+   "items": 20
+  },
+  {
+   "prov": "30",
+   "medio": "Murcia Plaza",
+   "url": "https://murciaplaza.com/noticias/rss/murciaplaza",
+   "items": 20
+  },
+  {
+   "prov": "50",
+   "medio": "Aragón Digital",
+   "url": "https://www.aragondigital.es/rss/",
+   "items": 50
+  },
+  {
+   "prov": "42",
+   "medio": "Soria Noticias",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Asorianoticias.com%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "40",
+   "medio": "El Día de Segovia",
+   "url": "https://news.google.com/rss/search?hl=es&gl=ES&ceid=ES:es&q=site%3Aeldiasegovia.es%20when%3A3d",
+   "items": 100,
+   "via": "google-site"
+  },
+  {
+   "prov": "28",
+   "medio": "El Español Madrid",
+   "url": "https://www.elespanol.com/rss",
+   "items": 30
+  },
+  {
+   "prov": "08",
+   "medio": "NacióDigital",
+   "url": "https://naciodigital.cat/feed_rss/",
+   "items": 25
+  },
+  {
+   "prov": "08",
+   "medio": "El Nacional.cat",
+   "url": "https://www.elnacional.cat/uploads/feeds/feed_elnacional_es_10.xml",
+   "items": 50
   }
  ]
 }
