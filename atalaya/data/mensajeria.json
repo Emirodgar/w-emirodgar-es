@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-27T19:06:42+00:00",
+ "actualizado": "2026-11-28T17:41:23+00:00",
  "ventana_dias": 30,
  "aviso": "Solo canales públicos de Telegram enlazados por la web de cada partido (o confirmados). Las visualizaciones son las de la primera captura de cada mensaje; los mensajes recientes pueden estar infravalorados. No es una medida de apoyo ni de alcance total. Los partidos sin canal confirmado no aparecen.",
  "canales": [
@@ -18,30 +18,29 @@
     {
      "f": "2026-11-27",
      "n": 5750
+    },
+    {
+     "f": "2026-11-28",
+     "n": 5750
     }
    ],
    "mensajes_archivados": 154,
    "primero": "2025-01-09",
    "ultimo": "2026-11-22",
    "ventana": {
-    "dias": 30,
-    "mensajes": 3,
+    "dias": 7,
+    "mensajes": 1,
     "por_dia": 0.1,
-    "vistas_total": 5710,
-    "vistas_mediana": 2270,
-    "vistas_por_seguidor": 0.39,
+    "vistas_total": 860,
+    "vistas_mediana": 860,
+    "vistas_por_seguidor": 0.15,
     "temas": {},
     "con_tema": 0,
     "formatos": {
-     "enlace": 2,
      "vídeo": 1
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-28",
-      "n": 2
-     },
      {
       "f": "2026-11-22",
       "n": 1
@@ -111,34 +110,33 @@
     {
      "f": "2026-11-27",
      "n": 18700
+    },
+    {
+     "f": "2026-11-28",
+     "n": 18700
     }
    ],
-   "mensajes_archivados": 157,
+   "mensajes_archivados": 158,
    "primero": "2026-05-11",
-   "ultimo": "2026-11-20",
+   "ultimo": "2026-11-27",
    "ventana": {
-    "dias": 30,
+    "dias": 27,
     "mensajes": 14,
     "por_dia": 0.5,
-    "vistas_total": 85730,
-    "vistas_mediana": 6470,
-    "vistas_por_seguidor": 0.35,
+    "vistas_total": 77840,
+    "vistas_mediana": 6010,
+    "vistas_por_seguidor": 0.32,
     "temas": {
      "seguridad": 1
     },
     "con_tema": 1,
     "formatos": {
-     "vídeo": 5,
+     "vídeo": 6,
      "texto": 4,
-     "enlace": 4,
-     "imagen": 1
+     "enlace": 4
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-28",
-      "n": 1
-     },
      {
       "f": "2026-11-02",
       "n": 2
@@ -178,10 +176,23 @@
      {
       "f": "2026-11-20",
       "n": 2
+     },
+     {
+      "f": "2026-11-27",
+      "n": 1
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T21:22:58+00:00",
+     "t": "Irene Montero tiene un mensaje para ti, que te hemos decepcionado. Son 2 minutos, te pido por favor que los escuches. PÁSALO 📲 https://www.tiktok.com/@irenemontero_/video/7712916171686825238?lang=es",
+     "u": "https://t.me/ahorapodemos/2874",
+     "v": 2310,
+     "fmt": [
+      "vídeo"
+     ]
+    },
     {
      "f": "2026-11-20T18:21:29+00:00",
      "t": "https://www.youtube.com/live/mjkz3RCKco4?si=uHzP_98aZeywB81R",
@@ -217,15 +228,6 @@
      "fmt": [
       "enlace"
      ]
-    },
-    {
-     "f": "2026-11-14T16:42:04+00:00",
-     "t": "Irene Montero ha dejado un mensaje a Jordi Wild sobre los asesinatos machistas en España https://vm.tiktok.com/ZN85PT34e/",
-     "u": "https://t.me/ahorapodemos/2869",
-     "v": 5130,
-     "fmt": [
-      "vídeo"
-     ]
     }
    ]
   },
@@ -244,17 +246,21 @@
     {
      "f": "2026-11-27",
      "n": 3930
+    },
+    {
+     "f": "2026-11-28",
+     "n": 3930
     }
    ],
-   "mensajes_archivados": 154,
+   "mensajes_archivados": 156,
    "primero": "2026-09-22",
    "ultimo": "2026-11-27",
    "ventana": {
-    "dias": 28,
-    "mensajes": 78,
+    "dias": 29,
+    "mensajes": 80,
     "por_dia": 2.8,
-    "vistas_total": 65653,
-    "vistas_mediana": 864,
+    "vistas_total": 66500,
+    "vistas_mediana": 860,
     "vistas_por_seguidor": 0.22,
     "temas": {
      "sanidad": 1,
@@ -262,8 +268,8 @@
     },
     "con_tema": 2,
     "formatos": {
-     "imagen": 43,
-     "enlace": 18,
+     "imagen": 44,
+     "enlace": 19,
      "texto": 17
     },
     "reenviados": 0,
@@ -358,11 +364,29 @@
      },
      {
       "f": "2026-11-27",
-      "n": 3
+      "n": 5
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T21:53:18+00:00",
+     "t": "🔛 ACTE FINAL DE CAMPANYA. CATALUNYA AL CENTRE. ❗️ Nogueras: “Nosaltres volem representar tota aquella gent que té Catalunya al cap i al cor” “Si diumenge fem que Catalunya torni a ser al centre, que es calcin. Fem que di",
+     "u": "https://t.me/juntsxcat/6061",
+     "v": 429,
+     "fmt": [
+      "enlace"
+     ]
+    },
+    {
+     "f": "2026-11-27T21:53:13+00:00",
+     "t": "",
+     "u": "https://t.me/juntsxcat/6060",
+     "v": 418,
+     "fmt": [
+      "imagen"
+     ]
+    },
     {
      "f": "2026-11-27T11:54:04+00:00",
      "t": "🎉 ACTE FINAL DE CAMPANYA · CATALUNYA AL CENTRE! Aquest divendres 27 de novembre posem el punt final a la campanya electoral amb un gran acte final a Barcelona! 📍Mediapro · Av. Diagonal, 177, Barcelona 🕕 18.00 h – Obertur",
@@ -389,24 +413,6 @@
      "fmt": [
       "texto"
      ]
-    },
-    {
-     "f": "2026-11-26T21:05:49+00:00",
-     "t": "🎉 ACTE FINAL DE CAMPANYA · CATALUNYA AL CENTRE! Aquest divendres 27 de novembre posem el punt final a la campanya electoral amb un gran acte final a Barcelona! 📍Mediapro · Av. Diagonal, 177, Barcelona 🕕 18.00 h – Obertur",
-     "u": "https://t.me/juntsxcat/6056",
-     "v": 533,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-26T20:56:11+00:00",
-     "t": "🔛 AVUI, TARRAGONA AL CENTRE. CATALUNYA AL CENTRE. ❗️ Nogueras: “Aquestes eleccions van d’una sola cosa: si Catalunya hi és o no hi és. Si Catalunya té veu a Madrid o queda muda” La candidata reivindica des de Tarragona l",
-     "u": "https://t.me/juntsxcat/6055",
-     "v": 502,
-     "fmt": [
-      "texto"
-     ]
     }
    ]
   },
@@ -425,17 +431,21 @@
     {
      "f": "2026-11-27",
      "n": 541
+    },
+    {
+     "f": "2026-11-28",
+     "n": 541
     }
    ],
-   "mensajes_archivados": 137,
+   "mensajes_archivados": 145,
    "primero": "2026-11-09",
-   "ultimo": "2026-11-27",
+   "ultimo": "2026-11-28",
    "ventana": {
-    "dias": 19,
-    "mensajes": 137,
+    "dias": 20,
+    "mensajes": 145,
     "por_dia": 7.2,
-    "vistas_total": 14432,
-    "vistas_mediana": 108,
+    "vistas_total": 15037,
+    "vistas_mediana": 106,
     "vistas_por_seguidor": 0.2,
     "temas": {
      "economía": 9,
@@ -447,8 +457,8 @@
     },
     "con_tema": 18,
     "formatos": {
-     "vídeo": 94,
-     "imagen": 41,
+     "vídeo": 100,
+     "imagen": 43,
      "texto": 2
     },
     "reenviados": 0,
@@ -527,52 +537,56 @@
      },
      {
       "f": "2026-11-27",
-      "n": 8
+      "n": 15
+     },
+     {
+      "f": "2026-11-28",
+      "n": 1
      }
     ]
    },
    "ultimos": [
     {
-     "f": "2026-11-27T18:45:20+00:00",
-     "t": "📡 Kanpaina itxiera zuzenean ikus dezakezu. Aitor Esteban EBBren presidentea, Imanol Pradales Lehendakaria, Maribel Vaquero Gipuzkoako zerrendaburua, Idoia Sagastizabal Bizkaiko zerrendaburua eta Gorka Urtaran Arabako zer",
-     "u": "https://t.me/eajpnveus/9880",
-     "v": 13,
+     "f": "2026-11-28T11:25:56+00:00",
+     "t": "💐 Donostiako San Martin merkatua. Leku ezin hobea tokiko produktuak erosteko, eta bazkalordurako prestatzeko. Hausnarketa egun honetan, pentsa dezagun Euskadiren etorkizuna nolakoa izatea nahi dugun!",
+     "u": "https://t.me/eajpnveus/9894",
+     "v": 54,
      "fmt": [
       "imagen"
      ]
     },
     {
-     "f": "2026-11-27T11:43:11+00:00",
-     "t": "🟣 Bilbon gertatutako hilketa matxistaren aurreran, gure gaitzespen irmoena. La violencia machista no tiene lugar en Euskadi. Ezta bat gehiago ere ez!",
-     "u": "https://t.me/eajpnveus/9875",
-     "v": 61,
-     "fmt": [
-      "imagen"
-     ]
-    },
-    {
-     "f": "2026-11-27T11:34:50+00:00",
-     "t": "🟣 Indarkeria matxistaren azken hilketaren aurrean, erabateko gaitzespena eta emakumeon defentsa osoa. Emakumeon eskubideak ez dira negoziatzen!",
-     "u": "https://t.me/eajpnveus/9874",
-     "v": 79,
+     "f": "2026-11-27T22:55:22+00:00",
+     "t": "✊ Eusko gudariak gara, Euskadi askatzeko! Gora Euskadi askatuta!",
+     "u": "https://t.me/eajpnveus/9893",
+     "v": 81,
      "fmt": [
       "vídeo"
      ]
     },
     {
-     "f": "2026-11-27T10:01:01+00:00",
-     "t": "EAJ-PNV pinned a photo",
-     "u": "https://t.me/eajpnveus/9873",
-     "v": null,
+     "f": "2026-11-27T22:26:50+00:00",
+     "t": "👏 Kanpainaren itxiera zoragarria! Bai poza Bilboko Areatza gainezka ikustea! Ante la llegada del fascismo, defenderemos y cuidaremos Euskadi. Igande honetan, pozik, alai eta ozen: bozkatu EAJ-PNV!",
+     "u": "https://t.me/eajpnveus/9886",
+     "v": 79,
      "fmt": [
-      "texto"
+      "imagen"
      ]
     },
     {
-     "f": "2026-11-27T09:59:26+00:00",
-     "t": "💬 Estamos contentos porque nuestro mensaje está calando en la ciudadanía vasca. Aitor Esteban: “Una voz vasca fuerte en Madrid, una voz independiente y que no está atada a un bloque ni va a ponerse al servicio de ningún ",
-     "u": "https://t.me/eajpnveus/9872",
-     "v": 89,
+     "f": "2026-11-27T20:28:53+00:00",
+     "t": "🚩 Eusko gudariak gara, Euskadi askatzeko. Gerturik daukagu odola, bere aldez emateko. Faxistak datoz eta Euskadira sartzen, goazen gudari danok geure aberria zaintzen!",
+     "u": "https://t.me/eajpnveus/9885",
+     "v": 100,
+     "fmt": [
+      "vídeo"
+     ]
+    },
+    {
+     "f": "2026-11-27T19:57:22+00:00",
+     "t": "✊ ¡Somos el Pueblo Vasco, Euskadi es nuestra casa y la defenderemos siempre! Imanol Pradales Lehendakaria: “A los Feijóos y Abascales les decimos que si venís a atacar a este Pueblo ¡nos vais a tener enfrente!”.",
+     "u": "https://t.me/eajpnveus/9884",
+     "v": 78,
      "fmt": [
       "vídeo"
      ]
@@ -594,17 +608,21 @@
     {
      "f": "2026-11-27",
      "n": 2830
+    },
+    {
+     "f": "2026-11-28",
+     "n": 2830
     }
    ],
-   "mensajes_archivados": 76,
+   "mensajes_archivados": 77,
    "primero": "2026-11-12",
    "ultimo": "2026-11-27",
    "ventana": {
-    "dias": 16,
-    "mensajes": 76,
-    "por_dia": 4.8,
-    "vistas_total": 65371,
-    "vistas_mediana": 863,
+    "dias": 17,
+    "mensajes": 77,
+    "por_dia": 4.5,
+    "vistas_total": 65937,
+    "vistas_mediana": 861,
     "vistas_por_seguidor": 0.3,
     "temas": {
      "empleo": 3,
@@ -614,7 +632,7 @@
     "con_tema": 3,
     "formatos": {
      "imagen": 39,
-     "vídeo": 20,
+     "vídeo": 21,
      "enlace": 15,
      "texto": 2
     },
@@ -682,11 +700,20 @@
      },
      {
       "f": "2026-11-27",
-      "n": 4
+      "n": 5
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T22:59:01+00:00",
+     "t": "Mobilizazio herritar orokorra Posible egin. Garantía y derechos.",
+     "u": "https://t.me/ehbildu/10738",
+     "v": 566,
+     "fmt": [
+      "vídeo"
+     ]
+    },
     {
      "f": "2026-11-27T09:50:21+00:00",
      "t": "",
@@ -722,15 +749,6 @@
      "fmt": [
       "imagen"
      ]
-    },
-    {
-     "f": "2026-11-26T20:56:12+00:00",
-     "t": "Igandean mobilizazio orokor herritarra. El domingo movilización popular masiva.",
-     "u": "https://t.me/ehbildu/10729",
-     "v": 679,
-     "fmt": [
-      "vídeo"
-     ]
     }
    ]
   },
@@ -749,18 +767,22 @@
     {
      "f": "2026-11-27",
      "n": 1390
+    },
+    {
+     "f": "2026-11-28",
+     "n": 1390
     }
    ],
-   "mensajes_archivados": 161,
+   "mensajes_archivados": 162,
    "primero": "2026-06-18",
    "ultimo": "2026-11-27",
    "ventana": {
     "dias": 30,
     "mensajes": 87,
     "por_dia": 2.9,
-    "vistas_total": 33204,
-    "vistas_mediana": 386,
-    "vistas_por_seguidor": 0.28,
+    "vistas_total": 32708,
+    "vistas_mediana": 381,
+    "vistas_por_seguidor": 0.27,
     "temas": {
      "economía": 2,
      "empleo": 1
@@ -774,10 +796,6 @@
     },
     "reenviados": 1,
     "serie": [
-     {
-      "f": "2026-10-28",
-      "n": 1
-     },
      {
       "f": "2026-10-29",
       "n": 1
@@ -892,11 +910,20 @@
      },
      {
       "f": "2026-11-27",
-      "n": 3
+      "n": 4
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T22:51:53+00:00",
+     "t": "UN FINAL DE CAMPAÑA ESPECTACULAR. 😊 Este 29N a papeleta do BNG sabe a amor a Galiza, a defensa da lingua, a vivenda pública, a vida digna, a feminismo e a futuro próspero! Para durmir tranquilos o 29 votemos como galegas",
+     "u": "https://t.me/bloquenacionalistagalego/2906",
+     "v": 173,
+     "fmt": [
+      "imagen"
+     ]
+    },
     {
      "f": "2026-11-27T16:34:52+00:00",
      "t": "ACTO DE PECHE DE CAMPAÑA DAS XERAIS 2026 Sigue o acto público a través da nosa canle de Youtube. 🔗 https://youtube.com/live/FDxT10Rsv3M?feature=share",
@@ -932,15 +959,6 @@
      "fmt": [
       "imagen"
      ]
-    },
-    {
-     "f": "2026-11-26T12:11:41+00:00",
-     "t": "⚡ O #29N toca escoller entre os intereses das eléctricas ou defender Galiza! Somos produtores de enerxía e é de sentido común termos unha Tarifa Eléctrica Galega para abaratar a factura da luz. Vota BNG para poñer os nos",
-     "u": "https://t.me/bloquenacionalistagalego/2901",
-     "v": 117,
-     "fmt": [
-      "vídeo"
-     ]
     }
    ]
   },
@@ -959,25 +977,30 @@
     {
      "f": "2026-11-27",
      "n": 80
+    },
+    {
+     "f": "2026-11-28",
+     "n": 80
     }
    ],
-   "mensajes_archivados": 159,
+   "mensajes_archivados": 160,
    "primero": "2025-11-12",
-   "ultimo": "2026-11-26",
+   "ultimo": "2026-11-28",
    "ventana": {
-    "dias": 22,
-    "mensajes": 15,
+    "dias": 23,
+    "mensajes": 16,
     "por_dia": 0.7,
-    "vistas_total": 393,
-    "vistas_mediana": 30,
-    "vistas_por_seguidor": 0.38,
+    "vistas_total": 399,
+    "vistas_mediana": 29,
+    "vistas_por_seguidor": 0.37,
     "temas": {
-     "corrupción y justicia": 1
+     "corrupción y justicia": 1,
+     "empleo": 1
     },
-    "con_tema": 1,
+    "con_tema": 2,
     "formatos": {
      "vídeo": 6,
-     "imagen": 4,
+     "imagen": 5,
      "enlace": 3,
      "texto": 2
     },
@@ -1018,10 +1041,23 @@
      {
       "f": "2026-11-26",
       "n": 2
+     },
+     {
+      "f": "2026-11-28",
+      "n": 1
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-28T11:46:25+00:00",
+     "t": "Jornada de reflexión. 💪 #29N https://www.instagram.com/p/DgSJeTziB0U/?fqnt=bHVyMmUyODB4cDc3",
+     "u": "https://t.me/upn_org/632",
+     "v": 6,
+     "fmt": [
+      "imagen"
+     ]
+    },
     {
      "f": "2026-11-26T14:16:12+00:00",
      "t": "🔴🔴🔴 El caso del túnel de Belate se llevará por delante a Chivite y al PSN-PSOE. El informe de la UCO que hemos conocido hoy apuntala la conexión entre el gobierno de María Chivite y la presunta trama corrupta de Santos C",
@@ -1057,15 +1093,6 @@
      "fmt": [
       "texto"
      ]
-    },
-    {
-     "f": "2026-11-17T19:53:00+00:00",
-     "t": "¿Por qué hace falta un cambio? 𝗣𝗢𝗥 ESPAÑA 𝗣𝗢𝗥 NAVARRA 𝗣𝗢𝗥 FIN #29N VOTA 𝗨𝗣𝗡-𝗣𝗣 ➡️ Se lo preguntamos a la gente: https://www.instagram.com/reel/Df2r6bsTLHf/",
-     "u": "https://t.me/upn_org/627",
-     "v": 34,
-     "fmt": [
-      "texto"
-     ]
     }
    ]
   },
@@ -1075,7 +1102,7 @@
    "url": "https://t.me/sumar_oficial",
    "nombre": "Sumar",
    "origen": "hallado_por_nombre",
-   "seguidores": 5130,
+   "seguidores": 5120,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
@@ -1084,18 +1111,22 @@
     {
      "f": "2026-11-27",
      "n": 5130
+    },
+    {
+     "f": "2026-11-28",
+     "n": 5120
     }
    ],
-   "mensajes_archivados": 169,
+   "mensajes_archivados": 170,
    "primero": "2026-09-28",
    "ultimo": "2026-11-27",
    "ventana": {
-    "dias": 30,
+    "dias": 28,
     "mensajes": 88,
-    "por_dia": 2.9,
-    "vistas_total": 93274,
-    "vistas_mediana": 1110,
-    "vistas_por_seguidor": 0.22,
+    "por_dia": 3.1,
+    "vistas_total": 91782,
+    "vistas_mediana": 1090,
+    "vistas_por_seguidor": 0.21,
     "temas": {
      "vivienda": 7,
      "economía": 7,
@@ -1107,16 +1138,12 @@
     "con_tema": 18,
     "formatos": {
      "texto": 38,
-     "enlace": 37,
+     "enlace": 36,
      "imagen": 11,
-     "vídeo": 2
+     "vídeo": 3
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-28",
-      "n": 1
-     },
      {
       "f": "2026-11-01",
       "n": 1
@@ -1223,11 +1250,20 @@
      },
      {
       "f": "2026-11-27",
-      "n": 8
+      "n": 9
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T21:16:18+00:00",
+     "t": "😉 Así de claro: Verónica Barbero: \"Hay otra cosa fantástica que nos permite la democracia. ¡Les podemos dejar fuera calladitas! ¡Votando el 29N al Frente Amplio!, ¡votando en jauría a los chuchos!. ¡Les vamos a dejar fue",
+     "u": "https://t.me/Sumar_Oficial/4987",
+     "v": 578,
+     "fmt": [
+      "vídeo"
+     ]
+    },
     {
      "f": "2026-11-27T19:06:56+00:00",
      "t": "🙌 Llenazo en La Nave para el cierre de campaña del Frente Amplio. ¡Muchas gracias a todas y todos por el apoyo durante toda la campaña! 🫶 Gracias, gracias y gracias a las que os habéis quedado fuera. Arranca el cierre aq",
@@ -1263,15 +1299,6 @@
      "fmt": [
       "vídeo"
      ]
-    },
-    {
-     "f": "2026-11-27T11:23:04+00:00",
-     "t": "¡Hola otra vez! 🗞 Vamos con otra entrevista. Esta vez a nuestra eurodiputada Estrella Galán en 20 Minutos, sobre las elecciones del domingo y como afectan a nuestras relaciones dentro de la UE. 🗣 \"Esperamos que España si",
-     "u": "https://t.me/Sumar_Oficial/4982",
-     "v": 572,
-     "fmt": [
-      "enlace"
-     ]
     }
    ]
   },
@@ -1281,7 +1308,7 @@
    "url": "https://t.me/canalPSOE",
    "nombre": "PSOE",
    "origen": "enlazado_web",
-   "seguidores": 6830,
+   "seguidores": 6840,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
@@ -1290,41 +1317,41 @@
     {
      "f": "2026-11-27",
      "n": 6830
+    },
+    {
+     "f": "2026-11-28",
+     "n": 6840
     }
    ],
-   "mensajes_archivados": 153,
+   "mensajes_archivados": 154,
    "primero": "2026-09-09",
    "ultimo": "2026-11-27",
    "ventana": {
-    "dias": 30,
-    "mensajes": 64,
-    "por_dia": 2.1,
-    "vistas_total": 81841,
-    "vistas_mediana": 1305,
+    "dias": 26,
+    "mensajes": 63,
+    "por_dia": 2.4,
+    "vistas_total": 78761,
+    "vistas_mediana": 1300,
     "vistas_por_seguidor": 0.19,
     "temas": {
      "educación": 7,
      "economía": 4,
      "vivienda": 3,
-     "seguridad": 2,
      "sanidad": 2,
      "empleo": 2,
      "corrupción y justicia": 1,
-     "inmigración": 1
+     "inmigración": 1,
+     "seguridad": 1
     },
-    "con_tema": 12,
+    "con_tema": 11,
     "formatos": {
      "vídeo": 39,
      "imagen": 21,
-     "texto": 3,
+     "texto": 2,
      "enlace": 1
     },
     "reenviados": 0,
     "serie": [
-     {
-      "f": "2026-10-28",
-      "n": 2
-     },
      {
       "f": "2026-11-03",
       "n": 1
@@ -1407,11 +1434,20 @@
      },
      {
       "f": "2026-11-27",
-      "n": 1
+      "n": 2
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T21:32:23+00:00",
+     "t": "Channel photo updated",
+     "u": "https://t.me/canalPSOE/11497",
+     "v": null,
+     "fmt": [
+      "texto"
+     ]
+    },
     {
      "f": "2026-11-27T00:43:56+00:00",
      "t": "🗓️ ¡Buenas noches! Compartimos la agenda de la Comisión Ejecutiva Federal para mañana, viernes 27 de noviembre. https://www.psoe.es/agenda/previsiones-cef-27-de-noviembre-de-2026/",
@@ -1447,15 +1483,6 @@
      "fmt": [
       "vídeo"
      ]
-    },
-    {
-     "f": "2026-11-26T08:32:23+00:00",
-     "t": "Queda muy poco para #MásQueUnMitin, donde se unen la cultura y nuestros principios. Ven a vivir el cierre de campaña: el futuro está en tu decisión. #LaFuerzaDeLaGente #VotaPSOE",
-     "u": "https://t.me/canalPSOE/11492",
-     "v": 457,
-     "fmt": [
-      "imagen"
-     ]
     }
    ]
   },
@@ -1465,7 +1492,7 @@
    "url": "https://t.me/esquerrarepublicana",
    "nombre": "Esquerra Republicana",
    "origen": "enlazado_web",
-   "seguidores": 3210,
+   "seguidores": 3200,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
@@ -1474,24 +1501,28 @@
     {
      "f": "2026-11-27",
      "n": 3210
+    },
+    {
+     "f": "2026-11-28",
+     "n": 3200
     }
    ],
-   "mensajes_archivados": 145,
+   "mensajes_archivados": 146,
    "primero": "2026-03-12",
    "ultimo": "2026-11-27",
    "ventana": {
-    "dias": 27,
-    "mensajes": 73,
-    "por_dia": 2.7,
-    "vistas_total": 46297,
-    "vistas_mediana": 625,
+    "dias": 28,
+    "mensajes": 74,
+    "por_dia": 2.6,
+    "vistas_total": 46602,
+    "vistas_mediana": 622,
     "vistas_por_seguidor": 0.19,
     "temas": {
      "sanidad": 3
     },
     "con_tema": 3,
     "formatos": {
-     "vídeo": 36,
+     "vídeo": 37,
      "imagen": 23,
      "enlace": 8,
      "texto": 6
@@ -1584,11 +1615,20 @@
      },
      {
       "f": "2026-11-27",
-      "n": 3
+      "n": 4
      }
     ]
    },
    "ultimos": [
+    {
+     "f": "2026-11-27T23:31:41+00:00",
+     "t": "Diumenge, tothom a votar per defensar-nos ✊🏼",
+     "u": "https://t.me/esquerrarepublicana/3301",
+     "v": 305,
+     "fmt": [
+      "vídeo"
+     ]
+    },
     {
      "f": "2026-11-27T12:04:55+00:00",
      "t": "Finalitzem la campanya a Sant Andreu de la Barca ✊🏻🧡 Us hi esperem!",
@@ -1624,15 +1664,6 @@
      "fmt": [
       "vídeo"
      ]
-    },
-    {
-     "f": "2026-11-26T19:31:50+00:00",
-     "t": "",
-     "u": "https://t.me/esquerrarepublicana/3296",
-     "v": 452,
-     "fmt": [
-      "vídeo"
-     ]
     }
    ]
   },
@@ -1642,7 +1673,7 @@
    "url": "https://t.me/VOXTelegram",
    "nombre": "VOX España 🇪🇸",
    "origen": "enlazado_web",
-   "seguidores": 927,
+   "seguidores": 935,
    "historial_seguidores": [
     {
      "f": "2026-11-26",
@@ -1651,6 +1682,10 @@
     {
      "f": "2026-11-27",
      "n": 927
+    },
+    {
+     "f": "2026-11-28",
+     "n": 935
     }
    ],
    "mensajes_archivados": 1,
